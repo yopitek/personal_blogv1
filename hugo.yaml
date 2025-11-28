@@ -43,6 +43,19 @@ menu:
       params:
         icon: search
 
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/yopitek
+      params:
+        icon: brand-github
+
+    - identifier: twitter
+      name: Twitter
+      url: https://twitter.com
+      params:
+        icon: brand-twitter
+
 # 參數設定
 params:
   mainSections:
@@ -103,7 +116,7 @@ params:
   
   colorScheme:
     toggle: true
-    default: auto
+    default: dark
   
   imageProcessing:
     cover:
