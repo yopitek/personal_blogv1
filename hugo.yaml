@@ -1,16 +1,16 @@
 baseURL: https://yopitek.github.io/personal_blogv1/
 languageCode: zh-tw
-title: My Personal Blog
+title: zen blog 
 theme: hugo-theme-stack
 
 # 語言設定
 languages:
   zh-tw:
     languageName: 繁體中文
-    title: 我的個人部落格
+    title: zen blog 
     weight: 1
     params:
-      description: 分享技術與生活
+      description: sharing the latest technology trend
 
 # 選單設定
 menu:
@@ -50,12 +50,6 @@ menu:
       params:
         icon: brand-github
 
-    - identifier: twitter
-      name: Twitter
-      url: https://twitter.com
-      params:
-        icon: brand-twitter
-
 # 參數設定
 params:
   mainSections:
@@ -83,7 +77,7 @@ params:
       src: img/avatar.png
   
   article:
-    math: false
+    math: true
     toc: true
     readingTime: true
     license:
