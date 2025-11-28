@@ -23,8 +23,22 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Debug Info
+        run: |
+          echo "Current directory: $(pwd)"
+          ls -F
+          echo "Content directory:"
+          ls -F content/
+          echo "Hugo Config:"
+          hugo config
+
       - name: Build
         run: hugo --minify
+
+      - name: Debug Build Output
+        run: |
+          echo "Public directory:"
+          ls -F public/
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
@@ -32,3 +46,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+          force_orphan: true
