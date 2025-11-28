@@ -1,0 +1,137 @@
+baseURL: https://yopitek.github.io/personal_blog/
+languageCode: zh-tw
+title: My Personal Blog
+theme: hugo-theme-stack
+
+# 語言設定
+languages:
+  zh-tw:
+    languageName: 繁體中文
+    title: 我的個人部落格
+    weight: 1
+    params:
+      description: 分享技術與生活
+
+# 選單設定
+menu:
+  main:
+    - identifier: home
+      name: 首頁
+      url: /
+      weight: -100
+      params:
+        icon: home
+    
+    - identifier: about
+      name: 關於
+      url: /about/
+      weight: -90
+      params:
+        icon: user
+    
+    - identifier: archives
+      name: 文章
+      url: /archives/
+      weight: -70
+      params:
+        icon: archives
+    
+    - identifier: search
+      name: 搜尋
+      url: /search/
+      weight: -60
+      params:
+        icon: search
+
+# 參數設定
+params:
+  mainSections:
+    - post
+  
+  featuredImageField: image
+  rssFullContent: true
+  
+  favicon: /favicon.ico
+  
+  footer:
+    since: 2024
+    customText:
+  
+  dateFormat:
+    published: 2006-01-02
+    lastUpdated: 2006-01-02 15:04 MST
+  
+  sidebar:
+    emoji: 🍥
+    subtitle: 歡迎來到我的部落格
+    avatar:
+      enabled: true
+      local: true
+      src: img/avatar.png
+  
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: false
+  
+  comments:
+    enabled: false
+  
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
+  
+  opengraph:
+    enabled: true
+  
+  defaultImage:
+    opengraph:
+      enabled: false
+  
+  colorScheme:
+    toggle: true
+    default: auto
+  
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+# 輸出格式
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Markdown 設定
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
