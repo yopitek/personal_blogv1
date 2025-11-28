@@ -3,7 +3,6 @@ title: "歡迎來到我的部落格"
 description: "這是我的第一篇文章"
 date: 2024-11-29
 slug: hello-world
-image: cover.jpg
 categories:
     - 一般
 tags:
