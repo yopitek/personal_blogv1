@@ -1,7 +1,9 @@
 baseURL: https://yopitek.github.io/personal_blogv1/
 languageCode: zh-tw
-title: zen blog 
+title: zen blog
 theme: hugo-theme-stack
+buildFuture: false
+buildDrafts: false
 
 # 語言設定
 languages:

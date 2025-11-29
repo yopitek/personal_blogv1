@@ -1,7 +1,7 @@
 ---
 title: "Github tool: OpenResearch AI生成企業財務報告"
 description: "OpenResearch tool introduction"
-date: 2024-11-29
+date: 2024-11-29T10:00:00+08:00
 categories:
     - Github
 ---
