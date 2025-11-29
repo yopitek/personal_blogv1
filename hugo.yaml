@@ -22,14 +22,14 @@ menu:
       params:
         icon: home
     
-    - identifier: Tools
+    - identifier: tools
       name: 線上工具
       url: /tool/
-      weight: -60
+      weight: -90
       params:
-        icon: search
-
-      - identifier: search
+        icon: tools
+    
+    - identifier: search
       name: 搜尋
       url: /search/
       weight: -60
