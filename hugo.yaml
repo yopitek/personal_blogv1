@@ -23,7 +23,7 @@ menu:
         icon: home
     
     - identifier: about
-      name: 關於
+      name: 關於我
       url: /about/
       weight: -90
       params:
