@@ -4,12 +4,11 @@ description: "這篇文章的簡短描述"
 date: 2024-11-29
 image: image.jpg
 categories:
-    - 心得
-tags:
     - AI
     - n8n
     - Industry
-    - technology
+    - Github
+    - Education
 ---
 
 ## 這裡是標題
