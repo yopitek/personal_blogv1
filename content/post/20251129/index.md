@@ -2,7 +2,6 @@
 title: "2025-11-29"
 description: "這篇文章的簡短描述"
 date: 2024-11-29
-image: 
 categories:
     - AI
     - n8n
