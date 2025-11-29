@@ -27,7 +27,14 @@ menu:
       url: /tool/
       weight: -90
       params:
-        icon: tools
+        icon: link
+    
+    - identifier: about
+      name: 關於我
+      url: /about/
+      weight: -90
+      params:
+        icon: link
     
     - identifier: search
       name: 搜尋
