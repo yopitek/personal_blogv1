@@ -4,11 +4,6 @@ description: "OpenResearch tool introduction"
 date: 2024-11-29
 categories:
     - Github
-    - AI
-tags:
-    - 財務報告
-    - AI工具
-    - 產業研究
 ---
 
 ## Github tool: OpenResearch AI生成企業財務報告
