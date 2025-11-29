@@ -21,27 +21,6 @@ menu:
       weight: -100
       params:
         icon: home
-    
-    - identifier: tools
-      name: 線上工具
-      url: /tool/
-      weight: -90
-      params:
-        icon: link
-    
-    - identifier: about
-      name: 關於我
-      url: /about/
-      weight: -90
-      params:
-        icon: link
-    
-    - identifier: search
-      name: 搜尋
-      url: /search/
-      weight: -60
-      params:
-        icon: search
 
 # 參數設定
 params:
