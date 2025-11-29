@@ -3,6 +3,7 @@ title: "關於我"
 description: "關於這個部落格和作者"
 date: 2024-11-29
 slug: about
+url: /about/
 ---
 
 ## 關於這個部落格

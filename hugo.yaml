@@ -29,13 +29,7 @@ menu:
       params:
         icon: user
     
-    - identifier: archives
-      name: 文章
-      url: /archives/
-      weight: -70
-      params:
-        icon: archives
-    
+
     - identifier: search
       name: 搜尋
       url: /search/
