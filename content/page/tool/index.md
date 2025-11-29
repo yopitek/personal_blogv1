@@ -14,8 +14,9 @@ menu:
 
 這裡整理了一些實用的線上工具,讓你的工作更有效率。
 
-### 公眾號 Markdown 編輯器
+### 微信公眾號Markdown格式編輯器
 
 一款專為微信公眾號設計的 Markdown 編輯器,支援即時預覽和一鍵排版。
+提供各種不同的文章版型
 
-[訪問編輯器](https://editor.huasheng.ai/)
+[Markdown格式編輯器](https://editor.huasheng.ai/)
