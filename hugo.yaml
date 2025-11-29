@@ -22,27 +22,19 @@ menu:
       params:
         icon: home
     
-    - identifier: about
-      name: 關於我
-      url: /about/
-      weight: -90
+    - identifier: Tools
+      name: 線上工具
+      url: /tool/
+      weight: -60
       params:
-        icon: user
-    
+        icon: search
 
-    - identifier: search
+      - identifier: search
       name: 搜尋
       url: /search/
       weight: -60
       params:
         icon: search
-
-  social:
-    - identifier: github
-      name: GitHub
-      url: https://github.com/yopitek
-      params:
-        icon: brand-github
 
 # 參數設定
 params:
