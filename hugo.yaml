@@ -70,7 +70,7 @@ params:
   
   sidebar:
     emoji: 🍥
-    subtitle: 歡迎來到我的部落格
+    subtitle: 
     avatar:
       enabled: true
       local: true
