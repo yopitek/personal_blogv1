@@ -1,5 +1,5 @@
 ---
-title: "Githb:免費開源且可商用的繁體中文字體大全"
+title: "Github:免費開源且可商用的繁體中文字體大全"
 description: "OpenResearch tool introduction"
 date: 2025-11-30
 categories:
