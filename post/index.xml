@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on zen blog</title><link>https://zennote.app/post/</link><description>Recent content in Posts on zen blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zennote.app/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Github: 免費 AI 研究助理!大學生寫報告必備神器 OpenResearch</title><link>https://zennote.app/post/openresearch-tool/</link><pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/openresearch-tool/</guid><description>&lt;h2 id="github-免費-ai-研究助理大學生寫報告必備神器-openresearch"&gt;Github: 免費 AI 研究助理!大學生寫報告必備神器 OpenResearch
+&lt;/h2&gt;&lt;p&gt;期末報告要分析產業趨勢,光是找資料就花了 3 天?求職準備想了解目標公司,卻不知道從哪開始?&lt;/p&gt;
+&lt;p&gt;其實有個免費工具,能幫你一鍵生成專業的產業研究報告。它叫 &lt;strong&gt;OpenResearch&lt;/strong&gt;。就像幫你請了一個 AI 研究助理,自動搜尋整理資料,還會產出完整報告。&lt;/p&gt;
+&lt;p&gt;今天就來介紹這個大學生必備的神器 ✨&lt;/p&gt;
+&lt;h2 id="openresearch-是什麼"&gt;OpenResearch 是什麼?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;一句話說明&lt;/strong&gt;:OpenResearch 是開源的 AI 研究工具。它用 Google Gemini AI 自動搜尋產業資料,幫你生成專業研究報告。&lt;/p&gt;
+&lt;p&gt;想想看,你在寫期末報告的「產業分析」章節。以前你要:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Google 搜尋一堆關鍵字&lt;/li&gt;
+&lt;li&gt;開 20 個分頁慢慢看&lt;/li&gt;
+&lt;li&gt;整理筆記、寫成報告&lt;/li&gt;
+&lt;li&gt;花掉整個週末&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;現在用 OpenResearch:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入你想研究的主題&lt;/li&gt;
+&lt;li&gt;按下按鈕,等 5-10 分鐘&lt;/li&gt;
+&lt;li&gt;拿到一份完整的研究報告&lt;/li&gt;
+&lt;li&gt;省下大半時間 ⏰&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;為什麼大學生應該認識這個工具?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因為它能處理最花時間的部分 —— &lt;strong&gt;資料搜尋和初步整理&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你還是要讀報告、加入自己的觀點、調整內容。但至少不用從零開始。你是站在 AI 幫你整理好的基礎上繼續。
+這樣能省下不少時間,把精力放在更重要的分析和思考上。&lt;/p&gt;
+&lt;p&gt;而且它完全免費(在 Google 給的免費額度內)。&lt;/p&gt;
+&lt;h2 id="三種應用情境"&gt;三種應用情境
+&lt;/h2&gt;&lt;h3 id="情境一期末報告的產業分析章節-"&gt;情境一:期末報告的產業分析章節 📚
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;場景&lt;/strong&gt;:你修了一門「行銷管理」課,期末報告要分析「台灣手搖飲市場」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛點&lt;/strong&gt;:要寫市場規模、競爭態勢、發展趨勢,光是找資料就頭大。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用 OpenResearch 怎麼做?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入主題:「台灣手搖飲市場分析 2024-2025」&lt;/li&gt;
+&lt;li&gt;AI 會自動搜尋新聞、產業報告、市場數據&lt;/li&gt;
+&lt;li&gt;生成一份包含市場規模、主要品牌、競爭分析的報告&lt;/li&gt;
+&lt;li&gt;你再根據課程要求,加入自己的分析和建議&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;實際上&lt;/strong&gt;:原本可能要花好幾小時的資料搜尋,現在 1 小時內搞定。你有更多時間思考「這個市場有什麼機會?我的建議是什麼?」&lt;/p&gt;
+&lt;h3 id="情境二求職準備的公司研究-"&gt;情境二:求職準備的公司研究 💼
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;場景&lt;/strong&gt;:你想應徵某家新創公司的實習,面試前想深入了解這家公司。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛點&lt;/strong&gt;:要研究公司背景、產業定位、競爭對手,資訊很分散。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用 OpenResearch 怎麼做?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入公司名稱和產業:「[公司名稱] + 台灣 AI 新創產業分析」&lt;/li&gt;
+&lt;li&gt;AI 幫你整理公司新聞、產業趨勢、競品資訊&lt;/li&gt;
+&lt;li&gt;你快速了解公司定位和產業背景&lt;/li&gt;
+&lt;li&gt;面試時能問出有深度的問題&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;實際上&lt;/strong&gt;:準備面試更有信心。你也能在自我介紹時 show 出「我有做功課」的積極態度。HR 會印象深刻 🌟&lt;/p&gt;
+&lt;h3 id="情境三社團創業的市場調查-"&gt;情境三:社團創業的市場調查 🚀
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;場景&lt;/strong&gt;:你的社團想辦「校園二手市集」,需要做可行性分析。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛點&lt;/strong&gt;:要了解校園二手市場、類似活動案例、潛在挑戰,不知道怎麼下手。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用 OpenResearch 怎麼做?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入:「大學校園二手市集 + 市場分析 + 成功案例」&lt;/li&gt;
+&lt;li&gt;AI 整理其他學校的經驗、市場需求、可能問題&lt;/li&gt;
+&lt;li&gt;你得到一份完整的背景研究&lt;/li&gt;
+&lt;li&gt;根據報告調整活動企劃&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;實際上&lt;/strong&gt;:提案給學校時,有數據和案例支持,說服力更強。成功率提高不少 📈&lt;/p&gt;
+&lt;h2 id="快速上手指南"&gt;快速上手指南
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Step 1:準備工作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要有 Node.js(去官網下載安裝,免費的)&lt;/li&gt;
+&lt;li&gt;申請 Google AI Studio API Key(免費額度夠用)&lt;/li&gt;
+&lt;li&gt;Mac/Linux 用戶可直接使用,Windows 用戶需要 WSL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 2:安裝 OpenResearch&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 下載專案&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/dmquant/OpenResearch
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝套件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 啟動工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;npm run dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 3:開始使用&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打開瀏覽器,會看到 GUI 介面&lt;/li&gt;
+&lt;li&gt;輸入你想研究的主題&lt;/li&gt;
+&lt;li&gt;按下開始,等待 AI 生成報告&lt;/li&gt;
+&lt;li&gt;下載報告,開始你的創作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;老實說&lt;/strong&gt;:安裝過程需要一點技術背景。如果你完全沒碰過程式,可能要花 30 分鐘到 1 小時摸索。但 GUI 介面蠻友善的,跟著步驟做不會太難 💪&lt;/p&gt;
+&lt;h2 id="結尾"&gt;結尾
+&lt;/h2&gt;&lt;p&gt;OpenResearch 不會幫你「寫完」報告,但能幫你省下最花時間的資料搜尋階段。&lt;/p&gt;
+&lt;p&gt;對大學生來說,時間就是最珍貴的資源。你可以花 1 小時用工具生成初稿,把剩下的時間拿去深入思考、加入自己的觀點。不用像以前那樣,花 8 小時找資料找到頭昏。&lt;/p&gt;
+&lt;p&gt;這才是 AI 工具的真正價值 —— 讓你把時間花在更重要的事情上 🎯&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;想試試看嗎?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 專案:https://github.com/dmquant/OpenResearch&lt;/li&gt;
+&lt;li&gt;安裝教學:專案的 README 有詳細步驟&lt;/li&gt;
+&lt;li&gt;有問題可以在 GitHub Issues 提問,社群蠻友善的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;記得,工具只是工具。最後讓報告有價值的,還是你的思考和觀點 😊&lt;/p&gt;</description></item></channel></rss>
