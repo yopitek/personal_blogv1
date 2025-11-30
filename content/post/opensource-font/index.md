@@ -359,17 +359,6 @@ GitHub 上的繁體中文字體主要使用兩種授權:
 - **創意設計**:霞鶩文楷 TC + 芫荽體 + jf open 粉圓
 
 記住:好的字體不僅讓作品更美觀,更能提升專業度和可讀性。現在就開始探索這些免費又優質的開源字體資源吧!
-
----
-
-## 參考資料與延伸閱讀
-
-- [昭源字體官方網站](https://chiron-fonts.github.io/)
-- [justfont - 開源字型 vs. 免費字型](https://blog.justfont.com/2024/12/openfont/)
-- [免費可商用字型(繁體)29款開源字型資源](https://jfsblog.com/free-resource/font/free-commercial-use-chinese-fonts)
-- [20+ 款思源系列免費開源中文字體推薦](https://wumanzoo.com/noto-sans-noto-serif-fonts/)
-- [180+ 款免費、合法、可商用的繁體中文字體下載](https://wumanzoo.com/free-fonts-index/)
-- [GitHub - jf open 粉圓](https://github.com/justfont/open-huninn-font)
 - [GitHub - 思源黑體](https://github.com/adobe-fonts/source-han-sans)
 - [GitHub - 芫荽體](https://github.com/ButTaiwan/iansui)
 - [GitHub - 源雲明體](https://github.com/ButTaiwan/genwan-font)
