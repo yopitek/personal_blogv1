@@ -19,6 +19,4 @@ menu:
 - **AI Vibe Coding** - 探索 AI coding 的無限可能
 - **AI Trend** - 追蹤最新的人工智慧趨勢與應用
 - **Stocks Investment** - 研究投資理財與市場分析
-- **Children Education** - 分享親子教育的心得與實踐
-
-歡迎與我交流!
+- **Education** - 分享親子教育的心得與實踐
