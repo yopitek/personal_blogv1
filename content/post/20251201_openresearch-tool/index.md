@@ -121,7 +121,7 @@ categories:
 - 編譯軟體可以使用 免費的 VS code 或是 google antigravity. 
 
 **Step 2:安裝 OpenResearch**
-# 下載專案
+下載專案
 - 到github: https://github.com/dmquant/OpenResearch 下載程式檔案
 - 將下載下來的檔案解壓縮成一個資料夾
 - 在vs code 或是 google anigravity 開始啟此資料夾
