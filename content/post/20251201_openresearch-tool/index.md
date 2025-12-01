@@ -120,22 +120,23 @@ categories:
 - 申請 Google AI Studio API Key(免費額度夠用)
 - 編譯軟體可以使用 免費的 VS code 或是 google antigravity. 
 
-**Step 2:安裝 OpenResearch**
-下載專案
+**Step 2:下載並安裝 OpenResearch**
 - 到github: https://github.com/dmquant/OpenResearch 下載程式檔案
-- 將下載下來的檔案解壓縮成一個資料夾
-- 在vs code 或是 google anigravity 開始啟此資料夾
-- 使用gogole gemini / claude AI coding agent. 
+- 將下載下來的檔案解壓縮
+- 在vs code 或是 google anigravity 中開始啟此資料夾
+- 使用 google gemini / claude model AI coding agent. 
 - 提示詞：我要執行這個openresearch專案，請協助執行
 - 執行後，AI coding tool 會請你在.env 檔案中輸入 gemini API key. 
 - 輸入完API Key 後，即可開始執行此專案。
-- AI coding tool 會請你用瀏覽器開啟localhost:2088 (或是其他port number)
+- AI coding tool 會請你用瀏覽器開啟此專案localhost:2088 (或是其他port number)
 
 **Step 3:開始使用**
 1. 打開瀏覽器,會看到 GUI 介面
-2. 輸入你想研究的主題
+2. 輸入你想研究的主題：如：do a deep research under the instruction prompted ，
+請用繁體中文輸出報告內容，請用使用台灣人會使用的金融、科技用語.
+深入分析 台積電 在 晶圓 產業中的完整情況
 3. 按下開始,等待 AI 生成報告
-4. 下載報告,開始你的創作
+4. 下載報告，完工
 
 **老實說**:安裝過程需要一點技術背景。如果你完全沒碰過程式,可能要花 30 分鐘到 1 小時摸索。但 GUI 介面蠻友善的,跟著步驟做不會太難 💪
 
