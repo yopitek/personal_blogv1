@@ -15,12 +15,11 @@ categories:
 今天就來介紹這個大學生必備的神器 ✨
 
 
-<figure align="center">
+<div align="center" style="margin: 15px 0;">
   <img src="01.png" alt="OpenResearch 工具介面" width="70%">
-  <figcaption>圖 1：OpenResearch 工具主介面（輸入主題即可生成研究報告）</figcaption>
-</figure>
+    </div>
+    <p align="center">OpenResearch 工具主介面（輸入主題即可生成研究報告） </p>
 
-<!-- 如果需要第二張圖並排 -->
 <div align="center" style="margin: 15px 0;">
   <img src="02.png" alt="研究報告生成範例" width="70%">
 </div>
@@ -42,7 +41,7 @@ categories:
 <p align="center">圖 5：AI 自動生成的產業研究報告頁面 5 </p>
 
 
-## [看看AI生成的報果結果](https://goooolai.zeabur.app/nvidia.html) 
+# [看看AI生成的報果結果](https://goooolai.zeabur.app/nvidia.html) 
 
 
 ## OpenResearch 是什麼?
