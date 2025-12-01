@@ -122,14 +122,14 @@ categories:
 
 **Step 2:安裝 OpenResearch**
 # 下載專案
-到github: https://github.com/dmquant/OpenResearch 下載程式檔案
-將下載下來的檔案解壓縮成一個資料夾
-在vs code 或是 google anigravity 開始此資料夾
-使用gogole gemini or claude AI coding agent. 
-提示詞：我要執行這個openresearch專案，請執行
-執行後，AI coding tool 會請你在.env 檔案中輸入 gemini API key. 
-輸入完後，即可執行此專案。
-AI coding tool 會請你用瀏覽器開啟localhost:2088 (或是其他port number)
+- 到github: https://github.com/dmquant/OpenResearch 下載程式檔案
+- 將下載下來的檔案解壓縮成一個資料夾
+- 在vs code 或是 google anigravity 開始此資料夾
+- 使用gogole gemini or claude AI coding agent. 
+- 提示詞：我要執行這個openresearch專案，請執行
+- 執行後，AI coding tool 會請你在.env 檔案中輸入 gemini API key. 
+- 輸入完後，即可執行此專案。
+- AI coding tool 會請你用瀏覽器開啟localhost:2088 (或是其他port number)
 
 **Step 3:開始使用**
 1. 打開瀏覽器,會看到 GUI 介面
