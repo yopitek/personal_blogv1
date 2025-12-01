@@ -3,15 +3,9 @@ title: "Hugo+github+cloudflare 免費開源個人網站模板架站工具"
 date: 2025-12-01T00:00:00+08:00
 draft: false
 slug: "20251201-hugo-github-cloudflare-setup"
-image: "01.png"
 description: "不會寫程式也能架網站?這組免費工具幫你搞定"
 categories:
-    - "Hugo"
-tags:
-    - "Hugo"
-    - "GitHub"
-    - "Cloudflare"
-    - "Web Design"
+    - "github"
 ---
 
 ## 不會寫程式也能架網站?這組免費工具幫你搞定
