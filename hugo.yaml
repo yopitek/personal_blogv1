@@ -35,12 +35,12 @@ params:
   favicon: /img/icon.ico
   
   footer:
-    since: 2025.12.01
+    since: 
     customText:
   
   dateFormat:
-    published: 2025-12-01
-    lastUpdated: 2025-12-01
+    published: 
+    lastUpdated: 
   
   sidebar:
     emoji: 🍥
