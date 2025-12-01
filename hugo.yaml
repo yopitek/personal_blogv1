@@ -1,6 +1,6 @@
 baseURL: https://zennote.app/
 languageCode: zh-tw
-title: zen blog
+title: ZenNote
 theme: hugo-theme-stack
 buildFuture: false
 buildDrafts: false
@@ -9,7 +9,7 @@ buildDrafts: false
 languages:
   zh-tw:
     languageName: 繁體中文
-    title: zen blog 
+    title: ZenNote 
     weight: 1
     params:
       description: sharing the latest technology trend
