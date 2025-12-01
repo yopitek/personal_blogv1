@@ -41,7 +41,8 @@ categories:
 <p align="center">圖 5：AI 自動生成的產業研究報告頁面 5 </p>
 
 
-# [看看AI生成的報果結果](https://goooolai.zeabur.app/nvidia.html) 
+# [看看AI生成的研究報告](https://goooolai.zeabur.app/nvidia.html) 
+
 
 
 ## OpenResearch 是什麼?
