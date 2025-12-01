@@ -1,5 +1,6 @@
 baseURL: https://zennote.app/
 languageCode: zh-tw
+defaultContentLanguage: zh-tw
 title: ZenNote
 theme: hugo-theme-stack
 buildFuture: false
