@@ -1,12 +1,14 @@
 ---
 title: "Hugo+github+cloudflare 免費開源個人網站模板架站工具"
-date: 2025-12-01T00:00:00+08:00
+date: 2025-12-01
 draft: false
 slug: "20251201-hugo-github-cloudflare-setup"
 description: "不會寫程式也能架網站?這組免費工具幫你搞定"
 categories:
     - "github"
 ---
+
+
 # Hugo+github+cloudflare 免費開源個人網站模板架站工具
 
 ## 不會寫程式也能架網站?
@@ -14,6 +16,7 @@ categories:
 期末報告想放在線上分享?面試需要作品集網站?想幫社團做個官網?
 
 你可能會想:「我又不會寫程式,架網站一定很難又很貴吧?」其實不會。
+
 今天要分享的這組免費工具,讓你一小時內就能擁有自己的網站。完全免費。
 
 <div align="center" style="margin: 15px 0;">
@@ -39,7 +42,9 @@ categories:
 
 Hugo 是個「靜態網站生成器」。聽起來很專業?簡單說,就是幫你把文字自動排版成網頁的工具。
 
-你用類似 Word 的方式寫內容,Hugo 自動幫你變成漂亮網站。它有超過 500 種免費主題,部落格、作品集、官網樣式都有。而且很快,幾秒就能生成整個網站。
+你用類似 Word 的方式寫內容,Hugo 自動幫你變成漂亮網站。
+
+它有超過 500 種免費主題,部落格、作品集、官網樣式都有。而且很快,幾秒就能生成整個網站。
 
 不用寫程式碼,選個喜歡的主題套上去就好。
 
@@ -142,6 +147,7 @@ Louis 把網址放履歷上,申請研究所時, 在面試時讓教授看到他�
 ### 延伸資源
 
 - Hugo 官網:https://gohugo.io/
-- Hugo 主題庫:https://themes.gohugo.io/
+- Hugo github : https://github.com/gohugoio/hugo
+- github : https://github.com/
 - Cloudflare Pages 教學:https://developers.cloudflare.com/pages/
 
