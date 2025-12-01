@@ -117,21 +117,19 @@ categories:
 ## 快速上手指南
 
 **Step 1:準備工作**
-- 需要有 Node.js(去官網下載安裝,免費的)
 - 申請 Google AI Studio API Key(免費額度夠用)
-- Mac/Linux 用戶可直接使用,Windows 用戶需要 WSL
+- 編譯軟體可以使用 免費的 VS code 或是 google antigravity. 
 
 **Step 2:安裝 OpenResearch**
-```bash
 # 下載專案
-git clone https://github.com/dmquant/OpenResearch
-
-# 安裝套件
-npm install
-
-# 啟動工具
-npm run dev
-```
+到github: https://github.com/dmquant/OpenResearch 下載程式檔案
+將下載下來的檔案解壓縮成一個資料夾
+在vs code 或是 google anigravity 開始此資料夾
+使用gogole gemini or claude AI coding agent. 
+提示詞：我要執行這個openresearch專案，請執行
+執行後，AI coding tool 會請你在.env 檔案中輸入 gemini API key. 
+輸入完後，即可執行此專案。
+AI coding tool 會請你用瀏覽器開啟localhost:2088 (或是其他port number)
 
 **Step 3:開始使用**
 1. 打開瀏覽器,會看到 GUI 介面
@@ -142,7 +140,6 @@ npm run dev
 **老實說**:安裝過程需要一點技術背景。如果你完全沒碰過程式,可能要花 30 分鐘到 1 小時摸索。但 GUI 介面蠻友善的,跟著步驟做不會太難 💪
 
 ## 結尾
-
 OpenResearch 不會幫你「寫完」報告,但能幫你省下最花時間的資料搜尋階段。
 
 對大學生來說,時間就是最珍貴的資源。你可以花 1 小時用工具生成初稿,把剩下的時間拿去深入思考、加入自己的觀點。不用像以前那樣,花 8 小時找資料找到頭昏。
