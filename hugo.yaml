@@ -35,7 +35,7 @@ params:
   favicon: /img/icon.ico
   
   footer:
-    since: 
+    since: 2025
     customText:
   
   dateFormat:
@@ -48,7 +48,7 @@ params:
     avatar:
       enabled: true
       local: true
-      src: img/icon.ico
+      src: img/logo.png
   
   article:
     math: true
