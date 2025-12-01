@@ -32,7 +32,7 @@ params:
   featuredImageField: image
   rssFullContent: true
   
-  favicon: /favicon.ico
+  favicon: /img/icon.ico
   
   footer:
     since: 2025.12.01
