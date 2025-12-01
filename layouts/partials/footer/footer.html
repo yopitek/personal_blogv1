@@ -2,10 +2,10 @@
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
-        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2025"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}
-        {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+        {{ now.Format "2025" }} {{ default .Site.Title .Site.Copyright }}
     </section>
     
     <section class="powerby">
