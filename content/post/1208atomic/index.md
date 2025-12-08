@@ -16,7 +16,7 @@ tags:
 ## 書摘《原子習慣》：細微改變帶來巨大成就的實證法則
 
 <div align="center" style="margin: 15px 0;">
-  <img src="bookcover.png" alt="原子習慣書籍封面" width="70%">
+  <img src="bookcover.png" alt="原子習慣書籍封面" width="50%">
 </div>
 <p align="center">《原子習慣》- 詹姆斯·克利爾（James Clear）著</p>
 
