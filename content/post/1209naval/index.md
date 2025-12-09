@@ -1,7 +1,7 @@
 ---
 title: "書摘《納瓦爾寶典》：關於財富與幸福的智慧"
 description: "這本書不是教你快速致富的秘訣，而是一份關於「如何思考」的地圖。矽谷傳奇投資人納瓦爾·拉維康特拆解了「財富」與「幸福」這兩個人人追求卻常感困惑的課題。"
-date: 2024-12-09
+date: 2025-12-09
 draft: false
 slug: "naval-ravikant-book-summary"
 categories:
