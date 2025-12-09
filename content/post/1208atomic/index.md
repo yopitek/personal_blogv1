@@ -20,26 +20,114 @@ tags:
 </div>
 <p align="center">《原子習慣》- 詹姆斯·克利爾（James Clear）著</p>
 
----
-title: "原子習慣：細微改變帶來巨大成就的實證法則"
-date: 2024-12-08
----
+## 📊 精美互動投影片
 
-![封面](bookcover.png)
+<style>
+.slides-wrapper {
+  margin: 40px 0;
+  padding: 0;
+}
+.slides-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  color: white;
+}
+.slides-header h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.slides-header p {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+.slides-iframe-container {
+  position: relative;
+  background: white;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+.slides-iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+  display: block;
+}
+.slides-actions {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.slides-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+.slides-btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+}
+.slides-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102,126,234,0.5);
+  color: white;
+}
+.slides-btn-secondary {
+  background: rgba(102,126,234,0.1);
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+.slides-btn-secondary:hover {
+  background: rgba(102,126,234,0.2);
+  transform: translateY(-2px);
+  color: #667eea;
+}
+@media (max-width: 768px) {
+  .slides-iframe {
+    height: 500px;
+  }
+  .slides-actions {
+    flex-direction: column;
+  }
+  .slides-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+</style>
 
-文章內容...
-
----
-
-## 📊 互動投影片
-
-<div style="text-align: center; margin: 40px 0;">
-  <a href="atomic-habits.html" 
-     style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(102,126,234,0.4); transition: all 0.3s ease;"
-     onmouseover="this.style.transform='translateY(-2px)'"
-     onmouseout="this.style.transform='translateY(0)'">
-    📖 查看互動投影片
-  </a>
+<div class="slides-wrapper">
+  <div class="slides-header">
+    <h3>📖 互動投影片版本</h3>
+    <p>精美排版 • 可下載 PDF • 支援鍵盤切換</p>
+  </div>
+  <div class="slides-iframe-container">
+    <iframe src="atomic-habits.html" 
+            class="slides-iframe"
+            loading="lazy"
+            title="原子習慣互動投影片">
+    </iframe>
+  </div>
+  <div class="slides-actions">
+    <a href="atomic-habits.html" target="_blank" class="slides-btn slides-btn-primary">
+      🔗 全螢幕開啟
+    </a>
+    <a href="atomic-habits.html" download class="slides-btn slides-btn-secondary">
+      💾 下載 HTML
+    </a>
+  </div>
 </div>
 
 # 《原子習慣》書摘：細微改變帶來巨大成就的實證法則
