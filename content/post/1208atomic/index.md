@@ -20,112 +20,27 @@ tags:
 </div>
 <p align="center">《原子習慣》- 詹姆斯·克利爾（James Clear）著</p>
 
-## 📊 精美互動投影片
+## 📊 互動投影片
 
-<style>
-.slides-wrapper {
-  margin: 40px 0;
-  padding: 0;
-}
-.slides-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 30px;
-  border-radius: 20px 20px 0 0;
-  text-align: center;
-  color: white;
-}
-.slides-header h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.slides-header p {
-  margin: 0;
-  opacity: 0.95;
-  font-size: 0.95rem;
-}
-.slides-iframe-container {
-  position: relative;
-  background: white;
-  border-radius: 0 0 20px 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-}
-.slides-iframe {
-  width: 100%;
-  height: 650px;
-  border: none;
-  display: block;
-}
-.slides-actions {
-  text-align: center;
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.slides-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-}
-.slides-btn-primary {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  box-shadow: 0 4px 15px rgba(102,126,234,0.3);
-}
-.slides-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102,126,234,0.5);
-  color: white;
-}
-.slides-btn-secondary {
-  background: rgba(102,126,234,0.1);
-  color: #667eea;
-  border: 2px solid #667eea;
-}
-.slides-btn-secondary:hover {
-  background: rgba(102,126,234,0.2);
-  transform: translateY(-2px);
-  color: #667eea;
-}
-@media (max-width: 768px) {
-  .slides-iframe {
-    height: 500px;
-  }
-  .slides-actions {
-    flex-direction: column;
-  }
-  .slides-btn {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-</style>
-
-<div class="slides-wrapper">
-  <div class="slides-header">
-    <h3>📖 互動投影片版本</h3>
-    <p>精美排版 • 可下載 PDF • 支援鍵盤切換</p>
+<div style="margin: 40px 0;">
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 20px;">
+    <h3 style="color: white; margin: 0 0 10px 0;">📖 互動投影片版本</h3>
+    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">使用鍵盤左右鍵切換頁面 • 支援下載 PDF</p>
   </div>
-  <div class="slides-iframe-container">
-    <iframe src="atomic-habits.html" 
-            class="slides-iframe"
-            loading="lazy"
-            title="原子習慣互動投影片">
-    </iframe>
-  </div>
-  <div class="slides-actions">
-    <a href="atomic-habits.html" target="_blank" class="slides-btn slides-btn-primary">
-      🔗 全螢幕開啟
-    </a>
-    <a href="atomic-habits.html" download class="slides-btn slides-btn-secondary">
-      💾 下載 HTML
+  
+  <iframe src="atomic-habits.html" 
+          width="100%" 
+          height="650px" 
+          frameborder="0"
+          loading="lazy"
+          style="border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); border: none; display: block; background: white;">
+  </iframe>
+  
+  <div style="text-align: center; margin-top: 15px;">
+    <a href="atomic-habits.html" 
+       target="_blank"
+       style="display: inline-block; padding: 10px 25px; background: #667eea; color: white; text-decoration: none; border-radius: 25px; font-size: 0.9rem; margin: 0 5px;">
+      🔗 新視窗開啟
     </a>
   </div>
 </div>
