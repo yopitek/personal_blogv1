@@ -1,7 +1,7 @@
 ---
 title: "書摘《原子習慣》：細微改變帶來巨大成就的實證法則"
 description: "建立習慣系統,學習改變,正向發展 - 詹姆斯·克利爾的習慣養成指南"
-date: 2024-12-08
+date: 2025-12-08
 draft: false
 slug: "atomic-habits-book-summary"
 categories:
