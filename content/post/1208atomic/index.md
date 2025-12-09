@@ -1,7 +1,7 @@
 ---
 title: "書摘《原子習慣》：細微改變帶來巨大成就的實證法則"
 description: "建立習慣系統,學習改變,正向發展 - 詹姆斯·克利爾的習慣養成指南"
-date: 2025-12-08
+date: 2024-12-08
 draft: false
 slug: "atomic-habits-book-summary"
 categories:
@@ -11,6 +11,11 @@ tags:
     - "自我成長"
     - "行為改變"
     - "書摘"
+resources:
+    - src: "atomic-habits.html"
+      title: "互動投影片"
+    - src: "bookcover.png"
+      title: "書籍封面"
 ---
 
 ## 書摘《原子習慣》：細微改變帶來巨大成就的實證法則
@@ -20,69 +25,169 @@ tags:
 </div>
 <p align="center">《原子習慣》- 詹姆斯·克利爾（James Clear）著</p>
 
+---
+
 ## 📊 互動投影片
 
-<div style="margin: 40px 0;">
-  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 20px;">
-    <h3 style="color: white; margin: 0 0 10px 0;">📖 互動投影片版本</h3>
-    <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">使用鍵盤左右鍵切換頁面 • 支援下載 PDF</p>
+<style>
+.slides-container {
+  margin: 50px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+.slides-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+.slides-header h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.slides-header p {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 1rem;
+}
+.slides-iframe-wrapper {
+  background: #f5f5f5;
+  padding: 0;
+  position: relative;
+}
+.slides-iframe {
+  width: 100%;
+  height: 680px;
+  border: none;
+  display: block;
+  background: white;
+}
+.slides-actions {
+  background: linear-gradient(180deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.slides-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.slides-btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+}
+.slides-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(102,126,234,0.5);
+  color: white;
+}
+.slides-btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.slides-btn-secondary:hover {
+  background: rgba(102,126,234,0.05);
+  transform: translateY(-3px);
+  color: #667eea;
+}
+.slides-notice {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(102,126,234,0.05);
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+@media (max-width: 768px) {
+  .slides-iframe {
+    height: 500px;
+  }
+  .slides-actions {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .slides-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .slides-header h3 {
+    font-size: 1.3rem;
+  }
+}
+</style>
+
+<div class="slides-container">
+  <div class="slides-header">
+    <h3>📖 互動投影片版本</h3>
+    <p>精美排版 • 鍵盤切換 • 可下載 PDF • 響應式設計</p>
   </div>
-  
-  <iframe src="atomic-habits.html" 
-          width="100%" 
-          height="650px" 
-          frameborder="0"
-          loading="lazy"
-          style="border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); border: none; display: block; background: white;">
-  </iframe>
-  
-  <div style="text-align: center; margin-top: 15px;">
-    <a href="atomic-habits.html" 
-       target="_blank"
-       style="display: inline-block; padding: 10px 25px; background: #667eea; color: white; text-decoration: none; border-radius: 25px; font-size: 0.9rem; margin: 0 5px;">
-      🔗 新視窗開啟
+  <div class="slides-iframe-wrapper">
+    <iframe src="atomic-habits.html" 
+            class="slides-iframe"
+            loading="lazy"
+            title="原子習慣互動投影片"
+            allowfullscreen>
+      <p>您的瀏覽器不支援 iframe。請<a href="atomic-habits.html" target="_blank">點擊這裡</a>直接查看投影片。</p>
+    </iframe>
+  </div>
+  <div class="slides-actions">
+    <a href="atomic-habits.html" target="_blank" class="slides-btn slides-btn-primary">
+      🔗 全螢幕開啟
+    </a>
+    <a href="atomic-habits.html" download="原子習慣書摘投影片.html" class="slides-btn slides-btn-secondary">
+      💾 下載投影片
     </a>
   </div>
 </div>
+
+<div class="slides-notice">
+  <strong>💡 使用提示：</strong>
+  <ul style="margin: 10px 0 0 20px; padding: 0;">
+    <li>使用鍵盤 ← → 方向鍵切換投影片</li>
+    <li>點擊底部進度點快速跳轉</li>
+    <li>支援觸控滑動（手機/平板）</li>
+    <li>可點擊「下載 PDF」按鈕儲存完整版本</li>
+  </ul>
+</div>
+
+---
 
 # 《原子習慣》書摘：細微改變帶來巨大成就的實證法則
 
 你有沒有過這樣的經驗？下定決心每天早起運動，第一週鬥志昂揚，第二週開始找藉口，第三週鬧鐘響了按掉繼續睡。我們總以為改變需要驚天動地的決心，結果往往敗給日常的微小慣性。就像英國自行車隊，曾經百年來在國際賽事表現平庸，卻因為開始專注於「1%的微小改善」——從坐墊舒適度到洗手方式——最終成為世界霸主。這本書要告訴我們：真正的改變，往往始於那些小到幾乎看不見的日常決定。
 
-## 2. 三個核心觀念
+## 三個核心觀念
 
-**觀念一：別管目標，專注系統**
+### 觀念一：別管目標，專注系統
+
 我們常以為成功來自宏大的目標，但作者發現：贏家和輸家往往有同樣的目標。關鍵差異在於「系統」——日常運作的流程與習慣。就像你想保持房間整潔，與其設定「大掃除」的目標，不如建立「每天回家把外套掛好、隨手整理桌面」的系統。目標是你要達成的結果，系統是讓你持續進步的過程。當你愛上過程而非只盯著終點，進步才會真正發生。
 
-**觀念二：改變身分認同，而不只是行為**
+### 觀念二：改變身分認同，而不只是行為
+
 當你說「我正在戒菸」，潛台詞仍是「我是個吸菸者」；但若說「我不抽菸」，這已是身分認同的轉變。每個習慣背後都藏著你對自己的認知：你認為自己是什麼樣的人，就會做出什麼樣的行為。想養成閱讀習慣？別只設定「讀完十本書」，而是開始把自己看作「讀書的人」。每天讀幾頁，就是為這個新身分投下一張贊成票。
 
-**觀念三：讓好習慣顯而易見、輕而易舉**
+### 觀念三：讓好習慣顯而易見、輕而易舉
+
 意志力是耗損品，與其挑戰人性，不如設計環境。想多吃水果？把洗好的蘋果放在廚房流理台最顯眼處。想多運動？睡前把運動鞋和衣服放在床邊。作者提出的「兩分鐘法則」尤其實用：任何新習慣都從兩分鐘版本開始——「做一下伏地挺身」「讀一頁書」「寫一句日記」。先讓行為容易啟動，習慣自然會長大。
 
-## 3. 深度理解
+## 深度理解
 
-這些觀念背後，藏著一個關鍵心法：**習慣是自我改善的「複利」**。每天進步1%，一年後你會進步37倍；每天退步1%，一年後你幾乎歸零。問題在於，複利效應在初期幾乎看不見——就像冰塊從攝氏-1度加熱到0度，前期的溫度變化似乎無效，直到突破臨界點，冰塊才突然融化。
-
-這就是為什麼我們常在半途放棄：運動兩週身材沒變化、存錢三個月戶頭數字依舊單薄。作者稱此為「潛伏之力的停滯期」——所有努力都在累積能量，只是尚未顯現。那些被稱為「一夕成功」的故事，其實是多年微小習慣堆疊後的「最後一擊」。就像石匠敲石頭，前一百下看似無效，但第一百零一下石頭裂開時，你會明白：讓石頭裂開的不是最後那一下，而是先前每一次的敲擊。
-
-所以，與其追求戲劇性的突破，不如專注於今日是否比昨日進步了1%。你的系統是否在正確軌道上？時間會放大微小選擇的差距——好習慣讓時間成為盟友，壞習慣讓時間與你為敵。
-
-## 4. 具體行動建議
-
-**① 習慣堆疊法**
-在既有習慣後接上新習慣：「喝完早晨咖啡後，立刻讀一頁書」「刷牙後，做兩下深蹲」。利用舊習慣作為新習慣的提示，讓行為自然銜接。
-
-**② 環境設計術**
-想減少手機使用？睡前把手機放在客廳充電。想多喝水？在辦公桌、床邊、背包裡都放一瓶水。讓好習慣的提示顯而易見，讓壞習慣的啟動變得麻煩。
-
-**③ 兩分鐘起手式**
-把任何習慣縮減到兩分鐘版本：運動→穿上運動鞋；寫作→打開文件寫一句；整理→把一件衣服掛回衣櫃。先啟動，再自然延長。
-
-**④ 習慣追蹤表**
-在月曆上打勾記錄每日執行情況，視覺化的進步會帶來成就感。但作者提醒：別讓追蹤成為負擔，漏了一天也沒關係，明天繼續就好。
-
-**⑤ 身分宣言**
-每天早晨對自己說：「我是會照顧健康的人」「我是能把事情完成的人」。語言會重塑自我認知，當你開始相信自己是這樣的人，行為自然跟上。
-
-真正的改變，不是一場壯烈的革命，而是日復一日、溫柔而堅定的自我演化。
+這些觀念背後，藏著一個關鍵心法：**習慣是自我改善的「複利」**。每天進步1%，一年後你會進步37倍；每天退步1%，一年後你幾乎歸零。問題在於，複利效應在初期幾乎看不見——就像冰塊從攝氏-1度加熱到0度，前期的溫度
