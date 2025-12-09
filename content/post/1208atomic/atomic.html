@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原子習慣 - 精美書摘投影片</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* 固定 16:9 比例容器 */
+        .slide-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 比例 */
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 5%;
+            display: none;
+            animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 隱藏滾動條但保持功能 */
+        .slide::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .slide::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+        }
+
+        .slide::-webkit-scrollbar-thumb {
+            background: rgba(102, 126, 234, 0.3);
+            border-radius: 10px;
+        }
+
+        .slide::-webkit-scrollbar-thumb:hover {
+            background: rgba(102, 126, 234, 0.5);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            z-index: 10;
+        }
+
+        /* 封面樣式 */
+        .cover {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+        }
+
+        .cover h1 {
+            font-size: clamp(2.5rem, 7vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3%;
+            line-height: 1.2;
+        }
+
+        .cover .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #555;
+            margin-bottom: 5%;
+            font-weight: 300;
+        }
+
+        .cover .author {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #888;
+            margin-top: 8%;
+        }
+
+        .cover .decoration {
+            width: clamp(100px, 15vw, 150px);
+            height: clamp(100px, 15vw, 150px);
+            margin: 5% auto;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(3rem, 8vw, 4rem);
+            color: white;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* 目錄樣式 */
+        .toc {
+            justify-content: flex-start;
+        }
+
+        .toc h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #333;
+            margin-bottom: 5%;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .toc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2%;
+            width: 100%;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 3% 4%;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .toc-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(10px);
+        }
+
+        .toc-number {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: #667eea;
+            min-width: 60px;
+        }
+
+        .toc-text {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* 內容頁樣式 */
+        .content {
+            justify-content: flex-start;
+        }
+
+        .content h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #333;
+            margin-bottom: 4%;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 2%;
+        }
+
+        .content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .content h3 {
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            color: #667eea;
+            margin: 3% 0 2%;
+            font-weight: 600;
+        }
+
+        .content p {
+            font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 2.5%;
+            text-align: justify;
+        }
+
+        .content ul {
+            margin: 2.5% 0;
+            padding-left: 4%;
+        }
+
+        .content li {
+            font-size: clamp(0.9rem, 1.7vw, 1.1rem);
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 2%;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08));
+            border-left: 4px solid #667eea;
+            padding: 3%;
+            border-radius: 10px;
+            margin: 3% 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: 500;
+            color: #333;
+        }
+
+        .action-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2%;
+        }
+
+        .action-item {
+            padding: 3%;
+            background: rgba(102, 126, 234, 0.03);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .action-item:hover {
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateX(5px);
+        }
+
+        .action-title {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 1%;
+        }
+
+        .action-desc {
+            font-size: clamp(0.9rem, 1.7vw, 1rem);
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* 導航按鈕 - 放在投影片外部 */
+        .nav-controls {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans TC', sans-serif;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.prev {
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+        }
+
+        .nav-btn.next {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* 進度指示器 */
+        .progress-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .progress-dot.active {
+            background: white;
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        .progress-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* PDF 下載按鈕 */
+        .download-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans TC', sans-serif;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn.pdf {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+        }
+
+        .download-btn.print {
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .download-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* 載入提示 */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .slide {
+                padding: 6%;
+            }
+
+            .nav-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .toc-item {
+                padding: 4% 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-controls {
+                flex-direction: column-reverse;
+                gap: 15px;
+            }
+
+            .nav-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 固定比例投影片容器 -->
+        <div class="slide-container">
+            <!-- 封面 -->
+            <div class="slide active cover">
+                <div class="decoration">📖</div>
+                <h1>原子習慣</h1>
+                <div class="subtitle">細微改變帶來巨大成就的實證法則</div>
+                <div class="author">James Clear 著</div>
+            </div>
+
+            <!-- 目錄 -->
+            <div class="slide toc">
+                <h2>目錄</h2>
+                <div class="toc-list">
+                    <div class="toc-item">
+                        <div class="toc-number">01</div>
+                        <div class="toc-text">生活開場：微小改變的力量</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-number">02</div>
+                        <div class="toc-text">三個核心觀念</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-number">03</div>
+                        <div class="toc-text">深度理解：習慣的複利效應</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-number">04</div>
+                        <div class="toc-text">具體行動建議</div>
+                    </div>
+                    <div class="toc-item">
+                        <div class="toc-number">05</div>
+                        <div class="toc-text">結語</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第1頁：生活開場 -->
+            <div class="slide content">
+                <h2>生活開場</h2>
+                <p>你有沒有過這樣的經驗？下定決心每天早起運動，第一週鬥志昂揚，第二週開始找藉口，第三週鬧鐘響了按掉繼續睡。</p>
+                
+                <div class="highlight-box">
+                    <p>💡 真正的改變，往往始於那些小到幾乎看不見的日常決定。</p>
+                </div>
+
+                <h3>英國自行車隊的奇蹟</h3>
+                <p>曾經百年來在國際賽事表現平庸的英國自行車隊，因為開始專注於「1%的微小改善」——從坐墊舒適度到洗手方式——最終成為世界霸主。</p>
+
+                <p>我們總以為改變需要驚天動地的決心，結果往往敗給日常的微小慣性。這本書要告訴我們：真正的改變，不需要革命性的突破。</p>
+            </div>
+
+            <!-- 第2頁：核心觀念1 -->
+            <div class="slide content">
+                <h2>核心觀念一</h2>
+                <h3>🎯 別管目標，專注系統</h3>
+                
+                <div class="highlight-box">
+                    <p>贏家和輸家往往有同樣的目標。關鍵差異在於「系統」——日常運作的流程與習慣。</p>
+                </div>
+
+                <p>就像你想保持房間整潔，與其設定「大掃除」的目標，不如建立「每天回家把外套掛好、隨手整理桌面」的系統。</p>
+
+                <p><strong>目標</strong>是你要達成的結果<br>
+                <strong>系統</strong>是讓你持續進步的過程</p>
+
+                <p>當你愛上過程而非只盯著終點，進步才會真正發生。</p>
+            </div>
+
+            <!-- 第3頁：核心觀念2&3 -->
+            <div class="slide content">
+                <h2>核心觀念二 & 三</h2>
+                
+                <h3>🌟 改變身分認同，而不只是行為</h3>
+                <p>當你說「我正在戒菸」，潛台詞仍是「我是個吸菸者」；但若說「我不抽菸」，這已是身分認同的轉變。</p>
+                
+                <div class="highlight-box">
+                    <p>💫 你認為自己是什麼樣的人，就會做出什麼樣的行為。</p>
+                </div>
+
+                <h3>⚡ 讓好習慣顯而易見、輕而易舉</h3>
+                <p>意志力是耗損品，與其挑戰人性，不如設計環境：</p>
+                <ul>
+                    <li>想多吃水果？把洗好的蘋果放在廚房流理台最顯眼處</li>
+                    <li>想多運動？睡前把運動鞋和衣服放在床邊</li>
+                    <li><strong>兩分鐘法則：</strong>任何新習慣都從兩分鐘版本開始</li>
+                </ul>
+            </div>
+
+            <!-- 第4頁：深度理解 -->
+            <div class="slide content">
+                <h2>深度理解</h2>
+                <h3>📈 習慣是自我改善的「複利」</h3>
+                
+                <div class="highlight-box">
+                    <p>每天進步1%，一年後你會進步37倍<br>
+                    每天退步1%，一年後你幾乎歸零</p>
+                </div>
+
+                <h3>為什麼我們常在半途放棄？</h3>
+                <p>就像冰塊從攝氏-1度加熱到0度，前期的溫度變化似乎無效，直到突破臨界點，冰塊才突然融化。</p>
+
+                <p>這就是「<strong>潛伏之力的停滯期</strong>」——所有努力都在累積能量，只是尚未顯現。</p>
+
+                <p>那些被稱為「一夕成功」的故事，其實是多年微小習慣堆疊後的「最後一擊」。就像石匠敲石頭，前一百下看似無效，但第一百零一下石頭裂開時，你會明白：讓石頭裂開的不是最後那一下，而是先前每一次的敲擊。</p>
+            </div>
+
+            <!-- 第5頁：行動建議 -->
+            <div class="slide content">
+                <h2>具體行動建議</h2>
+                
+                <div class="action-list">
+                    <div class="action-item">
+                        <div class="action-title">① 習慣堆疊法</div>
+                        <div class="action-desc">在既有習慣後接上新習慣：「喝完早晨咖啡後，立刻讀一頁書」「刷牙後，做兩下深蹲」。</div>
+                    </div>
+
+                    <div class="action-item">
+                        <div class="action-title">② 環境設計術</div>
+                        <div class="action-desc">讓好習慣的提示顯而易見，讓壞習慣的啟動變得麻煩。想減少手機使用？睡前把手機放在客廳充電。</div>
+                    </div>
+
+                    <div class="action-item">
+                        <div class="action-title">③ 兩分鐘起手式</div>
+                        <div class="action-desc">把任何習慣縮減到兩分鐘版本：運動→穿上運動鞋；寫作→打開文件寫一句；整理→把一件衣服掛回衣櫃。</div>
+                    </div>
+
+                    <div class="action-item">
+                        <div class="action-title">④ 習慣追蹤表</div>
+                        <div class="action-desc">在月曆上打勾記錄每日執行情況，視覺化的進步會帶來成就感。漏了一天也沒關係，明天繼續就好。</div>
+                    </div>
+
+                    <div class="action-item">
+                        <div class="action-title">⑤ 身分宣言</div>
+                        <div class="action-desc">每天早晨對自己說：「我是會照顧健康的人」「我是能把事情完成的人」。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第6頁：結語 -->
+            <div class="slide content">
+                <h2>結語</h2>
+                
+                <div class="highlight-box" style="text-align: center; padding: 5%;">
+                    <p style="font-size: clamp(1.2rem, 2.5vw, 1.5rem); line-height: 1.8; font-weight: 500;">
+                        真正的改變，<br>
+                        不是一場壯烈的革命，<br>
+                        而是日復一日、<br>
+                        溫柔而堅定的自我演化。
+                    </p>
+                </div>
+
+                <p style="margin-top: 8%; text-align: center; color: #888; font-size: clamp(0.95rem, 1.8vw, 1.1rem);">
+                    透過 Zenote 閱讀更多<br>
+                    我們每天為你精選一本好書，用最生活化的方式，<br>
+                    把知識變成可執行的行動。
+                </p>
+            </div>
+        </div>
+
+        <!-- 導航控制 - 在投影片外部 -->
+        <div class="nav-controls">
+            <button class="nav-btn prev" onclick="prevSlide()">← 上一頁</button>
+            <div class="progress-indicator" id="progressDots"></div>
+            <button class="nav-btn next" onclick="nextSlide()">下一頁 →</button>
+        </div>
+
+        <!-- PDF 下載控制 -->
+        <div class="download-controls">
+            <button class="download-btn pdf" onclick="downloadPDF()" id="pdfBtn">
+                📥 下載 PDF
+            </button>
+            <button class="download-btn print" onclick="window.print()">
+                🖨️ 列印投影片
+            </button>
+        </div>
+    </div>
+
+    <!-- 載入提示 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">正在生成 PDF，請稍候...</div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        // 初始化進度點
+        function initProgressDots() {
+            const container = document.getElementById('progressDots');
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'progress-dot';
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => goToSlide(i);
+                container.appendChild(dot);
+            }
+        }
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                    // 滾動到頂部
+                    slide.scrollTop = 0;
+                }
+            });
+
+            // 更新進度點
+            document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+
+            // 更新按鈕狀態
+            document.querySelector('.prev').disabled = currentSlide === 0;
+            document.querySelector('.next').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        // 鍵盤導航
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // 觸控滑動支持
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.querySelector('.slide-container').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.querySelector('.slide-container').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        }
+
+        // 初始化
+        initProgressDots();
+        updateSlide();
+
+        // PDF 下載功能
+        async function downloadPDF() {
+            const btn = document.getElementById('pdfBtn');
+            const overlay = document.getElementById('loadingOverlay');
+            
+            // 禁用按鈕並顯示載入
+            btn.disabled = true;
+            overlay.classList.add('active');
+
+            try {
+                // 收集所有投影片
+                const allSlides = document.querySelectorAll('.slide');
+                const container = document.createElement('div');
+                container.style.width = '210mm'; // A4 寬度
+                container.style.background = 'white';
+                
+                // 複製所有投影片
+                allSlides.forEach((slide, index) => {
+                    const slideClone = slide.cloneNode(true);
+                    slideClone.style.display = 'flex';
+                    slideClone.style.minHeight = '297mm'; // A4 高度
+                    slideClone.style.pageBreakAfter = 'always';
+                    slideClone.style.padding = '40px';
+                    container.appendChild(slideClone);
+                });
+
+                // PDF 配置選項
+                const opt = {
+                    margin: 0,
+                    filename: '原子習慣書摘-Zennote.pdf',
+                    image: { type: 'jpeg', quality: 0.95 },
+                    html2canvas: { 
+                        scale: 2,
+                        useCORS: true,
+                        letterRendering: true
+                    },
+                    jsPDF: { 
+                        unit: 'mm', 
+                        format: 'a4', 
+                        orientation: 'landscape' 
+                    }
+                };
+
+                // 生成並下載 PDF
+                await html2pdf().set(opt).from(container).save();
+                
+            } catch (error) {
+                console.error('PDF 生成失敗:', error);
+                alert('PDF 生成失敗，請稍後再試或使用列印功能');
+            } finally {
+                // 恢復按鈕狀態
+                btn.disabled = false;
+                overlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
