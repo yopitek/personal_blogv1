@@ -18,11 +18,10 @@ categories:
 # 《原子習慣》書摘：細微改變帶來巨大成就的實證法則
 
 <div align="center" style="margin: 20px 0;">
-  <a href="/atomic-habits-interactive.html" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
+  a href="{{ "/atomic-habits-interactive.html" | relURL }}" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
     📊 點選檢視互動式書摘網頁 (開啟新分頁)
   </a>
 </div>
-
 
 你有沒有過這樣的經驗？下定決心每天早起運動，第一週鬥志昂揚，第二週開始找藉口，第三週鬧鐘響了按掉繼續睡。我們總以為改變需要驚天動地的決心，結果往往敗給日常的微小慣性。就像英國自行車隊，曾經百年來在國際賽事表現平庸，卻因為開始專注於「1%的微小改善」——從坐墊舒適度到洗手方式——最終成為世界霸主。這本書要告訴我們：真正的改變，往往始於那些小到幾乎看不見的日常決定。
 
