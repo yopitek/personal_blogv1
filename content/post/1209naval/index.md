@@ -73,6 +73,4 @@ categories:
 財富與幸福不是拼命追來的，而是當你學會清晰思考、看清現實後，自然會抵達的彼岸。
 
 
- <a href="[/naval-ravikant-interactive.html](https://www.navalmanack.com/)" target="_blank"> 
-作者網頁：
-可免費下載本書英文版電子書</a>
+ <a href="https://www.navalmanack.com" target="_blank"> 作者網頁https://www.navalmanack.com 可免費下載本書英文版電子書</a>
