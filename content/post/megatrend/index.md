@@ -5,7 +5,7 @@ date: 2025-12-12
 draft: false
 slug: "讓你一口氣看懂世界經濟大局"
 categories:
-    - "Industry"
+    - "Books"
 ---
 
 ## 書摘《時勢:看懂全球經濟大趨勢》財經知識型YT「小Lin說」第一本商業金融科普書，讓你一口氣看懂世界經濟大局
