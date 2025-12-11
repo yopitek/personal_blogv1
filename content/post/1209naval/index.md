@@ -11,7 +11,7 @@ categories:
 ## 書摘《納瓦爾寶典》：關於財富與幸福的智慧
 
 <div align="center" style="margin: 15px 0;">
-  <img src="bookcover.png" alt="納瓦爾寶典書籍封面" width="40%">
+  <img src="bookcover2.png" alt="納瓦爾寶典書籍封面" width="40%">
 </div>
 
 <p align="center">書摘《納瓦爾寶典》：關於財富與幸福的智慧</p>
