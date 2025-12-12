@@ -10,6 +10,10 @@ categories:
 
 ## 書摘《原子習慣》：細微改變帶來巨大成就的實證法則
 
+<div align="center" style="margin: 15px 0;">
+  <img src="bookcover.png" alt="原子習慣" width="40%">
+</div>
+
 <div align="center" style="margin: 28px 0;">
   <a href="/1211AtomicHabits.html" target="_blank"
      style="
