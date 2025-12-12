@@ -7,7 +7,6 @@ slug: "unbeatablelearning"
 categories:
     - "Books"
 ---
-
 <div align="center" style="margin: 15px 0;">
   <img src="bookcover.png" alt="不敗學習力書籍封面" width="40%">
 </div>
@@ -21,13 +20,9 @@ categories:
     📙 點選開啟互動式書摘網頁
   </a>
 </div>
-
-
-
 # 不敗學習力:學霸都在用的10大聰明讀書法
-**作者:** 劉軒 | **類型:** 學習方法、自我成長
+**作者:** 劉軒 
 ## 核心理念
-
 哈佛大學心理學碩士劉軒結合個人經歷、心理學研究與學霸經驗,打破「寒窗苦讀」迷思,
 提出**學習力冰山理論**:真正的學霸不只掌握高效技巧,更懂得自我管理並維持健康身心。
 
