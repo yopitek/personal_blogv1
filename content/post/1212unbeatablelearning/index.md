@@ -8,8 +8,6 @@ categories:
     - "Books"
 ---
 
-## 書摘《不敗學習力》:學霸都在用的10大聰明讀書法
-
 <div align="center" style="margin: 15px 0;">
   <img src="bookcover.png" alt="不敗學習力書籍封面" width="40%">
 </div>
