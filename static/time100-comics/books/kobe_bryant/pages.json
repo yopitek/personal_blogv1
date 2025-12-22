@@ -1,0 +1,84 @@
+{
+    "slug": "kobe_bryant",
+    "title": {
+        "en": "Kobe Bryant",
+        "zh-TW": "乔比·布萊恩",
+        "zh-CN": "科比·布莱恩特",
+        "ja": "コービー・ブライアント",
+        "fr": "Kobe Bryant"
+    },
+    "subtitle": {
+        "en": "The Black Mamba Legend",
+        "zh-TW": "黑曼巴傳奇",
+        "zh-CN": "黑曼巴传奇",
+        "ja": "ブラックマンバの伝説",
+        "fr": "La Légende du Black Mamba"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": "p01",
+            "key": "italian_childhood",
+            "image": "images/p01.png",
+            "audio_key": "p01"
+        },
+        {
+            "id": "p02",
+            "key": "high_school_phenom",
+            "image": "images/p02.png",
+            "audio_key": "p02"
+        },
+        {
+            "id": "p03",
+            "key": "young_laker_rise",
+            "image": "images/p03.png",
+            "audio_key": "p03"
+        },
+        {
+            "id": "p04",
+            "key": "championship_dynasty",
+            "image": "images/p04.png",
+            "audio_key": "p04"
+        },
+        {
+            "id": "p05",
+            "key": "mamba_mentality",
+            "image": "images/p05.png",
+            "audio_key": "p05"
+        },
+        {
+            "id": "p06",
+            "key": "championship_return",
+            "image": "images/p06.png",
+            "audio_key": "p06"
+        },
+        {
+            "id": "p07",
+            "key": "final_game_60_points",
+            "image": "images/p07.png",
+            "audio_key": "p07",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p08",
+            "key": "academy_award",
+            "image": "images/p08.png",
+            "audio_key": "p08",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p09",
+            "key": "legacy_mentor",
+            "image": "images/p09.png",
+            "audio_key": "p09"
+        },
+        {
+            "id": "p10",
+            "key": "eternal_impact",
+            "image": "images/p10.png",
+            "audio_key": "p10",
+            "style": "museum_poster"
+        }
+    ]
+}

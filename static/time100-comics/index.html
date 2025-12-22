@@ -33,32 +33,37 @@
             </p>
         </section>
 
-        <div style="display: flex; justify-content: center; padding: 2rem 0; margin-top: -80px;">
-            <!-- Book Card: Stephen Hawking - Centered -->
-            <a href="reader.html?book=stephen_hawking" class="book-card" style="max-width: 400px; width: 100%;">
+        <div class="books-grid"
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem 0; margin-top: -80px;">
+            <!-- Book Card: Stephen Hawking -->
+            <a href="reader.html?book=stephen_hawking" class="book-card" style="max-width: 360px; width: 100%;">
                 <div class="book-cover">
-                    <!-- Using hero cover image -->
                     <img src="books/stephen_hawking/images/cover.png" alt="Stephen Hawking Cover">
                 </div>
                 <div class="book-info">
-                    <p id="book-category"
+                    <p class="book-category" data-book="hawking"
                         style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">英國物理學家</p>
-                    <h3 id="book-name" class="book-title" style="font-size: 1.8rem;">史蒂芬·霍金</h3>
-                    <p id="book-subtitle" class="book-desc">
+                    <h3 class="book-name" data-book="hawking" style="font-size: 1.6rem;">史蒂芬·霍金</h3>
+                    <p class="book-subtitle" data-book="hawking" class="book-desc">
                         從牛津到星辰的璀璨人生
                     </p>
                 </div>
             </a>
 
-            <!-- Placeholder for future books -->
-            <!-- 
-            <div class="book-card" style="opacity: 0.5; pointer-events: none;">
-                <div class="book-cover">Coming Soon</div>
-                <div class="book-info">
-                    <h3 class="book-title">More Coming Soon</h3>
+            <!-- Book Card: Kobe Bryant - NEW! -->
+            <a href="reader.html?book=kobe_bryant" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/kobe_bryant/images/cover.png" alt="Kobe Bryant Cover">
                 </div>
-            </div> 
-            -->
+                <div class="book-info">
+                    <p class="book-category" data-book="kobe"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">NBA 傳奇球星</p>
+                    <h3 class="book-name" data-book="kobe" style="font-size: 1.6rem;">乔比·布萊恩</h3>
+                    <p class="book-subtitle" data-book="kobe" class="book-desc">
+                        黑曼巴傳奇
+                    </p>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -69,37 +74,42 @@
             'en': {
                 heroTitle: 'Inspiring Lives Through Comics',
                 heroDesc: 'Explore the stories of the world\'s most influential people through immersive comic biographies',
-                bookCategory: 'British Physicist',
-                bookName: 'Stephen Hawking',
-                bookSubtitle: 'From Oxford to the Stars'
+                books: {
+                    hawking: { category: 'British Physicist', name: 'Stephen Hawking', subtitle: 'From Oxford to the Stars' },
+                    kobe: { category: 'NBA Legend', name: 'Kobe Bryant', subtitle: 'The Black Mamba Legend' }
+                }
             },
             'zh-TW': {
                 heroTitle: '啟發人生的漫畫名人傳記',
                 heroDesc: '透過身歷其境的漫畫傳記，探索世界最具影響力的人的故事',
-                bookCategory: '英國物理學家',
-                bookName: '史蒂芬·霍金',
-                bookSubtitle: '從牛津到星辰的璀璨人生'
+                books: {
+                    hawking: { category: '英國物理學家', name: '史蒂芬·霍金', subtitle: '從牛津到星辰的璀璨人生' },
+                    kobe: { category: 'NBA 傳奇球星', name: '乔比·布萊恩', subtitle: '黑曼巴傳奇' }
+                }
             },
             'zh-CN': {
                 heroTitle: '启发人生的漫画名人传记',
                 heroDesc: '通过身临其境的漫画传记，探索世界最具影响力的人的故事',
-                bookCategory: '英国物理学家',
-                bookName: '史蒂芬·霍金',
-                bookSubtitle: '从牛津到星辰的璀璨人生'
+                books: {
+                    hawking: { category: '英国物理学家', name: '史蒂芬·霍金', subtitle: '从牛津到星辰的璀璨人生' },
+                    kobe: { category: 'NBA 传奇球星', name: '科比·布莱恩特', subtitle: '黑曼巴传奇' }
+                }
             },
             'ja': {
                 heroTitle: '人生を照らす、マンガの伝記',
                 heroDesc: '没入型のマンガ伝記を通じて、世界で最も影響力のある人々の物語を探求しましょう',
-                bookCategory: 'イギリスの物理学者',
-                bookName: 'スティーヴン・ホーキング',
-                bookSubtitle: 'オックスフォードから星々へ'
+                books: {
+                    hawking: { category: 'イギリスの物理学者', name: 'スティーヴン・ホーキング', subtitle: 'オックスフォードから星々へ' },
+                    kobe: { category: 'NBA レジェンド', name: 'コービー・ブライアント', subtitle: 'ブラックマンバの伝説' }
+                }
             },
             'fr': {
                 heroTitle: 'Des vies inspirantes en BD',
                 heroDesc: 'Explorez les histoires des personnes les plus influentes du monde à travers des biographies en bande dessinée immersives',
-                bookCategory: 'Physicien britannique',
-                bookName: 'Stephen Hawking',
-                bookSubtitle: 'D\'Oxford aux étoiles'
+                books: {
+                    hawking: { category: 'Physicien britannique', name: 'Stephen Hawking', subtitle: 'D\'Oxford aux étoiles' },
+                    kobe: { category: 'Légende NBA', name: 'Kobe Bryant', subtitle: 'La Légende du Black Mamba' }
+                }
             }
         };
 
@@ -111,10 +121,17 @@
             document.querySelector('h1').textContent = c.heroTitle;
             document.querySelector('.hero p').textContent = c.heroDesc;
 
-            // Update book card
-            document.getElementById('book-category').textContent = c.bookCategory;
-            document.getElementById('book-name').textContent = c.bookName;
-            document.getElementById('book-subtitle').textContent = c.bookSubtitle;
+            // Update all book cards
+            ['hawking', 'kobe'].forEach(bookKey => {
+                const book = c.books[bookKey];
+                const category = document.querySelector(`.book-category[data-book="${bookKey}"]`);
+                const name = document.querySelector(`.book-name[data-book="${bookKey}"]`);
+                const subtitle = document.querySelector(`.book-subtitle[data-book="${bookKey}"]`);
+
+                if (category) category.textContent = book.category;
+                if (name) name.textContent = book.name;
+                if (subtitle) subtitle.textContent = book.subtitle;
+            });
         }
 
         // Listen for language changes
