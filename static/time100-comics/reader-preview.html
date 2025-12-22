@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME100 Reader - Enhanced Preview</title>
+    <link rel="stylesheet" href="style-preview.css">
+    <style>
+        /* Reader-specific tweaks */
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index-preview.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            Back to Library
+        </a>
+        <div class="language-selector">
+            <select id="lang-select">
+                <option value="en">English</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="zh-CN">简体中文</option>
+                <option value="ja">日本語</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="reader-container">
+        <!-- Left: Image -->
+        <div class="comic-panel">
+            <img id="comic-img" class="comic-image" src="" alt="Comic Page">
+
+            <div class="nav-controls">
+                <button id="btn-prev" class="nav-btn" aria-label="Previous Page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                </button>
+                <span id="page-counter">1 / 10</span>
+                <button id="btn-next" class="nav-btn" aria-label="Next Page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right: Text & Audio -->
+        <div class="text-panel">
+            <div id="text-content">
+                <div class="page-indicator" id="page-label">PAGE 01</div>
+                <h2 class="section-title" id="page-title">Loading...</h2>
+                <div class="narrative-text" id="page-text"></div>
+            </div>
+
+            <div class="audio-player">
+                <button id="btn-play" class="play-btn">
+                    <svg id="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg id="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                        style="display:none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                </button>
+                <div style="flex:1;">
+                    <div style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:6px; font-weight: 600; letter-spacing: 0.05em;">NARRATION</div>
+                    <div style="height:6px; background:rgba(255,255,255,0.1); border-radius:3px; overflow:hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);">
+                        <div id="audio-progress"
+                            style="height:100%; width:0%; transition:width 0.1s linear;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-element"></audio>
+
+    <script src="main.js"></script>
+    <script>
+        const Reader = {
+            bookSlug: new URLSearchParams(window.location.search).get('book') || 'stephen_hawking',
+            currentPage: 0,
+            totalPages: 10,
+            pagesData: null,
+            i18nData: null,
+            audioEl: null,
+            isPlaying: false,
+
+            async init() {
+                this.audioEl = document.getElementById('audio-element');
+                await this.loadContent();
+
+                // Event Listeners
+                document.getElementById('btn-prev').addEventListener('click', () => this.changePage(-1));
+                document.getElementById('btn-next').addEventListener('click', () => this.changePage(1));
+                document.getElementById('btn-play').addEventListener('click', () => this.toggleAudio());
+
+                this.audioEl.addEventListener('timeupdate', () => this.updateProgress());
+                this.audioEl.addEventListener('ended', () => {
+                    this.isPlaying = false;
+                    this.updatePlayButton();
+                });
+
+                // Listen for language changes
+                window.addEventListener('languageChanged', async (e) => {
+                    await this.loadContent();
+                });
+
+                // Keyboard Nav
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') this.changePage(1);
+                    if (e.key === 'ArrowLeft') this.changePage(-1);
+                    if (e.key === ' ') {
+                        e.preventDefault();
+                        this.toggleAudio();
+                    }
+                });
+            },
+
+            async loadContent() {
+                try {
+                    // Get current language
+                    const lang = (typeof App !== 'undefined' && App.state) ? App.state.language : localStorage.getItem('time100_lang') || 'zh-TW';
+
+                    // Load pages.json and i18n data
+                    const [pagesRes, i18nRes] = await Promise.all([
+                        fetch(`./books/${this.bookSlug}/pages.json`),
+                        fetch(`./books/${this.bookSlug}/i18n/${lang}.json`)
+                    ]);
+
+                    this.pagesData = await pagesRes.json();
+                    this.i18nData = await i18nRes.json();
+                    this.totalPages = this.pagesData.pages.length;
+
+                    console.log('Loaded content:', { pages: this.totalPages, lang });
+                    this.renderPage();
+                } catch (error) {
+                    console.error('Failed to load content:', error);
+                    // Fallback to basic rendering
+                    this.renderPage();
+                }
+            },
+
+            renderPage() {
+                const pageIndex = this.currentPage;
+                const pageId = `page${String(pageIndex + 1).padStart(2, '0')}`;
+                const pIdShort = `p${String(pageIndex + 1).padStart(2, '0')}`;
+
+                // 1. Image
+                const img = document.getElementById('comic-img');
+                img.classList.remove('loaded');
+                img.src = `books/${this.bookSlug}/images/${pIdShort}.png`;
+                img.onload = () => {
+                    console.log('Image loaded:', img.src);
+                    img.classList.add('loaded');
+                };
+                img.onerror = () => {
+                    console.error('Failed to load image:', img.src);
+                };
+
+                // 2. Text
+                if (this.i18nData) {
+                    const title = this.i18nData[`${pageId}_title`] || "Title Missing";
+                    const text = this.i18nData[`${pageId}_text`] || "Text Missing";
+                    document.getElementById('page-title').textContent = title;
+                    document.getElementById('page-text').textContent = text;
+                    console.log('Rendered text:', { title, text });
+                } else {
+                    document.getElementById('page-title').textContent = `Page ${pageIndex + 1}`;
+                    document.getElementById('page-text').textContent = 'Loading content...';
+                }
+
+                document.getElementById('page-label').textContent = `PAGE ${String(pageIndex + 1).padStart(2, '0')}`;
+
+                // 3. UI
+                document.getElementById('page-counter').textContent = `${pageIndex + 1} / ${this.totalPages}`;
+                document.getElementById('btn-prev').disabled = pageIndex === 0;
+                document.getElementById('btn-next').disabled = pageIndex === this.totalPages - 1;
+
+                // 4. Audio Source
+                const lang = (typeof App !== 'undefined' && App.state) ? App.state.language : localStorage.getItem('time100_lang') || 'zh-TW';
+                const audioPath = `books/${this.bookSlug}/audio/${lang}/${pIdShort}.mp3`;
+
+                const wasPlaying = !this.audioEl.paused;
+                this.audioEl.src = audioPath;
+                if (!wasPlaying) {
+                    this.isPlaying = false;
+                    this.updatePlayButton();
+                    document.getElementById('audio-progress').style.width = '0%';
+                }
+            },
+
+            changePage(delta) {
+                const newPage = this.currentPage + delta;
+                if (newPage >= 0 && newPage < this.totalPages) {
+                    this.currentPage = newPage;
+                    this.renderPage();
+                }
+            },
+
+            toggleAudio() {
+                if (this.audioEl.paused) {
+                    this.audioEl.play();
+                    this.isPlaying = true;
+                } else {
+                    this.audioEl.pause();
+                    this.isPlaying = false;
+                }
+                this.updatePlayButton();
+            },
+
+            updatePlayButton() {
+                const playIcon = document.getElementById('icon-play');
+                const pauseIcon = document.getElementById('icon-pause');
+                if (this.isPlaying) {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                } else {
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                }
+            },
+
+            updateProgress() {
+                if (this.audioEl.duration) {
+                    const percent = (this.audioEl.currentTime / this.audioEl.duration) * 100;
+                    document.getElementById('audio-progress').style.width = `${percent}%`;
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            Reader.init();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME100 Comic Biographies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <!-- Logo removed as requested -->
+        </div>
+        <div class="language-selector">
+            <select id="lang-select">
+                <option value="en">English</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="zh-CN">简体中文</option>
+                <option value="ja">日本語</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" style="text-align: center; margin-bottom: 3rem; margin-top: -40px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">啟發人生的漫畫名人傳記</h1>
+            <p
+                style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.6;">
+                透過身歷其境的漫畫傳記，探索世界最具影響力的人的故事
+            </p>
+        </section>
+
+        <div style="display: flex; justify-content: center; padding: 2rem 0; margin-top: -80px;">
+            <!-- Book Card: Stephen Hawking - Centered -->
+            <a href="reader.html?book=stephen_hawking" class="book-card" style="max-width: 400px; width: 100%;">
+                <div class="book-cover">
+                    <!-- Using hero cover image -->
+                    <img src="books/stephen_hawking/images/cover.png" alt="Stephen Hawking Cover">
+                </div>
+                <div class="book-info">
+                    <p id="book-category"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">英國物理學家</p>
+                    <h3 id="book-name" class="book-title" style="font-size: 1.8rem;">史蒂芬·霍金</h3>
+                    <p id="book-subtitle" class="book-desc">
+                        從牛津到星辰的璀璨人生
+                    </p>
+                </div>
+            </a>
+
+            <!-- Placeholder for future books -->
+            <!-- 
+            <div class="book-card" style="opacity: 0.5; pointer-events: none;">
+                <div class="book-cover">Coming Soon</div>
+                <div class="book-info">
+                    <h3 class="book-title">More Coming Soon</h3>
+                </div>
+            </div> 
+            -->
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+        // Comprehensive language content for all UI elements
+        const content = {
+            'en': {
+                heroTitle: 'Inspiring Lives Through Comics',
+                heroDesc: 'Explore the stories of the world\'s most influential people through immersive comic biographies',
+                bookCategory: 'British Physicist',
+                bookName: 'Stephen Hawking',
+                bookSubtitle: 'From Oxford to the Stars'
+            },
+            'zh-TW': {
+                heroTitle: '啟發人生的漫畫名人傳記',
+                heroDesc: '透過身歷其境的漫畫傳記，探索世界最具影響力的人的故事',
+                bookCategory: '英國物理學家',
+                bookName: '史蒂芬·霍金',
+                bookSubtitle: '從牛津到星辰的璀璨人生'
+            },
+            'zh-CN': {
+                heroTitle: '启发人生的漫画名人传记',
+                heroDesc: '通过身临其境的漫画传记，探索世界最具影响力的人的故事',
+                bookCategory: '英国物理学家',
+                bookName: '史蒂芬·霍金',
+                bookSubtitle: '从牛津到星辰的璀璨人生'
+            },
+            'ja': {
+                heroTitle: '人生を照らす、マンガの伝記',
+                heroDesc: '没入型のマンガ伝記を通じて、世界で最も影響力のある人々の物語を探求しましょう',
+                bookCategory: 'イギリスの物理学者',
+                bookName: 'スティーヴン・ホーキング',
+                bookSubtitle: 'オックスフォードから星々へ'
+            },
+            'fr': {
+                heroTitle: 'Des vies inspirantes en BD',
+                heroDesc: 'Explorez les histoires des personnes les plus influentes du monde à travers des biographies en bande dessinée immersives',
+                bookCategory: 'Physicien britannique',
+                bookName: 'Stephen Hawking',
+                bookSubtitle: 'D\'Oxford aux étoiles'
+            }
+        };
+
+        // Update all text content based on language
+        function updateContent(lang) {
+            const c = content[lang] || content['en'];
+
+            // Update hero section
+            document.querySelector('h1').textContent = c.heroTitle;
+            document.querySelector('.hero p').textContent = c.heroDesc;
+
+            // Update book card
+            document.getElementById('book-category').textContent = c.bookCategory;
+            document.getElementById('book-name').textContent = c.bookName;
+            document.getElementById('book-subtitle').textContent = c.bookSubtitle;
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', (e) => {
+            updateContent(e.detail.language);
+        });
+
+        // Set initial language (default to zh-TW if not set)
+        const initialLang = localStorage.getItem('time100_lang') || 'zh-TW';
+        App.setLanguage(initialLang);
+        updateContent(initialLang);
+    </script>
+</body>
+
+</html>

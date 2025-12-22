@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "person": "stephen_hawking",
+    "title": "Stephen Hawking: A Brief History of Brilliance",
+    "version": "1.0",
+    "total_pages": 10,
+    "languages": ["zh-TW", "zh-CN", "ja", "en", "fr"],
+    "created": "2025-12-21"
+  },
+  "pages": [
+    {
+      "id": "p01",
+      "scene_key": "curious_child_oxford",
+      "title_key": "page01_title",
+      "text_key": "page01_text",
+      "image": "p01.png",
+      "scene_description": "Young Stephen in 1940s Oxford, looking up at starry night sky with wonder",
+      "themes": ["childhood", "curiosity", "origins"]
+    },
+    {
+      "id": "p02",
+      "scene_key": "academic_excellence",
+      "title_key": "page02_title",
+      "text_key": "page02_text",
+      "image": "p02.png",
+      "scene_description": "Stephen at Oxford University, surrounded by physics books and equations",
+      "themes": ["education", "oxford", "cambridge"]
+    },
+    {
+      "id": "p03",
+      "scene_key": "diagnosis_determination",
+      "title_key": "page03_title",
+      "text_key": "page03_text",
+      "image": "p03.png",
+      "scene_description": "Young Hawking receiving ALS diagnosis but showing determined, hopeful expression",
+      "themes": ["adversity", "courage", "determination"]
+    },
+    {
+      "id": "p04",
+      "scene_key": "black_hole_breakthrough",
+      "title_key": "page04_title",
+      "text_key": "page04_text",
+      "image": "p04.png",
+      "scene_description": "Hawking at blackboard with black hole diagrams and radiation equations glowing",
+      "themes": ["discovery", "black_holes", "hawking_radiation"]
+    },
+    {
+      "id": "p05",
+      "scene_key": "brief_history_time",
+      "title_key": "page05_title",
+      "text_key": "page05_text",
+      "image": "p05.png",
+      "scene_description": "Hawking with his bestselling book, reaching audiences around the world",
+      "themes": ["bestseller", "science_communication", "fame"]
+    },
+    {
+      "id": "p06",
+      "scene_key": "cosmology_contributions",
+      "title_key": "page06_title",
+      "text_key": "page06_text",
+      "image": "p06.png",
+      "scene_description": "Hawking surrounded by cosmic imagery, galaxies, and mathematical equations",
+      "themes": ["cosmology", "big_bang", "scientific_legacy"]
+    },
+    {
+      "id": "p07",
+      "scene_key": "pop_culture_icon",
+      "title_key": "page07_title",
+      "text_key": "page07_text",
+      "image": "p07.png",
+      "scene_description": "Hawking in animated style appearing on TV shows, engaging with popular culture",
+      "themes": ["cultural_icon", "media", "accessibility"]
+    },
+    {
+      "id": "p08",
+      "scene_key": "science_advocate",
+      "title_key": "page08_title",
+      "text_key": "page08_text",
+      "image": "p08.png",
+      "scene_description": "Hawking speaking to diverse audiences about science, climate, and humanity's future",
+      "themes": ["advocacy", "education", "global_impact"]
+    },
+    {
+      "id": "p09",
+      "scene_key": "cosmic_questions",
+      "title_key": "page09_title",
+      "text_key": "page09_text",
+      "image": "p09.png",
+      "scene_description": "Hawking contemplating the universe's mysteries, surrounded by stars and galaxies",
+      "themes": ["philosophy", "big_questions", "universe"]
+    },
+    {
+      "id": "p10",
+      "scene_key": "eternal_legacy",
+      "title_key": "page10_title",
+      "text_key": "page10_text",
+      "image": "p10.png",
+      "scene_description": "Hawking's impact radiating outward - inspiring students, books, stars, wheelchair as symbol of triumph",
+      "themes": ["legacy", "inspiration", "eternal_impact"]
+    }
+  ],
+  "ui_elements": {
+    "navigation": {
+      "prev_button": "nav_prev",
+      "next_button": "nav_next",
+      "page_counter": "nav_page_counter"
+    },
+    "controls": {
+      "language_selector": "ui_language",
+      "audio_toggle": "ui_audio",
+      "theme_toggle": "ui_theme"
+    },
+    "labels": {
+      "loading": "ui_loading",
+      "error": "ui_error",
+      "play_audio": "ui_play",
+      "pause_audio": "ui_pause"
+    }
+  },
+  "tts_config": {
+    "enabled": true,
+    "auto_play": false,
+    "voice_settings": {
+      "zh-TW": {"voice": "cmn-TW-Wavenet-A", "speed": 1.0},
+      "zh-CN": {"voice": "cmn-CN-Wavenet-A", "speed": 1.0},
+      "ja": {"voice": "ja-JP-Wavenet-A", "speed": 1.0},
+      "en": {"voice": "en-US-Wavenet-D", "speed": 1.0},
+      "fr": {"voice": "fr-FR-Wavenet-A", "speed": 1.0}
+    }
+  }
+}
