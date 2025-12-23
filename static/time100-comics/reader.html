@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIME100 Reader</title>
+    <title>TIME100 Reader v1.1</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Reader-specific tweaks */
@@ -168,11 +168,18 @@
 
             async loadContent() {
                 const data = await App.fetchBookData(this.bookSlug);
-                if (!data) return;
+                console.log("Book Data Loaded:", data);
+                if (!data) {
+                    console.error("Failed to load book data for slug:", this.bookSlug);
+                    return;
+                }
 
                 this.pagesData = data.pages;
                 this.i18nData = data.i18n;
-                this.totalPages = this.pagesData.pages.length;
+                this.totalPages = this.pagesData.pages ? this.pagesData.pages.length : 0;
+
+                console.log("i18n Data:", this.i18nData);
+                console.log("Total Pages:", this.totalPages);
 
                 this.renderPage();
             },
@@ -188,9 +195,14 @@
                 img.src = `books/${this.bookSlug}/images/${pIdShort}.png`;
                 img.onload = () => img.classList.add('loaded');
 
-                // 2. Text
-                document.getElementById('page-title').textContent = this.i18nData[`${pageId}_title`] || "Title Missing";
-                document.getElementById('page-text').textContent = this.i18nData[`${pageId}_text`] || "Text Missing";
+                // 2. Text - Support both nested (p01.title) and flat (page01_title) structures
+                const pageData = this.i18nData[pIdShort] || {};
+                let title = pageData.title || this.i18nData[`${pageId}_title`];
+                let text = pageData.text || this.i18nData[`${pageId}_text`];
+
+                const lang = App.state.language;
+                document.getElementById('page-title').textContent = title || `Title Missing (${lang}.${pIdShort})`;
+                document.getElementById('page-text').textContent = text || `Text Missing (${lang}.${pIdShort})`;
                 document.getElementById('page-label').textContent = `PAGE ${String(pageIndex + 1).padStart(2, '0')}`;
 
                 // 3. UI
@@ -199,7 +211,6 @@
                 document.getElementById('btn-next').disabled = pageIndex === this.totalPages - 1;
 
                 // 4. Audio Source
-                const lang = App.state.language;
                 const audioPath = `books/${this.bookSlug}/audio/${lang}/${pIdShort}.mp3`;
 
                 // Update audio source

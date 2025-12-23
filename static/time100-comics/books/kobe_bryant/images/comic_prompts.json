@@ -1,41 +1,44 @@
 {
     "meta": {
         "person": "kobe_bryant",
-        "version": "1.0",
+        "version": "1.1",
         "total_prompts": 10,
         "style": "comic_caricature_with_museum_highlights",
         "created": "2025-12-22",
-        "special_feature": "博物館級3D軸測微縮海報 for life highlights"
+        "updated": "2025-12-23",
+        "special_feature": "Museum-quality 3D axonometric miniature posters for life highlights (ALL ENGLISH)"
     },
     "museum_poster_system_prompt": {
-        "description": "用於生命重要時刻的博物館級海報生成",
-        "core_principle": "請為【主題】制作一張博物館級別的3D軸測微縮海報，先檢索相關信息獲取知識。",
+        "description": "Museum-quality poster generation for life highlights",
+        "core_principle": "Create a museum-quality 3D axonometric miniature poster for the given subject.",
         "workflow": {
-            "step_1": "智能識別與場景構建：調用知識庫，判斷主題屬於哪種類別（虛構文學、真實歷史事件、體育競技、科學發現）。精準檢索該主題發生時的具體環境、核心人物動作、服飾細節以及當時的氣候氛圍。在畫面中央，建立精緻的3D微縮場景模型，保持梦工厂動畫風格的高精度材質感和柔和光影渲染。體育場景強調動作的爆發力和凝固的瞬間感。",
-            "step_2": "氛圍與背景：背景摒棄純白，使用帶有極淡水墨紋理和流動光霧的虛空環境，色調根據主題自動調整，營造'歷史切片'或'珍貴藏品'的高級感。",
-            "step_3": "排版與文字：在底部居中位置生成中文排版。主標題寫上事件或作品的名稱，字體設計契合主題風格。標題下方，自動檢索該事件最著名的金句、解說詞、日期或歷史評價，使用優雅的衬線體。整體布局像高級博物館藏品銘牌那樣精緻平衡。"
+            "step_1": "Scene Construction: Identify the category (sports, history, arts, science). Research the specific environment, character actions, costume details, and atmosphere. Build a detailed 3D miniature diorama at center, with DreamWorks animation quality materials and soft lighting. For sports: emphasize explosive action and frozen moment impact.",
+            "step_2": "Atmosphere & Background: Use subtle ink wash texture with flowing light mist instead of plain white. Adjust color palette to theme. Create 'historic slice' or 'precious collection' premium quality.",
+            "step_3": "Typography: Generate elegant ENGLISH typography at bottom center. Main title in powerful serif font matching theme. Below: famous quote, date, and historical significance in elegant serif. Layout like a museum collection nameplate - refined and balanced."
         },
         "applicable_to_pages": [
             "p07",
             "p08",
             "p10"
-        ]
+        ],
+        "language": "ENGLISH ONLY"
     },
     "global_style_lock": {
         "art_style": "Comic book illustration style with caricature elements. For life highlights (p07, p08, p10), use museum-quality 3D axonometric miniature poster style.",
         "character_consistency": "Kobe Bryant with intense focused eyes, strong jawline, confident smile, athletic build. Lakers #8 (young, explosive) and #24 (mature, skilled). Consistent character design across all pages.",
         "color_palette": "Lakers purple (#552583) and gold (#FDB927), black and gold for Mamba branding. Basketball court hardwood, bright arena lighting. For highlights: elegant museum-quality atmospheric backgrounds.",
-        "technical_specs": "High-quality digital illustration, dynamic composition for action scenes. For highlights: 3D axonometric miniature style with soft DreamWorks-quality lighting and textures. NO text/logos/watermarks in image (except museum posters which include Chinese typography). Portrait orientation suitable for left panel layout.",
+        "technical_specs": "High-quality digital illustration, dynamic composition for action scenes. For highlights: 3D axonometric miniature style with soft DreamWorks-quality lighting and textures. Museum posters include ENGLISH typography. Portrait orientation suitable for left panel layout.",
         "tone": "Inspiring, celebratory of excellence, respectful (especially regarding tragedy). Focus on Mamba Mentality, competitive fire, and lasting legacy.",
         "critical_rules": [
             "CARICATURE style for regular pages - exaggerated features (intense eyes, competitive expression)",
-            "MUSEUM POSTER style for p07, p08, p10 - 3D axonometric miniature with Chinese calligraphy",
+            "MUSEUM POSTER style for p07, p08, p10 - 3D axonometric miniature with ENGLISH typography",
             "NOT photorealistic - this is comic art / museum miniature art",
-            "For museum posters: Include elegant Chinese typography at bottom with event name and famous quote",
+            "For museum posters: Include elegant ENGLISH typography at bottom with event name and famous quote",
             "Consistent character design - same facial features across all pages",
             "Purple and gold Lakers colors prominent throughout",
             "Mamba (snake) imagery used symbolically",
-            "Respectful portrayal of tragedy (p10) - abstract, not graphic"
+            "Respectful portrayal of tragedy (p10) - abstract, not graphic",
+            "ALL TEXT IN ENGLISH - NO CHINESE CHARACTERS"
         ]
     },
     "pages": [
@@ -91,30 +94,30 @@
             "page_id": "p07",
             "scene": "final_game_60_points",
             "style": "MUSEUM_POSTER",
-            "life_highlight": "Kobe Bryant 退役戰60分神蹟",
-            "prompt": "請為【Kobe Bryant 退役戰60分神蹟】制作一張博物館級別的3D軸測微縮海報，先檢索相關信息獲取知識。\n\n第一步，智能識別與場景構建：這是體育競技中的歷史性時刻。2016年4月13日，Kobe Bryant 在其職業生涯最後一戰對陣猶他爵士隊，於斯台普斯中心砍下驚人的60分，成為NBA歷史上最偉大的謝幕演出。在畫面中央，建立一個精緻的3D微縮場景模型：Kobe穿著紫金24號球衣，在斯台普斯中心球場上做出最後一投的動作，周圍是站立歡呼的滿場觀眾。風格上，保持夢工廠動畫那種高精度的材質感和柔和的光影渲染。強調動作的爆發力和這個凝固的歷史瞬間。\n\n第二步，氛圍與背景：背景使用帶有極淡水墨紋理和流動光霧的虛空環境，色調為Lakers紫金色系漸變到溫暖的金色光芒，營造出'歷史切片'或'珍貴藏品'的高級感。整個場景被柔和的聚光燈照亮，象徵傳奇的謝幕。\n\n第三步，排版與文字：在底部居中位置生成中文排版。主標題：「Kobe Bryant 退役戰60分神蹟」，使用充滿力量感的現代襯線體，紫金配色。在標題下方，加入名言「Mamba Out」以及日期「2016.04.13 | 斯台普斯中心 | NBA史上最偉大的謝幕演出」，使用優雅的襯線體。整體布局要像一個高級的博物館藏品銘牌那樣精緻平衡。",
+            "life_highlight": "Kobe's 60-Point Farewell",
+            "prompt": "Museum-quality 3D axonometric miniature poster for Kobe Bryant's 60-point final game. Sports history frozen moment. Create a detailed 3D miniature diorama scene: Kobe Bryant in Lakers #24 purple and gold jersey, in his iconic fadeaway shooting pose, at center court of Staples Center. Surrounding him are standing, cheering fans in the stands (miniature scale). DreamWorks animation quality rendering with soft lighting and high-precision materials. Background: subtle ink wash texture with flowing purple-gold light mist, ethereal atmosphere. At the bottom: elegant ENGLISH typography layout - main title 'KOBE'S 60-POINT FAREWELL' in powerful serif font with purple-gold colors, below it 'Mamba Out' in gold, and 'April 13, 2016 | Staples Center | The Greatest Farewell in NBA History' in elegant serif. Museum collection quality, historic moment preserved. Portrait orientation.",
             "character_notes": "Retiring Kobe #24 - emotional farewell, legendary final performance, 60 points",
             "background": "Museum-quality 3D axonometric Staples Center miniature with atmospheric lighting",
             "mood": "Legendary farewell, historic moment, emotional triumph",
-            "chinese_typography": {
-                "main_title": "Kobe Bryant 退役戰60分神蹟",
+            "english_typography": {
+                "main_title": "KOBE'S 60-POINT FAREWELL",
                 "subtitle": "Mamba Out",
-                "date_quote": "2016.04.13 | 斯台普斯中心 | NBA史上最偉大的謝幕演出"
+                "date_quote": "April 13, 2016 | Staples Center | The Greatest Farewell in NBA History"
             }
         },
         {
             "page_id": "p08",
             "scene": "academy_award",
             "style": "MUSEUM_POSTER",
-            "life_highlight": "Kobe Bryant 籃球員榮獲奧斯卡金像獎",
-            "prompt": "請為【Kobe Bryant 籃球員榮獲奧斯卡金像獎】制作一張博物館級別的3D軸測微縮海報，先檢索相關信息獲取知識。\n\n第一步，智能識別與場景構建：這是體育與藝術跨界的歷史性時刻。2018年3月4日，Kobe Bryant憑藉動畫短片《親愛的籃球》(Dear Basketball)榮獲第90屆奧斯卡最佳動畫短片獎，成為首位獲得奧斯卡金像獎的職業運動員。在畫面中央，建立一個精緻的3D微縮場景模型：Kobe身著優雅的黑色燕尾服，一手高舉金色奧斯卡小金人獎杯，另一手握著籃球，象徵運動與藝術的完美結合。背景是奧斯卡頒獎典禮舞台的微縮模型。風格上，保持夢工廠動畫那種高精度的材質感和柔和的光影渲染。\n\n第二步，氛圍與背景：背景使用帶有極淡水墨紋理和流動光霧的虛空環境，色調為優雅的黑金色系，營造出'歷史切片'或'珍貴藏品'的高級感。柔和的金色聚光燈從上方照下，象徵榮耀與成就。\n\n第三步，排版與文字：在底部居中位置生成中文排版。主標題：「籃球員榮獲奧斯卡金像獎」，使用優雅的現代襯線體，黑金配色。在標題下方，加入引言「The beauty in being a dreamer is you imagine it first, then you make it happen」以及「2018.03.04 | 第90屆奧斯卡 | 首位獲獎的職業運動員」，使用優雅的襯線體。整體布局要像一個高級的博物館藏品銘牌那樣精緻平衡。",
+            "life_highlight": "Oscar Winner",
+            "prompt": "Museum-quality 3D axonometric miniature poster for Kobe Bryant winning Academy Award. Crossover achievement moment. Create a detailed 3D miniature diorama scene: Kobe Bryant in elegant black tuxedo, holding golden Oscar statuette in one hand and basketball in other hand, standing on Oscar ceremony stage with elegant podium and golden backdrop. DreamWorks animation quality rendering with soft golden spotlight from above. Background: subtle ink wash texture with flowing black-gold light mist, sophistication atmosphere. At the bottom: elegant ENGLISH typography layout - main title 'OSCAR WINNER' in elegant serif font with black-gold colors, below it the quote 'The beauty in being a dreamer is you imagine it first, then you make it happen' in gold, and 'March 4, 2018 | 90th Academy Awards | First Professional Athlete to Win an Oscar' in elegant serif. Museum collection quality, historic crossover achievement. Portrait orientation.",
             "character_notes": "Artistic Kobe - elegant in tuxedo, holding Oscar statuette and basketball",
             "background": "Museum-quality 3D axonometric Oscar ceremony stage miniature",
             "mood": "Elegant achievement, crossover success, artistic triumph",
-            "chinese_typography": {
-                "main_title": "籃球員榮獲奧斯卡金像獎",
+            "english_typography": {
+                "main_title": "OSCAR WINNER",
                 "subtitle": "The beauty in being a dreamer is you imagine it first, then you make it happen",
-                "date_quote": "2018.03.04 | 第90屆奧斯卡 | 首位獲獎的職業運動員"
+                "date_quote": "March 4, 2018 | 90th Academy Awards | First Professional Athlete to Win an Oscar"
             }
         },
         {
@@ -129,15 +132,15 @@
             "page_id": "p10",
             "scene": "eternal_impact",
             "style": "MUSEUM_POSTER",
-            "life_highlight": "Kobe Bryant 全球悼念 - Mamba Forever",
-            "prompt": "請為【Kobe Bryant 全球悼念 - Mamba Forever】制作一張博物館級別的3D軸測微縮海報，先檢索相關信息獲取知識。\n\n第一步，智能識別與場景構建：這是一個悲劇性但同時充滿敬意的歷史時刻。2020年1月26日，Kobe Bryant與女兒Gianna及其他7人在直升機事故中不幸離世，震驚全球。全世界球迷以各種方式悼念這位傳奇。在畫面中央，建立一個精緻的3D微縮場景模型：以抽象、尊重的方式呈現Kobe的精神傳承 - 中央是8號和24號球衣並列退役的場景（金色背光），周圍環繞著全球各地的悼念壁畫、燭光、紫金花海的微縮模型。上方有Black Mamba化為星辰的象徵意象。風格上，保持夢工廠動畫那種高精度的材質感和柔和的光影渲染，但更注重莊嚴感和紀念性。\n\n第二步，氛圍與背景：背景使用帶有極淡水墨紋理和流動光霧的虛空環境，色調為深邃的紫金色漸變到溫暖的金色和白色光芒，營造出'永恆緬懷'的崇高感。整個場景被柔和的聖光籠罩，象徵永恆的精神。\n\n第三步，排版與文字：在底部居中位置生成中文排版。主標題：「Mamba Forever」，使用莊嚴而優雅的襯線體，紫金配色。在標題下方，加入名言「The most important thing is to try and inspire people so that they can be great in whatever they want to do」以及「1978.08.23 - 2020.01.26 | 永恆的曼巴精神 | 5屆NBA總冠軍 | 2020名人堂」，使用優雅的襯線體。整體布局要像一個高級的博物館紀念藏品銘牌那樣精緻、莊嚴而平衡。",
+            "life_highlight": "Mamba Forever",
+            "prompt": "Museum-quality 3D axonometric miniature poster for Kobe Bryant global memorial - Mamba Forever. Create a 3D miniature memorial scene: Central focus on Kobe's #8 and #24 Lakers jerseys hanging side by side in retirement ceremony (golden backlit glow). Surrounding scene includes miniature versions of: global mourning murals from Los Angeles and worldwide, candle tributes, purple and gold flower arrangements. Above: Black Mamba snake ascending into starry sky, symbolizing eternal spirit. DreamWorks animation quality rendering with soft, reverent lighting. Background: deep purple-gold gradient fading to warm golden-white sanctified light, subtle ink wash texture. At the bottom: elegant ENGLISH typography layout - main title 'MAMBA FOREVER' in dignified serif font with purple-gold colors, below it the quote 'The most important thing is to try and inspire people so that they can be great in whatever they want to do' in gold, and '1978 - 2020 | Eternal Mamba Spirit | 5x NBA Champion | Hall of Fame 2020' in elegant serif. Museum memorial quality, eternal legacy preserved. Portrait orientation.",
             "character_notes": "Legacy Kobe - abstract spiritual representation, #8 and #24 jerseys, eternal impact",
             "background": "Museum-quality 3D axonometric memorial scene with global tributes miniature",
             "mood": "Respectful mourning, eternal legacy, global impact, spiritual transcendence",
-            "chinese_typography": {
-                "main_title": "Mamba Forever",
+            "english_typography": {
+                "main_title": "MAMBA FOREVER",
                 "subtitle": "The most important thing is to try and inspire people so that they can be great in whatever they want to do",
-                "date_quote": "1978.08.23 - 2020.01.26 | 永恆的曼巴精神 | 5屆NBA總冠軍 | 2020名人堂"
+                "date_quote": "1978 - 2020 | Eternal Mamba Spirit | 5x NBA Champion | Hall of Fame 2020"
             }
         }
     ],
@@ -148,11 +151,12 @@
             "Lakers purple and gold colors throughout",
             "#8 jersey for younger Kobe (p01-p04)",
             "#24 jersey for mature Kobe (p05-p10)",
-            "Mamba (snake) imagery used symbolically where appropriate"
+            "Mamba (snake) imagery used symbolically where appropriate",
+            "ALL TEXT IN ENGLISH - NO CHINESE CHARACTERS"
         ],
         "museum_poster_guidelines": [
             "Pages P07, P08, P10 use museum-quality 3D axonometric miniature poster style",
-            "Include elegant Chinese typography at bottom of museum posters",
+            "Include elegant ENGLISH typography at bottom of museum posters",
             "Main title + famous quote/date in layered text",
             "Background: subtle ink wash texture with flowing light mist",
             "Color palette adjusted to event theme (purple-gold for basketball, black-gold for Oscar, reverent glow for memorial)",
@@ -166,8 +170,8 @@
             "Comic book illustration for pages p01-p06, p09",
             "Museum poster 3D miniature for pages p07, p08, p10",
             "Vibrant Lakers colors (purple #552583, gold #FDB927)",
-            "For museum posters: Include Chinese calligraphy in composition",
-            "NO text/logos/watermarks in regular comics (museum posters have intentional Chinese typography)"
+            "For museum posters: Include ENGLISH calligraphy in composition",
+            "NO text/logos/watermarks in regular comics (museum posters have intentional ENGLISH typography)"
         ],
         "cultural_sensitivity": [
             "Respectful portrayal of helicopter tragedy (p10)",
