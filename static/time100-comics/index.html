@@ -64,6 +64,22 @@
                     </p>
                 </div>
             </a>
+
+            <!-- Book Card: Benjamin Franklin - NEW! -->
+            <a href="reader.html?book=benjamin_franklin" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/benjamin_franklin/images/cover.png" alt="Benjamin Franklin Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="franklin"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">American
+                        Founding Father</p>
+                    <h3 class="book-name" data-book="franklin" style="font-size: 1.6rem;">Benjamin Franklin</h3>
+                    <p class="book-subtitle" data-book="franklin" class="book-desc">
+                        The First American
+                    </p>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -76,7 +92,8 @@
                 heroDesc: 'Explore the stories of the world\'s most influential people through immersive comic biographies',
                 books: {
                     hawking: { category: 'British Physicist', name: 'Stephen Hawking', subtitle: 'From Oxford to the Stars' },
-                    kobe: { category: 'NBA Legend', name: 'Kobe Bryant', subtitle: 'The Black Mamba Legend' }
+                    kobe: { category: 'NBA Legend', name: 'Kobe Bryant', subtitle: 'The Black Mamba Legend' },
+                    franklin: { category: 'American Founding Father', name: 'Benjamin Franklin', subtitle: 'The First American' }
                 }
             },
             'zh-TW': {
@@ -84,7 +101,8 @@
                 heroDesc: '透過身歷其境的漫畫傳記，探索世界最具影響力的人的故事',
                 books: {
                     hawking: { category: '英國物理學家', name: '史蒂芬·霍金', subtitle: '從牛津到星辰的璀璨人生' },
-                    kobe: { category: 'NBA 傳奇球星', name: '柯比·布萊恩', subtitle: '黑曼巴傳奇' }
+                    kobe: { category: 'NBA 傳奇球星', name: '柯比·布萊恩', subtitle: '黑曼巴傳奇' },
+                    franklin: { category: '美國開國元勳', name: '班傑明·富蘭克林', subtitle: '美國第一人' }
                 }
             },
             'zh-CN': {
@@ -92,7 +110,8 @@
                 heroDesc: '通过身临其境的漫画传记，探索世界最具影响力的人的故事',
                 books: {
                     hawking: { category: '英国物理学家', name: '史蒂芬·霍金', subtitle: '从牛津到星辰的璀璨人生' },
-                    kobe: { category: 'NBA 传奇球星', name: '科比·布莱恩特', subtitle: '黑曼巴传奇' }
+                    kobe: { category: 'NBA 传奇球星', name: '科比·布莱恩特', subtitle: '黑曼巴传奇' },
+                    franklin: { category: '美国开国元勋', name: '本杰明·富兰克林', subtitle: '美国第一人' }
                 }
             },
             'ja': {
@@ -100,7 +119,8 @@
                 heroDesc: '没入型のマンガ伝記を通じて、世界で最も影響力のある人々の物語を探求しましょう',
                 books: {
                     hawking: { category: 'イギリスの物理学者', name: 'スティーヴン・ホーキング', subtitle: 'オックスフォードから星々へ' },
-                    kobe: { category: 'NBA レジェンド', name: 'コービー・ブライアント', subtitle: 'ブラックマンバの伝説' }
+                    kobe: { category: 'NBA レジェンド', name: 'コービー・ブライアント', subtitle: 'ブラックマンバの伝説' },
+                    franklin: { category: 'アメリカ建国の父', name: 'ベンジャミン・フランクリン', subtitle: 'アメリカ最初の偉人' }
                 }
             },
             'fr': {
@@ -108,7 +128,8 @@
                 heroDesc: 'Explorez les histoires des personnes les plus influentes du monde à travers des biographies en bande dessinée immersives',
                 books: {
                     hawking: { category: 'Physicien britannique', name: 'Stephen Hawking', subtitle: 'D\'Oxford aux étoiles' },
-                    kobe: { category: 'Légende NBA', name: 'Kobe Bryant', subtitle: 'La Légende du Black Mamba' }
+                    kobe: { category: 'Légende NBA', name: 'Kobe Bryant', subtitle: 'La Légende du Black Mamba' },
+                    franklin: { category: 'Père Fondateur Américain', name: 'Benjamin Franklin', subtitle: 'Le Premier Américain' }
                 }
             }
         };
@@ -122,7 +143,7 @@
             document.querySelector('.hero p').textContent = c.heroDesc;
 
             // Update all book cards
-            ['hawking', 'kobe'].forEach(bookKey => {
+            ['hawking', 'kobe', 'franklin'].forEach(bookKey => {
                 const book = c.books[bookKey];
                 const category = document.querySelector(`.book-category[data-book="${bookKey}"]`);
                 const name = document.querySelector(`.book-name[data-book="${bookKey}"]`);

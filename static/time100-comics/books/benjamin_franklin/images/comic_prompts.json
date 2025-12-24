@@ -1,0 +1,88 @@
+{
+    "project": "Benjamin Franklin Comic Biography",
+    "style_lock": {
+        "base_style": "Comic book illustration with gentle caricature elements, historically accurate colonial American setting, warm sepia and earth tones mixed with vibrant accents, DreamWorks/Pixar animation influence, NO text, NO watermarks, NO logos",
+        "character_consistency": {
+            "young_franklin_17": "Teenage boy with round face, curious bright eyes, slightly messy brown hair, simple colonial clothing, determined expression",
+            "adult_franklin_40s": "Middle-aged man with receding hairline, kind intelligent eyes, round spectacles, printer's apron, slight paunch",
+            "elderly_franklin_70s_80s": "Elderly statesman with bald head and long gray hair on sides, round spectacles, fur cap, wise gentle expression, dignified posture despite frailty"
+        }
+    },
+    "prompts": {
+        "cover": {
+            "description": "Benjamin Franklin - The First American",
+            "prompt": "Epic portrait composition of Benjamin Franklin through three life stages merged artistically: young runaway teen on left, adult scientist with kite in center, elderly founding father on right. Philadelphia skyline and American colonial elements. Lightning bolt connecting all three versions. Comic book illustration style with caricature elements. Warm golden lighting. Patriotic but not cartoonish. NO text, NO logos."
+        },
+        "p01": {
+            "scene": "1723 Philadelphia dock - 17-year-old runaway arrives",
+            "prompt": "Comic illustration of a tired, dirty teenage boy (17 years old) stepping off a wooden ship onto Philadelphia's colonial dock. He carries only a small bundle, looking determined despite exhaustion. Bustling colonial port with merchants, barrels, and sailing ships in background. Morning golden light. The boy has bright curious eyes and messy brown hair. Gentle caricature style, historically accurate 1720s setting. NO text, NO watermarks."
+        },
+        "p02": {
+            "scene": "Young Ben reading by candlelight in father's candle shop",
+            "prompt": "Cozy interior scene of a young boy (10-12 years old) reading a thick book by candlelight in a small workshop filled with candles and wax. Warm golden glow illuminates his fascinated face. Father's candle-making tools and supplies in background. The boy is completely absorbed in learning. Colonial Boston setting. Intimate, inspiring atmosphere. Comic book style with soft caricature. NO text, NO logos."
+        },
+        "p03": {
+            "scene": "Young Franklin secretly boarding a ship to escape Boston",
+            "prompt": "Dramatic night scene of a teenage boy (17) sneaking aboard a ship at a dark Boston harbor. He looks back one last time at the city lights, a mix of fear and excitement on his face. Moonlit scene with dramatic shadows. Colonial sailing vessel, ropes and sails visible. Sense of adventure and escape. Comic illustration style. Historically accurate 1720s clothing. NO text, NO watermarks."
+        },
+        "p04": {
+            "scene": "Franklin writing Poor Richard's Almanack by candlelight",
+            "prompt": "Medium shot of Benjamin Franklin (late 30s) in his print shop, writing witty proverbs by candlelight. Quill pen in hand, slight smile on his face, round spectacles. Printing press, stacks of paper, and books surround him. A copy of Poor Richard's Almanack visible. Warm amber lighting. Prosperous colonial workshop setting. Comic style with gentle caricature. NO text on visible papers, NO logos."
+        },
+        "p05": {
+            "scene": "Famous kite experiment in thunderstorm - MUSEUM POSTER STYLE",
+            "style": "museum_poster",
+            "prompt": "3D axonometric miniature diorama of Benjamin Franklin and his son flying a kite in a dramatic thunderstorm. Lightning bolt strikes the kite. Franklin holds the string with a key attached, sparks visible. Dramatic storm clouds, rain, and electric atmosphere. DreamWorks animation quality. Miniature diorama on display base. Subtle ink wash texture. ENGLISH ONLY typography at bottom: 'TAMING LIGHTNING - 1752'. Museum exhibition quality."
+        },
+        "p06": {
+            "scene": "70-year-old Franklin arrives in Paris as ambassador",
+            "prompt": "Elegant scene of elderly Benjamin Franklin (70 years old) arriving at the French court in Versailles. He wears a simple fur cap that contrasts with the elaborate French aristocrats around him. French nobles and courtiers look on with fascination. Ornate palace interior with chandeliers and gilt. Franklin looks dignified and wise. 1776 setting. Comic illustration with gentle caricature. NO text, NO logos."
+        },
+        "p07": {
+            "scene": "Franklin signs Treaty of Paris 1783",
+            "prompt": "Formal diplomatic scene of elderly Franklin (77) signing the Treaty of Paris with other diplomats around a grand table. Quill pen in hand, serious expression. British and American delegates present. Elegant Parisian interior with tall windows and candlelight. Historic moment feeling. Documents and wax seals on table. Comic book style with historical accuracy. NO readable text, NO logos."
+        },
+        "p08": {
+            "scene": "81-year-old Franklin carried into Constitutional Convention - MUSEUM POSTER STYLE",
+            "style": "museum_poster",
+            "prompt": "3D axonometric miniature diorama of delegates carefully carrying elderly Benjamin Franklin (81 years old) in a sedan chair into Independence Hall, Philadelphia. The frail but determined Franklin is surrounded by other Founding Fathers. Grand colonial architecture. Dramatic lighting through tall windows. DreamWorks animation quality. Display base with subtle texture. ENGLISH ONLY typography: 'THE FINAL MISSION - 1787'. Museum collection quality."
+        },
+        "p09": {
+            "scene": "Franklin answers 'A republic, if you can keep it'",
+            "prompt": "Outdoor scene at Independence Hall steps. Elderly Franklin (81) speaks to a curious woman who has asked what government they created. His expression is wise but concerned. Other delegates and citizens in background. Late afternoon golden light. Historic Philadelphia colonial setting. Sense of gravitas and warning. Comic illustration style with caricature elements. NO text bubbles, NO logos."
+        },
+        "p10": {
+            "scene": "Franklin's funeral with 20,000 mourners - MUSEUM POSTER STYLE",
+            "style": "museum_poster",
+            "prompt": "3D axonometric miniature diorama of Benjamin Franklin's funeral procession through Philadelphia streets. 20,000 mourners line the streets. Horse-drawn hearse in center. Colonial Philadelphia buildings. Flags at half-mast. Solemn but celebratory of a life well-lived. Dramatic lighting, emotional atmosphere. DreamWorks animation quality. Display base. ENGLISH ONLY typography: 'THE FIRST AMERICAN - 1706-1790'. Museum exhibition quality."
+        }
+    },
+    "generation_notes": {
+        "museum_poster_pages": [
+            "p05",
+            "p08",
+            "p10"
+        ],
+        "regular_comic_pages": [
+            "p01",
+            "p02",
+            "p03",
+            "p04",
+            "p06",
+            "p07",
+            "p09"
+        ],
+        "character_age_progression": {
+            "p01": "17 years old - teenager",
+            "p02": "10-12 years old - child",
+            "p03": "17 years old - teenager",
+            "p04": "Late 30s - successful adult",
+            "p05": "46 years old - scientist",
+            "p06": "70 years old - elderly diplomat",
+            "p07": "77 years old - elderly statesman",
+            "p08": "81 years old - very elderly",
+            "p09": "81 years old - very elderly",
+            "p10": "Funeral scene - legacy"
+        }
+    }
+}
