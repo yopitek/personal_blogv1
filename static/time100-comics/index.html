@@ -96,6 +96,22 @@
                     </p>
                 </div>
             </a>
+
+            <!-- Book Card: Albert Einstein - NEW! -->
+            <a href="reader.html?book=einstein" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/einstein/images/cover.png" alt="Albert Einstein Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="einstein"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Theoretical
+                        Physicist</p>
+                    <h3 class="book-name" data-book="einstein" style="font-size: 1.6rem;">Albert Einstein</h3>
+                    <p class="book-subtitle" data-book="einstein" class="book-desc">
+                        The Genius Who Changed Our Universe
+                    </p>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -110,7 +126,8 @@
                     hawking: { category: 'British Physicist', name: 'Stephen Hawking', subtitle: 'From Oxford to the Stars' },
                     kobe: { category: 'NBA Legend', name: 'Kobe Bryant', subtitle: 'The Black Mamba Legend' },
                     franklin: { category: 'American Founding Father', name: 'Benjamin Franklin', subtitle: 'The First American' },
-                    jobs: { category: 'Apple Co-founder', name: 'Steve Jobs', subtitle: 'Stay Hungry, Stay Foolish' }
+                    jobs: { category: 'Apple Co-founder', name: 'Steve Jobs', subtitle: 'Stay Hungry, Stay Foolish' },
+                    einstein: { category: 'Theoretical Physicist', name: 'Albert Einstein', subtitle: 'The Genius Who Changed Our Universe' }
                 }
             },
             'zh-TW': {
@@ -120,7 +137,8 @@
                     hawking: { category: '英國物理學家', name: '史蒂芬·霍金', subtitle: '從牛津到星辰的璀璨人生' },
                     kobe: { category: 'NBA 傳奇球星', name: '柯比·布萊恩', subtitle: '黑曼巴傳奇' },
                     franklin: { category: '美國開國元勳', name: '班傑明·富蘭克林', subtitle: '美國第一人' },
-                    jobs: { category: '蘋果共同創辦人', name: '賈伯斯', subtitle: '求知若飢，虛心若愚' }
+                    jobs: { category: '蘋果共同創辦人', name: '賈伯斯', subtitle: '求知若飢，虛心若愚' },
+                    einstein: { category: '理論物理學家', name: '阿爾伯特·愛因斯坦', subtitle: '改變宇宙的天才' }
                 }
             },
             'zh-CN': {
@@ -130,7 +148,8 @@
                     hawking: { category: '英国物理学家', name: '史蒂芬·霍金', subtitle: '从牛津到星辰的璀璨人生' },
                     kobe: { category: 'NBA 传奇球星', name: '科比·布莱恩特', subtitle: '黑曼巴传奇' },
                     franklin: { category: '美国开国元勋', name: '本杰明·富兰克林', subtitle: '美国第一人' },
-                    jobs: { category: '苹果联合创始人', name: '史蒂夫·乔布斯', subtitle: '求知若饥，虚心若愚' }
+                    jobs: { category: '苹果联合创始人', name: '史蒂夫·乔布斯', subtitle: '求知若饥，虚心若愚' },
+                    einstein: { category: '理论物理学家', name: '阿尔伯特·爱因斯坦', subtitle: '改变宇宙的天才' }
                 }
             },
             'ja': {
@@ -140,7 +159,8 @@
                     hawking: { category: 'イギリスの物理学者', name: 'スティーヴン・ホーキング', subtitle: 'オックスフォードから星々へ' },
                     kobe: { category: 'NBA レジェンド', name: 'コービー・ブライアント', subtitle: 'ブラックマンバの伝説' },
                     franklin: { category: 'アメリカ建国の父', name: 'ベンジャミン・フランクリン', subtitle: 'アメリカ最初の偉人' },
-                    jobs: { category: 'Apple共同創業者', name: 'スティーブ・ジョブズ', subtitle: 'ハングリーであれ、愚かであれ' }
+                    jobs: { category: 'Apple共同創業者', name: 'スティーブ・ジョブズ', subtitle: 'ハングリーであれ、愚かであれ' },
+                    einstein: { category: '理論物理学者', name: 'アルベルト・アインシュタイン', subtitle: '宇宙を変えた天才' }
                 }
             },
             'fr': {
@@ -150,7 +170,8 @@
                     hawking: { category: 'Physicien britannique', name: 'Stephen Hawking', subtitle: 'D\'Oxford aux étoiles' },
                     kobe: { category: 'Légende NBA', name: 'Kobe Bryant', subtitle: 'La Légende du Black Mamba' },
                     franklin: { category: 'Père Fondateur Américain', name: 'Benjamin Franklin', subtitle: 'Le Premier Américain' },
-                    jobs: { category: 'Co-fondateur d\'Apple', name: 'Steve Jobs', subtitle: 'Soyez insatiables, soyez fous' }
+                    jobs: { category: 'Co-fondateur d\'Apple', name: 'Steve Jobs', subtitle: 'Soyez insatiables, soyez fous' },
+                    einstein: { category: 'Physicien théoricien', name: 'Albert Einstein', subtitle: 'Le génie qui a changé notre univers' }
                 }
             }
         };
@@ -164,7 +185,7 @@
             document.querySelector('.hero p').textContent = c.heroDesc;
 
             // Update all book cards
-            ['hawking', 'kobe', 'franklin', 'jobs'].forEach(bookKey => {
+            ['hawking', 'kobe', 'franklin', 'jobs', 'einstein'].forEach(bookKey => {
                 const book = c.books[bookKey];
                 const category = document.querySelector(`.book-category[data-book="${bookKey}"]`);
                 const name = document.querySelector(`.book-name[data-book="${bookKey}"]`);
