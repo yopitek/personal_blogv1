@@ -1,0 +1,336 @@
+{
+    "subject": "Henry Kissinger",
+    "total_pages": 10,
+    "languages": [
+        "en",
+        "zh-TW",
+        "zh-CN",
+        "ja",
+        "fr"
+    ],
+    "total_audio_files": 50,
+    "voice_settings": {
+        "en": {
+            "language_code": "en-US",
+            "voice_name": "en-US-Neural2-D"
+        },
+        "zh-TW": {
+            "language_code": "cmn-TW",
+            "voice_name": "cmn-TW-Wavenet-A"
+        },
+        "zh-CN": {
+            "language_code": "cmn-CN",
+            "voice_name": "cmn-CN-Wavenet-B"
+        },
+        "ja": {
+            "language_code": "ja-JP",
+            "voice_name": "ja-JP-Neural2-C"
+        },
+        "fr": {
+            "language_code": "fr-FR",
+            "voice_name": "fr-FR-Neural2-A"
+        }
+    },
+    "audio_jobs": [
+        {
+            "page": "p01",
+            "language": "en",
+            "text_key": "p01",
+            "output_file": "audio/en/p01.mp3"
+        },
+        {
+            "page": "p02",
+            "language": "en",
+            "text_key": "p02",
+            "output_file": "audio/en/p02.mp3"
+        },
+        {
+            "page": "p03",
+            "language": "en",
+            "text_key": "p03",
+            "output_file": "audio/en/p03.mp3"
+        },
+        {
+            "page": "p04",
+            "language": "en",
+            "text_key": "p04",
+            "output_file": "audio/en/p04.mp3"
+        },
+        {
+            "page": "p05",
+            "language": "en",
+            "text_key": "p05",
+            "output_file": "audio/en/p05.mp3"
+        },
+        {
+            "page": "p06",
+            "language": "en",
+            "text_key": "p06",
+            "output_file": "audio/en/p06.mp3"
+        },
+        {
+            "page": "p07",
+            "language": "en",
+            "text_key": "p07",
+            "output_file": "audio/en/p07.mp3"
+        },
+        {
+            "page": "p08",
+            "language": "en",
+            "text_key": "p08",
+            "output_file": "audio/en/p08.mp3"
+        },
+        {
+            "page": "p09",
+            "language": "en",
+            "text_key": "p09",
+            "output_file": "audio/en/p09.mp3"
+        },
+        {
+            "page": "p10",
+            "language": "en",
+            "text_key": "p10",
+            "output_file": "audio/en/p10.mp3"
+        },
+        {
+            "page": "p01",
+            "language": "zh-TW",
+            "text_key": "p01",
+            "output_file": "audio/zh-TW/p01.mp3"
+        },
+        {
+            "page": "p02",
+            "language": "zh-TW",
+            "text_key": "p02",
+            "output_file": "audio/zh-TW/p02.mp3"
+        },
+        {
+            "page": "p03",
+            "language": "zh-TW",
+            "text_key": "p03",
+            "output_file": "audio/zh-TW/p03.mp3"
+        },
+        {
+            "page": "p04",
+            "language": "zh-TW",
+            "text_key": "p04",
+            "output_file": "audio/zh-TW/p04.mp3"
+        },
+        {
+            "page": "p05",
+            "language": "zh-TW",
+            "text_key": "p05",
+            "output_file": "audio/zh-TW/p05.mp3"
+        },
+        {
+            "page": "p06",
+            "language": "zh-TW",
+            "text_key": "p06",
+            "output_file": "audio/zh-TW/p06.mp3"
+        },
+        {
+            "page": "p07",
+            "language": "zh-TW",
+            "text_key": "p07",
+            "output_file": "audio/zh-TW/p07.mp3"
+        },
+        {
+            "page": "p08",
+            "language": "zh-TW",
+            "text_key": "p08",
+            "output_file": "audio/zh-TW/p08.mp3"
+        },
+        {
+            "page": "p09",
+            "language": "zh-TW",
+            "text_key": "p09",
+            "output_file": "audio/zh-TW/p09.mp3"
+        },
+        {
+            "page": "p10",
+            "language": "zh-TW",
+            "text_key": "p10",
+            "output_file": "audio/zh-TW/p10.mp3"
+        },
+        {
+            "page": "p01",
+            "language": "zh-CN",
+            "text_key": "p01",
+            "output_file": "audio/zh-CN/p01.mp3"
+        },
+        {
+            "page": "p02",
+            "language": "zh-CN",
+            "text_key": "p02",
+            "output_file": "audio/zh-CN/p02.mp3"
+        },
+        {
+            "page": "p03",
+            "language": "zh-CN",
+            "text_key": "p03",
+            "output_file": "audio/zh-CN/p03.mp3"
+        },
+        {
+            "page": "p04",
+            "language": "zh-CN",
+            "text_key": "p04",
+            "output_file": "audio/zh-CN/p04.mp3"
+        },
+        {
+            "page": "p05",
+            "language": "zh-CN",
+            "text_key": "p05",
+            "output_file": "audio/zh-CN/p05.mp3"
+        },
+        {
+            "page": "p06",
+            "language": "zh-CN",
+            "text_key": "p06",
+            "output_file": "audio/zh-CN/p06.mp3"
+        },
+        {
+            "page": "p07",
+            "language": "zh-CN",
+            "text_key": "p07",
+            "output_file": "audio/zh-CN/p07.mp3"
+        },
+        {
+            "page": "p08",
+            "language": "zh-CN",
+            "text_key": "p08",
+            "output_file": "audio/zh-CN/p08.mp3"
+        },
+        {
+            "page": "p09",
+            "language": "zh-CN",
+            "text_key": "p09",
+            "output_file": "audio/zh-CN/p09.mp3"
+        },
+        {
+            "page": "p10",
+            "language": "zh-CN",
+            "text_key": "p10",
+            "output_file": "audio/zh-CN/p10.mp3"
+        },
+        {
+            "page": "p01",
+            "language": "ja",
+            "text_key": "p01",
+            "output_file": "audio/ja/p01.mp3"
+        },
+        {
+            "page": "p02",
+            "language": "ja",
+            "text_key": "p02",
+            "output_file": "audio/ja/p02.mp3"
+        },
+        {
+            "page": "p03",
+            "language": "ja",
+            "text_key": "p03",
+            "output_file": "audio/ja/p03.mp3"
+        },
+        {
+            "page": "p04",
+            "language": "ja",
+            "text_key": "p04",
+            "output_file": "audio/ja/p04.mp3"
+        },
+        {
+            "page": "p05",
+            "language": "ja",
+            "text_key": "p05",
+            "output_file": "audio/ja/p05.mp3"
+        },
+        {
+            "page": "p06",
+            "language": "ja",
+            "text_key": "p06",
+            "output_file": "audio/ja/p06.mp3"
+        },
+        {
+            "page": "p07",
+            "language": "ja",
+            "text_key": "p07",
+            "output_file": "audio/ja/p07.mp3"
+        },
+        {
+            "page": "p08",
+            "language": "ja",
+            "text_key": "p08",
+            "output_file": "audio/ja/p08.mp3"
+        },
+        {
+            "page": "p09",
+            "language": "ja",
+            "text_key": "p09",
+            "output_file": "audio/ja/p09.mp3"
+        },
+        {
+            "page": "p10",
+            "language": "ja",
+            "text_key": "p10",
+            "output_file": "audio/ja/p10.mp3"
+        },
+        {
+            "page": "p01",
+            "language": "fr",
+            "text_key": "p01",
+            "output_file": "audio/fr/p01.mp3"
+        },
+        {
+            "page": "p02",
+            "language": "fr",
+            "text_key": "p02",
+            "output_file": "audio/fr/p02.mp3"
+        },
+        {
+            "page": "p03",
+            "language": "fr",
+            "text_key": "p03",
+            "output_file": "audio/fr/p03.mp3"
+        },
+        {
+            "page": "p04",
+            "language": "fr",
+            "text_key": "p04",
+            "output_file": "audio/fr/p04.mp3"
+        },
+        {
+            "page": "p05",
+            "language": "fr",
+            "text_key": "p05",
+            "output_file": "audio/fr/p05.mp3"
+        },
+        {
+            "page": "p06",
+            "language": "fr",
+            "text_key": "p06",
+            "output_file": "audio/fr/p06.mp3"
+        },
+        {
+            "page": "p07",
+            "language": "fr",
+            "text_key": "p07",
+            "output_file": "audio/fr/p07.mp3"
+        },
+        {
+            "page": "p08",
+            "language": "fr",
+            "text_key": "p08",
+            "output_file": "audio/fr/p08.mp3"
+        },
+        {
+            "page": "p09",
+            "language": "fr",
+            "text_key": "p09",
+            "output_file": "audio/fr/p09.mp3"
+        },
+        {
+            "page": "p10",
+            "language": "fr",
+            "text_key": "p10",
+            "output_file": "audio/fr/p10.mp3"
+        }
+    ]
+}

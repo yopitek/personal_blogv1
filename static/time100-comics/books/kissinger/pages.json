@@ -1,0 +1,83 @@
+{
+    "slug": "kissinger",
+    "title": {
+        "en": "Henry Kissinger",
+        "zh-TW": "乔辛格",
+        "zh-CN": "亨利·基辛格",
+        "ja": "ヘンリー・キッシンジャー",
+        "fr": "Henry Kissinger"
+    },
+    "subtitle": {
+        "en": "The Architect of Power",
+        "zh-TW": "權力的建築師",
+        "zh-CN": "权力的建筑师",
+        "ja": "権力の建築家",
+        "fr": "L'Architecte du Pouvoir"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": "p01",
+            "key": "nazi_germany",
+            "image": "images/p01.png",
+            "audio_key": "p01"
+        },
+        {
+            "id": "p02",
+            "key": "refugee_america",
+            "image": "images/p02.png",
+            "audio_key": "p02"
+        },
+        {
+            "id": "p03",
+            "key": "hunting_nazis",
+            "image": "images/p03.png",
+            "audio_key": "p03"
+        },
+        {
+            "id": "p04",
+            "key": "harvard_scholar",
+            "image": "images/p04.png",
+            "audio_key": "p04"
+        },
+        {
+            "id": "p05",
+            "key": "nixon_call",
+            "image": "images/p05.png",
+            "audio_key": "p05"
+        },
+        {
+            "id": "p06",
+            "key": "china_opening",
+            "image": "images/p06.png",
+            "audio_key": "p06",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p07",
+            "key": "dark_side",
+            "image": "images/p07.png",
+            "audio_key": "p07"
+        },
+        {
+            "id": "p08",
+            "key": "nobel_prize",
+            "image": "images/p08.png",
+            "audio_key": "p08"
+        },
+        {
+            "id": "p09",
+            "key": "survivor",
+            "image": "images/p09.png",
+            "audio_key": "p09"
+        },
+        {
+            "id": "p10",
+            "key": "legacy",
+            "image": "images/p10.png",
+            "audio_key": "p10",
+            "style": "museum_poster"
+        }
+    ]
+}
