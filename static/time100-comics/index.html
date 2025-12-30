@@ -128,6 +128,22 @@
                     </p>
                 </div>
             </a>
+
+            <!-- Book Card: Abraham Lincoln - NEW! -->
+            <a href="reader.html?book=abraham_lincoln" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/abraham_lincoln/images/cover.png" alt="Abraham Lincoln Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="lincoln"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">16th U.S.
+                        President</p>
+                    <h3 class="book-name" data-book="lincoln" style="font-size: 1.6rem;">Abraham Lincoln</h3>
+                    <p class="book-subtitle" data-book="lincoln" class="book-desc">
+                        The Great Emancipator
+                    </p>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -144,7 +160,8 @@
                     franklin: { category: 'American Founding Father', name: 'Benjamin Franklin', subtitle: 'The First American' },
                     jobs: { category: 'Apple Co-founder', name: 'Steve Jobs', subtitle: 'Stay Hungry, Stay Foolish' },
                     einstein: { category: 'Theoretical Physicist', name: 'Albert Einstein', subtitle: 'The Genius Who Changed Our Universe' },
-                    kissinger: { category: 'Cold War Diplomat', name: 'Henry Kissinger', subtitle: 'The Architect of Power' }
+                    kissinger: { category: 'Cold War Diplomat', name: 'Henry Kissinger', subtitle: 'The Architect of Power' },
+                    lincoln: { category: '16th U.S. President', name: 'Abraham Lincoln', subtitle: 'The Great Emancipator' }
                 }
             },
             'zh-TW': {
@@ -156,7 +173,8 @@
                     franklin: { category: '美國開國元勳', name: '班傑明·富蘭克林', subtitle: '美國第一人' },
                     jobs: { category: '蘋果共同創辦人', name: '賈伯斯', subtitle: '求知若飢，虛心若愚' },
                     einstein: { category: '理論物理學家', name: '阿爾伯特·愛因斯坦', subtitle: '改變宇宙的天才' },
-                    kissinger: { category: '冷戰時期外交家', name: '季辛吉', subtitle: '權力的建築師' }
+                    kissinger: { category: '冷戰時期外交家', name: '季辛吉', subtitle: '權力的建築師' },
+                    lincoln: { category: '美國第16任總統', name: '亞伯拉罕·林肯', subtitle: '偉大的解放者' }
                 }
             },
             'zh-CN': {
@@ -168,7 +186,8 @@
                     franklin: { category: '美国开国元勋', name: '本杰明·富兰克林', subtitle: '美国第一人' },
                     jobs: { category: '苹果联合创始人', name: '史蒂夫·乔布斯', subtitle: '求知若饥，虚心若愚' },
                     einstein: { category: '理论物理学家', name: '阿尔伯特·爱因斯坦', subtitle: '改变宇宙的天才' },
-                    kissinger: { category: '冷战时期外交家', name: '亨利·基辛格', subtitle: '权力的建筑师' }
+                    kissinger: { category: '冷战时期外交家', name: '亨利·基辛格', subtitle: '权力的建筑师' },
+                    lincoln: { category: '美国第16任总统', name: '亚伯拉罕·林肯', subtitle: '伟大的解放者' }
                 }
             },
             'ja': {
@@ -180,7 +199,8 @@
                     franklin: { category: 'アメリカ建国の父', name: 'ベンジャミン・フランクリン', subtitle: 'アメリカ最初の偉人' },
                     jobs: { category: 'Apple共同創業者', name: 'スティーブ・ジョブズ', subtitle: 'ハングリーであれ、愚かであれ' },
                     einstein: { category: '理論物理学者', name: 'アルベルト・アインシュタイン', subtitle: '宇宙を変えた天才' },
-                    kissinger: { category: '冷戦外交官', name: 'ヘンリー・キッシンジャー', subtitle: '権力の建築家' }
+                    kissinger: { category: '冷戦外交官', name: 'ヘンリー・キッシンジャー', subtitle: '権力の建築家' },
+                    lincoln: { category: '第16代アメリカ大統領', name: 'エイブラハム・リンカーン', subtitle: '偉大なる解放者' }
                 }
             },
             'fr': {
@@ -192,7 +212,8 @@
                     franklin: { category: 'Père Fondateur Américain', name: 'Benjamin Franklin', subtitle: 'Le Premier Américain' },
                     jobs: { category: 'Co-fondateur d\'Apple', name: 'Steve Jobs', subtitle: 'Soyez insatiables, soyez fous' },
                     einstein: { category: 'Physicien théoricien', name: 'Albert Einstein', subtitle: 'Le génie qui a changé notre univers' },
-                    kissinger: { category: 'Diplomate de la Guerre Froide', name: 'Henry Kissinger', subtitle: 'L\'Architecte du Pouvoir' }
+                    kissinger: { category: 'Diplomate de la Guerre Froide', name: 'Henry Kissinger', subtitle: 'L\'Architecte du Pouvoir' },
+                    lincoln: { category: '16e Président des États-Unis', name: 'Abraham Lincoln', subtitle: 'Le Grand Émancipateur' }
                 }
             }
         };
@@ -206,7 +227,7 @@
             document.querySelector('.hero p').textContent = c.heroDesc;
 
             // Update all book cards
-            ['hawking', 'kobe', 'franklin', 'jobs', 'einstein', 'kissinger'].forEach(bookKey => {
+            ['hawking', 'kobe', 'franklin', 'jobs', 'einstein', 'kissinger', 'lincoln'].forEach(bookKey => {
                 const book = c.books[bookKey];
                 const category = document.querySelector(`.book-category[data-book="${bookKey}"]`);
                 const name = document.querySelector(`.book-name[data-book="${bookKey}"]`);
