@@ -1,11 +1,12 @@
 ---
 title: "Claude 團隊如何使用 Claude Code"
 description: "Anthropic 官方文檔：不同團隊在日常工作中如何使用 Claude Code 的實戰經驗與最佳實踐"
-date: 2026-01-04
+date: 2026-01-05
 draft: false
 slug: "claudeshowto"
 categories:
     - AICoding
+
 ---
 
 ## 📄 文檔簡介
@@ -17,18 +18,6 @@ categories:
 - ✅ 顯著的效率提升數據（例如：除錯時間從 10-15 分鐘縮短至 5 分鐘）
 - ✅ 跨團隊總結的最佳實踐與技巧
 - ✅ 測試驅動開發、檢查點工作流程等通用模式
-
----
-
-## 📥 下載原始文檔
-
-<a href="./How-Anthropic-teams-use-Claude-Code_v2.pdf" download>
-  <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-    📎 下載 PDF 原檔
-  </button>
-</a>
-
----
 
 ## 📖 線上閱讀
 
