@@ -1,7 +1,7 @@
 ---
 title: "Claude 團隊如何使用 Claude Code"
 description: "Anthropic 官方文檔：不同團隊在日常工作中如何使用 Claude Code 的實戰經驗與最佳實踐"
-date: 2026-01-05
+date: 2026-01-04
 draft: false
 slug: "claudeshowto"
 categories:
