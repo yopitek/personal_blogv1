@@ -1,6 +1,6 @@
 ---
 title: "Claude code 官方skill簡介&使用方式"
-description: "Claude code 官方skill簡介&使用方式"
+description: ""
 date: 2026-01-04
 draft: false
 slug: "claudeskill"
