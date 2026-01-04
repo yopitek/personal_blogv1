@@ -8,12 +8,9 @@ categories:
   - "AICoding"
 ---
 
-<img src="0104blotcover.png" alt="Claude code 官方skill簡介" width="20%">
-
-
----
 # Claude 官方 Skills 參考手冊
- Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞範例，供員工參考。
+
+Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞。
 
 ## Skills 快速參照表
 
