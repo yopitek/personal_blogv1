@@ -6,10 +6,9 @@ draft: false
 slug: "claudeskill"
 categories:
   - "AICoding"
-image: "0104blotcover.png"
 ---
 
-![Claude code 官方skill簡介](0104blotcover.png)
+<img src="0104blotcover.png" alt="Claude code 官方skill簡介" width="20%">
 
 
 ---
