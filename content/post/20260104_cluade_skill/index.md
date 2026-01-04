@@ -7,6 +7,13 @@ slug: "claudeskill"
 categories:
   - "AICoding"
 ---
+<style>
+table th:first-of-type,
+table td:first-of-type {
+    white-space: nowrap;
+    width: 15%;
+}
+</style>
 
 # Claude 官方 Skills 參考手冊
 
