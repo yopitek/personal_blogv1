@@ -7,8 +7,6 @@ slug: "claudehowto"
 categories:
     - AICoding
 
----
-
 ## 📄 文件簡介
 
 這份文件記錄了 Anthropic 不同團隊（產品開發、安全工程、推論、微調、強化學習工程、法務）在日常工作中如何使用 Claude Code，包括主要使用情境、工作流程、團隊影響及最佳技巧。
