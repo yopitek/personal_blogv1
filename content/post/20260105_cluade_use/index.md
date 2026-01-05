@@ -18,9 +18,7 @@ categories:
 - ✅ 測試驅動開發、檢查點工作流程等通用模式
 
 ## 📖 文件資源
-
 ### 原始 PDF 文件
-
 <div align="center" style="margin: 20px 0;">
   <a href="/How-Anthropic-teams-use-Claude-Code_v2.pdf" target="_blank"
      style="display: inline-block; padding: 12px 24px; background-color: #2c5282; color: white; 
@@ -31,11 +29,10 @@ categories:
 
 ### 線上閱讀版本
 
-
 選擇您偏好的語言版本直接閱讀：
 
 <div align="center" style="margin: 20px 0;">
-  <a href="/How-Anthropic-teams-use-Claude-Code_v2_ENG.html" target="_blank"
+  <a href="/Claude-Code_v2_EN_liner.html" target="_blank"
      style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; 
             text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
     🇺🇸 英文原版
@@ -43,7 +40,7 @@ categories:
 </div>
 
 <div align="center" style="margin: 20px 0;">
-  <a href="/How-Anthropic-teams-use-Claude-Code_v2_TW.html" target="_blank"
+  <a href="/Claude-Code_v2_CN_liner.html" target="_blank"
      style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; 
             text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
     🇹🇼 繁體中文版
@@ -51,7 +48,7 @@ categories:
 </div>
 
 <div align="center" style="margin: 20px 0;">
-  <a href="/How-Anthropic-teams-use-Claude-Code_v2_CN.html" target="_blank"
+  <a href="/Claude-Code_v2_TW_liner.html" target="_blank"
      style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; 
             text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
     🇨🇳 簡體中文版
