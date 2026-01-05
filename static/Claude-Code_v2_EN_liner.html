@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Anthropic Teams Use Claude Code | Linear Style</title>
+    <title>How Anthropic Teams Use Claude Code | Complete Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-
         ::selection {
             background: #5e6ad240;
         }
-
         .sidebar {
             position: fixed;
             top: 0;
@@ -25,48 +22,43 @@
             width: 280px;
             overflow-y: auto;
         }
-
         .content {
             margin-left: 280px;
         }
-
         @media (max-width: 1024px) {
             .sidebar {
                 display: none;
             }
-
             .content {
                 margin-left: 0;
             }
         }
+        h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
     </style>
 </head>
-
 <body class="bg-white dark:bg-black text-slate-900 dark:text-white transition-colors">
 
     <!-- Sidebar TOC -->
     <aside class="sidebar bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 p-8">
         <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-6">Table of Contents</h2>
         <nav class="space-y-1">
-            <a href="#overview"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Overview</a>
-            <a href="#product"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Product
-                Development</a>
-            <a href="#security"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Security
-                Engineering</a>
-            <a href="#inference"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Inference</a>
-            <a href="#finetuning"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Fine-Tuning</a>
-            <a href="#rl"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">RL
-                Engineering</a>
-            <a href="#legal"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Legal</a>
-            <a href="#summary"
-                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Summary</a>
+            <a href="#overview" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Overview</a>
+            <a href="#product" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Product Development</a>
+            <a href="#security" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Security Engineering</a>
+            <a href="#inference" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Inference</a>
+            <a href="#finetuning" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Fine-Tuning</a>
+            <a href="#rl" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">RL Engineering</a>
+            <a href="#legal" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Legal</a>
+            <a href="#summary" class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">Summary</a>
         </nav>
     </aside>
 
@@ -75,551 +67,328 @@
 
         <!-- Hero -->
         <header class="mb-16">
-            <h1 class="text-5xl font-bold mb-4">How Anthropic Teams Use <span class="text-indigo-600">Claude Code</span>
-            </h1>
-            <p class="text-xl text-slate-600 dark:text-slate-400 mb-6">Real-world experiences and best practices from
-                different teams using Claude Code in their daily work</p>
+            <h1 class="text-5xl font-bold mb-4">How Anthropic Teams Use <span class="text-indigo-600">Claude Code</span></h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 mb-6">Complete documentation of real-world experiences and best practices from different teams using Claude Code in their daily work</p>
             <div class="flex gap-4 text-sm text-slate-500">
                 <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">Document Version 2.0</span>
-                <span>Source: Anthropic Official Documentation</span>
+                <span>Source: Anthropic Official PDF</span>
             </div>
         </header>
 
-        <!-- Overview -->
-        <section id="overview"
-            class="mb-16 p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-            <h2 class="text-3xl font-bold mb-4">Overview</h2>
-            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">This document captures how different teams at
-                Anthropic use Claude Code in their daily work, including their main use cases, workflows, team impact,
-                and top tips.</p>
-        </section>
+<h1 class="text-4xl font-bold mb-6">How Anthropic Teams Use Claude Code</h1>
 
-        <!-- Product Development -->
-        <section id="product" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for
-                Product Development</h2>
-            <h3 class="text-xl font-semibold mb-3">Team Overview</h3>
-            <p class="mb-6 text-slate-700 dark:text-slate-300">The product development team builds Claude and its
-                interfaces. They extensively use Claude Code for daily development tasks.</p>
+<strong>Source:</strong> How-Anthropic-teams-use-Claude-Code_v2.pdf
+<strong>Document Version:</strong> 2.0
 
-            <h3 class="text-xl font-semibold mb-4">Main Use Cases</h3>
-            <div class="space-y-6 mb-8">
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Feature file workflow</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">The team creates feature files containing
-                        step-by-step instructions that define the expected behavior of new features. Claude Code helps
-                        create and interpret these files through test-driven development (TDD), where expected behaviors
-                        are written first and Claude executes against those expectations until all criteria are met.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">End-to-end testing</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">Claude Code writes user stories and
-                        automatically creates end-to-end test cases for complex features, catching edge cases humans
-                        might miss. The team treats tests as a primary artifact for verifying code correctness, allowing
-                        quicker identification and correction of issues.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Full-stack development</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">When working on customer-facing changes,
-                        Claude Code generates new React components, updates database schemas, and modifies API routes.
-                        The team provides Claude with a well-defined subtask and lets it implement across the full
-                        stack.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Code review assistance</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">Claude Code helps identify edge cases and
-                        refactoring opportunities, pointing to potential pitfalls or suggesting improvements that can
-                        make code more robust and maintainable.</p>
-                </div>
-            </div>
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
 
-            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
-                <h3 class="text-lg font-semibold mb-3">Team Impact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><strong>Accelerated development cycles</strong>: Features that once took weeks can now be
-                        completed more quickly with Claude Code handling repetitive implementation work.</li>
-                    <li><strong>Improved code quality through tests</strong>: Test-driven development with Claude Code
-                        catches its own mistakes, especially effective when you ask Claude to generate tests before
-                        writing code.</li>
-                </ul>
-            </div>
+<section id="overview" class="mb-16 content-section"><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Overview</h2>
 
-            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
-                <h3 class="text-lg font-semibold mb-3">Top Tips from Product Development Team</h3>
-                <h4 class="font-medium mb-2">Develop task classification intuition</h4>
-                <p class="text-sm mb-4">Learn to distinguish between tasks that work well asynchronously (peripheral
-                    features, prototyping) versus those needing synchronous supervision (core business logic, critical
-                    fixes). Abstract tasks on the product's edges can be handled with "auto-accept mode," while core
-                    functionality requires closer oversight.</p>
-                <h4 class="font-medium mb-2">Form clear, detailed prompts</h4>
-                <p class="text-sm">When components have similar names or functions, be extremely specific in your
-                    requests. The better and more detailed your prompt, the more you can trust Claude to work
-                    independently without unexpected changes to the wrong parts of the code base.</p>
-            </div>
-        </section>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">This document captures how different teams at Anthropic use Claude Code in their daily work, including their main use cases, workflows, team impact, and top tips.</p>
 
-        <!-- Security Engineering -->
-        <section id="security" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for
-                Security Engineering</h2>
-            <h3 class="text-xl font-semibold mb-3">Team Overview</h3>
-            <p class="mb-6 text-slate-700 dark:text-slate-300">The Security Engineering team focuses on securing the
-                software development lifecycle, supply chain security, and development environment security. They use
-                Claude Code extensively for writing and debugging code.</p>
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
 
-            <h3 class="text-xl font-semibold mb-4">Main Use Cases</h3>
-            <div class="space-y-6 mb-8">
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Complex infrastructure debugging</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">When working on incidents, they feed Claude
-                        Code stack traces and documentation, asking it to trace control flow through the code base. This
-                        significantly reduces time-to-resolution for production issues, allowing them to understand
-                        problems that would normally take 10-15 minutes of manual code scanning in about 5 minutes.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Terraform code review and analysis</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">For infrastructure changes requiring security
-                        approval, they copy Terraform plans into Claude Code to ask "what's this going to do? Am I going
-                        to regret this?" This creates tighter feedback loops and makes it easier for the security team
-                        to quickly review and approve infrastructure changes, reducing bottlenecks in the development
-                        process.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Documentation synthesis and runbooks</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">They have Claude Code ingest multiple
-                        documentation sources and create markdown runbooks, troubleshooting guides, and overviews. They
-                        use these condensed documents as context for debugging real issues, creating a more efficient
-                        workflow than searching through full knowledge bases.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Test-driven development workflow</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">Instead of their previous "design doc → janky
-                        code → refactor → give up on tests" pattern, they now ask Claude Code for pseudocode, guide it
-                        through test-driven development, and periodically check in to steer it when stuck, resulting in
-                        more reliable and testable code.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Context switching and project onboarding</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">When contributing to existing projects like
-                        "dependant" (a web application for security approval workflows), they use Claude Code to write,
-                        review, and execute specifications written in markdown and stored in the codebase, enabling
-                        meaningful contributions within days instead of weeks.</p>
-                </div>
-            </div>
+<section id="product" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for Product Development</h2>
 
-            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
-                <h3 class="text-lg font-semibold mb-3">Team Impact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><strong>Reduced incident resolution time</strong>: Infrastructure debugging that normally takes
-                        10-15 minutes of manual code scanning now takes about 5 minutes.</li>
-                    <li><strong>Improved security review cycle</strong>: Terraform code reviews for security approval
-                        happen much faster, eliminating developer blocks while waiting for security team approval.</li>
-                    <li><strong>Enhanced cross-functional contribution</strong>: Team members can meaningfully
-                        contribute to projects within days instead of weeks of context building.</li>
-                    <li><strong>Better documentation workflow</strong>: Synthesized troubleshooting guides and runbooks
-                        from multiple sources create more efficient debugging processes.</li>
-                </ul>
-            </div>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Overview</h3>
 
-            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
-                <h3 class="text-lg font-semibold mb-3">Top Tips from Security Engineering Team</h3>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-medium">Use custom slash commands extensively</h4>
-                        <p>Security engineering uses 50% of all custom slash command implementations in the entire
-                            monorepo. These custom commands streamline specific workflows and speed up repeated tasks.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Let Claude talk first</h4>
-                        <p>Instead of asking targeted questions for code snippets, they now tell Claude Code to "commit
-                            your work as you go" and let it work autonomously with periodic check-ins, resulting in more
-                            comprehensive solutions.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Leverage it for documentation</h4>
-                        <p>Beyond coding, Claude Code excels at synthesizing documentation and creating structured
-                            outputs. They provide writing samples and formatting preferences to get documents they can
-                            immediately use in Slack, Google Docs, and other tools to avoid interface switching fatigue.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The product development team builds Claude and its interfaces. They extensively use Claude Code for daily development tasks.</p>
 
-        <!-- Inference -->
-        <section id="inference" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for
-                Inference</h2>
-            <h3 class="text-xl font-semibold mb-3">Team Overview</h3>
-            <p class="mb-6 text-slate-700 dark:text-slate-300">The Inference team manages the memory system that stores
-                information while Claude reads your prompt and generates its response. Team members, especially those
-                who are new to machine learning, can use Claude Code extensively to bridge that knowledge gap and
-                accelerate their work.</p>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Main Use Cases</h3>
 
-            <h3 class="text-xl font-semibold mb-4">Main Use Cases</h3>
-            <div class="space-y-6 mb-8">
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Codebase comprehension and onboarding</h4>
-                    <p class="text-sm">The team relies heavily on Claude Code to quickly understand the architecture
-                        when joining a complex codebase. Instead of manually searching GitHub repos, they ask Claude to
-                        find which files call specific functionalities, getting results in seconds rather than asking
-                        colleagues or searching manually.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Unit test generation with edge case coverage</h4>
-                    <p class="text-sm">After writing core functionality, they ask Claude to write comprehensive unit
-                        tests. Claude automatically includes missed edge cases, completing what would normally take
-                        significant mental energy in minutes, acting like a coding assistant they can review.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Machine learning concept explanation</h4>
-                    <p class="text-sm">Without a machine learning background, team members depend on Claude to explain
-                        model-specific functions and settings. What would require an hour of Google searching and
-                        reading documentation now takes 10-20 minutes, reducing research time by 80%.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Cross-language code translation</h4>
-                    <p class="text-sm">When testing functionality in different programming languages, they explain what
-                        they want to test and Claude writes the logic in the required language (like Rust), eliminating
-                        the need to learn new languages just for testing purposes.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <h4 class="font-semibold mb-2">Command recall and Kubernetes management</h4>
-                    <p class="text-sm">Instead of remembering complex Kubernetes commands, they ask Claude for the
-                        correct syntax, like "how to get all pods or deployment status," and receive the exact commands
-                        needed for their infrastructure work.</p>
-                </div>
-            </div>
+<h4 class="text-lg font-semibold mb-3 mt-6">Feature file workflow</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The team creates feature files containing step-by-step instructions that define the expected behavior of new features. Claude Code helps create and interpret these files through test-driven development (TDD), where expected behaviors are written first and Claude executes against those expectations until all criteria are met.</p>
 
-            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
-                <h3 class="text-lg font-semibold mb-3">Team Impact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><strong>Accelerated ML concept learning</strong>: Research time reduced by 80% — what took an
-                        hour of Google searching now takes 10-20 minutes.</li>
-                    <li><strong>Faster codebase navigation</strong>: Can find relevant files and understand system
-                        architecture in seconds instead of asking colleagues.</li>
-                    <li><strong>Comprehensive test coverage</strong>: Claude automatically generates unit tests with
-                        edge cases, relieving mental burden while maintaining code quality.</li>
-                    <li><strong>Language barrier elimination</strong>: Can implement functionality in unfamiliar
-                        languages like Rust without needing to learn it.</li>
-                </ul>
-            </div>
+<h4 class="text-lg font-semibold mb-3 mt-6">End-to-end testing</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Claude Code writes user stories and automatically creates end-to-end test cases for complex features, catching edge cases humans might miss. The team treats tests as a primary artifact for verifying code correctness, allowing quicker identification and correction of issues.</p>
 
-            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
-                <h3 class="text-lg font-semibold mb-3">Top Tips from Inference Team</h3>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-medium">Test knowledge base functionality first</h4>
-                        <p>Try asking various questions to see if Claude can answer faster than Google search. If it's
-                            faster and more accurate, it's a valuable time-saving tool for your workflow.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Start with code generation</h4>
-                        <p>Give Claude specific instructions and ask it to write logic, then verify correctness. This
-                            helps build trust in the tool's capabilities before using it for more complex tasks.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Use it for test writing</h4>
-                        <p>Having Claude write unit tests relieves significant pressure from daily development work.
-                            Leverage this feature to maintain code quality without spending time thinking through all
-                            test cases manually.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h4 class="text-lg font-semibold mb-3 mt-6">Full-stack development</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When working on customer-facing changes, Claude Code generates new React components, updates database schemas, and modifies API routes. The team provides Claude with a well-defined subtask and lets it implement across the full stack.</p>
 
-        <!-- Fine-tuning -->
-        <section id="finetuning" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Claude Code for Fine-Tuning</h2>
-            <h3 class="text-xl font-semibold mb-3">Team Overview</h3>
-            <p class="mb-6">The Fine-Tuning team works on training models with paired input-output examples to be better
-                at specific tasks.</p>
+<h4 class="text-lg font-semibold mb-3 mt-6">Code review assistance</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Claude Code helps identify edge cases and refactoring opportunities, pointing to potential pitfalls or suggesting improvements that can make code more robust and maintainable.</p>
 
-            <h3 class="text-xl font-semibold mb-4">Main Use Cases</h3>
-            <div class="space-y-6 mb-8">
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Managing experimental tracking</h4>
-                    <p class="text-sm">They use Claude Code to check training runs, iterate on code, and manage many
-                        logs from multiple experiments. The team handles numerous active runs, and Claude Code can
-                        quickly navigate training dashboards by reading log files and identifying specific run
-                        characteristics or errors on demand.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Tool building for experimentation</h4>
-                    <p class="text-sm">When team members need specialized tools for experiments (like a "vibe check"
-                        interface to manually review examples), Claude Code helps build these tools in a single session.
-                        Non-developers can create their own scripts for specific workflows, accessing capabilities
-                        previously requiring engineering support.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Code review and debugging</h4>
-                    <p class="text-sm">Claude Code assists with catching issues in dataset preparation scripts and
-                        experiment configurations. The team uses it to debug distributed training challenges and
-                        validate that data pipelines are working correctly before starting long-running training jobs.
-                    </p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Metric analysis and visualization</h4>
-                    <p class="text-sm">They use Claude Code to generate performance metrics and create comparative
-                        charts. For research presentations, they can quickly generate bar charts showing model
-                        performance differences, enabling rapid performance visualization without deep knowledge of data
-                        visualization libraries.</p>
-                </div>
-            </div>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Impact</h3>
 
-            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
-                <h3 class="text-lg font-semibold mb-3">Team Impact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><strong>Faster experiment iteration</strong>: Can build custom tooling in single sessions
-                        instead of waiting for engineering support.</li>
-                    <li><strong>Reduced debugging time</strong>: Catches issues in data pipelines before expensive
-                        training runs.</li>
-                    <li><strong>Democratized tooling</strong>: Non-developers can create their own workflows and
-                        analysis scripts.</li>
-                    <li><strong>Accelerated presentation prep</strong>: Quick generation of performance visualizations
-                        and metrics.</li>
-                </ul>
-            </div>
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300"><strong>Accelerated development cycles</strong>: Features that once took weeks can now be completed more quickly with Claude Code handling repetitive implementation work.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Improved code quality through tests</strong>: Test-driven development with Claude Code catches its own mistakes, especially effective when you ask Claude to generate tests before writing code.</li>
+</ul>
 
-            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
-                <h3 class="text-lg font-semibold mb-3">Top Tips from Fine-Tuning Team</h3>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-medium">Create experiment-specific workspaces</h4>
-                        <p>Keep separate Claude Code sessions for different experiments, allowing context-specific
-                            assistance without confusion between projects.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Validate before long runs</h4>
-                        <p>Always use Claude Code to validate data pipelines and configurations before starting
-                            multi-hour training runs to avoid costly mistakes.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Use for ad-hoc analysis</h4>
-                        <p>When you need quick insights from experiment logs or metrics, describe what you're looking
-                            for and let Claude Code parse and summarize the relevant information.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Top Tips from Product Development Team</h3>
 
-        <!-- RL Engineering -->
-        <section id="rl" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Claude Code for RL Engineering</h2>
-            <h3 class="text-xl font-semibold mb-3">Team Overview</h3>
-            <p class="mb-6">The RL (Reinforcement Learning) Engineering team works on RLHF (Reinforcement Learning from
-                Human Feedback) and related training systems.</p>
+<h4 class="text-lg font-semibold mb-3 mt-6">Develop task classification intuition</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Learn to distinguish between tasks that work well asynchronously (peripheral features, prototyping) versus those needing synchronous supervision (core business logic, critical fixes). Abstract tasks on the product's edges can be handled with "auto-accept mode," while core functionality requires closer oversight.</p>
 
-            <h3 class="text-xl font-semibold mb-4">Main Use Cases</h3>
-            <div class="space-y-6 mb-8">
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">State inspection tooling</h4>
-                    <p class="text-sm">They use Claude Code to track down issues across training jobs. When faced with
-                        logs containing model states, Claude Code can quickly parse and identify issues, reducing time
-                        spent manually checking training configurations and outputs.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Multi-process coordination</h4>
-                    <p class="text-sm">RL systems require coordination across many processes. Claude Code helps manage
-                        and debug distributed systems, writing scripts to monitor process health and identify
-                        coordination failures.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Metric pipeline development</h4>
-                    <p class="text-sm">They use Claude Code to build metrics pipelines for experiments, automating the
-                        extraction and visualization of training signals like reward curves and loss values.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Test harness development</h4>
-                    <p class="text-sm">Claude Code helps write test frameworks for RL system components, ensuring that
-                        training stability and expected behavior are validated before production deployment.</p>
-                </div>
-            </div>
+<h4 class="text-lg font-semibold mb-3 mt-6">Form clear, detailed prompts</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When components have similar names or functions, be extremely specific in your requests. The better and more detailed your prompt, the more you can trust Claude to work independently without unexpected changes to the wrong parts of the code base.</p>
 
-            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
-                <h3 class="text-lg font-semibold mb-3">Team Impact</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><strong>Faster debugging cycles</strong>: Complex distributed system issues identified more
-                        quickly.</li>
-                    <li><strong>Automated monitoring</strong>: Scripts that track training health without manual
-                        oversight.</li>
-                    <li><strong>Improved test coverage</strong>: More comprehensive testing of RL components.</li>
-                    <li><strong>Streamlined metrics</strong>: Automated extraction and visualization of training
-                        signals.</li>
-                </ul>
-            </div>
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
 
-            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
-                <h3 class="text-lg font-semibold mb-3">Top Tips from RL Engineering Team</h3>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-medium">Customize your Claude.md file for specific patterns</h4>
-                        <p>Add instructions to your Claude.md file to prevent Claude from making repeated tool-calling
-                            mistakes, such as telling it to "run pytest not run and don't cd unnecessarily – just use
-                            the right path." This significantly improved consistency.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Use a checkpoint-heavy workflow</h4>
-                        <p>Regularly commit your work as Claude makes changes so you can easily roll back when
-                            experiments don't work out. This enables a more experimental approach to development without
-                            risk.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Try one-shot first, then collaborate</h4>
-                        <p>Give Claude a quick prompt and let it attempt the full implementation first. If it works
-                            (about one-third of the time), you've saved significant time. If not, then switch to a more
-                            collaborative, guided approach.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="security" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for Security Engineering</h2>
 
-        <!-- Legal -->
-        <section id="legal" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Claude Code for Legal</h2>
-            <h3 class="text-xl font-semibold mb-3">Team Overview</h3>
-            <p class="mb-6">The Legal team discovered Claude Code's potential through experimentation, and a desire to
-                learn about Anthropic's product offerings. Additionally, one team member had a personal use case related
-                to creating accessibility tools for family and work prototypes that demonstrate the technology's power
-                for non-developers.</p>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Overview</h3>
 
-            <h3 class="text-xl font-semibold mb-4">Main Use Cases</h3>
-            <div class="space-y-6 mb-8">
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Custom accessibility solution for family members</h4>
-                    <p class="text-sm">Team members have built communication assistants for family members with speaking
-                        difficulties due to medical diagnoses. In just one hour, they created a predictive text app
-                        using native speech-to-text that suggests responses and speaks them using voice banks, solving
-                        gaps in existing accessibility tools recommended by speech therapists.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Legal department workflow automation</h4>
-                    <p class="text-sm">They created prototype "phone tree" systems to help team members connect with the
-                        right lawyer at Anthropic, demonstrating how legal departments can build custom tools for common
-                        tasks without traditional development resources.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Team coordination tools</h4>
-                    <p class="text-sm">Managers have built G Suite applications that automate weekly team updates and
-                        track legal review status across products, allowing lawyers to quickly flag items needing review
-                        through simple button clicks rather than spreadsheet management.</p>
-                </div>
-                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
-                    <h4 class="font-semibold mb-2">Rapid prototyping for solution validation</h4>
-                    <p class="text-sm">They use Claude Code to quickly build functional prototypes they can show to
-                        domain experts (like showing accessibility tools to UCSF specialists) to validate ideas and
-                        identify existing solutions before investing more time.</p>
-                </div>
-            </div>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The Security Engineering team focuses on securing the software development lifecycle, supply chain security, and development environment security. They use Claude Code extensively for writing and debugging code.</p>
 
-            <div class="p-6 bg-slate-50 dark:bg-slate-900 rounded-xl border mb-6">
-                <h3 class="text-lg font-semibold mb-3">Workstyle and Impact</h3>
-                <ul class="space-y-3 text-sm">
-                    <li><strong>Planning in Claude.ai, building in Claude Code</strong>: They use a two-step process
-                        where they brainstorm and plan with Claude.ai first, then move to Claude Code for
-                        implementation.</li>
-                    <li><strong>Visual-first approach</strong>: They frequently use screenshots to show Claude Code what
-                        they want interfaces to look like, then iterate based on visual feedback.</li>
-                    <li><strong>Prototype-driven innovation</strong>: They emphasize overcoming the fear of sharing
-                        "silly" or "toy" prototypes, as these demonstrations inspire others to see possibilities they
-                        hadn't considered.</li>
-                </ul>
-            </div>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Main Use Cases</h3>
 
-            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
-                <h3 class="text-lg font-semibold mb-3">Top Tips from Legal Department</h3>
-                <div class="space-y-4 text-sm">
-                    <div>
-                        <h4 class="font-medium">Plan extensively in Claude.ai first</h4>
-                        <p>Use Claude's conversational interface to flesh out your entire idea before moving to Claude
-                            Code. Then ask Claude to summarize everything into a step-by-step prompt for implementation.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Work incrementally and visually</h4>
-                        <p>Ask Claude Code to slow down and implement one step at a time so you can copy-paste without
-                            getting overwhelmed. Use screenshots liberally to show what you want interfaces to look
-                            like.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium">Share prototypes despite imperfection</h4>
-                        <p>Overcome the urge to hide "toy" projects or unfinished work — sharing prototypes helps others
-                            see possibilities and sparks innovation across departments that don't typically interact.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h4 class="text-lg font-semibold mb-3 mt-6">Complex infrastructure debugging</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When working on incidents, they feed Claude Code stack traces and documentation, asking it to trace control flow through the code base. This significantly reduces time-to-resolution for production issues, allowing them to understand problems that would normally take 10-15 minutes of manual code scanning in about 5 minutes.</p>
 
-        <!-- Summary -->
-        <section id="summary" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Summary: Key Themes Across Teams</h2>
+<h4 class="text-lg font-semibold mb-3 mt-6">Terraform code review and analysis</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">For infrastructure changes requiring security approval, they copy Terraform plans into Claude Code to ask "what's this going to do? Am I going to regret this?" This creates tighter feedback loops and makes it easier for the security team to quickly review and approve infrastructure changes, reducing bottlenecks in the development process.</p>
 
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border mb-8">
-                <h3 class="text-xl font-semibold mb-4">Common Patterns</h3>
-                <ol class="space-y-2 text-sm list-decimal list-inside">
-                    <li><strong>Test-driven development</strong>: Multiple teams emphasize writing tests first</li>
-                    <li><strong>Checkpoint workflows</strong>: Regular commits enable safe experimentation</li>
-                    <li><strong>Custom configurations</strong>: Teams customize Claude.md for their specific needs</li>
-                    <li><strong>Documentation synthesis</strong>: Using Claude to create runbooks and guides</li>
-                    <li><strong>Prototype sharing</strong>: Overcoming reluctance to share early-stage work</li>
-                </ol>
-            </div>
+<h4 class="text-lg font-semibold mb-3 mt-6">Documentation synthesis and runbooks</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They have Claude Code ingest multiple documentation sources and create markdown runbooks, troubleshooting guides, and overviews. They use these condensed documents as context for debugging real issues, creating a more efficient workflow than searching through full knowledge bases.</p>
 
-            <div class="overflow-x-auto mb-8">
-                <h3 class="text-xl font-semibold mb-4">Time Savings</h3>
-                <table class="w-full border-collapse bg-white dark:bg-slate-900 rounded-xl overflow-hidden">
-                    <thead class="bg-slate-100 dark:bg-slate-800">
-                        <tr>
-                            <th class="py-3 px-4 text-left">Team</th>
-                            <th class="py-3 px-4 text-left">Task</th>
-                            <th class="py-3 px-4 text-left">Time Reduction</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr class="border-b dark:border-slate-800">
-                            <td class="py-3 px-4">Security Engineering</td>
-                            <td class="py-3 px-4">Infrastructure debugging</td>
-                            <td class="py-3 px-4 font-semibold text-green-600">10-15 min → 5 min</td>
-                        </tr>
-                        <tr class="border-b dark:border-slate-800">
-                            <td class="py-3 px-4">Inference</td>
-                            <td class="py-3 px-4">ML concept research</td>
-                            <td class="py-3 px-4 font-semibold text-green-600">1 hour → 10-20 min (80%)</td>
-                        </tr>
-                        <tr class="border-b dark:border-slate-800">
-                            <td class="py-3 px-4">RL Engineering</td>
-                            <td class="py-3 px-4">Experiment validation</td>
-                            <td class="py-3 px-4 font-semibold text-green-600">Hours → Minutes</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4">Legal</td>
-                            <td class="py-3 px-4">Prototype building</td>
-                            <td class="py-3 px-4 font-semibold text-green-600">Days → Hours</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+<h4 class="text-lg font-semibold mb-3 mt-6">Test-driven development workflow</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Instead of their previous "design doc → janky code → refactor → give up on tests" pattern, they now ask Claude Code for pseudocode, guide it through test-driven development, and periodically check in to steer it when stuck, resulting in more reliable and testable code.</p>
 
-            <div class="p-6 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border-l-4 border-indigo-500">
-                <h3 class="text-lg font-semibold mb-3">Universal Tips</h3>
-                <ul class="space-y-2 text-sm">
-                    <li>Start with one-shot attempts before collaborative guidance</li>
-                    <li>Use specific, detailed prompts</li>
-                    <li>Leverage Claude for documentation beyond coding</li>
-                    <li>Build trust through verification before relying on output</li>
-                    <li>Create custom commands for repeated workflows</li>
-                </ul>
-            </div>
-        </section>
+<h4 class="text-lg font-semibold mb-3 mt-6">Context switching and project onboarding</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When contributing to existing projects like "dependant" (a web application for security approval workflows), they use Claude Code to write, review, and execute specifications written in markdown and stored in the codebase, enabling meaningful contributions within days instead of weeks.</p>
 
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Impact</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300"><strong>Reduced incident resolution time</strong>: Infrastructure debugging that normally takes 10-15 minutes of manual code scanning now takes about 5 minutes.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Improved security review cycle</strong>: Terraform code reviews for security approval happen much faster, eliminating developer blocks while waiting for security team approval.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Enhanced cross-functional contribution</strong>: Team members can meaningfully contribute to projects within days instead of weeks of context building.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Better documentation workflow</strong>: Synthesized troubleshooting guides and runbooks from multiple sources create more efficient debugging processes.</li>
+</ul>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Top Tips from Security Engineering Team</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Use custom slash commands extensively</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Security engineering uses 50% of all custom slash command implementations in the entire monorepo. These custom commands streamline specific workflows and speed up repeated tasks.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Let Claude talk first</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Instead of asking targeted questions for code snippets, they now tell Claude Code to "commit your work as you go" and let it work autonomously with periodic check-ins, resulting in more comprehensive solutions.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Leverage it for documentation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Beyond coding, Claude Code excels at synthesizing documentation and creating structured outputs. They provide writing samples and formatting preferences to get documents they can immediately use in Slack, Google Docs, and other tools to avoid interface switching fatigue.</p>
+
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
+
+<section id="inference" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for Inference</h2>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Overview</h3>
+
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The Inference team manages the memory system that stores information while Claude reads your prompt and generates its response. Team members, especially those who are new to machine learning, can use Claude Code extensively to bridge that knowledge gap and accelerate their work.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Main Use Cases</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Codebase comprehension and onboarding</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The team relies heavily on Claude Code to quickly understand the architecture when joining a complex codebase. Instead of manually searching GitHub repos, they ask Claude to find which files call specific functionalities, getting results in seconds rather than asking colleagues or searching manually.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Unit test generation with edge case coverage</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">After writing core functionality, they ask Claude to write comprehensive unit tests. Claude automatically includes missed edge cases, completing what would normally take significant mental energy in minutes, acting like a coding assistant they can review.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Machine learning concept explanation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Without a machine learning background, team members depend on Claude to explain model-specific functions and settings. What would require an hour of Google searching and reading documentation now takes 10-20 minutes, reducing research time by 80%.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Cross-language code translation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When testing functionality in different programming languages, they explain what they want to test and Claude writes the logic in the required language (like Rust), eliminating the need to learn new languages just for testing purposes.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Command recall and Kubernetes management</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Instead of remembering complex Kubernetes commands, they ask Claude for the correct syntax, like "how to get all pods or deployment status," and receive the exact commands needed for their infrastructure work.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Impact</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300"><strong>Accelerated ML concept learning</strong>: Research time reduced by 80% — what took an hour of Google searching now takes 10-20 minutes.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Faster codebase navigation</strong>: Can find relevant files and understand system architecture in seconds instead of asking colleagues.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Comprehensive test coverage</strong>: Claude automatically generates unit tests with edge cases, relieving mental burden while maintaining code quality.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Language barrier elimination</strong>: Can implement functionality in unfamiliar languages like Rust without needing to learn it.</li>
+</ol>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Top Tips from Inference Team</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Test knowledge base functionality first</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Try asking various questions to see if Claude can answer faster than Google search. If it's faster and more accurate, it's a valuable time-saving tool for your workflow.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Start with code generation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Give Claude specific instructions and ask it to write logic, then verify correctness. This helps build trust in the tool's capabilities before using it for more complex tasks.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Use it for test writing</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Having Claude write unit tests relieves significant pressure from daily development work. Leverage this feature to maintain code quality without spending time thinking through all test cases manually.</p>
+
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
+
+<section id="finetuning" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for Fine-Tuning</h2>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Overview</h3>
+
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The Fine-Tuning team works on training models with paired input-output examples to be better at specific tasks.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Main Use Cases</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Managing experimental tracking</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They use Claude Code to check training runs, iterate on code, and manage many logs from multiple experiments. The team handles numerous active runs, and Claude Code can quickly navigate training dashboards by reading log files and identifying specific run characteristics or errors on demand.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Tool building for experimentation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When team members need specialized tools for experiments (like a "vibe check" interface to manually review examples), Claude Code helps build these tools in a single session. Non-developers can create their own scripts for specific workflows, accessing capabilities previously requiring engineering support.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Code review and debugging</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Claude Code assists with catching issues in dataset preparation scripts and experiment configurations. The team uses it to debug distributed training challenges and validate that data pipelines are working correctly before starting long-running training jobs.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Metric analysis and visualization</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They use Claude Code to generate performance metrics and create comparative charts. For research presentations, they can quickly generate bar charts showing model performance differences, enabling rapid performance visualization without deep knowledge of data visualization libraries.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Impact</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300"><strong>Faster experiment iteration</strong>: Can build custom tooling in single sessions instead of waiting for engineering support.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Reduced debugging time</strong>: Catches issues in data pipelines before expensive training runs.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Democratized tooling</strong>: Non-developers can create their own workflows and analysis scripts.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Accelerated presentation prep</strong>: Quick generation of performance visualizations and metrics.</li>
+</ol>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Top Tips from Fine-Tuning Team</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Create experiment-specific workspaces</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Keep separate Claude Code sessions for different experiments, allowing context-specific assistance without confusion between projects.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Validate before long runs</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Always use Claude Code to validate data pipelines and configurations before starting multi-hour training runs to avoid costly mistakes.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Use for ad-hoc analysis</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">When you need quick insights from experiment logs or metrics, describe what you're looking for and let Claude Code parse and summarize the relevant information.</p>
+
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
+
+<section id="rl" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for RL Engineering</h2>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Overview</h3>
+
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The RL (Reinforcement Learning) Engineering team works on RLHF (Reinforcement Learning from Human Feedback) and related training systems.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Main Use Cases</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">State inspection tooling</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They use Claude Code to track down issues across training jobs. When faced with logs containing model states, Claude Code can quickly parse and identify issues, reducing time spent manually checking training configurations and outputs.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Multi-process coordination</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">RL systems require coordination across many processes. Claude Code helps manage and debug distributed systems, writing scripts to monitor process health and identify coordination failures.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Metric pipeline development</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They use Claude Code to build metrics pipelines for experiments, automating the extraction and visualization of training signals like reward curves and loss values.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Test harness development</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Claude Code helps write test frameworks for RL system components, ensuring that training stability and expected behavior are validated before production deployment.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Impact</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300"><strong>Faster debugging cycles</strong>: Complex distributed system issues identified more quickly.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Automated monitoring</strong>: Scripts that track training health without manual oversight.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Improved test coverage</strong>: More comprehensive testing of RL components.</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Streamlined metrics</strong>: Automated extraction and visualization of training signals.</li>
+</ol>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Top Tips from RL Engineering Team</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Customize your Claude.md file for specific patterns</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Add instructions to your Claude.md file to prevent Claude from making repeated tool-calling mistakes, such as telling it to "run pytest not run and don't cd unnecessarily – just use the right path." This significantly improved consistency.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Use a checkpoint-heavy workflow</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Regularly commit your work as Claude makes changes so you can easily roll back when experiments don't work out. This enables a more experimental approach to development without risk.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Try one-shot first, then collaborate</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Give Claude a quick prompt and let it attempt the full implementation first. If it works (about one-third of the time), you've saved significant time. If not, then switch to a more collaborative, guided approach.</p>
+
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
+
+<section id="legal" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code for Legal</h2>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Team Overview</h3>
+
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">The Legal team discovered Claude Code's potential through experimentation, and a desire to learn about Anthropic's product offerings. Additionally, one team member had a personal use case related to creating accessibility tools for family and work prototypes that demonstrate the technology's power for non-developers.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Main Use Cases</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Custom accessibility solution for family members</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Team members have built communication assistants for family members with speaking difficulties due to medical diagnoses. In just one hour, they created a predictive text app using native speech-to-text that suggests responses and speaks them using voice banks, solving gaps in existing accessibility tools recommended by speech therapists.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Legal department workflow automation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They created prototype "phone tree" systems to help team members connect with the right lawyer at Anthropic, demonstrating how legal departments can build custom tools for common tasks without traditional development resources.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Team coordination tools</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Managers have built G Suite applications that automate weekly team updates and track legal review status across products, allowing lawyers to quickly flag items needing review through simple button clicks rather than spreadsheet management.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Rapid prototyping for solution validation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They use Claude Code to quickly build functional prototypes they can show to domain experts (like showing accessibility tools to UCSF specialists) to validate ideas and identify existing solutions before investing more time.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Workstyle and Impact</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Planning in Claude.ai, building in Claude Code</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They use a two-step process where they brainstorm and plan with Claude.ai first, then move to Claude Code for implementation, asking it to slow down and work step-by-step rather than outputting everything at once.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Visual-first approach</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They frequently use screenshots to show Claude Code what they want interfaces to look like, then iterate based on visual feedback rather than describing features in text.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Prototype-driven innovation</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They emphasize overcoming the fear of sharing "silly" or "toy" prototypes, as these demonstrations inspire others to see possibilities they hadn't considered.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Security and compliance awareness</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">As product lawyers, they immediately identify security implications of deep MCP integrations, noting how conservative security postures will create barriers as AI tools access more sensitive systems.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Compliance tooling priorities</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">They advocate for building compliance tools quickly as AI capabilities expand, recognizing the balance between innovation and risk management.</p>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Top Tips from Legal Department</h3>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Plan extensively in Claude.ai first</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Use Claude's conversational interface to flesh out your entire idea before moving to Claude Code. Then ask Claude to summarize everything into a step-by-step prompt for implementation.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Work incrementally and visually</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Ask Claude Code to slow down and implement one step at a time so you can copy-paste without getting overwhelmed. Use screenshots liberally to show what you want interfaces to look like.</p>
+
+<h4 class="text-lg font-semibold mb-3 mt-6">Share prototypes despite imperfection</h4>
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">Overcome the urge to hide "toy" projects or unfinished work — sharing prototypes helps others see possibilities and sparks innovation across departments that don't typically interact.</p>
+
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
+
+<section id="summary" class="mb-16 content-section"></section><h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Summary: Key Themes Across Teams</h2>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Common Patterns</h3>
+
+<ol class="list-decimal list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300"><strong>Test-driven development</strong>: Multiple teams emphasize writing tests first</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Checkpoint workflows</strong>: Regular commits enable safe experimentation  </li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Custom configurations</strong>: Teams customize Claude.md for their specific needs</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Documentation synthesis</strong>: Using Claude to create runbooks and guides</li>
+<li class="text-slate-700 dark:text-slate-300"><strong>Prototype sharing</strong>: Overcoming reluctance to share early-stage work</li>
+</ol>
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Time Savings</h3>
+
+| Team | Task | Time Reduction |
+|------|------|----------------|
+| Security Engineering | Infrastructure debugging | 10-15 min → 5 min |
+| Inference | ML concept research | 1 hour → 10-20 min (80%) |
+| RL Engineering | Experiment validation | Hours → Minutes |
+| Legal | Prototype building | Days → Hours |
+
+<h3 class="text-2xl font-semibold mb-4 mt-8">Universal Tips</h3>
+
+<ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+<li class="text-slate-700 dark:text-slate-300">Start with one-shot attempts before collaborative guidance</li>
+<li class="text-slate-700 dark:text-slate-300">Use specific, detailed prompts</li>
+<li class="text-slate-700 dark:text-slate-300">Leverage Claude for documentation beyond coding</li>
+<li class="text-slate-700 dark:text-slate-300">Build trust through verification before relying on output</li>
+<li class="text-slate-700 dark:text-slate-300">Create custom commands for repeated workflows</li>
+</ol>
+
+<hr class="my-8 border-slate-200 dark:border-slate-800" />
+
+<p class="mb-4 text-slate-700 dark:text-slate-300 leading-relaxed">*Document generated from: How-Anthropic-teams-use-Claude-Code_v2.pdf*</p>
+</section>
         <!-- Footer -->
         <footer class="py-12 border-t text-center text-sm text-slate-500">
-            <p>© 2026 Anthropic | Document Version 2.0 | Linear Style Design</p>
-            <p class="mt-2">Document generated from: How-Anthropic-teams-use-Claude-Code_v2.pdf</p>
+            <p>© 2026 Anthropic | Document Version 2.0 | Complete Documentation</p>
+            <p class="mt-2">Document source: How-Anthropic-teams-use-Claude-Code_v2.pdf</p>
         </footer>
     </main>
 </body>
-
 </html>
