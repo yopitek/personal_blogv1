@@ -6,6 +6,7 @@ draft: false
 slug: "claudehowto"
 categories:
     - AICoding
+---
 
 ## 📄 文件簡介
 
@@ -40,7 +41,7 @@ categories:
 </div>
 
 <div align="center" style="margin: 20px 0;">
-  <a href="/Claude-Code_v2_CN_liner.html" target="_blank"
+  <a href="/Claude-Code_v2_TW_liner.html" target="_blank"
      style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; 
             text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
     🇹🇼 繁體中文版
@@ -48,7 +49,7 @@ categories:
 </div>
 
 <div align="center" style="margin: 20px 0;">
-  <a href="/Claude-Code_v2_TW_liner.html" target="_blank"
+  <a href="/Claude-Code_v2_CN_liner.html" target="_blank"
      style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white; 
             text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;">
     🇨🇳 簡體中文版
