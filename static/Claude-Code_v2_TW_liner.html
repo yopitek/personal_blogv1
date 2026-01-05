@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropic 團隊如何使用 Claude Code | Linear Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: #5e6ad240;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 280px;
+            overflow-y: auto;
+        }
+
+        .content {
+            margin-left: 280px;
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-black text-slate-900 dark:text-white transition-colors">
+
+    <!-- Sidebar TOC -->
+    <aside class="sidebar bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 p-8">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-6">目錄</h2>
+        <nav class="space-y-1">
+            <a href="#overview"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">概述</a>
+            <a href="#product"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">產品開發</a>
+            <a href="#security"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">安全工程</a>
+            <a href="#inference"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">推論</a>
+            <a href="#finetuning"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">微調</a>
+            <a href="#rl"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">強化學習工程</a>
+            <a href="#legal"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">法務</a>
+            <a href="#summary"
+                class="block py-2 px-3 text-sm hover:bg-slate-100 dark:hover:bg-slate-900 rounded transition">摘要</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content max-w-4xl px-8 py-16">
+
+        <!-- Hero -->
+        <header class="mb-16">
+            <h1 class="text-5xl font-bold mb-4">Anthropic 團隊如何使用 <span class="text-indigo-600">Claude Code</span></h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 mb-6">不同團隊在日常工作中使用 Claude Code 的實戰經驗與最佳實踐</p>
+            <div class="flex gap-4 text-sm text-slate-500">
+                <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">文件版本 2.0</span>
+                <span>來源：Anthropic 官方文件</span>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section id="overview"
+            class="mb-16 p-8 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+            <h2 class="text-3xl font-bold mb-4">概述</h2>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">本文件記錄 Anthropic 不同團隊在日常工作中如何使用 Claude
+                Code，包括主要使用情境、工作流程、團隊影響及最佳技巧。</p>
+        </section>
+
+        <!-- Product Development -->
+        <section id="product" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code 用於產品開發
+            </h2>
+            <h3 class="text-xl font-semibold mb-3">團隊概述</h3>
+            <p class="mb-6 text-slate-700 dark:text-slate-300">產品開發團隊負責建構 Claude 及其介面。他們廣泛使用 Claude Code 進行日常開發任務。</p>
+
+            <h3 class="text-xl font-semibold mb-4">主要使用情境</h3>
+            <div class="space-y-6 mb-8">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">功能檔案工作流程</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">團隊建立包含逐步指令的功能檔案，定義新功能的預期行為。Claude Code
+                        透過測試驅動開發 (TDD) 協助建立和解讀這些檔案，先撰寫預期行為，然後 Claude 持續執行直到滿足所有標準。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">端對端測試</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Claude Code
+                        撰寫使用者故事並自動為複雜功能建立端對端測試案例，捕捉人工可能遺漏的邊緣案例。團隊將測試視為驗證程式碼正確性的主要產出，可更快識別並修正問題。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">全端開發</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">處理面向客戶的變更時，Claude Code 產生新的 React
+                        元件、更新資料庫結構並修改 API 路由。團隊提供明確定義的子任務，讓 Claude 跨全端實作。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">程式碼審查協助</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Claude Code
+                        協助識別邊緣案例和重構機會，指出潛在陷阱或建議改進，使程式碼更健壯且易於維護。</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
+                <h3 class="text-lg font-semibold mb-3">團隊影響</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>加速開發週期</strong>：過去需要數週的功能，現在透過 Claude Code 處理重複性實作工作可更快完成。</li>
+                    <li><strong>透過測試提升程式碼品質</strong>：使用 Claude Code 的測試驅動開發可捕捉自身錯誤，尤其是請 Claude 先產生測試再撰寫程式碼時特別有效。</li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-3">產品開發團隊最佳技巧</h3>
+                <h4 class="font-medium mb-2">培養任務分類直覺</h4>
+                <p class="text-sm mb-4">
+                    學習區分適合非同步處理的任務（周邊功能、原型製作）與需要同步監督的任務（核心業務邏輯、關鍵修復）。產品邊緣的抽象任務可使用「自動接受模式」處理，核心功能則需更密切監督。</p>
+                <h4 class="font-medium mb-2">撰寫清晰詳細的提示</h4>
+                <p class="text-sm">當元件名稱或功能相似時，請求時務必極度具體。提示越詳細，越能信任 Claude 獨立工作，避免對程式碼庫錯誤部分進行意外變更。</p>
+            </div>
+        </section>
+
+        <!-- Security Engineering -->
+        <section id="security" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code 用於安全工程
+            </h2>
+            <h3 class="text-xl font-semibold mb-3">團隊概述</h3>
+            <p class="mb-6 text-slate-700 dark:text-slate-300">安全工程團隊專注於保護軟體開發生命週期、供應鏈安全及開發環境安全。他們廣泛使用 Claude Code
+                撰寫和除錯程式碼。</p>
+
+            <h3 class="text-xl font-semibold mb-4">主要使用情境</h3>
+            <div class="space-y-6 mb-8">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">複雜基礎設施除錯</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">處理事件時，他們將堆疊追蹤和文件提供給 Claude
+                        Code，要求追蹤程式碼庫中的控制流程。這顯著縮短生產問題的解決時間，原本需要 10-15 分鐘手動掃描程式碼的問題，現在約 5 分鐘即可理解。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">Terraform 程式碼審查與分析</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">對於需要安全核准的基礎設施變更，他們將 Terraform 計劃複製到 Claude
+                        Code 中詢問「這會做什麼？我會後悔嗎？」這創造更緊密的回饋循環，讓安全團隊更容易快速審查和核准基礎設施變更，減少開發流程中的瓶頸。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">文件綜合與運行手冊</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">他們讓 Claude Code 攝取多個文件來源，建立 markdown
+                        運行手冊、疑難排解指南和概述。他們使用這些精簡文件作為除錯實際問題的背景，創造比搜尋完整知識庫更有效率的工作流程。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">測試驅動開發工作流程</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">他們現在不再使用之前的「設計文件 → 臨時程式碼 → 重構 → 放棄測試」模式，而是向
+                        Claude Code 請求偽碼，引導其進行測試驅動開發，並定期檢視以在卡住時引導方向，產生更可靠且可測試的程式碼。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">情境切換與專案新手上路</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">貢獻現有專案（如「dependant」安全核准工作流程網頁應用程式）時，他們使用
+                        Claude Code 撰寫、審查和執行以 markdown 撰寫並存放在程式碼庫中的規格，使有意義的貢獻從數週縮短至數天。</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
+                <h3 class="text-lg font-semibold mb-3">團隊影響</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>縮短事件解決時間</strong>：原本需要 10-15 分鐘手動掃描程式碼的基礎設施除錯，現在約需 5 分鐘。</li>
+                    <li><strong>改善安全審查週期</strong>：安全核准的 Terraform 程式碼審查速度大幅加快，消除開發人員等待安全團隊核准時的阻塞。</li>
+                    <li><strong>強化跨功能貢獻</strong>：團隊成員可在數天內（而非數週的背景建立）有意義地貢獻專案。</li>
+                    <li><strong>更佳文件工作流程</strong>：從多個來源綜合的疑難排解指南和運行手冊創造更有效率的除錯流程。</li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-3">安全工程團隊最佳技巧</h3>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <h4 class="font-medium">廣泛使用自訂斜線指令</h4>
+                        <p>安全工程使用整個 monorepo 中 50% 的自訂斜線指令實作。這些自訂指令簡化特定工作流程並加速重複任務。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">讓 Claude 先行動</h4>
+                        <p>不再針對程式碼片段提出針對性問題，他們現在告訴 Claude Code「邊做邊提交你的工作」，讓它自主工作並定期檢視，產生更全面的解決方案。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">善用於文件撰寫</h4>
+                        <p>除了程式設計外，Claude Code 擅長綜合文件和建立結構化輸出。他們提供寫作範例和格式偏好，獲得可立即在 Slack、Google Docs
+                            和其他工具中使用的文件，避免介面切換疲勞。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inference -->
+        <section id="inference" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">Claude Code 用於推論
+            </h2>
+            <h3 class="text-xl font-semibold mb-3">團隊概述</h3>
+            <p class="mb-6 text-slate-700 dark:text-slate-300">推論團隊管理儲存資訊的記憶系統，在 Claude
+                讀取提示並產生回應時運作。團隊成員，尤其是機器學習新手，可廣泛使用 Claude Code 彌補知識差距並加速工作。</p>
+
+            <h3 class="text-xl font-semibold mb-4">主要使用情境</h3>
+            <div class="space-y-6 mb-8">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">程式碼庫理解與新手上路</h4>
+                    <p class="text-sm">團隊高度依賴 Claude Code 在加入複雜程式碼庫時快速理解架構。不再手動搜尋 GitHub 儲存庫，他們詢問 Claude
+                        找出哪些檔案呼叫特定功能，在數秒內獲得結果，而非詢問同事或手動搜尋。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">包含邊緣案例的單元測試產生</h4>
+                    <p class="text-sm">撰寫核心功能後，他們請 Claude 撰寫完整的單元測試。Claude
+                        自動包含遺漏的邊緣案例，原本需要大量心力的工作在數分鐘內完成，如同一個可審查的程式設計助手。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">機器學習概念解釋</h4>
+                    <p class="text-sm">沒有機器學習背景的團隊成員依賴 Claude 解釋模型特定功能和設定。原本需要一小時 Google 搜尋和閱讀文件的工作現在只需 10-20 分鐘，研究時間減少
+                        80%。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">跨語言程式碼轉換</h4>
+                    <p class="text-sm">在不同程式語言中測試功能時，他們解釋要測試的內容，Claude 以所需語言（如 Rust）撰寫邏輯，無需僅為測試目的而學習新語言。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <h4 class="font-semibold mb-2">指令回想與 Kubernetes 管理</h4>
+                    <p class="text-sm">不再記憶複雜的 Kubernetes 指令，他們詢問 Claude 正確語法，如「如何取得所有 pod 或部署狀態」，並獲得基礎設施工作所需的確切指令。</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
+                <h3 class="text-lg font-semibold mb-3">團隊影響</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>加速機器學習概念學習</strong>：研究時間減少 80% — 原本需要一小時 Google 搜尋的工作現在只需 10-20 分鐘。</li>
+                    <li><strong>更快的程式碼庫導覽</strong>：可在數秒內找到相關檔案並理解系統架構，而非詢問同事。</li>
+                    <li><strong>完整測試涵蓋</strong>：Claude 自動產生包含邊緣案例的單元測試，減輕心理負擔同時維持程式碼品質。</li>
+                    <li><strong>消除語言障礙</strong>：可在不熟悉的語言如 Rust 中實作功能，無需學習該語言。</li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-3">推論團隊最佳技巧</h3>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <h4 class="font-medium">先測試知識庫功能</h4>
+                        <p>嘗試提問各種問題，看 Claude 能否比 Google 搜尋更快回答。如果更快且更準確，它就是工作流程中有價值的節省時間工具。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">從程式碼產生開始</h4>
+                        <p>給 Claude 具體指示並請它撰寫邏輯，然後驗證正確性。這有助於在用於更複雜任務前建立對工具能力的信任。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">用於撰寫測試</h4>
+                        <p>讓 Claude 撰寫單元測試可顯著減輕日常開發工作的壓力。善用此功能維持程式碼品質，無需花時間手動思考所有測試案例。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fine-tuning -->
+        <section id="finetuning" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Claude Code 用於微調</h2>
+            <h3 class="text-xl font-semibold mb-3">團隊概述</h3>
+            <p class="mb-6">微調團隊透過配對的輸入輸出範例訓練模型，使其在特定任務上表現更好。</p>
+
+            <h3 class="text-xl font-semibold mb-4">主要使用情境</h3>
+            <div class="space-y-6 mb-8">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">管理實驗追蹤</h4>
+                    <p class="text-sm">他們使用 Claude Code 檢查訓練運行、迭代程式碼、管理多個實驗的大量日誌。團隊處理多個活躍運行，Claude Code
+                        可透過讀取日誌檔案快速導覽訓練儀表板，按需識別特定運行特徵或錯誤。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">建構實驗工具</h4>
+                    <p class="text-sm">團隊成員需要專門的實驗工具（如手動審查範例的「氛圍檢查」介面）時，Claude Code
+                        可在單一工作階段中協助建構這些工具。非開發人員可為特定工作流程建立自己的腳本，存取過去需要工程支援的能力。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">程式碼審查與除錯</h4>
+                    <p class="text-sm">Claude Code 協助捕捉資料集準備腳本和實驗配置中的問題。團隊使用它除錯分散式訓練挑戰，並在開始長時間訓練作業前驗證資料管線正確運作。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">指標分析與視覺化</h4>
+                    <p class="text-sm">他們使用 Claude Code
+                        產生效能指標並建立比較圖表。對於研究報告，他們可快速產生顯示模型效能差異的長條圖，無需深入了解資料視覺化函式庫即可快速將效能視覺化。</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
+                <h3 class="text-lg font-semibold mb-3">團隊影響</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>更快的實驗迭代</strong>：可在單一工作階段中建構自訂工具，而非等待工程支援。</li>
+                    <li><strong>縮短除錯時間</strong>：在昂貴的訓練運行前捕捉資料管線問題。</li>
+                    <li><strong>工具民主化</strong>：非開發人員可建立自己的工作流程和分析腳本。</li>
+                    <li><strong>加速報告準備</strong>：快速產生效能視覺化和指標。</li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-3">微調團隊最佳技巧</h3>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <h4 class="font-medium">建立特定實驗工作區</h4>
+                        <p>為不同實驗保持獨立的 Claude Code 工作階段，允許特定背景的協助，避免專案間混淆。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">長時間運行前驗證</h4>
+                        <p>在開始多小時訓練運行前，務必使用 Claude Code 驗證資料管線和配置，避免代價高昂的錯誤。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">用於臨時分析</h4>
+                        <p>需要從實驗日誌或指標快速獲得見解時，描述您尋找的內容，讓 Claude Code 解析並摘要相關資訊。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RL Engineering -->
+        <section id="rl" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Claude Code 用於強化學習工程</h2>
+            <h3 class="text-xl font-semibold mb-3">團隊概述</h3>
+            <p class="mb-6">強化學習 (RL) 工程團隊致力於 RLHF（人類回饋強化學習）及相關訓練系統。</p>
+
+            <h3 class="text-xl font-semibold mb-4">主要使用情境</h3>
+            <div class="space-y-6 mb-8">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">狀態檢視工具</h4>
+                    <p class="text-sm">他們使用 Claude Code 追蹤訓練作業中的問題。面對包含模型狀態的日誌時，Claude Code 可快速解析並識別問題，減少手動檢查訓練配置和輸出的時間。
+                    </p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">多程序協調</h4>
+                    <p class="text-sm">RL 系統需要跨多個程序協調。Claude Code 協助管理和除錯分散式系統，撰寫腳本監控程序健康並識別協調失敗。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">指標管線開發</h4>
+                    <p class="text-sm">他們使用 Claude Code 為實驗建構指標管線，自動化提取和視覺化訓練信號如獎勵曲線和損失值。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">測試框架開發</h4>
+                    <p class="text-sm">Claude Code 協助為 RL 系統元件撰寫測試框架，確保在生產部署前驗證訓練穩定性和預期行為。</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-green-50 dark:bg-green-950/20 rounded-xl border-l-4 border-green-500 mb-6">
+                <h3 class="text-lg font-semibold mb-3">團隊影響</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>更快的除錯週期</strong>：複雜分散式系統問題識別更快。</li>
+                    <li><strong>自動化監控</strong>：追蹤訓練健康的腳本無需手動監督。</li>
+                    <li><strong>改善測試涵蓋</strong>：更全面地測試 RL 元件。</li>
+                    <li><strong>簡化指標</strong>：自動化提取和視覺化訓練信號。</li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-3">強化學習工程團隊最佳技巧</h3>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <h4 class="font-medium">針對特定模式自訂 Claude.md 檔案</h4>
+                        <p>在 Claude.md 檔案中新增指示，防止 Claude 重複工具呼叫錯誤，例如告訴它「執行 pytest 不要 run，不要不必要地 cd — 直接使用正確路徑」。這顯著提升一致性。
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">使用檢查點密集工作流程</h4>
+                        <p>隨著 Claude 進行變更定期提交工作，以便在實驗失敗時輕鬆回滾。這使開發採用更具實驗性的方法而無風險。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">先嘗試一次性，再協作</h4>
+                        <p>給 Claude 一個快速提示，讓它先嘗試完整實作。如果成功（約三分之一的機率），您節省了大量時間。如果不成功，再切換到更協作、引導式的方法。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal -->
+        <section id="legal" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">Claude Code 用於法務</h2>
+            <h3 class="text-xl font-semibold mb-3">團隊概述</h3>
+            <p class="mb-6">法務團隊透過實驗發現 Claude Code 的潛力，以及學習 Anthropic
+                產品提供的渴望。此外，一位團隊成員有個人使用情境，與為家人建立無障礙工具及展示該技術對非開發人員力量的工作原型相關。</p>
+
+            <h3 class="text-xl font-semibold mb-4">主要使用情境</h3>
+            <div class="space-y-6 mb-8">
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">為家庭成員建立自訂無障礙解決方案</h4>
+                    <p class="text-sm">
+                        團隊成員為因醫療診斷而有說話困難的家庭成員建構溝通助手。僅一小時內，他們使用原生語音轉文字建立一個預測文字應用程式，建議回應並使用語音庫朗讀，解決語言治療師推薦的現有無障礙工具中的缺口。
+                    </p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">法務部門工作流程自動化</h4>
+                    <p class="text-sm">他們建立原型「電話樹」系統協助團隊成員聯繫 Anthropic 的適當律師，展示法務部門如何無需傳統開發資源即可為常見任務建構自訂工具。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">團隊協調工具</h4>
+                    <p class="text-sm">經理建構了 G Suite 應用程式，自動化每週團隊更新並追蹤跨產品的法律審查狀態，律師可透過簡單按鈕點擊快速標記需要審查的項目，而非管理試算表。</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border">
+                    <h4 class="font-semibold mb-2">快速原型驗證解決方案</h4>
+                    <p class="text-sm">他們使用 Claude Code 快速建構可向領域專家展示的功能原型（如向 UCSF 專家展示無障礙工具），在投入更多時間前驗證想法並識別現有解決方案。</p>
+                </div>
+            </div>
+
+            <div class="p-6 bg-slate-50 dark:bg-slate-900 rounded-xl border mb-6">
+                <h3 class="text-lg font-semibold mb-3">工作風格與影響</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><strong>在 Claude.ai 規劃，在 Claude Code 建構</strong>：他們採用兩步驟流程，先在 Claude.ai 腦力激盪和規劃，再移至 Claude Code
+                        實作。</li>
+                    <li><strong>視覺優先方法</strong>：他們經常使用截圖向 Claude Code 展示介面的期望外觀，然後根據視覺回饋迭代。</li>
+                    <li><strong>原型驅動創新</strong>：他們強調克服分享「傻」或「玩具」原型的恐懼，因為這些展示可激勵他人看到他們未曾考慮的可能性。</li>
+                </ul>
+            </div>
+
+            <div class="p-6 bg-blue-50 dark:bg-blue-950/20 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-3">法務部門最佳技巧</h3>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <h4 class="font-medium">先在 Claude.ai 充分規劃</h4>
+                        <p>使用 Claude 的對話介面在移至 Claude Code 前充分發展整個想法。然後請 Claude 將所有內容摘要為逐步實作提示。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">漸進且視覺化地工作</h4>
+                        <p>請 Claude Code 放慢速度一次實作一個步驟，以便可以複製貼上而不會不知所措。大量使用截圖展示介面的期望外觀。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">儘管不完美也分享原型</h4>
+                        <p>克服隱藏「玩具」專案或未完成工作的衝動 — 分享原型幫助他人看到可能性，並激發通常不互動的部門之間的創新。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section id="summary" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 pb-4 border-b">摘要：跨團隊關鍵主題</h2>
+
+            <div class="p-6 bg-white dark:bg-slate-900 rounded-xl border mb-8">
+                <h3 class="text-xl font-semibold mb-4">常見模式</h3>
+                <ol class="space-y-2 text-sm list-decimal list-inside">
+                    <li><strong>測試驅動開發</strong>：多個團隊強調先撰寫測試</li>
+                    <li><strong>檢查點工作流程</strong>：定期提交使安全實驗成為可能</li>
+                    <li><strong>自訂配置</strong>：團隊針對特定需求自訂 Claude.md</li>
+                    <li><strong>文件綜合</strong>：使用 Claude 建立運行手冊和指南</li>
+                    <li><strong>原型分享</strong>：克服分享早期階段工作的不情願</li>
+                </ol>
+            </div>
+
+            <div class="overflow-x-auto mb-8">
+                <h3 class="text-xl font-semibold mb-4">時間節省</h3>
+                <table class="w-full border-collapse bg-white dark:bg-slate-900 rounded-xl overflow-hidden">
+                    <thead class="bg-slate-100 dark:bg-slate-800">
+                        <tr>
+                            <th class="py-3 px-4 text-left">團隊</th>
+                            <th class="py-3 px-4 text-left">任務</th>
+                            <th class="py-3 px-4 text-left">時間縮短</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b dark:border-slate-800">
+                            <td class="py-3 px-4">安全工程</td>
+                            <td class="py-3 px-4">基礎設施除錯</td>
+                            <td class="py-3 px-4 font-semibold text-green-600">10-15 分鐘 → 5 分鐘</td>
+                        </tr>
+                        <tr class="border-b dark:border-slate-800">
+                            <td class="py-3 px-4">推論</td>
+                            <td class="py-3 px-4">機器學習概念研究</td>
+                            <td class="py-3 px-4 font-semibold text-green-600">1 小時 → 10-20 分鐘 (80%)</td>
+                        </tr>
+                        <tr class="border-b dark:border-slate-800">
+                            <td class="py-3 px-4">強化學習工程</td>
+                            <td class="py-3 px-4">實驗驗證</td>
+                            <td class="py-3 px-4 font-semibold text-green-600">數小時 → 數分鐘</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">法務</td>
+                            <td class="py-3 px-4">原型建構</td>
+                            <td class="py-3 px-4 font-semibold text-green-600">數天 → 數小時</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="p-6 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border-l-4 border-indigo-500">
+                <h3 class="text-lg font-semibold mb-3">通用技巧</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>在協作引導前先嘗試一次性</li>
+                    <li>使用具體詳細的提示</li>
+                    <li>善用 Claude 於程式設計以外的文件撰寫</li>
+                    <li>在依賴輸出前透過驗證建立信任</li>
+                    <li>為重複工作流程建立自訂指令</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 border-t text-center text-sm text-slate-500">
+            <p>© 2026 Anthropic | 文件版本 2.0 | Linear Style Design</p>
+            <p class="mt-2">文件產生自：How-Anthropic-teams-use-Claude-Code_v2.pdf</p>
+        </footer>
+    </main>
+</body>
+
+</html>
