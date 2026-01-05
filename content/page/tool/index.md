@@ -20,3 +20,9 @@ menu:
 透過這個編輯器可以把文章版面變的漂亮又專業。
 
 [Markdown格式編輯器](https://editor.huasheng.ai/)
+
+### AI 如是說日報 - 多語言新聞摘要
+
+每日精選中文、英文、日文新聞，由 Google Gemini AI 智能整理。支援深色/淺色模式切換，響應式設計。
+
+[AI 如是說日報](/news_feed/)
