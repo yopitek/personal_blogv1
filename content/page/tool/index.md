@@ -21,8 +21,8 @@ menu:
 
 [Markdown格式編輯器](https://editor.huasheng.ai/)
 
-### AI 如是說日報 - 多語言新聞摘要
+### 每日電子報
 
-每日精選中文、英文、日文新聞，由 Google Gemini AI 智能整理。支援深色/淺色模式切換，響應式設計。
+每日精選中文、英文、日文新聞，每天早上上九點準時更新最新資訊。
 
-[AI 如是說日報](/news_feed/)
+[每日電子報](/news_feed/)
