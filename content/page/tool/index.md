@@ -25,4 +25,5 @@ menu:
 
 每日精選中文、英文、日文新聞，每天早上上九點準時更新最新資訊。
 
-[每日電子報](/news_feed/)
+[每日電子報](https://zennote.app/news_feed/)
+
