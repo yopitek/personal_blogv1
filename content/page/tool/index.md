@@ -1,7 +1,7 @@
 ---
 title: "線上工具"
 description: "Online Tools"
-date: 2025-11-29
+date: 2026-01-08
 slug: "tool"
 menu:
     main:
@@ -26,4 +26,17 @@ menu:
 每日精選中文、英文、日文新聞摘要，每天早上上九點準時更新最新資訊。
 
 [每日電子新聞報](https://zennote.app/news_feed/)
+
+
+### Instagram/Facebook/X 卡片編輯工具 
+
+這一款線上工具可以快速新增 
+Instagram/Facebook/X 社群媒體 貼文公告
+也很適合用來放在Line群組中傳達事項使用
+
+[Instagram/Facebook/X 卡片編輯工具 ](https://www.zennote.app/ig_card_tool/)
+
+
+
+
 
