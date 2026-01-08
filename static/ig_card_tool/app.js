@@ -55,7 +55,8 @@ const fontOptions = [
     { family: "'Noto Serif JP', serif", label: "Noto Serif JP" },
     { family: "'M PLUS 2', sans-serif", label: "M PLUS 2" },
     { family: "'Zen Maru Gothic', sans-serif", label: "Zen Maru Gothic" },
-    { family: "'Klee One', cursive", label: "Klee One" }
+    { family: "'Klee One', cursive", label: "Klee One" },
+    { family: "'LXGW WenKai TC', serif", label: "霞鶩文楷 TC" }
 ];
 
 // ============================================
