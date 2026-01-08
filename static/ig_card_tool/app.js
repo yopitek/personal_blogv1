@@ -56,7 +56,6 @@ const fontOptions = [
     { family: "'M PLUS 2', sans-serif", label: "M PLUS 2" },
     { family: "'Zen Maru Gothic', sans-serif", label: "Zen Maru Gothic" },
     { family: "'Klee One', cursive", label: "Klee One" },
-    { family: "'LXGW WenKai TC', serif", label: "霞鶩文楷 TC" }
 ];
 
 // ============================================
@@ -83,6 +82,7 @@ const paddingValue = $("#padding-value");
 
 const alignButtons = Array.from(document.querySelectorAll(".align-btn[data-align]"));
 const exportBtn = $("#export-btn");
+const exportBtnTransparent = $("#export-btn-transparent");
 
 // ============================================
 // 5. UTILITIES
@@ -209,9 +209,26 @@ function buildFontSelect() {
 // ============================================
 // 8. EXPORT PNG
 // ============================================
-async function exportPNG() {
+async function exportPNG(transparent = false) {
+    const btnText = transparent ? "Exporting..." : "Exporting...";
     exportBtn.disabled = true;
-    exportBtn.textContent = "Exporting...";
+    if (exportBtnTransparent) exportBtnTransparent.disabled = true;
+
+    const activeBtn = transparent ? exportBtnTransparent : exportBtn;
+    if (activeBtn) activeBtn.textContent = btnText;
+
+    // Store original styles if exporting transparent
+    let originalBg, originalShadow, originalBorder, originalRadius;
+    if (transparent) {
+        originalBg = previewCard.style.background;
+        originalShadow = previewCard.style.boxShadow;
+        originalBorder = previewCard.style.border;
+        originalRadius = previewCard.style.borderRadius;
+
+        previewCard.style.background = "transparent";
+        previewCard.style.boxShadow = "none";
+        previewCard.style.border = "none";
+    }
 
     try {
         // Wait for fonts to load (critical for mobile)
@@ -238,7 +255,9 @@ async function exportPNG() {
 
         // Improved download for mobile and desktop
         const link = document.createElement("a");
-        const fileName = "text-card-" + Date.now() + ".png";
+        const fileName = transparent
+            ? "text-card-transparent-" + Date.now() + ".png"
+            : "text-card-" + Date.now() + ".png";
         link.download = fileName;
         link.href = dataUrl;
 
@@ -250,16 +269,25 @@ async function exportPNG() {
         document.body.removeChild(link);
 
         // Success feedback
-        exportBtn.textContent = "✓ Downloaded!";
-        setTimeout(() => {
-            exportBtn.textContent = "Download PNG";
-        }, 2000);
+        if (activeBtn) {
+            activeBtn.textContent = "✓ Downloaded!";
+            setTimeout(() => {
+                activeBtn.textContent = transparent ? "Download PNG（去背）" : "Download PNG";
+            }, 2000);
+        }
 
     } catch (error) {
         console.error("Export failed:", error);
         alert("Export failed: " + error.message + "\n\nPlease try again or take a screenshot instead.");
     } finally {
+        // Restore original styles if transparent export
+        if (transparent) {
+            previewCard.style.background = originalBg;
+            previewCard.style.boxShadow = originalShadow;
+            previewCard.style.border = originalBorder;
+        }
         exportBtn.disabled = false;
+        if (exportBtnTransparent) exportBtnTransparent.disabled = false;
     }
 }
 
@@ -292,7 +320,10 @@ function bindEvents() {
         });
     }
 
-    exportBtn.addEventListener("click", exportPNG);
+    exportBtn.addEventListener("click", () => exportPNG(false));
+    if (exportBtnTransparent) {
+        exportBtnTransparent.addEventListener("click", () => exportPNG(true));
+    }
 }
 
 // ============================================
