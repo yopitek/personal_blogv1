@@ -1,3 +1,4 @@
+
 ---
 title: "線上工具"
 description: "Online Tools"
@@ -35,6 +36,15 @@ Instagram/Facebook/X 社群媒體 貼文公告
 也很適合用來放在Line群組中傳達事項使用
 
 [Instagram/Facebook/X 卡片編輯工具 ](https://www.zennote.app/ig_card_tool/)
+
+
+### 蝦皮商城/蝦皮賣場/露天拍賣/Yahoo拍賣/電商 AI文案成生工具
+
+只要貼上商品規格，即可透過AI幫您自動生成文情並茂的電商銷售文案
+支援六種不同商品情境風格
+
+[蝦皮商城/蝦皮賣場/露天拍賣/Yahoo拍賣/電商 AI文案成生工具]
+https://shopee-writer.vercel.app/
 
 
 
