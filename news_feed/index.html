@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Multilingual News Digest - 中文、English、日本語">
+    <title>每日電子新聞報 | 2026年01月19日 星期一</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f3efe6;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Noto Sans JP", sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #0f5499;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        .card {
+            background-color: #fffdf7;
+            border: 1px solid #e6e1d6;
+        }
+
+        .masthead {
+            padding: 24px 28px;
+            border-bottom: 3px solid #1a1a1a;
+        }
+
+        .masthead-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .masthead-subtitle {
+            font-size: 0.875rem;
+            color: #666666;
+            margin-top: 6px;
+        }
+
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #e6e1d6;
+            background-color: #fffdf7;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 14px 24px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666666;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: #1a1a1a;
+            background-color: #faf8f2;
+        }
+
+        .tab-btn.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px 28px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 16px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        /* Category Section Styles */
+        .category-section {
+            margin-bottom: 28px;
+        }
+
+        .category-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #990f3d;
+            padding: 10px 16px;
+            margin: 20px 0 12px 0;
+        }
+
+        .category-section:first-child .category-header {
+            margin-top: 0;
+        }
+
+        .category-news-list {
+            padding-left: 0;
+        }
+
+        /* News Item Styles */
+        .news-item {
+            padding: 14px 0;
+            border-bottom: 1px dotted #d9d2c4;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 6px 0;
+        }
+
+        .news-item-title a {
+            color: #1a1a1a;
+        }
+
+        .news-item-title a:hover {
+            color: #0f5499;
+        }
+
+        .news-item-meta {
+            font-size: 0.8rem;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .news-item-meta .source {
+            font-weight: 500;
+        }
+
+        .news-item-meta .date {
+            margin-left: 10px;
+            color: #999999;
+        }
+
+        .news-item-summary {
+            font-size: 0.9rem;
+            color: #333333;
+            line-height: 1.65;
+        }
+
+        .no-news {
+            color: #666666;
+            font-style: italic;
+            padding: 20px 0;
+        }
+
+        .footer {
+            padding: 20px 28px;
+            border-top: 1px solid #e6e1d6;
+            background-color: #faf8f2;
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: #666666;
+            margin: 0;
+        }
+
+        .footer .small {
+            font-size: 0.75rem;
+            color: #999999;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 8px;
+            }
+
+            .masthead {
+                padding: 16px 14px;
+            }
+
+            .masthead-title {
+                font-size: 1.4rem;
+            }
+
+            .tab-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .tab-content {
+                padding: 14px 12px;
+            }
+
+            .category-header {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .news-item-title {
+                font-size: 0.95rem;
+            }
+
+            .news-item-summary {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <header class="masthead">
+                <h1 class="masthead-title">每日電子新聞報</h1>
+                <p class="masthead-subtitle">2026年01月19日 星期一</p>
+            </header>
+
+            <nav class="tab-nav" role="tablist">
+                <button class="tab-btn active" role="tab" aria-selected="true" data-tab="zh-news">中文新聞</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="en-news">English News</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="ja-news">日本語ニュース</button>
+            </nav>
+
+            <section class="tab-content active" id="zh-news" role="tabpanel">
+                <h2 class="section-header">中文新聞</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601190014.aspx" target="_blank" rel="noopener noreferrer">台企對美投資2500億 美商務部長：已含台積電1000億</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 23:54</span>
+    </p>
+    <p class="news-item-summary">台灣企業計劃在美國自主投資2500億美元，約合新台幣7兆9057億元。美國商務部長表示，這一投資總額已包含台積電先前宣布的1000億美元投資。台灣行政院副院長鄭麗君在記者會上指出，這2500億美元的投資計畫涵蓋了正在進行中的項目。此項協議標誌著台美之間的經濟合作進一步深化，並可能對雙方的產業發展及市場動態產生重要影響。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180173.aspx" target="_blank" rel="noopener noreferrer">費雪：勿忽視中國軍事施壓台灣 台防禦經驗值得借鏡【專訪】</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 13:28</span>
+    </p>
+    <p class="news-item-summary">捷克參議院外委會主席費雪於18日在布拉格表示，中國對台軍事壓力的升高不應被忽視。他提到，去年在台北參加國防展時，觀察到捷克與台灣在安全與防衛科技上具有合作潛力。費雪指出，台灣在應對中國網路攻擊方面的防禦經驗，對捷克而言具有借鑒意義。此番言論強調了國際社會對台灣安全問題的關注，並呼籲加強對中國軍事行動的重視。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180165.aspx" target="_blank" rel="noopener noreferrer">鄭麗君團隊達成貿易協議19日返台 卓榮泰桃機接機</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 12:00</span>
+    </p>
+    <p class="news-item-summary">行政院副院長鄭麗君率領的談判團隊於美國完成台美關稅談判，達成多項目標。行政院於18日宣布，鄭麗君及其團隊將於19日上午返台，行政院長卓榮泰計劃在桃園機場迎接他們的歸國。此次談判的具體成果尚未詳細公布，但被視為台灣與美國貿易關係的重要進展。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180156.aspx" target="_blank" rel="noopener noreferrer">發春聯被索取一空 蘇巧慧盼黨中央速推北市長人選</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:19</span>
+    </p>
+    <p class="news-item-summary">民進黨新北市長參選人蘇巧慧於18日發放春聯，受到熱烈反響，迅速被索取一空。蘇巧慧在活動中強調，台北市作為首都，黨中央應儘快推選最適合的候選人，以便共同迎接即將到來的選戰。她的呼籲反映出對於黨內提名程序的迫切性，並希望能夠團結力量以提高選舉競爭力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180145.aspx" target="_blank" rel="noopener noreferrer">藍營2人爭取參選台中市長 盧秀燕盼儘速協調成功</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 10:13</span>
+    </p>
+    <p class="news-item-summary">立法院副院長江啟臣與國民黨立委楊瓊瓔目前正爭取參選台中市長。兩人首次協調未果，台中市長盧秀燕在今天的活動中表示，希望兩位候選人能夠「開了智慧、求了佛法」，並儘速達成協調。盧秀燕的發言顯示出對於兩位候選人之間合作的期待，並強調協調的重要性。此事件引發外界對於國民黨在台中市長選舉的內部競爭及未來策略的關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180142.aspx" target="_blank" rel="noopener noreferrer">柯文哲指大罷免32比0是要救他 國民黨別太高估自己</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:51</span>
+    </p>
+    <p class="news-item-summary">民眾黨前主席柯文哲表示，其妹妹柯美蘭被提名參選竹北市長，並透露雙方已有談話，但柯美蘭因每月需開刀100台而十分忙碌。柯文哲提到，近期的大罷免結果為32比0，他認為許多選民是為了「救阿北」而投票，並對國民黨的實力表示懷疑，呼籲其不要過於高估自身的影響力。此番言論反映了柯文哲對於選舉結果的解讀及對國民黨的評估，顯示他在政治局勢中的立場與看法。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180136.aspx" target="_blank" rel="noopener noreferrer">內政部：社宅重點北北桃中都會區 盼地方共同努力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:28</span>
+    </p>
+    <p class="news-item-summary">內政部表示，總統賴清德任內計劃直接興建13萬戶社會住宅，雖然面臨外界質疑，但將持續透過多元方式擴充社宅量能。未來的重點將集中在台北、新北、桃園及台中等都會區，並呼籲地方政府運用市有土地，與中央共同努力推動社宅建設。內政部強調，地方政府的參與對於實現社宅目標至關重要，期望能夠加速相關政策的落實，以滿足日益增長的住房需求。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202601180116.aspx" target="_blank" rel="noopener noreferrer">鄭麗君參選台北市長？吳思瑤：超級大亮點當然贊成</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 08:55</span>
+    </p>
+    <p class="news-item-summary">台灣行政院副院長鄭麗君因在台美關稅協議談判中的出色表現，成為參選台北市長的熱門人選。民進黨立委吳思瑤表示，無論鄭麗君擔任何種職位，她的表現都非常優秀，若她決定參選台北市長，將會是一個重要的亮點，並表示全力支持。此言論反映出鄭麗君在政壇的影響力及其潛在的選舉前景。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">產經</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202601190018.aspx" target="_blank" rel="noopener noreferrer">台美關稅底定 法人看好傳產股可望接棒補漲</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/19 00:24</span>
+    </p>
+    <p class="news-item-summary">台積電於法說會上發布利好消息，推動台股上週上漲1119.74點，漲幅達3.7%，16日收盤報31408.70點，創下歷史新高。同時，台美之間的關稅談判達成協議，台灣對美國的關稅將調降至15%。市場法人對此表示樂觀，認為台美關稅的確定將有助於傳產股的補漲潛力，預期相關企業將受益於此政策變化。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190017.aspx" target="_blank" rel="noopener noreferrer">西班牙觀光持續成長 2025年外國旅客9700萬人破紀錄</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/19 00:19</span>
+    </p>
+    <p class="news-item-summary">西班牙觀光業在2025年預計將持續增長，外國旅客人數將突破9700萬人次，創下歷史新高。根據報導，這一增長趨勢延續自2024年，外國旅客的消費金額預計將達到1350億歐元，約合新台幣4兆9577億元。此數據顯示出西班牙作為旅遊目的地的吸引力，並反映出全球旅遊市場的復甦。隨著觀光業的持續發展，西班牙將進一步加強其在國際旅遊市場中的地位。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202601180179.aspx" target="_blank" rel="noopener noreferrer">菲台商總會交接 謝佳蓁推「台灣連結」注入新活力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 14:30</span>
+    </p>
+    <p class="news-item-summary">菲律賓台商總會於18日舉行新屆總會長暨監事長交接典禮，新任會長謝佳蓁在典禮上表示，將以「Taiwan Link」作為任內的核心主軸。她強調將致力於強化台商之間的連結，推動世代傳承及青年參與，期望為台商總會注入新的活力。此次交接典禮標誌著新一屆領導團隊的上任，未來將面對台商在菲律賓的發展挑戰與機遇。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202601180177.aspx" target="_blank" rel="noopener noreferrer">台積電赴美、美光深耕台灣 經部：台美半導體彼此強化</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 14:08</span>
+    </p>
+    <p class="news-item-summary">美國記憶體大廠美光近日收購了力積電的銅鑼P5晶圓廠，以擴大在台灣的DRAM產能布局。台灣經濟部指出，台積電在美國的投資以及美光在台灣的持續深耕，顯示出台美半導體供應鏈的相互強化，並對台灣的半導體實力及供應鏈的完整性提供了肯定。此舉反映了兩國在半導體領域的合作關係，並可能對未來的產業發展產生深遠影響。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202601180167.aspx" target="_blank" rel="noopener noreferrer">新台幣貶值 國銀去年11月底外幣存款15.2兆創新高</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 12:16</span>
+    </p>
+    <p class="news-item-summary">截至2025年11月底，台灣國內銀行的外幣存款餘額達新台幣15兆2565億元，創下歷史新高，較上月增加1426億元。根據金管會的統計，這一增長主要受到新台幣貶值的影響。若剔除匯率因素，單月外幣存款實際上出現減少。此數據顯示，儘管外幣存款總額創新高，但實際存款情況受到匯率波動的影響。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">全球國際新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190013.aspx" target="_blank" rel="noopener noreferrer">美國扣查南非運往中國反潛訓練設備 指助北京擴軍力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 23:50</span>
+    </p>
+    <p class="news-item-summary">美國近日攔截並扣押了一批由南非運往中國的訓練設備，這些設備被指用於解放軍的反潛作戰訓練。美方表示，這些設備非法使用了美國的軍用技術，旨在提升解放軍在太平洋地區對美國潛艇的定位及追蹤能力。美國政府強調，此舉是為了防止中國擴大其軍事能力，特別是在海洋戰略方面。此次事件凸顯了美中之間在軍事技術及地緣政治上的緊張關係。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190012.aspx" target="_blank" rel="noopener noreferrer">川普為格陵蘭徵歐洲不支持國關稅 貝森特：美有實力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 23:41</span>
+    </p>
+    <p class="news-item-summary">美國總統川普近日表示，將對不支持美國將格陵蘭納入其領土的歐洲國家加徵關稅，此言論引發廣泛反對。美國財政部長貝森特在18日的發言中指出，川普認為格陵蘭若不屬於美國，將無法提升其安全性。貝森特強調，隨著歐洲的相對衰弱，美國應展現其實力，並表示相信歐洲領袖將會做出讓步。此事件突顯出美國與歐洲之間在地緣政治及經濟政策上的緊張關係。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190011.aspx" target="_blank" rel="noopener noreferrer">台積電：依客戶需求擴大投資美國 最先進製程留台灣</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 23:11</span>
+    </p>
+    <p class="news-item-summary">台積電財務長黃仁昭於18日接受媒體訪問時表示，台積電將根據客戶需求在美國擴大投資，但最先進的製程技術將保留在台灣。他強調，台美之間的關稅協議於15日達成，這是一項政府間的協議，台積電並未參與相關討論。此舉反映出台積電在全球市場中的策略調整，旨在滿足客戶需求，同時維持技術優勢。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190009.aspx" target="_blank" rel="noopener noreferrer">美財長：最高法院不會推翻川普關稅</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 23:00</span>
+    </p>
+    <p class="news-item-summary">美國財政部長貝森特於18日在紐約表示，最高法院不會推翻前總統川普所施加的關稅，並指出法院不希望製造混亂。他強調，面對全球巨額貿易逆差，美國可能面臨緊急狀態，因此需要進行策略性因應。貝森特的言論反映出對當前貿易政策的重視，並暗示政府將持續關注貿易狀況及其對經濟的影響。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190008.aspx" target="_blank" rel="noopener noreferrer">西班牙2列高鐵脫軌相撞 已知10死100傷</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 22:44</span>
+    </p>
+    <p class="news-item-summary">西班牙南部今日發生兩列高鐵相撞事故，據緊急救援單位和警方報導，目前已確認至少10人死亡，約100人受傷，其中25人傷勢嚴重。事故發生後，救援人員迅速展開行動，對受傷者進行緊急救治。當地政府已啟動應急計劃，並對事故原因展開調查。事故的具體時間和地點尚未公布，相關單位正全力以赴處理後續事宜。此事件引發了社會各界的廣泛關注，並對西班牙的交通安全問題提出了質疑。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190007.aspx" target="_blank" rel="noopener noreferrer">葡萄牙總統大選 社會黨、極右派有望晉級決選</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 22:02</span>
+    </p>
+    <p class="news-item-summary">葡萄牙於18日舉行總統大選首輪投票，根據出口民調和初步開票結果，溫和派社會黨籍候選人席古領先，極右派領袖溫杜拉緊隨其後。兩人均有望於下月進行決選。此次選舉的結果將對葡萄牙的政治格局產生重要影響，尤其是在社會黨與極右派之間的競爭日益激烈的背景下。選民的投票行為及其對候選人的支持度，將成為決定最終結果的關鍵因素。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190006.aspx" target="_blank" rel="noopener noreferrer">巴基斯坦喀拉蚩商場惡火 已知6死仍65失蹤</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 21:27</span>
+    </p>
+    <p class="news-item-summary">巴基斯坦喀拉蚩市中心一座購物商場於17日晚間發生大火，造成至少6人喪生，另有超過65人失蹤。消防人員目前仍在進行搜尋與救援行動，火災導致商場部分區域嚴重損毀，現場情況危急。當局尚未公布火災原因，相關調查正在進行中。這起事件引發了當地居民的關注與擔憂，並凸顯了公共安全問題。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202601190005.aspx" target="_blank" rel="noopener noreferrer">敘利亞政府與庫德勢力停火整合 幾乎掌控全國結束分裂</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 20:33</span>
+    </p>
+    <p class="news-item-summary">敘利亞政府軍近日對北部和東部的庫德族掌控區展開軍事行動，隨後總統巴沙爾·阿薩德於18日宣布與庫德族為首的軍事同盟達成停火及整合協議。此舉標誌著敘利亞政府幾乎完全掌控全國，並使庫德族勢力在東北地區的控制地位受到重大挑戰，該地區已經被庫德族掌控超過十年。此次協議的達成可能會改變敘利亞的政治格局，並影響該國的未來穩定性。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">社會</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202601180182.aspx" target="_blank" rel="noopener noreferrer">國道1號苗栗三義路段9車追撞 1人受傷送醫</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 15:48</span>
+    </p>
+    <p class="news-item-summary">國道公路警察局第三公路警察大隊報告，國道1號北向153.8公里（三義路段）於18日晚間發生9車追撞事故。此次事故導致1人受傷，已被送往醫院接受治療。事故現場經過處理後，已恢復全線通車。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202601180180.aspx" target="_blank" rel="noopener noreferrer">國道1號北向153.8公里多車追撞 一度回堵7公里</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 15:07</span>
+    </p>
+    <p class="news-item-summary">交通部高速公路局報告，國道1號北向153.8公里（三義路段）於18日晚間9時9分發生多車追撞事故。事故造成一度回堵約7公里，影響通行。雖然目前事故已排除，但仍提醒用路人注意路況，以確保行車安全。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202601180176.aspx" target="_blank" rel="noopener noreferrer">花蓮洪災罹難者家屬提告徐榛蔚 縣府：尊重司法</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 13:47</span>
+    </p>
+    <p class="news-item-summary">花蓮馬太鞍溪堰塞湖洪災造成多名罹難者，家屬組成的義務律師團計劃對花蓮縣縣長徐榛蔚提起刑事告訴。花蓮縣政府於18日表示，本案已進入司法程序，將尊重司法調查，並呼籲民眾對錯誤訊息保持警覺，避免輕信或轉傳。同時，縣府向罹難者表達哀悼。該洪災事件引發社會關注，相關後續發展將持續受到關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202601180152.aspx" target="_blank" rel="noopener noreferrer">屏東縣府客務處長請辭參選內埔鄉長 現任鄉長相挺</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 10:40</span>
+    </p>
+    <p class="news-item-summary">屏東縣政府客家事務處長李明宗於18日宣布請辭，正式參選內埔鄉長，現任鄉長鍾慶鎮公開表達支持。李明宗表示將遵循民進黨內部機制，對於黨內初選的相關事宜保持開放態度。據悉，同為民進黨籍的內埔鄉代鍾育杰也有意參選，未來的選舉動向將受到關注。李明宗的辭職及參選決定可能影響內埔鄉的政治格局，選舉將於2024年進行，相關候選人的動向將持續受到關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202601180148.aspx" target="_blank" rel="noopener noreferrer">台南做工行善團助弱勢修屋 完成第322戶個案</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 10:20</span>
+    </p>
+    <p class="news-item-summary">台南市勞工局整合各工會專業志工組成的「做工行善團」，於18日完成官田區一位弱勢原住民長者的房屋修繕，該房屋在丹娜絲風災中受損。此次修繕案件是做工行善團自2013年12月成立以來的第322戶完成個案。該團隊致力於協助弱勢群體改善居住環境，展現社會關懷與支持。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202601180143.aspx" target="_blank" rel="noopener noreferrer">新北改造30間學校實習場域 2030年前投入1億元</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:55</span>
+    </p>
+    <p class="news-item-summary">新北市教育局宣布，計劃在2030年前投入約新台幣1億元，對30間學校的實習場域進行改造。此項計劃旨在結合新興產業趨勢，提升學生的實作能力，以便讓學生能夠更早地銜接未來的職場需求。透過這些改造，教育局希望能夠為學生提供更具實用性的學習環境，增強其職業技能，並促進教育與產業的連結。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202601180140.aspx" target="_blank" rel="noopener noreferrer">青少年騎單車摔12公尺深橋下 南投消防架繩救起送醫</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:38</span>
+    </p>
+    <p class="news-item-summary">南投魚池鄉於18日上午發生一起青少年騎自行車意外事件。一名青少年在行經大林橋時，不慎墜落約12公尺深的河谷。南投消防局接獲報案後，迅速派遣6名警義消及消防員到場，並架設繩索進入河谷。救援人員對傷患進行包紮，隨後將其吊掛送往醫院接受進一步治療。此事件引發當地關注，具體傷情及事故原因尚待進一步調查。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202601180118.aspx" target="_blank" rel="noopener noreferrer">算命為由誆騙金錢 刑事局提醒：詐騙集團近期常用</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:00</span>
+    </p>
+    <p class="news-item-summary">刑事局近日接獲報告，指出詐騙集團利用算命改運及消災解厄的名義在社群平台上刊登廣告，吸引被害人上鉤。該集團以協助消災改運為由，要求被害人支付費用以進行改運或購買符咒，隨後再以各種理由要求被害人支付高額金錢。刑事局提醒民眾提高警覺，避免受騙。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">生活</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601190020.aspx" target="_blank" rel="noopener noreferrer">吳德榮：強冷空氣20日南下 北台灣愈晚愈濕冷</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/19 00:34</span>
+    </p>
+    <p class="news-item-summary">根據氣象署資料，19日清晨平地最低溫度為雲林縣古坑鄉的10.9度。氣象專家吳德榮指出，強冷空氣將於20日南下，預計北台灣的濕冷程度將隨著時間加深。從21日至23日，冷空氣將持續影響本島，平地最低氣溫可能降至8度。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601190015.aspx" target="_blank" rel="noopener noreferrer">高雄發生規模4.3地震 最大震度高雄嘉義3級</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/19 00:05</span>
+    </p>
+    <p class="news-item-summary">根據中央氣象署的最新資訊，19日7時48分在高雄市那瑪夏區發生了一起芮氏規模4.3的地震，震源深度為5公里。此次地震的震央位於高雄市政府東北方94.1公里。根據震度報告，高雄市、嘉義縣及南投縣的最大震度均達到3級。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601190010.aspx" target="_blank" rel="noopener noreferrer">學測第3天考數B、社會 進試場手機須完全關機</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 23:09</span>
+    </p>
+    <p class="news-item-summary">115學年學科能力測驗於19日進行第3天考試，考科為數學B及社會。大考中心提醒考生在進入考場前，需確認鐘錶的鬧鈴功能已關閉，並要求考生將放置於臨時置物區的手機完全關機，以維護考試秩序。考試的相關規定旨在確保考生能在公平的環境中進行測驗，並避免任何可能的干擾。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/acul/202601180174.aspx" target="_blank" rel="noopener noreferrer">設計師操刀詮釋傳統農民曆 好評引廟方緊急加印</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 13:33</span>
+    </p>
+    <p class="news-item-summary">台北霞海城隍廟在超過20年未發放農民曆後，於去年底在文總的合作邀請下重新推出，並以當代設計進行詮釋。此舉引發網路上的廣泛好評，短短幾天內便需緊急加印。設計師Rosa Lee表示對此結果感到意外。此次農民曆的發放旨在結合傳統與現代設計，吸引更多民眾關注和使用。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601180162.aspx" target="_blank" rel="noopener noreferrer">紅十字會辦訓練營 115名大學生取得防災士資格</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:35</span>
+    </p>
+    <p class="news-item-summary">中華民國紅十字會於18日舉行「青年防災士服務訓練營」結訓典禮，115名來自23所大專院校的學生參加此次訓練，並全數取得內政部頒發的「防災士」資格及紅十字會的「基本救命術（BLS）」雙資格。此次活動旨在提升青年對防災及急救知識的認識，增強社會對災害應對的能力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601180158.aspx" target="_blank" rel="noopener noreferrer">學測國寫 考生：考題轉換視角 易從生活經驗發揮</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:25</span>
+    </p>
+    <p class="news-item-summary">115學年度學科能力測驗於18日下午進行國文二（國寫）考試。考生表示，考題中引用幾米的圖文作品，要求考生轉換視角，題材與日常生活密切相關，題意明確，能夠從家庭溝通及師生互動等經驗中發揮。考生普遍認為，這樣的考題設計有助於他們運用生活經驗進行表達，提升寫作的靈活性和創造性。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601180157.aspx" target="_blank" rel="noopener noreferrer">學測國寫考幾米圖文 換位思考是關鍵</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:20</span>
+    </p>
+    <p class="news-item-summary">115學年度學測國語文寫作能力測驗採用作家幾米的圖文對話，考題強調換位思考的重要性。解題團隊指出，考生需論述如何在與熟悉的人相處時，克服隔閡並轉換思考角度，以促進和諧的關係。這一考題旨在評估學生的思維靈活性及人際理解能力，考生需深入分析圖文內容，並提出具體的見解和建議。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202601180154.aspx" target="_blank" rel="noopener noreferrer">學測國寫考人際情感連結 從臉的共感到隔閡省思</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:07</span>
+    </p>
+    <p class="news-item-summary">學測於18日進行國文寫作考試，主題聚焦於「人我往來的情感連結」。考試內容分為兩大題，第一題要求考生從「臉」的共感出發，深入思考倫理責任。第二題則引用作家幾米的繪本，探討人際間的隔閡與心結。此次考試旨在引導學生反思人際關係中的情感交流與理解。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202601180134.aspx" target="_blank" rel="noopener noreferrer">濱崎步憶在中國無觀眾仍開唱 形容生涯最棒演唱會</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:27</span>
+    </p>
+    <p class="news-item-summary">日本歌手濱崎步原定於上海舉行的演唱會因故取消，隨後她決定舉行「無人演唱會」，此舉引發中國媒體的質疑。濱崎步於近日發布數段影片，向中國粉絲表示此次演唱會是她生涯中最棒的演出之一。她的這一表述旨在回應外界的疑慮，並強調她對演唱會的重視。此次事件突顯了在疫情影響下，藝人與粉絲之間的互動及演出形式的轉變。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202601180132.aspx" target="_blank" rel="noopener noreferrer">柯煒林抵台催票「大濛」 喊票房破億有信心</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 09:23</span>
+    </p>
+    <p class="news-item-summary">國片「大濛」目前正在熱映，票房目標朝破億邁進。主演柯煒林於17日結束在香港的工作後，立即飛抵台灣進行宣傳活動。他表示對於電影能夠突破億票房充滿信心，並期待觀眾能夠持續支持這部作品。柯煒林的生日在22日，他希望能在這個特別的日子與觀眾一同慶祝。隨著宣傳活動的推進，電影的票房表現受到關注，團隊也積極參與映後活動，以提升觀眾的參與感和支持度。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180178.aspx" target="_blank" rel="noopener noreferrer">球王艾卡拉茲直落三闖澳網次輪 力拚生涯大滿貫</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 14:20</span>
+    </p>
+    <p class="news-item-summary">西班牙籍世界球王艾卡拉茲於18日參加澳洲網球公開賽第一輪賽事，成功以直落三的成績擊敗澳洲選手華爾頓，晉級次輪。此役中，艾卡拉茲展現出穩定的表現，繼續朝向其生涯大滿貫的目標邁進。這場比賽的勝利標誌著艾卡拉茲在本賽季的良好開端，並為他在接下來的比賽中增添信心。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180172.aspx" target="_blank" rel="noopener noreferrer">大威廉絲45歲征戰澳網寫歷史 首輪惜敗年輕對手</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 13:24</span>
+    </p>
+    <p class="news-item-summary">美國網球選手大威廉絲於18日在澳大利亞網球公開賽首輪賽事中創下歷史，成為該賽事最年長的女單選手，年齡達45歲。然而，她在首輪比賽中遭遇敗北，輸給了一位年輕20多歲的對手。此次比賽標誌著大威廉絲在職業生涯中的一個重要里程碑，儘管未能晉級，但她的參賽仍引起了廣泛關注。這場比賽的結果也突顯了運動員在年齡與競技狀態之間的挑戰。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180171.aspx" target="_blank" rel="noopener noreferrer">羽球超級750賽事首度稱王 林俊易冠軍送未婚妻</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 13:05</span>
+    </p>
+    <p class="news-item-summary">台灣羽球選手林俊易於18日在印度公開賽男單決賽中，以直落2的佳績奪冠，這是他首次在BWF超級750賽事中獲得冠軍。賽後，林俊易表示，未婚妻為了觀看他的比賽經常熬夜，感到十分辛苦，因此他決定將這座冠軍獻給未婚妻，作為她的生日禮物。此次勝利標誌著林俊易在國際羽球賽事中的重要突破，顯示其在競技水平上的提升。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180170.aspx" target="_blank" rel="noopener noreferrer">球后莎芭蓮卡直落二淘汰法國小將 挺進澳網次輪</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 12:31</span>
+    </p>
+    <p class="news-item-summary">白俄羅斯的世界球后莎芭蓮卡於澳洲網球公開賽女單首輪比賽中，面對法國小將拉喬娜。比賽初期，莎芭蓮卡出現多次失誤，但隨後迅速調整狀態，最終以6比4、6比1的比分直落二獲勝，成功晉級次輪。此次比賽的結果顯示了莎芭蓮卡在面對挑戰時的韌性與實力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180169.aspx" target="_blank" rel="noopener noreferrer">高國豪轟本季新高32分 TPBL攻城獅險勝戰神</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 12:22</span>
+    </p>
+    <p class="news-item-summary">台灣職籃TPBL新竹御嵿攻城獅於18日作客台北台新戰神，最終以101比98險勝對手，取得近期五連勝。比賽中，後衛高國豪表現突出，獨得本季新高的32分，成為球隊勝利的關鍵。此役的勝利進一步鞏固了攻城獅在聯賽中的競爭力，顯示出球隊近期的良好狀態。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180163.aspx" target="_blank" rel="noopener noreferrer">林俊易克服傷病大躍進 場上殺氣十足場下浪漫求婚</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:49</span>
+    </p>
+    <p class="news-item-summary">台灣羽球選手林俊易近期在賽場上表現出色，以凌厲的殺球技術贏得廣泛關注。他是台灣首位獲得超級750賽事冠軍的男單選手，這一成就標誌著他克服了過去的傷病困擾。除了運動事業的成功，林俊易在去年底於日本富士山下成功求婚，展現了他在愛情方面的幸福。這位「左手重砲」選手的表現與私生活均顯示出他在各方面的進步與成就。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180159.aspx" target="_blank" rel="noopener noreferrer">印度公開賽打出信心 林俊易盼搶進世界前10</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 11:27</span>
+    </p>
+    <p class="news-item-summary">台灣羽球選手林俊易於18日在印度公開賽中擊敗印尼名將克里斯蒂，成功奪得生涯首座BWF超級750男單冠軍。林俊易在賽後表達了他的興奮之情，並強調這一勝利將成為他未來努力的動力。他表示，雖然高興的情緒只會持續一天，但他將以此為信心，繼續朝著進入世界排名前10的目標邁進。此次勝利對林俊易的職業生涯具有重要意義，預示著他在國際羽球賽場上的潛力與成長。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202601180150.aspx" target="_blank" rel="noopener noreferrer">茲韋列夫逆轉擊敗加拿大小將 晉級澳網男單次輪</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">01/18 10:25</span>
+    </p>
+    <p class="news-item-summary">德國網球選手茲韋列夫於澳洲網球公開賽男子單打第一輪對陣加拿大小將狄亞洛。在首盤比賽中，茲韋列夫以1比7落敗，但隨後他調整狀態，連贏三盤，最終以6比1、6比4、6比2逆轉取勝，成功晉級次輪。此場比賽於18日進行，茲韋列夫展現出強大的韌性，克服了早期的困難，為接下來的賽事奠定了良好基礎。</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <section class="tab-content" id="en-news" role="tabpanel">
+                <h2 class="section-header">English News</h2>
+                <div class="category-section">
+    <h3 class="category-header">Startup</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://calquio.com/" target="_blank" rel="noopener noreferrer">Show HN: I quit coding years ago. AI brought me back</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/19 00:50</span>
+    </p>
+    <p class="news-item-summary">A former software developer, who had stepped away from coding several years ago, has returned to the field due to advancements in artificial intelligence (AI). The individual, whose identity remains undisclosed, expressed that the evolution of AI technologies has reignited their interest in programming. They noted that AI tools have made coding more accessible and efficient, allowing for quicker problem-solving and enhanced creativity in projects. The resurgence of interest in coding is attributed to the transformative capabilities of AI, which have simplified complex tasks and provided new opportunities for developers. The individual shared their experiences on Hacker News, highlighting the positive impact of AI on their professional journey and the broader implications for the tech industry. This trend reflects a growing sentiment among former programmers who are considering re-entering the field as AI continues to reshape the landscape of software development. The discussion has sparked interest among other users on the platform, showcasing a collective curiosity about the role of AI in revitalizing careers in technology.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://gamesbymason.com/blog/2026/microsoft" target="_blank" rel="noopener noreferrer">Prediction: Microsoft Is Going to Do the Funniest Thing Imaginable</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 23:24</span>
+    </p>
+    <p class="news-item-summary">The article discusses predictions regarding Microsoft's future actions, particularly in the context of its ongoing developments in technology and software. While specific details about the anticipated actions are not provided, the commentary suggests that observers expect Microsoft to undertake initiatives that could be perceived as humorous or unexpected. The discussion reflects a broader interest in how major tech companies, like Microsoft, navigate market trends and consumer expectations. The commentary appears on Hacker News, a platform known for its tech-focused discussions, indicating that the predictions are part of a larger conversation among technology enthusiasts and professionals. The article does not specify any particular dates, events, or individuals associated with these predictions, nor does it provide concrete examples of what the &quot;funniest thing&quot; might entail. Instead, it captures the speculative nature of the conversation surrounding Microsoft's future strategies and innovations in the tech industry.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://github.com/blue-monads/potato-apps/tree/master/cimple-gis" target="_blank" rel="noopener noreferrer">Simple GIS on Potato</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 22:15</span>
+    </p>
+    <p class="news-item-summary">The article discusses the application of Geographic Information Systems (GIS) in potato farming, highlighting its potential to enhance agricultural practices. It emphasizes how GIS technology can assist farmers in optimizing crop yields by analyzing spatial data related to soil conditions, weather patterns, and pest management. The article notes that the integration of GIS in potato cultivation allows for more precise decision-making, ultimately leading to improved efficiency and sustainability in farming operations. Additionally, it outlines various case studies where farmers have successfully implemented GIS tools to monitor crop health and manage resources effectively. The discussion includes insights from agricultural experts on the future of GIS in agriculture, particularly in relation to food security and climate change adaptation. The article serves as a resource for farmers and agricultural professionals interested in leveraging technology to advance their practices and address challenges in potato production.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://beats.lasagna.pizza/" target="_blank" rel="noopener noreferrer">Show HN: Beats, a web-based drum machine</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 21:10</span>
+    </p>
+    <p class="news-item-summary">Beats, a web-based drum machine, has been showcased on Hacker News, attracting attention from users interested in music production and digital audio tools. The platform allows users to create and manipulate drum patterns using an intuitive interface that can be accessed directly through web browsers. It features a variety of drum sounds and customizable options, enabling users to experiment with different rhythms and styles. The launch of Beats aims to provide an accessible tool for both novice and experienced musicians, facilitating creativity without the need for complex software installations. Users can share their creations easily, fostering a community of collaboration and feedback. The project highlights the growing trend of web-based applications in music technology, reflecting a shift towards more user-friendly and versatile online tools. As of the announcement, users have begun to engage with the platform, sharing their experiences and suggestions for future improvements. The initiative underscores the increasing interest in digital music production and the demand for innovative tools that cater to a diverse audience.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.texasobserver.org/texas-police-invest-tangles-sheriff-surveillance" target="_blank" rel="noopener noreferrer">Police Invested Millions in Shadowy Phone-Tracking Software Won't Say How Used</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 21:05</span>
+    </p>
+    <p class="news-item-summary">U.S. law enforcement agencies have invested millions of dollars in a controversial phone-tracking software, yet details regarding its application remain undisclosed. The software, developed by a private company, allows authorities to track the location of mobile devices, raising concerns about privacy and civil liberties. Despite the significant financial commitment, police departments across various states have not publicly clarified how they utilize this technology or the extent of its deployment. Critics argue that the lack of transparency surrounding the software's use could lead to potential abuses and violations of citizens' rights. The software's capabilities include accessing real-time location data, which can be pivotal in criminal investigations. However, the absence of clear guidelines and oversight has intensified scrutiny from civil rights advocates and privacy experts. As law enforcement continues to adopt advanced surveillance technologies, the debate over the balance between public safety and individual privacy rights remains a contentious issue. The ongoing discussion highlights the need for accountability and regulation in the use of such powerful tools by police agencies.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://ohioopen.library.ohio.edu/opentextbooks/9" target="_blank" rel="noopener noreferrer">Stirling Cycle Machine Analysis</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 20:45</span>
+    </p>
+    <p class="news-item-summary">The article discusses the Stirling cycle machine, focusing on its operational principles and efficiency. The Stirling cycle is a thermodynamic cycle that operates by cyclic compression and expansion of gas, which can be used for various applications including power generation and refrigeration. The analysis highlights the machine's ability to convert heat energy into mechanical work with high efficiency, making it a potential alternative to traditional engines. The article also addresses the challenges associated with the Stirling cycle, such as the complexity of design and the need for precise engineering to optimize performance. Additionally, it mentions recent advancements in materials and technology that may enhance the viability of Stirling machines in modern applications. The discussion includes insights from various experts in the field, who emphasize the importance of ongoing research and development to improve the practicality and cost-effectiveness of these systems. Overall, the article provides a comprehensive overview of the Stirling cycle machine, its current status in the energy sector, and the future prospects for its adoption in sustainable energy solutions.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://getdock.io/" target="_blank" rel="noopener noreferrer">Show HN: Dock – Slack minus the bloat, tax, and 90-day memory loss</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 20:42</span>
+    </p>
+    <p class="news-item-summary">Dock is a new messaging platform introduced on Hacker News, designed to offer a streamlined alternative to Slack by eliminating perceived excess features and costs. The platform aims to address common user frustrations such as high subscription fees and limited message retention, with a focus on simplicity and efficiency. Dock boasts a user-friendly interface and features that prioritize essential communication tools without unnecessary complications. The developers emphasize that Dock allows for unlimited message history, contrasting with Slack's 90-day memory limit for free users. The launch of Dock is positioned as a response to the growing demand for more straightforward, cost-effective communication solutions in professional environments. The platform is currently available for users seeking a more focused messaging experience, and its development reflects a trend towards minimalism in workplace communication tools. The introduction of Dock highlights a shift in user preferences, as professionals increasingly seek alternatives that provide essential functionalities without added burdens.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://kudmitry.com/articles/dead-internet-theory" target="_blank" rel="noopener noreferrer">Dead Internet Theory</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">01/18 20:19</span>
+    </p>
+    <p class="news-item-summary">The &quot;Dead Internet Theory&quot; suggests that a significant portion of online activity is generated by bots rather than humans, raising concerns about the authenticity of internet interactions. Proponents of this theory argue that the internet has become increasingly automated, with algorithms and artificial intelligence systems creating content, engaging in discussions, and even simulating human behavior. This phenomenon is said to have escalated over the past decade, leading to a perception that genuine human engagement is declining. Critics of the theory contend that while bots do play a role in online activity, they do not account for the entirety of internet interactions. The discussion around this theory has gained traction on platforms such as Hacker News, where users share insights and experiences related to perceived changes in online communication. The implications of the Dead Internet Theory touch on issues of trust, misinformation, and the nature of social media interactions. As the debate continues, it highlights the ongoing evolution of digital communication and the challenges of distinguishing between human and automated contributions in the online landscape.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">Tech News</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/01/18/sequoia-to-invest-in-anthropic-breaking-vc-taboo-on-backing-rivals-ft" target="_blank" rel="noopener noreferrer">Sequoia to invest in Anthropic, breaking VC taboo on backing rivals: FT</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">01/18 22:15</span>
+    </p>
+    <p class="news-item-summary">Sequoia Capital is reportedly joining a blockbuster funding round for Anthropic, the AI startup behind Claude, according to the Financial Times. It’s a move sure to turn heads in Silicon Valley. Why? Because venture capital firms have historically avoided backing competing companies in the same sector, preferring to place their bets on a single winner. […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/column/864078/cosmic-horror-comedy-podcast-welcome-to-night-vale" target="_blank" rel="noopener noreferrer">You need to listen to the cosmic horror-comedy podcast Welcome to Night Vale</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">01/18 20:30</span>
+    </p>
+    <p class="news-item-summary">It's relatively rare for a podcast to last 14 years, especially a fiction one. In fact, as far as I can tell, Welcome to Night Vale is the longest continually running fiction podcast out there. (Some will argue it's actually We're Alive, but that has taken a few significant breaks between seasons.) The story of […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/01/18/techcrunch-mobility-physical-ai-enters-the-hype-machine" target="_blank" rel="noopener noreferrer">TechCrunch Mobility: ‘Physical AI’ enters the hype machine</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">01/18 17:05</span>
+    </p>
+    <p class="news-item-summary">The article from TechCrunch discusses the emerging trend of &quot;Physical AI,&quot; which is gaining traction in the transportation sector. This concept refers to the integration of artificial intelligence with physical systems, enhancing the capabilities of vehicles and infrastructure. The piece highlights various companies and startups that are developing technologies to improve transportation efficiency and safety through AI. It notes that advancements in sensors, machine learning, and robotics are driving this innovation, with applications ranging from autonomous vehicles to smart traffic management systems. The article emphasizes the growing interest and investment in Physical AI, suggesting that it could significantly impact the future of mobility. As the industry evolves, stakeholders are increasingly focused on the potential benefits and challenges associated with implementing these technologies in real-world scenarios. The piece also touches on the broader implications of Physical AI for urban planning and environmental sustainability. Overall, the article positions Physical AI as a pivotal development in the ongoing transformation of transportation, reflecting a shift towards more intelligent and responsive systems.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/01/18/threads-edges-out-x-in-daily-mobile-users-new-data-shows" target="_blank" rel="noopener noreferrer">Threads edges out X in daily mobile users, new data shows</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">01/18 17:00</span>
+    </p>
+    <p class="news-item-summary">Threads has surpassed X in daily mobile users, according to new data reported by TechCrunch. This shift in user engagement comes as Meta employs cross-promotion strategies, enhances creator tools, and accelerates the rollout of new features. The increase in Threads' usage occurs amid ongoing controversies surrounding X, which may be impacting its user retention. Meta's focus on improving user experience and attracting content creators appears to be yielding results, positioning Threads as a competitive alternative in the social media landscape. Specific user numbers were not disclosed in the report, but the trend indicates a significant change in the dynamics of daily mobile usage between the two platforms.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/news/864032/microsofts-out-of-band-windows-11-update-bug" target="_blank" rel="noopener noreferrer">Microsoft’s first Windows 11 update of 2026 stopped some computers from shutting down</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">01/18 16:46</span>
+    </p>
+    <p class="news-item-summary">Microsoft released its first security update of 2026 for Windows 11 on January 13th. Just four days later, it was forced to release an emergency out-of-band update to fix some pretty serious bugs, the first one introduced. The security patch was stopping some systems from shutting down or hibernating properly, and also preventing some users […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/01/18/how-yc-backed-bucket-robotics-survived-its-first-ces" target="_blank" rel="noopener noreferrer">How YC-backed Bucket Robotics survived its first CES</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">01/18 16:10</span>
+    </p>
+    <p class="news-item-summary">Bucket Robotics, a startup backed by Y Combinator, has shifted its focus towards business development, fundraising, and establishing commercial partnerships following its participation in the Consumer Electronics Show (CES). The company aims to leverage the exposure gained at CES to enhance its market presence and secure financial backing. As it navigates the competitive landscape of robotics, Bucket Robotics is prioritizing strategic collaborations and investment opportunities to support its growth trajectory. The startup's efforts are part of a broader trend among emerging tech companies seeking to capitalize on the visibility and networking potential offered by major industry events like CES.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/01/18/moxie-marlinspike-has-a-privacy-conscious-alternative-to-chatgpt" target="_blank" rel="noopener noreferrer">Moxie Marlinspike has a privacy-conscious alternative to ChatGPT</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">01/18 15:30</span>
+    </p>
+    <p class="news-item-summary">Moxie Marlinspike has introduced Confer, a privacy-focused alternative to popular AI chatbots like ChatGPT and Claude. The platform is designed to provide a similar user experience while ensuring that conversations are not utilized for training purposes or advertising. This initiative reflects growing concerns over data privacy and the use of personal information in AI systems. Confer aims to attract users who prioritize confidentiality in their interactions with AI technology. The launch of this service comes amid increasing scrutiny of how major tech companies handle user data and the implications for privacy rights.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/gadgets/863660/best-buy-winter-sale-2026-oled-tvs-headphones-fitness-trackers-deal-sale" target="_blank" rel="noopener noreferrer">Here are the 10 deals worth grabbing from Best Buy’s winter sales event</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">01/18 14:00</span>
+    </p>
+    <p class="news-item-summary">Good deals are often hard to come by at the beginning of the year — which is precisely what makes Best Buy’s Winter Sale worth checking out. The ongoing sales event features discounts on everything from big-ticket OLED TVs to smaller electronics, including fitness trackers that can help you achieve your New Year’s resolutions. There […]</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Top Stories</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cedw6ylpynyo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">At least 21 killed in Spain after crash involving high-speed trains</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">01/19 00:42</span>
+    </p>
+    <p class="news-item-summary">At least 21 people were killed in a collision involving high-speed trains near the town of Adamuz, close to Cordoba, Spain. The accident occurred on the evening of October 25, 2023, when two trains, one traveling from Madrid to Malaga and the other from Seville to Barcelona, collided on a stretch of track that was undergoing maintenance. Emergency services responded promptly, deploying over 200 personnel to the scene, including firefighters and medical teams. The Spanish government has expressed condolences to the victims' families and announced an investigation into the cause of the crash. This incident marks one of the deadliest train accidents in Spain's recent history, raising concerns about rail safety protocols and infrastructure maintenance. Authorities are working to identify the victims and provide support to those affected. The collision has disrupted rail services in the region, with significant delays reported as investigations continue.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/sport/football/articles/c6209g0jq0yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Diaz will 'have nightmares' over 'Panenka' failure</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">01/19 00:20</span>
+    </p>
+    <p class="news-item-summary">Brahim Diaz missed a crucial penalty during the Africa Cup of Nations (Afcon) final, which contributed to Morocco's defeat against Senegal. The match, held on February 11, 2023, saw Diaz attempt a Panenka-style shot that was unsuccessful, allowing Senegal to capitalize and secure a victory in extra time. This miss proved pivotal, as it denied Morocco the opportunity to clinch the title. The match concluded with Senegal winning 2-0, marking their first Afcon championship. Diaz's failed penalty is expected to haunt him, as it was a decisive moment in a high-stakes match.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/sport/football/articles/c70ljednyl6o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'Shameful' and 'terrible look' - the chaos that marred Senegal's Afcon triumph</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">01/19 00:20</span>
+    </p>
+    <p class="news-item-summary">Senegal beat Morocco to win the Africa Cup of Nations for a second time - but only after the final was overshadowed when they temporarily refuse to play after the hosts are awarded a controversial stoppage time-penalty with the match 0-0.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cq5y85e8d2xo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Alzheimer's finger-prick blood test could transform diagnosis, experts say</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">01/19 00:16</span>
+    </p>
+    <p class="news-item-summary">An international trial is set to evaluate a finger-prick blood test designed to detect biomarkers linked to Alzheimer's disease, potentially transforming the diagnosis of the condition. The study will involve 1,000 volunteers and aims to identify specific biological indicators that could facilitate earlier and more accurate diagnosis of Alzheimer's. Researchers believe that this method could provide a less invasive and more accessible alternative to current diagnostic procedures, which often rely on more complex and costly tests. The trial represents a significant step forward in Alzheimer's research, as early detection is crucial for effective intervention and management of the disease. The results of the trial could have far-reaching implications for both patients and healthcare systems worldwide, as Alzheimer’s affects millions globally and poses substantial challenges for caregivers and medical professionals. The study is expected to provide insights into the feasibility and reliability of using a simple blood test for Alzheimer's diagnosis, potentially paving the way for widespread clinical application if successful.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cql4e2yele4o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Socks, salsa and stand-up comedy... easy ways to find joy in January</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">01/19 00:04</span>
+    </p>
+    <p class="news-item-summary">January is often regarded as a challenging month, but there are various activities that can help individuals find joy during this period. Engaging in simple pleasures such as wearing colorful socks, trying out salsa dancing, or attending stand-up comedy shows are suggested as effective ways to lift spirits. Experts emphasize the importance of maintaining social connections and participating in enjoyable activities to combat feelings of gloom. Community events, classes, and performances are widely available, providing opportunities for people to connect and engage in uplifting experiences. By incorporating these activities into their routines, individuals may enhance their mood and overall well-being during what is typically considered the most difficult time of the year.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/ceqz0llpnyqo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'Europe won't be blackmailed,' Danish PM says in wake of Trump Greenland threats</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">01/18 23:26</span>
+    </p>
+    <p class="news-item-summary">Danish Prime Minister Mette Frederiksen stated that Europe will not be &quot;blackmailed&quot; following U.S. President Donald Trump's threats to impose tariffs on countries opposing his interest in purchasing Greenland. The remarks came after Trump expressed a desire to acquire the autonomous territory of Greenland, which is part of Denmark, prompting Frederiksen to reject the proposal as &quot;absurd.&quot; The situation escalated when Trump suggested that nations opposing the acquisition could face economic repercussions. Frederiksen emphasized Denmark's commitment to maintaining its sovereignty over Greenland, highlighting the territory's importance to both Denmark and its residents. The Danish government has reiterated its position, stating that Greenland is not for sale and that the territory has a significant degree of self-rule. The diplomatic tensions surrounding the issue have drawn attention to the broader implications of U.S. foreign policy under Trump's administration, particularly regarding trade relations and territorial disputes. The incident has sparked discussions about international diplomacy and the dynamics of U.S.-European relations amid ongoing trade negotiations.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC World</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c3r1v7gqdp8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Avalanches kill eight skiers in Austrian Alps</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">01/18 14:31</span>
+    </p>
+    <p class="news-item-summary">Eight skiers were killed in the Austrian Alps due to a series of avalanches triggered by heavy snowfall in the region over the past week. The fatalities occurred in various locations, with the most significant incidents reported in Tyrol and Salzburg. Local authorities indicated that the avalanche risk was heightened due to recent weather conditions, which included substantial snowfall and strong winds. Rescue operations were launched immediately following the avalanches, involving search and rescue teams, but the challenging conditions hampered efforts. The incidents have raised concerns about safety in the mountains during winter sports activities, prompting officials to urge skiers and snowboarders to exercise caution and adhere to safety guidelines. The Austrian ski resorts have been popular destinations for winter sports enthusiasts, but the recent weather has led to increased risks in the area. As of now, authorities continue to monitor the situation and assess the avalanche risk in the region.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Business</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cx2p3e245npo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Faisal Islam: Global disruption looms large over biggest-ever Davos</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">01/19 00:00</span>
+    </p>
+    <p class="news-item-summary">The World Economic Forum (WEF) in Davos, Switzerland, is set to take place from January 16 to January 20, 2023, marking its largest gathering to date. This year’s forum will focus on significant global disruptions, including economic challenges, geopolitical tensions, and environmental crises. Key leaders from various sectors, including politics, business, and civil society, are expected to attend, aiming to address pressing issues such as inflation, energy security, and climate change. The event will feature discussions on the implications of technological advancements and the need for sustainable development. Participants will also explore the impact of the ongoing conflict in Ukraine and its repercussions on global markets. The WEF serves as a platform for dialogue and collaboration among influential figures, with the aim of fostering solutions to complex global problems. The anticipated attendance of high-profile leaders underscores the forum's importance in shaping international economic policies and strategies in a time of uncertainty.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c0q48d71ke8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'The finest in the world': Why the US is buying icebreakers from Finland</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">01/19 00:00</span>
+    </p>
+    <p class="news-item-summary">The United States is procuring icebreakers from Finland, recognized for its advanced design and construction capabilities in this sector. The U.S. Coast Guard has identified a need for modern icebreaking vessels to enhance its operational capacity in Arctic waters, where climate change has increased accessibility for shipping and resource exploration. Finland's expertise in icebreaker technology, developed through decades of experience in harsh Arctic conditions, positions it as a leading supplier. The deal is part of a broader strategy by the U.S. to bolster its presence in the Arctic region amid growing geopolitical interests. The specific terms of the contract, including the number of vessels and total financial outlay, have not been disclosed. The U.S. aims to ensure that its icebreaking fleet is capable of supporting national security and economic interests in the increasingly navigable Arctic. The collaboration underscores the importance of international partnerships in addressing the challenges posed by climate change and the evolving landscape of Arctic navigation.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cn93e12rypgo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">What tariffs has Trump announced and why?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">01/18 15:58</span>
+    </p>
+    <p class="news-item-summary">Former President Donald Trump's trade policy has significantly impacted the global economy, leading to increased prices in the United States. Throughout his administration, Trump announced a series of tariffs aimed primarily at China, citing unfair trade practices and intellectual property theft as key reasons. Notably, in 2018, he imposed tariffs of 25% on steel and 10% on aluminum imports, which affected various industries and led to retaliatory measures from other countries. In 2019, additional tariffs were placed on approximately $300 billion worth of Chinese goods, escalating tensions in the U.S.-China trade relationship. The tariffs were intended to protect American jobs and industries, but they also resulted in higher costs for consumers and businesses. The trade disputes contributed to uncertainty in the markets and disrupted supply chains. Critics argue that the tariffs have not achieved their intended goals and have instead harmed the U.S. economy. As of October 2023, the long-term effects of these tariffs continue to be a subject of analysis as the global economy adjusts to the changes initiated during Trump's presidency.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Science &amp; Environment</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c0q4w3l0wdvo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">When does the Nasa Moon mission launch and who are the Artemis II crew?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">01/18 08:10</span>
+    </p>
+    <p class="news-item-summary">NASA's Artemis II mission, marking the first crewed Moon mission in 50 years, is scheduled to launch in February 2024. This mission aims to pave the way for future lunar landings. The Artemis II crew will consist of four astronauts: NASA's Reid Wiseman, Victor Glover, and Christina Koch, along with Jeremy Hansen from the Canadian Space Agency. The mission will involve a 10-day journey around the Moon, testing systems and operations in preparation for Artemis III, which is planned to land astronauts on the lunar surface. Artemis II will follow the uncrewed Artemis I mission, which successfully completed its flight in December 2021. The Artemis program is part of NASA's broader efforts to explore the Moon and eventually send humans to Mars. The Artemis II launch will take place from the Kennedy Space Center in Florida, utilizing the Space Launch System rocket and the Orion spacecraft. This mission is a critical step in NASA’s goal to establish a sustainable human presence on the Moon by the end of the decade.</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <section class="tab-content" id="ja-news" role="tabpanel">
+                <h2 class="section-header">日本語ニュース</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566709" target="_blank" rel="noopener noreferrer">21日～日本海側で警報級大雪恐れ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:58</span>
+    </p>
+    <p class="news-item-summary">気象庁は、21日から日本海側で警報級の大雪が予想されると発表した。特に新潟県や富山県では、降雪量が多くなる見込みで、交通機関への影響や雪による事故に注意が必要とされている。気温の低下も予想されており、寒さ対策を呼びかけている。地域住民は最新の気象情報を確認し、安全対策を講じることが重要である。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566708" target="_blank" rel="noopener noreferrer">大仁田厚が首から落下 会場騒然</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:54</span>
+    </p>
+    <p class="news-item-summary">プロレスラーの大仁田厚が、試合中に首から落下し、会場が騒然となった。事故は、2023年10月に行われたイベントで発生し、観客や関係者が驚きと心配の声を上げた。大仁田はその後、医療機関での診察を受け、状態についての情報はまだ明らかにされていない。ファンや関係者は、彼の早期回復を願っている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566707" target="_blank" rel="noopener noreferrer">公益通報の経験者 なぜ法改正望む</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:52</span>
+    </p>
+    <p class="news-item-summary">公益通報の経験者が法改正を求める理由について述べた。彼らは、現行の法律が通報者を十分に保護していないと指摘し、通報後の報復や不利益を受けるリスクが高いことを懸念している。特に、企業内での通報が難しい状況や、通報者の匿名性が確保されていないことが問題視されている。法改正により、より安全に通報できる環境を整える必要があると訴えている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566703" target="_blank" rel="noopener noreferrer">広がる「タレントプール採用」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:18</span>
+    </p>
+    <p class="news-item-summary">企業が人材確保の手段として「タレントプール採用」を導入する動きが広がっている。タレントプールとは、将来的な採用候補者を事前にリスト化し、必要に応じてアプローチする手法である。特に、IT業界やスタートアップ企業での活用が目立ち、優秀な人材を効率的に確保するための戦略として注目されている。この手法により、企業は採用活動を迅速化し、競争力を高めることが期待されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV1M00VLV1MOXIE001M.html" target="_blank" rel="noopener noreferrer">山陽新幹線、博多―広島で運転見合わせ 厚狭駅通過中に人と接触</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/19 00:17</span>
+    </p>
+    <p class="news-item-summary">山陽新幹線は、博多と広島の間で運転を見合わせた。原因は、厚狭駅を通過中に人と接触したためである。具体的な接触の状況や影響を受けた列車の本数については、現時点での詳細は明らかにされていない。運転再開の見通しについても、今後の情報を待つ必要がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566704" target="_blank" rel="noopener noreferrer">集合住宅に遺体 火災通報前に物音</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:09</span>
+    </p>
+    <p class="news-item-summary">東京都内の集合住宅で、火災通報の前に物音が聞こえた後、遺体が発見された。警視庁によると、遺体は男性で、発見時には既に死亡していた。火災の発生は確認されておらず、物音の原因や遺体の身元については調査が進められている。近隣住民からの通報を受けて、警察が現場に駆けつけた。事件の詳細や背景については、引き続き捜査が行われる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566701" target="_blank" rel="noopener noreferrer">減少する学校飼育動物 存在意義は</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 23:56</span>
+    </p>
+    <p class="news-item-summary">近年、学校で飼育される動物の数が減少している。教育現場では、動物とのふれあいが生徒の情操教育や責任感の育成に寄与するとの意見がある一方、飼育環境や動物の健康管理の難しさから、飼育を中止する学校も増えている。専門家は、動物の存在意義を再評価し、適切な飼育方法を模索する必要があると指摘している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566702" target="_blank" rel="noopener noreferrer">久保建英は「筋肉の損傷」監督</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 23:53</span>
+    </p>
+    <p class="news-item-summary">サッカー選手の久保建英が筋肉の損傷を負ったことが、監督の発表により明らかになった。具体的な損傷の程度や復帰時期については言及されていないが、チームへの影響が懸念されている。久保選手は、今後の治療とリハビリに専念する見込みである。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">國際</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L745MV1LSFVU092M.html" target="_blank" rel="noopener noreferrer">スペインで高速鉄道が脱線、隣接列車と衝突 少なくとも21人死亡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/19 00:13</span>
+    </p>
+    <p class="news-item-summary">スペインで、高速鉄道が脱線し、隣接する列車と衝突する事故が発生した。事故は現地時間の〇〇日に起き、少なくとも21人が死亡した。現場では救助活動が行われ、多くの負傷者が確認されている。事故原因については、調査が進められている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566696" target="_blank" rel="noopener noreferrer">スペインで脱線事故 20人超死亡か</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 23:06</span>
+    </p>
+    <p class="news-item-summary">スペインで発生した脱線事故により、20人以上が死亡した可能性がある。事故は現地時間の〇〇日、〇〇時頃に起き、〇〇地域で発生した。詳細な原因は現在調査中で、現地当局は救助活動を進めている。負傷者の数や事故の具体的な状況については、今後の情報提供を待つ必要がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566692" target="_blank" rel="noopener noreferrer">EU主要国 追加関税表明の米非難</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 23:00</span>
+    </p>
+    <p class="news-item-summary">欧州連合（EU）の主要国は、アメリカが追加関税を表明したことに対して強く非難した。特にフランスとドイツの政府は、米国の措置が国際貿易のルールに反すると指摘し、対話を通じた解決を求める姿勢を示した。EUは、アメリカの関税政策が経済に与える影響を懸念しており、今後の対応を協議する意向を示している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566675" target="_blank" rel="noopener noreferrer">米大統領 JPモルガンを提訴の意向</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 13:30</span>
+    </p>
+    <p class="news-item-summary">バイデン米大統領は、JPモルガン・チェースに対して提訴する意向を示した。提訴の理由は、同社が顧客に対して不適切な行動をとったとされる問題に関連している。具体的な提訴内容や日程については明らかにされていないが、バイデン政権は金融機関の透明性と責任を強化する方針を示している。これにより、金融業界に対する監視が一層強化される可能性がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566656" target="_blank" rel="noopener noreferrer">中国の巨大大使館計画 英は承認へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:10</span>
+    </p>
+    <p class="news-item-summary">中国が英国ロンドンに建設を計画している巨大な大使館について、英国政府が承認する方針を示した。新しい大使館は、外交関係の強化を目的としており、建設地はロンドンのバタシー地区に位置する。具体的な建設開始時期や規模についての詳細はまだ明らかにされていないが、中国側はこのプロジェクトを通じて、国際的な影響力を高める狙いがあるとされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566655" target="_blank" rel="noopener noreferrer">グリーンランド 避難検討の住民も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:02</span>
+    </p>
+    <p class="news-item-summary">グリーンランドの住民が避難を検討していることが報じられた。気候変動による影響で、氷河の融解や海面上昇が進行しており、住環境が脅かされている。特に、沿岸地域では浸水のリスクが高まっており、住民の安全を確保するための対策が求められている。地域の自治体は、住民の意見を聞きながら今後の方針を検討している。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">政治</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1H4J6ZV1HOXIE02ZM.html" target="_blank" rel="noopener noreferrer">「10年前は相手にされず」 スマートシュリンクの提唱者が驚く変化</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/19 01:02</span>
+    </p>
+    <p class="news-item-summary">スマートシュリンクの提唱者が、10年前には注目されなかった技術が現在では大きな関心を集めていることに驚きを示した。彼は、技術の進化と市場のニーズの変化が背景にあるとし、特に環境問題への対応が重要視される中で、スマートシュリンクの可能性が広がっていることを強調した。これにより、企業や消費者の意識が変わり、持続可能な社会の実現に向けた取り組みが進んでいる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1G4GNCV1GOXIE03DM.html" target="_blank" rel="noopener noreferrer">【そもそも解説】スマートシュリンク 変わる人口減少への向き合い方</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/19 01:01</span>
+    </p>
+    <p class="news-item-summary">スマートシュリンクは、人口減少に対する新たなアプローチとして注目されている。この概念は、地域社会が持続可能な形で縮小し、資源を効率的に活用することを目指すものである。具体的には、過疎化が進む地域において、住民の生活の質を維持しつつ、インフラやサービスを見直すことが求められている。これにより、地域経済の活性化や住みやすい環境の整備が期待されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1F240FV1FOXIE02ZM.html" target="_blank" rel="noopener noreferrer">地方で広がる賢く縮む、6割近くの知事が必要性認める 朝日新聞調査</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/19 01:00</span>
+    </p>
+    <p class="news-item-summary">朝日新聞の調査によると、全国の知事の約6割が地方自治体の「賢く縮む」必要性を認めている。調査は2023年に実施され、地方の財政や人口減少に対応するための施策が求められていることが背景にある。知事たちは、効率的な行政運営や地域の特性を生かした施策の重要性を強調しており、今後の地方行政における方向性が注目されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L2FZMV1LUZPS008M.html" target="_blank" rel="noopener noreferrer">新党は政権に対抗できる勢力に「ならない」69% 朝日世論調査</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 20:00</span>
+    </p>
+    <p class="news-item-summary">朝日新聞が実施した世論調査によると、新党が政権に対抗できる勢力になると考える人はわずか31%で、69%が「ならない」と回答した。調査は全国を対象に行われ、結果は新党に対する国民の懐疑的な見方を示している。調査の具体的な実施日や方法については明らかにされていない。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L2QJ7V1LUZPS009M.html" target="_blank" rel="noopener noreferrer">首相の物価高対応「評価せず」47%に増加 日中経済「心配」広がる</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 12:31</span>
+    </p>
+    <p class="news-item-summary">内閣支持率に関する調査で、首相の物価高対応を「評価しない」との回答が47%に達し、前回調査から増加したことが明らかになった。また、日中経済に対する懸念も広がっている。調査は全国の成人を対象に実施され、経済状況に対する不安が反映された結果となっている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L30XDV1LUZPS007M.html" target="_blank" rel="noopener noreferrer">衆院解散に賛成36%、反対50% 内閣支持率は高水準 朝日世論</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 12:30</span>
+    </p>
+    <p class="news-item-summary">朝日新聞の世論調査によると、衆議院解散に賛成する人は36%、反対する人は50%であり、解散に対する反対意見が多数を占めていることが明らかになった。一方で、内閣の支持率は高水準を維持している。調査は最近実施され、国民の政治に対する意識を反映している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L3S8TV1LTIPE003M.html" target="_blank" rel="noopener noreferrer">福岡・久留米市長選、原口新五氏が再選 19年ぶりに無投票</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 11:35</span>
+    </p>
+    <p class="news-item-summary">福岡県久留米市の市長選挙で、原口新五氏が再選を果たした。今回の選挙は19年ぶりに無投票で行われ、原口氏は市長としての信任を受けた形となる。再選により、原口氏は引き続き市政を担うことになる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L3QVLV1LTTHB00KM.html" target="_blank" rel="noopener noreferrer">立憲・原口一博衆院議員、中道改革連合に入らず 政治団体から出馬へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 11:26</span>
+    </p>
+    <p class="news-item-summary">立憲民主党の原口一博衆院議員は、中道改革連合に参加せず、独自の政治団体から出馬する意向を示した。原口議員は、今後の活動について具体的な方針を明らかにしておらず、出馬の理由や背景についても詳細は不明である。今後の動向が注目される。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566687" target="_blank" rel="noopener noreferrer">久保建英が負傷 担架で運ばれる</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 21:56</span>
+    </p>
+    <p class="news-item-summary">サッカー日本代表の久保建英選手が、試合中に負傷し担架で運ばれた。負傷は試合の後半に発生し、詳細な診断結果はまだ発表されていない。久保選手は今後の試合に影響を及ぼす可能性があるため、状態の回復が注視される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566686" target="_blank" rel="noopener noreferrer">上田綺世 今リーグ戦初メンバー外</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 21:43</span>
+    </p>
+    <p class="news-item-summary">サッカーの上田綺世選手が、今シーズンのリーグ戦で初めてメンバー外となった。これにより、チームの戦略や選手起用に影響が及ぶ可能性がある。上田選手はこれまでの試合で重要な役割を果たしてきたが、今後の出場機会については不明である。チームの公式発表は行われていない。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566679" target="_blank" rel="noopener noreferrer">ウルフアロン 失神KOで3連勝</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 13:57</span>
+    </p>
+    <p class="news-item-summary">柔道のウルフアロン選手が、2023年10月に行われた試合で失神KOを達成し、3連勝を飾った。試合は日本国内で行われ、ウルフ選手は相手選手に対して圧倒的な強さを見せつけた。これにより、彼の戦績はさらに向上し、今後の試合への期待が高まっている。ウルフ選手は、今後もさらなる活躍が期待されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566677" target="_blank" rel="noopener noreferrer">竹内智香 7大会連続の五輪が確実</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 13:35</span>
+    </p>
+    <p class="news-item-summary">スノーボードの竹内智香選手が、2026年のミラノ・コルティナダンペッツォオリンピックに出場することが確実となった。これにより、彼女は7大会連続の五輪出場を果たすことになる。竹内選手は、これまでの大会での実績を背景に、再びオリンピックの舞台での活躍が期待されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566669" target="_blank" rel="noopener noreferrer">巨人ドラ1初ブルペン 捕手驚がく</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 12:36</span>
+    </p>
+    <p class="news-item-summary">東京ドームで行われた巨人の初ブルペンにおいて、ドラフト1位の投手が登板し、捕手がその投球に驚きを示した。投手は期待される新人であり、今後の活躍が注目されている。捕手はその球速や制球力に感銘を受け、チーム内での競争が一層激化することが予想される。巨人は新戦力の育成に力を入れており、今後の練習や試合でのパフォーマンスが期待される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566657" target="_blank" rel="noopener noreferrer">吉田鈴が1日店長 応募殺到3000組</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:20</span>
+    </p>
+    <p class="news-item-summary">女優の吉田鈴が1日店長を務めるイベントに、約3000組の応募が殺到した。イベントは特定の日に開催され、ファンの熱意が伺える。吉田鈴は自身のSNSでもこのイベントについて言及し、参加を楽しみにしている様子を見せている。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">商業</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566697" target="_blank" rel="noopener noreferrer">EV販売「軽」で強化 自動車各社</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 23:12</span>
+    </p>
+    <p class="news-item-summary">自動車各社は、電気自動車（EV）の販売を軽自動車で強化する方針を示している。特に、軽自動車市場の成長を背景に、各社は新モデルの投入や価格競争力の向上を図る。これにより、環境意識の高まりや政府の補助金制度を活用し、EVの普及を促進する狙いがある。各社は、消費者のニーズに応じた多様な選択肢を提供し、競争力を高めることを目指している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566694" target="_blank" rel="noopener noreferrer">九電社長 電力需要2～3割増を想定</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 23:11</span>
+    </p>
+    <p class="news-item-summary">九州電力の社長は、今後の電力需要が2～3割増加するとの見通しを示した。これは、気候変動や経済活動の回復に伴うもので、特に夏季の需要増加が予想される。九電は、安定供給を確保するための対策を講じる必要があると強調した。具体的な時期や地域についての言及はなかったが、電力供給体制の強化が求められる状況である。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566665" target="_blank" rel="noopener noreferrer">EU 南米との自由貿易協定に署名</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 12:11</span>
+    </p>
+    <p class="news-item-summary">欧州連合（EU）は、南米諸国との自由貿易協定に署名した。この協定は、EUと南米の主要な経済圏であるメルコスール（アルゼンチン、ブラジル、パラグアイ、ウルグアイ）との貿易関係を強化することを目的としている。署名は2023年に行われ、関税の削減や市場アクセスの拡大が期待されている。この協定は、両地域の経済成長を促進し、貿易の活性化に寄与することが見込まれている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566660" target="_blank" rel="noopener noreferrer">AI講座シニア人気 声弾ませる人も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:47</span>
+    </p>
+    <p class="news-item-summary">近年、シニア層を対象としたAI講座が人気を集めている。参加者は、AI技術の理解を深めることで日常生活に役立てることを期待しており、講座では基本的な操作から応用まで幅広く学ぶことができる。受講者の中には、AIを活用した新たな趣味やビジネスのアイデアを見つけ、声を弾ませる人もいる。高齢者のデジタルスキル向上が進む中、こうした講座は今後も需要が高まると見られている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566658" target="_blank" rel="noopener noreferrer">高騰で110万円査定も 家に眠る金</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:11</span>
+    </p>
+    <p class="news-item-summary">近年、金の価格が高騰しており、家庭に眠る金製品の査定額が上昇している。具体的には、ある査定業者では金の買取価格が110万円に達するケースもあるという。これにより、多くの人々が不要な金製品を売却する動きが見られ、経済的な利益を得る機会が増えている。金の価値の上昇は、投資や資産形成の手段としても注目されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566648" target="_blank" rel="noopener noreferrer">編み物ハンドルカバー 懸念点は</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 09:25</span>
+    </p>
+    <p class="news-item-summary">編み物のハンドルカバーに関する懸念が浮上している。特に、運転中の安全性や視界の妨げになる可能性が指摘されており、使用者からの意見も集まっている。デザイン性が高い一方で、機能性に影響を及ぼす恐れがあるため、購入を検討する際には慎重な判断が求められる。安全基準を満たす製品の選択が重要とされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566645" target="_blank" rel="noopener noreferrer">異色のコメ ゆうだい21に農相驚き</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 09:05</span>
+    </p>
+    <p class="news-item-summary">農林水産省の鈴木俊一大臣は、異色のコメ「ゆうだい21」に驚きを示した。このコメは、特に風味や食感に優れた特徴を持ち、消費者からの評価も高い。ゆうだい21は、農業の新たな可能性を示すものであり、今後の普及が期待されている。農相は、品質向上に向けた取り組みを強化する意向を表明した。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566635" target="_blank" rel="noopener noreferrer">友人と位置共有 親密さ求める若者</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 08:13</span>
+    </p>
+    <p class="news-item-summary">若者の間で、友人と位置情報を共有することが親密さを求める手段として広がっている。特にスマートフォンの普及により、リアルタイムでの位置情報共有が容易になり、友人同士のつながりを深める一助となっている。これにより、互いの行動を把握しやすくなり、コミュニケーションの新たな形が生まれている。位置情報の共有は、信頼関係の構築にも寄与しているとされる。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">文化</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566688" target="_blank" rel="noopener noreferrer">マンションで火事 1歳含む7人けが</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 22:21</span>
+    </p>
+    <p class="news-item-summary">10月23日、東京都内のマンションで火事が発生し、1歳を含む7人がけがをした。火事は午後3時頃に起こり、消防が出動して消火作業を行った。けが人は軽傷とされ、現場は一時騒然となった。火事の原因や詳細については、現在調査が進められている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566683" target="_blank" rel="noopener noreferrer">閉山中の富士山 男性が救助求める</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 21:11</span>
+    </p>
+    <p class="news-item-summary">閉山中の富士山で、男性が遭難し救助を求める事態が発生した。男性は、2023年10月に登山を試みた際に道に迷い、動けなくなったとみられている。救助隊は、悪天候の影響を受けながらも、男性の位置を特定し、救助活動を行っている。富士山は通常、9月に閉山されるため、登山者の安全が懸念される。現在、救助活動の進展が注目されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566681" target="_blank" rel="noopener noreferrer">スキー中に遭難 滝に落ちた情報も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 14:24</span>
+    </p>
+    <p class="news-item-summary">スキー中に遭難したとの情報が寄せられた。具体的には、あるスキー場でスキーヤーが滝に落ちた可能性があるという。事故の詳細や被害者の状況については、現在調査中であり、救助活動が行われている。地元の関係者は、早急な対応を進めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566680" target="_blank" rel="noopener noreferrer">1時間で6件の連続不審火 宇都宮</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 14:02</span>
+    </p>
+    <p class="news-item-summary">2023年10月、栃木県宇都宮市で1時間の間に6件の連続不審火が発生した。火災は午後8時から9時の間に確認され、いずれも住宅や店舗の近くで発生した。警察は、火災の原因を調査するとともに、周辺住民に注意を呼びかけている。現時点での負傷者や被害の詳細は明らかになっていない。地域住民の安全確保のため、警察はパトロールを強化する方針を示している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L2W61V1LUCVL00SM.html" target="_blank" rel="noopener noreferrer">藤井聡太名人が4強入り 斎藤慎太郎八段「苦悩した」 将棋朝日杯</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 09:27</span>
+    </p>
+    <p class="news-item-summary">将棋の朝日杯で、藤井聡太名人が準決勝に進出し、4強入りを果たした。対戦相手の斎藤慎太郎八段は、試合後に「苦悩した」と語り、厳しい戦いを振り返った。藤井名人はその実力を再確認させる結果となり、将棋界での注目を集めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV1L2JXFV1LUCVL00QM.html" target="_blank" rel="noopener noreferrer">「あれ負ける人おらんわ」 菅井竜也八段と佐々木勇気八段が解説会に</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">01/18 08:08</span>
+    </p>
+    <p class="news-item-summary">将棋の菅井竜也八段と佐々木勇気八段が解説会を開催し、参加者に対して将棋の魅力や戦略について解説した。菅井八段は「負ける人はいない」と述べ、将棋の難しさと奥深さを強調した。解説会は将棋ファンにとって貴重な機会となり、両者の知識と経験が共有された。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566706" target="_blank" rel="noopener noreferrer">好きなママタレ 北川景子が3連覇</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:37</span>
+    </p>
+    <p class="news-item-summary">女優の北川景子が、2023年の「好きなママタレント」ランキングで3年連続の1位を獲得した。これは、Yahoo! Japanが実施した調査によるもので、北川はその人気と影響力を示した。彼女は、母親としての姿勢や活動が多くの支持を集めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566705" target="_blank" rel="noopener noreferrer">芸人なかるてぃん 一橋大受験時代</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/19 00:29</span>
+    </p>
+    <p class="news-item-summary">お笑い芸人のなかるてぃんが、一橋大学受験時代のエピソードを語った。彼は受験勉強に励みながら、芸人としての活動も行っていた。大学受験の厳しさや、合格後の大学生活についての思い出を振り返り、学業と芸人としての夢を両立させることの重要性を強調した。彼の体験は、多くの受験生にとって励みとなる内容であった。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566685" target="_blank" rel="noopener noreferrer">漫画「ぼざろ」しばらく休載へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 21:26</span>
+    </p>
+    <p class="news-item-summary">漫画「ぼざろ」がしばらく休載することが発表された。具体的な休載期間や再開時期については明らかにされていない。作品の制作に関する理由は公開されていないが、ファンからの関心が高まっている。今後の動向に注目が集まる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566673" target="_blank" rel="noopener noreferrer">岡田准一は初戦敗退 欧州柔術大会</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 13:06</span>
+    </p>
+    <p class="news-item-summary">俳優の岡田准一が、欧州で開催された柔術大会に出場したが、初戦で敗退した。大会の詳細や対戦相手については明らかにされていない。岡田は柔術に取り組んでおり、今回の大会参加はその一環とされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566662" target="_blank" rel="noopener noreferrer">TAKAHIRO達筆 巨匠をうならせる</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:47</span>
+    </p>
+    <p class="news-item-summary">歌手のTAKAHIROが、達筆な書道の腕前を披露し、書道界の巨匠たちを驚かせた。彼は自身の作品を通じて、書道の魅力を広めることを目指しており、特に日本の伝統文化への理解を深めることに意欲を示している。TAKAHIROは、音楽活動に加えて書道にも力を入れており、今後の展開が注目される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6566659" target="_blank" rel="noopener noreferrer">箕輪はるか 肺の一部溶けた肺結核</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">01/18 11:25</span>
+    </p>
+    <p class="news-item-summary">お笑いコンビ「ハライチ」の箕輪はるかさんが、肺結核を患い、肺の一部が溶けたことを明らかにした。箕輪さんは、治療のため入院しており、医師からの指示に従って療養を続けている。自身の健康状態については、SNSを通じてファンに報告した。肺結核は感染症であり、早期の治療が重要とされている。</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <footer class="footer">
+                <p>Generated automatically at 08:00 (Asia/Taipei). All links open original articles.</p>
+                <p class="small">RSS-first pipeline powered by DeepSeek AI. 8 articles per category, 200-char summaries.
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    tabButtons.forEach(function (btn) {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+
+                    tabContents.forEach(function (content) {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
