@@ -58,3 +58,11 @@ Instagram/Facebook/X 社群媒體 貼文公告
 
 
 
+
+### 門禁卡號轉換程式
+
+支援多種門禁卡格式轉換，包括 DEC10（8H10D）、HEX8、UID bytes 等格式。
+
+可批次轉換、匯出 CSV，適合門禁系統管理人員使用。
+
+[門禁卡號轉換程式](https://zennote.app/decoder/)
