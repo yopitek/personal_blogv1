@@ -1,0 +1,359 @@
+/* =========================================================
+   Nonno Text Card Editor – UI v1.2 FINAL
+   Additions:
+   - Export Size (platform-based) UI
+   - Same visual hierarchy as Letter Spacing
+   - Calm, editorial, non-app-like
+========================================================= */
+
+/* ---------------------------------------------------------
+   Design Tokens
+--------------------------------------------------------- */
+:root {
+  --panel-width: 360px;
+
+  --bg-app: #F9FAFB;
+  --bg-panel: #FFFFFF;
+
+  --border-soft: #E5E7EB;
+
+  --text-main: #111827;
+  --text-muted: #6B7280;
+  --text-faint: #9CA3AF;
+
+  --accent: #111827;
+}
+
+/* ---------------------------------------------------------
+   Base Reset
+--------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background: var(--bg-app);
+}
+
+/* ---------------------------------------------------------
+   App Layout
+--------------------------------------------------------- */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* ---------------------------------------------------------
+   Preview Area (Editorial Canvas)
+--------------------------------------------------------- */
+.preview-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background: var(--bg-app);
+}
+
+/* Card = near-final output size */
+.preview-card {
+  width: 520px;
+  min-height: 320px;
+
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 48px;
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* Card text */
+.card-text {
+  width: 100%;
+  text-align: center;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Optional theme tag */
+.card-tag {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.45);
+  letter-spacing: 0.04em;
+}
+
+/* ---------------------------------------------------------
+   Control Panel
+--------------------------------------------------------- */
+.control-panel {
+  width: var(--panel-width);
+  padding: 24px 24px 32px;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border-soft);
+  overflow-y: auto;
+}
+
+.panel-title {
+  margin: 0 0 20px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------
+   Form Groups
+--------------------------------------------------------- */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------
+   Textarea
+--------------------------------------------------------- */
+.textarea {
+  width: 100%;
+  min-height: 96px;
+  padding: 12px 14px;
+
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  resize: vertical;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: var(--text-main);
+}
+
+/* ---------------------------------------------------------
+   Select
+--------------------------------------------------------- */
+.select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+
+  background: #FFFFFF;
+  font-size: 13px;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--text-main);
+}
+
+/* ---------------------------------------------------------
+   Style Grid (Theme Selector)
+--------------------------------------------------------- */
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.style-item {
+  height: 56px;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+
+  user-select: none;
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.style-item:hover {
+  border-color: #9CA3AF;
+}
+
+.style-item.is-active {
+  border: 2px solid var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------------
+   Range Sliders
+--------------------------------------------------------- */
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-row input[type="range"] {
+  flex: 1;
+}
+
+.range-value {
+  width: 56px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---------------------------------------------------------
+   Text Alignment – Editorial Tabs
+--------------------------------------------------------- */
+.letter-spacing-group {
+  display: flex;
+  gap: 18px;
+}
+
+.align-btn {
+  background: none;
+  border: 0;
+  padding: 6px 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-faint);
+
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-btn svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.align-btn:hover {
+  color: var(--text-muted);
+}
+
+.align-btn.is-active {
+  color: var(--text-main);
+}
+
+.align-btn.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------
+   Export Size – Platform Selector (v1.2)
+--------------------------------------------------------- */
+.export-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.export-btn {
+  height: 40px;
+  border-radius: 12px;
+
+  background: #FFFFFF;
+  border: 1px solid var(--border-soft);
+
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+
+  cursor: pointer;
+  transition: border-color .15s ease, color .15s ease;
+}
+
+.export-btn:hover {
+  border-color: #9CA3AF;
+}
+
+.export-btn.is-active {
+  border: 2px solid var(--accent);
+  color: var(--text-main);
+}
+
+/* ---------------------------------------------------------
+   Primary Action Button
+--------------------------------------------------------- */
+.btn-primary {
+  width: 100%;
+  height: 48px;
+
+  border: 0;
+  border-radius: 14px;
+
+  background: var(--accent);
+  color: #FFFFFF;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #000000;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .control-panel {
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .preview-card {
+    width: min(92%, 520px);
+    padding: 36px;
+  }
+}
