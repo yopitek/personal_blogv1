@@ -1,0 +1,689 @@
+<!doctype html><html lang=zh-tw dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content=" Claude 官方 Skills 參考手冊 Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞。\nSkills 快速參照表 Skill 名稱 功能類別 主要用途 docx 文件處理 Word 文件建立、編輯、分析 pdf 文件處理 PDF 處理、表單填寫、文字擷取 pptx 文件處理 PowerPoint 簡報製作 xlsx 文件處理 Excel 試算表建立、公式、分析 frontend-design 開發工具 前端介面設計與程式碼產生 web-artifacts-builder 開發工具 複雜網頁元件建構 webapp-testing 開發工具 網頁應用程式測試 mcp-builder 開發工具 MCP 伺服器開發 algorithmic-art 創意設計 演算法藝術創作 canvas-design 創意設計 視覺設計與海報製作 brand-guidelines 企業應用 品牌風格套用 internal-comms 企業應用 內部溝通文件撰寫 doc-coauthoring 協作工具 文件共同撰寫工作流程 skill-creator 擴展工具 建立自訂 Skills theme-factory 樣式工具 主題樣式套用 slack-gif-creator 媒體工具 Slack 動態 GIF 製作 文件處理類 Skills docx 項目 內容 名稱 docx 功能簡介 完整的文件建立、編輯與分析功能，支援追蹤修訂、註解、格式保留及文字擷取。可處理專業 Word 文件 (.docx)。 使用時機 (1) 建立新文件 (2) 修改或編輯內容 (3) 使用追蹤修訂功能 (4) 新增註解 (5) 其他文件處理任務 輸出格式 .docx 提示詞範例：\n"><title>Claude code 官方skill簡介&使用方式</title><link rel=canonical href=https://zennote.app/post/claudeskill/><link rel=stylesheet href=/scss/style.min.b0e76e98cdd4f7082d1fc36f7af7e0843a81201db2197c03ca426751dc923735.css><meta property='og:title' content="Claude code 官方skill簡介&使用方式"><meta property='og:description' content=" Claude 官方 Skills 參考手冊 Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞。\nSkills 快速參照表 Skill 名稱 功能類別 主要用途 docx 文件處理 Word 文件建立、編輯、分析 pdf 文件處理 PDF 處理、表單填寫、文字擷取 pptx 文件處理 PowerPoint 簡報製作 xlsx 文件處理 Excel 試算表建立、公式、分析 frontend-design 開發工具 前端介面設計與程式碼產生 web-artifacts-builder 開發工具 複雜網頁元件建構 webapp-testing 開發工具 網頁應用程式測試 mcp-builder 開發工具 MCP 伺服器開發 algorithmic-art 創意設計 演算法藝術創作 canvas-design 創意設計 視覺設計與海報製作 brand-guidelines 企業應用 品牌風格套用 internal-comms 企業應用 內部溝通文件撰寫 doc-coauthoring 協作工具 文件共同撰寫工作流程 skill-creator 擴展工具 建立自訂 Skills theme-factory 樣式工具 主題樣式套用 slack-gif-creator 媒體工具 Slack 動態 GIF 製作 文件處理類 Skills docx 項目 內容 名稱 docx 功能簡介 完整的文件建立、編輯與分析功能，支援追蹤修訂、註解、格式保留及文字擷取。可處理專業 Word 文件 (.docx)。 使用時機 (1) 建立新文件 (2) 修改或編輯內容 (3) 使用追蹤修訂功能 (4) 新增註解 (5) 其他文件處理任務 輸出格式 .docx 提示詞範例：\n"><meta property='og:url' content='https://zennote.app/post/claudeskill/'><meta property='og:site_name' content='ZenNote'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2026-01-04T00:00:00+00:00'><meta property='article:modified_time' content='2026-01-04T00:00:00+00:00'><meta name=twitter:title content="Claude code 官方skill簡介&使用方式"><meta name=twitter:description content=" Claude 官方 Skills 參考手冊 Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞。\nSkills 快速參照表 Skill 名稱 功能類別 主要用途 docx 文件處理 Word 文件建立、編輯、分析 pdf 文件處理 PDF 處理、表單填寫、文字擷取 pptx 文件處理 PowerPoint 簡報製作 xlsx 文件處理 Excel 試算表建立、公式、分析 frontend-design 開發工具 前端介面設計與程式碼產生 web-artifacts-builder 開發工具 複雜網頁元件建構 webapp-testing 開發工具 網頁應用程式測試 mcp-builder 開發工具 MCP 伺服器開發 algorithmic-art 創意設計 演算法藝術創作 canvas-design 創意設計 視覺設計與海報製作 brand-guidelines 企業應用 品牌風格套用 internal-comms 企業應用 內部溝通文件撰寫 doc-coauthoring 協作工具 文件共同撰寫工作流程 skill-creator 擴展工具 建立自訂 Skills theme-factory 樣式工具 主題樣式套用 slack-gif-creator 媒體工具 Slack 動態 GIF 製作 文件處理類 Skills docx 項目 內容 名稱 docx 功能簡介 完整的文件建立、編輯與分析功能，支援追蹤修訂、註解、格式保留及文字擷取。可處理專業 Word 文件 (.docx)。 使用時機 (1) 建立新文件 (2) 修改或編輯內容 (3) 使用追蹤修訂功能 (4) 新增註解 (5) 其他文件處理任務 輸出格式 .docx 提示詞範例：\n"><link rel="shortcut icon" href=/img/logo.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"dark")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切換選單>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/logo_hu_13dce71d77225429.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>ZenNote</a></h1><h2 class=site-description></h2></div></header><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span></a></li><li><a href=/page/tool/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>線上工具</span></a></li><li><a href=/page/about/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>關於我</span></a></li><li><a href=/page/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>文章列表</span></a></li><li><a href=/page/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜尋</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>深色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目錄</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#skills-快速參照表>Skills 快速參照表</a></li><li><a href=#文件處理類-skills>文件處理類 Skills</a><ol><li><a href=#docx>docx</a></li><li><a href=#pdf>pdf</a></li><li><a href=#pptx>pptx</a></li><li><a href=#xlsx>xlsx</a></li></ol></li><li><a href=#開發工具類-skills>開發工具類 Skills</a><ol><li><a href=#frontend-design>frontend-design</a></li><li><a href=#web-artifacts-builder>web-artifacts-builder</a></li><li><a href=#webapp-testing>webapp-testing</a></li><li><a href=#mcp-builder>mcp-builder</a></li></ol></li><li><a href=#創意設計類-skills>創意設計類 Skills</a><ol><li><a href=#algorithmic-art>algorithmic-art</a></li><li><a href=#canvas-design>canvas-design</a></li></ol></li><li><a href=#企業應用類-skills>企業應用類 Skills</a><ol><li><a href=#brand-guidelines>brand-guidelines</a></li><li><a href=#internal-comms>internal-comms</a></li></ol></li><li><a href=#協作工具類-skills>協作工具類 Skills</a><ol><li><a href=#doc-coauthoring>doc-coauthoring</a></li></ol></li><li><a href=#擴展工具類-skills>擴展工具類 Skills</a><ol><li><a href=#skill-creator>skill-creator</a></li><li><a href=#theme-factory>theme-factory</a></li></ol></li><li><a href=#媒體工具類-skills>媒體工具類 Skills</a><ol><li><a href=#slack-gif-creator>slack-gif-creator</a></li></ol></li><li><a href=#使用建議>使用建議</a><ol><li><a href=#選擇-skill-的判斷準則>選擇 Skill 的判斷準則</a></li></ol></li><li><a href=#參考資源>參考資源</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/aicoding/>AICoding</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/post/claudeskill/>Claude code 官方skill簡介&使用方式</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2026-01-04T00:00:00Z>Jan 04, 2026</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>閱讀時間: 8 分鐘</time></div></footer></div></header><section class=article-content><style>table th:first-of-type,table td:first-of-type{white-space:nowrap;width:15%}</style><h1 id=claude-官方-skills-參考手冊>Claude 官方 Skills 參考手冊</h1><p>Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞。</p><h2 id=skills-快速參照表>Skills 快速參照表</h2><div class=table-wrapper><table><thead><tr><th>Skill 名稱</th><th>功能類別</th><th>主要用途</th></tr></thead><tbody><tr><td>docx</td><td>文件處理</td><td>Word 文件建立、編輯、分析</td></tr><tr><td>pdf</td><td>文件處理</td><td>PDF 處理、表單填寫、文字擷取</td></tr><tr><td>pptx</td><td>文件處理</td><td>PowerPoint 簡報製作</td></tr><tr><td>xlsx</td><td>文件處理</td><td>Excel 試算表建立、公式、分析</td></tr><tr><td>frontend-design</td><td>開發工具</td><td>前端介面設計與程式碼產生</td></tr><tr><td>web-artifacts-builder</td><td>開發工具</td><td>複雜網頁元件建構</td></tr><tr><td>webapp-testing</td><td>開發工具</td><td>網頁應用程式測試</td></tr><tr><td>mcp-builder</td><td>開發工具</td><td>MCP 伺服器開發</td></tr><tr><td>algorithmic-art</td><td>創意設計</td><td>演算法藝術創作</td></tr><tr><td>canvas-design</td><td>創意設計</td><td>視覺設計與海報製作</td></tr><tr><td>brand-guidelines</td><td>企業應用</td><td>品牌風格套用</td></tr><tr><td>internal-comms</td><td>企業應用</td><td>內部溝通文件撰寫</td></tr><tr><td>doc-coauthoring</td><td>協作工具</td><td>文件共同撰寫工作流程</td></tr><tr><td>skill-creator</td><td>擴展工具</td><td>建立自訂 Skills</td></tr><tr><td>theme-factory</td><td>樣式工具</td><td>主題樣式套用</td></tr><tr><td>slack-gif-creator</td><td>媒體工具</td><td>Slack 動態 GIF 製作</td></tr></tbody></table></div><hr><h2 id=文件處理類-skills>文件處理類 Skills</h2><h3 id=docx>docx</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>docx</td></tr><tr><td><strong>功能簡介</strong></td><td>完整的文件建立、編輯與分析功能，支援追蹤修訂、註解、格式保留及文字擷取。可處理專業 Word 文件 (.docx)。</td></tr><tr><td><strong>使用時機</strong></td><td>(1) 建立新文件 (2) 修改或編輯內容 (3) 使用追蹤修訂功能 (4) 新增註解 (5) 其他文件處理任務</td></tr><tr><td><strong>輸出格式</strong></td><td>.docx</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立新文件</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請幫我建立一份員工新人訓練手冊的 Word 文件，包含以下章節：
+</span></span><span class=line><span class=cl>1. 公司簡介
+</span></span><span class=line><span class=cl>2. 組織架構
+</span></span><span class=line><span class=cl>3. 工作規範
+</span></span><span class=line><span class=cl>4. 福利制度
+</span></span><span class=line><span class=cl>5. 常見問題
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請使用專業的商業文件格式，包含目錄和頁碼。輸出為 .docx 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：編輯現有文件並追蹤修訂</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請開啟附件的「合約草稿.docx」，使用追蹤修訂功能進行以下修改：
+</span></span><span class=line><span class=cl>1. 將付款期限從 30 天改為 45 天
+</span></span><span class=line><span class=cl>2. 在第 5 條新增違約金條款
+</span></span><span class=line><span class=cl>3. 在合約結尾處新增註解，說明需要法務審核的部分
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>保留原始格式，輸出修訂後的 .docx 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=pdf>pdf</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>pdf</td></tr><tr><td><strong>功能簡介</strong></td><td>完整的 PDF 操作工具包，用於擷取文字和表格、建立新 PDF、合併/分割文件及處理表單。</td></tr><tr><td><strong>使用時機</strong></td><td>(1) 填寫 PDF 表單 (2) 程式化處理 PDF 文件 (3) 產生 PDF (4) 大規模分析 PDF 文件</td></tr><tr><td><strong>輸出格式</strong></td><td>.pdf</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：擷取 PDF 內容並整理</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請從附件的「年度財務報告.pdf」中擷取以下資訊：
+</span></span><span class=line><span class=cl>1. 各季度營收數據
+</span></span><span class=line><span class=cl>2. 年度總支出明細
+</span></span><span class=line><span class=cl>3. 主要投資項目清單
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>將擷取的資料整理成結構化的表格，並輸出為新的 PDF 報告。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：填寫 PDF 表單</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請幫我填寫附件的「供應商申請表.pdf」表單，使用以下資訊：
+</span></span><span class=line><span class=cl>- 公司名稱：台灣科技股份有限公司
+</span></span><span class=line><span class=cl>- 統一編號：12345678
+</span></span><span class=line><span class=cl>- 聯絡人：王小明
+</span></span><span class=line><span class=cl>- 電話：02-1234-5678
+</span></span><span class=line><span class=cl>- 地址：台北市信義區信義路五段 100 號
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>填寫完成後輸出為新的 PDF 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=pptx>pptx</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>pptx</td></tr><tr><td><strong>功能簡介</strong></td><td>PowerPoint 簡報製作與編輯功能，支援投影片設計、版面配置及內容組織。</td></tr><tr><td><strong>使用時機</strong></td><td>(1) 建立新簡報 (2) 編輯現有簡報 (3) 製作會議投影片 (4) 培訓教材製作</td></tr><tr><td><strong>輸出格式</strong></td><td>.pptx</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立專案報告簡報</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一份 Q4 專案進度報告簡報，共 10 頁，包含：
+</span></span><span class=line><span class=cl>1. 封面頁（標題：2024 Q4 專案進度報告）
+</span></span><span class=line><span class=cl>2. 專案概述
+</span></span><span class=line><span class=cl>3. 里程碑達成情況
+</span></span><span class=line><span class=cl>4. 預算執行狀況（請預留圖表位置）
+</span></span><span class=line><span class=cl>5. 團隊績效
+</span></span><span class=line><span class=cl>6. 遇到的挑戰
+</span></span><span class=line><span class=cl>7. 解決方案
+</span></span><span class=line><span class=cl>8. 下季度計劃
+</span></span><span class=line><span class=cl>9. 風險評估
+</span></span><span class=line><span class=cl>10. 結論與建議
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>使用專業商務風格，輸出為 .pptx 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：製作產品介紹簡報</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請製作一份新產品發表簡報，產品名稱為「智慧家庭控制器 Pro」，包含：
+</span></span><span class=line><span class=cl>- 產品外觀介紹
+</span></span><span class=line><span class=cl>- 核心功能（語音控制、遠端監控、節能管理）
+</span></span><span class=line><span class=cl>- 技術規格
+</span></span><span class=line><span class=cl>- 競品比較
+</span></span><span class=line><span class=cl>- 定價策略
+</span></span><span class=line><span class=cl>- 上市時程
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>風格現代簡約，使用深藍色為主色調。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=xlsx>xlsx</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>xlsx</td></tr><tr><td><strong>功能簡介</strong></td><td>完整的試算表建立、編輯與分析功能，支援公式、格式化、資料分析及視覺化。可處理 .xlsx、.xlsm、.csv、.tsv 等格式。</td></tr><tr><td><strong>使用時機</strong></td><td>(1) 建立含公式和格式的新試算表 (2) 讀取或分析資料 (3) 修改現有試算表同時保留公式 (4) 資料分析與視覺化 (5) 重新計算公式</td></tr><tr><td><strong>輸出格式</strong></td><td>.xlsx, .xlsm, .csv, .tsv</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立預算追蹤表</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一份 2025 年度部門預算追蹤 Excel 表格，包含：
+</span></span><span class=line><span class=cl>1. 每月預算欄位（1-12月）
+</span></span><span class=line><span class=cl>2. 實際支出欄位
+</span></span><span class=line><span class=cl>3. 差異計算公式（自動計算預算 vs 實際）
+</span></span><span class=line><span class=cl>4. 累計總計公式
+</span></span><span class=line><span class=cl>5. 預算使用率百分比公式
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>類別包括：人事費用、辦公設備、行銷費用、差旅費、其他
+</span></span><span class=line><span class=cl>使用條件格式：超支顯示紅色，節省顯示綠色。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：分析銷售資料</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請分析附件「銷售資料.xlsx」，並產生以下分析結果：
+</span></span><span class=line><span class=cl>1. 各產品類別的銷售總額
+</span></span><span class=line><span class=cl>2. 各區域的銷售排名
+</span></span><span class=line><span class=cl>3. 月度銷售趨勢
+</span></span><span class=line><span class=cl>4. 前 10 名銷售業務員
+</span></span><span class=line><span class=cl>5. 季度成長率計算
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>使用樞紐分析表整理資料，並建立對應的圖表。
+</span></span><span class=line><span class=cl>輸出包含分析結果和圖表的新 Excel 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=開發工具類-skills>開發工具類 Skills</h2><h3 id=frontend-design>frontend-design</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>frontend-design</td></tr><tr><td><strong>功能簡介</strong></td><td>建立獨特、生產等級的前端介面，具有高品質設計。產生具創意、精緻的程式碼和 UI 設計，避免通用的 AI 美學風格。</td></tr><tr><td><strong>使用時機</strong></td><td>使用者要求建立：網頁元件、頁面、artifacts、海報或應用程式（包括網站、登陸頁面、儀表板、React 元件、HTML/CSS 版面配置，或美化任何網頁 UI）</td></tr><tr><td><strong>輸出格式</strong></td><td>HTML, CSS, JavaScript, React</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立產品登陸頁面</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請設計一個 SaaS 產品的登陸頁面，產品名稱為「TaskFlow」（專案管理工具）。
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需求：
+</span></span><span class=line><span class=cl>- 現代極簡風格，使用深色主題
+</span></span><span class=line><span class=cl>- Hero 區塊包含標題、副標題和 CTA 按鈕
+</span></span><span class=line><span class=cl>- 功能介紹區（3 個主要功能卡片）
+</span></span><span class=line><span class=cl>- 客戶評價區塊
+</span></span><span class=line><span class=cl>- 定價方案區塊
+</span></span><span class=line><span class=cl>- 頁尾包含聯絡資訊和社群連結
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請使用獨特的字型和動態效果，避免使用 Inter 或 Arial。
+</span></span><span class=line><span class=cl>輸出完整的 HTML/CSS 程式碼。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立內部儀表板</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一個銷售團隊使用的內部儀表板 UI，使用 React：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>功能需求：
+</span></span><span class=line><span class=cl>- 左側導航列（首頁、銷售報表、客戶管理、設定）
+</span></span><span class=line><span class=cl>- 頂部顯示目前使用者資訊
+</span></span><span class=line><span class=cl>- 主要區域顯示：
+</span></span><span class=line><span class=cl>  - 本月銷售總額卡片
+</span></span><span class=line><span class=cl>  - 目標達成率進度條
+</span></span><span class=line><span class=cl>  - 最近交易列表
+</span></span><span class=line><span class=cl>  - 銷售趨勢圖表區塊（預留位置）
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>使用科技感深色主題，包含 hover 動態效果。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=web-artifacts-builder>web-artifacts-builder</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>web-artifacts-builder</td></tr><tr><td><strong>功能簡介</strong></td><td>使用現代前端技術（React、Tailwind CSS、shadcn/ui）建立精緻的多元件 claude.ai HTML artifacts 工具套件。</td></tr><tr><td><strong>使用時機</strong></td><td>需要狀態管理、路由或 shadcn/ui 元件的複雜 artifacts — 不適用於簡單的單檔 HTML/JSX artifacts</td></tr><tr><td><strong>技術堆疊</strong></td><td>React 18 + TypeScript + Vite + Parcel + Tailwind CSS + shadcn/ui</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立多頁面應用程式</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 web-artifacts-builder 建立一個員工目錄應用程式：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>頁面結構：
+</span></span><span class=line><span class=cl>1. 首頁 - 顯示所有員工卡片網格
+</span></span><span class=line><span class=cl>2. 員工詳情頁 - 顯示個人資訊、聯絡方式、部門
+</span></span><span class=line><span class=cl>3. 搜尋頁 - 可依姓名、部門篩選
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>功能：
+</span></span><span class=line><span class=cl>- 使用 shadcn/ui 的 Card、Avatar、Input 元件
+</span></span><span class=line><span class=cl>- 實作路由切換
+</span></span><span class=line><span class=cl>- 包含載入狀態動畫
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>打包成單一 HTML 檔案供展示。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立互動式問卷工具</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 web-artifacts-builder 建立一個客戶滿意度問卷工具：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需求：
+</span></span><span class=line><span class=cl>- 多步驟表單（5 個問題頁面 + 提交頁）
+</span></span><span class=line><span class=cl>- 進度指示器顯示目前步驟
+</span></span><span class=line><span class=cl>- 問題類型：單選題、多選題、評分題、文字題
+</span></span><span class=line><span class=cl>- 表單驗證
+</span></span><span class=line><span class=cl>- 完成後顯示結果摘要
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>使用 shadcn/ui 的表單元件，並實作狀態管理。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=webapp-testing>webapp-testing</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>webapp-testing</td></tr><tr><td><strong>功能簡介</strong></td><td>使用 Playwright 與本機網頁應用程式互動和測試的工具包。支援驗證前端功能、除錯 UI 行為、擷取瀏覽器截圖及檢視瀏覽器日誌。</td></tr><tr><td><strong>使用時機</strong></td><td>(1) 測試本機網頁應用程式 (2) 驗證前端功能 (3) 除錯 UI 行為 (4) 擷取瀏覽器截圖 (5) 檢視瀏覽器日誌</td></tr><tr><td><strong>技術</strong></td><td>Python Playwright</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：測試登入功能</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 webapp-testing skill 測試我的登入頁面：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>測試網址：http://localhost:3000/login
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>測試情境：
+</span></span><span class=line><span class=cl>1. 正確帳號密碼登入 → 應導向首頁
+</span></span><span class=line><span class=cl>2. 錯誤密碼登入 → 應顯示錯誤訊息
+</span></span><span class=line><span class=cl>3. 空白欄位送出 → 應顯示驗證錯誤
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請擷取每個步驟的截圖，並回報測試結果。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：驗證表單功能</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請測試我的產品訂購表單：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>網址：http://localhost:5173/order
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>測試項目：
+</span></span><span class=line><span class=cl>1. 填寫所有欄位並送出 → 檢查成功訊息
+</span></span><span class=line><span class=cl>2. 數量欄位輸入負數 → 檢查驗證是否阻止
+</span></span><span class=line><span class=cl>3. 檢查價格計算是否正確（單價 × 數量）
+</span></span><span class=line><span class=cl>4. 檢查表單送出後是否清空欄位
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請記錄瀏覽器控制台日誌，報告任何錯誤。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=mcp-builder>mcp-builder</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>mcp-builder</td></tr><tr><td><strong>功能簡介</strong></td><td>建立高品質 MCP (Model Context Protocol) 伺服器的指南，使 LLM 能透過設計良好的工具與外部服務互動。</td></tr><tr><td><strong>使用時機</strong></td><td>建立 MCP 伺服器以整合外部 API 或服務，無論使用 Python (FastMCP) 或 Node/TypeScript (MCP SDK)</td></tr><tr><td><strong>支援語言</strong></td><td>Python, TypeScript</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立 API 整合的 MCP 伺服器</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 mcp-builder skill 建立一個整合公司內部 API 的 MCP 伺服器：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>API 端點：https://api.company.com/v1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需要的工具：
+</span></span><span class=line><span class=cl>1. get_employees - 取得員工列表
+</span></span><span class=line><span class=cl>2. get_employee_details - 取得特定員工詳情
+</span></span><span class=line><span class=cl>3. create_leave_request - 建立請假申請
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>使用 Python FastMCP 實作，包含錯誤處理和認證機制。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立資料庫查詢 MCP 伺服器</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一個可查詢 PostgreSQL 資料庫的 MCP 伺服器：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需要的工具：
+</span></span><span class=line><span class=cl>1. query_sales - 查詢銷售資料（支援日期範圍篩選）
+</span></span><span class=line><span class=cl>2. query_inventory - 查詢庫存狀態
+</span></span><span class=line><span class=cl>3. get_report - 產生每日報表
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>使用 TypeScript MCP SDK 實作。
+</span></span><span class=line><span class=cl>包含連線池管理和查詢參數化以防止 SQL 注入。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=創意設計類-skills>創意設計類 Skills</h2><h3 id=algorithmic-art>algorithmic-art</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>algorithmic-art</td></tr><tr><td><strong>功能簡介</strong></td><td>使用 p5.js 建立演算法藝術，具有種子隨機性和互動式參數探索。建立原創演算法藝術，避免複製現有藝術家作品以避免版權問題。</td></tr><tr><td><strong>使用時機</strong></td><td>使用者要求使用程式碼創作藝術、生成藝術、演算法藝術、流場或粒子系統</td></tr><tr><td><strong>輸出格式</strong></td><td>.md（哲學）、.html（互動檢視器）、.js（生成演算法）</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立流場藝術</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 algorithmic-art skill 建立一個流場（flow field）生成藝術作品：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>概念：模擬海洋波浪的流動感
+</span></span><span class=line><span class=cl>色彩：深藍色漸層到淺綠色
+</span></span><span class=line><span class=cl>互動：滑鼠移動影響流場方向
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請先產生演算法哲學文件，再建立可互動的 p5.js 作品。
+</span></span><span class=line><span class=cl>粒子數量可調整，支援匯出靜態圖片。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立粒子系統藝術</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一個以「城市夜景」為主題的粒子系統藝術：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>視覺概念：
+</span></span><span class=line><span class=cl>- 粒子代表城市燈光
+</span></span><span class=line><span class=cl>- 不同大小和亮度的粒子
+</span></span><span class=line><span class=cl>- 緩慢飄動和閃爍效果
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>互動功能：
+</span></span><span class=line><span class=cl>- 點擊產生新的粒子爆發
+</span></span><span class=line><span class=cl>- 按空白鍵切換色彩主題
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>輸出包含哲學說明文件和可執行的 HTML 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=canvas-design>canvas-design</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>canvas-design</td></tr><tr><td><strong>功能簡介</strong></td><td>使用設計哲學在 .png 和 .pdf 文件中建立精美視覺藝術。建立原創視覺設計，不複製現有藝術家作品以避免版權問題。</td></tr><tr><td><strong>使用時機</strong></td><td>使用者要求建立海報、藝術作品、設計或其他靜態作品</td></tr><tr><td><strong>輸出格式</strong></td><td>.md, .pdf, .png</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：設計活動海報</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 canvas-design skill 設計一張公司年度尾牙活動海報：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>活動資訊：
+</span></span><span class=line><span class=cl>- 活動名稱：2025 新春饗宴
+</span></span><span class=line><span class=cl>- 日期：2025 年 1 月 25 日（六）
+</span></span><span class=line><span class=cl>- 時間：18:00
+</span></span><span class=line><span class=cl>- 地點：台北國際會議中心
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>設計風格：喜氣洋洋但不俗氣，融合現代設計元素
+</span></span><span class=line><span class=cl>色彩：紅金配色
+</span></span><span class=line><span class=cl>尺寸：A3（297mm × 420mm）
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>輸出 PNG 和 PDF 格式。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立產品視覺圖</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請設計一張展示我們新產品的社群媒體視覺圖：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>產品：無線藍牙耳機
+</span></span><span class=line><span class=cl>用途：Instagram 貼文
+</span></span><span class=line><span class=cl>尺寸：1080 × 1080 像素
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>設計要求：
+</span></span><span class=line><span class=cl>- 極簡科技風格
+</span></span><span class=line><span class=cl>- 白色背景配深色產品
+</span></span><span class=line><span class=cl>- 突顯「40小時續航」和「主動降噪」兩大特色
+</span></span><span class=line><span class=cl>- 包含品牌 logo 位置
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>先產生設計哲學，再輸出成品。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=企業應用類-skills>企業應用類 Skills</h2><h3 id=brand-guidelines>brand-guidelines</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>brand-guidelines</td></tr><tr><td><strong>功能簡介</strong></td><td>將 Anthropic 官方品牌色彩和字型套用到任何可受益於 Anthropic 外觀風格的 artifact。</td></tr><tr><td><strong>使用時機</strong></td><td>需要套用品牌色彩或風格指南、視覺格式化或公司設計標準時</td></tr></tbody></table></div><p><strong>品牌規格：</strong></p><div class=table-wrapper><table><thead><tr><th>類型</th><th>顏色/字型</th></tr></thead><tbody><tr><td>主要深色</td><td><code>#141413</code></td></tr><tr><td>主要淺色</td><td><code>#faf9f5</code></td></tr><tr><td>中灰色</td><td><code>#b0aea5</code></td></tr><tr><td>淺灰色</td><td><code>#e8e6dc</code></td></tr><tr><td>強調橘</td><td><code>#d97757</code></td></tr><tr><td>強調藍</td><td><code>#6a9bcc</code></td></tr><tr><td>強調綠</td><td><code>#788c5d</code></td></tr><tr><td>標題字型</td><td>Poppins</td></tr><tr><td>內文字型</td><td>Lora</td></tr></tbody></table></div><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：套用品牌風格到簡報</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請將 Anthropic 品牌風格套用到我剛建立的產品簡報：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需要調整：
+</span></span><span class=line><span class=cl>- 將所有標題改為 Poppins 字型
+</span></span><span class=line><span class=cl>- 將內文改為 Lora 字型
+</span></span><span class=line><span class=cl>- 背景使用 #faf9f5（淺色）
+</span></span><span class=line><span class=cl>- 標題使用 #141413（深色）
+</span></span><span class=line><span class=cl>- 強調文字使用 #d97757（橘色）
+</span></span><span class=line><span class=cl>- 圖表使用品牌色系
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請保持整體視覺一致性。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立品牌化文件範本</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一個符合 Anthropic 品牌規範的報告範本：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需求：
+</span></span><span class=line><span class=cl>- 封面頁包含 logo 預留位置
+</span></span><span class=line><span class=cl>- 正文使用品牌字型組合
+</span></span><span class=line><span class=cl>- 頁首使用深色背景、淺色文字
+</span></span><span class=line><span class=cl>- 章節標題使用橘色強調
+</span></span><span class=line><span class=cl>- 表格使用品牌色系
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>輸出為可重複使用的 Word 範本。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=internal-comms>internal-comms</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>internal-comms</td></tr><tr><td><strong>功能簡介</strong></td><td>協助撰寫各種內部溝通文件的資源集，使用公司習慣的格式。</td></tr><tr><td><strong>使用時機</strong></td><td>撰寫各種內部溝通文件：3P 更新（進度/計劃/問題）、公司通訊、FAQ 回覆、狀態報告、主管更新、專案更新、事件報告</td></tr></tbody></table></div><p><strong>支援的文件類型：</strong></p><ul><li>3P 更新（Progress, Plans, Problems）</li><li>公司通訊</li><li>FAQ 回覆</li><li>狀態報告</li><li>主管更新</li><li>專案更新</li><li>事件報告</li></ul><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：撰寫週報 3P 更新</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請幫我撰寫本週的團隊 3P 更新報告：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Progress（進度）：
+</span></span><span class=line><span class=cl>- 完成新版登入模組開發
+</span></span><span class=line><span class=cl>- 修復了 15 個 bug
+</span></span><span class=line><span class=cl>- 完成用戶測試第一輪
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Plans（計劃）：
+</span></span><span class=line><span class=cl>- 下週進行效能優化
+</span></span><span class=line><span class=cl>- 準備 UAT 環境
+</span></span><span class=line><span class=cl>- 撰寫技術文件
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Problems（問題）：
+</span></span><span class=line><span class=cl>- 第三方 API 回應過慢影響效能
+</span></span><span class=line><span class=cl>- 需要額外一名 QA 資源
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請使用公司標準格式，語氣專業簡潔。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：撰寫事件報告</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請協助撰寫系統事件報告：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>事件概述：
+</span></span><span class=line><span class=cl>- 發生時間：2025/1/3 14:30
+</span></span><span class=line><span class=cl>- 影響範圍：線上購物車功能無法使用
+</span></span><span class=line><span class=cl>- 持續時間：45 分鐘
+</span></span><span class=line><span class=cl>- 影響用戶數：約 2,000 人
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>根本原因：資料庫連線池耗盡
+</span></span><span class=line><span class=cl>處理過程：重啟服務、擴增連線池上限
+</span></span><span class=line><span class=cl>預防措施：增加監控告警、優化連線管理
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請使用事件報告標準格式，包含時間線和改善計劃。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=協作工具類-skills>協作工具類 Skills</h2><h3 id=doc-coauthoring>doc-coauthoring</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>doc-coauthoring</td></tr><tr><td><strong>功能簡介</strong></td><td>引導使用者透過結構化工作流程共同撰寫文件。協助使用者有效率地傳遞背景資訊、透過迭代精煉內容，並驗證文件對讀者有效。</td></tr><tr><td><strong>使用時機</strong></td><td>使用者提到撰寫文件、建立提案、草擬規格或類似文件任務時。適用於：文件、提案、技術規格、決策文件或類似結構化內容</td></tr></tbody></table></div><p><strong>工作流程階段：</strong></p><ol><li>背景收集（提問、資訊傾倒）</li><li>精煉與結構（澄清問題、腦力激盪、策展、缺口檢查、草稿、迭代精煉）</li><li>讀者測試（預測讀者問題、測試、額外檢查、修復）</li></ol><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：共同撰寫技術規格文件</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>我需要撰寫一份新功能的技術規格文件，請使用 doc-coauthoring 工作流程協助我：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>功能背景：
+</span></span><span class=line><span class=cl>- 功能名稱：用戶偏好設定同步
+</span></span><span class=line><span class=cl>- 目的：讓用戶在多裝置間同步設定
+</span></span><span class=line><span class=cl>- 目標讀者：後端工程師、前端工程師
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>我有一些初步想法但還不完整，請先問我釐清問題，
+</span></span><span class=line><span class=cl>然後幫我建立結構化的技術規格文件。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：協作撰寫提案文件</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請用 doc-coauthoring 工作流程幫我撰寫一份預算提案：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>背景：
+</span></span><span class=line><span class=cl>- 我們部門想申請採購新的開發工具
+</span></span><span class=line><span class=cl>- 預算約 50 萬
+</span></span><span class=line><span class=cl>- 需要說服財務長核准
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請先收集我的想法，協助我組織論點，
+</span></span><span class=line><span class=cl>最後幫我測試這份提案是否能回答審核者可能的問題。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=擴展工具類-skills>擴展工具類 Skills</h2><h3 id=skill-creator>skill-creator</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>skill-creator</td></tr><tr><td><strong>功能簡介</strong></td><td>建立有效 Skills 的指南。用於建立新 Skill（或更新現有 Skill），以專業知識、工作流程或工具整合擴展 Claude 的能力。</td></tr><tr><td><strong>使用時機</strong></td><td>使用者想要建立新 Skill 或更新現有 Skill 時</td></tr></tbody></table></div><p><strong>Skill 建立流程：</strong></p><ol><li>透過具體範例理解 Skill</li><li>規劃可重複使用的 Skill 內容</li><li>初始化 Skill</li><li>編輯 Skill</li><li>打包 Skill</li><li>迭代改進</li></ol><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立公司專屬 Skill</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 skill-creator 協助我建立一個公司專屬的 Skill：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Skill 名稱：company-proposal-writer
+</span></span><span class=line><span class=cl>功能：協助撰寫符合公司格式的商業提案
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>需要包含：
+</span></span><span class=line><span class=cl>- 公司提案標準結構
+</span></span><span class=line><span class=cl>- 文字風格指南
+</span></span><span class=line><span class=cl>- 常用術語表
+</span></span><span class=line><span class=cl>- 範例提案片段
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請引導我完成整個建立流程，從定義到打包。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立工作流程自動化 Skill</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請幫我建立一個程式碼審查 Skill：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Skill 名稱：code-review-assistant
+</span></span><span class=line><span class=cl>用途：自動化程式碼審查流程
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>功能需求：
+</span></span><span class=line><span class=cl>1. 檢查程式碼風格一致性
+</span></span><span class=line><span class=cl>2. 識別常見安全漏洞
+</span></span><span class=line><span class=cl>3. 建議效能優化
+</span></span><span class=line><span class=cl>4. 產生審查報告
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>支援語言：Python, JavaScript
+</span></span><span class=line><span class=cl>輸出：Markdown 格式的審查報告
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>請建立完整的 SKILL.md 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h3 id=theme-factory>theme-factory</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>theme-factory</td></tr><tr><td><strong>功能簡介</strong></td><td>為 artifacts 套用主題樣式的工具包。這些 artifacts 可以是投影片、文件、報告、HTML 登陸頁面等。提供 10 種預設主題及自訂主題產生功能。</td></tr><tr><td><strong>使用時機</strong></td><td>需要為簡報或其他 artifact 套用一致的專業樣式時</td></tr></tbody></table></div><p><strong>可用主題：</strong></p><ol><li>Ocean Depths（海洋深度）- 專業沉穩的海洋主題</li><li>Sunset Boulevard（日落大道）- 溫暖活潑的日落色彩</li><li>Forest Canopy（森林冠層）- 自然接地的大地色調</li><li>Modern Minimalist（現代極簡）- 乾淨當代的灰階</li><li>Golden Hour（黃金時刻）- 豐富溫暖的秋季色盤</li><li>Arctic Frost（北極霜凍）- 涼爽清脆的冬季主題</li><li>Desert Rose（沙漠玫瑰）- 柔和精緻的塵土色調</li><li>Tech Innovation（科技創新）- 大膽現代的科技美學</li><li>Botanical Garden（植物園）- 清新有機的花園色彩</li><li>Midnight Galaxy（午夜銀河）- 戲劇性的宇宙深色調</li></ol><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：選擇並套用預設主題</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 theme-factory 為我的簡報套用主題：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>1. 先顯示所有可用主題讓我選擇
+</span></span><span class=line><span class=cl>2. 我想要「Tech Innovation」科技創新主題
+</span></span><span class=line><span class=cl>3. 將此主題套用到附件的簡報檔案
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>確保所有投影片的色彩和字型保持一致。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立自訂主題</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>現有主題都不符合需求，請幫我建立自訂主題：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>主題名稱：Corporate Professional（企業專業）
+</span></span><span class=line><span class=cl>色彩需求：
+</span></span><span class=line><span class=cl>- 主色：深藍色（代表穩重）
+</span></span><span class=line><span class=cl>- 次要色：淺灰色（乾淨背景）
+</span></span><span class=line><span class=cl>- 強調色：金色（高端感）
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>字型需求：
+</span></span><span class=line><span class=cl>- 標題：現代無襯線字體
+</span></span><span class=line><span class=cl>- 內文：易讀的襯線字體
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>建立後套用到我的年度報告簡報。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=媒體工具類-skills>媒體工具類 Skills</h2><h3 id=slack-gif-creator>slack-gif-creator</h3><div class=table-wrapper><table><thead><tr><th>項目</th><th>內容</th></tr></thead><tbody><tr><td><strong>名稱</strong></td><td>slack-gif-creator</td></tr><tr><td><strong>功能簡介</strong></td><td>建立針對 Slack 最佳化的動態 GIF 的知識和工具。提供限制條件、驗證工具和動畫概念。</td></tr><tr><td><strong>使用時機</strong></td><td>使用者要求製作 Slack 用動態 GIF，例如「幫我做一個 X 做 Y 的 GIF 用於 Slack」</td></tr></tbody></table></div><p><strong>動畫類型：</strong></p><ul><li>搖晃/震動</li><li>脈動/心跳</li><li>彈跳</li><li>旋轉</li><li>淡入/淡出</li><li>滑動</li><li>縮放</li><li>爆炸/粒子爆發</li></ul><p><strong>提示詞範例：</strong></p><blockquote><p><strong>範例 1：建立慶祝用 GIF</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請使用 slack-gif-creator 建立一個 Slack 慶祝 GIF：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>內容：文字「恭喜達標！🎉」搭配彩帶爆炸效果
+</span></span><span class=line><span class=cl>動畫：文字彈跳進入 + 彩帶粒子爆發
+</span></span><span class=line><span class=cl>顏色：金色和紅色為主
+</span></span><span class=line><span class=cl>尺寸：符合 Slack 最佳顯示（128x128 或更大）
+</span></span><span class=line><span class=cl>檔案大小：控制在 1MB 以內
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>適用場景：團隊達成銷售目標時發送。
+</span></span></code></pre></td></tr></table></div></div></blockquote><blockquote><p><strong>範例 2：建立等待中 GIF</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>請建立一個「處理中」的 Slack GIF：
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>畫面：三個圓點循環閃爍
+</span></span><span class=line><span class=cl>動畫：依序脈動效果
+</span></span><span class=line><span class=cl>顏色：公司藍色調（#0066CC）
+</span></span><span class=line><span class=cl>速度：平穩舒適，不要太快
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>用途：在等待回覆時使用，表示正在處理。
+</span></span><span class=line><span class=cl>輸出最佳化的 GIF 檔案。
+</span></span></code></pre></td></tr></table></div></div></blockquote><hr><h2 id=使用建議>使用建議</h2><h3 id=選擇-skill-的判斷準則>選擇 Skill 的判斷準則</h3><div class=table-wrapper><table><thead><tr><th>任務類型</th><th>建議 Skill</th></tr></thead><tbody><tr><td>處理 Word 文件</td><td>docx</td></tr><tr><td>處理 PDF 文件</td><td>pdf</td></tr><tr><td>建立簡報</td><td>pptx</td></tr><tr><td>試算表工作</td><td>xlsx</td></tr><tr><td>建立網頁 UI</td><td>frontend-design</td></tr><tr><td>複雜網頁元件</td><td>web-artifacts-builder</td></tr><tr><td>測試網頁應用</td><td>webapp-testing</td></tr><tr><td>建立 MCP 伺服器</td><td>mcp-builder</td></tr><tr><td>程式碼藝術</td><td>algorithmic-art</td></tr><tr><td>海報/視覺設計</td><td>canvas-design</td></tr><tr><td>套用品牌風格</td><td>brand-guidelines</td></tr><tr><td>內部溝通文件</td><td>internal-comms</td></tr><tr><td>共同撰寫文件</td><td>doc-coauthoring</td></tr><tr><td>建立新 Skill</td><td>skill-creator</td></tr><tr><td>套用主題樣式</td><td>theme-factory</td></tr><tr><td>Slack GIF</td><td>slack-gif-creator</td></tr></tbody></table></div><hr><h2 id=參考資源>參考資源</h2><ul><li><a class=link href=https://github.com/anthropics/skills target=_blank rel=noopener>Anthropic Skills Repository</a></li><li><a class=link href=https://support.claude.com/en/articles/12512180-using-skills-in-claude target=_blank rel=noopener>Using Skills in Claude</a></li><li><a class=link href=https://support.claude.com/en/articles/12512198-how-to-create-custom-skills target=_blank rel=noopener>How to Create Custom Skills</a></li><li><a class=link href=https://code.claude.com/docs/en/skills target=_blank rel=noopener>Claude Code Skills Documentation</a></li></ul><hr><p><em>文件產生自 Anthropic 官方 GitHub Skills Repository</em></p></section><footer class=article-footer></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=[".main-article",".widget--toc"];e.forEach(e=>{const t=document.querySelector(e);t&&renderMathInElement(t,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})})</script></article><footer class=site-footer><section class=copyright>&copy;
+2025 -
+222223 ZenNote</section><section class=powerby></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

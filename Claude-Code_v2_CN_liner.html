@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropic 团队如何使用 Claude Code | Anthropic Documentation</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Anthropic Brand Colors */
+        :root {
+            --color-dark: #141413;
+            --color-light: #faf9f5;
+            --color-mid-gray: #b0aea5;
+            --color-light-gray: #e8e6dc;
+            --color-orange: #d97757;
+            --color-blue: #6a9bcc;
+            --color-green: #788c5d;
+            
+            --font-heading: 'Poppins', 'Noto Sans SC', sans-serif;
+            --font-body: 'Lora', 'Noto Sans SC', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-light);
+            color: var(--color-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Selection */
+        ::selection {
+            background: var(--color-orange);
+            color: var(--color-light);
+        }
+        
+        /* Header with gradient background */
+        .header {
+            background: linear-gradient(135deg, var(--color-dark) 0%, #2a2a28 100%);
+            color: var(--color-light);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(217, 119, 87, 0.1), transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(106, 155, 204, 0.1), transparent 50%);
+            pointer-events: none;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .claude-highlight {
+            color: var(--color-orange);
+            position: relative;
+        }
+        
+        .subtitle {
+            font-family: var(--font-body);
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--color-light-gray);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-weight: 400;
+        }
+        
+        .metadata {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--color-mid-gray);
+        }
+        
+        .badge {
+            background: rgba(250, 249, 245, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(250, 249, 245, 0.2);
+        }
+        
+        /* Container */
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* Sidebar TOC */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 12px rgba(20, 20, 19, 0.08);
+        }
+        
+        .toc-title {
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--color-mid-gray);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        .toc-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .toc-link {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-dark);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .toc-link:hover {
+            background: var(--color-light-gray);
+            border-left-color: var(--color-orange);
+            padding-left: 1.25rem;
+        }
+        
+        /* Main Content */
+        .main-content {
+            min-width: 0;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--color-orange);
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+            font-weight: 600;
+            color: var(--color-dark);
+            margin: 2.5rem 0 1.5rem;
+        }
+        
+        h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-dark);
+            margin: 2rem 0 1rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 60%;
+            background: var(--color-blue);
+            border-radius: 2px;
+        }
+        
+        p {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(20, 20, 19, 0.85);
+            margin-bottom: 1.5rem;
+        }
+        
+        strong {
+            color: var(--color-dark);
+            font-weight: 600;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+            color: rgba(20, 20, 19, 0.85);
+        }
+        
+        li::marker {
+            color: var(--color-orange);
+        }
+        
+        /* Cards for subsections */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 12px rgba(20, 20, 19, 0.06);
+            border-left: 4px solid var(--color-green);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(20, 20, 19, 0.1);
+        }
+        
+        /* Impact highlights */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(217, 119, 87, 0.05), rgba(217, 119, 87, 0.02));
+            border-left: 4px solid var(--color-orange);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, rgba(106, 155, 204, 0.05), rgba(106, 155, 204, 0.02));
+            border-left: 4px solid var(--color-blue);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(20, 20, 19, 0.06);
+        }
+        
+        thead {
+            background: var(--color-dark);
+            color: var(--color-light);
+        }
+        
+        th {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            padding: 1.25rem;
+            text-align: left;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+        
+        td {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--color-light-gray);
+            font-family: var(--font-body);
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tbody tr:hover {
+            background: var(--color-light-gray);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-dark);
+            color: var(--color-mid-gray);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer p {
+            color: var(--color-mid-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1rem;
+            }
+            
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 3rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Anthropic 团队如何使用 <span class="claude-highlight">Claude Code</span></h1>
+            <p class="subtitle">不同团队在日常工作中的实战经验与最佳实践</p>
+            <div class="metadata">
+                <span class="badge">文档版本 2.0</span>
+                <span class="badge">来源: Anthropic 官方文档</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Sidebar TOC -->
+        <aside class="sidebar">
+            <div class="toc-title">目录</div>
+            <nav class="toc-nav">
+                <a href="#overview" class="toc-link">概述</a>
+                <a href="#product" class="toc-link">产品开发</a>
+                <a href="#security" class="toc-link">安全工程</a>
+                <a href="#inference" class="toc-link">推理</a>
+                <a href="#finetuning" class="toc-link">微调</a>
+                <a href="#rl" class="toc-link">强化学习工程</a>
+                <a href="#legal" class="toc-link">法务</a>
+                <a href="#summary" class="toc-link">摘要</a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content" id="content">
+            <!-- Content will be loaded here -->
+            <section id="overview">
+<h2>概述</h2>
+<p>本文档记录 Anthropic 不同团队在日常工作中如何使用 Claude Code，包括主要使用场景、工作流程、团队影响及最佳技巧。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="product">
+<h2>Claude Code 用于产品开发</h2>
+<h3>团队概述</h3>
+<p>产品开发团队负责构建 Claude 及其界面。他们广泛使用 Claude Code 进行日常开发任务。</p>
+<h3>主要使用场景</h3>
+<h4>功能文件工作流程</h4>
+<p>团队创建包含逐步指令的功能文件，定义新功能的预期行为。Claude Code 通过测试驱动开发 (TDD) 协助创建和解读这些文件，先编写预期行为，然后 Claude 持续执行直到满足所有标准。</p>
+<h4>端到端测试</h4>
+<p>Claude Code 编写用户故事并自动为复杂功能创建端到端测试用例，捕捉人工可能遗漏的边缘情况。团队将测试视为验证代码正确性的主要产出，可更快识别并修正问题。</p>
+<h4>全栈开发</h4>
+<p>处理面向客户的变更时，Claude Code 生成新的 React 组件、更新数据库架构并修改 API 路由。团队提供明确定义的子任务，让 Claude 跨全栈实现。</p>
+<h4>代码审查协助</h4>
+<p>Claude Code 协助识别边缘情况和重构机会，指出潜在陷阱或建议改进，使代码更健壮且易于维护。</p>
+<div class="highlight-box"><h3>团队影响</h3>
+</div>
+<ul>
+<li><strong>加速开发周期</strong>：过去需要数周的功能，现在通过 Claude Code 处理重复性实现工作可更快完成。</li>
+<li><strong>通过测试提升代码质量</strong>：使用 Claude Code 的测试驱动开发可捕捉自身错误，尤其是请 Claude 先生成测试再编写代码时特别有效。</li>
+</ul>
+<div class="tip-box"><h3>产品开发团队最佳技巧</h3>
+</div>
+<h4>培养任务分类直觉</h4>
+<p>学习区分适合异步处理的任务（周边功能、原型制作）与需要同步监督的任务（核心业务逻辑、关键修复）。产品边缘的抽象任务可使用「自动接受模式」处理，核心功能则需更密切监督。</p>
+<h4>编写清晰详细的提示</h4>
+<p>当组件名称或功能相似时，请求时务必极度具体。提示越详细，越能信任 Claude 独立工作，避免对代码库错误部分进行意外变更。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="security">
+<h2>Claude Code 用于安全工程</h2>
+<h3>团队概述</h3>
+<p>安全工程团队专注于保护软件开发生命周期、供应链安全及开发环境安全。他们广泛使用 Claude Code 编写和调试代码。</p>
+<h3>主要使用场景</h3>
+<h4>复杂基础设施调试</h4>
+<p>处理事件时，他们将堆栈跟踪和文档提供给 Claude Code，要求追踪代码库中的控制流程。这显著缩短生产问题的解决时间，原本需要 10-15 分钟手动扫描代码的问题，现在约 5 分钟即可理解。</p>
+<h4>Terraform 代码审查与分析</h4>
+<p>对于需要安全批准的基础设施变更，他们将 Terraform 计划复制到 Claude Code 中询问「这会做什么？我会后悔吗？」这创造更紧密的反馈循环，让安全团队更容易快速审查和批准基础设施变更，减少开发流程中的瓶颈。</p>
+<h4>文档综合与运行手册</h4>
+<p>他们让 Claude Code 摄取多个文档来源，创建 markdown 运行手册、故障排除指南和概述。他们使用这些精简文档作为调试实际问题的上下文，创造比搜索完整知识库更高效的工作流程。</p>
+<h4>测试驱动开发工作流程</h4>
+<p>他们现在不再使用之前的「设计文档 → 临时代码 → 重构 → 放弃测试」模式，而是向 Claude Code 请求伪代码，引导其进行测试驱动开发，并定期检视以在卡住时引导方向，产生更可靠且可测试的代码。</p>
+<h4>上下文切换与项目新手入职</h4>
+<p>贡献现有项目（如「dependant」安全批准工作流程网页应用）时，他们使用 Claude Code 编写、审查和执行以 markdown 编写并存放在代码库中的规格，使有意义的贡献从数周缩短至数天。</p>
+<div class="highlight-box"><h3>团队影响</h3>
+</div>
+<ul>
+<li><strong>缩短事件解决时间</strong>：原本需要 10-15 分钟手动扫描代码的基础设施调试，现在约需 5 分钟。</li>
+<li><strong>改善安全审查周期</strong>：安全批准的 Terraform 代码审查速度大幅加快，消除开发人员等待安全团队批准时的阻塞。</li>
+<li><strong>强化跨功能贡献</strong>：团队成员可在数天内（而非数周的上下文构建）有意义地贡献项目。</li>
+<li><strong>更佳文档工作流程</strong>：从多个来源综合的故障排除指南和运行手册创造更高效的调试流程。</li>
+</ul>
+<div class="tip-box"><h3>安全工程团队最佳技巧</h3>
+</div>
+<h4>广泛使用自定义斜杠命令</h4>
+<p>安全工程使用整个 monorepo 中 50% 的自定义斜杠命令实现。这些自定义命令简化特定工作流程并加速重复任务。</p>
+<h4>让 Claude 先行动</h4>
+<p>不再针对代码片段提出针对性问题，他们现在告诉 Claude Code「边做边提交你的工作」，让它自主工作并定期检视，产生更全面的解决方案。</p>
+<h4>善用于文档编写</h4>
+<p>除了编程外，Claude Code 擅长综合文档和创建结构化输出。他们提供写作样例和格式偏好，获得可立即在 Slack、Google Docs 和其他工具中使用的文档，避免界面切换疲劳。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="inference">
+<h2>Claude Code 用于推理</h2>
+<h3>团队概述</h3>
+<p>推理团队管理存储信息的内存系统，在 Claude 读取提示并生成响应时运作。团队成员，尤其是机器学习新手，可广泛使用 Claude Code 弥补知识差距并加速工作。</p>
+<h3>主要使用场景</h3>
+<h4>代码库理解与新手入职</h4>
+<p>团队高度依赖 Claude Code 在加入复杂代码库时快速理解架构。不再手动搜索 GitHub 仓库，他们询问 Claude 找出哪些文件调用特定功能，在数秒内获得结果，而非询问同事或手动搜索。</p>
+<h4>包含边缘情况的单元测试生成</h4>
+<p>编写核心功能后，他们请 Claude 编写完整的单元测试。Claude 自动包含遗漏的边缘情况，原本需要大量心力的工作在数分钟内完成，如同一个可审查的编程助手。</p>
+<h4>机器学习概念解释</h4>
+<p>没有机器学习背景的团队成员依赖 Claude 解释模型特定功能和配置。原本需要一小时 Google 搜索和阅读文档的工作现在只需 10-20 分钟，研究时间减少 80%。</p>
+<h4>跨语言代码转换</h4>
+<p>在不同编程语言中测试功能时，他们解释要测试的内容，Claude 以所需语言（如 Rust）编写逻辑，无需仅为测试目的而学习新语言。</p>
+<h4>命令回忆与 Kubernetes 管理</h4>
+<p>不再记忆复杂的 Kubernetes 命令，他们询问 Claude 正确语法，如「如何获取所有 pod 或部署状态」，并获得基础设施工作所需的确切命令。</p>
+<div class="highlight-box"><h3>团队影响</h3>
+</div>
+<ul>
+<li><strong>加速机器学习概念学习</strong>：研究时间减少 80% — 原本需要一小时 Google 搜索的工作现在只需 10-20 分钟。</li>
+<li><strong>更快的代码库导航</strong>：可在数秒内找到相关文件并理解系统架构，而非询问同事。</li>
+<li><strong>完整测试覆盖</strong>：Claude 自动生成包含边缘情况的单元测试，减轻心理负担同时维持代码质量。</li>
+<li><strong>消除语言障碍</strong>：可在不熟悉的语言如 Rust 中实现功能，无需学习该语言。</li>
+</ul>
+<div class="tip-box"><h3>推理团队最佳技巧</h3>
+</div>
+<h4>先测试知识库功能</h4>
+<p>尝试提问各种问题，看 Claude 能否比 Google 搜索更快回答。如果更快且更准确，它就是工作流程中有价值的节省时间工具。</p>
+<h4>从代码生成开始</h4>
+<p>给 Claude 具体指示并请它编写逻辑，然后验证正确性。这有助于在用于更复杂任务前建立对工具能力的信任。</p>
+<h4>用于编写测试</h4>
+<p>让 Claude 编写单元测试可显著减轻日常开发工作的压力。善用此功能维持代码质量，无需花时间手动思考所有测试用例。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="finetuning">
+<h2>Claude Code 用于微调</h2>
+<h3>团队概述</h3>
+<p>微调团队通过配对的输入输出示例训练模型，使其在特定任务上表现更好。</p>
+<h3>主要使用场景</h3>
+<h4>管理实验跟踪</h4>
+<p>他们使用 Claude Code 检查训练运行、迭代代码、管理多个实验的大量日志。团队处理多个活跃运行，Claude Code 可通过读取日志文件快速导航训练仪表板，按需识别特定运行特征或错误。</p>
+<h4>构建实验工具</h4>
+<p>团队成员需要专门的实验工具（如手动审查示例的「氛围检查」界面）时，Claude Code 可在单一会话中协助构建这些工具。非开发人员可为特定工作流程创建自己的脚本，访问过去需要工程支持的能力。</p>
+<h4>代码审查与调试</h4>
+<p>Claude Code 协助捕捉数据集准备脚本和实验配置中的问题。团队使用它调试分布式训练挑战，并在开始长时间训练作业前验证数据管道正确运行。</p>
+<h4>指标分析与可视化</h4>
+<p>他们使用 Claude Code 生成性能指标并创建比较图表。对于研究报告，他们可快速生成显示模型性能差异的条形图，无需深入了解数据可视化库即可快速将性能可视化。</p>
+<div class="highlight-box"><h3>团队影响</h3>
+</div>
+<ul>
+<li><strong>更快的实验迭代</strong>：可在单一会话中构建自定义工具，而非等待工程支持。</li>
+<li><strong>缩短调试时间</strong>：在昂贵的训练运行前捕捉数据管道问题。</li>
+<li><strong>工具民主化</strong>：非开发人员可创建自己的工作流程和分析脚本。</li>
+<li><strong>加速报告准备</strong>：快速生成性能可视化和指标。</li>
+</ul>
+<div class="tip-box"><h3>微调团队最佳技巧</h3>
+</div>
+<h4>创建特定实验工作区</h4>
+<p>为不同实验保持独立的 Claude Code 会话，允许特定上下文的协助，避免项目间混淆。</p>
+<h4>长时间运行前验证</h4>
+<p>在开始多小时训练运行前，务必使用 Claude Code 验证数据管道和配置，避免代价高昂的错误。</p>
+<h4>用于临时分析</h4>
+<p>需要从实验日志或指标快速获得见解时，描述您寻找的内容，让 Claude Code 解析并摘要相关信息。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="rl">
+<h2>Claude Code 用于强化学习工程</h2>
+<h3>团队概述</h3>
+<p>强化学习 (RL) 工程团队致力于 RLHF（人类反馈强化学习）及相关训练系统。</p>
+<h3>主要使用场景</h3>
+<h4>状态检视工具</h4>
+<p>他们使用 Claude Code 追踪训练作业中的问题。面对包含模型状态的日志时，Claude Code 可快速解析并识别问题，减少手动检查训练配置和输出的时间。</p>
+<h4>多进程协调</h4>
+<p>RL 系统需要跨多个进程协调。Claude Code 协助管理和调试分布式系统，编写脚本监控进程健康并识别协调失败。</p>
+<h4>指标管道开发</h4>
+<p>他们使用 Claude Code 为实验构建指标管道，自动化提取和可视化训练信号如奖励曲线和损失值。</p>
+<h4>测试框架开发</h4>
+<p>Claude Code 协助为 RL 系统组件编写测试框架，确保在生产部署前验证训练稳定性和预期行为。</p>
+<div class="highlight-box"><h3>团队影响</h3>
+</div>
+<ul>
+<li><strong>更快的调试周期</strong>：复杂分布式系统问题识别更快。</li>
+<li><strong>自动化监控</strong>：追踪训练健康的脚本无需手动监督。</li>
+<li><strong>改善测试覆盖</strong>：更全面地测试 RL 组件。</li>
+<li><strong>简化指标</strong>：自动化提取和可视化训练信号。</li>
+</ul>
+<div class="tip-box"><h3>强化学习工程团队最佳技巧</h3>
+</div>
+<h4>针对特定模式自定义 Claude.md 文件</h4>
+<p>在 Claude.md 文件中添加指示，防止 Claude 重复工具调用错误，例如告诉它「执行 pytest 不要 run，不要不必要地 cd — 直接使用正确路径」。这显著提升一致性。</p>
+<h4>使用检查点密集工作流程</h4>
+<p>随着 Claude 进行变更定期提交工作，以便在实验失败时轻松回滚。这使开发采用更具实验性的方法而无风险。</p>
+<h4>先尝试一次性，再协作</h4>
+<p>给 Claude 一个快速提示，让它先尝试完整实现。如果成功（约三分之一的概率），您节省了大量时间。如果不成功，再切换到更协作、引导式的方法。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="legal">
+<h2>Claude Code 用于法务</h2>
+<h3>团队概述</h3>
+<p>法务团队通过实验发现 Claude Code 的潜力，以及学习 Anthropic 产品提供的渴望。此外，一位团队成员有个人使用场景，与为家人创建无障碍工具及展示该技术对非开发人员力量的工作原型相关。</p>
+<h3>主要使用场景</h3>
+<h4>为家庭成员创建自定义无障碍解决方案</h4>
+<p>团队成员为因医疗诊断而有说话困难的家庭成员构建沟通助手。仅一小时内，他们使用原生语音转文字创建一个预测文字应用，建议响应并使用语音库朗读，解决语言治疗师推荐的现有无障碍工具中的缺口。</p>
+<h4>法务部门工作流程自动化</h4>
+<p>他们创建原型「电话树」系统协助团队成员联系 Anthropic 的适当律师，展示法务部门如何无需传统开发资源即可为常见任务构建自定义工具。</p>
+<h4>团队协调工具</h4>
+<p>经理构建了 G Suite 应用，自动化每周团队更新并追踪跨产品的法律审查状态，律师可通过简单按钮单击快速标记需要审查的项目，而非管理电子表格。</p>
+<h4>快速原型验证解决方案</h4>
+<p>他们使用 Claude Code 快速构建可向领域专家展示的功能原型（如向 UCSF 专家展示无障碍工具），在投入更多时间前验证想法并识别现有解决方案。</p>
+<h3>工作风格与影响</h3>
+<h4>在 Claude.ai 规划，在 Claude Code 构建</h4>
+<p>他们采用两步骤流程，先在 Claude.ai 头脑风暴和规划，再移至 Claude Code 实现，要求它放慢速度逐步工作，而非一次输出所有内容。</p>
+<h4>视觉优先方法</h4>
+<p>他们经常使用截图向 Claude Code 展示界面的期望外观，然后根据视觉反馈迭代，而非以文字描述功能。</p>
+<h4>原型驱动创新</h4>
+<p>他们强调克服分享「傻」或「玩具」原型的恐惧，因为这些展示可激励他人看到他们未曾考虑的可能性。</p>
+<h4>安全与合规意识</h4>
+<p>身为产品律师，他们立即识别深度 MCP 集成的安全影响，注意到当 AI 工具访问更敏感系统时，保守的安全态势将造成障碍。</p>
+<h4>合规工具优先</h4>
+<p>他们主张随着 AI 能力扩展快速构建合规工具，认识到创新与风险管理之间的平衡。</p>
+<div class="tip-box"><h3>法务部门最佳技巧</h3>
+</div>
+<h4>先在 Claude.ai 充分规划</h4>
+<p>使用 Claude 的对话界面在移至 Claude Code 前充分发展整个想法。然后请 Claude 将所有内容摘要为逐步实现提示。</p>
+<h4>渐进且视觉化地工作</h4>
+<p>请 Claude Code 放慢速度一次实现一个步骤，以便可以复制粘贴而不会不知所措。大量使用截图展示界面的期望外观。</p>
+<h4>尽管不完美也分享原型</h4>
+<p>克服隐藏「玩具」项目或未完成工作的冲动 — 分享原型帮助他人看到可能性，并激发通常不互动的部门之间的创新。</p>
+<hr class="my-8">
+</section>
+
+
+<section id="summary">
+<h2>摘要：跨团队关键主题</h2>
+<h3>常见模式</h3>
+<ol>
+<li><strong>测试驱动开发</strong>：多个团队强调先编写测试</li>
+<li><strong>检查点工作流程</strong>：定期提交使安全实验成为可能</li>
+<li><strong>自定义配置</strong>：团队针对特定需求自定义 Claude.md</li>
+<li><strong>文档综合</strong>：使用 Claude 创建运行手册和指南</li>
+<li><strong>原型分享</strong>：克服分享早期阶段工作的不情愿</li>
+</ol>
+<h3>时间节省</h3>
+<h3>通用技巧</h3>
+<ul>
+<li>在协作引导前先尝试一次性</li>
+<li>使用具体详细的提示</li>
+<li>善用 Claude 于编程以外的文档编写</li>
+<li>在依赖输出前通过验证建立信任</li>
+<li>为重复工作流程创建自定义命令</li>
+</ul>
+<hr class="my-8">
+<p>*文档生成自：How-Anthropic-teams-use-Claude-Code_v2.pdf*</p>
+</section>
+
+
+        </main>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Anthropic | 文档版本 2.0 | Anthropic Brand Design</p>
+        <p style="margin-top: 0.5rem;">来源: How-Anthropic-teams-use-Claude-Code_v2.pdf</p>
+    </footer>
+    
+</body>
+</html>

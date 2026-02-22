@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Text Card Editor | Zennote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Create beautiful text cards for Instagram, Facebook, and social media. Free online tool." />
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Klee+One&family=M+PLUS+2:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="ui.css" />
+</head>
+
+<body>
+    <div class="app">
+        <main class="preview-area">
+            <div id="card-preview" class="preview-card">
+                <div class="card-text" id="card-text-preview">請輸入卡片文字</div>
+                <div class="card-tag" id="card-tag-preview" aria-hidden="true"></div>
+            </div>
+        </main>
+
+        <aside class="control-panel">
+            <h2 class="panel-title">Text Card Editor</h2>
+
+            <div class="form-group">
+                <label class="label" for="card-text">Card Text</label>
+                <textarea id="card-text" class="textarea" placeholder="請輸入卡片文字"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="label">Style</label>
+                <div id="style-selector" class="style-grid" aria-label="Style selector"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="font-selector">Font（字體）</label>
+                <select id="font-selector" class="select"></select>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="font-size">Font Size（字體大小）</label>
+                <div class="range-row">
+                    <input type="range" id="font-size" min="24" max="56" value="32" />
+                    <div class="range-value" id="font-size-value">32px</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label">Text Alignment（文字對齊）</label>
+                <div class="letter-spacing-group" role="group" aria-label="Text alignment">
+                    <button type="button" class="align-btn" data-align="left" title="靠左">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M0 2h16v2H0V2zm0 4h10v2H0V6zm0 4h16v2H0v-2zm0 4h10v2H0v-2z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="align-btn is-active" data-align="center" title="置中">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M0 2h16v2H0V2zm3 4h10v2H3V6zm0 4h10v2H3v-2zm0 4h10v2H3v-2z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="align-btn" data-align="right" title="靠右">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M0 2h16v2H0V2zm6 4h10v2H6V6zm0 4h10v2H6v-2zm0 4h10v2H6v-2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="radius">Radius（卡片圓角角度）</label>
+                <div class="range-row">
+                    <input type="range" id="radius" min="8" max="28" value="20" />
+                    <div class="range-value" id="radius-value">20px</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="padding">Padding（邊框間距）</label>
+                <div class="range-row">
+                    <input type="range" id="padding" min="24" max="64" value="32" />
+                    <div class="range-value" id="padding-value">32px</div>
+                </div>
+            </div>
+
+            <button id="export-btn" class="btn-primary">Download PNG</button>
+        </aside>
+    </div>
+
+    <!-- html-to-image library for PNG export -->
+    <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

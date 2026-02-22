@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有錢人想的和你不一樣 - 互動式書摘</title>
+    <meta name="description" content="《有錢人想的和你不一樣》專業書摘 - 探索財富思維的17個關鍵差異">
+    
+    <!-- Google Fonts - Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --secondary: #34a853;
+            --accent: #fbbc04;
+            --danger: #ea4335;
+            --bg-dark: #0f1419;
+            --bg-card: #1a1f2e;
+            --bg-card-hover: #232938;
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: rgba(0, 0, 0, 0.3);
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #2d1b4e 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--text-secondary);
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .info-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .bento-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bento-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-5px);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .bento-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .bento-card.large {
+            grid-column: span 2;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .icon-gradient-1 { background: var(--gradient-1); }
+        .icon-gradient-2 { background: var(--gradient-2); }
+        .icon-gradient-3 { background: var(--gradient-3); }
+        .icon-gradient-4 { background: var(--gradient-4); }
+        .icon-gradient-5 { background: var(--gradient-5); }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .card-content h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .card-content ul, .card-content ol {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card-content li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+
+        .card-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Wealth Files Grid */
+        .wealth-files {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .wealth-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .wealth-item:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            transform: translateX(5px);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .wealth-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 700;
+            margin-right: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        /* Action Steps */
+        .action-steps {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .action-step {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: rgba(67, 233, 123, 0.1);
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .action-step:hover {
+            background: rgba(67, 233, 123, 0.15);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Limitations */
+        .limitation-item {
+            padding: 1.2rem;
+            background: rgba(234, 67, 53, 0.1);
+            border-radius: 12px;
+            border-left: 4px solid var(--danger);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .limitation-item:hover {
+            background: rgba(234, 67, 53, 0.15);
+            transform: translateX(5px);
+        }
+
+        .limitation-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, rgba(251, 188, 4, 0.1) 0%, rgba(234, 67, 53, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 5px solid var(--accent);
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .tab.active {
+            background: var(--gradient-1);
+            border-color: transparent;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .bento-card.large {
+                grid-column: span 1;
+            }
+
+            header {
+                padding: 3rem 1.5rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .wealth-files {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>有錢人想的和你不一樣</h1>
+        <p class="subtitle">Secrets of the Millionaire Mind</p>
+        <div class="book-info">
+            <div class="info-item">
+                <div class="info-icon">✍️</div>
+                <span>作者：T. Harv Eker</span>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">📖</div>
+                <span>譯者：陳佳伶</span>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🏢</div>
+                <span>大塊文化出版</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('overview')">📚 核心概念</div>
+            <div class="tab" onclick="switchTab('blueprint')">🧠 金錢藍圖</div>
+            <div class="tab" onclick="switchTab('wealth-files')">💎 17個財富檔案</div>
+            <div class="tab" onclick="switchTab('action')">🚀 實踐行動</div>
+            <div class="tab" onclick="switchTab('limitations')">⚠️ 局限性分析</div>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="bento-grid">
+                <div class="bento-card large fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-1">💡</div>
+                        <h2 class="card-title">核心論點</h2>
+                    </div>
+                    <div class="card-content">
+                        <p>個人的財務狀況並非由外在環境或知識技能決定，而是由內在的<strong>「金錢藍圖」</strong>所主導。</p>
+                        <div class="quote-box">
+                            金錢藍圖是個人對金錢的深層信念、思維模式和行為習慣的總和，它形成於童年時期的語言設定、模仿和特殊事件，並持續影響成年後的財務決策與結果。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-2">🎯</div>
+                        <h2 class="card-title">實現程序</h2>
+                    </div>
+                    <div class="card-content">
+                        <p style="font-size: 1.2rem; text-align: center; margin: 2rem 0; color: var(--text-primary);">
+                            <strong>設定 → 想法 → 感覺 → 行動 = 結果</strong>
+                        </p>
+                        <p>這個程序說明了我們的內在設定如何影響最終的財務結果。</p>
+                    </div>
+                </div>
+
+                <div class="bento-card fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-3">📊</div>
+                        <h2 class="card-title">書籍結構</h2>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>第一篇：</strong>金錢藍圖的形成與改變</li>
+                            <li><strong>第二篇：</strong>17個財富檔案的詳細解析</li>
+                            <li><strong>實踐部分：</strong>具體行動建議與練習</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blueprint Tab -->
+        <div id="blueprint" class="tab-content">
+            <div class="bento-grid">
+                <div class="bento-card large fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-4">🧩</div>
+                        <h2 class="card-title">金錢藍圖的三種形成方式</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="wealth-files">
+                            <div class="wealth-item">
+                                <span class="wealth-number">1</span>
+                                <strong>語言設定</strong>
+                                <p style="margin-top: 0.5rem; font-size: 0.95rem;">成長過程中聽到的關於金錢、財富和有錢人的話語</p>
+                            </div>
+                            <div class="wealth-item">
+                                <span class="wealth-number">2</span>
+                                <strong>模仿</strong>
+                                <p style="margin-top: 0.5rem; font-size: 0.95rem;">觀察父母或監護人對金錢的態度和行為</p>
+                            </div>
+                            <div class="wealth-item">
+                                <span class="wealth-number">3</span>
+                                <strong>特殊事件</strong>
+                                <p style="margin-top: 0.5rem; font-size: 0.95rem;">童年時期與金錢相關的重大情感體驗</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-5">🔄</div>
+                        <h2 class="card-title">改變金錢藍圖的四步驟</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="action-steps">
+                            <div class="action-step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <strong>察覺</strong>
+                                    <p style="margin-top: 0.3rem; font-size: 0.95rem;">意識到自己的金錢信念</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <strong>理解</strong>
+                                    <p style="margin-top: 0.3rem; font-size: 0.95rem;">了解這些信念的來源</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <strong>畫清界限</strong>
+                                    <p style="margin-top: 0.3rem; font-size: 0.95rem;">區分過去與現在的自己</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">4</div>
+                                <div>
+                                    <strong>重新設定</strong>
+                                    <p style="margin-top: 0.3rem; font-size: 0.95rem;">建立新的金錢信念系統</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wealth Files Tab -->
+        <div id="wealth-files" class="tab-content">
+            <div class="bento-card large fade-in">
+                <div class="card-header">
+                    <div class="card-icon icon-gradient-1">💎</div>
+                    <h2 class="card-title">17個財富檔案 - 有錢人與窮人的思維差異</h2>
+                </div>
+                <div class="card-content">
+                    <p style="margin-bottom: 2rem;">這些財富檔案涵蓋了對待責任、目標、機會、人際關係、自我價值、金錢管理和個人成長等方面的不同心態。</p>
+                    
+                    <div class="wealth-files">
+                        <div class="wealth-item">
+                            <span class="wealth-number">1</span>
+                            <strong>責任感</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人為自己的人生負責<br>窮人扮演受害者</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">2</span>
+                            <strong>目標導向</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人專注於機會<br>窮人專注於障礙</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">3</span>
+                            <strong>金錢管理</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人善於管理與投資金錢<br>窮人不善管理或逃避管理</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">4</span>
+                            <strong>持續學習</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人持續學習成長<br>窮人認為自己已經知道一切</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">5</span>
+                            <strong>思維模式</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人擁有豐盛思維<br>窮人擁有匱乏思維</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">6</span>
+                            <strong>行動力</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人即使恐懼也會行動<br>窮人讓恐懼阻止行動</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">7</span>
+                            <strong>人際網絡</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人與成功者為伍<br>窮人與負面的人為伍</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">8</span>
+                            <strong>自我推銷</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人善於推銷自己<br>窮人厭惡推銷和宣傳</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">9</span>
+                            <strong>問題處理</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人比問題更強大<br>窮人比問題更渺小</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">10</span>
+                            <strong>收入模式</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人專注於淨值<br>窮人專注於工作收入</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">11</span>
+                            <strong>金錢運用</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人讓錢為他們工作<br>窮人為錢工作</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">12</span>
+                            <strong>選擇思維</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人選擇「兩者都要」<br>窮人選擇「二選一」</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">13</span>
+                            <strong>財富焦點</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人專注於淨資產<br>窮人專注於工作所得</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">14</span>
+                            <strong>金錢態度</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人很會管理金錢<br>窮人很會搞丟金錢</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">15</span>
+                            <strong>工作動機</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人讓錢努力為他們工作<br>窮人努力工作賺錢</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">16</span>
+                            <strong>行動時機</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人就算害怕也會行動<br>窮人讓恐懼擋住了他們</p>
+                        </div>
+                        <div class="wealth-item">
+                            <span class="wealth-number">17</span>
+                            <strong>成長心態</strong>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">有錢人持續學習成長<br>窮人認為他們已經知道一切</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Tab -->
+        <div id="action" class="tab-content">
+            <div class="bento-grid">
+                <div class="bento-card large fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-4">🚀</div>
+                        <h2 class="card-title">實踐與行動號召</h2>
+                    </div>
+                    <div class="card-content">
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem;">作者強調，<strong>僅靠閱讀無法帶來改變</strong>，必須將書中的原則轉化為行動。</p>
+                        
+                        <div class="action-steps">
+                            <div class="action-step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <strong>實踐行動練習</strong>
+                                    <p style="margin-top: 0.3rem;">執行書中的行動練習和宣言，將理論轉化為實際行動</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <strong>反覆閱讀</strong>
+                                    <p style="margin-top: 0.3rem;">多次閱讀本書以深化理解，內化財富思維模式</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <strong>持續成長</strong>
+                                    <p style="margin-top: 0.3rem;">致力於持續的自我成長和教育，不斷提升自己</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">4</div>
+                                <div>
+                                    <strong>分享傳播</strong>
+                                    <p style="margin-top: 0.3rem;">將所學與更多人分享，共同提升財富意識</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card fade-in">
+                    <div class="card-header">
+                        <div class="card-icon icon-gradient-5">💪</div>
+                        <h2 class="card-title">關鍵工具</h2>
+                    </div>
+                    <div class="card-content">
+                        <h3>宣言的力量</h3>
+                        <p>書中介紹了使用「宣言」作為促成改變的強效工具。透過重複宣告新的信念，可以逐步改寫內在的金錢藍圖。</p>
+                        
+                        <div class="quote-box" style="margin-top: 1.5rem;">
+                            每個財富檔案都配有具體的行動建議，旨在幫助讀者將有錢人的思維模式內化並付諸實踐，從而改變財務結果。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limitations Tab -->
+        <div id="limitations" class="tab-content">
+            <div class="bento-card large fade-in">
+                <div class="card-header">
+                    <div class="card-icon icon-gradient-2">⚠️</div>
+                    <h2 class="card-title">批判性思考：本書的局限性</h2>
+                </div>
+                <div class="card-content">
+                    <p style="margin-bottom: 2rem;">在閱讀本書時，建議讀者保持批判性思維，注意以下幾個潛在的局限性：</p>
+                    
+                    <div class="limitation-item">
+                        <div class="limitation-title">1. 過度簡化歸因</div>
+                        <p>本書將複雜的財務成功主要歸因於個人心態和思維模式，可能低估了系統性因素（如經濟結構、社會不平等、運氣、出生環境）對個人財富累積的重大影響。</p>
+                    </div>
+
+                    <div class="limitation-item">
+                        <div class="limitation-title">2. 樣本偏差與普遍性</div>
+                        <p>作者的觀點和策略很大程度上基於其個人經驗及其培訓學員的案例。這些樣本可能具有自選擇性，其方法的普遍有效性和在不同文化、經濟背景下的適用性有待更廣泛的實證檢驗。</p>
+                    </div>
+
+                    <div class="limitation-item">
+                        <div class="limitation-title">3. 「吸引力法則」的爭議</div>
+                        <p>書中隱含的「意念創造現實」的觀點（如「你所專注的事情會擴大」），屬於「吸引力法則」範疇。該理論缺乏科學共識，其有效性存在爭議，可能被批評為過於唯心或導致對結構性問題的忽視。</p>
+                    </div>
+
+                    <div class="limitation-item">
+                        <div class="limitation-title">4. 商業推廣傾向</div>
+                        <p>書中多次提及並推薦作者本人的收費培訓課程，這在一定程度上削弱了內容的客觀性，使其帶有明顯的商業推廣色彩。</p>
+                    </div>
+
+                    <div class="limitation-item">
+                        <div class="limitation-title">5. 對「富有」定義的單一性</div>
+                        <p>全書主要從財務角度定義「成功」和「富有」，對於幸福、健康、人際關係、社會貢獻等多元化的成功維度探討不足。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+            
+            // Trigger fade-in animation for new content
+            const fadeElements = document.querySelectorAll(`#${tabName} .fade-in`);
+            fadeElements.forEach((el, index) => {
+                el.classList.remove('visible');
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 100);
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+        // Add smooth hover effects to wealth items
+        document.querySelectorAll('.wealth-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(5px) scale(1.02)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

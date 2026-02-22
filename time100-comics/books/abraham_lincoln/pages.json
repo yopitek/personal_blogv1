@@ -1,0 +1,91 @@
+{
+    "slug": "abraham_lincoln",
+    "title": {
+        "en": "Abraham Lincoln",
+        "zh-TW": "亞伯拉罕·林肯",
+        "zh-CN": "亚伯拉罕·林肯",
+        "ja": "エイブラハム・リンカーン",
+        "fr": "Abraham Lincoln"
+    },
+    "subtitle": {
+        "en": "The Great Emancipator",
+        "zh-TW": "偉大的解放者",
+        "zh-CN": "伟大的解放者",
+        "ja": "偉大なる解放者",
+        "fr": "Le Grand Émancipateur"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": 1,
+            "key": "p01",
+            "image": "images/p01.png",
+            "audio_key": "p01",
+            "style": "full"
+        },
+        {
+            "id": 2,
+            "key": "p02",
+            "image": "images/p02.png",
+            "audio_key": "p02",
+            "style": "full"
+        },
+        {
+            "id": 3,
+            "key": "p03",
+            "image": "images/p03.png",
+            "audio_key": "p03",
+            "style": "full"
+        },
+        {
+            "id": 4,
+            "key": "p04",
+            "image": "images/p04.png",
+            "audio_key": "p04",
+            "style": "full"
+        },
+        {
+            "id": 5,
+            "key": "p05",
+            "image": "images/p05.png",
+            "audio_key": "p05",
+            "style": "full"
+        },
+        {
+            "id": 6,
+            "key": "p06",
+            "image": "images/p06.png",
+            "audio_key": "p06",
+            "style": "full"
+        },
+        {
+            "id": 7,
+            "key": "p07",
+            "image": "images/p07.png",
+            "audio_key": "p07",
+            "style": "full"
+        },
+        {
+            "id": 8,
+            "key": "p08",
+            "image": "images/p08.png",
+            "audio_key": "p08",
+            "style": "full"
+        },
+        {
+            "id": 9,
+            "key": "p09",
+            "image": "images/p09.png",
+            "audio_key": "p09",
+            "style": "full"
+        },
+        {
+            "id": 10,
+            "key": "p10",
+            "image": "images/p10.png",
+            "audio_key": "p10",
+            "style": "full"
+        }
+    ]
+}
