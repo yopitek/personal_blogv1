@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> 超詳細圖解台灣麻將規則</title>
+<style>
+ @font-face {
+  font-family: 'Huninn';
+  src: url('assets/huninn.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+ }
+</style>
+<style>
+ /* ── tokens ──────────────────────────────────────────────────────────── */
+ :root {
+ --green-dark: #1a4a2e;
+ --green-mid: #2a6040;
+ --green-light: #e8f5ed;
+ --gold: #f0b429;
+ --red: #d42b2b;
+ --blue: #2563eb;
+ --orange: #ea580c;
+ --purple: #7c3aed;
+ --text-main: #1a1a1a;
+ --text-soft: #555;
+ --bg: #fafafa;
+ --border: #ccc;
+ --code-bg: #f4f4f4;
+ --radius: 8px;
+ --font-disp: 'Huninn', 'Noto Sans TC', sans-serif;
+ --font-body: 'Huninn', 'Noto Sans TC', sans-serif;
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body {
+ font-family: var(--font-body);
+ color: var(--text-main);
+ background: var(--bg);
+ line-height: 1.7;
+ font-size: 16px;
+ }
+ /* ── layout ─────────────────────────────────────────────────────────── */
+ .page-wrap { max-width: 860px; margin: 0 auto; padding: 32px 24px 80px; }
+ /* ── header ─────────────────────────────────────────────────────────── */
+ .doc-header {
+ text-align: center;
+ padding: 40px 0 32px;
+ border-bottom: 3px solid var(--green-dark);
+ margin-bottom: 40px;
+ }
+ .doc-title {
+ font-family: var(--font-disp);
+ font-size: 2.4rem;
+ color: var(--green-dark);
+ margin-bottom: 10px;
+ }
+ .doc-subtitle { color: var(--text-soft); font-size: 0.95rem; }
+ /* ── toc ─────────────────────────────────────────────────────────────── */
+ .toc {
+ background: var(--green-light);
+ border-left: 5px solid var(--green-dark);
+ border-radius: var(--radius);
+ padding: 20px 28px;
+ margin-bottom: 40px;
+ }
+ .toc h2 { font-size: 1.1rem; color: var(--green-dark); margin-bottom: 12px; }
+ .toc ol { padding-left: 20px; }
+ .toc li { margin: 6px 0; }
+ .toc a { color: var(--green-dark); text-decoration: none; font-weight: 500; }
+ .toc a:hover { text-decoration: underline; }
+ /* ── chapter headings ────────────────────────────────────────────────── */
+ .chapter {
+ margin-bottom: 64px;
+ padding-top: 16px;
+ border-top: 2px solid var(--green-dark);
+ }
+ .chapter-title {
+ font-family: var(--font-disp);
+ font-size: 1.8rem;
+ color: var(--green-dark);
+ background: var(--green-light);
+ padding: 12px 20px;
+ border-radius: var(--radius);
+ margin-bottom: 24px;
+ }
+ h3 {
+ font-size: 1.25rem;
+ color: var(--green-mid);
+ margin: 28px 0 10px;
+ padding-bottom: 4px;
+ border-bottom: 1px solid #cce5d8;
+ }
+ h4 {
+ font-size: 1.05rem;
+ color: var(--text-main);
+ margin: 20px 0 8px;
+ font-weight: 700;
+ }
+ p { margin-bottom: 12px; }
+ strong { color: var(--green-dark); }
+ /* ── tables ─────────────────────────────────────────────────────────── */
+ .rules-table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 0.93rem; }
+ .rules-table th {
+ background: var(--green-dark);
+ color: #fff;
+ padding: 9px 12px;
+ text-align: left;
+ font-weight: 700;
+ }
+ .rules-table td { padding: 8px 12px; border-bottom: 1px solid #ddd; vertical-align: top; }
+ .rules-table tr:nth-child(even) td { background: var(--green-light); }
+ .rules-table tr:hover td { background: #d4ede0; }
+ /* ── lists ───────────────────────────────────────────────────────────── */
+ ul, ol { padding-left: 24px; margin-bottom: 14px; }
+ li { margin: 5px 0; }
+ /* ── callout boxes ────────────────────────────────────────────────────── */
+ .note {
+ background: #fff8e1;
+ border-left: 4px solid var(--gold);
+ border-radius: var(--radius);
+ padding: 12px 16px;
+ margin: 14px 0;
+ font-size: 0.92rem;
+ color: #555;
+ }
+ .warn {
+ background: #fef2f2;
+ border-left: 4px solid var(--red);
+ border-radius: var(--radius);
+ padding: 12px 16px;
+ margin: 14px 0;
+ font-size: 0.92rem;
+ }
+ .code-block {
+ background: var(--code-bg);
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ padding: 14px 18px;
+ font-family: monospace;
+ font-size: 0.92rem;
+ white-space: pre-wrap;
+ margin: 14px 0;
+ line-height: 1.6;
+ }
+ /* ── infographic images ───────────────────────────────────────────────── */
+ .infographic-section {
+ margin: 20px 0;
+ }
+ .infographic-section h4 {
+ font-size: 0.9rem;
+ color: var(--text-soft);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ margin-bottom: 12px;
+ }
+ .infographic-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 16px;
+ margin-bottom: 8px;
+ }
+ .infographic-card {
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ overflow: hidden;
+ background: #fff;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+ }
+ .infographic-card img {
+ width: 100%;
+ height: auto;
+ display: block;
+ }
+ .infographic-card .caption {
+ padding: 8px 12px;
+ font-size: 0.83rem;
+ color: var(--text-soft);
+ text-align: center;
+ background: #f9f9f9;
+ border-top: 1px solid #eee;
+ }
+ .infographic-single {
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ overflow: hidden;
+ background: #fff;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+ max-width: 580px;
+ margin: 12px auto;
+ }
+ .infographic-single img { width: 100%; height: auto; display: block; }
+ .infographic-single .caption {
+ padding: 8px 12px;
+ font-size: 0.83rem;
+ color: var(--text-soft);
+ text-align: center;
+ background: #f9f9f9;
+ border-top: 1px solid #eee;
+ }
+ /* ── step list ────────────────────────────────────────────────────────── */
+ .step-list { list-style: none; padding: 0; }
+ .step-list li {
+ display: flex;
+ gap: 14px;
+ align-items: flex-start;
+ padding: 12px 0;
+ border-bottom: 1px dashed #ddd;
+ }
+ .step-num {
+ min-width: 32px;
+ height: 32px;
+ background: var(--green-dark);
+ color: #fff;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 700;
+ font-size: 0.9rem;
+ flex-shrink: 0;
+ margin-top: 2px;
+ }
+ /* ── score badge ─────────────────────────────────────────────────────── */
+ .badge {
+ display: inline-block;
+ padding: 2px 8px;
+ border-radius: 4px;
+ font-size: 0.82rem;
+ font-weight: 700;
+ }
+ .badge-blue { background: #dbeafe; color: var(--blue); }
+ .badge-orange { background: #ffedd5; color: var(--orange); }
+ .badge-purple { background: #ede9fe; color: var(--purple); }
+ .badge-red { background: #fee2e2; color: var(--red); }
+ /* ── formula box ──────────────────────────────────────────────────────── */
+ .formula-box {
+ background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+ color: #fff;
+ border-radius: 12px;
+ padding: 24px 28px;
+ text-align: center;
+ margin: 20px 0;
+ }
+ .formula-box .formula-main { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+ .formula-box .formula-sub { font-size: 0.92rem; opacity: 0.85; }
+ /* ── footer ──────────────────────────────────────────────────────────── */
+ .doc-footer {
+ text-align: center;
+ padding: 32px 0 0;
+ border-top: 1px solid var(--border);
+ margin-top: 60px;
+ color: var(--text-soft);
+ font-size: 0.87rem;
+ }
+ .doc-footer a { color: var(--green-dark); }
+ /* ── print ────────────────────────────────────────────────────────────── */
+ @media print {
+  /* ── base ── */
+  body { background: #fff; font-size: 12px; line-height: 1.6; }
+  .page-wrap { max-width: 100%; padding: 0 4mm; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── header & footer ── */
+  .doc-header { padding: 20px 0 16px; margin-bottom: 20px; }
+  .doc-title { font-size: 1.8rem; }
+  .doc-footer { display: none; }
+
+  /* ── TOC stays together ── */
+  .toc { break-inside: avoid; page-break-inside: avoid; }
+
+  /* ── every chapter starts on a fresh page ── */
+  .chapter {
+   break-before: page;
+   page-break-before: always;
+   padding-top: 8px;
+  }
+
+  /* ── prevent bad breaks inside content ── */
+  h3 { break-after: avoid; page-break-after: avoid; margin-top: 18px; }
+  h4 { break-after: avoid; page-break-after: avoid; margin-top: 12px; }
+
+  .infographic-card,
+  .infographic-single { break-inside: avoid; page-break-inside: avoid; }
+
+  .infographic-section { break-inside: avoid; page-break-inside: avoid; }
+  .infographic-grid {
+   grid-template-columns: repeat(2, 1fr);
+   break-inside: avoid;
+   page-break-inside: avoid;
+  }
+
+  .note, .warn, .formula-box, .code-block {
+   break-inside: avoid; page-break-inside: avoid;
+  }
+
+  /* ── tables: header repeats, rows don't split ── */
+  .rules-table { break-inside: avoid; page-break-inside: avoid; font-size: 0.88rem; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+
+  /* ── tile gallery: stays in one block, smaller tiles for print ── */
+  .tile-gallery { break-inside: avoid; page-break-inside: avoid; gap: 7px; margin: 10px 0 14px; }
+  .tile-card { min-width: 58px; padding: 5px 5px 4px; }
+  .tile-card img { width: 44px; }
+  .tile-card .tile-name { font-size: 0.75rem; }
+  .tile-card .tile-note { font-size: 0.62rem; }
+
+  /* ── step list ── */
+  .step-list li { break-inside: avoid; page-break-inside: avoid; }
+
+  /* ── score badge ── */
+  .badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* ── force colour backgrounds to print ── */
+  .chapter-title, .formula-box, th {
+   -webkit-print-color-adjust: exact;
+   print-color-adjust: exact;
+  }
+ }
+ @media (max-width: 600px) {
+ .doc-title { font-size: 1.6rem; }
+ .infographic-grid { grid-template-columns: 1fr; }
+ }
+/* ── tile gallery ─────────────────────────────────────────────────── */
+.tile-gallery {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+ margin: 16px 0 20px;
+}
+.tile-card {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background: #fff;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ padding: 8px 8px 6px;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+ transition: transform 0.15s, box-shadow 0.15s;
+ cursor: default;
+ min-width: 72px;
+}
+.tile-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 6px 16px rgba(0,0,0,0.13);
+}
+.tile-card img {
+ width: 56px;
+ height: auto;
+ display: block;
+ margin-bottom: 6px;
+ border-radius: 4px;
+}
+.tile-card .tile-name {
+ font-size: 0.82rem;
+ font-weight: 700;
+ color: var(--green-dark);
+ text-align: center;
+}
+.tile-card .tile-note {
+ font-size: 0.68rem;
+ color: var(--text-soft);
+ text-align: center;
+ margin-top: 3px;
+ max-width: 68px;
+ line-height: 1.3;
+}
+.tile-section-label {
+ width: 100%;
+ font-size: 0.78rem;
+ color: var(--text-soft);
+ font-weight: 600;
+ padding-bottom: 4px;
+ border-bottom: 1px dashed #ccc;
+ margin-bottom: 4px;
+ letter-spacing: 0.03em;
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════════ -->
+<header class="doc-header">
+ <div class="doc-title">🀄 台灣麻將規則完整文字版</div>
+</header>
+
+<!-- ══ TOC ════════════════════════════════════════════════════════════════ -->
+<nav class="toc">
+ <h2>📚 目錄</h2>
+ <ol>
+ <li><a href="#ch1">第一章：認識麻將牌</a></li>
+ <li><a href="#ch2">第二章：基本牌型</a></li>
+ <li><a href="#ch3">第三章：遊戲流程</a></li>
+ <li><a href="#ch4">第四章：出牌方式（吃碰槓聽胡）</a></li>
+ <li><a href="#ch5">第五章：胡牌條件</a></li>
+ <li><a href="#ch6">第六章：台數計算</a></li>
+ <li><a href="#index">術語索引</a></li>
+ </ol>
+</nav>
+
+<!-- ══ CH1 ════════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="ch1">
+ <div class="chapter-title">第一章：認識麻將牌</div>
+ <p>台灣麻將共有 <strong>144 張</strong>牌，分為以下幾類：</p>
+
+ <h3>1.1 數字牌（108 張）</h3>
+
+ <h4>萬子（也稱「文字牌」）</h4>
+ <p>牌面上有「萬」字，旁邊有 1 到 9 的數字，顯示為紅色文字。</p>
+ <div class="tile-gallery">
+  <div class="tile-card"><img src="assets/tiles/man-1.png" alt="一萬"><div class="tile-name">一萬</div><div class="tile-note">最小的牌</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-2.png" alt="二萬"><div class="tile-name">二萬</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-3.png" alt="三萬"><div class="tile-name">三萬</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-4.png" alt="四萬"><div class="tile-name">四萬</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-5.png" alt="五萬"><div class="tile-name">五萬</div><div class="tile-note">中心牌</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-6.png" alt="六萬"><div class="tile-name">六萬</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-7.png" alt="七萬"><div class="tile-name">七萬</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-8.png" alt="八萬"><div class="tile-name">八萬</div></div>
+  <div class="tile-card"><img src="assets/tiles/man-9.png" alt="九萬"><div class="tile-name">九萬</div><div class="tile-note">最大的牌</div></div>
+ </div>
+ <p>每種 4 張，共 <strong>36 張</strong>。</p>
+
+ <h4>索子（也稱「條子」）</h4>
+ <p>牌面上有「索」字，旁邊有竹子圖案，表示 1 到 9 的數量。</p>
+ <div class="tile-gallery">
+  <div class="tile-card"><img src="assets/tiles/sou-1.png" alt="一索"><div class="tile-name">一索</div><div class="tile-note">一根竹子</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-2.png" alt="二索"><div class="tile-name">二索</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-3.png" alt="三索"><div class="tile-name">三索</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-4.png" alt="四索"><div class="tile-name">四索</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-5.png" alt="五索"><div class="tile-name">五索</div><div class="tile-note">明星牌</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-6.png" alt="六索"><div class="tile-name">六索</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-7.png" alt="七索"><div class="tile-name">七索</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-8.png" alt="八索"><div class="tile-name">八索</div></div>
+  <div class="tile-card"><img src="assets/tiles/sou-9.png" alt="九索"><div class="tile-name">九索</div><div class="tile-note">最大的牌</div></div>
+ </div>
+ <p>每種 4 張，共 <strong>36 張</strong>。</p>
+
+ <h4>筒子（也稱「餅子」）</h4>
+ <p>牌面上有「筒」字，旁邊有圓形圖案，表示 1 到 9 的數量。</p>
+ <div class="tile-gallery">
+  <div class="tile-card"><img src="assets/tiles/pin-1.png" alt="一筒"><div class="tile-name">一筒</div><div class="tile-note">一個圓形</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-2.png" alt="二筒"><div class="tile-name">二筒</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-3.png" alt="三筒"><div class="tile-name">三筒</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-4.png" alt="四筒"><div class="tile-name">四筒</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-5.png" alt="五筒"><div class="tile-name">五筒</div><div class="tile-note">明星牌</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-6.png" alt="六筒"><div class="tile-name">六筒</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-7.png" alt="七筒"><div class="tile-name">七筒</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-8.png" alt="八筒"><div class="tile-name">八筒</div></div>
+  <div class="tile-card"><img src="assets/tiles/pin-9.png" alt="九筒"><div class="tile-name">九筒</div><div class="tile-note">最大的牌</div></div>
+ </div>
+ <p>每種 4 張，共 <strong>36 張</strong>。</p>
+
+ <h3>1.2 字牌（28 張）</h3>
+ <h4>風牌</h4>
+ <p>代表東南西北四個方向，用於決定座位。</p>
+ <div class="tile-gallery">
+  <div class="tile-card"><img src="assets/tiles/east.png" alt="東風"><div class="tile-name">東風</div><div class="tile-note">第一局莊家</div></div>
+  <div class="tile-card"><img src="assets/tiles/south.png" alt="南風"><div class="tile-name">南風</div><div class="tile-note">東的右手邊</div></div>
+  <div class="tile-card"><img src="assets/tiles/west.png" alt="西風"><div class="tile-name">西風</div><div class="tile-note">東的對面</div></div>
+  <div class="tile-card"><img src="assets/tiles/north.png" alt="北風"><div class="tile-name">北風</div><div class="tile-note">東的左手邊</div></div>
+ </div>
+ <p>每種 4 張，共 <strong>16 張</strong>。</p>
+
+ <h4>三元牌</h4>
+ <div class="tile-gallery">
+  <div class="tile-card"><img src="assets/tiles/chun.png" alt="紅中"><div class="tile-name">紅中</div><div class="tile-note">最常見</div></div>
+  <div class="tile-card"><img src="assets/tiles/hatsu.png" alt="青發"><div class="tile-name">青發</div><div class="tile-note">財運亨通</div></div>
+  <div class="tile-card"><img src="assets/tiles/haku.png" alt="白板"><div class="tile-name">白板</div><div class="tile-note">牌面空白</div></div>
+ </div>
+ <p>每種 4 張，共 <strong>12 張</strong>。</p>
+
+ <h3>1.3 花牌（8 張）</h3>
+ <p>花牌是特別的牌，拿到就要先放出來，從牌尾補牌。</p>
+ <div class="tile-gallery">
+  <div class="tile-section-label">四季牌</div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-spring.png" alt="春"><div class="tile-name">春</div></div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-summer.png" alt="夏"><div class="tile-name">夏</div></div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-autumn.png" alt="秋"><div class="tile-name">秋</div></div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-winter.png" alt="冬"><div class="tile-name">冬</div></div>
+  <div class="tile-section-label" style="margin-top:8px;">四君子</div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-plum.png" alt="梅"><div class="tile-name">梅</div></div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-orchid.png" alt="蘭"><div class="tile-name">蘭</div></div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-bamboo.png" alt="竹"><div class="tile-name">竹</div></div>
+  <div class="tile-card"><img src="assets/tiles/flowers/flower-chrys.png" alt="菊"><div class="tile-name">菊</div></div>
+ </div>
+ <p>每種各 1 張，共 <strong>8 張</strong>。</p>
+
+ <h3>1.4 牌組總覽表</h3>
+ <table class="rules-table">
+ <thead><tr><th>類別</th><th>種類</th><th>每種張數</th><th>合計</th></tr></thead>
+ <tbody>
+ <tr><td>萬子</td><td>9 種</td><td>4 張</td><td>36 張</td></tr>
+ <tr><td>索子</td><td>9 種</td><td>4 張</td><td>36 張</td></tr>
+ <tr><td>筒子</td><td>9 種</td><td>4 張</td><td>36 張</td></tr>
+ <tr><td>風牌</td><td>4 種</td><td>4 張</td><td>16 張</td></tr>
+ <tr><td>三元牌</td><td>3 種</td><td>4 張</td><td>12 張</td></tr>
+ <tr><td>花牌</td><td>8 種</td><td>1 張</td><td>8 張</td></tr>
+ <tr><td><strong>合計</strong></td><td></td><td></td><td><strong>144 張</strong></td></tr>
+ </tbody>
+ </table>
+</section>
+
+<!-- ══ CH2 ════════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="ch2">
+ <div class="chapter-title">第二章：基本牌型</div>
+
+ <h3>2.1 順子 （Sequence）</h3>
+ <p><strong>定義：</strong>同一花色、連續數字的 3 張牌。</p>
+ <p><strong>口訣：</strong>「同色連號三張牌，排成一排叫順子！」</p>
+
+ <div class="infographic-section">
+ <h4>📷 順子範例圖解</h4>
+ <div class="infographic-grid">
+ <div class="infographic-card">
+ <img src="assets/infographics/seq-man-345.png" alt="順子：三四五萬" />
+ <div class="caption">三四五萬（萬字順子）</div>
+ </div>
+ <div class="infographic-card">
+ <img src="assets/infographics/seq-sou-123.png" alt="順子：一二三索" />
+ <div class="caption">一二三索（索子順子）</div>
+ </div>
+ <div class="infographic-card">
+ <img src="assets/infographics/seq-pin-789.png" alt="順子：七八九筒" />
+ <div class="caption">七八九筒（筒子順子）</div>
+ </div>
+ </div>
+ </div>
+
+ <p><strong>正確範例：</strong></p>
+ <ul>
+ <li>一二三萬 ✔（都是萬子，1-2-3 連號）</li>
+ <li>三四五索 ✔（都是索子，3-4-5 連號）</li>
+ <li>七八九筒 ✔（都是筒子，7-8-9 連號）</li>
+ </ul>
+ <p><strong>錯誤範例：</strong></p>
+ <ul>
+ <li>一萬、二索、三筒 ✘（花色不一樣，不能組順子）</li>
+ <li>八萬、九萬、一萬 ✘（數字不能循環，9 之後沒有 1）</li>
+ <li>東風、南風、西風 ✘（字牌沒有數字，不能組順子）</li>
+ </ul>
+ <div class="note">注意：只有數字牌（萬、索、筒）才能組順子；風牌和三元牌不能組順子！</div>
+
+ <h3>2.2 刻子 （Triplet）</h3>
+ <p><strong>定義：</strong>三張完全相同的牌（同花色同數字）。</p>
+ <p><strong>口訣：</strong>「三張一樣稱刻子，花色數字都要同！」</p>
+
+ <div class="infographic-section">
+ <h4>📷 刻子範例圖解</h4>
+ <div class="infographic-grid">
+ <div class="infographic-card">
+ <img src="assets/infographics/tri-east.png" alt="刻子：三張東風" />
+ <div class="caption">三張東風（風牌刻子）</div>
+ </div>
+ <div class="infographic-card">
+ <img src="assets/infographics/tri-chun.png" alt="刻子：三張紅中" />
+ <div class="caption">三張紅中（三元牌刻子）</div>
+ </div>
+ </div>
+ </div>
+
+ <p><strong>正確範例：</strong>三張東風 ✔ ／ 三張紅中 ✔ ／ 三張一筒 ✔ ／ 三張九萬 ✔</p>
+ <p><strong>錯誤範例：</strong>東風、南風、西風 ✘ ／ 一萬、一索、一筒 ✘（花色不同）</p>
+
+ <h3>2.3 槓子 （Quadruplet）</h3>
+ <p><strong>定義：</strong>四張完全相同的牌，在槓牌時才會出現。</p>
+ <p>四張東風 ✔ ／ 四張紅中 ✔ ／ 四張五索 ✔</p>
+
+ <h3>2.4 將牌（眼睛）（Pair）</h3>
+ <p><strong>定義：</strong>兩張完全相同的牌，作為胡牌的「眼睛」。</p>
+ <p><strong>為什麼叫眼睛：</strong>因為胡牌時一定要有一對，像兩個眼睛一樣！</p>
+
+ <div class="infographic-section">
+ <h4>📷 將牌範例圖解</h4>
+ <div class="infographic-single">
+ <img src="assets/infographics/pair-hatsu.png" alt="將牌：兩張青發" />
+ <div class="caption">兩張青發（將牌範例）</div>
+ </div>
+ </div>
+
+ <p>正確範例：兩張青發 ／ 兩張八索 ／ 兩張五萬</p>
+</section>
+
+<!-- ══ CH3 ════════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="ch3">
+ <div class="chapter-title">第三章：遊戲流程</div>
+
+ <div class="infographic-section">
+ <h4>📷 遊戲流程總覽</h4>
+ <div class="infographic-single">
+ <img src="assets/infographics/flow-overview.png" alt="遊戲流程總覽" />
+ <div class="caption">一局麻將的完整流程</div>
+ </div>
+ </div>
+
+ <h3>3.1 步驟一：抓位</h3>
+ <p>決定每個人坐哪個方向（東南西北）。</p>
+ <ul>
+ <li>找出東南西北四張風牌，蓋住洗混</li>
+ <li>一人擲三顆骰子，逆時針數點數</li>
+ <li>數到的人翻開一張風牌，拿到什麼就坐那個位置</li>
+ <li>直到四人都坐定</li>
+ </ul>
+ <div class="infographic-single">
+ <img src="assets/infographics/flow-seating.png" alt="抓位示意圖" />
+ <div class="caption">抓位：決定東南西北座位</div>
+ </div>
+
+ <h3>3.2 步驟二：洗牌、堆牌</h3>
+ <ul>
+ <li>所有牌面朝下，充分洗混</li>
+ <li>每人從中取 36 張牌，面朝下排成<strong>兩層</strong>，橫向共 18 堆</li>
+ <li>四個人的牌牆圍成一個正方形</li>
+ </ul>
+ <div class="infographic-single">
+ <img src="assets/infographics/flow-wall.png" alt="堆牌示意圖" />
+ <div class="caption">堆牌：四面牌牆圍成正方形</div>
+ </div>
+
+ <h3>3.3 步驟三：骰莊</h3>
+ <p>決定誰是這局的「莊家」。</p>
+ <ul>
+ <li>坐東風的人先擲骰子</li>
+ <li>從自己開始，<strong>逆時針</strong>數骰子點數</li>
+ <li>數到的人就是這局的<strong>莊家</strong></li>
+ </ul>
+ <div class="note">莊家的特別之處：莊家贏了可以「連莊」，繼續當莊家。莊家輸了，下一局換左邊的人當莊家。</div>
+
+ <h3>3.4 步驟四：取牌</h3>
+ <ul>
+ <li>由莊家擲骰子，決定從哪裡開始取牌</li>
+ <li>每人依序拿 <strong>16 張</strong>手牌</li>
+ <li>莊家多拿 1 張，一共 <strong>17 張</strong>（這叫「開門」）</li>
+ </ul>
+ <div class="infographic-single">
+ <img src="assets/infographics/flow-deal.png" alt="取牌示意圖" />
+ <div class="caption">取牌：依序拿手牌</div>
+ </div>
+
+ <h3>3.5 步驟五：補花</h3>
+ <ul>
+ <li>如果手牌中有<strong>花牌</strong>，要先亮出來放在自己面前</li>
+ <li>然後從<strong>牌尾</strong>補回一張新牌</li>
+ <li>補到的還是花牌？再亮出，繼續補！</li>
+ </ul>
+ <div class="infographic-single">
+ <img src="assets/infographics/flow-flower.png" alt="補花示意圖" />
+ <div class="caption">補花：花牌亮出後從牌尾補牌</div>
+ </div>
+
+ <h3>3.6 步驟六：出牌循環</h3>
+ <ul>
+ <li>莊家先出一張不要的牌</li>
+ <li>然後按<strong>逆時針</strong>方向輪流：摸一張牌 → 打出一張牌</li>
+ <li>其他人有機會「吃」、「碰」、「槓」打出的牌</li>
+ <li>直到有人<strong>胡牌</strong>，或牌全部摸完（<strong>流局</strong>）</li>
+ </ul>
+</section>
+
+<!-- ══ CH4 ════════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="ch4">
+ <div class="chapter-title">第四章：出牌方式（吃碰槓聽胡）</div>
+
+ <h3>4.1 吃牌</h3>
+ <table class="rules-table">
+ <thead><tr><th>項目</th><th>說明</th></tr></thead>
+ <tbody>
+ <tr><td>觸發條件</td><td>你的「上家」（左手邊的人）打出一張牌，可以和你手上兩張牌湊成順子</td></tr>
+ <tr><td>誰可以吃</td><td>只有上家打的牌才能吃</td></tr>
+ <tr><td>吃完要做什麼</td><td>把三張順子牌攤在桌上（公開），再從手牌打出一張</td></tr>
+ </tbody>
+ </table>
+ <div class="infographic-single">
+ <img src="assets/infographics/action-chi.png" alt="吃牌說明" />
+ <div class="caption">吃牌：上家打出後湊成順子</div>
+ </div>
+ <div class="note">範例：你手上有「四萬」和「五萬」，上家打出「六萬」→ 可以吃！湊成「四五六萬」順子，攤在桌上</div>
+
+ <h3>4.2 碰牌</h3>
+ <table class="rules-table">
+ <thead><tr><th>項目</th><th>說明</th></tr></thead>
+ <tbody>
+ <tr><td>觸發條件</td><td>任何人打出一張牌，你手上有兩張一樣的可以湊成刻子</td></tr>
+ <tr><td>誰可以碰</td><td>任何人打的牌都可以碰（不只是上家）</td></tr>
+ <tr><td>碰完要做什麼</td><td>把三張刻子牌攤在桌上，再從手牌打出一張</td></tr>
+ </tbody>
+ </table>
+ <div class="infographic-single">
+ <img src="assets/infographics/action-pon.png" alt="碰牌說明" />
+ <div class="caption">碰牌：任何人出牌都可碰</div>
+ </div>
+ <div class="note">注意：碰牌的優先順序高於吃牌！如果同時有人想吃、有人想碰，碰牌優先。</div>
+
+ <h3>4.3 槓牌</h3>
+ <table class="rules-table">
+ <thead><tr><th>項目</th><th>說明</th></tr></thead>
+ <tbody>
+ <tr><td>觸發條件</td><td>你手上有三張一樣的牌，有人打出第四張（「大槓」）</td></tr>
+ <tr><td>自摸槓</td><td>你摸到和手上三張相同的牌（「暗槓」或「加槓」）</td></tr>
+ <tr><td>槓完要做什麼</td><td>四張牌攤在桌上，多摸一張牌，再打出一張</td></tr>
+ <tr><td>特別注意</td><td>不可以槓「上家」打的牌</td></tr>
+ </tbody>
+ </table>
+ <div class="infographic-single">
+ <img src="assets/infographics/action-kan.png" alt="槓牌說明" />
+ <div class="caption">槓牌：四張同牌，可多摸一張</div>
+ </div>
+
+ <h3>4.4 聽牌</h3>
+ <p>當你的手牌只差一張就可以胡牌，就叫做「聽牌」。</p>
+ <ul>
+ <li>這時你只需要等別人打出那張牌，或自己摸到</li>
+ <li>聽牌不需要喊出來（台灣規則），但有些玩法要申報</li>
+ </ul>
+ <div class="infographic-single">
+ <img src="assets/infographics/action-tenpai.png" alt="聽牌說明" />
+ <div class="caption">聽牌：只差一張就可胡牌</div>
+ </div>
+
+ <h3>4.5 胡牌</h3>
+ <p><strong>定義：</strong>完成手牌的最後一張，可以胡牌！</p>
+
+ <div class="infographic-grid">
+ <div class="infographic-card">
+ <img src="assets/infographics/action-tsumo.png" alt="自摸說明" />
+ <div class="caption">自摸：自己摸到胡牌，三家都付</div>
+ </div>
+ <div class="infographic-card">
+ <img src="assets/infographics/action-ron.png" alt="放槍說明" />
+ <div class="caption">放槍：別人打出你要的牌，只那人付</div>
+ </div>
+ </div>
+
+ <h3>4.6 過水規則</h3>
+ <p>如果你放棄胡一張牌，<strong>同一輪內</strong>再出現同樣的牌，你就不能胡了！</p>
+ <div class="infographic-single">
+ <img src="assets/infographics/action-kansen.png" alt="過水說明" />
+ <div class="caption">過水：放棄的牌這輪不能再胡</div>
+ </div>
+ <p>這個規則避免有人故意等更大的台數，下一輪解除限制。</p>
+
+ <h3>4.7 流局</h3>
+ <p>當牌牆全部摸完，但沒有人胡牌，就叫「流局」。</p>
+ <div class="infographic-single">
+ <img src="assets/infographics/action-ryuukyoku.png" alt="流局說明" />
+ <div class="caption">流局：牌摸完沒人胡，莊家不換</div>
+ </div>
+ <ul>
+ <li>莊家不換，繼續當莊</li>
+ <li>重新洗牌、堆牌，開始新一局</li>
+ </ul>
+</section>
+
+<!-- ══ CH5 ════════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="ch5">
+ <div class="chapter-title">第五章：胡牌條件</div>
+
+ <h3>5.1 胡牌公式</h3>
+ <div class="formula-box">
+ <div class="formula-main">胡牌 = 5 組牌型（順子或刻子）＋ 1 組將牌（眼睛）</div>
+ <div class="formula-sub">5 × 3 張 ＋ 2 張 ＝ 共 17 張牌才能胡牌</div>
+ </div>
+
+ <table class="rules-table">
+ <thead><tr><th>組成</th><th>內容</th><th>數量</th></tr></thead>
+ <tbody>
+ <tr><td>5 組牌型</td><td>每組可以是順子或刻子</td><td>5 × 3 = 15 張</td></tr>
+ <tr><td>1 對將牌</td><td>兩張一樣的牌</td><td>2 張</td></tr>
+ <tr><td><strong>合計</strong></td><td></td><td><strong>17 張</strong></td></tr>
+ </tbody>
+ </table>
+
+ <h3>5.2 胡牌範例</h3>
+ <div class="code-block">順子 1：三四五萬
+順子 2：一二三索
+刻子 1：三張東風
+刻子 2：三張紅中
+刻子 3：三張九筒
+將牌：兩張青發
+合計 = 5 × 3 + 2 = 17 張 ✅ 可以胡牌！</div>
+
+ <h3>5.3 特殊胡牌型</h3>
+ <table class="rules-table">
+ <thead><tr><th>牌型</th><th>說明</th></tr></thead>
+ <tbody>
+ <tr><td>七對子（七對）</td><td>七對不同的將牌（共 14 張）即可胡牌</td></tr>
+ <tr><td>十三么</td><td>需要一九萬、一九索、一九筒、東南西北中發白各一張加一張配對</td></tr>
+ </tbody>
+ </table>
+ <div class="note">注意：七對子和十三么是選配規則，各地玩法不同，初學者可先跳過。</div>
+</section>
+
+<!-- ══ CH6 ════════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="ch6">
+ <div class="chapter-title">第六章：台數計算</div>
+ <p>「台數」是麻將的計分單位，台數越多，贏的分數越多！台數可以疊加計算！</p>
+
+ <div class="infographic-section">
+ <h4>📷 台數計算公式</h4>
+ <div class="infographic-single">
+ <img src="assets/infographics/score-formula.png" alt="台數計算公式" />
+ <div class="caption">台數計算公式圖解</div>
+ </div>
+ </div>
+
+ <h3>6.1 基本台數（容易得到）</h3>
+ <div class="infographic-single">
+ <img src="assets/infographics/score-basic.png" alt="基本台數說明" />
+ <div class="caption">基本台型：自摸、門清、平胡</div>
+ </div>
+ <table class="rules-table">
+ <thead><tr><th>胡牌名稱</th><th>條件</th><th>台數</th></tr></thead>
+ <tbody>
+ <tr><td>自摸</td><td>自己摸到胡牌</td><td><span class="badge badge-blue">+1 台</span></td><td></td></tr>
+ <tr><td>門清</td><td>全程未吃碰槓</td><td><span class="badge badge-blue">+1 台</span></td><td></td></tr>
+ <tr><td>平胡</td><td>全順子 + 無吃碰槓</td><td><span class="badge badge-blue">+1 台</span></td><td></td></tr>
+ <tr><td>海底撈月</td><td>最後一張牌自摸胡</td><td><span class="badge badge-blue">+1 台</span></td><td></td></tr>
+ </tbody>
+ </table>
+
+ <h3>6.2 特殊台數（較難得到）</h3>
+ <div class="infographic-grid">
+ <div class="infographic-card">
+ <img src="assets/infographics/score-specia.png" alt="特殊台型說明" />
+ <div class="caption">特殊台型：混一色、碰碰胡</div>
+ </div>
+ <div class="infographic-card">
+ <img src="assets/infographics/score-daisan.png" alt="三元牌台型說明" />
+ <div class="caption">三元牌台型：大三元、小三元</div>
+ </div>
+ <div class="infographic-card">
+ <img src="assets/infographics/score-chiitoi.png" alt="七對子說明" />
+ <div class="caption">七對子台型</div>
+ </div>
+ </div>
+ <table class="rules-table">
+ <thead><tr><th>胡牌名稱</th><th>條件</th><th>台數</th><th>難度</th></tr></thead>
+ <tbody>
+ <tr><td>混一色</td><td>同一花色 + 字牌</td><td><span class="badge badge-orange">+3 台</span></td><td>★★☆☆☆</td></tr>
+ <tr><td>碰碰胡</td><td>全部都是刻子</td><td><span class="badge badge-orange">+4 台</span></td><td>★★★☆☆</td></tr>
+ <tr><td>小三元</td><td>中發白 2組刻子 + 1組將</td><td><span class="badge badge-orange">+4 台</span></td><td>★★★☆☆</td></tr>
+ <tr><td>清一色</td><td>同一花色，沒有字牌</td><td><span class="badge badge-purple">+6 台</span></td><td>★★★★☆</td></tr>
+ <tr><td>四暗刻</td><td>四組自摸刻子</td><td><span class="badge badge-purple">+6 台</span></td><td>★★★★☆</td></tr>
+ <tr><td>大三元</td><td>中、發、白各一組刻子</td><td><span class="badge badge-red">+8 台</span></td><td>★★★★★</td></tr>
+ <tr><td>大四喜</td><td>東南西北各一組刻子</td><td><span class="badge badge-red">+8 台</span></td><td>★★★★★</td></tr>
+ <tr><td>天地胡</td><td>第一輪即胡牌</td><td><span class="badge badge-red">+8 台</span></td><td>★★★★★</td></tr>
+ </tbody>
+ </table>
+
+ <h3>6.3 台數計算範例</h3>
+ <div class="code-block">範例一：自摸 + 門清 + 平胡
+→ +1 + +1 + +1 = 3 台
+
+範例二：放槍 + 清一色
+→ +0 + +6 = 6 台
+
+範例三：自摸 + 碰碰胡
+→ +1 + +4 = 5 台</div>
+</section>
+
+<!-- ══ INDEX ═══════════════════════════════════════════════════════════════ -->
+<section class="chapter" id="index">
+ <div class="chapter-title">術語索引</div>
+ <table class="rules-table">
+ <thead><tr><th>術語</th><th>章節</th></tr></thead>
+ <tbody>
+ <tr><td>白板</td><td>第一章</td></tr>
+ <tr><td>補花</td><td>第三章</td></tr>
+ <tr><td>碰牌</td><td>第四章</td></tr>
+ <tr><td>碰碰胡</td><td>第六章</td></tr>
+ <tr><td>平胡</td><td>第六章</td></tr>
+ <tr><td>放槍</td><td>第五章</td></tr>
+ <tr><td>風牌</td><td>第一章</td></tr>
+ <tr><td>大三元</td><td>第六章</td></tr>
+ <tr><td>大四喜</td><td>第六章</td></tr>
+ <tr><td>堆牌</td><td>第三章</td></tr>
+ <tr><td>刻子</td><td>第二章</td></tr>
+ <tr><td>開門</td><td>第三章</td></tr>
+ <tr><td>過水</td><td>第四章</td></tr>
+ <tr><td>槓牌</td><td>第四章</td></tr>
+ <tr><td>花牌</td><td>第一章</td></tr>
+ <tr><td>胡牌</td><td>第四章</td></tr>
+ <tr><td>混一色</td><td>第六章</td></tr>
+ <tr><td>將牌</td><td>第二章</td></tr>
+ <tr><td>聽牌</td><td>第四章</td></tr>
+ <tr><td>筒子</td><td>第一章</td></tr>
+ <tr><td>吃牌</td><td>第四章</td></tr>
+ <tr><td>抓位</td><td>第三章</td></tr>
+ <tr><td>莊家</td><td>第三章</td></tr>
+ <tr><td>骰莊</td><td>第三章</td></tr>
+ <tr><td>四暗刻</td><td>第六章</td></tr>
+ <tr><td>索子</td><td>第一章</td></tr>
+ <tr><td>順子</td><td>第二章</td></tr>
+ <tr><td>萬子</td><td>第一章</td></tr>
+ <tr><td>流局</td><td>第四章</td></tr>
+ <tr><td>清一色</td><td>第六章</td></tr>
+ <tr><td>青發</td><td>第一章</td></tr>
+ <tr><td>取牌</td><td>第三章</td></tr>
+ <tr><td>小三元</td><td>第六章</td></tr>
+ <tr><td>紅中</td><td>第一章</td></tr>
+ <tr><td>自摸</td><td>第五章</td></tr>
+ <tr><td>三元牌</td><td>第一章</td></tr>
+ <tr><td>門清</td><td>第六章</td></tr>
+ </tbody>
+ </table>
+
+ <h3>快速記憶口訣</h3>
+ <table class="rules-table">
+ <thead><tr><th>概念</th><th>口訣</th></tr></thead>
+ <tbody>
+ <tr><td>順子</td><td>「同色連號三張牌，排成一排叫順子！」</td></tr>
+ <tr><td>刻子</td><td>「三張一樣稱刻子，花色數字都要同！」</td></tr>
+ <tr><td>胡牌</td><td>「五組加一對，共十七張，可以胡！」</td></tr>
+ <tr><td>吃碰差別</td><td>「吃要上家，碰可任何人！」</td></tr>
+ <tr><td>槓的好處</td><td>「槓了多摸一張牌！」</td></tr>
+ <tr><td>自摸特別</td><td>「自摸三家都要付！」</td></tr>
+ </tbody>
+ </table>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
+<footer class="doc-footer">
+ <div class="warn" style="text-align:left; max-width:600px; margin: 0 auto 24px;">
+ ⚠️ <strong>重要說明：</strong>本教材強調麻將作為<strong>益智遊戲</strong>的教育價值。
+ 課程中不涉及金錢賭博，所有練習以「台數」為計分單位。
+ 本規則為<strong>台灣麻將規則</strong>，與日本麻將、廣東麻將規則不同。
+ </div>
+ 製作日期：2026 年 3 月</p>
+</footer>
+
+</div><!-- .page-wrap -->
+</body>
+</html>
