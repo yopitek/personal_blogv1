@@ -25,9 +25,9 @@ categories:
 ---
 
 <div style="width:100%; border:1px solid #ddd; border-radius:8px; overflow:hidden; margin: 20px 0;">
-  <iframe src="/mahjong/mahjong_rules.html" width="100%" height="900px" style="border:none; display:block;"></iframe>
+  <iframe src="/mahjong/mahjong_rules" width="100%" height="900px" style="border:none; display:block;"></iframe>
 </div>
 
 <p style="text-align:center; margin-top: 8px;">
-  <a href="/mahjong/mahjong_rules.html" target="_blank" style="display:inline-block; padding:10px 24px; background:#1a4a2e; color:#fff; border-radius:6px; text-decoration:none; font-weight:bold;">▶ 在新視窗開啟完整圖解</a>
+  <a href="/mahjong/mahjong_rules" target="_blank" style="display:inline-block; padding:10px 24px; background:#1a4a2e; color:#fff; border-radius:6px; text-decoration:none; font-weight:bold;">▶ 在新視窗開啟完整圖解</a>
 </p>
