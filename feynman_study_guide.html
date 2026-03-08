@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>費曼學習法 — 學習手冊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:  #0a0a0a;
+    --dark:   #1a1a1a;
+    --mid:    #444;
+    --light:  #888;
+    --pale:   #d0d0d0;
+    --bg:     #f8f8f6;
+    --white:  #ffffff;
+    --font:   'Huninn', 'Noto Sans TC', 'PingFang TC', sans-serif;
+  }
+
+  html { background: #ccc; }
+
+  body {
+    font-family: var(--font);
+    background: #ccc;
+    color: var(--black);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Page wrapper ── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--white);
+    margin: 8mm auto;
+    padding: 14mm 16mm 12mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* ══════════════════════════════
+     PAGE 1 — COVER
+  ══════════════════════════════ */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    background: var(--white);
+  }
+
+  .cover-top-bar {
+    width: 100%;
+    height: 18mm;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16mm;
+  }
+  .cover-top-bar span {
+    font-size: 11pt;
+    color: var(--white);
+    letter-spacing: 6px;
+    font-family: var(--font);
+  }
+
+  .cover-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18mm;
+    gap: 6mm;
+  }
+
+  .cover-label {
+    font-size: 9pt;
+    letter-spacing: 8px;
+    color: var(--mid);
+    border-top: 1px solid var(--pale);
+    border-bottom: 1px solid var(--pale);
+    padding: 3px 12px;
+  }
+
+  .cover-title-main {
+    font-size: 38pt;
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1.15;
+    letter-spacing: 4px;
+  }
+
+  .cover-title-sub {
+    font-size: 16pt;
+    color: var(--mid);
+    letter-spacing: 3px;
+    margin-top: -2mm;
+  }
+
+  .cover-rule {
+    width: 40mm;
+    height: 2px;
+    background: var(--black);
+    margin: 2mm 0;
+  }
+
+  .cover-tagline {
+    font-size: 12pt;
+    color: var(--mid);
+    line-height: 1.9;
+    max-width: 120mm;
+  }
+
+  .cover-quote-box {
+    border: 2px solid var(--black);
+    padding: 5mm 8mm;
+    max-width: 130mm;
+    text-align: left;
+    position: relative;
+    margin-top: 4mm;
+  }
+  .cover-quote-box::before {
+    content: '❝';
+    font-size: 24pt;
+    position: absolute;
+    top: -5mm;
+    left: 4mm;
+    background: var(--white);
+    padding: 0 1mm;
+    line-height: 1;
+  }
+  .cover-quote-box p {
+    font-size: 11pt;
+    line-height: 1.8;
+    color: var(--dark);
+  }
+  .cover-quote-box .attr {
+    font-size: 9pt;
+    color: var(--mid);
+    margin-top: 2mm;
+    text-align: right;
+  }
+
+  .cover-steps-row {
+    display: flex;
+    gap: 3mm;
+    margin-top: 4mm;
+    flex-wrap: nowrap;
+  }
+  .cover-step {
+    width: 22mm;
+    height: 22mm;
+    border: 2px solid var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    line-height: 1.5;
+    text-align: center;
+    gap: 1mm;
+  }
+  .cover-step-num {
+    font-size: 16pt;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .cover-step:nth-child(odd) {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .cover-bottom-bar {
+    width: 100%;
+    height: 10mm;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16mm;
+  }
+  .cover-bottom-bar span {
+    font-size: 8pt;
+    color: var(--white);
+    letter-spacing: 3px;
+  }
+
+  /* ══════════════════════════════
+     SHARED COMPONENTS
+  ══════════════════════════════ */
+
+  /* Page header stripe */
+  .pg-header {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    border-bottom: 2.5px solid var(--black);
+    padding-bottom: 3mm;
+    margin-bottom: 6mm;
+  }
+  .pg-num {
+    width: 9mm;
+    height: 9mm;
+    background: var(--black);
+    color: var(--white);
+    font-size: 10pt;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .pg-section-label {
+    font-size: 7.5pt;
+    color: var(--light);
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+  .pg-title {
+    font-size: 18pt;
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1.2;
+  }
+  .pg-subtitle {
+    font-size: 10pt;
+    color: var(--mid);
+    margin-top: 1mm;
+  }
+
+  /* Section heading inside page */
+  .sec-head {
+    font-size: 11pt;
+    font-weight: 900;
+    color: var(--black);
+    border-left: 4px solid var(--black);
+    padding-left: 3mm;
+    margin: 5mm 0 3mm;
+    line-height: 1.3;
+  }
+
+  .body-text {
+    font-size: 10pt;
+    line-height: 1.9;
+    color: var(--dark);
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    border: 2px solid var(--black);
+    padding: 4mm 5mm;
+    margin: 4mm 0;
+    background: var(--white);
+    position: relative;
+  }
+  .highlight-box.filled {
+    background: var(--black);
+    color: var(--white);
+  }
+  .highlight-box .box-label {
+    font-size: 7.5pt;
+    letter-spacing: 4px;
+    color: var(--light);
+    margin-bottom: 2mm;
+  }
+  .highlight-box.filled .box-label {
+    color: var(--pale);
+  }
+
+  /* Two column */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin: 3mm 0;
+  }
+  .col-box {
+    border: 1.5px solid var(--black);
+    padding: 3.5mm 4mm;
+  }
+  .col-box.dark {
+    background: var(--black);
+    color: var(--white);
+  }
+  .col-box-title {
+    font-size: 9pt;
+    font-weight: 900;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1.5mm;
+    margin-bottom: 2.5mm;
+    letter-spacing: 1px;
+  }
+  .col-box ul {
+    padding-left: 4mm;
+    font-size: 9.5pt;
+    line-height: 2;
+    list-style: none;
+  }
+  .col-box ul li::before { content: '▸ '; }
+
+  /* Steps numbered list */
+  .steps-list {
+    list-style: none;
+    margin: 3mm 0;
+  }
+  .steps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 3mm;
+    margin-bottom: 2.5mm;
+    font-size: 10pt;
+    line-height: 1.8;
+  }
+  .step-badge {
+    min-width: 7mm;
+    height: 7mm;
+    background: var(--black);
+    color: var(--white);
+    font-size: 9pt;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1mm;
+  }
+
+  /* Arrow flow steps */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+    margin: 3mm 0;
+  }
+  .flow-item {
+    display: flex;
+    align-items: stretch;
+    gap: 3mm;
+  }
+  .flow-num {
+    min-width: 14mm;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10pt;
+    font-weight: 900;
+    padding: 3mm 0;
+    flex-shrink: 0;
+  }
+  .flow-content {
+    flex: 1;
+    border: 1.5px solid var(--black);
+    border-left: none;
+    padding: 3mm 4mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .flow-q {
+    font-size: 8pt;
+    color: var(--light);
+    margin-top: 0.5mm;
+  }
+  .flow-title { font-size: 10.5pt; font-weight: 900; }
+
+  /* Table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 3mm 0;
+  }
+  .data-table th {
+    background: var(--black);
+    color: var(--white);
+    padding: 2.5mm 3mm;
+    text-align: left;
+    font-size: 9pt;
+    letter-spacing: 1px;
+  }
+  .data-table td {
+    padding: 2.5mm 3mm;
+    border-bottom: 1px solid var(--pale);
+    vertical-align: top;
+    line-height: 1.7;
+  }
+  .data-table tr:nth-child(even) td { background: #f5f5f5; }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    margin: 2mm 0;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 3mm;
+    padding: 2mm 0;
+    border-bottom: 1px dashed var(--pale);
+    font-size: 10pt;
+    line-height: 1.7;
+  }
+  .check-box {
+    min-width: 5mm;
+    height: 5mm;
+    border: 1.5px solid var(--black);
+    flex-shrink: 0;
+    margin-top: 2.5mm;
+  }
+
+  /* Mantra / slogan block */
+  .mantra-row {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    padding: 3mm 0;
+    border-bottom: 1px solid var(--pale);
+  }
+  .mantra-icon {
+    min-width: 10mm;
+    height: 10mm;
+    border: 2px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12pt;
+    flex-shrink: 0;
+  }
+  .mantra-text { font-size: 10pt; line-height: 1.7; }
+  .mantra-arrow {
+    font-size: 10pt;
+    color: var(--mid);
+    flex-shrink: 0;
+  }
+  .mantra-meaning { font-size: 10pt; color: var(--mid); }
+
+  /* Info badge row */
+  .badge-row {
+    display: flex;
+    gap: 3mm;
+    margin: 3mm 0;
+    flex-wrap: wrap;
+  }
+  .badge {
+    border: 1.5px solid var(--black);
+    padding: 2mm 4mm;
+    font-size: 9pt;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  .badge.inv { background: var(--black); color: var(--white); }
+
+  /* Page footer */
+  .pg-footer {
+    position: absolute;
+    bottom: 6mm;
+    left: 16mm;
+    right: 16mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--pale);
+    padding-top: 2mm;
+  }
+  .pg-footer span {
+    font-size: 7.5pt;
+    color: var(--light);
+    letter-spacing: 2px;
+  }
+
+  /* Deco corner */
+  .corner-deco {
+    position: absolute;
+    top: 0; right: 0;
+    width: 20mm; height: 20mm;
+    background: var(--black);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    opacity: 0.07;
+  }
+
+  /* Big quote */
+  .big-quote {
+    font-size: 13pt;
+    line-height: 1.9;
+    color: var(--dark);
+    border-left: 5px solid var(--black);
+    padding: 3mm 5mm;
+    margin: 4mm 0;
+    background: #f8f8f8;
+  }
+
+  /* Output methods grid */
+  .method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm;
+    margin: 3mm 0;
+  }
+  .method-card {
+    border: 2px solid var(--black);
+    padding: 4mm;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+  }
+  .method-card-icon { font-size: 18pt; line-height: 1; }
+  .method-card-title { font-size: 10pt; font-weight: 900; }
+  .method-card-desc { font-size: 9pt; color: var(--mid); line-height: 1.6; }
+
+  /* Week calendar */
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2mm;
+    margin: 3mm 0;
+  }
+  .week-day {
+    border: 1.5px solid var(--black);
+    padding: 2.5mm;
+    text-align: center;
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+  .week-day-name {
+    font-weight: 900;
+    font-size: 9pt;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 1.5mm;
+    margin-bottom: 1.5mm;
+  }
+  .week-day.highlight {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  /* Timeline for long-term */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3mm;
+    margin: 3mm 0;
+  }
+  .tl-item {
+    display: flex;
+    gap: 4mm;
+    align-items: stretch;
+  }
+  .tl-label {
+    min-width: 24mm;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9pt;
+    font-weight: 900;
+    text-align: center;
+    padding: 2mm;
+    line-height: 1.4;
+  }
+  .tl-content {
+    flex: 1;
+    border: 1.5px solid var(--black);
+    padding: 3mm 4mm;
+  }
+  .tl-title {
+    font-size: 9.5pt;
+    font-weight: 900;
+    margin-bottom: 2mm;
+  }
+  .tl-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  .tl-content ul li {
+    font-size: 9pt;
+    line-height: 1.8;
+    display: flex;
+    align-items: flex-start;
+    gap: 2mm;
+  }
+  .tl-content ul li::before {
+    content: '□';
+    font-size: 9pt;
+    flex-shrink: 0;
+  }
+
+  /* Final page special */
+  .final-page {
+    display: flex;
+    flex-direction: column;
+    gap: 4mm;
+  }
+  .slogan-big {
+    font-size: 24pt;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    border: 3px solid var(--black);
+    padding: 5mm 6mm;
+    text-align: center;
+  }
+  .message-box {
+    border: 2px solid var(--black);
+    padding: 6mm;
+    text-align: center;
+    font-size: 11pt;
+    line-height: 2;
+    color: var(--dark);
+  }
+
+  /* ── Print styles ── */
+  @media print {
+    html, body { background: white; }
+    .page {
+      margin: 0;
+      padding: 14mm 16mm 12mm;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ PAGE 1: COVER ══ -->
+<div class="page cover">
+  <div class="cover-top-bar">
+    <span>國小五年級 · 費曼學習法 · 學習手冊</span>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-label">FEYNMAN LEARNING METHOD</div>
+
+    <div class="cover-title-main">費曼<br>學習法</div>
+    <div class="cover-title-sub">用「說出來」來學得更好</div>
+
+    <div class="cover-rule"></div>
+
+    <div class="cover-tagline">
+      學得少・記得牢・用得出來<br>
+      這本手冊幫你成為學習高手！
+    </div>
+
+    <div class="cover-quote-box">
+      <p>學習最好的方法，不是一直讀書，而是把學到的東西講給別人聽。如果你能讓一個小孩子也聽懂，那你就真的學會了！</p>
+      <div class="attr">— 理查德・費曼，諾貝爾物理學獎得主</div>
+    </div>
+
+    <div class="cover-steps-row">
+      <div class="cover-step"><div class="cover-step-num">1</div>訂<br>目標</div>
+      <div class="cover-step"><div class="cover-step-num">2</div>真<br>理解</div>
+      <div class="cover-step"><div class="cover-step-num">3</div>說<br>出來</div>
+      <div class="cover-step"><div class="cover-step-num">4</div>找<br>漏洞</div>
+      <div class="cover-step"><div class="cover-step-num">5</div>變<br>簡單</div>
+    </div>
+  </div>
+
+  <div class="cover-bottom-bar">
+    <span>姓名：________________</span>
+    <span>班級：________________</span>
+    <span>日期：________________</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 2: 這本書在說什麼 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">前</div>
+    <div>
+      <div class="pg-section-label">INTRODUCTION</div>
+      <div class="pg-title">這本書在說什麼？</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    很多同學讀了很多書、背了很多筆記，但考試一過就全忘了，也不知道怎麼用。<strong>費曼學習法</strong>就是要解決這個問題——讓我們學得少、記得牢、用得出來！
+  </p>
+
+  <div class="sec-head">你有沒有這種感覺？</div>
+
+  <div class="two-col">
+    <div class="col-box dark">
+      <div class="col-box-title">❌ 傳統學習的困擾</div>
+      <ul>
+        <li>一直背，但很快忘了</li>
+        <li>考試過了就全忘光</li>
+        <li>學了不知道怎麼用</li>
+        <li>越學越覺得很無聊</li>
+      </ul>
+    </div>
+    <div class="col-box">
+      <div class="col-box-title">✅ 費曼學習的好處</div>
+      <ul>
+        <li>真的理解，不容易忘</li>
+        <li>可以說給別人聽</li>
+        <li>學了之後會實際應用</li>
+        <li>越學越有樂趣！</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec-head">學習的最終目的是「輸出」</div>
+  <p class="body-text">
+    費曼認為，學習分成兩種：只把知識「放進去」（輸入），和能把知識「說出來、用出來」（輸出）。<br>
+    <strong>真正的學習 = 能夠輸出！</strong>
+  </p>
+
+  <div class="highlight-box filled" style="margin-top:5mm;">
+    <div class="box-label">CORE CONCEPT · 核心觀念</div>
+    <p style="font-size:13pt; font-weight:900; line-height:1.8; color:white;">
+      無法對外輸出的學習，<br>就不能稱為學習。
+    </p>
+    <p style="font-size:9.5pt; margin-top:2mm; color:#ccc; line-height:1.7;">
+      當你能用最簡單的話解釋一件事，你就真正學會了它。
+    </p>
+  </div>
+
+  <div class="sec-head">費曼學習法能培養三種能力</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; margin-top:3mm;">
+    <div style="border:2px solid var(--black); padding:4mm; text-align:center;">
+      <div style="font-size:13pt; margin-bottom:2mm;">🔭</div>
+      <div style="font-size:10pt; font-weight:900; margin-bottom:2mm;">遠見</div>
+      <div style="font-size:8.5pt; color:var(--mid); line-height:1.6;">判斷未來趨勢，不只是記住資訊</div>
+    </div>
+    <div style="border:2px solid var(--black); padding:4mm; text-align:center; background:var(--black); color:white;">
+      <div style="font-size:13pt; margin-bottom:2mm;">🔍</div>
+      <div style="font-size:10pt; font-weight:900; margin-bottom:2mm;">穿透力</div>
+      <div style="font-size:8.5pt; line-height:1.6; color:#ccc;">看清事物本質，快速解決問題</div>
+    </div>
+    <div style="border:2px solid var(--black); padding:4mm; text-align:center;">
+      <div style="font-size:13pt; margin-bottom:2mm;">💡</div>
+      <div style="font-size:10pt; font-weight:900; margin-bottom:2mm;">智慧</div>
+      <div style="font-size:8.5pt; color:var(--mid); line-height:1.6;">讓知識變成自己的，為我所用</div>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 01</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 3: 費曼5步驟 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">01</div>
+    <div>
+      <div class="pg-section-label">STEP ONE · 學習的本質</div>
+      <div class="pg-title">費曼學習法的 5 個步驟</div>
+      <div class="pg-subtitle">每次學習新東西，都按照這5步走！</div>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div class="flow-item">
+      <div class="flow-num">步驟<br>1</div>
+      <div class="flow-content">
+        <div class="flow-title">確立目標</div>
+        <div class="flow-q">→ 我想學什麼？這個有什麼用？</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">步驟<br>2</div>
+      <div class="flow-content">
+        <div class="flow-title">理解內容</div>
+        <div class="flow-q">→ 蒐集資料，整理清楚，讀到真的懂</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num" style="background:#1a1a1a;">步驟<br>3</div>
+      <div class="flow-content" style="background:#f0f0f0;">
+        <div class="flow-title">說給別人聽（以教代學）⭐ 最重要！</div>
+        <div class="flow-q">→ 用自己的話講出來，假裝自己是老師</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">步驟<br>4</div>
+      <div class="flow-content">
+        <div class="flow-title">回顧反思</div>
+        <div class="flow-q">→ 哪裡卡住了？哪裡說不清楚？回去再學</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">步驟<br>5</div>
+      <div class="flow-content">
+        <div class="flow-title">簡化吸收</div>
+        <div class="flow-q">→ 把最重要的記起來，變成自己的知識</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:4mm;">
+    <div class="box-label">KEY RULE · 黃金原則</div>
+    <p style="font-size:11pt; font-weight:900; line-height:1.8;">
+      如果你能讓一個比你小的孩子也聽懂，<br>
+      那你就真的學會了！
+    </p>
+  </div>
+
+  <div class="sec-head">兩種學習方式大比較</div>
+  <table class="data-table">
+    <thead>
+      <tr><th>比較項目</th><th>傳統學習 ❌</th><th>費曼學習 ✅</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>學習方式</td><td>死記硬背</td><td>理解再說出來</td></tr>
+      <tr><td>對待課本</td><td>照書背，不思考</td><td>自己消化，用自己的話說</td></tr>
+      <tr><td>學習目的</td><td>只為了考試</td><td>能實際使用</td></tr>
+      <tr><td>遇到不懂</td><td>跳過或死背</td><td>暫停，直到搞懂為止</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-head">馬上試試看！</div>
+  <ol class="steps-list">
+    <li><div class="step-badge">1</div><div>想一件剛學過的事，花1分鐘在腦子裡整理一遍</div></li>
+    <li><div class="step-badge">2</div><div>問自己：「我能不能用自己的話說出來？」</div></li>
+    <li><div class="step-badge">3</div><div>試著說給身旁的同學或家人聽看看！</div></li>
+  </ol>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 02</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 4: 確立學習目標 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">02</div>
+    <div>
+      <div class="pg-section-label">STEP TWO · 確立學習目標</div>
+      <div class="pg-title">選擇對的目標，往對的方向走</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    學習要有「目的」，不是什麼都學。好的目標讓你學得久、學得好、學完還知道怎麼用！
+  </p>
+
+  <div class="sec-head">什麼是好的學習目標？</div>
+  <div class="highlight-box" style="margin-bottom:4mm;">
+    <div class="box-label">GOOD GOAL CHECKLIST · 好目標的三個條件</div>
+    <ol class="steps-list" style="margin-top:2mm;">
+      <li><div class="step-badge">✓</div><div><strong>具體</strong>：不是「學好數學」，而是「這週學會分數加法」</div></li>
+      <li><div class="step-badge">✓</div><div><strong>有用</strong>：問自己「學了之後我可以做什麼？」</div></li>
+      <li><div class="step-badge">✓</div><div><strong>有興趣</strong>：對自己想知道的事情才學得下去</div></li>
+    </ol>
+  </div>
+
+  <div class="sec-head">學習目標設定練習</div>
+  <table class="data-table">
+    <thead>
+      <tr><th>學科</th><th>這週的學習目標</th><th>學了可以做什麼？</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>國語</td><td style="color:#bbb;">例：學會5個新成語</td><td style="color:#bbb;">寫作文時可以用</td></tr>
+      <tr><td>數學</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>自然</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>社會</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>英語</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-head">執行步驟</div>
+  <ol class="steps-list">
+    <li><div class="step-badge">1</div><div>每週一，寫下每一科這週想達到的目標（一科一個就好）</div></li>
+    <li><div class="step-badge">2</div><div>問自己：「學了之後，我可以做什麼事？」</div></li>
+    <li><div class="step-badge">3</div><div>設定一個小小的目標（例如：這週學會分數加法）</div></li>
+    <li><div class="step-badge">4</div><div>週五回頭看：有沒有達到目標？哪裡還沒有學會？</div></li>
+  </ol>
+
+  <div class="big-quote">
+    真正高質量的學習，一定能讓人融入真實的世界。
+    學習最重要的是——可以與現實場景緊密結合！
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 03</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 5: 理解知識 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">03</div>
+    <div>
+      <div class="pg-section-label">STEP THREE · 理解知識的技巧</div>
+      <div class="pg-title">真正「懂」，不是「背起來」</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    「懂」和「背起來」是兩件不同的事！真正的理解，是可以用自己的話說出來，還能舉例子。
+  </p>
+
+  <div class="sec-head">大腦學習的兩個方式</div>
+  <div class="two-col">
+    <div class="col-box dark">
+      <div class="col-box-title">方式 1：連結舊知識</div>
+      <p style="font-size:9.5pt; line-height:1.8;">把新的東西跟已經知道的事情連在一起。<br><br>
+      例如：學「槓桿原理」→ 想到蹺蹺板！</p>
+    </div>
+    <div class="col-box">
+      <div class="col-box-title">方式 2：創造新連結</div>
+      <p style="font-size:9.5pt; line-height:1.8;">把不同的東西拼在一起，想出新的意思。<br><br>
+      例如：音樂 + 數學 → 節奏就是數學！</p>
+    </div>
+  </div>
+
+  <div class="sec-head">理解新知識的4個步驟</div>
+  <ol class="steps-list">
+    <li><div class="step-badge">1</div><div><strong>閉上書，說一遍</strong>：讀完一段後，閉上書，用自己的話說一遍</div></li>
+    <li><div class="step-badge">2</div><div><strong>找出不懂的地方</strong>：說不出來的部分，就是還沒懂的地方，重新閱讀</div></li>
+    <li><div class="step-badge">3</div><div><strong>舉生活中的例子</strong>：把新知識跟生活中的例子連起來（越有趣越好！）</div></li>
+    <li><div class="step-badge">4</div><div><strong>畫出心智圖</strong>：把重要的概念畫成圖，幫助整理思路</div></li>
+  </ol>
+
+  <div class="sec-head">小測試：我真的懂了嗎？</div>
+  <div class="highlight-box">
+    <div class="box-label">SELF CHECK · 自我檢查三問</div>
+    <ul class="checklist">
+      <li><div class="check-box"></div><div>我能不能用自己的話說出這個知識的大意？</div></li>
+      <li><div class="check-box"></div><div>我能不能舉出一個生活中的例子？</div></li>
+      <li><div class="check-box"></div><div>如果有人問我問題，我能不能回答他？</div></li>
+    </ul>
+  </div>
+
+  <div class="sec-head" style="margin-top:4mm;">心智圖練習空間</div>
+  <div style="border:1.5px dashed var(--pale); height:32mm; display:flex; align-items:center; justify-content:center;">
+    <span style="font-size:9pt; color:var(--pale); letter-spacing:3px;">在這裡畫出今天學到的知識圖</span>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 04</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 6: 輸出 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">04</div>
+    <div>
+      <div class="pg-section-label">STEP FOUR · 以輸出代替輸入</div>
+      <div class="pg-title">說出來 ＝ 最強的學習法！</div>
+      <div class="pg-subtitle">這是費曼學習法最重要的一步！</div>
+    </div>
+  </div>
+
+  <div class="highlight-box filled">
+    <div class="box-label">CORE MESSAGE · 核心訊息</div>
+    <p style="font-size:12pt; font-weight:900; line-height:1.8; color:white;">
+      學了就要說出來、寫出來、畫出來！<br>
+      輸出越多，學習效果越好！
+    </p>
+  </div>
+
+  <div class="sec-head" style="margin-top:5mm;">四種輸出方法</div>
+  <div class="method-grid">
+    <div class="method-card">
+      <div class="method-card-icon">🗣</div>
+      <div class="method-card-title">口頭說</div>
+      <div class="method-card-desc">說給同學、家人聽。說不清楚的地方，就是還不懂的地方。</div>
+    </div>
+    <div class="method-card" style="background:var(--black); color:white; border-color:var(--black);">
+      <div class="method-card-icon">✍</div>
+      <div class="method-card-title">書寫筆記</div>
+      <div class="method-card-desc" style="color:#ccc;">用自己的話寫筆記、寫心得，不是抄課本的句子。</div>
+    </div>
+    <div class="method-card" style="background:var(--black); color:white; border-color:var(--black);">
+      <div class="method-card-icon">🎨</div>
+      <div class="method-card-title">畫圖整理</div>
+      <div class="method-card-desc" style="color:#ccc;">畫心智圖、流程圖，把複雜的東西變成簡單的圖。</div>
+    </div>
+    <div class="method-card">
+      <div class="method-card-icon">💬</div>
+      <div class="method-card-title">互相討論</div>
+      <div class="method-card-desc">和同學互相問答，教對方就是最好的學習！</div>
+    </div>
+  </div>
+
+  <div class="sec-head">每天輸出的4個步驟</div>
+  <ol class="steps-list">
+    <li><div class="step-badge">1</div><div>學完一個單元，立刻試著「說一遍」給自己聽</div></li>
+    <li><div class="step-badge">2</div><div>假裝自己是老師，要教一個完全不懂的人</div></li>
+    <li><div class="step-badge">3</div><div>說不出來的地方，就是還沒學好的地方 → 回去再看</div></li>
+    <li><div class="step-badge">4</div><div>每天晚餐時，選一個學過的主題，說給家人聽！</div></li>
+  </ol>
+
+  <div class="sec-head">今天的輸出練習</div>
+  <div style="border:1.5px solid var(--black); padding:4mm;">
+    <p style="font-size:9pt; color:var(--mid); margin-bottom:3mm;">今天我學了什麼？用3句話寫下來（用自己的話，不要抄！）</p>
+    <div style="border-bottom:1px solid var(--pale); padding-bottom:5mm; margin-bottom:3mm;">&nbsp;</div>
+    <div style="border-bottom:1px solid var(--pale); padding-bottom:5mm; margin-bottom:3mm;">&nbsp;</div>
+    <div style="border-bottom:1px solid var(--pale); padding-bottom:5mm;">&nbsp;</div>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 05</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 7: 回顧與反思 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">05</div>
+    <div>
+      <div class="pg-section-label">STEP FIVE · 回顧與反思</div>
+      <div class="pg-title">學完要「檢查」，發現自己的弱點</div>
+    </div>
+  </div>
+
+  <p class="body-text">
+    費曼說：所有的學習都是為了達到三個目的——<strong>解釋問題、解決問題、預測問題。</strong>
+  </p>
+
+  <div class="sec-head">學習的三個境界</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; margin:3mm 0;">
+    <div style="border:2px solid var(--black); padding:4mm;">
+      <div style="font-size:18pt; font-weight:900; line-height:1; margin-bottom:2mm;">1</div>
+      <div style="font-size:10pt; font-weight:900; margin-bottom:2mm;">解釋問題</div>
+      <div style="font-size:8.5pt; color:var(--mid); line-height:1.6;">我能說明這個知識是什麼嗎？</div>
+    </div>
+    <div style="border:2px solid var(--black); padding:4mm; background:var(--black); color:white;">
+      <div style="font-size:18pt; font-weight:900; line-height:1; margin-bottom:2mm;">2</div>
+      <div style="font-size:10pt; font-weight:900; margin-bottom:2mm;">解決問題</div>
+      <div style="font-size:8.5pt; line-height:1.6; color:#ccc;">我能用這個知識解決問題嗎？</div>
+    </div>
+    <div style="border:2px solid var(--black); padding:4mm;">
+      <div style="font-size:18pt; font-weight:900; line-height:1; margin-bottom:2mm;">3</div>
+      <div style="font-size:10pt; font-weight:900; margin-bottom:2mm;">預測問題</div>
+      <div style="font-size:8.5pt; color:var(--mid); line-height:1.6;">我能預測接下來會發生什麼嗎？</div>
+    </div>
+  </div>
+
+  <div class="sec-head">每天的回顧3步驟</div>
+  <ol class="steps-list">
+    <li><div class="step-badge">1</div><div>學習後，寫下今天學了什麼（3句話，用自己的話）</div></li>
+    <li><div class="step-badge">2</div><div>找出1個「還不太懂」的地方，畫星星標記</div></li>
+    <li><div class="step-badge">3</div><div>明天優先把那個地方弄懂！</div></li>
+  </ol>
+
+  <div class="sec-head">每日學習反思日記</div>
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:18mm;">日期</th><th>今天學了什麼？</th><th style="width:30mm;">還不懂的地方</th><th style="width:20mm;">明天要做</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="color:#ccc;">＿月＿日</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td style="color:#ccc;">＿月＿日</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td style="color:#ccc;">＿月＿日</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td style="color:#ccc;">＿月＿日</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td style="color:#ccc;">＿月＿日</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    </tbody>
+  </table>
+
+  <div class="big-quote">
+    學習卡住時，不要放棄！重點理解那個卡住的地方，
+    試著用自己的話說出來。多嘗試幾遍，一定可以的！
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 06</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 8: 簡化內化 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">06</div>
+    <div>
+      <div class="pg-section-label">STEP SIX · 簡化與知識內化</div>
+      <div class="pg-title">學精不學多！把知識變成自己的</div>
+    </div>
+  </div>
+
+  <div class="highlight-box filled">
+    <div class="box-label">FEYNMAN'S RULE · 費曼的原則</div>
+    <p style="font-size:11pt; font-weight:900; line-height:1.9; color:white;">
+      只學你需要的・只學對你重要的・<br>只學最核心的知識！
+    </p>
+  </div>
+
+  <div class="sec-head" style="margin-top:5mm;">費曼的5個重要建議</div>
+  <ol class="steps-list">
+    <li><div class="step-badge">1</div><div><strong>記筆記</strong>：記下最重要的幾個重點（不是全部抄下來！）</div></li>
+    <li><div class="step-badge">2</div><div><strong>大整理</strong>：刪掉不重要的，留下真正有價值的知識</div></li>
+    <li><div class="step-badge">3</div><div><strong>結構化</strong>：把知識整理成有順序、有邏輯的樣子</div></li>
+    <li><div class="step-badge">4</div><div><strong>說出去</strong>：講給別人聽，聽聽他們的想法，開闊視野</div></li>
+    <li><div class="step-badge">5</div><div><strong>簡化記憶</strong>：把最精華的變成自己的，長久記住</div></li>
+  </ol>
+
+  <div class="sec-head">如何評估自己是否「深度學習」了？</div>
+  <ul class="checklist">
+    <li>
+      <div class="check-box"></div>
+      <div><strong>技能延伸</strong>：學了之後，能不能用在其他地方？<br>
+      <span style="font-size:9pt; color:var(--mid);">例：學好英文閱讀，也能幫助翻譯中文文章</span></div>
+    </li>
+    <li>
+      <div class="check-box"></div>
+      <div><strong>前瞻思考</strong>：能不能預測這個知識以後的發展？<br>
+      <span style="font-size:9pt; color:var(--mid);">例：學了電腦，你覺得未來科技會怎麼變化？</span></div>
+    </li>
+    <li>
+      <div class="check-box"></div>
+      <div><strong>系統連結</strong>：能不能把不同科目的知識連在一起？<br>
+      <span style="font-size:9pt; color:var(--mid);">例：自然課的光學 + 美術課的色彩理論</span></div>
+    </li>
+  </ul>
+
+  <div class="sec-head">我的知識精華筆記</div>
+  <div style="border:1.5px solid var(--black); padding:4mm;">
+    <p style="font-size:8.5pt; color:var(--mid); margin-bottom:3mm;">把這週最重要的3個知識點，用最簡單的話寫下來：</p>
+    <div style="display:flex; gap:3mm;">
+      <div style="border:1.5px solid var(--pale); flex:1; padding:3mm; min-height:18mm;"><span style="font-size:8pt; color:var(--pale);">知識點 1</span></div>
+      <div style="border:1.5px solid var(--pale); flex:1; padding:3mm; min-height:18mm;"><span style="font-size:8pt; color:var(--pale);">知識點 2</span></div>
+      <div style="border:1.5px solid var(--pale); flex:1; padding:3mm; min-height:18mm;"><span style="font-size:8pt; color:var(--pale);">知識點 3</span></div>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 07</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 9: 每日計畫 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">07</div>
+    <div>
+      <div class="pg-section-label">ACTION PLAN · 行動指南</div>
+      <div class="pg-title">每一天的學習計畫</div>
+      <div class="pg-subtitle">每天只要做這幾件事，學習效果立刻提升！</div>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width:30mm;">時間</th>
+        <th style="width:52mm;">行動</th>
+        <th>怎麼做</th>
+        <th style="width:12mm;">完成</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>上學前<br>5 分鐘</strong></td>
+        <td>複習昨天學的1件事</td>
+        <td>用自己的話在心裡說一遍，不用翻書</td>
+        <td style="text-align:center;">□</td>
+      </tr>
+      <tr>
+        <td><strong>上課時</strong></td>
+        <td>專心聽，主動舉手回答</td>
+        <td>回答問題就是「輸出」練習！答錯也沒關係</td>
+        <td style="text-align:center;">□</td>
+      </tr>
+      <tr>
+        <td><strong>下課後<br>10 分鐘</strong></td>
+        <td>寫下課堂3個重點</td>
+        <td>用自己的話寫，不是抄課本，越簡單越好</td>
+        <td style="text-align:center;">□</td>
+      </tr>
+      <tr>
+        <td><strong>放學回家</strong></td>
+        <td>做作業、複習當天功課</td>
+        <td>碰到不懂的先想30秒，再翻書或問人</td>
+        <td style="text-align:center;">□</td>
+      </tr>
+      <tr>
+        <td><strong>晚餐時</strong></td>
+        <td>跟家人說今天學了什麼</td>
+        <td>說不出來的 = 還沒學好，明天要補強！</td>
+        <td style="text-align:center;">□</td>
+      </tr>
+      <tr>
+        <td><strong>睡前<br>5 分鐘</strong></td>
+        <td>問自己今天最重要的1件事</td>
+        <td>寫在學習日記裡，明天回顧</td>
+        <td style="text-align:center;">□</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sec-head" style="margin-top:5mm;">今日學習日記</div>
+  <div style="border:1.5px solid var(--black); padding:4mm; display:grid; grid-template-columns:1fr 1fr; gap:4mm;">
+    <div>
+      <p style="font-size:8.5pt; font-weight:900; margin-bottom:2mm;">今天我學了什麼？（3句話）</p>
+      <div style="border-bottom:1px solid var(--pale); padding:4mm 0;"></div>
+      <div style="border-bottom:1px solid var(--pale); padding:4mm 0;"></div>
+      <div style="border-bottom:1px solid var(--pale); padding:4mm 0;"></div>
+    </div>
+    <div>
+      <p style="font-size:8.5pt; font-weight:900; margin-bottom:2mm;">今天我說給別人聽了嗎？</p>
+      <div style="border:1px solid var(--pale); padding:3mm; margin-bottom:3mm; font-size:9pt;">說給：________________</div>
+      <p style="font-size:8.5pt; font-weight:900; margin-bottom:2mm;">明天要弄懂的問題：</p>
+      <div style="border-bottom:1px solid var(--pale); padding:4mm 0;"></div>
+      <div style="border-bottom:1px solid var(--pale); padding:4mm 0;"></div>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 08</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 10: 每週計畫 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">08</div>
+    <div>
+      <div class="pg-section-label">WEEKLY PLAN · 每週計畫</div>
+      <div class="pg-title">每一週的學習節奏</div>
+      <div class="pg-subtitle">照著這個節奏走，一週一週進步！</div>
+    </div>
+  </div>
+
+  <div class="week-grid">
+    <div class="week-day highlight">
+      <div class="week-day-name">週一</div>
+      <div>訂目標</div>
+    </div>
+    <div class="week-day">
+      <div class="week-day-name">週二</div>
+      <div>學新單元</div>
+    </div>
+    <div class="week-day">
+      <div class="week-day-name">週三</div>
+      <div>整理筆記</div>
+    </div>
+    <div class="week-day highlight">
+      <div class="week-day-name">週四</div>
+      <div>說給人聽</div>
+    </div>
+    <div class="week-day">
+      <div class="week-day-name">週五</div>
+      <div>回顧弱點</div>
+    </div>
+    <div class="week-day">
+      <div class="week-day-name">週六</div>
+      <div>自由深挖</div>
+    </div>
+    <div class="week-day" style="border:1.5px dashed var(--pale);">
+      <div class="week-day-name" style="border-color:var(--pale);">週日</div>
+      <div style="color:var(--light);">休息！</div>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:5mm;">每天該做的重點任務</div>
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:16mm;">星期</th><th>重點任務</th><th style="width:50mm;">費曼學習法的對應步驟</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>週一</strong></td><td>訂下這週每科的學習目標（一科一個）</td><td>步驟1：確立目標</td></tr>
+      <tr><td><strong>週二</strong></td><td>學習新單元，試著做筆記</td><td>步驟2：理解內容</td></tr>
+      <tr><td><strong>週三</strong></td><td>用自己的話整理筆記，畫心智圖</td><td>步驟2：深化理解</td></tr>
+      <tr><td><strong>週四</strong></td><td>說給同學或家人聽，互相考考看</td><td>步驟3：說給別人聽</td></tr>
+      <tr><td><strong>週五</strong></td><td>回顧這週哪裡還不懂，補充學習</td><td>步驟4：回顧反思</td></tr>
+      <tr><td><strong>週六</strong></td><td>自由複習 ＋ 找一個有興趣的主題深入了解</td><td>步驟5：簡化吸收</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec-head" style="margin-top:4mm;">本週學習計畫表</div>
+  <div style="border:1.5px solid var(--black); padding:4mm;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-bottom:3mm;">
+      <div><p style="font-size:8.5pt; font-weight:900; margin-bottom:2mm;">本週我的學習目標：</p>
+        <div style="border-bottom:1px solid var(--pale); padding:3.5mm 0;"></div>
+        <div style="border-bottom:1px solid var(--pale); padding:3.5mm 0;"></div>
+      </div>
+      <div><p style="font-size:8.5pt; font-weight:900; margin-bottom:2mm;">本週我打算說給誰聽？</p>
+        <div style="border-bottom:1px solid var(--pale); padding:3.5mm 0;"></div>
+        <div style="border-bottom:1px solid var(--pale); padding:3.5mm 0;"></div>
+      </div>
+    </div>
+    <p style="font-size:8.5pt; font-weight:900; margin-bottom:2mm;">週五回顧：這週我達到目標了嗎？</p>
+    <div style="display:flex; gap:4mm; font-size:9.5pt;">
+      <span>□ 完全達到！</span>
+      <span>□ 大部分達到</span>
+      <span>□ 還需要加油</span>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 09</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 11: 長期培養 ══ -->
+<div class="page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">09</div>
+    <div>
+      <div class="pg-section-label">LONG-TERM HABITS · 長期培養</div>
+      <div class="pg-title">一步一步成為學習高手</div>
+      <div class="pg-subtitle">好習慣不是一天養成的，慢慢來，你一定做得到！</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-label">第1個月<br>打好基礎</div>
+      <div class="tl-content">
+        <div class="tl-title">開始建立學習的好習慣</div>
+        <ul>
+          <li>每天寫學習筆記（3句話就好，用自己的話）</li>
+          <li>試著每週說1次「我今天學了……」給家人聽</li>
+          <li>練習問自己問題：為什麼？怎麼做？有什麼用？</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">第2～3個月<br>建立習慣</div>
+      <div class="tl-content">
+        <div class="tl-title">開始主動、深入學習</div>
+        <ul>
+          <li>遇到不懂的，先自己想30秒再問別人</li>
+          <li>開始畫心智圖整理每個學科的知識</li>
+          <li>和同學一起互相「教對方」學過的東西</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">長期<br>半年以上</div>
+      <div class="tl-content">
+        <div class="tl-title">建立屬於自己的知識體系</div>
+        <ul>
+          <li>找到自己最有興趣的學科，深入探索</li>
+          <li>養成「讀完就輸出」的自動習慣</li>
+          <li>建立自己的知識筆記本（每學期整理一次）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:4mm;">我的進步追蹤表</div>
+  <table class="data-table">
+    <thead>
+      <tr><th>好習慣</th><th style="width:14mm;">第1週</th><th style="width:14mm;">第2週</th><th style="width:14mm;">第3週</th><th style="width:14mm;">第4週</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>每天寫學習筆記（3句話）</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td></tr>
+      <tr><td>說給家人聽1次以上</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td></tr>
+      <tr><td>找出1個不懂的地方補強</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td></tr>
+      <tr><td>先想再問（不直接問答案）</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td></tr>
+      <tr><td>和同學互相教學1次</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td><td style="text-align:center;">□</td></tr>
+    </tbody>
+  </table>
+
+  <div class="big-quote" style="margin-top:5mm;">
+    主動的學習 > 被動的學習<br>
+    系統的學習 > 碎片式的學習<br>
+    只要方法對，學習沒那麼難！
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 10</span>
+  </div>
+</div>
+
+
+<!-- ══ PAGE 12: 超級口訣 + 給同學的話 ══ -->
+<div class="page final-page">
+  <div class="corner-deco"></div>
+  <div class="pg-header">
+    <div class="pg-num">10</div>
+    <div>
+      <div class="pg-section-label">SUMMARY · 總結</div>
+      <div class="pg-title">費曼學習法的超級口訣</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:5mm;">
+    <div class="mantra-row">
+      <div class="mantra-icon">1</div>
+      <div class="mantra-text"><strong>訂目標</strong></div>
+      <div class="mantra-arrow">→</div>
+      <div class="mantra-meaning">學的時候有方向，不迷路！</div>
+    </div>
+    <div class="mantra-row">
+      <div class="mantra-icon">2</div>
+      <div class="mantra-text"><strong>真理解</strong></div>
+      <div class="mantra-arrow">→</div>
+      <div class="mantra-meaning">不是背，是真的懂了！</div>
+    </div>
+    <div class="mantra-row" style="background:#f0f0f0;">
+      <div class="mantra-icon" style="background:var(--black); color:white; border-color:var(--black);">3</div>
+      <div class="mantra-text"><strong>說出來 ⭐</strong></div>
+      <div class="mantra-arrow">→</div>
+      <div class="mantra-meaning"><strong>說給別人聽才算學會！（最重要！）</strong></div>
+    </div>
+    <div class="mantra-row">
+      <div class="mantra-icon">4</div>
+      <div class="mantra-text"><strong>找漏洞</strong></div>
+      <div class="mantra-arrow">→</div>
+      <div class="mantra-meaning">說不出來的地方，回去補強！</div>
+    </div>
+    <div class="mantra-row">
+      <div class="mantra-icon">5</div>
+      <div class="mantra-text"><strong>變簡單</strong></div>
+      <div class="mantra-arrow">→</div>
+      <div class="mantra-meaning">用最簡單的話說最重要的事！</div>
+    </div>
+  </div>
+
+  <div class="message-box">
+    <p style="font-size:13pt; font-weight:900; margin-bottom:4mm;">給同學的話</p>
+    <p style="font-size:10.5pt; line-height:2.1; color:var(--dark);">
+      學習不是比誰背得多，<br>
+      而是比誰「真的懂」。<br><br>
+      從今天開始，每學一樣東西，<br>
+      就試著說給別人聽——<br>
+      <strong>說得越清楚，你就學得越好！</strong>
+    </p>
+    <div style="margin-top:5mm; border-top:1.5px solid var(--black); padding-top:4mm; font-size:20pt; letter-spacing:4px; font-weight:900;">
+      加油！你可以的！
+    </div>
+  </div>
+
+  <div style="border:1.5px solid var(--pale); padding:4mm; margin-top:4mm; display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-size:8.5pt; color:var(--mid);">整理自《費曼學習法——用輸出倒逼輸入》</div>
+    <div style="font-size:8.5pt; color:var(--mid);">FEYNMAN LEARNING METHOD · 國小五年級版</div>
+  </div>
+
+  <div class="pg-footer">
+    <span>費曼學習法 · 學習手冊</span>
+    <span>PAGE 11</span>
+  </div>
+</div>
+
+</body>
+</html>
