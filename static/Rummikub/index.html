@@ -374,6 +374,7 @@ main.container{padding-top:2.8rem;padding-bottom:4rem;display:flex;flex-directio
 .flip-card:nth-child(3) .flip-front{background:linear-gradient(140deg,#6B1FA0,#9B59B6)}
 .flip-card:nth-child(4) .flip-front{background:linear-gradient(140deg,#145E30,#27AE60)}
 .flip-card:nth-child(5) .flip-front{background:linear-gradient(140deg,#7B3800,#D4841A)}
+.flip-card:nth-child(6) .flip-front{background:linear-gradient(140deg,#1A3A6B,#2E6DB4)}
 .flip-front{box-shadow:0 6px 26px rgba(0,0,0,.2),0 3px 0 rgba(0,0,0,.22);border:2px solid rgba(255,255,255,.12)}
 .flip-front .flip-ico{font-size:2.4rem;filter:drop-shadow(0 3px 8px rgba(0,0,0,.3))}
 .flip-front h4{font-size:1rem;font-weight:900;color:#fff;line-height:1.3}
@@ -657,9 +658,13 @@ footer p{font-size:.9rem;line-height:1.9}
             ③ 湊不到 30 分就只能抽 1 張牌，等下一回合再試
           </div>
         </div>
+        <div class="tip blue" style="margin-top:1rem">
+          <span class="tip-ico">🚫</span>
+          <div><strong>剛抽的牌不能立刻出！</strong>如果這回合從牌池抽了 1 張牌，必須等到<strong>下一回合</strong>才能把它打出去。</div>
+        </div>
         <div class="tip green">
           <span class="tip-ico">⏱️</span>
-          <div>每回合有 <strong>2 分鐘</strong> 的思考時間（正式比賽規定）。休閒玩法可以和朋友自訂時間限制。</div>
+          <div>每回合有 <strong>1 分鐘</strong> 的思考時間（官方規定）。超時必須從牌池抽 1 張牌，回合立即結束。休閒玩法可以和朋友自訂時間。</div>
         </div>
       </div>
     </section>
@@ -839,9 +844,13 @@ footer p{font-size:.9rem;line-height:1.9}
             </button>
             <div class="acc-body">
               <p>如果桌面牌組裡有百搭牌，而你手上有它所代替的真實牌，可以換走百搭牌再利用！</p>
-              <div class="tip orange" style="margin:.8rem 0;padding:.8rem">
-                <span>⚠️</span>
-                <div style="font-size:.88rem">換出來的百搭牌<strong>必須在本回合內用掉</strong>，不能帶回手上留到下一輪！</div>
+              <div class="tip red" style="margin:.8rem 0;padding:.8rem">
+                <span>🚫</span>
+                <div style="font-size:.88rem"><strong>官方三條規定：</strong><br>
+                  ① 換出來的百搭牌<strong>必須在本回合內立刻用掉</strong>，不能帶回手上<br>
+                  ② 本回合還必須<strong>至少打出一張手上的牌</strong>（換百搭牌那張不算）<br>
+                  ③ <strong>破冰前不能換走百搭牌</strong>——還沒完成首次出牌的人不能動百搭牌
+                </div>
               </div>
               <div class="acc-example">
                 <div class="tile-row"><span class="t-label">桌上原有：</span><span class="tile t-dark">3</span><span class="tile t-dark">4</span><span class="tile t-joker">★</span><span style="font-size:.82rem;color:var(--text2);margin-left:.5rem">（百搭代替黑5）</span></div>
@@ -904,9 +913,15 @@ footer p{font-size:.9rem;line-height:1.9}
               <div class="flip-back"><p>拿到牌後，先算好哪幾張能湊到 30 分。大數字牌（10~13）能幫你快速達到破冰門檻！</p></div>
             </div>
           </div>
-          <div class="flip-card" tabindex="0" role="button" aria-label="技巧五 善用重組">
+          <div class="flip-card" tabindex="0" role="button" aria-label="技巧五 留第4張牌策略">
             <div class="flip-inner">
-              <div class="flip-front"><div class="flip-ico">♻️</div><h4>技巧五<br>善用重組</h4><p class="flip-hint">點擊查看 →</p></div>
+              <div class="flip-front"><div class="flip-ico">4️⃣</div><h4>技巧五<br>留第4張牌</h4><p class="flip-hint">點擊查看 →</p></div>
+              <div class="flip-back"><p>有時只出3張，把第4張留著。下一回合可以直接出那張而不用抽牌，讓手牌慢慢變少！</p></div>
+            </div>
+          </div>
+          <div class="flip-card" tabindex="0" role="button" aria-label="技巧六 善用重組">
+            <div class="flip-inner">
+              <div class="flip-front"><div class="flip-ico">♻️</div><h4>技巧六<br>善用重組</h4><p class="flip-hint">點擊查看 →</p></div>
               <div class="flip-back"><p>桌上有很多牌時，仔細思考能不能重組把手上的牌出掉。重組是拉密最有趣的招式！</p></div>
             </div>
           </div>
@@ -1065,6 +1080,17 @@ footer p{font-size:.9rem;line-height:1.9}
           <span class="tip-ico">📌</span>
           <div><strong>牌池耗盡時：</strong>如果桌上的牌都發完了還沒人贏，手上牌點數<strong>最少的人</strong>算贏家，其他人依正常方式計算失分。</div>
         </div>
+        <div class="tip purple" style="background:linear-gradient(135deg,#FDF8FF,#EDE9FF);border-left:5px solid var(--purple)">
+          <span class="tip-ico">🏆</span>
+          <div>
+            <strong>多局制：誰才是最終贏家？</strong><br>
+            拉密通常分多局進行，每輪的局數等於玩家人數：
+            <div style="margin:.6rem 0;font-size:.9rem;line-height:2">
+              👥 4人遊戲 → 每輪 4 局 ／ 👥 3人遊戲 → 每輪 3 局 ／ 👥 2人遊戲 → 每輪 2 局
+            </div>
+            最終贏家 = 所有輪次中<strong>贏得最多局</strong>的人。若平局，則以<strong>總分最高</strong>者獲勝。
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -1076,9 +1102,9 @@ footer p{font-size:.9rem;line-height:1.9}
   <p>🎮 拉密（Rummikub）學習教材 ｜ 適合國小五六年級學生</p>
   <p style="margin-top:.5rem">
     規則資料來源：
+    <a href="https://rummikub.com/rules/" target="_blank" rel="noopener">官方規則（rummikub.com）</a> ·
     <a href="https://en.wikipedia.org/wiki/Rummikub" target="_blank" rel="noopener">Wikipedia</a> ·
-    <a href="https://www.pagat.com/rummy/rummikub.html" target="_blank" rel="noopener">Pagat.com</a> ·
-    <a href="https://rummikub.com" target="_blank" rel="noopener">官方網站</a>
+    <a href="https://www.pagat.com/rummy/rummikub.html" target="_blank" rel="noopener">Pagat.com</a>
   </p>
 </footer>
 
