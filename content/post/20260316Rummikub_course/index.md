@@ -17,3 +17,5 @@ categories:
 做了一個適合小學生的拉密規則完整圖解
 
 [點此開啟新網頁看拉密規則完整圖解](/Rummikub/)
+
+[點此開啟新網頁看拉密教學影片](https://rummikub.com/rules/)
