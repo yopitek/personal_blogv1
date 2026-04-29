@@ -1,0 +1,81 @@
+{
+    "slug": "kobe_bryant",
+    "title": {
+        "en": "Kobe Bryant",
+        "zh-TW": "柯比·布萊恩",
+        "zh-CN": "科比·布莱恩特",
+        "ja": "コービー・ブライアント",
+        "fr": "Kobe Bryant"
+    },
+    "subtitle": {
+        "en": "The Mamba Mentality",
+        "zh-TW": "曼巴精神",
+        "zh-CN": "曼巴精神",
+        "ja": "マンバ・メンタリティ",
+        "fr": "La Mamba Mentality"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": "p01",
+            "key": "nba_entry",
+            "image": "images/p01.png",
+            "audio_key": "p01"
+        },
+        {
+            "id": "p02",
+            "key": "italy_origins",
+            "image": "images/p02.png",
+            "audio_key": "p02"
+        },
+        {
+            "id": "p03",
+            "key": "airballs",
+            "image": "images/p03.png",
+            "audio_key": "p03"
+        },
+        {
+            "id": "p04",
+            "key": "four_am",
+            "image": "images/p04.png",
+            "audio_key": "p04"
+        },
+        {
+            "id": "p05",
+            "key": "kobe_shaq",
+            "image": "images/p05.png",
+            "audio_key": "p05"
+        },
+        {
+            "id": "p06",
+            "key": "eighty_one",
+            "image": "images/p06.png",
+            "audio_key": "p06"
+        },
+        {
+            "id": "p07",
+            "key": "redemption",
+            "image": "images/p07.png",
+            "audio_key": "p07"
+        },
+        {
+            "id": "p08",
+            "key": "achilles",
+            "image": "images/p08.png",
+            "audio_key": "p08"
+        },
+        {
+            "id": "p09",
+            "key": "final_game",
+            "image": "images/p09.png",
+            "audio_key": "p09"
+        },
+        {
+            "id": "p10",
+            "key": "legacy",
+            "image": "images/p10.png",
+            "audio_key": "p10"
+        }
+    ]
+}

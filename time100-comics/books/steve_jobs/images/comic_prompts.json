@@ -1,0 +1,89 @@
+{
+    "project": "Steve Jobs Comic Biography",
+    "style_lock": {
+        "base_style": "Comic book illustration with Jason Seiler caricature style, historically accurate Silicon Valley and tech industry setting, warm earth tones mixed with Apple's signature minimalist whites and colorful accents, DreamWorks/Pixar animation influence, NO text, NO watermarks, NO logos",
+        "character_consistency": {
+            "young_jobs_teenager": "Lean teenager with intense brown eyes, long dark wavy hair, slight beard stubble, simple 1970s clothing, barefoot or sandals, determined rebellious expression",
+            "adult_jobs_20s_30s": "Charismatic young man with dark wavy hair, round glasses, intense stare, black turtleneck starting to appear, lean build, passionate expression",
+            "mature_jobs_40s": "Middle-aged man with receding hairline, signature round glasses, black turtleneck, jeans, New Balance sneakers, confident visionary expression",
+            "elderly_jobs_50s": "Thin, gaunt man with gray stubble, signature round glasses, black turtleneck, wise but tired eyes, determined expression despite illness"
+        }
+    },
+    "prompts": {
+        "cover": {
+            "description": "Steve Jobs - The Man Who Thought Different",
+            "prompt": "Epic portrait composition of Steve Jobs through four life stages merged artistically: rebellious teenager with long hair on left, young entrepreneur in garage center-left, visionary CEO with first Macintosh center-right, and legacy figure holding iPhone on right. Apple logo elements and Silicon Valley landscape subtly integrated. Lightning bolt of innovation connecting all versions. Jason Seiler caricature style with DreamWorks quality. Warm golden lighting with Apple's signature white accents. NO text, NO logos on products."
+        },
+        "p01": {
+            "scene": "1955 San Francisco hospital - newborn baby given up for adoption",
+            "prompt": "Intimate comic illustration of a 1955 San Francisco hospital room. A crying newborn wrapped in blankets being handed from a nurse to a working-class couple (Paul and Clara Jobs). Through the window, California orchards stretch to the horizon. Warm sepia tones, emotional atmosphere. The couple looks gentle and loving. 1950s hospital setting with period-accurate details. Jason Seiler caricature style. NO text, NO watermarks."
+        },
+        "p02": {
+            "scene": "Young Steve in garage workshop with father Paul",
+            "prompt": "Cozy garage workshop scene at 2066 Crist Drive, Los Altos, 1960s. Young Steve Jobs (about 12) sits among electronic components and circuit boards while his father Paul works on a car engine. Oil cans, tools, and workbenches fill the space. Father teaching son with patience. Golden afternoon light streaming through dusty garage windows. The boy has bright curious eyes and messy dark hair. Jason Seiler caricature style. NO text, NO logos."
+        },
+        "p03": {
+            "scene": "Two Steves in the Jobs family garage founding Apple - 1976",
+            "prompt": "Historic garage scene in 1976. Steve Jobs (21, long dark wavy hair, intense eyes) and Steve Wozniak (bearded, glasses, friendly face) hunched over circuit boards at a cluttered workbench. A hand-painted 'Apple Computer Co.' sign leans against the wall. Blue boxes and electronic components scattered around. American flag and psychedelic posters on walls. Warm incandescent lighting. Jason Seiler caricature style. Excitement and revolution in the air. NO text on visible items, NO logos."
+        },
+        "p04": {
+            "scene": "Macintosh launch 1984 - Jobs pulls computer from bag - MUSEUM POSTER STYLE",
+            "style": "museum_poster",
+            "prompt": "3D axonometric miniature diorama of the Flint Center stage, January 1984. Steve Jobs in bow tie dramatically pulls a Macintosh computer from a black bag. The screen glows with a friendly face. Audience members in suits rise to their feet in amazement. Stage lighting creates dramatic shadows. DreamWorks animation quality. Miniature diorama on museum display base. Subtle warm lighting. ENGLISH ONLY typography at bottom: 'HELLO, WORLD - 1984'. Museum exhibition quality."
+        },
+        "p05": {
+            "scene": "Jobs expelled from Apple - boardroom betrayal 1985",
+            "prompt": "Dramatic boardroom scene at Apple headquarters, 1985. Steve Jobs (30, shorter hair, devastated expression) stands alone facing a long conference table. Executives in suits sit around the table with cold expressions. John Sculley at the head. Through large windows, the Apple campus is visible. Harsh fluorescent lighting. Atmosphere of betrayal and abandonment. Jobs' isolation emphasized. Jason Seiler caricature style with emotional intensity. NO text, NO logos."
+        },
+        "p06": {
+            "scene": "Toy Story screening at Pixar 1995 - Jobs' redemption",
+            "prompt": "Warm interior of Pixar screening room, 1995. Steve Jobs (40, black turtleneck, round glasses) sits next to John Lasseter, both grinning with joy. Toy Story end credits roll on the big screen, colorful light playing across their faces. Animation team members celebrating in background. Magic of cinema and storytelling. Moment of triumph after years of struggle. Jason Seiler caricature style. Golden warm lighting. NO text visible on screen, NO watermarks."
+        },
+        "p07": {
+            "scene": "Jobs returns to Apple 1997 - Think Different - MUSEUM POSTER STYLE",
+            "style": "museum_poster",
+            "prompt": "3D axonometric miniature diorama of Apple Town Hall meeting, 1997. Steve Jobs in signature black turtleneck and jeans stands before a screen showing the Think Different campaign silhouettes (Einstein, Gandhi, Lennon - rendered as simple shadows). Apple employees watch with hope and excitement. Minimalist Apple aesthetic. Dramatic spotlighting. DreamWorks animation quality. Display base with subtle texture. ENGLISH ONLY typography: 'THINK DIFFERENT - 1997'. Museum collection quality."
+        },
+        "p08": {
+            "scene": "Jobs in hospital 2009 - working despite illness",
+            "prompt": "Intimate hospital room scene, 2009. Steve Jobs (thin, gaunt, but determined) lies in a hospital bed, still holding an iPhone, still working. Medical equipment softly beeping. Dawn light streaming through window illuminating city skyline. His wife Laurene by his side. Moment of vulnerability but unbroken spirit. Jason Seiler caricature style with empathy and dignity. Soft, contemplative lighting. NO text on devices, NO watermarks."
+        },
+        "p09": {
+            "scene": "iPhone announcement 2007 and iPad launch 2010 - final revolutions",
+            "prompt": "Split composition showing two Apple keynote moments. Left side: 2007 Steve Jobs (healthy, energetic) holding the first iPhone on Moscone Center stage, crowd amazed. Right side: 2010 Jobs (visibly thin, sitting in leather chair) introducing iPad, still commanding attention. Both scenes connected by a flowing Apple-white ribbon of innovation. Jason Seiler caricature style. Dramatic stage lighting. NO text on devices, NO logos visible."
+        },
+        "p10": {
+            "scene": "Jobs' legacy - Apple campus at night with tributes - MUSEUM POSTER STYLE",
+            "style": "museum_poster",
+            "prompt": "3D axonometric miniature diorama of Apple's Infinite Loop campus at night, October 2011. American flag at half-mast. Windows reflect flowers, notes, and candles left as tributes. Stars fill the California sky. In the foreground, Products he created (iMac, iPod, iPhone, iPad shown as shadowed silhouettes) arranged like a memorial. Solemn but celebratory of legacy. DreamWorks animation quality. Display base. ENGLISH ONLY typography: 'STAY HUNGRY, STAY FOOLISH - 1955-2011'. Museum exhibition quality."
+        }
+    },
+    "generation_notes": {
+        "museum_poster_pages": [
+            "p04",
+            "p07",
+            "p10"
+        ],
+        "regular_comic_pages": [
+            "p01",
+            "p02",
+            "p03",
+            "p05",
+            "p06",
+            "p08",
+            "p09"
+        ],
+        "character_age_progression": {
+            "p01": "Newborn baby / adoptive parents",
+            "p02": "12 years old - curious child",
+            "p03": "21 years old - young entrepreneur",
+            "p04": "29 years old - Macintosh visionary",
+            "p05": "30 years old - expelled founder",
+            "p06": "40 years old - Pixar triumph",
+            "p07": "42 years old - returning CEO",
+            "p08": "54 years old - battling illness",
+            "p09": "52-55 years old - final products",
+            "p10": "Legacy scene - eternal"
+        }
+    }
+}

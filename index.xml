@@ -1,0 +1,3490 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZenNote</title><link>https://zennote.app/</link><description>Recent content on ZenNote</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://zennote.app/index.xml" rel="self" type="application/rss+xml"/><item><title>超詳細圖解拉密(Rummikub)規則</title><link>https://zennote.app/post/rummikub_course/</link><pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate><guid>https://zennote.app/post/rummikub_course/</guid><description>&lt;p&gt;有一天在誠品看到拉密的遊戲，上網查了一下&lt;/p&gt;
+&lt;p&gt;玩法類似台灣的麻將&lt;/p&gt;
+&lt;p&gt;家裡妹妹很喜歡玩桌遊，&lt;/p&gt;
+&lt;p&gt;做了一個適合小學生的拉密規則完整圖解&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zennote.app/Rummikub/" &gt;點此開啟新網頁看拉密規則完整圖解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://rummikub.com/rules/" target="_blank" rel="noopener"
+&gt;點此開啟新網頁看拉密教學影片&lt;/a&gt;&lt;/p&gt;</description></item><item><title>超詳細圖解台灣麻將規則</title><link>https://zennote.app/post/mahjong/</link><pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate><guid>https://zennote.app/post/mahjong/</guid><description>&lt;p&gt;這幾天到朋友的家裡玩，發現朋友的小孩都在玩麻將。
+平常和小孩都是玩象棋、五子棋、桌遊。
+利用 AI Coding 整理了台灣麻將的規則並加上了彩色麻將圖示，讓小孩學習怎麼玩麻將。&lt;/p&gt;
+&lt;h2 id="內容涵蓋"&gt;內容涵蓋
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;第一章：認識麻將牌（萬子、索子、筒子、字牌、花牌）&lt;/li&gt;
+&lt;li&gt;第二章：基本牌型（順子、刻子、槓子、將牌）&lt;/li&gt;
+&lt;li&gt;第三章：遊戲流程（抓位、洗牌、骰莊、取牌、補花）&lt;/li&gt;
+&lt;li&gt;第四章：出牌方式（吃、碰、槓、聽、胡）&lt;/li&gt;
+&lt;li&gt;第五章：胡牌條件&lt;/li&gt;
+&lt;li&gt;第六章：台數計算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style="text-align:center; margin: 20px 0;"&gt;
+&lt;img src="blogcover.png" alt="台灣麻將圖解" style="max-width:100%; border-radius:8px;"&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div style="width:100%; border:1px solid #ddd; border-radius:8px; overflow:hidden; margin: 20px 0;"&gt;
+&lt;iframe src="https://zennote.app/mahjong/mahjong_rules" width="100%" height="900px" style="border:none; display:block;"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p style="text-align:center; margin-top: 8px;"&gt;
+&lt;a href="https://zennote.app/mahjong/mahjong_rules" target="_blank" style="display:inline-block; padding:10px 24px; background:#1a4a2e; color:#fff; border-radius:6px; text-decoration:none; font-weight:bold;"&gt;▶ 在新視窗開啟完整圖解&lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>線上工具</title><link>https://zennote.app/page/tool/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://zennote.app/page/tool/</guid><description>&lt;h2 id="線上工具"&gt;線上工具
+&lt;/h2&gt;&lt;p&gt;這裡整理了一些實用的線上工具,讓你的工作更有效率。&lt;/p&gt;
+&lt;h3 id="線上markdown格式編輯器"&gt;線上Markdown格式編輯器
+&lt;/h3&gt;&lt;p&gt;這是一款線上的Markdown編輯器,支援即時預覽，提供各種不同的文章版型&lt;/p&gt;
+&lt;p&gt;透過這個編輯器可以把文章版面變的漂亮又專業。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://editor.huasheng.ai/" target="_blank" rel="noopener"
+&gt;Markdown格式編輯器&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="每日電子新聞報"&gt;每日電子新聞報
+&lt;/h3&gt;&lt;p&gt;每日精選中文、英文、日文新聞摘要，每天早上上九點準時更新最新資訊。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zennote.app/news_feed/" target="_blank" rel="noopener"
+&gt;每日電子新聞報&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="instagramfacebookx-卡片編輯工具"&gt;Instagram/Facebook/X 卡片編輯工具
+&lt;/h3&gt;&lt;p&gt;這一款線上工具可以快速新增&lt;/p&gt;
+&lt;p&gt;Instagram/Facebook/X 社群媒體 貼文公告&lt;/p&gt;
+&lt;p&gt;也很適合用來放在Line群組中傳達事項使用&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.zennote.app/ig_card_tool/" target="_blank" rel="noopener"
+&gt;Instagram/Facebook/X 卡片編輯工具 &lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="蝦皮商城蝦皮賣場露天拍賣yahoo拍賣電商-ai文案成生工具"&gt;蝦皮商城/蝦皮賣場/露天拍賣/Yahoo拍賣/電商 AI文案成生工具
+&lt;/h3&gt;&lt;p&gt;只要貼上商品規格&lt;/p&gt;
+&lt;p&gt;即可透過AI幫你自動生成文情並茂的電商銷售文案,&lt;/p&gt;
+&lt;p&gt;文案生成後，直接貼上拍賣網站就可以使用&lt;/p&gt;
+&lt;p&gt;支援六種不同商品情境風格&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://shopee-writer.vercel.app/" target="_blank" rel="noopener"
+&gt;蝦皮商城/蝦皮賣場/露天拍賣/Yahoo拍賣/電商 AI文案成生工具&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="門禁卡號轉換程式"&gt;門禁卡號轉換程式
+&lt;/h3&gt;&lt;p&gt;支援多種門禁卡格式轉換，包括 DEC10（8H10D）、HEX8、UID bytes 等格式。&lt;/p&gt;
+&lt;p&gt;可批次轉換、匯出 CSV，適合門禁系統管理人員使用。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zennote.app/decoder/" target="_blank" rel="noopener"
+&gt;門禁卡號轉換程式&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Claude 團隊如何使用 Claude Code</title><link>https://zennote.app/post/claudehowto/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://zennote.app/post/claudehowto/</guid><description>&lt;h2 id="-文件簡介"&gt;📄 文件簡介
+&lt;/h2&gt;&lt;p&gt;這份文件記錄了 Anthropic 不同團隊（產品開發、安全工程、推論、微調、強化學習工程、法務）在日常工作中如何使用 Claude Code，包括主要使用情境、工作流程、團隊影響及最佳技巧。&lt;/p&gt;
+&lt;p&gt;從這份官方文件中，您可以了解到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 各團隊的實際使用場景與工作流程&lt;/li&gt;
+&lt;li&gt;✅ 顯著的效率提升數據（例如：除錯時間從 10-15 分鐘縮短至 5 分鐘）&lt;/li&gt;
+&lt;li&gt;✅ 跨團隊總結的最佳實踐與技巧&lt;/li&gt;
+&lt;li&gt;✅ 測試驅動開發、檢查點工作流程等通用模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-文件資源"&gt;📖 文件資源
+&lt;/h2&gt;&lt;h3 id="原始-pdf-文件"&gt;原始 PDF 文件
+&lt;/h3&gt;&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/How-Anthropic-teams-use-Claude-Code_v2.pdf" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #2c5282; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+📥 下載英文版 PDF
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 id="線上閱讀版本"&gt;線上閱讀版本
+&lt;/h3&gt;&lt;p&gt;選擇您偏好的語言版本直接閱讀：&lt;/p&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/Claude-Code_v2_EN_liner.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+🇺🇸 英文原版
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/Claude-Code_v2_TW_liner.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+🇹🇼 繁體中文版
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/Claude-Code_v2_CN_liner.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+🇨🇳 簡體中文版
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="-重點摘要"&gt;🎯 重點摘要
+&lt;/h2&gt;&lt;h3 id="通用最佳技巧"&gt;通用最佳技巧
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;🔹 在協作引導前先嘗試一次性完成&lt;/li&gt;
+&lt;li&gt;🔹 使用具體詳細的提示&lt;/li&gt;
+&lt;li&gt;🔹 善用 Claude 於程式設計以外的文件撰寫&lt;/li&gt;
+&lt;li&gt;🔹 在依賴輸出前透過驗證建立信任&lt;/li&gt;
+&lt;li&gt;🔹 為重複工作流程建立自訂指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="各團隊應用場景"&gt;各團隊應用場景
+&lt;/h3&gt;&lt;h4 id="產品開發團隊"&gt;產品開發團隊
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;快速原型開發與功能實作&lt;/li&gt;
+&lt;li&gt;程式碼重構與優化&lt;/li&gt;
+&lt;li&gt;技術文件撰寫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="安全工程團隊"&gt;安全工程團隊
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;漏洞分析與修復&lt;/li&gt;
+&lt;li&gt;安全審計自動化&lt;/li&gt;
+&lt;li&gt;程式碼安全檢查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="推論與微調團隊"&gt;推論與微調團隊
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;實驗程式碼開發&lt;/li&gt;
+&lt;li&gt;資料處理自動化&lt;/li&gt;
+&lt;li&gt;模型訓練腳本編寫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="法務團隊"&gt;法務團隊
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;文件審閱與整理&lt;/li&gt;
+&lt;li&gt;合約條款分析&lt;/li&gt;
+&lt;li&gt;法律文件草擬&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-使用建議"&gt;💡 使用建議
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;從小任務開始&lt;/strong&gt;：先用 Claude Code 處理簡單的程式碼任務，逐步建立信任&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;驗證輸出&lt;/strong&gt;：特別是關鍵功能，務必仔細檢查生成的程式碼&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;建立工作流程&lt;/strong&gt;：為常用任務建立自訂指令，提升效率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;持續學習&lt;/strong&gt;：關注 Anthropic 官方更新，了解最新功能與最佳實踐&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="-相關資源"&gt;📚 相關資源
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.anthropic.com" target="_blank" rel="noopener"
+&gt;Anthropic 官方網站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://docs.anthropic.com" target="_blank" rel="noopener"
+&gt;Claude Code 使用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zennote.app/claudeskill" &gt;Claude Skills 參考手冊&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文件內容來源於 Anthropic 官方文檔，僅供學習與參考使用。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Claude code 官方skill簡介&amp;使用方式</title><link>https://zennote.app/post/claudeskill/</link><pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate><guid>https://zennote.app/post/claudeskill/</guid><description>&lt;style&gt;
+table th:first-of-type,
+table td:first-of-type {
+white-space: nowrap;
+width: 15%;
+}
+&lt;/style&gt;
+&lt;h1 id="claude-官方-skills-參考手冊"&gt;Claude 官方 Skills 參考手冊
+&lt;/h1&gt;&lt;p&gt;Anthropic 官方 Claude Skills 的名稱、功能簡介、使用時機及實際提示詞。&lt;/p&gt;
+&lt;h2 id="skills-快速參照表"&gt;Skills 快速參照表
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Skill 名稱&lt;/th&gt;
+&lt;th&gt;功能類別&lt;/th&gt;
+&lt;th&gt;主要用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;docx&lt;/td&gt;
+&lt;td&gt;文件處理&lt;/td&gt;
+&lt;td&gt;Word 文件建立、編輯、分析&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pdf&lt;/td&gt;
+&lt;td&gt;文件處理&lt;/td&gt;
+&lt;td&gt;PDF 處理、表單填寫、文字擷取&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pptx&lt;/td&gt;
+&lt;td&gt;文件處理&lt;/td&gt;
+&lt;td&gt;PowerPoint 簡報製作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;xlsx&lt;/td&gt;
+&lt;td&gt;文件處理&lt;/td&gt;
+&lt;td&gt;Excel 試算表建立、公式、分析&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;frontend-design&lt;/td&gt;
+&lt;td&gt;開發工具&lt;/td&gt;
+&lt;td&gt;前端介面設計與程式碼產生&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;web-artifacts-builder&lt;/td&gt;
+&lt;td&gt;開發工具&lt;/td&gt;
+&lt;td&gt;複雜網頁元件建構&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;webapp-testing&lt;/td&gt;
+&lt;td&gt;開發工具&lt;/td&gt;
+&lt;td&gt;網頁應用程式測試&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mcp-builder&lt;/td&gt;
+&lt;td&gt;開發工具&lt;/td&gt;
+&lt;td&gt;MCP 伺服器開發&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;algorithmic-art&lt;/td&gt;
+&lt;td&gt;創意設計&lt;/td&gt;
+&lt;td&gt;演算法藝術創作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;canvas-design&lt;/td&gt;
+&lt;td&gt;創意設計&lt;/td&gt;
+&lt;td&gt;視覺設計與海報製作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;brand-guidelines&lt;/td&gt;
+&lt;td&gt;企業應用&lt;/td&gt;
+&lt;td&gt;品牌風格套用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;internal-comms&lt;/td&gt;
+&lt;td&gt;企業應用&lt;/td&gt;
+&lt;td&gt;內部溝通文件撰寫&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;doc-coauthoring&lt;/td&gt;
+&lt;td&gt;協作工具&lt;/td&gt;
+&lt;td&gt;文件共同撰寫工作流程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;skill-creator&lt;/td&gt;
+&lt;td&gt;擴展工具&lt;/td&gt;
+&lt;td&gt;建立自訂 Skills&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;theme-factory&lt;/td&gt;
+&lt;td&gt;樣式工具&lt;/td&gt;
+&lt;td&gt;主題樣式套用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;slack-gif-creator&lt;/td&gt;
+&lt;td&gt;媒體工具&lt;/td&gt;
+&lt;td&gt;Slack 動態 GIF 製作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="文件處理類-skills"&gt;文件處理類 Skills
+&lt;/h2&gt;&lt;h3 id="docx"&gt;docx
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;docx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;完整的文件建立、編輯與分析功能，支援追蹤修訂、註解、格式保留及文字擷取。可處理專業 Word 文件 (.docx)。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;(1) 建立新文件 (2) 修改或編輯內容 (3) 使用追蹤修訂功能 (4) 新增註解 (5) 其他文件處理任務&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;.docx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立新文件&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請幫我建立一份員工新人訓練手冊的 Word 文件，包含以下章節：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 公司簡介
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 組織架構
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 工作規範
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4. 福利制度
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;5. 常見問題
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用專業的商業文件格式，包含目錄和頁碼。輸出為 .docx 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：編輯現有文件並追蹤修訂&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請開啟附件的「合約草稿.docx」，使用追蹤修訂功能進行以下修改：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 將付款期限從 30 天改為 45 天
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 在第 5 條新增違約金條款
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 在合約結尾處新增註解，說明需要法務審核的部分
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;保留原始格式，輸出修訂後的 .docx 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="pdf"&gt;pdf
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;pdf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;完整的 PDF 操作工具包，用於擷取文字和表格、建立新 PDF、合併/分割文件及處理表單。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;(1) 填寫 PDF 表單 (2) 程式化處理 PDF 文件 (3) 產生 PDF (4) 大規模分析 PDF 文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;.pdf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：擷取 PDF 內容並整理&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請從附件的「年度財務報告.pdf」中擷取以下資訊：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 各季度營收數據
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 年度總支出明細
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 主要投資項目清單
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;將擷取的資料整理成結構化的表格，並輸出為新的 PDF 報告。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：填寫 PDF 表單&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請幫我填寫附件的「供應商申請表.pdf」表單，使用以下資訊：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 公司名稱：台灣科技股份有限公司
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 統一編號：12345678
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 聯絡人：王小明
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 電話：02-1234-5678
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 地址：台北市信義區信義路五段 100 號
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;填寫完成後輸出為新的 PDF 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="pptx"&gt;pptx
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;pptx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;PowerPoint 簡報製作與編輯功能，支援投影片設計、版面配置及內容組織。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;(1) 建立新簡報 (2) 編輯現有簡報 (3) 製作會議投影片 (4) 培訓教材製作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;.pptx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立專案報告簡報&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一份 Q4 專案進度報告簡報，共 10 頁，包含：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 封面頁（標題：2024 Q4 專案進度報告）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 專案概述
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 里程碑達成情況
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4. 預算執行狀況（請預留圖表位置）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;5. 團隊績效
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;6. 遇到的挑戰
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;7. 解決方案
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;8. 下季度計劃
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;9. 風險評估
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;10. 結論與建議
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用專業商務風格，輸出為 .pptx 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：製作產品介紹簡報&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請製作一份新產品發表簡報，產品名稱為「智慧家庭控制器 Pro」，包含：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 產品外觀介紹
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 核心功能（語音控制、遠端監控、節能管理）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 技術規格
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 競品比較
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 定價策略
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 上市時程
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;風格現代簡約，使用深藍色為主色調。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="xlsx"&gt;xlsx
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;xlsx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;完整的試算表建立、編輯與分析功能，支援公式、格式化、資料分析及視覺化。可處理 .xlsx、.xlsm、.csv、.tsv 等格式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;(1) 建立含公式和格式的新試算表 (2) 讀取或分析資料 (3) 修改現有試算表同時保留公式 (4) 資料分析與視覺化 (5) 重新計算公式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;.xlsx, .xlsm, .csv, .tsv&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立預算追蹤表&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一份 2025 年度部門預算追蹤 Excel 表格，包含：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 每月預算欄位（1-12月）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 實際支出欄位
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 差異計算公式（自動計算預算 vs 實際）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4. 累計總計公式
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;5. 預算使用率百分比公式
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;類別包括：人事費用、辦公設備、行銷費用、差旅費、其他
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用條件格式：超支顯示紅色，節省顯示綠色。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：分析銷售資料&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請分析附件「銷售資料.xlsx」，並產生以下分析結果：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 各產品類別的銷售總額
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 各區域的銷售排名
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 月度銷售趨勢
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4. 前 10 名銷售業務員
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;5. 季度成長率計算
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用樞紐分析表整理資料，並建立對應的圖表。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出包含分析結果和圖表的新 Excel 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="開發工具類-skills"&gt;開發工具類 Skills
+&lt;/h2&gt;&lt;h3 id="frontend-design"&gt;frontend-design
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;frontend-design&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;建立獨特、生產等級的前端介面，具有高品質設計。產生具創意、精緻的程式碼和 UI 設計，避免通用的 AI 美學風格。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用者要求建立：網頁元件、頁面、artifacts、海報或應用程式（包括網站、登陸頁面、儀表板、React 元件、HTML/CSS 版面配置，或美化任何網頁 UI）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;HTML, CSS, JavaScript, React&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立產品登陸頁面&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請設計一個 SaaS 產品的登陸頁面，產品名稱為「TaskFlow」（專案管理工具）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 現代極簡風格，使用深色主題
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Hero 區塊包含標題、副標題和 CTA 按鈕
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 功能介紹區（3 個主要功能卡片）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 客戶評價區塊
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 定價方案區塊
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 頁尾包含聯絡資訊和社群連結
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用獨特的字型和動態效果，避免使用 Inter 或 Arial。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出完整的 HTML/CSS 程式碼。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立內部儀表板&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一個銷售團隊使用的內部儀表板 UI，使用 React：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;功能需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 左側導航列（首頁、銷售報表、客戶管理、設定）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 頂部顯示目前使用者資訊
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 主要區域顯示：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - 本月銷售總額卡片
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - 目標達成率進度條
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - 最近交易列表
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - 銷售趨勢圖表區塊（預留位置）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用科技感深色主題，包含 hover 動態效果。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="web-artifacts-builder"&gt;web-artifacts-builder
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;web-artifacts-builder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用現代前端技術（React、Tailwind CSS、shadcn/ui）建立精緻的多元件 claude.ai HTML artifacts 工具套件。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;需要狀態管理、路由或 shadcn/ui 元件的複雜 artifacts — 不適用於簡單的單檔 HTML/JSX artifacts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;技術堆疊&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;React 18 + TypeScript + Vite + Parcel + Tailwind CSS + shadcn/ui&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立多頁面應用程式&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 web-artifacts-builder 建立一個員工目錄應用程式：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;頁面結構：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 首頁 - 顯示所有員工卡片網格
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 員工詳情頁 - 顯示個人資訊、聯絡方式、部門
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 搜尋頁 - 可依姓名、部門篩選
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;功能：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 使用 shadcn/ui 的 Card、Avatar、Input 元件
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 實作路由切換
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 包含載入狀態動畫
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;打包成單一 HTML 檔案供展示。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立互動式問卷工具&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 web-artifacts-builder 建立一個客戶滿意度問卷工具：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 多步驟表單（5 個問題頁面 + 提交頁）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 進度指示器顯示目前步驟
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 問題類型：單選題、多選題、評分題、文字題
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 表單驗證
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 完成後顯示結果摘要
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用 shadcn/ui 的表單元件，並實作狀態管理。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="webapp-testing"&gt;webapp-testing
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;webapp-testing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用 Playwright 與本機網頁應用程式互動和測試的工具包。支援驗證前端功能、除錯 UI 行為、擷取瀏覽器截圖及檢視瀏覽器日誌。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;(1) 測試本機網頁應用程式 (2) 驗證前端功能 (3) 除錯 UI 行為 (4) 擷取瀏覽器截圖 (5) 檢視瀏覽器日誌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;技術&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Python Playwright&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：測試登入功能&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 webapp-testing skill 測試我的登入頁面：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;測試網址：http://localhost:3000/login
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;測試情境：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 正確帳號密碼登入 → 應導向首頁
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 錯誤密碼登入 → 應顯示錯誤訊息
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 空白欄位送出 → 應顯示驗證錯誤
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請擷取每個步驟的截圖，並回報測試結果。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：驗證表單功能&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請測試我的產品訂購表單：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;網址：http://localhost:5173/order
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;測試項目：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 填寫所有欄位並送出 → 檢查成功訊息
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 數量欄位輸入負數 → 檢查驗證是否阻止
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 檢查價格計算是否正確（單價 × 數量）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4. 檢查表單送出後是否清空欄位
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請記錄瀏覽器控制台日誌，報告任何錯誤。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="mcp-builder"&gt;mcp-builder
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;mcp-builder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;建立高品質 MCP (Model Context Protocol) 伺服器的指南，使 LLM 能透過設計良好的工具與外部服務互動。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;建立 MCP 伺服器以整合外部 API 或服務，無論使用 Python (FastMCP) 或 Node/TypeScript (MCP SDK)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;支援語言&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Python, TypeScript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立 API 整合的 MCP 伺服器&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 mcp-builder skill 建立一個整合公司內部 API 的 MCP 伺服器：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;API 端點：https://api.company.com/v1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需要的工具：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. get_employees - 取得員工列表
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. get_employee_details - 取得特定員工詳情
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. create_leave_request - 建立請假申請
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用 Python FastMCP 實作，包含錯誤處理和認證機制。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立資料庫查詢 MCP 伺服器&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一個可查詢 PostgreSQL 資料庫的 MCP 伺服器：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需要的工具：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. query_sales - 查詢銷售資料（支援日期範圍篩選）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. query_inventory - 查詢庫存狀態
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. get_report - 產生每日報表
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用 TypeScript MCP SDK 實作。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;包含連線池管理和查詢參數化以防止 SQL 注入。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="創意設計類-skills"&gt;創意設計類 Skills
+&lt;/h2&gt;&lt;h3 id="algorithmic-art"&gt;algorithmic-art
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;algorithmic-art&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用 p5.js 建立演算法藝術，具有種子隨機性和互動式參數探索。建立原創演算法藝術，避免複製現有藝術家作品以避免版權問題。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用者要求使用程式碼創作藝術、生成藝術、演算法藝術、流場或粒子系統&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;.md（哲學）、.html（互動檢視器）、.js（生成演算法）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立流場藝術&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 algorithmic-art skill 建立一個流場（flow field）生成藝術作品：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;概念：模擬海洋波浪的流動感
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;色彩：深藍色漸層到淺綠色
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;互動：滑鼠移動影響流場方向
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請先產生演算法哲學文件，再建立可互動的 p5.js 作品。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;粒子數量可調整，支援匯出靜態圖片。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立粒子系統藝術&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一個以「城市夜景」為主題的粒子系統藝術：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;視覺概念：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 粒子代表城市燈光
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 不同大小和亮度的粒子
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 緩慢飄動和閃爍效果
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;互動功能：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 點擊產生新的粒子爆發
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 按空白鍵切換色彩主題
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出包含哲學說明文件和可執行的 HTML 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="canvas-design"&gt;canvas-design
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;canvas-design&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用設計哲學在 .png 和 .pdf 文件中建立精美視覺藝術。建立原創視覺設計，不複製現有藝術家作品以避免版權問題。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用者要求建立海報、藝術作品、設計或其他靜態作品&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;輸出格式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;.md, .pdf, .png&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：設計活動海報&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 canvas-design skill 設計一張公司年度尾牙活動海報：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;活動資訊：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 活動名稱：2025 新春饗宴
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 日期：2025 年 1 月 25 日（六）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 時間：18:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 地點：台北國際會議中心
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;設計風格：喜氣洋洋但不俗氣，融合現代設計元素
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;色彩：紅金配色
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;尺寸：A3（297mm × 420mm）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出 PNG 和 PDF 格式。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立產品視覺圖&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請設計一張展示我們新產品的社群媒體視覺圖：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;產品：無線藍牙耳機
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用途：Instagram 貼文
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;尺寸：1080 × 1080 像素
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;設計要求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 極簡科技風格
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 白色背景配深色產品
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 突顯「40小時續航」和「主動降噪」兩大特色
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 包含品牌 logo 位置
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;先產生設計哲學，再輸出成品。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="企業應用類-skills"&gt;企業應用類 Skills
+&lt;/h2&gt;&lt;h3 id="brand-guidelines"&gt;brand-guidelines
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;brand-guidelines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;將 Anthropic 官方品牌色彩和字型套用到任何可受益於 Anthropic 外觀風格的 artifact。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;需要套用品牌色彩或風格指南、視覺格式化或公司設計標準時&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;品牌規格：&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;顏色/字型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;主要深色&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#141413&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主要淺色&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#faf9f5&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中灰色&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#b0aea5&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;淺灰色&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#e8e6dc&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;強調橘&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#d97757&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;強調藍&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#6a9bcc&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;強調綠&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#788c5d&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;標題字型&lt;/td&gt;
+&lt;td&gt;Poppins&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;內文字型&lt;/td&gt;
+&lt;td&gt;Lora&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：套用品牌風格到簡報&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請將 Anthropic 品牌風格套用到我剛建立的產品簡報：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需要調整：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 將所有標題改為 Poppins 字型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 將內文改為 Lora 字型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 背景使用 #faf9f5（淺色）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 標題使用 #141413（深色）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 強調文字使用 #d97757（橘色）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 圖表使用品牌色系
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請保持整體視覺一致性。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立品牌化文件範本&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一個符合 Anthropic 品牌規範的報告範本：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 封面頁包含 logo 預留位置
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 正文使用品牌字型組合
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 頁首使用深色背景、淺色文字
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 章節標題使用橘色強調
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 表格使用品牌色系
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出為可重複使用的 Word 範本。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="internal-comms"&gt;internal-comms
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;internal-comms&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;協助撰寫各種內部溝通文件的資源集，使用公司習慣的格式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;撰寫各種內部溝通文件：3P 更新（進度/計劃/問題）、公司通訊、FAQ 回覆、狀態報告、主管更新、專案更新、事件報告&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;支援的文件類型：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3P 更新（Progress, Plans, Problems）&lt;/li&gt;
+&lt;li&gt;公司通訊&lt;/li&gt;
+&lt;li&gt;FAQ 回覆&lt;/li&gt;
+&lt;li&gt;狀態報告&lt;/li&gt;
+&lt;li&gt;主管更新&lt;/li&gt;
+&lt;li&gt;專案更新&lt;/li&gt;
+&lt;li&gt;事件報告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：撰寫週報 3P 更新&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請幫我撰寫本週的團隊 3P 更新報告：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Progress（進度）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 完成新版登入模組開發
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 修復了 15 個 bug
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 完成用戶測試第一輪
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Plans（計劃）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 下週進行效能優化
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 準備 UAT 環境
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 撰寫技術文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Problems（問題）：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 第三方 API 回應過慢影響效能
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 需要額外一名 QA 資源
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用公司標準格式，語氣專業簡潔。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：撰寫事件報告&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請協助撰寫系統事件報告：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;事件概述：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 發生時間：2025/1/3 14:30
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 影響範圍：線上購物車功能無法使用
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 持續時間：45 分鐘
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 影響用戶數：約 2,000 人
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;根本原因：資料庫連線池耗盡
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;處理過程：重啟服務、擴增連線池上限
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;預防措施：增加監控告警、優化連線管理
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用事件報告標準格式，包含時間線和改善計劃。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="協作工具類-skills"&gt;協作工具類 Skills
+&lt;/h2&gt;&lt;h3 id="doc-coauthoring"&gt;doc-coauthoring
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;doc-coauthoring&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;引導使用者透過結構化工作流程共同撰寫文件。協助使用者有效率地傳遞背景資訊、透過迭代精煉內容，並驗證文件對讀者有效。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用者提到撰寫文件、建立提案、草擬規格或類似文件任務時。適用於：文件、提案、技術規格、決策文件或類似結構化內容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;工作流程階段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;背景收集（提問、資訊傾倒）&lt;/li&gt;
+&lt;li&gt;精煉與結構（澄清問題、腦力激盪、策展、缺口檢查、草稿、迭代精煉）&lt;/li&gt;
+&lt;li&gt;讀者測試（預測讀者問題、測試、額外檢查、修復）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：共同撰寫技術規格文件&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;我需要撰寫一份新功能的技術規格文件，請使用 doc-coauthoring 工作流程協助我：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;功能背景：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 功能名稱：用戶偏好設定同步
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 目的：讓用戶在多裝置間同步設定
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 目標讀者：後端工程師、前端工程師
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;我有一些初步想法但還不完整，請先問我釐清問題，
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;然後幫我建立結構化的技術規格文件。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：協作撰寫提案文件&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請用 doc-coauthoring 工作流程幫我撰寫一份預算提案：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;背景：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 我們部門想申請採購新的開發工具
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 預算約 50 萬
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 需要說服財務長核准
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請先收集我的想法，協助我組織論點，
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;最後幫我測試這份提案是否能回答審核者可能的問題。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="擴展工具類-skills"&gt;擴展工具類 Skills
+&lt;/h2&gt;&lt;h3 id="skill-creator"&gt;skill-creator
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;skill-creator&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;建立有效 Skills 的指南。用於建立新 Skill（或更新現有 Skill），以專業知識、工作流程或工具整合擴展 Claude 的能力。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用者想要建立新 Skill 或更新現有 Skill 時&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Skill 建立流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;透過具體範例理解 Skill&lt;/li&gt;
+&lt;li&gt;規劃可重複使用的 Skill 內容&lt;/li&gt;
+&lt;li&gt;初始化 Skill&lt;/li&gt;
+&lt;li&gt;編輯 Skill&lt;/li&gt;
+&lt;li&gt;打包 Skill&lt;/li&gt;
+&lt;li&gt;迭代改進&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立公司專屬 Skill&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 skill-creator 協助我建立一個公司專屬的 Skill：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Skill 名稱：company-proposal-writer
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;功能：協助撰寫符合公司格式的商業提案
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;需要包含：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 公司提案標準結構
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 文字風格指南
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 常用術語表
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 範例提案片段
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請引導我完成整個建立流程，從定義到打包。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立工作流程自動化 Skill&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請幫我建立一個程式碼審查 Skill：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Skill 名稱：code-review-assistant
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用途：自動化程式碼審查流程
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;功能需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 檢查程式碼風格一致性
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 識別常見安全漏洞
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 建議效能優化
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4. 產生審查報告
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;支援語言：Python, JavaScript
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出：Markdown 格式的審查報告
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立完整的 SKILL.md 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="theme-factory"&gt;theme-factory
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;theme-factory&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;為 artifacts 套用主題樣式的工具包。這些 artifacts 可以是投影片、文件、報告、HTML 登陸頁面等。提供 10 種預設主題及自訂主題產生功能。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;需要為簡報或其他 artifact 套用一致的專業樣式時&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;可用主題：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ocean Depths（海洋深度）- 專業沉穩的海洋主題&lt;/li&gt;
+&lt;li&gt;Sunset Boulevard（日落大道）- 溫暖活潑的日落色彩&lt;/li&gt;
+&lt;li&gt;Forest Canopy（森林冠層）- 自然接地的大地色調&lt;/li&gt;
+&lt;li&gt;Modern Minimalist（現代極簡）- 乾淨當代的灰階&lt;/li&gt;
+&lt;li&gt;Golden Hour（黃金時刻）- 豐富溫暖的秋季色盤&lt;/li&gt;
+&lt;li&gt;Arctic Frost（北極霜凍）- 涼爽清脆的冬季主題&lt;/li&gt;
+&lt;li&gt;Desert Rose（沙漠玫瑰）- 柔和精緻的塵土色調&lt;/li&gt;
+&lt;li&gt;Tech Innovation（科技創新）- 大膽現代的科技美學&lt;/li&gt;
+&lt;li&gt;Botanical Garden（植物園）- 清新有機的花園色彩&lt;/li&gt;
+&lt;li&gt;Midnight Galaxy（午夜銀河）- 戲劇性的宇宙深色調&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：選擇並套用預設主題&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 theme-factory 為我的簡報套用主題：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. 先顯示所有可用主題讓我選擇
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. 我想要「Tech Innovation」科技創新主題
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. 將此主題套用到附件的簡報檔案
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;確保所有投影片的色彩和字型保持一致。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立自訂主題&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;現有主題都不符合需求，請幫我建立自訂主題：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;主題名稱：Corporate Professional（企業專業）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;色彩需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 主色：深藍色（代表穩重）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 次要色：淺灰色（乾淨背景）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 強調色：金色（高端感）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;字型需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 標題：現代無襯線字體
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- 內文：易讀的襯線字體
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;建立後套用到我的年度報告簡報。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="媒體工具類-skills"&gt;媒體工具類 Skills
+&lt;/h2&gt;&lt;h3 id="slack-gif-creator"&gt;slack-gif-creator
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;內容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;名稱&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;slack-gif-creator&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;功能簡介&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;建立針對 Slack 最佳化的動態 GIF 的知識和工具。提供限制條件、驗證工具和動畫概念。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;使用時機&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用者要求製作 Slack 用動態 GIF，例如「幫我做一個 X 做 Y 的 GIF 用於 Slack」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;動畫類型：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搖晃/震動&lt;/li&gt;
+&lt;li&gt;脈動/心跳&lt;/li&gt;
+&lt;li&gt;彈跳&lt;/li&gt;
+&lt;li&gt;旋轉&lt;/li&gt;
+&lt;li&gt;淡入/淡出&lt;/li&gt;
+&lt;li&gt;滑動&lt;/li&gt;
+&lt;li&gt;縮放&lt;/li&gt;
+&lt;li&gt;爆炸/粒子爆發&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;提示詞範例：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 1：建立慶祝用 GIF&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請使用 slack-gif-creator 建立一個 Slack 慶祝 GIF：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;內容：文字「恭喜達標！🎉」搭配彩帶爆炸效果
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;動畫：文字彈跳進入 + 彩帶粒子爆發
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;顏色：金色和紅色為主
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;尺寸：符合 Slack 最佳顯示（128x128 或更大）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;檔案大小：控制在 1MB 以內
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;適用場景：團隊達成銷售目標時發送。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;範例 2：建立等待中 GIF&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;請建立一個「處理中」的 Slack GIF：
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;畫面：三個圓點循環閃爍
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;動畫：依序脈動效果
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;顏色：公司藍色調（#0066CC）
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;速度：平穩舒適，不要太快
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;用途：在等待回覆時使用，表示正在處理。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;輸出最佳化的 GIF 檔案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="使用建議"&gt;使用建議
+&lt;/h2&gt;&lt;h3 id="選擇-skill-的判斷準則"&gt;選擇 Skill 的判斷準則
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;任務類型&lt;/th&gt;
+&lt;th&gt;建議 Skill&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;處理 Word 文件&lt;/td&gt;
+&lt;td&gt;docx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;處理 PDF 文件&lt;/td&gt;
+&lt;td&gt;pdf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;建立簡報&lt;/td&gt;
+&lt;td&gt;pptx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;試算表工作&lt;/td&gt;
+&lt;td&gt;xlsx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;建立網頁 UI&lt;/td&gt;
+&lt;td&gt;frontend-design&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;複雜網頁元件&lt;/td&gt;
+&lt;td&gt;web-artifacts-builder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;測試網頁應用&lt;/td&gt;
+&lt;td&gt;webapp-testing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;建立 MCP 伺服器&lt;/td&gt;
+&lt;td&gt;mcp-builder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;程式碼藝術&lt;/td&gt;
+&lt;td&gt;algorithmic-art&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;海報/視覺設計&lt;/td&gt;
+&lt;td&gt;canvas-design&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;套用品牌風格&lt;/td&gt;
+&lt;td&gt;brand-guidelines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;內部溝通文件&lt;/td&gt;
+&lt;td&gt;internal-comms&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;共同撰寫文件&lt;/td&gt;
+&lt;td&gt;doc-coauthoring&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;建立新 Skill&lt;/td&gt;
+&lt;td&gt;skill-creator&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;套用主題樣式&lt;/td&gt;
+&lt;td&gt;theme-factory&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Slack GIF&lt;/td&gt;
+&lt;td&gt;slack-gif-creator&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="參考資源"&gt;參考資源
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"
+&gt;Anthropic Skills Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" target="_blank" rel="noopener"
+&gt;Using Skills in Claude&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" target="_blank" rel="noopener"
+&gt;How to Create Custom Skills&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener"
+&gt;Claude Code Skills Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;文件產生自 Anthropic 官方 GitHub Skills Repository&lt;/em&gt;&lt;/p&gt;</description></item><item><title>書摘《卡片盒筆記》最高效思考筆記術 - Zettelkasten 知識管理系統</title><link>https://zennote.app/post/cardnote/</link><pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/cardnote/</guid><description>&lt;h2 id="書摘卡片盒筆記最高效思考筆記術---zettelkasten-知識管理系統"&gt;書摘《卡片盒筆記》最高效思考筆記術 - Zettelkasten 知識管理系統
+&lt;/h2&gt;&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="bookcover.png" alt="卡片盒筆記書籍封面" width="40%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;書摘《卡片盒筆記》&lt;/p&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/cardnote.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+📦 點選開啟互動式書摘網頁
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id="卡片盒筆記"&gt;《卡片盒筆記》
+&lt;/h1&gt;&lt;h2 id="書籍簡介"&gt;書籍簡介
+&lt;/h2&gt;&lt;p&gt;《卡片盒筆記——最高效思考筆記術》由德國學者申克・艾倫斯（Sönke Ahrens）撰寫，吳琪仁翻譯，遠流出版事業股份有限公司於2022年5月發行。本書系統性地介紹了德國社會學家尼克拉斯・魯曼（Niklas Luhmann）所創的「卡片盒筆記法」（Zettelkasten），旨在幫助學生、學術工作者及非虛構類作者提升寫作、學習與思考的效率。&lt;/p&gt;
+&lt;h2 id="核心內容摘要"&gt;核心內容摘要
+&lt;/h2&gt;&lt;h3 id="一核心理念與原則"&gt;一、核心理念與原則
+&lt;/h3&gt;&lt;p&gt;本書主張，成功的寫作與知識生產並非始於面對空白頁面，而是奠基於一套&lt;strong&gt;由下而上、非線性、持續積累&lt;/strong&gt;的筆記系統。其四大基本原則是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;寫下來是唯一重要的事&lt;/strong&gt;：寫作是研究、學習與思考的媒介，而非最終結果。日常的筆記記錄是知識內化與產出的關鍵。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;簡單最重要&lt;/strong&gt;：好的系統應盡可能移除複雜與分心的元素，專注於核心功能——思考。卡片盒筆記法透過統一格式（靈感筆記、文獻筆記、永久筆記）簡化工作流程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;沒有人是從零開始&lt;/strong&gt;：寫作不應從決定題目開始，而應從持續記錄與發展既有想法出發。主題與論點應從已累積的筆記素材中自然浮現。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;讓工作帶領你往前&lt;/strong&gt;：設計能產生內在回饋循環的工作流程，使工作本身具備動力，減少對意志力的依賴，進入正向的成長循環。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="二卡片盒筆記法操作系統"&gt;二、卡片盒筆記法操作系統
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;三類筆記&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;靈感筆記&lt;/strong&gt;：隨手記錄的臨時想法，需在一兩天內處理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文獻筆記&lt;/strong&gt;：閱讀時用自己話語簡要記錄的要點，與書目資料一同存放。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;永久筆記&lt;/strong&gt;：經過深思、用完整句子書寫、可獨立存在的想法，是卡片盒的核心。需與既有筆記建立連結，並納入索引系統。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作流程&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隨時記錄靈感。&lt;/li&gt;
+&lt;li&gt;閱讀時製作文獻筆記。&lt;/li&gt;
+&lt;li&gt;每日回顧，將靈感與文獻筆記轉化為永久筆記，並思考其與卡片盒中既有想法的關聯性（支持、矛盾、延伸）。&lt;/li&gt;
+&lt;li&gt;將新永久筆記放入卡片盒，透過編號或連結與相關筆記建立網絡。&lt;/li&gt;
+&lt;li&gt;定期從筆記群聚中發展主題、問題與寫作計畫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;所需工具&lt;/strong&gt;：僅需書寫工具、參考書目管理系統（如Zotero）、卡片盒（實體或數位軟體如Obsidian、Roam Research）及文書編輯器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="三對學習與寫作的益處"&gt;三、對學習與寫作的益處
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;降低認知負載&lt;/strong&gt;：將記憶與組織任務外化至卡片盒，讓大腦專注於理解、思考與創意連結。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;促進深度學習&lt;/strong&gt;：將資訊轉譯為永久筆記的過程，本身就是一種「闡釋」，能檢驗並深化理解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;由下而上發展洞見&lt;/strong&gt;：透過筆記間的意外連結，激發新的想法與研究問題，避免確認偏誤。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提升寫作效率與樂趣&lt;/strong&gt;：寫作時可直接從豐富且已初步組織的筆記素材開始，免除面對空白頁的恐懼，使寫作過程更流暢、更有動力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="限制與注意事項"&gt;限制與注意事項
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;非快速解決方案&lt;/strong&gt;：卡片盒筆記法是一套需要長期投入與實踐的系統，其效益（群聚效應）隨筆記數量與品質的累積而指數增長，無法立竿見影。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需改變工作習慣&lt;/strong&gt;：成功關鍵在於將方法融入日常流程，而非僅使用工具。初期改變舊有筆記與寫作習慣可能感到不自然。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;對工具有依賴但需慎選&lt;/strong&gt;：雖然數位工具（尤其是支援雙向連結的筆記軟體）能大幅提升效率，但核心在於方法背後的原理。使用者需理解原理，並根據自身需求調整工具的使用方式，避免陷入工具選擇的複雜性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;需主動建立連結&lt;/strong&gt;：卡片盒的價值在於筆記間有機的連結網絡。使用者必須主動、謹慎地思考並建立筆記間的關聯，而非被動儲存資料，否則卡片盒將淪為「點子墳場」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;與傳統教育模式有別&lt;/strong&gt;：其非線性、由下而上、跨領域連結的特性，與許多教育機構中線性、按主題分類、計畫導向的教學模式不同，可能需要使用者自行調適與堅持。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="結論"&gt;結論
+&lt;/h2&gt;&lt;p&gt;《卡片盒筆記》提供了一套經過驗證、結構嚴謹的知識管理與寫作方法論。它不僅是一種筆記技巧，更是一種重塑工作流程、培養長期學習與思考習慣的系統。對於致力於學術研究、專業寫作或任何希望有效管理知識、提升產出品質與創意的人士而言，本書具有高度的參考與實踐價值。然而，讀者需認知到，其最大成效來自於對系統原理的深刻理解與持之以恆的實踐。&lt;/p&gt;</description></item><item><title>有錢人想的和你不一樣 - Secrets of the Millionaire Mind</title><link>https://zennote.app/post/millionairemind/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/millionairemind/</guid><description>&lt;h2 id="書摘有錢人想的和你不一樣"&gt;《書摘》有錢人想的和你不一樣
+&lt;/h2&gt;&lt;p&gt;Secrets of the Millionaire Mind&lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="bookcover.png" alt="有錢人想的和你不一樣書籍封面" width="40%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;《有錢人想的和你不一樣》- T. Harv Eker 著&lt;/p&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/1212millionaremind.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+📙 點選開啟互動式書摘網頁
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id="有錢人想的和你不一樣書摘"&gt;《有錢人想的和你不一樣》書摘
+&lt;/h1&gt;&lt;h2 id="核心論點"&gt;核心論點
+&lt;/h2&gt;&lt;p&gt;本書的核心論點是：個人的財務狀況並非由外在環境或知識技能決定，而是由內在的「金錢藍圖」所主導。金錢藍圖是個人對金錢的深層信念、思維模式和行為習慣的總和，它形成於童年時期的語言設定、模仿和特殊事件，並持續影響成年後的財務決策與結果。&lt;/p&gt;
+&lt;h2 id="主要內容摘要"&gt;主要內容摘要
+&lt;/h2&gt;&lt;h3 id="第一篇金錢藍圖致富其實是一種心理遊戲"&gt;第一篇：金錢藍圖——致富其實是一種心理遊戲
+&lt;/h3&gt;&lt;p&gt;作者提出「實現程序」：設定 → 想法 → 感覺 → 行動 = 結果。個人的金錢藍圖主要透過三種方式在童年時期形成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;語言設定&lt;/strong&gt;：成長過程中聽到的關於金錢、財富和有錢人的話語。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模仿&lt;/strong&gt;：觀察父母或監護人對金錢的態度和行為。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特殊事件&lt;/strong&gt;：童年時期與金錢相關的重大情感體驗。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;要改變財務狀況，必須首先透過「察覺、理解、畫清界限、重新設定」這四個關鍵步驟，修改內在的金錢藍圖。書中介紹了使用「宣言」作為促成改變的強效工具。&lt;/p&gt;
+&lt;h3 id="第二篇財富檔案有錢人和窮人不一樣的17種思考和行為"&gt;第二篇：財富檔案——有錢人和窮人不一樣的17種思考和行為
+&lt;/h3&gt;&lt;p&gt;本書主體部分對比了有錢人與窮人在思維和行為上的根本差異，歸納為17個「財富檔案」。這些檔案涵蓋了對待責任、目標、機會、人際關係、自我價值、金錢管理和個人成長等方面的不同心態。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有錢人為自己的人生負責，窮人扮演受害者。&lt;/li&gt;
+&lt;li&gt;有錢人專注於機會，窮人專注於障礙。&lt;/li&gt;
+&lt;li&gt;有錢人善於管理與投資金錢，窮人則不善管理或逃避管理。&lt;/li&gt;
+&lt;li&gt;有錢人持續學習成長，窮人認為自己已經知道一切。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;作者為每個財富檔案提供了具體的行動建議，旨在幫助讀者將有錢人的思維模式內化並付諸實踐，從而改變財務結果。&lt;/p&gt;
+&lt;h2 id="實踐與行動號召"&gt;實踐與行動號召
+&lt;/h2&gt;&lt;p&gt;作者強調，僅靠閱讀無法帶來改變，必須將書中的原則轉化為行動。他建議讀者：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;實踐書中的行動練習和宣言。&lt;/li&gt;
+&lt;li&gt;反覆閱讀本書以深化理解。&lt;/li&gt;
+&lt;li&gt;致力於持續的自我成長和教育。&lt;/li&gt;
+&lt;li&gt;將所學與更多人分享，共同提升。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="局限性"&gt;局限性
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;過度簡化歸因&lt;/strong&gt;：本書將複雜的財務成功主要歸因於個人心態和思維模式，可能低估了系統性因素（如經濟結構、社會不平等、運氣、出生環境）對個人財富累積的重大影響。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;樣本偏差與普遍性&lt;/strong&gt;：作者的觀點和策略很大程度上基於其個人經驗及其培訓學員的案例。這些樣本可能具有自選擇性，其方法的普遍有效性和在不同文化、經濟背景下的適用性有待更廣泛的實證檢驗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;「吸引力法則」的爭議&lt;/strong&gt;：書中隱含的「意念創造現實」的觀點（如「你所專注的事情會擴大」），屬於「吸引力法則」範疇。該理論缺乏科學共識，其有效性存在爭議，可能被批評為過於唯心或導致對結構性問題的忽視。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;商業推廣傾向&lt;/strong&gt;：書中多次提及並推薦作者本人的收費培訓課程，這在一定程度上削弱了內容的客觀性，使其帶有明顯的商業推廣色彩。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;對「富有」定義的單一性&lt;/strong&gt;：全書主要從財務角度定義「成功」和「富有」，對於幸福、健康、人際關係、社會貢獻等多元化的成功維度探討不足。&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>書摘《不敗學習力》：學霸都在用的 10 大聰明讀書法</title><link>https://zennote.app/post/unbeatablelearning/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/unbeatablelearning/</guid><description>&lt;div align="center" style="margin: 24px 0;"&gt;
+&lt;img src="bookcover.png" alt="《不敗學習力》書籍封面" width="38%"&gt;
+&lt;/div&gt;
+&lt;p align="center" style="font-size: 1.05rem; color: #4a5568;"&gt;
+書摘《不敗學習力》：學霸都在用的 10 大聰明讀書法
+&lt;/p&gt;
+&lt;div align="center" style="margin: 28px 0;"&gt;
+&lt;a href="https://zennote.app/learning_guide.html" target="_blank"
+style="
+display: inline-block;
+padding: 14px 28px;
+background-color: #4a5568;
+color: #ffffff;
+text-decoration: none;
+border-radius: 8px;
+font-weight: 600;
+transition: background-color 0.2s ease;
+"
+onmouseover="this.style.backgroundColor='#2d3748'"
+onmouseout="this.style.backgroundColor='#4a5568'"&gt;
+點選開啟三頁式重點網頁
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="不敗學習力學霸都在用的-10-大聰明讀書法"&gt;不敗學習力：學霸都在用的 10 大聰明讀書法
+&lt;/h2&gt;&lt;h3 id="作者劉軒"&gt;作者：劉軒
+&lt;/h3&gt;&lt;h2 id="核心理念"&gt;核心理念
+&lt;/h2&gt;&lt;p&gt;哈佛大學心理學碩士劉軒結合個人經歷、心理學研究與學霸經驗，打破「寒窗苦讀」的迷思，提出 &lt;strong&gt;學習力冰山理論&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真正的學霸不只掌握高效技巧，更懂得自我管理並維持健康身心。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="學習力三層面"&gt;學習力三層面
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;高效學習技巧&lt;/strong&gt;：記憶法、筆記法、閱讀與複習策略&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自我管理習慣&lt;/strong&gt;：克服拖延、時間管理、專注力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;健康的身心狀態&lt;/strong&gt;：情緒管理、恆毅力、成長型思維&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="十大核心方法"&gt;十大核心方法
+&lt;/h2&gt;&lt;h3 id="1-學習力重新認識學習"&gt;1. 學習力：重新認識學習
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;你為何而學？&lt;/strong&gt;&lt;br&gt;
+找到內在動力，是學習的起點。&lt;/p&gt;
+&lt;p&gt;劉軒在哈佛發現，學霸室友 Joe 每天打 DJ、練田徑，成績卻全 A。秘訣只有一句話：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Just do what you gotta do.&lt;/strong&gt;&lt;br&gt;
+做你該做的事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;不是做所有事，而是找出「必須做的事」&lt;/li&gt;
+&lt;li&gt;研究課綱，掌握脈絡，懂得取捨&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;學習不等於考試&lt;/strong&gt;：學得會、學得懂、記得住才是關鍵&lt;/li&gt;
+&lt;li&gt;人人都能成為高效學習者，不需要天賦或補習&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="終身學習之路"&gt;終身學習之路
+&lt;/h2&gt;&lt;p&gt;劉軒強調：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;學習不會因為沒有考試而停止。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在快速變化的時代，我們必須成為終身學習者，而最重要的是——&lt;br&gt;
+&lt;strong&gt;始終保持好奇心。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;物理學家費曼說：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「探索世界吧！只要你研究得夠深，幾乎所有東西都會變得非常有趣。」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;相信自己能夠成長。&lt;/strong&gt;&lt;br&gt;
+每個人都有成為高效學習者的潛力，從今天開始實踐，打造屬於你的不敗學習力。&lt;/p&gt;
+&lt;h2 id="第一部分各關卡章節學習重點與破解步驟-"&gt;第一部分：各關卡（章節）學習重點與破解步驟 🗺️
+&lt;/h2&gt;&lt;h3 id="第-1-關重新認識學習-為何而戰"&gt;第 1 關：重新認識學習 (為何而戰？)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 讀書不是為了考試，而是為了解決問題、讓自己變強！不要死讀書，找出「非做不可」的事。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 找到自己的學習目標。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;寫下一個你「最想學會的技能」或「最想解決的問題」。&lt;/li&gt;
+&lt;li&gt;告訴自己：「只要找對方法，我也能變學霸！」&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-2-關超級記憶力-大腦的魔法"&gt;第 2 關：超級記憶力 (大腦的魔法)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 大腦喜歡「有畫面的故事」。死背很容易忘記，要把知識變成好玩的故事。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 用聯想和故事來記東西。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;背單字或課文時，把它想成一部好笑的卡通。&lt;/li&gt;
+&lt;li&gt;試著把剛學到的東西，講給爸爸媽媽、同學或你的玩偶聽（這個練習超有用！）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-3-關神奇筆記力-寫下來才會變你的"&gt;第 3 關：神奇筆記力 (寫下來才會變你的)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 筆記不是老師寫什麼就抄什麼，而是寫下自己的重點和問題。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 分出「重點」和「自己的問題」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;上課用自己的話記重點。&lt;/li&gt;
+&lt;li&gt;下課後，在筆記旁邊寫下關鍵字或小問題。&lt;/li&gt;
+&lt;li&gt;複習時遮住大重點，只看關鍵字來回想。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-4-關無敵閱讀力-看懂比看快重要"&gt;第 4 關：無敵閱讀力 (看懂比看快重要)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 讀書要像偵探一樣，帶著問題去找答案。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 讀書前先看標題和圖片，猜猜看內容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;先花 3 分鐘看完這課的標題和圖片。&lt;/li&gt;
+&lt;li&gt;把標題變成一個問題（例如：「植物如何呼吸？」）。&lt;/li&gt;
+&lt;li&gt;帶著這個問題去讀課文找答案。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-5-關抗遺忘複習力-打敗遺忘大魔王"&gt;第 5 關：抗遺忘複習力 (打敗遺忘大魔王)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 人的大腦很快就會忘記事情！要在快要忘記的時候看一遍。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 安排好複習的時間。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;下課後花 2 分鐘快速回想剛才上了什麼。&lt;/li&gt;
+&lt;li&gt;今天學的，明天看一次、下週再考自己一次。&lt;/li&gt;
+&lt;li&gt;自己做小卡片來測試自己，不要只是反覆看課本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-6-關打敗拖延症-兩分鐘超人"&gt;第 6 關：打敗拖延症 (兩分鐘超人)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 拖延不是懶，是覺得事情很麻煩！把任務切小一點就不怕了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 降低開始的難度，立刻行動。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;兩分鐘法則&lt;/strong&gt;：只要兩分鐘能做完的事（例如收書包），現在立刻做！&lt;/li&gt;
+&lt;li&gt;寫作業前，先把書本打開、鉛筆拿好，告訴自己「我先拚 5 分鐘就好」。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-7-關雷射專注力-不分心的秘密"&gt;第 7 關：雷射專注力 (不分心的秘密)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 大腦一次只能做好一件事。專心的時候效率最高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 創造一個不會被打擾的環境。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;寫作業時，把平板、手機、漫畫和玩具收到別的房間。&lt;/li&gt;
+&lt;li&gt;使用&lt;strong&gt;番茄鐘&lt;/strong&gt;：專心寫作業 25 分鐘，然後開心休息 5 分鐘！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-8-關時間管理大師-先吃大青蛙"&gt;第 8 關：時間管理大師 (先吃大青蛙)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 把最重要、最難的事情先做完，後面就輕鬆了！&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 找出每天最重要的事。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;每天選出 3 件一定要做完的重要事情。&lt;/li&gt;
+&lt;li&gt;放學回家精神最好時，先解決最難的那一個功課（吃青蛙）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-9-關情緒魔法師-不氣餒的力量"&gt;第 9 關：情緒魔法師 (不氣餒的力量)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 考試緊張或考差難過都很正常。學會放鬆心情。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 學習和挫折做朋友。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;考試前緊張時，閉上眼睛做 3 次慢&lt;del&gt;慢&lt;/del&gt;的深呼吸。&lt;/li&gt;
+&lt;li&gt;考不好時不要罵自己，問問自己：「這次哪裡錯了？下次可以怎麼改進？」&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="第-10-關無敵成長思維-我還不會"&gt;第 10 關：無敵成長思維 (我「還」不會)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🎯 學習重點：&lt;/strong&gt; 沒有人天生什麼都會。遇到困難就在後面加上一個「還」字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💡 方向：&lt;/strong&gt; 相信只要努力，大腦就會越變越聰明。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏃 執行步驟：&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;把「這太難了我不會」改成「我『還』不會，但我可以練習！」&lt;/li&gt;
+&lt;li&gt;每天稱讚自己今天有多認真努力，而不是只看分數。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="第二部分學霸日常計畫表-"&gt;第二部分：學霸日常計畫表 📝
+&lt;/h2&gt;&lt;h3 id="-學習重點單"&gt;🎒 學習重點單
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;strong&gt;主動出擊&lt;/strong&gt;：上課帶著問題聽課，不懂就舉手發問。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;strong&gt;教就是學&lt;/strong&gt;：每天找一個學校教的有趣知識，講給家人聽。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;strong&gt;打敗拖延&lt;/strong&gt;：該做的事馬上動手，拒絕拖拖拉拉。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;strong&gt;專心無敵&lt;/strong&gt;：寫功課時桌面保持乾淨，只放需要的文具和書。&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;strong&gt;不怕失敗&lt;/strong&gt;：寫錯題目沒關係，因為這是我變聰明的好機會！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-行動指南一日計畫-今天就可以做到"&gt;📅 行動指南：一日計畫 (今天就可以做到)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🌅 早晨起跑：&lt;/strong&gt; 刷牙洗臉時，想想今天最重要的 3 件事是什麼？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏫 在學校裡：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;下課鐘聲一響，花 1-2 分鐘回想一下老師剛才說了什麼大重點。&lt;/li&gt;
+&lt;li&gt;勇敢舉手發問或表達自己的想法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🏠 放學回家：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;兩分鐘法則&lt;/strong&gt;：馬上拿出聯絡簿、把便當盒拿去洗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;吃掉大青蛙&lt;/strong&gt;：先把最不想寫、最難的功課寫完！&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專注番茄鐘&lt;/strong&gt;：設定計時器 25 分鐘專心寫作業，響了再站起來走動休息 5 分鐘。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🌙 睡覺前：&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;把明天要帶的書本、文具通通放進書包（不怕明天早上手忙腳亂）。&lt;/li&gt;
+&lt;li&gt;給自己一個微笑，回想今天新學到的 1 件事，安心睡覺。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-行動指南一週計畫-週末養成法"&gt;🗓️ 行動指南：一週計畫 (週末養成法)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;週末回顧：&lt;/strong&gt; 把這星期教的國語、數學或社會，像看故事書一樣快速翻一次。把錯過的題目再算一次。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;魔法筆記：&lt;/strong&gt; 檢查一下課本上的筆記，試著在空白處補上自己的「重點整理」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;未雨綢繆：&lt;/strong&gt; 看看下週有沒有小考或大作業？提早先做一點準備，不用全部擠在最後一天。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;開心放電：&lt;/strong&gt; 安排去戶外跑跑跳跳、流流汗，讓大腦充飽電，下週更有活力！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-終極魔法長期培養好習慣"&gt;🌱 終極魔法：長期培養好習慣
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;保持好奇心🔍：&lt;/strong&gt; 對世界充滿問號！常問「為什麼會這樣？」這是最強的學習超能力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;找回專注力📵：&lt;/strong&gt; 規定自己玩平板或看電視的時間，讓大腦習慣「沒有聲光刺激也能專心」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;養成「成長思維」🌟：&lt;/strong&gt; 遇到困難，對自己說：「太好了，這是我挑戰升級的關卡！」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;堅持運動與早睡🏀：&lt;/strong&gt; 每天睡飽 9-10 小時，多運動，大腦發展才會好，記憶力絕對會變超人！&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>書摘《原子習慣》：細微改變帶來巨大成就的實證法則</title><link>https://zennote.app/post/atomic-habits-book-summary/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/atomic-habits-book-summary/</guid><description>&lt;h2 id="書摘原子習慣細微改變帶來巨大成就的實證法則"&gt;書摘《原子習慣》：細微改變帶來巨大成就的實證法則
+&lt;/h2&gt;&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="bookcover.png" alt="原子習慣" width="40%"&gt;
+&lt;/div&gt;
+&lt;div align="center" style="margin: 28px 0;"&gt;
+&lt;a href="https://zennote.app/1211AtomicHabits.html" target="_blank"
+style="
+display: inline-block;
+padding: 14px 28px;
+background-color: #4a5568;
+color: #ffffff;
+text-decoration: none;
+border-radius: 8px;
+font-weight: 600;
+transition: background-color 0.2s ease;
+"
+onmouseover="this.style.backgroundColor='#2d3748'"
+onmouseout="this.style.backgroundColor='#4a5568'"&gt;
+點選開啟互動式書摘網頁
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id="原子習慣細微改變帶來巨大成就的實證法則"&gt;原子習慣：細微改變帶來巨大成就的實證法則
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;詹姆斯·克利爾 著 | 蔡世偉 譯&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="核心理念"&gt;核心理念
+&lt;/h2&gt;&lt;p&gt;《原子習慣》揭示了一個強大的真理：&lt;strong&gt;真正的改變來自微小但持續的進步，而非宏大的目標&lt;/strong&gt;。作者詹姆斯·克利爾結合神經科學、心理學和行為經濟學研究，提出完整的「行為改變四法則」系統，幫助我們建立好習慣、打破壞習慣。&lt;/p&gt;
+&lt;p&gt;核心概念是每天1%的改進。當你每天進步1%，一年後你會進步37倍。這就是習慣的複利效應。英國自行車隊的故事完美詮釋了這點：2003年表現平庸的隊伍，透過在每個細節上追求1%的改進（從座墊設計到選手洗手方式），五年後在北京奧運贏得60%的金牌。&lt;/p&gt;
+&lt;h2 id="三個層次的改變"&gt;三個層次的改變
+&lt;/h2&gt;&lt;p&gt;習慣改變可發生在三個層次：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;成果層次&lt;/strong&gt;：你想達成的目標（減重10公斤）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;過程層次&lt;/strong&gt;：你的習慣和系統（建立健身習慣）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;身分層次&lt;/strong&gt;：你的信念和自我認同（成為健康的人）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最持久的改變來自&lt;strong&gt;身分認同的轉變&lt;/strong&gt;。當你說「我不抽菸」而非「我正在戒菸」，你已經改變了自我認知。身分認同透過習慣塑造——每次行動都是在為你想成為的那種人「投票」。重點不是完美，而是累積足夠的選票。&lt;/p&gt;
+&lt;h2 id="習慣迴路與四法則"&gt;習慣迴路與四法則
+&lt;/h2&gt;&lt;p&gt;所有習慣遵循四步驟迴路：&lt;strong&gt;提示→渴望→回應→獎賞&lt;/strong&gt;。基於此，作者提出行為改變四法則：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;建立好習慣：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;讓提示顯而易見&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;讓習慣有吸引力&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;讓行動輕而易舉&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;讓獎賞令人滿足&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;打破壞習慣則反轉這些法則。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="法則1讓提示顯而易見"&gt;法則1：讓提示顯而易見
+&lt;/h2&gt;&lt;p&gt;多數習慣是無意識的。改變始於覺察——製作「習慣計分卡」，列出所有日常行為並標記好壞。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;執行意向&lt;/strong&gt;是強大工具：「我會於[時間]，在[地點]進行[行為]」。明確規劃何時何地執行習慣，成功率大幅提高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;習慣堆疊&lt;/strong&gt;則是將新習慣連結到現有習慣：「做完[目前的習慣]之後，我會執行[新的習慣]」。例如「倒好咖啡之後，我會靜心60秒」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;環境設計&lt;/strong&gt;比意志力更重要。研究顯示，荷蘭家庭將電表從地下室移到走廊後，用電量減少30%。讓好習慣的提示顯而易見：想多讀書就把書放床頭，想多喝水就在各房間放水瓶。&lt;/p&gt;
+&lt;p&gt;反之，要打破壞習慣就&lt;strong&gt;讓提示隱而不現&lt;/strong&gt;。越戰士兵的研究顯示，15%駐越美軍對海洛因上癮，但回國後環境改變，只有5%復發。自律的真相是：最有自制力的人，最少需要用到自制力，因為他們擅長建構環境、減少誘惑接觸。&lt;/p&gt;
+&lt;h2 id="法則2讓習慣有吸引力"&gt;法則2：讓習慣有吸引力
+&lt;/h2&gt;&lt;p&gt;現代社會充滿「超常刺激」——垃圾食物、社群媒體、線上娛樂——都是比自然環境更強烈的刺激，利用人類演化的本能讓大腦獎賞系統過度興奮。&lt;/p&gt;
+&lt;p&gt;關鍵洞察是：&lt;strong&gt;多巴胺在預期愉悅時分泌，而非體驗愉悅時&lt;/strong&gt;。這就是為什麼期待假期比真正度假更興奮。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;誘惑綑綁&lt;/strong&gt;利用這個原理：將想做的事與必須做的事綑綁。公式是「做完[需要的習慣]之後，我會執行[想要的習慣]」。學生羅南·拜恩將Netflix連接到健身自行車，只有踩到一定速度影片才播放——用追劇對抗肥胖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;群體的力量&lt;/strong&gt;不可小覷。加入一個把你想要的行為視為常態的群體，是讓習慣變得有吸引力的最強方法。人類會模仿親近的人、多數的人、有力的人。&lt;/p&gt;
+&lt;h2 id="法則3讓行動輕而易舉"&gt;法則3：讓行動輕而易舉
+&lt;/h2&gt;&lt;p&gt;習慣的形成靠&lt;strong&gt;重複次數&lt;/strong&gt;，不靠時間。研究顯示平均需要重複66次才能自動化一個行為。行動勝於計畫——攝影課實驗發現，被要求拍大量照片的學生，反而拍出更好的作品。&lt;/p&gt;
+&lt;p&gt;人類天生選擇&lt;strong&gt;最小努力路徑&lt;/strong&gt;。環境設計應降低好習慣的阻力、增加壞習慣的阻力。前一晚準備好運動服、把水果放眼前而零食放櫃子深處、拔掉電視插頭——這些都是減少或增加阻力的方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;兩分鐘法則&lt;/strong&gt;幫助克服啟動慣性：將任何習慣縮小到兩分鐘可完成的版本。「每天跑步30分鐘」變成「穿上跑鞋」，「讀完一本書」變成「讀一頁」。重點不是做得多好，而是&lt;strong&gt;出現&lt;/strong&gt;，建立「出現」的身分認同。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;承諾機制&lt;/strong&gt;則是在意志力充足時鎖定未來行為。維克多·雨果寫作時把所有衣服鎖起來，只能裸身待在家裡。現代版本包括網站封鎖器、自動轉帳儲蓄等。&lt;/p&gt;
+&lt;h2 id="法則4讓獎賞令人滿足"&gt;法則4：讓獎賞令人滿足
+&lt;/h2&gt;&lt;p&gt;人類大腦演化於立即回饋的環境，但現代社會充滿延遲回饋。這種&lt;strong&gt;時間不一致性&lt;/strong&gt;導致：壞習慣的立即結果讓人感覺很好（吸菸紓壓），終極結果卻糟糕；好習慣的立即結果不吸引人（運動疲累），最終結果卻美好。&lt;/p&gt;
+&lt;p&gt;要維持習慣，必須&lt;strong&gt;添加立即滿足&lt;/strong&gt;：每次不買東西就轉等額金額到「度假基金」、運動後用按摩當獎賞、完成章節就移動一個迴紋針。關鍵是選擇與身分認同一致的獎賞。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;習慣追蹤&lt;/strong&gt;本身就是獎賞。股票經紀人特倫特·德斯米德每天用120個迴紋針，每打完一通業務電話就移動一個。這個視覺化進度追蹤讓他24歲年薪達六位數。追蹤習慣讓提示顯而易見、讓習慣有吸引力、讓行為令人滿足。&lt;/p&gt;
+&lt;p&gt;完美是不可能的，關鍵是&lt;strong&gt;不要錯過兩次&lt;/strong&gt;。錯過一次是意外，錯過兩次是新習慣的開始。狀態不佳的日子仍然執行習慣（即使只做一點點），價值遠大於想像，因為這維持了複利、強化了身分認同。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;習慣契約&lt;/strong&gt;利用社會壓力。布萊恩·哈里斯與妻子和教練簽訂契約，設定未達成目標的懲罰（罰款、穿正式服裝上班）。知道有人在看著，本身就是強大動力。&lt;/p&gt;
+&lt;h2 id="進階策略"&gt;進階策略
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;基因決定機會領域&lt;/strong&gt;，而非命運。麥可·菲爾普斯和摩洛哥跑者奎羅伊腿長相同，但身材比例完全不同，適合不同運動。關鍵是選對戰場——配合性格和能力打造習慣，而非對抗天性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;金髮女孩原則&lt;/strong&gt;指出：人類動力在最佳難度區域——任務不太簡單（無聊），也不太困難（挫折）。習慣建立後最大威脅是無聊，真正的專業人士會在無聊時仍然堅持。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;習慣的黑暗面&lt;/strong&gt;是：當習慣自動化後，我們會停止注意小錯誤。解決方法是定期反思檢討，保持覺察與改進。習慣+刻意練習=精通。&lt;/p&gt;
+&lt;h2 id="核心策略工具箱"&gt;核心策略工具箱
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;習慣計分卡&lt;/strong&gt;：列出所有行為，標記好壞&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;執行意向&lt;/strong&gt;：明確規劃時間地點&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;習慣堆疊&lt;/strong&gt;：連結到現有習慣&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;環境設計&lt;/strong&gt;：讓提示顯而易見或隱而不現&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;誘惑綑綁&lt;/strong&gt;：將想做與必須做的事綑綁&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;兩分鐘法則&lt;/strong&gt;：縮小到可立即開始的版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;習慣追蹤&lt;/strong&gt;：視覺化進度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;習慣契約&lt;/strong&gt;：公開承諾並設定懲罰&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="關鍵心法"&gt;關鍵心法
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;專注系統，非目標&lt;/strong&gt;：目標決定方向，系統決定進步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改變身分認同&lt;/strong&gt;：成為那種人，而非想成為&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;每天1%進步&lt;/strong&gt;：微小改變長期累積產生巨大效果&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重複勝於完美&lt;/strong&gt;：習慣形成靠次數&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;環境勝於意志力&lt;/strong&gt;：設計環境，減少依賴自制力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;立即滿足很重要&lt;/strong&gt;：為延遲回饋的習慣添加即時獎賞&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配合天性&lt;/strong&gt;：選擇適合你的習慣&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;你不需要成為不同的人，只需要成為自己的更好版本。透過每天微小但一致的改進，任何人都可以達成驚人成就。關鍵不在於意志力，而在於設計正確的系統。&lt;/p&gt;
+&lt;p&gt;改變不是一蹴而就的事件，而是持續進化的過程。每個微小的習慣都是一次投票，為你想成為的那種人投票。時間會證明，這些投票累積起來的力量。&lt;/p&gt;</description></item><item><title>書摘《時勢:看懂全球經濟大趨勢》財經知識型YT「小Lin說」第一本商業金融科普書，讓你一口氣看懂世界經濟大局</title><link>https://zennote.app/post/megatrend/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/megatrend/</guid><description>&lt;h2 id="書摘時勢看懂全球經濟大趨勢"&gt;書摘《時勢:看懂全球經濟大趨勢》
+&lt;/h2&gt;&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="bookcover.png" alt="時勢書籍封面" width="40%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;書摘《時勢:看懂全球經濟大趨勢》&lt;/p&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/megatrend.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+📙 點選開啟互動式書摘網頁
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id="時勢看懂全球經濟大趨勢"&gt;時勢:看懂全球經濟大趨勢
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;小Lin 著&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="核心概念"&gt;核心概念
+&lt;/h2&gt;&lt;p&gt;《時勢》用通俗語言解讀全球經濟脈動,前華爾街分析師小Lin將冰冷數據轉化為有溫度的故事,帶你掌握日本、韓國、印度、希臘、歐盟、英國、中東、俄羅斯、土耳其等國的經濟邏輯。&lt;/p&gt;
+&lt;h2 id="日本從奇蹟到失落"&gt;日本:從奇蹟到失落
+&lt;/h2&gt;&lt;p&gt;日本二戰後迅速恢復,1954-1972年平均GDP成長率超過10%,創造「日本經濟奇蹟」。財團體系以銀行為核心整合產業鏈,在發展期提升效率,但也埋下禍根。&lt;/p&gt;
+&lt;p&gt;1985年《廣場協議》成為轉折點。日圓大幅升值,日銀降息刺激經濟,卻引發史上最大資產泡沫。銀行過度放貸、財團交叉持股、信用過度擴張,1985-1991年房價漲3倍、股市漲近4倍。&lt;/p&gt;
+&lt;p&gt;1989年日銀刺破泡沫,利率一年內從2.5%升至6%。股市兩年內腰斬,但更可怕的是實體經濟深層衰退。銀行累積巨額壞賬,政府維持「殭屍企業」,1997年金融危機全面爆發。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;失落的三十年&lt;/strong&gt;中,日本陷入通貨緊縮惡性循環。政府使盡解數:零利率(1999)、量化寬鬆(2001)、負利率(2016)、安倍經濟學三支箭,但效果有限。人口高齡化導致內需不足,價格預期錨定,財團體系僵化。直到2022年,GDP仍徘徊在30年前水準。&lt;/p&gt;
+&lt;p&gt;近期日本迎來輸入性通膨,日圓暴跌至1美元兌150日圓。日銀兩難:升息刺破泡沫,不升息通膨加劇。外資做空國債,債市面臨閃崩風險。&lt;/p&gt;
+&lt;h2 id="韓國漢江奇蹟的代價"&gt;韓國:漢江奇蹟的代價
+&lt;/h2&gt;&lt;p&gt;1950年代韓國赤貧,軍閥時期朴正熙推動政府主導、財閥執行的發展模式,創造「漢江奇蹟」。但財閥「大到不能倒」,特殊「全租房」模式泡沫化風險高。1997年亞洲金融危機重創韓國。&lt;/p&gt;
+&lt;p&gt;快速發展的代價:階層僵化,財閥壟斷上升通道,「勺子階級論」盛行;生育率低迷,2023年僅0.72,全球最低。&lt;/p&gt;
+&lt;h2 id="印度潛力與問題並存"&gt;印度:潛力與問題並存
+&lt;/h2&gt;&lt;p&gt;印度1991年改革開放後騰飛,抓住低廉勞動力、IT教育、英語優勢成為全球外包中心。2023年超越中國成為世界第一人口大國。&lt;/p&gt;
+&lt;p&gt;但底層問題嚴重:製造業太薄弱無法吸納勞動力,腐敗嚴重,種姓制度降低社會流動性,貧富差距極大。能否突破瓶頸仍是未知數。&lt;/p&gt;
+&lt;h2 id="希臘造假入歐的苦果"&gt;希臘:造假入歐的苦果
+&lt;/h2&gt;&lt;p&gt;希臘1999年渴望加入歐元區享受低利率,找高盛做財務「化妝」隱藏債務,成功混入。加入後瘋狂借低息貸款,債務占GDP比重飆升。&lt;/p&gt;
+&lt;p&gt;2008年次貸危機揭露真相:實際赤字率12.7%(聲稱3.7%),債務占GDP比113%。歐盟、IMF、歐洲央行多次援助但附帶嚴苛條件,希臘失業率一度超過27%,成為史上第一個債務違約的已開發國家。&lt;/p&gt;
+&lt;h2 id="歐盟結構性矛盾"&gt;歐盟:結構性矛盾
+&lt;/h2&gt;&lt;p&gt;歐盟1999年推出統一貨幣歐元,但設計存在致命缺陷:&lt;strong&gt;統一貨幣政策,各國財政政策獨立&lt;/strong&gt;。經濟強國和弱國需求完全不同,卻要用同一利率。&lt;/p&gt;
+&lt;p&gt;2010年希臘危機引爆歐債危機,蔓延至葡萄牙、愛爾蘭、義大利、西班牙。歐洲央行印鈔救市,但各國無法單獨調整匯率利率,財政紀律難以約束,成員國利益衝突。&lt;/p&gt;
+&lt;h2 id="英國脫歐政治賭博"&gt;英國脫歐:政治賭博
+&lt;/h2&gt;&lt;p&gt;英國曾是日不落帝國,二戰後淪為「歐洲病夫」,1973年加入歐洲共同體。2015年難民潮引發民怨,2016年公投52%贊成脫歐。&lt;/p&gt;
+&lt;p&gt;脫歐談判異常複雜,2016-2022年換了5任首相。脫歐後經濟受創,與歐盟關係剪不斷理還亂。&lt;/p&gt;
+&lt;h2 id="中東石油的祝福與詛咒"&gt;中東:石油的祝福與詛咒
+&lt;/h2&gt;&lt;p&gt;1860-1930年中東發現石油,1930-1970年被西方「七姐妹」壟斷。1960年OPEC成立抱團取暖。1973年石油危機,OPEC禁運西方,油價飆升4倍,中東「翻身」。&lt;/p&gt;
+&lt;p&gt;但1990年後進入混亂期:波斯灣戰爭、中國成為最大進口國、美國頁岩油革命、可再生能源興起。中東面臨「資源詛咒」:過度依賴石油,經濟結構單一,轉型困難。&lt;/p&gt;
+&lt;h2 id="俄羅斯寡頭經濟困境"&gt;俄羅斯:寡頭經濟困境
+&lt;/h2&gt;&lt;p&gt;蘇聯解體後實施激進「休克療法」,缺乏配套制度導致經濟崩潰(GDP暴跌40%)、惡性通膨(1992年2,600%)、寡頭壟斷。&lt;/p&gt;
+&lt;p&gt;1999年普丁上台收拾寡頭,經濟高速發展。但2022年烏俄衝突後西方制裁重創經濟,能源出口受阻。長期看,經濟過度依賴能源出口,結構性問題嚴重。&lt;/p&gt;
+&lt;h2 id="土耳其反常規實驗"&gt;土耳其:反常規實驗
+&lt;/h2&gt;&lt;p&gt;土耳其總統埃爾多安堅持「利率是惡魔的父母」,面對通膨降息而非升息,違背經濟學常識。結果2022年通膨率破100%,里拉暴貶,民生艱難。土耳其成為反面教材,證明貨幣政策不能違背基本規律。&lt;/p&gt;
+&lt;h2 id="核心洞察"&gt;核心洞察
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1. 資產泡沫的共性&lt;/strong&gt;:過度寬鬆貨幣政策、信用過度擴張、資產價格脫離基本面。關鍵是泡沫背後的信用危機。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 貨幣政策的局限&lt;/strong&gt;:日本和歐洲證明印鈔票不是萬能的。流動性陷阱、結構性問題、通縮預期,印錢解決不了。貨幣政策只能治標,結構性改革才能治本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 結構性問題的頑固&lt;/strong&gt;:人口結構(日韓老齡化)、產業結構(中東俄羅斯依賴資源)、制度結構(印度種姓、俄羅斯寡頭、韓國財閥)需要長期艱難改革。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 全球化的雙刃劍&lt;/strong&gt;:帶來機遇也帶來風險,資本自由流動加劇波動,小國更易受衝擊。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. 政治與經濟博弈&lt;/strong&gt;:理想的經濟政策往往在政治現實中變形。希臘造假、英國脫歐賭博、土耳其降息意識形態、歐盟主權讓渡不足。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. 歷史的韻律&lt;/strong&gt;:裙帶資本主義時期→金融自由化→危機與調整→長期停滯或轉型。以史為鏡,可以知興替。&lt;/p&gt;
+&lt;p&gt;這本書用通俗語言揭示複雜經濟現象背後的底層邏輯。經濟學不是冰冷的數字,而是活生生的歷史、真實的博弈、民眾的命運。&lt;/p&gt;
+&lt;p&gt;**了解時勢,不是為了預測未來,而是為了在變局中做出更明智的選擇。&lt;/p&gt;
+&lt;p&gt;**無論投資理財、職業規劃,還是理解新聞背後的邏輯,經濟學思維都是必備工具。&lt;/p&gt;</description></item><item><title>書摘《納瓦爾寶典》：關於財富與幸福的智慧</title><link>https://zennote.app/post/naval-ravikant-book-summary/</link><pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/naval-ravikant-book-summary/</guid><description>&lt;h2 id="書摘納瓦爾寶典關於財富與幸福的智慧"&gt;書摘《納瓦爾寶典》：關於財富與幸福的智慧
+&lt;/h2&gt;&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="bookcover2.png" alt="納瓦爾寶典書籍封面" width="40%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;書摘《納瓦爾寶典》：關於財富與幸福的智慧&lt;/p&gt;
+&lt;div align="center" style="margin: 20px 0;"&gt;
+&lt;a href="https://zennote.app/1211NavalRavikant.html" target="_blank"
+style="display: inline-block; padding: 12px 24px; background-color: #4a5568; color: white;
+text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s;"&gt;
+📙 點選開啟互動式書摘網頁
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h1 id="納瓦爾寶典財富與幸福的智慧"&gt;納瓦爾寶典：財富與幸福的智慧
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Eric Jorgenson 編著 | Naval Ravikant 原創思想&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="核心理念"&gt;核心理念
+&lt;/h2&gt;&lt;p&gt;《納瓦爾寶典》是矽谷傳奇投資人 Naval Ravikant 智慧的彙編，由 Eric Jorgenson 從 Naval 的推文、播客和公開演講中整理而成。Naval 是 AngelList 的聯合創始人，早期投資了 Uber、Twitter 等知名公司。但他的影響力不僅來自商業成就，更在於他對財富創造和幸福哲學的深刻洞見。&lt;/p&gt;
+&lt;p&gt;本書的核心主題是：&lt;strong&gt;財富和幸福都是可以學習的技能&lt;/strong&gt;，而非運氣或天賦的產物。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第一部分財富如何在不靠運氣的情況下致富"&gt;第一部分：財富——如何在不靠運氣的情況下致富
+&lt;/h2&gt;&lt;h3 id="財富-vs-金錢-vs-地位"&gt;財富 vs. 金錢 vs. 地位
+&lt;/h3&gt;&lt;p&gt;Naval 首先釐清三個概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;財富&lt;/strong&gt;：睡覺時也能為你賺錢的資產&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;金錢&lt;/strong&gt;：轉移時間和財富的工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;地位&lt;/strong&gt;：社會階層中的位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;關鍵洞察：&lt;strong&gt;追求財富，而非金錢或地位&lt;/strong&gt;。地位是零和遊戲（你的上升意味著別人的下降），而財富創造是正和遊戲，可以讓所有人受益。&lt;/p&gt;
+&lt;h3 id="致富是一種技能"&gt;致富是一種技能
+&lt;/h3&gt;&lt;p&gt;Naval 說：「如果我失去所有的錢，被隨機丟在任何英語國家的街頭，在 5-10 年內我會再次富有，因為這只是我已發展的技能組合，任何人都可以發展。」&lt;/p&gt;
+&lt;p&gt;致富不是關於辛勤工作本身。你可以在餐廳每週工作80小時卻不會因此致富。致富是關於&lt;strong&gt;知道做什麼、和誰一起做、以及何時做&lt;/strong&gt;。這更多是關於理解，而非單純的努力。&lt;/p&gt;
+&lt;h3 id="特定知識specific-knowledge"&gt;特定知識（Specific Knowledge）
+&lt;/h3&gt;&lt;p&gt;特定知識是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;無法通過培訓獲得的知識&lt;/li&gt;
+&lt;li&gt;通過追求真正的好奇心和熱情找到的&lt;/li&gt;
+&lt;li&gt;對你來說感覺像玩耍，對別人卻是工作&lt;/li&gt;
+&lt;li&gt;通常具有高度技術性或創造性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何找到？觀察你童年時的興趣。你小時候自然被什麼吸引？這些往往指向你的特定知識領域。&lt;/p&gt;
+&lt;h3 id="槓桿的力量"&gt;槓桿的力量
+&lt;/h3&gt;&lt;p&gt;在現代經濟中，正確的決定可以贏得一切。槓桿放大了你判斷力的影響。&lt;/p&gt;
+&lt;p&gt;四種槓桿形式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;勞動力&lt;/strong&gt;：僱用人為你工作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;資本&lt;/strong&gt;：使用金錢賺更多錢&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代碼&lt;/strong&gt;：軟件和技術，可以無限複製&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;媒體&lt;/strong&gt;：書籍、播客、推文，可以觸及數百萬人&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;代碼和媒體是最民主的槓桿形式&lt;/strong&gt;——你不需要任何人的許可就可以使用它們。&lt;/p&gt;
+&lt;h3 id="承擔責任與建立股權"&gt;承擔責任與建立股權
+&lt;/h3&gt;&lt;p&gt;你無法通過出租時間致富。你必須擁有企業的股權——一部分業務——才能獲得財務自由。&lt;/p&gt;
+&lt;p&gt;承擔責任意味著以你的名義承擔商業風險，但這也意味著你將獲得相應的回報。社會會獎勵那些願意承擔風險和責任的人。&lt;/p&gt;
+&lt;h3 id="判斷力比努力更重要"&gt;判斷力比努力更重要
+&lt;/h3&gt;&lt;p&gt;Naval 對智慧的定義：「知道你行動的長期後果。」判斷力就是將智慧應用於外部問題。&lt;/p&gt;
+&lt;p&gt;在槓桿時代，判斷力變得極其寶貴。如果你管理 10 億美元，而你的決策正確率比別人高 10%，你的判斷力就創造了 1 億美元的價值。&lt;/p&gt;
+&lt;p&gt;建立判斷力的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;從第一性原理思考&lt;/li&gt;
+&lt;li&gt;學習基礎學科（數學、物理、經濟學）&lt;/li&gt;
+&lt;li&gt;收集心智模型（演化論、博弈論、復利、反轉思維）&lt;/li&gt;
+&lt;li&gt;大量閱讀——「每天閱讀科學、數學和哲學一小時，可能在七年內讓你進入人類成功的頂層」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="長期遊戲與複利"&gt;長期遊戲與複利
+&lt;/h3&gt;&lt;p&gt;與可以長期合作的人建立關係，選擇一個你可以長期參與的行業。所有回報都來自復利，但復利需要時間才能發揮作用。&lt;/p&gt;
+&lt;p&gt;當你建立了高誠信、長期思維的聲譽時，人們會主動找你做交易。這就是 Warren Buffett 得到別人無法得到的機會的原因。&lt;/p&gt;
+&lt;h3 id="四種運氣"&gt;四種運氣
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;盲目運氣&lt;/strong&gt;：完全隨機&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通過堅持創造的運氣&lt;/strong&gt;：通過不斷嘗試增加機會&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通過專業知識發現的運氣&lt;/strong&gt;：識別別人錯過的機會&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通過獨特性格吸引的運氣&lt;/strong&gt;：建立獨特品牌，讓運氣主動找上你&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第四種最強大：當你成為某領域最好的人時，機會會主動尋找你。這時運氣變成了命運。&lt;/p&gt;
+&lt;h3 id="重視時間"&gt;重視時間
+&lt;/h3&gt;&lt;p&gt;為自己設定一個看似荒謬的高時薪（例如 $5,000/小時），並按照這個標準做決定。如果某件事可以用低於你時薪的價格外包，就外包它。這不是傲慢——這是關於重視你最稀缺的資源：時間。&lt;/p&gt;
+&lt;h3 id="找到感覺像玩耍的工作"&gt;找到感覺像玩耍的工作
+&lt;/h3&gt;&lt;p&gt;當你找到對你來說感覺像玩耍、但對別人來說是工作的事情時，你就找到了天職。Naval 說：「我總是在『工作』。對別人看起來像工作，對我卻是玩耍。沒有人能在這方面與我競爭，因為我只是在玩耍，每天16小時。」&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="第二部分幸福學習快樂的藝術"&gt;第二部分：幸福——學習快樂的藝術
+&lt;/h2&gt;&lt;h3 id="幸福是一種選擇"&gt;幸福是一種選擇
+&lt;/h3&gt;&lt;p&gt;Naval 對幸福的看法是激進的：&lt;strong&gt;幸福不是你尋找的東西，而是你選擇的東西&lt;/strong&gt;。它是一種可以學習和培養的技能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;幸福 = 現實 - 期望&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你可以通過兩種方式增加幸福：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;改變你的現實（獲得更多）&lt;/li&gt;
+&lt;li&gt;減少你的期望（想要更少）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;大多數人專注於 #1，但 #2 往往更有效且在你的控制之內。&lt;/p&gt;
+&lt;h3 id="每個欲望都是選擇的不快樂"&gt;每個欲望都是選擇的不快樂
+&lt;/h3&gt;&lt;p&gt;當你有欲望時，你就是在說：「我不會快樂，直到我得到這個。」你是在將未來的快樂押注在一個特定的結果上。&lt;/p&gt;
+&lt;p&gt;Naval：「我不想要任何東西。如果我說我想要某樣東西，我會一直不快樂，直到我得到它。所以，我放下了想要的東西。」&lt;/p&gt;
+&lt;h3 id="活在當下"&gt;活在當下
+&lt;/h3&gt;&lt;p&gt;過去只存在於記憶中，未來只存在於想像中。唯一真實的時刻是現在。&lt;/p&gt;
+&lt;p&gt;但我們大部分時間都活在對過去的懊悔中或對未來的焦慮中。通過冥想、正念練習和專注於當前的感官體驗，我們可以學習活在當下。&lt;/p&gt;
+&lt;h3 id="接受的力量"&gt;接受的力量
+&lt;/h3&gt;&lt;p&gt;在生活的任何情況下，你總是有三個選擇：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;改變它&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接受它&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;離開它&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;不好的選擇是希望改變但不改變，希望離開但不離開，也不接受。這種掙扎導致大部分的痛苦。&lt;/p&gt;
+&lt;p&gt;Naval 說：「我腦海中最常對自己說的詞可能就是：『接受』。」&lt;/p&gt;
+&lt;h3 id="幸福習慣"&gt;幸福習慣
+&lt;/h3&gt;&lt;p&gt;Naval 的日常習慣：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;每天運動&lt;/strong&gt; - 「越難的鍛煉，越簡單的一天。」身體的和平帶來心靈的和平&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;戒掉咖啡因&lt;/strong&gt; - 讓他成為更穩定、更少焦慮的人&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;減少判斷&lt;/strong&gt; - 每次判斷都在分離自己，創造負面性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;告訴別人你是快樂的人&lt;/strong&gt; - 創造一致性偏見，你會被迫符合這個身份&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;減少智能手機使用&lt;/strong&gt; - 所有屏幕活動都與較低幸福感相關&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;避免新聞&lt;/strong&gt; - 新聞的工作是讓你焦慮和憤怒&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="冥想的力量"&gt;冥想的力量
+&lt;/h3&gt;&lt;p&gt;冥想是心靈的斷食。太多的糖導致身體沉重，太多的干擾導致心靈沉重。&lt;/p&gt;
+&lt;p&gt;Naval 的冥想實踐：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;無選擇覺察&lt;/strong&gt;：在日常活動中，接受當下時刻，不做判斷&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;坐禪&lt;/strong&gt;：每天至少一小時，閉眼，不抵抗任何事，讓思想流動，解決深層未解決問題&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行走冥想、寫作冥想、感恩冥想&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目標是達到「精神收件箱零」——當你坐下冥想時，沒有未解決的思想需要處理。這是極樂和平靜的狀態。&lt;/p&gt;
+&lt;h3 id="拯救自己"&gt;拯救自己
+&lt;/h3&gt;&lt;p&gt;Naval 的激進觀點：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;醫生不會讓你健康，營養師不會讓你苗條，老師不會讓你聰明，大師不會讓你平靜，導師不會讓你富有，教練不會讓你健康。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最終，你必須承擔責任。拯救你自己。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="做你自己"&gt;做你自己
+&lt;/h3&gt;&lt;p&gt;世界上沒有人能比你更擅長做你自己。不要試圖模仿別人。找到最需要你的人、企業、項目或藝術。&lt;/p&gt;
+&lt;p&gt;你的目標是找到只有你能做的事情——通過你獨特的 DNA、經驗和興趣的組合。&lt;/p&gt;
+&lt;h3 id="健康第一"&gt;健康第一
+&lt;/h3&gt;&lt;p&gt;Naval 的優先順序：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;身體健康&lt;/li&gt;
+&lt;li&gt;心理健康&lt;/li&gt;
+&lt;li&gt;靈性健康&lt;/li&gt;
+&lt;li&gt;家人的健康&lt;/li&gt;
+&lt;li&gt;家人的福祉&lt;/li&gt;
+&lt;li&gt;世界其他部分&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;現代世界讓我們偏離自然：加工食品、缺乏運動、過度清潔、持續的科技干擾。回歸簡單的原則：越加工的食物越少吃，每天運動，接觸自然，減少屏幕時間。&lt;/p&gt;
+&lt;h3 id="擁抱死亡"&gt;擁抱死亡
+&lt;/h3&gt;&lt;p&gt;死亡是你將經歷的最重要的事情。當你承認死亡，而不是逃避它，它會為你的生命帶來意義。&lt;/p&gt;
+&lt;p&gt;Naval：「你在這裡的時間如此短暫。如果你完全承認你所做之事的徒勞性，它可以帶來巨大的幸福和和平，因為你意識到這是一個遊戲。但這是一個有趣的遊戲。」&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="核心原則"&gt;核心原則
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;財富創造：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;追求財富（資產），而非金錢或地位&lt;/li&gt;
+&lt;li&gt;你無法通過出租時間致富——必須擁有股權&lt;/li&gt;
+&lt;li&gt;找到並建立特定知識&lt;/li&gt;
+&lt;li&gt;與長期夥伴玩長期遊戲&lt;/li&gt;
+&lt;li&gt;運用槓桿：代碼和媒體最強大&lt;/li&gt;
+&lt;li&gt;通過判斷力獲得報酬&lt;/li&gt;
+&lt;li&gt;建立心智模型，大量閱讀&lt;/li&gt;
+&lt;li&gt;找到感覺像玩耍的工作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;幸福建立：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;幸福 = 現實 - 期望&lt;/li&gt;
+&lt;li&gt;減少欲望，每個欲望都是選擇的不快樂&lt;/li&gt;
+&lt;li&gt;活在當下，接受現實&lt;/li&gt;
+&lt;li&gt;通過習慣建立幸福（運動、冥想、減少判斷）&lt;/li&gt;
+&lt;li&gt;拯救自己——為自己的生命負責&lt;/li&gt;
+&lt;li&gt;做你自己——沒有人能比你更擅長&lt;/li&gt;
+&lt;li&gt;健康第一：身體、心理、靈性&lt;/li&gt;
+&lt;li&gt;擁抱死亡，它帶來意義&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;《納瓦爾寶典》提供了一個經過深思熟慮、實踐檢驗的人生哲學。最重要的洞見是：&lt;strong&gt;財富和幸福都在你的掌控之中&lt;/strong&gt;。它們是可以學習的技能，而非運氣或天賦的問題。&lt;/p&gt;
+&lt;p&gt;但它們需要長期思維、系統化方法、持續實踐和耐心。&lt;/p&gt;
+&lt;p&gt;正如 Naval 所說：「你不需要成為不同的人，你只需要成為自己更好的版本。」&lt;/p&gt;
+&lt;p&gt;這本書為你提供了藍圖。剩下的就是行動。&lt;/p&gt;</description></item><item><title>2026 Mac 新手裝機指南:學長姐私藏的 25 款必裝軟體</title><link>https://zennote.app/post/2026-mac-%E6%96%B0%E6%89%8B%E8%A3%9D%E6%A9%9F%E6%8C%87%E5%8D%97/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/2026-mac-%E6%96%B0%E6%89%8B%E8%A3%9D%E6%A9%9F%E6%8C%87%E5%8D%97/</guid><description>&lt;p&gt;還記得我第一次打開 MacBook 的時候,整個人是懵的。&lt;/p&gt;
+&lt;p&gt;滑鼠右鍵怎麼按？視窗怎麼放大？檔案總管在哪？用了十幾年 Windows,換到 Mac 就像突然搬到國外,什麼都要重新學。&lt;/p&gt;
+&lt;p&gt;最痛苦的是,我花了快一個月才摸索出「哦原來 Mac 可以裝這些軟體讓它更好用」。那種「早知道就好了」的感覺,真的很 frustrating。&lt;/p&gt;
+&lt;p&gt;所以這篇就是我的「早知道清單」。這 25 款軟體,是我用了三年 Mac 後真心覺得必裝的。裝完之後,你會發現 Mac 不只好看,是真的好用。&lt;/p&gt;
+&lt;h2 id="系統工具讓-mac-更順手-"&gt;系統工具:讓 Mac 更順手 🛠️
+&lt;/h2&gt;&lt;p&gt;從 Windows 轉過來,最不習慣的就是「找不到熟悉的功能」。這幾個工具能讓你快速找回熟悉感。&lt;/p&gt;
+&lt;h3 id="raycast---超強啟動器"&gt;Raycast - 超強啟動器
+&lt;/h3&gt;&lt;p&gt;Mac 內建的 Spotlight 很陽春對吧？Raycast 是加強版,而且強大到你會懷疑人生。&lt;/p&gt;
+&lt;p&gt;按一個快捷鍵,就能搜檔案、開 App、查單字、算數學、控制音樂播放、切換 Wi-Fi⋯⋯甚至可以直接叫 AI 幫你改文案。它還內建剪貼簿歷史、視窗管理、番茄鐘,根本把十幾個 App 塞進一個啟動器裡。&lt;/p&gt;
+&lt;p&gt;如果你只能裝一個效率工具,就裝 Raycast。它會改變你用 Mac 的方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 任何需要快速操作的時候 - 開檔案、搜尋、執行指令&lt;/p&gt;
+&lt;h3 id="rectangle---視窗管理神器"&gt;Rectangle - 視窗管理神器
+&lt;/h3&gt;&lt;p&gt;Windows 能用 Win + 方向鍵把視窗貼邊,Mac 原生做不到這點真的很痛。Rectangle 就是來解決這問題的。&lt;/p&gt;
+&lt;p&gt;按個快捷鍵,視窗自動分左半、右半、全螢幕、四分之一螢幕。寫程式碼配文件、看影片配做筆記,多工超方便。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 需要同時看多個視窗(寫程式、剪片、做簡報)&lt;/p&gt;
+&lt;h3 id="clipy---剪貼簿歷史記錄"&gt;Clipy - 剪貼簿歷史記錄
+&lt;/h3&gt;&lt;p&gt;你有沒有過「剛剛複製的東西被覆蓋掉」的崩潰經驗？Clipy 幫你記住所有複製過的內容,隨時叫出來用。&lt;/p&gt;
+&lt;p&gt;按 ⌘+Shift+V 就能看到完整的複製歷史。寫文章、整理資料的時候超實用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 需要頻繁複製貼上(寫文章、整理資料、填表格)&lt;/p&gt;
+&lt;h3 id="appcleaner---軟體移除工具"&gt;AppCleaner - 軟體移除工具
+&lt;/h3&gt;&lt;p&gt;Mac 移除軟體不能只丟到垃圾桶,很多設定檔和快取會殘留在系統裡。AppCleaner 幫你完全移除,連相關檔案都一起清。&lt;/p&gt;
+&lt;p&gt;用法超簡單,把 App 拖進去就搞定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 移除不要的軟體,保持系統乾淨&lt;/p&gt;
+&lt;h3 id="the-unarchiver---解壓縮工具"&gt;The Unarchiver - 解壓縮工具
+&lt;/h3&gt;&lt;p&gt;Mac 內建的解壓縮只能處理 .zip,碰到 .rar、.7z 就 GG 了。The Unarchiver 支援幾乎所有壓縮格式,而且完全免費。&lt;/p&gt;
+&lt;p&gt;裝了它,你就不用煩惱「這個檔案怎麼打不開」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 下載壓縮檔、處理各種格式&lt;/p&gt;
+&lt;h3 id="popclip---選取文字增強工具"&gt;PopClip - 選取文字增強工具
+&lt;/h3&gt;&lt;p&gt;選取文字後,PopClip 會跳出一排功能鈕:複製、翻譯、搜尋、改大小寫、發推特⋯⋯你想得到的操作它都有。&lt;/p&gt;
+&lt;p&gt;就像手機上長按會跳出選單,PopClip 讓 Mac 的文字操作變超直覺。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 大量處理文字(寫作、翻譯、整理資料)&lt;/p&gt;
+&lt;h3 id="snipaste---截圖標註神器"&gt;Snipaste - 截圖標註神器
+&lt;/h3&gt;&lt;p&gt;Mac 內建的截圖功能陽春到不行。Snipaste 不只截圖,還能直接在圖上畫箭頭、加文字、打馬賽克,截完的圖還可以釘在桌面上當便利貼。&lt;/p&gt;
+&lt;p&gt;寫教學文件、回報 bug、做簡報的時候超好用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 需要截圖並標註(教學、報告、溝通)&lt;/p&gt;
+&lt;h2 id="生產力工具筆記文書學習-"&gt;生產力工具:筆記、文書、學習 📝
+&lt;/h2&gt;&lt;p&gt;工作和學習離不開這些工具。裝好它們,你的生產力直接起飛。&lt;/p&gt;
+&lt;h3 id="notion---全能筆記工具"&gt;Notion - 全能筆記工具
+&lt;/h3&gt;&lt;p&gt;Notion 根本是數位工作者的瑞士刀。筆記、待辦清單、專案管理、資料庫、知識庫⋯⋯全包了。&lt;/p&gt;
+&lt;p&gt;我用 Notion 管理所有專案、寫文章大綱、追蹤學習進度。它的資料庫功能特別強,可以做出很彈性的資訊管理系統。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 專案管理、團隊協作、個人知識庫&lt;/p&gt;
+&lt;h3 id="obsidian---本地筆記利器"&gt;Obsidian - 本地筆記利器
+&lt;/h3&gt;&lt;p&gt;如果你喜歡把筆記存在自己電腦,Obsidian 是最佳選擇。它用 Markdown 格式,筆記之間可以互相連結,慢慢建立起自己的知識網絡。&lt;/p&gt;
+&lt;p&gt;很多人用它做第二大腦、寫論文、整理讀書筆記。資料都在本機,不怕雲端服務掛掉。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 長期知識累積、學術研究、注重隱私&lt;/p&gt;
+&lt;h3 id="anki---記憶卡片神器"&gt;Anki - 記憶卡片神器
+&lt;/h3&gt;&lt;p&gt;要背單字、準備考試、記專業術語,Anki 是最強工具。它用「間隔重複」演算法,在你快忘記的時候提醒你複習,記憶效率超高。&lt;/p&gt;
+&lt;p&gt;醫學生、考證照的、學語言的都在用。介面雖然有點醜,但效果真的好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 考試準備、背單字、記大量資訊&lt;/p&gt;
+&lt;h3 id="libreoffice---免費文書處理"&gt;LibreOffice - 免費文書處理
+&lt;/h3&gt;&lt;p&gt;不想付 Microsoft Office 的訂閱費？LibreOffice 是開源免費的替代方案,該有的功能都有。&lt;/p&gt;
+&lt;p&gt;Word、Excel、PowerPoint 的檔案都能開,基本文書處理完全夠用。偶爾要編輯 Office 文件,裝這個就對了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 文書處理、偶爾要編輯 Office 檔案&lt;/p&gt;
+&lt;h3 id="dropbox---雲端同步老牌"&gt;Dropbox - 雲端同步老牌
+&lt;/h3&gt;&lt;p&gt;雖然 iCloud 很方便,但 Dropbox 跨平台支援更好。Windows、Linux、手機都能無縫同步。&lt;/p&gt;
+&lt;p&gt;我習慣把重要專案和文件都放 Dropbox,換電腦也不用擔心資料不見。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 跨裝置同步、團隊共享資料&lt;/p&gt;
+&lt;h3 id="堅果雲---國產雲端同步"&gt;堅果雲 - 國產雲端同步
+&lt;/h3&gt;&lt;p&gt;如果你常跟中國的團隊協作,堅果雲會更順。它在中國的同步速度比 Dropbox 快很多。&lt;/p&gt;
+&lt;p&gt;而且支援 WebDAV,可以配合很多筆記 App 用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 兩岸協作、需要 WebDAV 同步&lt;/p&gt;
+&lt;h2 id="開發者工具寫-code-必裝-"&gt;開發者工具:寫 Code 必裝 💻
+&lt;/h2&gt;&lt;p&gt;如果你是工程師或想學寫程式,這些工具能讓開發環境專業起來。&lt;/p&gt;
+&lt;h3 id="iterm2---終端機強化版"&gt;iTerm2 - 終端機強化版
+&lt;/h3&gt;&lt;p&gt;Mac 內建的終端機很基本,iTerm2 是加強版。支援分割視窗、搜尋歷史指令、自動完成、快速複製貼上⋯⋯功能多到用不完。&lt;/p&gt;
+&lt;p&gt;寫程式的人幾乎都用 iTerm2。裝完再搭配 Oh My Zsh,你的終端機會帥到不行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 常用終端機的開發者、系統管理&lt;/p&gt;
+&lt;h3 id="visual-studio-code---程式碼編輯器之王"&gt;Visual Studio Code - 程式碼編輯器之王
+&lt;/h3&gt;&lt;p&gt;VS Code 根本是現在最多人用的程式碼編輯器。免費、開源、擴充套件超豐富,什麼語言都能寫。&lt;/p&gt;
+&lt;p&gt;內建 Git 整合、偵錯工具、智慧補全,而且啟動速度快。微軟難得做對一件事。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 寫程式、改設定檔、處理程式碼&lt;/p&gt;
+&lt;h3 id="sublime-text---輕量編輯器"&gt;Sublime Text - 輕量編輯器
+&lt;/h3&gt;&lt;p&gt;如果你覺得 VS Code 太肥,Sublime Text 更輕量。開啟速度超快,介面簡潔,適合快速編輯檔案。&lt;/p&gt;
+&lt;p&gt;我通常用它改設定檔、寫 Markdown、處理大型文字檔。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 快速編輯文字檔、處理大檔案&lt;/p&gt;
+&lt;h3 id="google-antigravity---ai-開發平台新星"&gt;Google Antigravity - AI 開發平台新星
+&lt;/h3&gt;&lt;p&gt;這是 Google 在 2025 年 11 月剛推出的 AI 開發工具,目前完全免費。&lt;/p&gt;
+&lt;p&gt;它基於 VS Code,但整個操作邏輯改成「AI Agent 協作」。你用自然語言描述需求,AI 幫你生成程式碼、除錯、重構。支援 Gemini 3、Claude Sonnet 4.5、GPT 等多種模型。&lt;/p&gt;
+&lt;p&gt;如果你對 AI 輔助開發有興趣,值得試試。這工具才剛出來,還在快速進化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; AI 輔助開發、想嘗試新工具&lt;/p&gt;
+&lt;h3 id="wget---下載工具"&gt;wget - 下載工具
+&lt;/h3&gt;&lt;p&gt;Command Line 下載檔案的經典工具。簡單、可靠、功能強。&lt;/p&gt;
+&lt;p&gt;下載大檔案、寫自動化腳本的時候會用到。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 指令列下載、自動化腳本&lt;/p&gt;
+&lt;h3 id="yt-dlp---影片下載神器"&gt;yt-dlp - 影片下載神器
+&lt;/h3&gt;&lt;p&gt;想下載 YouTube、Vimeo、Twitter 影片？yt-dlp 最強。&lt;/p&gt;
+&lt;p&gt;指令簡單、支援超多網站、還能選畫質和字幕。學習資源、會議錄影都能輕鬆存下來。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 下載線上影片、收藏教學資源&lt;/p&gt;
+&lt;h3 id="aria2---多線程下載加速"&gt;aria2 - 多線程下載加速
+&lt;/h3&gt;&lt;p&gt;下載大檔案的時候,aria2 可以同時開多個連線加速,比單線快很多。&lt;/p&gt;
+&lt;p&gt;支援 HTTP、FTP、BT、磁力連結。進階使用者必備。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 下載大檔案、需要續傳&lt;/p&gt;
+&lt;h3 id="ffmpeg---影音轉檔瑞士刀"&gt;ffmpeg - 影音轉檔瑞士刀
+&lt;/h3&gt;&lt;p&gt;處理影片、音訊的萬用工具。轉格式、剪輯、合併、提取音軌⋯⋯只要是影音處理,ffmpeg 都能搞定。&lt;/p&gt;
+&lt;p&gt;雖然是指令列工具,但功能強到很多圖形軟體底層都用它。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 批次轉檔、處理影音、自動化處理&lt;/p&gt;
+&lt;h2 id="創作--娛樂影音社群bbs-"&gt;創作 + 娛樂:影音、社群、BBS 🎬
+&lt;/h2&gt;&lt;p&gt;工作之餘也要放鬆一下,這些工具讓你的 Mac 更全能。&lt;/p&gt;
+&lt;h3 id="capcut---免費剪片神器"&gt;CapCut - 免費剪片神器
+&lt;/h3&gt;&lt;p&gt;抖音母公司 ByteDance 出品的剪片軟體,國際版叫 CapCut。&lt;/p&gt;
+&lt;p&gt;重點是完全免費！濾鏡、特效、音樂、貼紙全都能用,不用付錢買會員。介面簡單好上手,剪 YouTube 影片、Vlog、短影音都很適合。&lt;/p&gt;
+&lt;p&gt;Mac 版本建議裝 5.9 或更早版本,6.x 版本要 TikTok 帳號登入比較麻煩。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 剪影片、做社群短影音&lt;/p&gt;
+&lt;h3 id="firefox---注重隱私的瀏覽器"&gt;Firefox - 注重隱私的瀏覽器
+&lt;/h3&gt;&lt;p&gt;雖然 Mac 有內建 Safari,但 Firefox 對隱私保護更好,而且跨平台同步方便。&lt;/p&gt;
+&lt;p&gt;擴充套件豐富、開發者工具強,很多工程師都用 Firefox。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 注重隱私、要跨平台同步&lt;/p&gt;
+&lt;h3 id="kkbox---華語音樂首選"&gt;KKBOX - 華語音樂首選
+&lt;/h3&gt;&lt;p&gt;台灣本土的音樂串流服務,華語歌曲特別齊全。&lt;/p&gt;
+&lt;p&gt;如果你主要聽華語音樂,KKBOX 的曲庫比 Spotify 完整很多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 聽華語流行音樂&lt;/p&gt;
+&lt;h3 id="foobar2000---發燒友音樂播放器"&gt;foobar2000 - 發燒友音樂播放器
+&lt;/h3&gt;&lt;p&gt;如果你有收藏高品質音樂檔(FLAC、APE),foobar2000 是專業音樂播放器。&lt;/p&gt;
+&lt;p&gt;音質好、可自訂性高、支援各種音訊格式。發燒友愛用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 播放本地音樂、追求音質&lt;/p&gt;
+&lt;h3 id="wechat--telegram--whatsapp---通訊三寶"&gt;WeChat / Telegram / WhatsApp - 通訊三寶
+&lt;/h3&gt;&lt;p&gt;這三個通訊軟體各有用途:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WeChat&lt;/strong&gt;: 跟中國朋友聯絡、工作溝通必備&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt;: 注重隱私、群組功能強、很多技術社群都用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt;: 國際最多人用、跟國外客戶聯絡方便&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根據需求選,或是全裝也行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 即時通訊、工作溝通、國際聯繫&lt;/p&gt;
+&lt;h3 id="welly---bbs-瀏覽器"&gt;Welly - BBS 瀏覽器
+&lt;/h3&gt;&lt;p&gt;對,PTT 還活著,而且活得好好的。&lt;/p&gt;
+&lt;p&gt;Welly 是 Mac 上最好用的 BBS 瀏覽器,連線穩、功能齊。想上 PTT 逛八卦板、找資訊,裝 Welly 就對了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 上 PTT、其他 BBS 站&lt;/p&gt;
+&lt;h2 id="一鍵安裝魔法homebrew-批次腳本-"&gt;一鍵安裝魔法:Homebrew 批次腳本 🚀
+&lt;/h2&gt;&lt;p&gt;看到這你可能會想:「這麼多軟體,要一個一個裝到什麼時候？」&lt;/p&gt;
+&lt;p&gt;別擔心,Mac 有個神器叫 &lt;strong&gt;Homebrew&lt;/strong&gt;,用指令就能快速裝軟體。&lt;/p&gt;
+&lt;h3 id="homebrew-是什麼"&gt;Homebrew 是什麼？
+&lt;/h3&gt;&lt;p&gt;把它想成 Mac 的應用程式商店,只是用指令操作。一行指令就能裝好軟體,更新也超方便。&lt;/p&gt;
+&lt;h3 id="安裝-homebrew"&gt;安裝 Homebrew
+&lt;/h3&gt;&lt;p&gt;打開終端機(或 iTerm2),貼上這行指令:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/bin/bash -c &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;等個幾分鐘,Homebrew 就裝好了。&lt;/p&gt;
+&lt;h3 id="個別安裝指令"&gt;個別安裝指令
+&lt;/h3&gt;&lt;p&gt;裝好 Homebrew 後,用這些指令裝軟體:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令列工具&lt;/strong&gt;(用 &lt;code&gt;brew install&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install yt-dlp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install aria2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;圖形介面軟體&lt;/strong&gt;(用 &lt;code&gt;brew install --cask&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask iterm2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask visual-studio-code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask sublime-text
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask raycast
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask rectangle
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask clipy
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask appcleaner
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask the-unarchiver
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask snipaste
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask notion
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask obsidian
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask anki
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask libreoffice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask firefox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask telegram
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask wechat
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask whatsapp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask kkbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask foobar2000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask welly
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="一鍵批次安裝腳本"&gt;一鍵批次安裝腳本
+&lt;/h3&gt;&lt;p&gt;懶得一個一個打？複製這整段,貼到終端機執行就搞定:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;span class="lnt"&gt;49
+&lt;/span&gt;&lt;span class="lnt"&gt;50
+&lt;/span&gt;&lt;span class="lnt"&gt;51
+&lt;/span&gt;&lt;span class="lnt"&gt;52
+&lt;/span&gt;&lt;span class="lnt"&gt;53
+&lt;/span&gt;&lt;span class="lnt"&gt;54
+&lt;/span&gt;&lt;span class="lnt"&gt;55
+&lt;/span&gt;&lt;span class="lnt"&gt;56
+&lt;/span&gt;&lt;span class="lnt"&gt;57
+&lt;/span&gt;&lt;span class="lnt"&gt;58
+&lt;/span&gt;&lt;span class="lnt"&gt;59
+&lt;/span&gt;&lt;span class="lnt"&gt;60
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🚀 開始安裝 Mac 必備軟體...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 檢查是否已安裝 Homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; ! &lt;span class="nb"&gt;command&lt;/span&gt; -v brew &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&amp;gt; /dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;📦 安裝 Homebrew...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; /bin/bash -c &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 更新 Homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🔄 更新 Homebrew...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝指令列工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;⚙️ 安裝指令列工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install yt-dlp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install aria2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝系統輔助工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🛠️ 安裝系統輔助工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask iterm2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask raycast
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask rectangle
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask clipy
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask appcleaner
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask the-unarchiver
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask snipaste
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝生產力工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;📝 安裝生產力工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask notion
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask obsidian
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask anki
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask libreoffice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝開發工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;💻 安裝開發工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask visual-studio-code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask sublime-text
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝通訊 &amp;amp; 娛樂軟體&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🎬 安裝通訊與娛樂軟體...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask firefox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask telegram
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask wechat
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask whatsapp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask kkbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask foobar2000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask welly
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;✅ 安裝完成！&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;💡 部分軟體可能需要手動下載:&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - PopClip (Mac App Store 付費軟體)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - 堅果雲 (官網下載: https://www.jianguoyun.com/)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - CapCut (官網下載: https://www.capcut.cn/)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - Google Antigravity (官網下載: https://antigravity.google/)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;複製整段腳本&lt;/li&gt;
+&lt;li&gt;貼到終端機&lt;/li&gt;
+&lt;li&gt;按 Enter&lt;/li&gt;
+&lt;li&gt;去泡杯咖啡,等它跑完&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;跑完之後,大部分軟體就裝好了。少數幾個(PopClip、堅果雲、CapCut、Google Antigravity)要手動去官網下載,但也很快。&lt;/p&gt;
+&lt;h2 id="開始探索你的-mac-"&gt;開始探索你的 Mac 🎉
+&lt;/h2&gt;&lt;p&gt;裝完這些軟體,你的 Mac 基本上已經是一台戰鬥力滿點的生產力機器了。&lt;/p&gt;
+&lt;p&gt;但記住:&lt;strong&gt;工具是起點,習慣才是關鍵。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;裝了 Raycast 不代表你就會變高效,重點是養成「用快捷鍵啟動」的習慣。裝了 Notion 不代表你就能管好專案,重點是建立自己的工作流程。&lt;/p&gt;
+&lt;p&gt;我的建議:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不要一次裝太多&lt;/strong&gt;,先挑幾個最需要的裝&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;花時間習慣新工具&lt;/strong&gt;,至少用一週再決定要不要留&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;慢慢探索&lt;/strong&gt;,很多工具都有隱藏功能等你發掘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Mac 是個很棒的平台,配上對的工具,它能幫你完成很多事。&lt;/p&gt;
+&lt;p&gt;開始探索吧,祝你用得開心！💪&lt;/p&gt;</description></item><item><title>Github: 免費 AI 研究助理!大學生寫報告必備神器 OpenResearch</title><link>https://zennote.app/post/20251201_openresearch-tool/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/20251201_openresearch-tool/</guid><description>&lt;h2 id="github-免費-ai-研究助理大學生寫報告必備神器-openresearch"&gt;Github: 免費 AI 研究助理!大學生寫報告必備神器 OpenResearch
+&lt;/h2&gt;&lt;p&gt;期末報告要分析產業趨勢,光是找資料就花了 3 天?求職準備想了解目標公司,卻不知道從哪開始?&lt;/p&gt;
+&lt;p&gt;其實有個免費工具,能幫你一鍵生成專業的產業研究報告。它叫 &lt;strong&gt;OpenResearch&lt;/strong&gt;。就像幫你請了一個 AI 研究助理,自動搜尋整理資料,還會產出完整報告。&lt;/p&gt;
+&lt;p&gt;今天就來介紹這個大學生必備的神器 ✨&lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="01.png" alt="OpenResearch 工具介面" width="70%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;OpenResearch 工具主介面（輸入主題即可生成研究報告） &lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="02.png" alt="研究報告生成範例" width="70%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;圖 2：AI 自動生成的產業研究報告頁面 &lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="03.png" alt="研究報告生成範例" width="70%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;圖 3：AI 自動生成的產業研究報告頁面 &lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="04.png" alt="研究報告生成範例" width="70%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;圖 3：AI 自動生成的產業研究報告頁面 &lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="05.png" alt="研究報告生成範例" width="70%"&gt;
+&lt;/div&gt;
+&lt;p align="center"&gt;圖 4：AI 自動生成的產業研究報告頁面 &lt;/p&gt;
+&lt;h1 id="看看ai生成的研究報告"&gt;&lt;a class="link" href="https://goooolai.zeabur.app/nvidia.html" target="_blank" rel="noopener"
+&gt;看看AI生成的研究報告&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id="openresearch-是什麼"&gt;OpenResearch 是什麼?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;一句話說明&lt;/strong&gt;:OpenResearch 是開源的 AI 研究工具。它用 Google Gemini AI 自動搜尋產業資料,幫你生成專業研究報告。&lt;/p&gt;
+&lt;p&gt;想想看,你在寫期末報告的「產業分析」章節。以前你要:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Google 搜尋一堆關鍵字&lt;/li&gt;
+&lt;li&gt;開 20 個分頁慢慢看&lt;/li&gt;
+&lt;li&gt;整理筆記、寫成報告&lt;/li&gt;
+&lt;li&gt;花掉整個週末&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;現在用 OpenResearch:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入你想研究的主題&lt;/li&gt;
+&lt;li&gt;按下按鈕,等 5-10 分鐘&lt;/li&gt;
+&lt;li&gt;拿到一份完整的研究報告&lt;/li&gt;
+&lt;li&gt;省下大半時間 ⏰&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;為什麼大學生應該認識這個工具?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因為它能處理最花時間的部分 —— &lt;strong&gt;資料搜尋和初步整理&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你還是要讀報告、加入自己的觀點、調整內容。但至少不用從零開始。你是站在 AI 幫你整理好的基礎上繼續。
+這樣能省下不少時間,把精力放在更重要的分析和思考上。&lt;/p&gt;
+&lt;p&gt;而且它完全免費(在 Google 給的免費額度內)。&lt;/p&gt;
+&lt;h2 id="三種應用情境"&gt;三種應用情境
+&lt;/h2&gt;&lt;h3 id="情境一期末報告的產業分析章節-"&gt;情境一:期末報告的產業分析章節 📚
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;場景&lt;/strong&gt;:你修了一門「行銷管理」課,期末報告要分析「台灣手搖飲市場」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛點&lt;/strong&gt;:要寫市場規模、競爭態勢、發展趨勢,光是找資料就頭大。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用 OpenResearch 怎麼做?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入主題:「台灣手搖飲市場分析 2024-2025」&lt;/li&gt;
+&lt;li&gt;AI 會自動搜尋新聞、產業報告、市場數據&lt;/li&gt;
+&lt;li&gt;生成一份包含市場規模、主要品牌、競爭分析的報告&lt;/li&gt;
+&lt;li&gt;你再根據課程要求,加入自己的分析和建議&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;實際上&lt;/strong&gt;:原本可能要花好幾小時的資料搜尋,現在 1 小時內搞定。你有更多時間思考「這個市場有什麼機會?我的建議是什麼?」&lt;/p&gt;
+&lt;h3 id="情境二求職準備的公司研究-"&gt;情境二:求職準備的公司研究 💼
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;場景&lt;/strong&gt;:你想應徵某家新創公司的實習,面試前想深入了解這家公司。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛點&lt;/strong&gt;:要研究公司背景、產業定位、競爭對手,資訊很分散。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用 OpenResearch 怎麼做?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入公司名稱和產業:「[公司名稱] + 台灣 AI 新創產業分析」&lt;/li&gt;
+&lt;li&gt;AI 幫你整理公司新聞、產業趨勢、競品資訊&lt;/li&gt;
+&lt;li&gt;你快速了解公司定位和產業背景&lt;/li&gt;
+&lt;li&gt;面試時能問出有深度的問題&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;實際上&lt;/strong&gt;:準備面試更有信心。你也能在自我介紹時 show 出「我有做功課」的積極態度。HR 會印象深刻 🌟&lt;/p&gt;
+&lt;h3 id="情境三社團創業的市場調查-"&gt;情境三:社團創業的市場調查 🚀
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;場景&lt;/strong&gt;:你的社團想辦「校園二手市集」,需要做可行性分析。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;痛點&lt;/strong&gt;:要了解校園二手市場、類似活動案例、潛在挑戰,不知道怎麼下手。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用 OpenResearch 怎麼做?&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入:「大學校園二手市集 + 市場分析 + 成功案例」&lt;/li&gt;
+&lt;li&gt;AI 整理其他學校的經驗、市場需求、可能問題&lt;/li&gt;
+&lt;li&gt;你得到一份完整的背景研究&lt;/li&gt;
+&lt;li&gt;根據報告調整活動企劃&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;實際上&lt;/strong&gt;:提案給學校時,有數據和案例支持,說服力更強。成功率提高不少 📈&lt;/p&gt;
+&lt;h2 id="快速上手指南"&gt;快速上手指南
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Step 1:準備工作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;申請 Google AI Studio API Key(免費額度夠用)&lt;/li&gt;
+&lt;li&gt;編譯軟體可以使用 免費的 VS code 或是 google antigravity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 2:下載並安裝 OpenResearch&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;到github: &lt;a class="link" href="https://github.com/dmquant/OpenResearch" target="_blank" rel="noopener"
+&gt;https://github.com/dmquant/OpenResearch&lt;/a&gt; 下載程式檔案&lt;/li&gt;
+&lt;li&gt;將下載下來的檔案解壓縮&lt;/li&gt;
+&lt;li&gt;在vs code 或是 google anigravity 中開始啟此資料夾&lt;/li&gt;
+&lt;li&gt;使用 google gemini / claude model AI coding agent.&lt;/li&gt;
+&lt;li&gt;提示詞：我要執行這個openresearch專案，請協助執行&lt;/li&gt;
+&lt;li&gt;執行後，AI coding tool 會請你在.env 檔案中輸入 gemini API key.&lt;/li&gt;
+&lt;li&gt;輸入完API Key 後，即可開始執行此專案。&lt;/li&gt;
+&lt;li&gt;AI coding tool 會請你用瀏覽器開啟此專案localhost:2088 (或是其他port number)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Step 3:開始使用&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打開瀏覽器,會看到 GUI 介面&lt;/li&gt;
+&lt;li&gt;輸入你想研究的主題：如：do a deep research under the instruction prompted ，
+請用繁體中文輸出報告內容，請用使用台灣人會使用的金融、科技用語.
+深入分析 台積電 在 晶圓 產業中的完整情況&lt;/li&gt;
+&lt;li&gt;按下開始,等待 AI 生成報告&lt;/li&gt;
+&lt;li&gt;下載報告，完工&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;老實說&lt;/strong&gt;:安裝過程需要一點技術背景。如果你完全沒碰過程式,可能要花 30 分鐘到 1 小時摸索。但 GUI 介面蠻友善的,跟著步驟做不會太難 💪&lt;/p&gt;
+&lt;h2 id="結尾"&gt;結尾
+&lt;/h2&gt;&lt;p&gt;OpenResearch 不會幫你「寫完」報告,但能幫你省下最花時間的資料搜尋階段。&lt;/p&gt;
+&lt;p&gt;對大學生來說,時間就是最珍貴的資源。你可以花 1 小時用工具生成初稿,把剩下的時間拿去深入思考、加入自己的觀點。不用像以前那樣,花 8 小時找資料找到頭昏。&lt;/p&gt;
+&lt;p&gt;這才是 AI 工具的真正價值 —— 讓你把時間花在更重要的事情上 🎯&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;想試試看嗎?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 專案:https://github.com/dmquant/OpenResearch&lt;/li&gt;
+&lt;li&gt;安裝教學:專案的 README 有詳細步驟&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Hugo+github+cloudflare 免費開源個人網站模板架站工具</title><link>https://zennote.app/post/20251201-hugo-github-cloudflare-setup/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/20251201-hugo-github-cloudflare-setup/</guid><description>&lt;h1 id="hugogithubcloudflare-免費開源個人網站模板架站工具"&gt;Hugo+github+cloudflare 免費開源個人網站模板架站工具
+&lt;/h1&gt;&lt;h2 id="不會寫程式也能架網站"&gt;不會寫程式也能架網站?
+&lt;/h2&gt;&lt;p&gt;期末報告想放在線上分享?面試需要作品集網站?想幫社團做個官網?&lt;/p&gt;
+&lt;p&gt;你可能會想:「我又不會寫程式,架網站一定很難又很貴吧?」其實不會。&lt;/p&gt;
+&lt;p&gt;今天要分享的這組免費工具,讓你一小時內就能擁有自己的網站。完全免費。&lt;/p&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="01.png" alt="01" width="70%"&gt;
+&lt;/div&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="02.png" alt="02" width="70%"&gt;
+&lt;/div&gt;
+&lt;div align="center" style="margin: 15px 0;"&gt;
+&lt;img src="03.png" alt="03" width="70%"&gt;
+&lt;/div&gt;
+&lt;h2 id="三個免費工具搞定整個網站"&gt;三個免費工具,搞定整個網站
+&lt;/h2&gt;&lt;p&gt;建網站需要三樣東西:網站設計、存放空間、還有主機。&lt;/p&gt;
+&lt;p&gt;以前這些都要花錢,現在有免費方案:&lt;/p&gt;
+&lt;h3 id="hugo幫你把內容變成網站"&gt;Hugo:幫你把內容變成網站
+&lt;/h3&gt;&lt;p&gt;Hugo 是個「靜態網站生成器」。聽起來很專業?簡單說,就是幫你把文字自動排版成網頁的工具。&lt;/p&gt;
+&lt;p&gt;你用類似 Word 的方式寫內容,Hugo 自動幫你變成漂亮網站。&lt;/p&gt;
+&lt;p&gt;它有超過 500 種免費主題,部落格、作品集、官網樣式都有。而且很快,幾秒就能生成整個網站。&lt;/p&gt;
+&lt;p&gt;不用寫程式碼,選個喜歡的主題套上去就好。&lt;/p&gt;
+&lt;h3 id="github免費的雲端空間"&gt;GitHub:免費的雲端空間
+&lt;/h3&gt;&lt;p&gt;GitHub 原本是工程師存程式碼的地方,但也很適合存網站檔案。就像 Google Drive,但專門為網站設計。&lt;/p&gt;
+&lt;p&gt;把網站檔案放上去,它會自動保存每個版本。&lt;/p&gt;
+&lt;p&gt;改壞了可以還原。完全免費,沒有容量限制。&lt;/p&gt;
+&lt;h3 id="cloudflare免費網站主機"&gt;Cloudflare:免費網站主機
+&lt;/h3&gt;&lt;p&gt;網站做好了要放哪裡?傳統主機一年要幾千塊,但 Cloudflare Pages 免費。&lt;/p&gt;
+&lt;p&gt;它提供:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主機空間&lt;/li&gt;
+&lt;li&gt;SSL 憑證(網址前面會有 https 小鎖頭,看起來更專業)&lt;/li&gt;
+&lt;li&gt;全球 CDN 加速(世界各地的人開你的網站都很快)&lt;/li&gt;
+&lt;li&gt;自動部署(你在 GitHub 更新內容,網站立刻跟著更新)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些功能全免費,沒有隱藏費用。&lt;/p&gt;
+&lt;h3 id="為什麼推薦給大學生"&gt;為什麼推薦給大學生?
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;履歷加分&lt;/strong&gt; - 有自己的網站,面試時比別人專業&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;門檻低&lt;/strong&gt; - 不用學寫程式,會打字就會&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;省錢&lt;/strong&gt; - 一年至少省 3000 元主機費&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;展現自學力&lt;/strong&gt; - 證明你有解決問題的能力&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="三種實際用法"&gt;三種實際用法
+&lt;/h2&gt;&lt;h3 id="學術期末報告放上網隨時都能看"&gt;學術:期末報告放上網,隨時都能看
+&lt;/h3&gt;&lt;p&gt;大四的Jenny 做了份「台灣老街文化研究」報告。他用 Hugo 的部落格主題,把報告內容、田野調查照片、訪談影片整理成網站。&lt;/p&gt;
+&lt;p&gt;上台報告時直接打開網址給大家看。教授覺得很專業,還分享給其他班參考。&lt;/p&gt;
+&lt;p&gt;Louis 把網址放履歷上,申請研究所時, 在面試時讓教授看到他的線上研究內容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;適合&lt;/strong&gt;:論文報告、研究筆記、專題成果&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好處&lt;/strong&gt;:不用印一堆紙,內容隨時能更新,還能放影片和圖表&lt;/p&gt;
+&lt;h3 id="求職做個作品集讓-hr-看到實力"&gt;求職:做個作品集,讓 HR 看到實力
+&lt;/h3&gt;&lt;p&gt;企管系的小美想應徵行銷企劃,但履歷上的「文案能力強」總覺得空泛。&lt;/p&gt;
+&lt;p&gt;她用 Hugo 做了作品集網站,放上幫社團寫過的宣傳文案、活動企劃、社群經營成果。&lt;/p&gt;
+&lt;p&gt;面試時 HR 問有沒有相關經驗,她打開網站說:「我做了個作品集,可以看一下過去的專案。」HR 看完印象很好,後來順利錄取。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;適合&lt;/strong&gt;:履歷網站、作品集、專案展示&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好處&lt;/strong&gt;:比 PDF 履歷生動,能放影片、圖片、連結&lt;/p&gt;
+&lt;h3 id="社團辦活動需要宣傳網站"&gt;社團:辦活動需要宣傳網站
+&lt;/h3&gt;&lt;p&gt;學生會要辦校慶活動,需要宣傳網站。&lt;/p&gt;
+&lt;p&gt;以前要花錢請人做,或用免費平台(但會有廣告、網址很醜)。&lt;/p&gt;
+&lt;p&gt;他們用 Hugo 的主題,花了半天時間做好活動官網。&lt;/p&gt;
+&lt;p&gt;網站有活動介紹、報名連結、精美照片,網址也簡潔(像是 schoolfest2025.pages.dev)。&lt;/p&gt;
+&lt;p&gt;分享到社群時,預覽圖漂亮,點閱率明顯提升。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;適合&lt;/strong&gt;:社團官網、活動宣傳、線上刊物&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好處&lt;/strong&gt;:免費、快速、專業,不會有廣告&lt;/p&gt;
+&lt;h2 id="5-步驟快速開始"&gt;5 步驟快速開始
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;步驟 1:安裝 Hugo&lt;/strong&gt;(5 分鐘)
+到 Hugo 官網(gohugo.io)下載安裝檔,點兩下裝好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步驟 2:選主題&lt;/strong&gt;(10 分鐘)
+到 Hugo 主題庫(themes.gohugo.io)挑喜歡的樣式,用範例程式碼建立網站。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步驟 3:寫內容&lt;/strong&gt;(30 分鐘)
+用 Markdown 格式寫內容。不會 Markdown?網路上 5 分鐘就能學會基礎。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步驟 4:上傳 GitHub&lt;/strong&gt;(10 分鐘)
+註冊 GitHub 帳號,建立儲存庫,上傳網站檔案。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步驟 5:部署到 Cloudflare&lt;/strong&gt;(10 分鐘)
+註冊 Cloudflare Pages,連接 GitHub 儲存庫,按部署。完成。&lt;/p&gt;
+&lt;p&gt;整個流程大約一小時,網站就上線了。&lt;/p&gt;
+&lt;h2 id="試試看吧"&gt;試試看吧
+&lt;/h2&gt;&lt;p&gt;看到這裡你可能還在想:「真的這麼簡單?」&lt;/p&gt;
+&lt;p&gt;老實說,第一次用確實要學一下。但網路上教學很多,遇到問題 Google 都找得到答案。學會之後,你就擁有隨時能用的技能。&lt;/p&gt;
+&lt;p&gt;不管是作品集、部落格、還是社團官網,這組工具都能做到。最重要的是,履歷上可以寫:「能獨立建立網站」— 這在求職時是個加分項。&lt;/p&gt;
+&lt;h3 id="延伸資源"&gt;延伸資源
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Hugo 官網:https://gohugo.io/&lt;/li&gt;
+&lt;li&gt;Hugo github : &lt;a class="link" href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener"
+&gt;https://github.com/gohugoio/hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github : &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
+&gt;https://github.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare Pages 教學:https://developers.cloudflare.com/pages/&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Github:免費開源且可商用的繁體中文字體大全</title><link>https://zennote.app/post/opensource-font/</link><pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/opensource-font/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;教師、學生必收藏!從下載到使用一次搞懂&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;製作教學簡報時擔心字體侵權?學生報告、畢業專題想用特別的字體卻不知道哪些能商用?別擔心!這篇文章將帶你認識 GitHub 上豐富的繁體中文開源字體資源,讓你安心使用、不怕侵權。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="-目錄"&gt;📚 目錄
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e7%94%a8%e9%96%8b%e6%ba%90%e5%ad%97%e9%ab%94" &gt;為什麼要用開源字體?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e9%96%8b%e6%ba%90%e5%ad%97%e9%ab%94%e6%8e%88%e6%ac%8a%e5%bf%ab%e9%80%9f%e5%85%a5%e9%96%80" &gt;開源字體授權快速入門&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e7%b2%be%e9%81%b8%e7%b9%81%e9%ab%94%e4%b8%ad%e6%96%87%e9%96%8b%e6%ba%90%e5%ad%97%e9%ab%94%e6%b8%85%e5%96%ae" &gt;精選繁體中文開源字體清單&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e5%be%9e-github-%e4%b8%8b%e8%bc%89%e5%ad%97%e9%ab%94" &gt;如何從 GitHub 下載字體&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e5%ad%97%e9%ab%94%e5%ae%89%e8%a3%9d%e6%95%99%e5%ad%b8" &gt;字體安裝教學&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="#%e4%be%9d%e4%bd%bf%e7%94%a8%e6%83%85%e5%a2%83%e6%8e%a8%e8%96%a6%e5%ad%97%e9%ab%94" &gt;依使用情境推薦字體&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="為什麼要用開源字體"&gt;為什麼要用開源字體?
+&lt;/h2&gt;&lt;p&gt;你可能聽過「微軟正黑體可以商用嗎?」這類問題。事實上,許多看似「免費」的字體,實際上只能個人使用,一旦用於商業用途(包括學校對外發布的海報、營隊宣傳品等)就可能構成侵權。&lt;/p&gt;
+&lt;p&gt;開源字體則完全不同:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;明確授權&lt;/strong&gt;:清楚標示可商用、可修改、可散布&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;永久免費&lt;/strong&gt;:不用擔心授權到期或突然收費&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨平台支援&lt;/strong&gt;:Windows、macOS、Linux 都能用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;持續更新&lt;/strong&gt;:社群會不斷改進字體品質&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根據 &lt;a class="link" href="https://blog.justfont.com/2024/12/openfont/" target="_blank" rel="noopener"
+&gt;justfont 的說明&lt;/a&gt;,開源字體與免費字體是不同概念——有些免費字體僅供個人非商業使用,而開源字體則保障了使用者的權利。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="開源字體授權快速入門"&gt;開源字體授權快速入門
+&lt;/h2&gt;&lt;p&gt;GitHub 上的繁體中文字體主要使用兩種授權:&lt;/p&gt;
+&lt;h3 id="-sil-open-font-license-ofl-11"&gt;🔵 SIL Open Font License (OFL) 1.1
+&lt;/h3&gt;&lt;p&gt;最常見的字體開源授權,約 80% 的開源中文字體都採用這個授權。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你可以:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 免費用於個人或商業用途&lt;/li&gt;
+&lt;li&gt;✅ 印在書籍、海報、產品包裝上&lt;/li&gt;
+&lt;li&gt;✅ 嵌入網站、App、影片中&lt;/li&gt;
+&lt;li&gt;✅ 修改字體並重新發布(需同樣採用 OFL)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;你不可以:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ 單獨販售字體檔案本身&lt;/li&gt;
+&lt;li&gt;❌ 修改後使用原字體名稱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;簡單說&lt;/strong&gt;:用字體做出來的作品(簡報、海報、影片等)完全自由,但字體檔案本身不能單獨賣錢。&lt;/p&gt;
+&lt;h3 id="-apache-license-20"&gt;🔵 Apache License 2.0
+&lt;/h3&gt;&lt;p&gt;較少見但更寬鬆的授權。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要差異:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 可以單獨販售字體&lt;/li&gt;
+&lt;li&gt;✅ 修改後不一定要開源&lt;/li&gt;
+&lt;li&gt;⚠️ 散布字體檔案時需附上 LICENSE 檔案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;實務建議&lt;/strong&gt;:對於教師和學生來說,只要記得「可以安心商用」就夠了!用這些字體做簡報、報告、海報、影片都沒問題。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="精選繁體中文開源字體清單"&gt;精選繁體中文開源字體清單
+&lt;/h2&gt;&lt;p&gt;以下整理了 GitHub 上最受歡迎、品質優良的繁體中文開源字體:&lt;/p&gt;
+&lt;h3 id="-黑體sans-serif系列"&gt;📌 黑體(Sans-serif)系列
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字體名稱&lt;/th&gt;
+&lt;th&gt;GitHub 連結&lt;/th&gt;
+&lt;th&gt;授權&lt;/th&gt;
+&lt;th&gt;字重數量&lt;/th&gt;
+&lt;th&gt;特色說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;思源黑體 TC&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/adobe-fonts/source-han-sans" target="_blank" rel="noopener"
+&gt;adobe-fonts/source-han-sans&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;7 種&lt;/td&gt;
+&lt;td&gt;Google×Adobe 聯合開發,支援 65,535 字圖,幾乎不會缺字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;jf open 粉圓&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/justfont/open-huninn-font" target="_blank" rel="noopener"
+&gt;justfont/open-huninn-font&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;1 種&lt;/td&gt;
+&lt;td&gt;台灣 justfont 出品,圓潤可愛,特別適合教育、親子主題&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;昭源黑體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://chiron-fonts.github.io/" target="_blank" rel="noopener"
+&gt;chiron-fonts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;多種&lt;/td&gt;
+&lt;td&gt;基於思源黑體改良,更符合繁體中文使用習慣&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;源樣黑體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ButTaiwan/genyog-font" target="_blank" rel="noopener"
+&gt;ButTaiwan/genyog-font&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;7 種&lt;/td&gt;
+&lt;td&gt;接近傳統印刷體習慣,字形優雅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;源泉圓體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ButTaiwan/gensen-font" target="_blank" rel="noopener"
+&gt;ButTaiwan/gensen-font&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;7 種&lt;/td&gt;
+&lt;td&gt;圓體風格,柔和親切&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="-明體serif系列"&gt;📌 明體(Serif)系列
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字體名稱&lt;/th&gt;
+&lt;th&gt;GitHub 連結&lt;/th&gt;
+&lt;th&gt;授權&lt;/th&gt;
+&lt;th&gt;字重數量&lt;/th&gt;
+&lt;th&gt;特色說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;思源宋體 TC&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/adobe-fonts/source-han-serif" target="_blank" rel="noopener"
+&gt;adobe-fonts/source-han-serif&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;7 種&lt;/td&gt;
+&lt;td&gt;正式文件首選,具傳統宋體韻味&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;源樣明體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ButTaiwan/genyo-font" target="_blank" rel="noopener"
+&gt;ButTaiwan/genyo-font&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;7 種&lt;/td&gt;
+&lt;td&gt;基於思源宋體,調整為更接近台灣習慣的字形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;源流明體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ButTaiwan/genryu-font" target="_blank" rel="noopener"
+&gt;ButTaiwan/genryu-font&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;7 種&lt;/td&gt;
+&lt;td&gt;傳統印刷體風格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;源雲明體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ButTaiwan/genwan-font" target="_blank" rel="noopener"
+&gt;ButTaiwan/genwan-font&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;2 種版本&lt;/td&gt;
+&lt;td&gt;提供「月」(常用字形)與「丹」(傳統印刷字形)兩種版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="-手寫特殊風格系列"&gt;📌 手寫/特殊風格系列
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字體名稱&lt;/th&gt;
+&lt;th&gt;GitHub 連結&lt;/th&gt;
+&lt;th&gt;授權&lt;/th&gt;
+&lt;th&gt;字重數量&lt;/th&gt;
+&lt;th&gt;特色說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;霞鶩文楷 TC&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/lxgw/LxgwWenkaiTC" target="_blank" rel="noopener"
+&gt;lxgw/LxgwWenkaiTC&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;多種&lt;/td&gt;
+&lt;td&gt;基於日本 Klee One 改造,具手寫感的楷體&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;芫荽體&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://github.com/ButTaiwan/iansui" target="_blank" rel="noopener"
+&gt;ButTaiwan/iansui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;OFL 1.1&lt;/td&gt;
+&lt;td&gt;1 種&lt;/td&gt;
+&lt;td&gt;學習用台灣繁體字型,手寫風格,適合教育用途&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;字重說明&lt;/strong&gt;:字重指的是字體的粗細程度,從最細的 ExtraLight 到最粗的 Black,常見的有 7 種:ExtraLight、Light、Regular、Medium、SemiBold、Bold、Heavy。擁有多種字重的字體使用更靈活。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如何從-github-下載字體"&gt;如何從 GitHub 下載字體
+&lt;/h2&gt;&lt;p&gt;許多老師和學生第一次看到 GitHub 可能會覺得有點複雜,別擔心!下載字體其實很簡單,跟著以下步驟操作即可:&lt;/p&gt;
+&lt;h3 id="方法一下載已編譯好的字體檔案推薦"&gt;方法一:下載已編譯好的字體檔案(推薦)
+&lt;/h3&gt;&lt;p&gt;這是最簡單的方法,適合所有人:&lt;/p&gt;
+&lt;h4 id="步驟-1進入-github-字體頁面"&gt;步驟 1:進入 GitHub 字體頁面
+&lt;/h4&gt;&lt;p&gt;以「jf open 粉圓」為例,開啟 &lt;a class="link" href="https://github.com/justfont/open-huninn-font" target="_blank" rel="noopener"
+&gt;https://github.com/justfont/open-huninn-font&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="步驟-2找到-releases-區域"&gt;步驟 2:找到 Releases 區域
+&lt;/h4&gt;&lt;p&gt;在頁面右側欄位,找到「Releases」(發行版本)區塊,點擊最新版本號碼(例如「v2.1」)&lt;/p&gt;
+&lt;p&gt;![GitHub Releases 位置示意](示意圖:右側欄位會顯示 Releases 標題和版本號)&lt;/p&gt;
+&lt;h4 id="步驟-3下載字體壓縮檔"&gt;步驟 3:下載字體壓縮檔
+&lt;/h4&gt;&lt;p&gt;往下捲動到「Assets」(資源)區塊,會看到多個 &lt;code&gt;.zip&lt;/code&gt; 或 &lt;code&gt;.7z&lt;/code&gt; 壓縮檔:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;選擇檔案名稱包含 &lt;code&gt;.ttf&lt;/code&gt; 或 &lt;code&gt;.otf&lt;/code&gt; 的壓縮檔&lt;/li&gt;
+&lt;li&gt;點擊檔案名稱即開始下載&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="步驟-4解壓縮"&gt;步驟 4:解壓縮
+&lt;/h4&gt;&lt;p&gt;下載完成後,使用 Windows 內建解壓縮功能或 7-Zip、WinRAR 等軟體解壓縮,就能看到字體檔案了!&lt;/p&gt;
+&lt;h3 id="方法二直接點擊綠色code按鈕"&gt;方法二:直接點擊綠色「Code」按鈕
+&lt;/h3&gt;&lt;p&gt;某些字體專案會直接提供字體檔案:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;點擊綠色「Code」按鈕&lt;/li&gt;
+&lt;li&gt;選擇「Download ZIP」&lt;/li&gt;
+&lt;li&gt;解壓縮後,在 &lt;code&gt;fonts/&lt;/code&gt; 或 &lt;code&gt;dist/&lt;/code&gt; 資料夾中找字體檔案&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="-小技巧如何選擇字體格式"&gt;💡 小技巧:如何選擇字體格式
+&lt;/h3&gt;&lt;p&gt;解壓縮後可能會看到不同格式:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;.ttf&lt;/code&gt;(TrueType Font)&lt;/strong&gt;:最通用,Windows 和 macOS 都支援,建議優先選擇&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;.otf&lt;/code&gt;(OpenType Font)&lt;/strong&gt;:較新的格式,支援更多進階功能,也很通用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;.woff&lt;/code&gt;/&lt;code&gt;.woff2&lt;/code&gt;&lt;/strong&gt;:網頁用格式,一般電腦安裝不需要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;結論&lt;/strong&gt;:下載 &lt;code&gt;.ttf&lt;/code&gt; 或 &lt;code&gt;.otf&lt;/code&gt; 檔案就對了!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="字體安裝教學"&gt;字體安裝教學
+&lt;/h2&gt;&lt;p&gt;下載字體後,安裝非常簡單:&lt;/p&gt;
+&lt;h3 id="-windows-1011-安裝方式"&gt;🖥️ Windows 10/11 安裝方式
+&lt;/h3&gt;&lt;h4 id="方法一雙擊安裝最簡單"&gt;方法一:雙擊安裝(最簡單)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;在下載的字體檔案(&lt;code&gt;.ttf&lt;/code&gt; 或 &lt;code&gt;.otf&lt;/code&gt;)上按兩下&lt;/li&gt;
+&lt;li&gt;會彈出字體預覽視窗&lt;/li&gt;
+&lt;li&gt;點擊左上角「安裝」按鈕&lt;/li&gt;
+&lt;li&gt;等待幾秒鐘,完成!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="方法二拖曳安裝批次安裝多個字體時更快"&gt;方法二:拖曳安裝(批次安裝多個字體時更快)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;按 &lt;code&gt;Win + R&lt;/code&gt; 鍵,輸入 &lt;code&gt;fonts&lt;/code&gt; 後按 Enter&lt;/li&gt;
+&lt;li&gt;會開啟「字型」資料夾&lt;/li&gt;
+&lt;li&gt;把下載的字體檔案直接拖曳進去&lt;/li&gt;
+&lt;li&gt;等待複製完成即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="-macos-安裝方式"&gt;🍎 macOS 安裝方式
+&lt;/h3&gt;&lt;h4 id="方法一字體簿安裝"&gt;方法一:字體簿安裝
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;在字體檔案上按兩下&lt;/li&gt;
+&lt;li&gt;會開啟「字體簿」(Font Book)應用程式&lt;/li&gt;
+&lt;li&gt;點擊「安裝字體」按鈕&lt;/li&gt;
+&lt;li&gt;完成!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="方法二手動複製"&gt;方法二:手動複製
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;開啟 Finder&lt;/li&gt;
+&lt;li&gt;按 &lt;code&gt;Cmd + Shift + G&lt;/code&gt;,輸入 &lt;code&gt;/Library/Fonts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;把字體檔案拖曳進去&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="-安裝完成後怎麼使用"&gt;✅ 安裝完成後怎麼使用?
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;重新啟動 PowerPoint、Word、Photoshop 等軟體&lt;/li&gt;
+&lt;li&gt;在字體選單中搜尋字體名稱&lt;/li&gt;
+&lt;li&gt;開始使用!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:部分軟體(如 Photoshop、Illustrator)需要完全關閉後重新開啟,才能讀取新安裝的字體。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="依使用情境推薦字體"&gt;依使用情境推薦字體
+&lt;/h2&gt;&lt;p&gt;不同場合適合不同字體風格,這裡提供實用的分類推薦:&lt;/p&gt;
+&lt;h3 id="-適合正式文件論文的字體"&gt;📄 適合正式文件/論文的字體
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;首選:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;思源宋體 TC&lt;/strong&gt;(Regular 或 Medium):傳統、正式、易讀,學術論文最佳選擇&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源樣明體&lt;/strong&gt;(Regular):比思源宋體更接近台灣傳統印刷體習慣&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;思源黑體 TC&lt;/strong&gt;(Regular):現代感強,正式但不古板&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;使用情境:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;碩博士論文內文&lt;/li&gt;
+&lt;li&gt;正式報告&lt;/li&gt;
+&lt;li&gt;學術海報的內文說明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;搭配技巧:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;標題用黑體(Bold 或 SemiBold)&lt;/li&gt;
+&lt;li&gt;內文用明體(Regular)&lt;/li&gt;
+&lt;li&gt;行距建議設定為 1.5 倍或 2 倍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-適合簡報教學的字體"&gt;📊 適合簡報/教學的字體
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;首選:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;jf open 粉圓&lt;/strong&gt;(Regular):圓潤可愛,投影清晰,特別適合國小到高中的教學簡報&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;思源黑體 TC&lt;/strong&gt;(Medium 或 Bold):專業大方,大學簡報或研討會適用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源泉圓體&lt;/strong&gt;(Medium):比粉圓更專業一點,但仍保持親切感&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;使用情境:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教學簡報&lt;/li&gt;
+&lt;li&gt;學生課堂報告&lt;/li&gt;
+&lt;li&gt;線上課程字卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;搭配技巧:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;簡報標題用 Bold 或 Heavy 字重,提升視覺衝擊&lt;/li&gt;
+&lt;li&gt;內文用 Regular 或 Medium,確保遠距離可讀性&lt;/li&gt;
+&lt;li&gt;避免使用太細的字重(如 Light、ExtraLight),投影時會看不清楚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-適合創意設計海報的字體"&gt;🎨 適合創意設計/海報的字體
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;首選:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;霞鶩文楷 TC&lt;/strong&gt;:手寫感楷體,適合文青風、懷舊風設計&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;芫荽體&lt;/strong&gt;:輕鬆活潑,適合社團活動、營隊海報&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源雲明體&lt;/strong&gt;:傳統印刷體韻味,適合復古設計、文化主題&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;jf open 粉圓&lt;/strong&gt;:年輕、親切,適合活動宣傳、社群貼圖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;使用情境:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;社團海報&lt;/li&gt;
+&lt;li&gt;營隊宣傳單&lt;/li&gt;
+&lt;li&gt;畢業紀念冊&lt;/li&gt;
+&lt;li&gt;IG 貼文圖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;搭配技巧:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;混用不同風格字體(例如標題用粉圓,說明文字用黑體)&lt;/li&gt;
+&lt;li&gt;善用字重對比(粗細搭配)&lt;/li&gt;
+&lt;li&gt;創意字體建議用在標題,內文仍選擇易讀的黑體或明體&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="-特殊需求推薦"&gt;📚 特殊需求推薦
+&lt;/h3&gt;&lt;h4 id="需要注音符號支援"&gt;需要注音符號支援
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;jf open 粉圓&lt;/strong&gt;:完整支援注音符號、臺語、客語拼音&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;思源黑體 TC&lt;/strong&gt;:支援注音符號&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="需要大量罕見字"&gt;需要大量罕見字
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;思源黑體 TC&lt;/strong&gt;:支援 65,535 字圖,涵蓋罕用字、異體字&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;思源宋體 TC&lt;/strong&gt;:同上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="需要多種字重"&gt;需要多種字重
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;思源系列&lt;/strong&gt;(黑體、宋體):各有 7 種字重,從 ExtraLight 到 Heavy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源樣、源流、源雲系列&lt;/strong&gt;:同樣提供多種字重選擇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="常見問題-qa"&gt;常見問題 Q&amp;amp;A
+&lt;/h2&gt;&lt;h3 id="q1這些字體真的可以商用嗎"&gt;Q1:這些字體真的可以商用嗎?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;:是的!本文介紹的所有字體都採用 OFL 1.1 或 Apache 2.0 授權,明確允許商業使用。你可以用它們製作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;販售的書籍、雜誌&lt;/li&gt;
+&lt;li&gt;商業簡報&lt;/li&gt;
+&lt;li&gt;產品包裝&lt;/li&gt;
+&lt;li&gt;YouTube 影片(可營利)&lt;/li&gt;
+&lt;li&gt;付費課程教材&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;唯一的限制是:不能單獨販售字體檔案本身。&lt;/p&gt;
+&lt;h3 id="q2需要標註字體來源嗎"&gt;Q2:需要標註字體來源嗎?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;:依授權規定:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;使用字體製作的作品&lt;/strong&gt;(簡報、海報、影片等):&lt;strong&gt;不需要&lt;/strong&gt;標註&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;散布字體檔案本身&lt;/strong&gt;:需要附上原始授權檔案(LICENSE)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;簡單說,老師做簡報、學生做報告,都不需要特別註明「本簡報使用 XX 字體」。但如果你要把字體檔案分享給別人,記得一併附上 LICENSE 檔案。&lt;/p&gt;
+&lt;h3 id="q3可以修改這些字體嗎"&gt;Q3:可以修改這些字體嗎?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;:可以!OFL 授權允許修改字體。但需要注意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改後的字體也必須採用 OFL 授權&lt;/li&gt;
+&lt;li&gt;不能使用原字體名稱(需改名,例如「思源黑體」改為「我的黑體」)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;對於大多數使用者(教師、學生)來說,直接使用原版字體就很夠用了。&lt;/p&gt;
+&lt;h3 id="q4字體安裝後找不到怎麼辦"&gt;Q4:字體安裝後找不到怎麼辦?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;:可能原因和解決方法:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;軟體未重新啟動&lt;/strong&gt;:完全關閉 PowerPoint/Word 等軟體後重新開啟&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;搜尋字體名稱不正確&lt;/strong&gt;:嘗試搜尋字體的英文名稱(例如「Source Han Sans TC」而非「思源黑體」)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字體安裝失敗&lt;/strong&gt;:重新安裝,確認檔案沒有損壞&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macOS 權限問題&lt;/strong&gt;:嘗試安裝到使用者資料夾 &lt;code&gt;~/Library/Fonts&lt;/code&gt; 而非系統資料夾&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="q5github-下載速度很慢怎麼辦"&gt;Q5:GitHub 下載速度很慢怎麼辦?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;:GitHub 在台灣的連線有時會比較慢,可以試試:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用瀏覽器的下載管理器(支援斷點續傳)&lt;/li&gt;
+&lt;li&gt;等待離峰時段(晚上 23:00 後或清晨)下載&lt;/li&gt;
+&lt;li&gt;部分字體有提供 CDN 連結或鏡像站(可在字體專案的 README 中找到)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="q6手機平板可以安裝這些字體嗎"&gt;Q6:手機/平板可以安裝這些字體嗎?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;:視系統而定:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;iOS/iPadOS&lt;/strong&gt;:需要透過專用 App(如「AnyFont」)或使用描述檔安裝,較為複雜&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Android&lt;/strong&gt;:部分手機支援字體更換(如 Samsung、小米),可參考各品牌說明&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;建議&lt;/strong&gt;:行動裝置使用系統內建字體,或使用支援自訂字體的 App(如 Canva、Phonto)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="總結開始使用開源字體吧"&gt;總結:開始使用開源字體吧!
+&lt;/h2&gt;&lt;p&gt;透過這篇指南,相信你已經了解:&lt;/p&gt;
+&lt;p&gt;✅ 開源字體可以安心商用,不用擔心侵權
+✅ GitHub 上有豐富的繁體中文字體資源
+✅ 下載和安裝字體其實很簡單
+✅ 不同情境適合不同字體風格&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;立即行動:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根據你的需求,從上方表格選擇 2-3 款字體&lt;/li&gt;
+&lt;li&gt;前往 GitHub 下載&lt;/li&gt;
+&lt;li&gt;安裝到電腦&lt;/li&gt;
+&lt;li&gt;開始製作美觀又合法的簡報、報告、海報!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;推薦入門組合:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;學生報告&lt;/strong&gt;:思源黑體 TC + 思源宋體 TC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;教學簡報&lt;/strong&gt;:jf open 粉圓 + 思源黑體 TC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;創意設計&lt;/strong&gt;:霞鶩文楷 TC + 芫荽體 + jf open 粉圓&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;記住:好的字體不僅讓作品更美觀,更能提升專業度和可讀性。現在就開始探索這些免費又優質的開源字體資源吧!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/adobe-fonts/source-han-sans" target="_blank" rel="noopener"
+&gt;GitHub - 思源黑體&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/ButTaiwan/iansui" target="_blank" rel="noopener"
+&gt;GitHub - 芫荽體&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/ButTaiwan/genwan-font" target="_blank" rel="noopener"
+&gt;GitHub - 源雲明體&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/lxgw/LxgwWenkaiTC" target="_blank" rel="noopener"
+&gt;GitHub - 霞鶩文楷 TC&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>文章列表</title><link>https://zennote.app/page/archives/</link><pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/page/archives/</guid><description/></item><item><title>關於我</title><link>https://zennote.app/page/about/</link><pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/page/about/</guid><description>&lt;h2 id="hi-nice-to-meet-you-here"&gt;Hi, nice to meet you here
+&lt;/h2&gt;&lt;p&gt;這裡是我記錄想法和分享科技新知的個人 blog。&lt;/p&gt;
+&lt;h3 id="學習領域"&gt;學習領域
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI Vibe Coding&lt;/strong&gt; - 探索 AI coding 的無限可能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI Trend&lt;/strong&gt; - 追蹤最新的人工智慧趨勢與應用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stocks Investment&lt;/strong&gt; - 研究投資理財與市場分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Education&lt;/strong&gt; - 分享親子教育的心得與實踐&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>搜尋</title><link>https://zennote.app/page/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zennote.app/page/search/</guid><description/></item></channel></rss>

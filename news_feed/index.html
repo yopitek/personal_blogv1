@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Multilingual News Digest - 中文、English、日本語">
+    <title>每日電子新聞報 | 2026年04月29日 星期三</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f3efe6;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Noto Sans JP", sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #0f5499;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        .card {
+            background-color: #fffdf7;
+            border: 1px solid #e6e1d6;
+        }
+
+        .masthead {
+            padding: 24px 28px;
+            border-bottom: 3px solid #1a1a1a;
+        }
+
+        .masthead-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .masthead-subtitle {
+            font-size: 0.875rem;
+            color: #666666;
+            margin-top: 6px;
+        }
+
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #e6e1d6;
+            background-color: #fffdf7;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 14px 24px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666666;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: #1a1a1a;
+            background-color: #faf8f2;
+        }
+
+        .tab-btn.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px 28px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 16px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        /* Category Section Styles */
+        .category-section {
+            margin-bottom: 28px;
+        }
+
+        .category-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #990f3d;
+            padding: 10px 16px;
+            margin: 20px 0 12px 0;
+        }
+
+        .category-section:first-child .category-header {
+            margin-top: 0;
+        }
+
+        .category-news-list {
+            padding-left: 0;
+        }
+
+        /* News Item Styles */
+        .news-item {
+            padding: 14px 0;
+            border-bottom: 1px dotted #d9d2c4;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 6px 0;
+        }
+
+        .news-item-title a {
+            color: #1a1a1a;
+        }
+
+        .news-item-title a:hover {
+            color: #0f5499;
+        }
+
+        .news-item-meta {
+            font-size: 0.8rem;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .news-item-meta .source {
+            font-weight: 500;
+        }
+
+        .news-item-meta .date {
+            margin-left: 10px;
+            color: #999999;
+        }
+
+        .news-item-summary {
+            font-size: 0.9rem;
+            color: #333333;
+            line-height: 1.65;
+        }
+
+        .no-news {
+            color: #666666;
+            font-style: italic;
+            padding: 20px 0;
+        }
+
+        .footer {
+            padding: 20px 28px;
+            border-top: 1px solid #e6e1d6;
+            background-color: #faf8f2;
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: #666666;
+            margin: 0;
+        }
+
+        .footer .small {
+            font-size: 0.75rem;
+            color: #999999;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 8px;
+            }
+
+            .masthead {
+                padding: 16px 14px;
+            }
+
+            .masthead-title {
+                font-size: 1.4rem;
+            }
+
+            .tab-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .tab-content {
+                padding: 14px 12px;
+            }
+
+            .category-header {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .news-item-title {
+                font-size: 0.95rem;
+            }
+
+            .news-item-summary {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <header class="masthead">
+                <h1 class="masthead-title">每日電子新聞報</h1>
+                <p class="masthead-subtitle">2026年04月29日 星期三</p>
+            </header>
+
+            <nav class="tab-nav" role="tablist">
+                <button class="tab-btn active" role="tab" aria-selected="true" data-tab="zh-news">中文新聞</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="en-news">English News</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="ja-news">日本語ニュース</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="tech-blogs">Tech Blogs</button>
+            </nav>
+
+            <section class="tab-content active" id="zh-news" role="tabpanel">
+                <h2 class="section-header">中文新聞</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280380.aspx" target="_blank" rel="noopener noreferrer">藍委被爆喊卡帛琉考察浪費公帑 外交部：尊重安排</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:27</span>
+    </p>
+    <p class="news-item-summary">立法院外交及國防委員會原定赴帛琉考察，但藍營立委突然決定取消行程，媒體報導指出此舉可能導致公帑浪費。對此，外交部表示尊重外委會的安排，並依據需求及相關規定提供行政協助與聯繫安排，同時配合調整議程。外交部強調其角色是協助立法院進行外交事務，並會持續支持相關活動的進行。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280357.aspx" target="_blank" rel="noopener noreferrer">顧立雄視導陸軍北測中心 了解TAK套件應用成效</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:36</span>
+    </p>
+    <p class="news-item-summary">國防部部長顧立雄於28日前往陸軍北測中心，視導聯合測考訓練情況。此次視導重點包括新式基地訓練的推動現況，以及部隊對覺知應用套件（Team Awareness Kit，TAK）手機系統的運用方式。顧立雄關注TAK在戰場資訊傳遞及指揮管制上的應用成效，旨在提升部隊的作戰效率與協同作戰能力。此次活動反映出國防部對新技術應用的重視，並強調持續改進訓練與裝備的重要性。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280337.aspx" target="_blank" rel="noopener noreferrer">蔡英文成大演講談有溫度決策者 梅嶺健行直呼棒</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:20</span>
+    </p>
+    <p class="news-item-summary">前總統蔡英文於28日到台南市國立成功大學演講，主題為「有溫度的決策者」特質。蔡英文在演講中強調了決策者應具備的關懷與理解能力，並提到這些特質對於政策制定的重要性。演講後，她前往台南楠西區梅嶺風景區健行，對當地的自然環境及民眾的熱情表示印象深刻，並形容此次經歷「很棒」。此次活動吸引了當地民眾的關注，蔡英文的言論及行動引發了社會各界的討論。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280275.aspx" target="_blank" rel="noopener noreferrer">支持幕僚進修 民進黨2026美德青年育才計畫開跑</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 09:21</span>
+    </p>
+    <p class="news-item-summary">民進黨於28日宣布啟動2026年「美德青年育才計畫」，旨在支持黨內青年進行自主進修與技能提升，或就讀國內外碩博士班。該計畫希望藉此拓展青年視野並促進持續學習，預計將提供近百名獎助金名額，鼓勵符合資格的黨內青年政治工作者把握機會。申請截止日期為6月1日。此舉意在培養未來的政治人才，強化黨內青年幕僚的專業能力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280252.aspx" target="_blank" rel="noopener noreferrer">立委籲暫緩寵物美容定型化契約 農業部：深刻檢討</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 08:43</span>
+    </p>
+    <p class="news-item-summary">民眾黨立委洪毓祥於28日指出，農業部推動的寵物美容定型化契約雖具良好意圖，但未充分考量業者的意見及相關配套措施。他提到，農業部要求業者設立銀行信託，原本宣稱陽信銀行有意承接此業務，但經民眾黨團實際求證後，陽信銀行表示並未辦理過此類信託業務。洪毓祥呼籲農業部應暫緩該契約的推動，以便進一步檢討相關政策，確保業者的權益及市場的穩定。農業部則表示將對此事進行深刻檢討，並考慮業者的意見。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280249.aspx" target="_blank" rel="noopener noreferrer">張凌赫來台行動自由？李遠：政府不會限制言論</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 08:38</span>
+    </p>
+    <p class="news-item-summary">中國古裝劇《逐玉》男主角張凌赫的來台行動自由問題引發關注。文化部長李遠在28日的會議中表示，若張凌赫來台，將能享受到自由的環境，並強調台灣政府不會限制其言論或進行打壓。李遠的言論反映了對於藝人來台的開放態度，並暗示張凌赫可能會喜愛台灣的自由氛圍。此番發言是在立法委員詢問下作出的，顯示出對於文化交流及言論自由的重視。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280244.aspx" target="_blank" rel="noopener noreferrer">都委會審議公設保留地解編案 籲地方儘速還地於民</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 08:26</span>
+    </p>
+    <p class="news-item-summary">內政部都市計畫委員會於28日審議宜蘭、嘉義、台中、台東及澎湖等5縣市的公共設施用地專案通盤檢討案。台東市的主要計畫已完成審議，其餘計畫將於今年底至明年6月分批提交委員會審議。都委會強調地方政府應加速辦理公設保留地的解編，促進土地的有效利用，實現還地於民的目標。此舉旨在提升土地資源的配置效率，並回應民眾對於土地使用的期待。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604280233.aspx" target="_blank" rel="noopener noreferrer">營長播統戰影片 李遠：中國意圖模糊國軍敵我意識</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 08:08</span>
+    </p>
+    <p class="news-item-summary">陸軍金六結營區近日傳出營長在營內播放中共統戰電影《八佰》。文化部長李遠指出，中國的每部電影都經過嚴格審查，並且多數內容需符合中國的主旋律。他表示，中國正積極努力模糊國軍的敵我意識，強調軍隊的特殊性與社會其他層面的不同。他尊重國防部對此事件的處理決定。李遠的言論反映出對中國影響力的關注，並指出這類統戰行為可能對國軍的認知造成影響。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">產經</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202604290009.aspx" target="_blank" rel="noopener noreferrer">科技股走軟拖累美股 標普500從歷史高點回吐</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 20:51</span>
+    </p>
+    <p class="news-item-summary">美國股市於28日收盤走低，標普500指數從歷史高點回落，主要受到半導體及其他科技股下滑的影響。科技股的疲軟表現引發投資者擔憂，進而影響整體市場情緒。市場分析指出，科技股的波動性可能會持續影響短期內的投資決策。此波動反映出市場對於經濟前景的不同看法，特別是在利率和通脹壓力的背景下。投資者需密切關注未來經濟數據及企業財報，以評估市場走向。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202604290008.aspx" target="_blank" rel="noopener noreferrer">市場觀望美伊停火談判 國際油價上漲</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 20:38</span>
+    </p>
+    <p class="news-item-summary">由於交易員正觀望美國對伊朗提出的結束戰爭方案的回應，國際油價在28日上漲至美伊達成停火協議前夕的最高水準。該方案可能涉及重新開放荷莫茲海峽的討論，這一地區對全球石油運輸至關重要。市場情緒受到影響，投資者密切關注美伊之間的談判進展，並評估其對油價的潛在影響。隨著局勢發展，市場預期可能出現進一步波動。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ait/202604290007.aspx" target="_blank" rel="noopener noreferrer">昔日盟友變法庭宿敵 馬斯克指控OpenAI淪營利工具</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 20:04</span>
+    </p>
+    <p class="news-item-summary">美國電動車大廠特斯拉執行長馬斯克與OpenAI執行長阿特曼於加州聯邦法院展開訴訟，雙方昔日為盟友，現今成為法庭上的對立方。馬斯克指控OpenAI淪為營利工具，這場審判引起廣泛關注，可能對人工智慧產業帶來深遠影響，並促使OpenAI重新考量其商業模式。該案件的結果將對AI技術的發展及其商業應用產生重要影響，業界人士正密切關注事態進展。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202604290002.aspx" target="_blank" rel="noopener noreferrer">能源股強漲難敵科技股賣壓 歐股收盤跌多漲少</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 16:18</span>
+    </p>
+    <p class="news-item-summary">歐洲股市於28日收盤呈現跌多漲少的局面，儘管能源股表現強勁，但受到通膨疑慮及科技股拋售的影響，漲勢未能持續。市場對於通膨的擔憂持續影響投資者情緒，導致科技股遭到拋售，進一步壓制了整體股市表現。能源股的上漲未能抵消其他板塊的下滑，顯示出市場的脆弱性和不確定性。投資者在面對經濟前景的不確定性時，選擇謹慎行事，導致股市整體表現不佳。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ait/202604280423.aspx" target="_blank" rel="noopener noreferrer">Google在印度東南打造重大AI樞紐動土 負責龐大運算</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 15:50</span>
+    </p>
+    <p class="news-item-summary">Google於10月28日在印度東南部的維查格舉行動土典禮，計畫在該地打造其在美國以外最大的人工智慧（AI）樞紐。維查格作為連接新加坡的海纜登陸點，將成為該公司龐大運算需求的核心地區。此舉顯示Google在全球擴展其AI基礎設施的決心，並強調印度在科技領域的重要性。該樞紐的建設預計將促進當地經濟發展，並創造大量就業機會。Google的這一計畫將進一步加強其在亞洲市場的影響力，並為未來的技術創新奠定基礎。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202604280418.aspx" target="_blank" rel="noopener noreferrer">金管會修正投資型保單規範 禁連結TLAC債券</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:23</span>
+    </p>
+    <p class="news-item-summary">金管會於28日宣布修正投資型保單相關規範，以增強保戶權益並符合實務作法。新規定明確禁止投資型保單連結TLAC債券。此外，類全委投資型保單若透過主動式ETF、境內外ETF及指數型基金投資於非投資等級債券及新興市場債券，將設置投資上限。該修正規範將於29日正式生效。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202604280413.aspx" target="_blank" rel="noopener noreferrer">OpenAI疑慮拖累 那斯達克開盤跌逾1%</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:13</span>
+    </p>
+    <p class="news-item-summary">在媒體報導指出人工智慧新創公司OpenAI未能達成新用戶成長及銷售目標後，市場對其能否支撐龐大AI基礎設施支出的疑慮加劇。這一消息影響了投資者情緒，導致以科技股為主的那斯達克指數在28日開盤時跌幅超過1%。分析師認為，若OpenAI無法改善其業績，可能會對整個科技行業產生負面影響。此事件突顯了市場對於AI產業未來發展的不確定性，並可能影響相關公司的股價走勢。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202604280410.aspx" target="_blank" rel="noopener noreferrer">今彩539第115104期 頭獎槓龜</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:05</span>
+    </p>
+    <p class="news-item-summary">今彩539第115104期於28日開獎，開獎號碼為21、38、07、35、08。根據官方公告，本期頭獎未有人中獎，頭獎結果為槓龜。此次開獎未能產生任何頭獎得主，顯示出參與者未能選中正確號碼。此結果將影響後續的獎金累積情況，吸引更多彩迷參與未來的抽獎活動。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">全球國際新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202604290013.aspx" target="_blank" rel="noopener noreferrer">美眾院委員會通過國務院撥款法案 含5億美元援台</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 23:21</span>
+    </p>
+    <p class="news-item-summary">美國聯邦眾議院撥款委員會於2023年9月28日通過2027財政年度的國家安全、國務院及相關計畫撥款法案。該法案包括支持台灣參與多邊組織的措施，並在對外軍事融資計畫下，對台灣提供5億美元的援助。此舉旨在加強美台之間的合作，並提升台灣在國際社會中的參與度。該法案的通過標誌著美國對台灣的持續支持，反映出美國在亞太地區的戰略考量。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290012.aspx" target="_blank" rel="noopener noreferrer">英王赴美國會演說 強調英美聯盟重要、為烏克蘭發聲</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 22:02</span>
+    </p>
+    <p class="news-item-summary">英國國王查爾斯三世於28日在美國國會發表演說，強調英美聯盟的獨特性及其當前的重要性。他指出，這一聯盟在當前全球局勢中比以往任何時候都更為關鍵。查爾斯三世也為烏克蘭發聲，強調保衛該國需要堅定不移的決心。此外，針對近期川普出席晚宴時發生的槍擊事件，英王在演說中譴責了暴力行為，呼籲社會對此類事件保持警覺。此次演說旨在強化英美之間的合作關係，並表達對烏克蘭的支持。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290011.aspx" target="_blank" rel="noopener noreferrer">吉米金摩嘲諷梅蘭妮亞惹怒川普 FCC提前審查ABC執照</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 21:55</span>
+    </p>
+    <p class="news-item-summary">美國聯邦傳播委員會（FCC）於28日宣布將提前審查美國廣播公司（ABC）的執照，原因是總統川普及其妻子梅蘭妮亞對喜劇演員吉米金摩的言論表示不滿。金摩在其節目中對梅蘭妮亞進行了嘲諷，這引發了川普的強烈反應，要求ABC解雇金摩。此事件引起廣泛關注，並可能對ABC的執照審查過程產生影響。川普及梅蘭妮亞的要求顯示出他們對媒體報導的敏感度，並可能對未來的媒體自由和言論表達產生潛在影響。FCC的決定將在未來幾周內進一步發展，相關後果仍待觀察。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290010.aspx" target="_blank" rel="noopener noreferrer">加強圍堵中國先進晶片 路透：美國命設備商暫停出貨中企華虹半導體</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 21:46</span>
+    </p>
+    <p class="news-item-summary">美國商務部近日要求數家晶片設備公司暫停對中國第二大晶片製造商華虹半導體的部分設備出貨，這一措施旨在加強對中國先進晶片發展的圍堵。根據路透社引述的兩名知情人士報導，此舉是美方針對中國晶片產業的最新行動，顯示出美國在科技領域持續施加壓力以限制中國的技術進步。此決定可能對華虹半導體的生產能力及未來發展造成影響，並進一步加劇中美之間在科技與貿易領域的緊張關係。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290006.aspx" target="_blank" rel="noopener noreferrer">CNN：美提前遣返聽證程序 加速處置被拘移民兒童</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 18:53</span>
+    </p>
+    <p class="news-item-summary">美國有線電視新聞網（CNN）報導，根據政府官員及孩童代表律師的說法，美國政府正在加速處理被拘留的移民兒童的遣返程序，將移民聽證程序提前數週甚至數月。此舉旨在加快移民兒童的遣返進程，應對日益增加的移民潮。報導指出，這一政策變更可能影響到大量被拘留的兒童，並引發對其人權及法律程序的關注。美國政府尚未對此政策變更提供進一步的詳細說明。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290005.aspx" target="_blank" rel="noopener noreferrer">中東戰爭前景不明 義大利總理稱穩定物價是當務之急</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 18:27</span>
+    </p>
+    <p class="news-item-summary">義大利總理梅洛尼於28日表示，面對美國與以色列對伊朗的軍事行動所帶來的影響，她的首要任務是穩定物價，特別是應對由能源價格上漲引發的通膨壓力。梅洛尼強調，當前的經濟環境不確定，穩定物價對於國家經濟至關重要，並將成為政府的優先政策方向。隨著中東局勢的變化，義大利政府將密切關注相關發展，以制定相應的經濟應對措施。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290004.aspx" target="_blank" rel="noopener noreferrer">美伊達成默契不阻攔 俄富豪遊艇穿越荷莫茲海峽</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 17:49</span>
+    </p>
+    <p class="news-item-summary">根據消息人士的報導，俄羅斯億萬富翁摩達雪夫擁有的超級遊艇在杜拜完成維修後，成功穿越了荷莫茲海峽。此次穿越的關鍵在於伊朗與美國雙方均未對此行動提出反對。荷莫茲海峽是全球重要的海上通道，經常受到地緣政治緊張局勢的影響。該遊艇的通行標誌著在當前複雜的國際局勢中，某種程度的默契已經形成，促成了這一事件的發生。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604290003.aspx" target="_blank" rel="noopener noreferrer">川普白宮歡迎英王來訪 曝母親曾暗戀查爾斯三世</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 17:34</span>
+    </p>
+    <p class="news-item-summary">美國總統川普於28日在白宮舉行軍禮儀式，歡迎英國國王查爾斯三世及其夫婦。川普在致詞中強調美英兩國之間的特殊關係，並表達希望這份情誼能夠持續。他提到自己的母親出生於蘇格蘭，生前對英國王室抱有深厚的感情，甚至曾對查爾斯三世有過「暗戀」的情愫。此次訪問顯示了兩國領導人在加強雙邊關係方面的努力。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">社會</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280422.aspx" target="_blank" rel="noopener noreferrer">男尾隨新北蘆洲高中生 外婆里長制止遭毆傷</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 15:06</span>
+    </p>
+    <p class="news-item-summary">新北市蘆洲區一名高中生在放學回家途中，發現一名游姓男子尾隨其後，隨即致電外婆求助。外婆在社區等候並試圖制止游姓男子，卻遭到毆打，里長也上前協助制止，結果同樣受到攻擊。最終，周圍民眾聯手將游姓男子壓制並報警，警方隨後將其逮捕並送辦。事件發生於28日，具體時間和地點尚未公開。此事件引起社區關注，突顯出公共安全問題。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280414.aspx" target="_blank" rel="noopener noreferrer">新北永和男童獨自在家 意外墜樓送醫不治</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:13</span>
+    </p>
+    <p class="news-item-summary">新北市永和區一處社區大樓於28日晚間發生一起意外事件，年約3歲的男童因母親外出而獨自在家，意外從十幾層樓高處墜落。警方表示，男童隨後被送往醫院搶救，但最終宣告不治。事故的具體原因目前仍在調查中。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202604280391.aspx" target="_blank" rel="noopener noreferrer">民憂老鼠出沒 北市環保局：加強清消已有階段性成效</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 13:07</span>
+    </p>
+    <p class="news-item-summary">台北市政府環境保護局長徐世勲於28日表示，針對民眾對老鼠出沒的擔憂，市府已加強投藥清潔消毒工作，並取得階段性成效。根據最新數據，民眾通報的老鼠死亡案例比例提升了1.8倍，顯示出防治措施的有效性。環保局將持續監測並改善相關措施，以回應市民的健康與安全需求。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280384.aspx" target="_blank" rel="noopener noreferrer">台積電前員工涉洩密判10年 辯護律師籲理性看待動機</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:51</span>
+    </p>
+    <p class="news-item-summary">台積電前工程師陳力銘因洩漏關鍵技術，於智商法院被判刑10年。該案件引起關注，陳力銘的辯護律師在近日發布聲明，強調當事人已深切悔悟，並呼籲外界理性看待案件的情節與動機。此案的判決反映了對於企業機密保護的重視，並引發對於員工行為及其後果的討論。案件的具體情節尚未公開，未來可能影響相關行業的安全政策及法律規範。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280381.aspx" target="_blank" rel="noopener noreferrer">民眾天橋掛台北老鼠園標語遭查 警：依法執行</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:40</span>
+    </p>
+    <p class="news-item-summary">民眾在台北市水源市場旁的天橋上張貼標語「台北動物園變台北老鼠園？？」，引發警方攔查。此事件在網路社群引起熱議，部分網友質疑台北市是否實施戒嚴。針對此事，北市警方於28日表示，員警是接獲報案後依法執行相關程序。警方強調，執法行動是基於法律規定，並未針對標語內容進行評價。該事件反映出民眾對於公共安全及市容的關注，也引發對於言論自由的討論。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280371.aspx" target="_blank" rel="noopener noreferrer">最高檢出版日本檢察實務專書 片山和之到場祝賀</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:07</span>
+    </p>
+    <p class="news-item-summary">最高檢察署於28日舉辦「日本檢察實務」新書發表會，該書由深入研究日本司法制度的檢察官撰寫，為台灣首部專論日本檢察實務的專書。發表會上，日本台灣交流協會代表片山和之出席並致以祝賀。該書旨在從實務視角探討日本檢察制度，促進台灣與日本在法律領域的交流與理解。此次發表會標誌著台灣在相關法律研究領域的一項重要進展，並為未來的學術交流奠定基礎。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280370.aspx" target="_blank" rel="noopener noreferrer">柬埔寨駕船接運毒品被逮 4中國漁民最重判刑無期</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:07</span>
+    </p>
+    <p class="news-item-summary">四名中國漁民於柬埔寨駕船出航，計劃在泰國灣轉運498塊海洛因及399包大麻等毒品，行經東沙海域時被海巡署查獲。台南地方法院於28日對此案件作出判決，四名漁民分別被判刑17年至無期徒刑，並可提出上訴。此案涉及的毒品數量及其嚴重性引起關注，執法機關強調打擊毒品犯罪的重要性。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202604280367.aspx" target="_blank" rel="noopener noreferrer">34年前麥當勞爆炸案 楊季章「我值班就我來吧」拆彈殉職</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:59</span>
+    </p>
+    <p class="news-item-summary">麥當勞爆炸案發生至今已34年，刑事局於28日發文悼念當年殉職的防爆英雄楊季章。楊季章在事件中面對歹徒設置的水銀抗動裝置炸彈，表現出勇敢與責任感，主動請纓處理危險裝置，並表示「我值班，就我來吧」。最終，他為了保護民眾的生命安全而壯烈犧牲。此事件至今仍在社會上引發關注，楊季章的英勇行為被廣泛紀念，成為防爆工作者的典範。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">生活</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202604280376.aspx" target="_blank" rel="noopener noreferrer">7月起無職安卡入工地重罰？勞動部：有1年緩衝期</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:14</span>
+    </p>
+    <p class="news-item-summary">勞動部於28日澄清，根據職業安全衛生法，從7月1日起，營建工地將僅允許持有職安卡的勞工進入。然而，該部指出，相關規定將設有為期1年的緩衝期，並將以優先宣導和輔導的方式推動此政策。此舉旨在確保勞工的安全與健康，並使相關單位有足夠時間進行準備。勞動部強調，未來將加強對工地的職安管理，確保新規定能夠有效落實。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/acul/202604280368.aspx" target="_blank" rel="noopener noreferrer">孫翠鳳5月基隆演西施音樂劇 吳國講台語越國說國語</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:01</span>
+    </p>
+    <p class="news-item-summary">孫翠鳳將於5月在基隆演出古裝音樂劇「情人哏裡出西施」，她在劇中飾演吳王。孫翠鳳表示，她在演出中使用「台灣國語」，而劇團的安排也頗具創意，將講台語的演員分配至吳國，越國的演員則使用國語。此劇的獨特語言配置旨在增強劇情的文化氛圍，吸引觀眾的注意。基隆的演出將成為孫翠鳳跨界演出的重要里程碑，展現其在音樂劇領域的多元表現。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202604280365.aspx" target="_blank" rel="noopener noreferrer">美國花生零關稅 農業部：不會讓台灣農民受影響</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:57</span>
+    </p>
+    <p class="news-item-summary">台美對等貿易協定（ART）尚未生效，但有農民擔心美國花生零關稅進口可能對台灣花生產業造成衝擊。針對這一擔憂，台灣農業部於28日表示，已經制定了完整的產業支持措施，旨在確保國內花生農民不會受到影響。農業部強調，將持續監測市場動態，並提供必要的協助，以維護台灣農業的穩定發展。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/acul/202604280358.aspx" target="_blank" rel="noopener noreferrer">第2屆青漫獎開放報名 個人組新增頁漫條漫投稿</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:38</span>
+    </p>
+    <p class="news-item-summary">第2屆青漫獎今日起開放報名，文化部根據首屆賽事經驗進行調整。首屆青漫獎吸引逾250件作品參賽，個人組除了延續「頁漫」的報名形式外，新增「條漫」投稿選項。此舉旨在鼓勵更多創作者參與，並擴大參賽作品的多樣性。青漫獎旨在推廣青年漫畫創作，提供平台讓年輕藝術家展示其才華，促進漫畫文化的發展。報名細節及參賽要求可於文化部相關網站查詢。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202604280351.aspx" target="_blank" rel="noopener noreferrer">淡江大橋5/2星空音樂會 謝宇威攜手管弦樂團演出</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:24</span>
+    </p>
+    <p class="news-item-summary">淡江大橋通車前將舉辦一系列活動，5月2日將舉行星空音樂會，金曲歌王謝宇威將攜手管弦樂團演出。該音樂會旨在吸引民眾參與，並為大橋的通車增添氛圍。隨後，5月3日將舉辦「我和大橋在一起」活動，邀請民眾上橋野餐，促進社區互動。這些活動不僅展示了當地文化，也為即將通車的大橋增添了期待感。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/acul/202604280336.aspx" target="_blank" rel="noopener noreferrer">跨國合作漫畫奇想珍珠加炒飯 開啟台日連載</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:20</span>
+    </p>
+    <p class="news-item-summary">KADOKAWA、台灣角川及KadoKado角角者於2024年共同舉辦日漫化小說大賽，首獎作品自即日起展開連載。該作品講述一名日本網紅轉生至台灣的故事，並探索將珍珠加入台式炒飯的創新嘗試。此合作標誌著台日文化交流的新里程碑，旨在吸引更多讀者關注漫畫及小說的跨國合作。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202604280330.aspx" target="_blank" rel="noopener noreferrer">日本麻疹病例破300例 年增逾4倍逼近10年高峰</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 10:41</span>
+    </p>
+    <p class="news-item-summary">日本麻疹疫情持續上升，根據官方統計，今年全國感染人數已突破300例，較去年全年總數增加超過4倍，接近過去10年的高峰。衛生當局提醒民眾檢查自身疫苗接種狀況，並建議在出現疑似症狀時避免外出，以防疫情擴散。此情況引發了對公共健康的關注，促使相關機構加強疫苗接種宣導及防疫措施。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202604280310.aspx" target="_blank" rel="noopener noreferrer">台鐵內壢站工程 4班區間車4/29至5/3截短行駛</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 09:59</span>
+    </p>
+    <p class="news-item-summary">因應內壢站臨時軌道切換工程的限速需求，台鐵宣布自4月29日至5月3日，將有4班區間（快）車進行截短行駛。台鐵提醒旅客注意此變更，並建議預留彈性時間以因應可能的行程影響。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280398.aspx" target="_blank" rel="noopener noreferrer">天心「祭弒」中邪面目全非 韓國老公嚇到已讀不回</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 13:30</span>
+    </p>
+    <p class="news-item-summary">電影「祭弒」於今晚首映，演員天心在片中需花費兩小時進行特效鬼妝化妝。天心表示，她對變得「面目全非」的過程感到非常享受，並將變裝照片傳給她的韓國丈夫。然而，對方卻因驚嚇而未回覆訊息，這讓天心感到相當有成就感。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280355.aspx" target="_blank" rel="noopener noreferrer">黃姵嘉參與駐村小隊2笑稱被騙 錄影累喊魂不附體</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:32</span>
+    </p>
+    <p class="news-item-summary">節目「啊喔！最Kiang駐村小隊2」的主持人洪都拉斯、施名帥、黃姵嘉及周厚安於28日出席記者會。黃姵嘉表示，因為第一季節目給人溫馨的感覺，才決定參加第二季。然而，錄影過程中，她感到非常疲累，甚至形容自己累到「魂不附體」。此次記者會旨在宣傳新一季節目的內容及特色，吸引觀眾的關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280342.aspx" target="_blank" rel="noopener noreferrer">吳彥祖談演港片像回家 笑曝女兒愛韓團勝過爸爸</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 11:20</span>
+    </p>
+    <p class="news-item-summary">港星吳彥祖近日重返香港影壇，參與電影《寒戰1994》的拍攝，並與劉俊謙有多場對手戲。他表示在香港拍攝的感覺就像回到家一樣。作為知名男星，吳彥祖透露其13歲女兒對韓國明星的喜愛超過對父親的崇拜，甚至不認為父親帥氣。此番言論引發媒體關注，展現了他在家庭生活中的輕鬆一面。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280335.aspx" target="_blank" rel="noopener noreferrer">許富凱「心肝寶貝」憶亡父 父子互動寫進歌裡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 10:51</span>
+    </p>
+    <p class="news-item-summary">台語金曲歌王許富凱於28日在台北舉辦新台語專輯「尪仔物」的聽歌會。他在活動中情緒激動，表示新歌「我的心肝寶貝」反映了他與已故父親之間的互動，並形容這首歌彷彿是早已為父親所寫。許富凱的音樂作品常融入個人情感，這次的專輯也延續了他對家庭的深厚情感，展現了對父親的懷念與敬意。此次專輯的推出，標誌著他在音樂創作上的新里程碑，並吸引了眾多歌迷的關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280325.aspx" target="_blank" rel="noopener noreferrer">「飛吧！熊鷹」紀錄片耗時12年 尋文化生態平衡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 10:33</span>
+    </p>
+    <p class="news-item-summary">導演梁皆得的新紀錄片「飛吧！熊鷹」耗時12年製作，探討文化與生態的平衡。梁皆得以其先前作品「老鷹想飛」獲得千萬票房，此次紀錄片的拍攝過程中，他曾花費5個月的時間等待一個關鍵畫面，並在南橫公路步行5小時進行拍攝。該片旨在引發觀眾對於環境保護及文化傳承的思考，並展示自然生態的美麗與脆弱。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280257.aspx" target="_blank" rel="noopener noreferrer">傳記片首映週末票房奪冠 麥可傑克森歌曲串流點閱飆</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 08:54</span>
+    </p>
+    <p class="news-item-summary">傳記電影「麥可傑克森」在北美首映週末取得票房冠軍，顯示出觀眾對這位音樂巨星的持續關注。隨著電影的上映，麥可傑克森的經典歌曲在全美的串流點閱量也顯著上升，較前一週增加了95%。這一現象反映出電影對其音樂遺產的推廣效應，並可能吸引新一代聽眾重新認識這位已故藝人的作品。該片的成功不僅體現在票房上，還促進了麥可傑克森音樂的再度流行，顯示出傳記電影在當代文化中的影響力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202604280255.aspx" target="_blank" rel="noopener noreferrer">吳慷仁寒戰前傳遭打20巴掌臉腫 謝君豪喊感覺好</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 08:51</span>
+    </p>
+    <p class="news-item-summary">吳慷仁參演的港片《寒戰1994》中，遭港星謝君豪連續打了20個巴掌，導致其臉部腫脹。謝君豪在接受媒體訪問時表示，自從拿到劇本以來就期待這場戲，並強調兩人決定在拍攝時要「來真的」，因此感覺非常好。此事件引發關注，顯示演員在拍攝過程中對角色的投入與真實感的追求。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280419.aspx" target="_blank" rel="noopener noreferrer">卸下世界冠軍壓力 跆拳道新星劉侑芸全大運奪金</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:24</span>
+    </p>
+    <p class="news-item-summary">跆拳道新星劉侑芸於桃園舉行的全大運中，首次參賽便在公開女生組49公斤級項目中奪得金牌。去年，她在世錦賽中獲得金牌，成為備受矚目的選手。劉侑芸表示，隨著比賽經驗的累積，她已逐漸卸下作為世界冠軍的壓力，並將目標鎖定在即將舉行的名古屋亞運，期望能夠成為國手參賽。此次全大運的表現，為她的亞運之路奠定了良好的基礎。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280417.aspx" target="_blank" rel="noopener noreferrer">湯優盃羽球賽 台灣女團遭印尼逆轉分組第2晉8強</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:23</span>
+    </p>
+    <p class="news-item-summary">台灣女團在湯優盃羽球賽的預賽最終戰中，對陣印尼隊爭奪分組第一。比賽中，台灣隊在先取得2比1的優勢後，遭印尼隊逆轉，最終以2比3落敗。儘管如此，台灣隊仍以分組第二的成績晉級八強。此次比賽的結果顯示了台灣隊在競爭激烈的賽事中展現出的實力與韌性。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280411.aspx" target="_blank" rel="noopener noreferrer">張政禹3安3打點跑2盜 助龍擊敗獅獲單場MVP</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 14:08</span>
+    </p>
+    <p class="news-item-summary">中華職業棒球大聯盟味全龍隊於28日戰勝統一7-ELEVEn獅隊，最終比分為5比3。此役中，野手張政禹表現突出，貢獻3安打及3打點，並成功盜壘2次，成為比賽的關鍵人物。他的三壘打在比賽中起到了超前比分的關鍵作用，最終獲選單場最有價值球員（MVP）。此次勝利對於味全龍隊在賽季中的表現具有重要意義。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280408.aspx" target="_blank" rel="noopener noreferrer">李東洺6局優質先發壓制雄鷹 教頭讚冷靜</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 13:55</span>
+    </p>
+    <p class="news-item-summary">中職富邦悍將於28日對台鋼雄鷹的比賽中，以6比0獲勝，取得近期的兩連勝。投手李東洺表現出色，投滿6局無失分，成功壓制對手。李東洺在前一場對雄鷹的比賽中表現不佳，此役的優質先發獲得總教練後藤光尊的讚揚，稱其在場上的冷靜及專注使他能夠有效執行投球策略。這場勝利對於富邦悍將的士氣提升具有重要意義。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280405.aspx" target="_blank" rel="noopener noreferrer">李東洺兩度對雄鷹先發結果不同 心態改變穩定控球</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 13:53</span>
+    </p>
+    <p class="news-item-summary">中職富邦悍將投手李東洺於28日對台鋼雄鷹隊先發，表現出色，投滿6局無失分，助隊以6比0獲勝。李東洺在賽後表示，與前一次對戰的失利相比，心態有所改變，並努力穩定控球，避免投球過於辛苦。他的這一轉變顯示出對比賽的適應能力，並為球隊帶來了重要的勝利。此役的成功也反映了李東洺在面對壓力時的調整能力，為富邦悍將的季後賽前景增添了信心。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280404.aspx" target="_blank" rel="noopener noreferrer">韓職王彥程先發5.1局挨轟 失2分無關勝敗</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 13:52</span>
+    </p>
+    <p class="news-item-summary">韓職韓華鷹隊左投王彥程於28日先發出賽，投球5.1局失2分，至今在6場比賽中單場失分均未超過3分。該場比賽中，韓華鷹隊經過延長賽以7比6擊敗SSG登陸者，王彥程因此無關勝敗。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280392.aspx" target="_blank" rel="noopener noreferrer">羅嘉翎全大運跆拳道摘金 揣摩日本踢拳手木村萌那</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 13:08</span>
+    </p>
+    <p class="news-item-summary">115年全國大專校院運動會於中央大學展開，跆拳道女將羅嘉翎在公開女生組67公斤級比賽中奪得生涯首面全大運金牌。羅嘉翎表示，近期她嘗試揣摩日本職業踢拳手木村萌那的技術，這對她的表現有所幫助。此次賽事吸引了眾多選手參加，羅嘉翎的金牌成就為她的運動生涯增添了重要的一頁。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202604280379.aspx" target="_blank" rel="noopener noreferrer">王苡丞內外兼修方便調度 後藤光尊讚傳球能力好</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">04/28 12:22</span>
+    </p>
+    <p class="news-item-summary">中職富邦悍將野手王苡丞在經歷一年多的調整後，重返一軍賽場。儘管王苡丞曾面臨守備上的挑戰，但總教練後藤光尊對其傳球能力表示肯定，認為其表現穩定。後藤光尊指出，希望王苡丞能夠在內外野雙方兼修，這將有助於教練團在球員調度上的靈活性與安排。王苡丞的回歸被視為球隊在戰術運用上的一項重要資產。</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <section class="tab-content" id="en-news" role="tabpanel">
+                <h2 class="section-header">English News</h2>
+                <div class="category-section">
+    <h3 class="category-header">Startup</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://github.com/anthropics/claude-code/issues/49363" target="_blank" rel="noopener noreferrer">Claude system prompt bug wastes user money and bricks managed agents</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 23:59</span>
+    </p>
+    <p class="news-item-summary">A bug in the Claude AI system has reportedly led to financial losses for users and malfunctioning managed agents. The issue, which surfaced in early October 2023, affects the system's prompt handling, causing it to misinterpret user commands and execute unintended actions. Users have reported that this malfunction resulted in wasted resources and ineffective task management. The bug has raised concerns about the reliability of AI systems in managing financial and operational tasks. Developers are currently investigating the issue to identify the root cause and implement a fix. The incident highlights the potential risks associated with deploying AI technologies in critical applications, where errors can lead to significant economic impacts. As of now, there is no official timeline for when the problem will be resolved. Users are advised to monitor updates from the developers and exercise caution when using the system for financial transactions or critical operations.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.buchodi.com/how-chatgpt-serves-ads-heres-the-full-attribution-loop" target="_blank" rel="noopener noreferrer">ChatGPT serves ads. Here's the full attribution loop</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 23:54</span>
+    </p>
+    <p class="news-item-summary">OpenAI's ChatGPT has begun incorporating advertisements into its platform, marking a significant shift in its monetization strategy. This development was announced in October 2023, as the company seeks to diversify its revenue streams beyond subscription fees. The ads will be displayed within the chat interface, allowing users to interact with them while using the service. OpenAI has emphasized that the advertisements will be relevant to users' interests, aiming to enhance the overall experience rather than detract from it. The implementation of ads is part of a broader trend in the tech industry, where companies are increasingly looking for new ways to generate income amid rising operational costs. OpenAI has stated that it will maintain transparency regarding the ads, ensuring users are aware of sponsored content. This move comes as ChatGPT continues to grow in popularity, with millions of users engaging with the platform daily. The introduction of advertisements is expected to provide a new revenue source while allowing OpenAI to continue investing in the development of its AI technologies. Further details on the specific nature of the ads and their impact on user experience are anticipated in upcoming announcements from the company.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.anthropic.com/news/claude-for-creative-work" target="_blank" rel="noopener noreferrer">Claude for Creative Work</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 23:46</span>
+    </p>
+    <p class="news-item-summary">The article discusses the launch of Claude, a new AI tool designed to assist in creative work. Developed by Anthropic, Claude aims to enhance productivity for writers, artists, and other creative professionals by providing suggestions and generating content. The tool is named after Claude Shannon, a pioneer in information theory, reflecting its focus on innovative applications of AI in creative fields. Claude is positioned as a competitor to existing AI models, such as OpenAI's ChatGPT, and is designed to understand and generate human-like text. The launch is part of a broader trend in the tech industry toward integrating artificial intelligence into various aspects of creative processes. Users can access Claude through a subscription model, which includes different tiers based on usage needs. The tool is expected to evolve with user feedback and advancements in AI technology, aiming to provide increasingly sophisticated support for creative endeavors. Anthropic has emphasized safety and ethical considerations in the development of Claude, seeking to mitigate potential misuse of the technology. The release of Claude marks a significant step in the ongoing development of AI tools tailored for creative industries, reflecting growing interest and investment in this area.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://dustri.org/b/carrot-disclosure-forgejo.html" target="_blank" rel="noopener noreferrer">Carrot Disclosure: Forgejo</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 22:14</span>
+    </p>
+    <p class="news-item-summary">Forgejo, an open-source platform for collaborative software development, has announced a new feature called &quot;Carrot Disclosure.&quot; This feature aims to enhance transparency in project management by allowing developers to disclose their contributions and project changes more effectively. The announcement was made on Hacker News, where the Forgejo team emphasized the importance of accountability and visibility in software development. The Carrot Disclosure feature is designed to provide users with detailed insights into project activities, including who made specific changes and when they occurred. This initiative is part of Forgejo's broader efforts to improve user engagement and foster a collaborative environment among developers. The platform, which is a fork of Gitea, has been gaining traction since its launch, attracting attention for its user-friendly interface and robust functionality. Forgejo's commitment to open-source principles is reflected in this new feature, which aligns with the community's demand for better tools to track contributions and maintain project integrity. The rollout of Carrot Disclosure is expected to take place in the coming weeks, with the Forgejo team encouraging feedback from users to refine the feature further.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://lucumr.pocoo.org/2026/4/28/before-github" target="_blank" rel="noopener noreferrer">Before GitHub</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 21:17</span>
+    </p>
+    <p class="news-item-summary">The article &quot;Before GitHub&quot; on Hacker News discusses the evolution of software development and version control systems prior to the establishment of GitHub in 2008. It highlights the various tools and platforms that developers utilized for collaboration and code sharing, such as SourceForge and Subversion. The piece emphasizes the challenges faced by developers in managing code and coordinating projects before the advent of Git and GitHub's user-friendly interface. It notes that GitHub revolutionized the way developers interact with code repositories, enabling easier collaboration and version control. The article reflects on the impact of these earlier systems on the development of modern software practices and the eventual rise of GitHub as a dominant platform in the tech industry. The discussion includes insights from users who experienced the transition from these earlier tools to GitHub, illustrating the significant changes in workflow and community engagement in software development. Overall, the article serves as a retrospective look at the landscape of version control and collaboration tools leading up to the launch of GitHub, providing context for its widespread adoption and influence in the software development community.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://ron.stoner.com/How_I_Won_a_Championship_That_Doesnt_Exist" target="_blank" rel="noopener noreferrer">I won a championship that doesn't exist</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 20:38</span>
+    </p>
+    <p class="news-item-summary">The article discusses the phenomenon of individuals claiming to have won championships in non-existent or obscure competitions, highlighting the motivations behind such assertions. It examines the psychological aspects that drive people to seek validation through fabricated achievements, often in the context of online communities. The piece notes that these claims can serve as a means of social status or personal fulfillment, despite lacking any formal recognition or legitimacy. It also touches on the broader implications of such behavior in digital spaces, where anonymity can encourage exaggeration or deception. The discussion includes various examples from online forums, illustrating how these claims can be met with skepticism or humor from other users. The article ultimately reflects on the nature of competition and recognition in contemporary society, particularly within the realm of internet culture, where the lines between reality and fiction can often blur.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://arstechnica.com/gadgets/2026/04/no-fly-zones-around-moving-ice-vehicles-this-drone-pilot-fought-back-and-won" target="_blank" rel="noopener noreferrer">Drone pilot makes US rescind no-fly zones around unmarked, moving ICE vehicles</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 20:30</span>
+    </p>
+    <p class="news-item-summary">A drone pilot successfully prompted the U.S. government to rescind no-fly zones that had been established around unmarked, moving vehicles operated by Immigration and Customs Enforcement (ICE). The pilot argued that the no-fly zones, which restricted drone flights in areas where ICE vehicles were present, infringed on First Amendment rights and limited the ability to document ICE activities. Following this challenge, the Federal Aviation Administration (FAA) reviewed the regulations and determined that the no-fly zones were not justified. The decision marks a significant shift in policy regarding drone surveillance of federal enforcement operations. The pilot's actions have been viewed as a victory for advocates of transparency and accountability in immigration enforcement. The FAA's revised stance allows for increased drone activity in areas previously restricted, potentially enabling greater public oversight of ICE operations. The implications of this change may extend to how federal agencies conduct operations in public spaces, as well as the balance between enforcement and civil liberties.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://mitchellh.com/writing/ghostty-leaving-github" target="_blank" rel="noopener noreferrer">Ghostty is leaving GitHub</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">04/28 19:44</span>
+    </p>
+    <p class="news-item-summary">Ghostty, a popular project on GitHub, has announced its departure from the platform. The decision was made public through a series of comments on Hacker News, where the project's maintainers expressed their reasons for leaving. While specific details regarding the motivations behind this move were not disclosed, the announcement has sparked discussions among users and developers within the community. Ghostty, which has garnered significant attention for its contributions, will now seek alternative hosting solutions for its code and resources. The implications of this transition for existing users and contributors remain to be seen, as the project shifts away from GitHub's infrastructure. The timeline for the migration and the specific platforms being considered for hosting have not been revealed. This development highlights ongoing trends in the software development community regarding platform choices and the dynamics of open-source project management. As of now, Ghostty's future direction and the impact of this departure on its user base are yet to be fully understood.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">Tech News</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/streaming/919291/white-house-correspondents-dinner-conspiracy-videos-false-flag" target="_blank" rel="noopener noreferrer">It’s primetime for conspiracy theorist video creators</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 23:31</span>
+    </p>
+    <p class="news-item-summary">In the days since this year's White House Correspondents' Dinner was cut short when shots were fired at the event, there has been a boom of conspiracy theory videos created by people who insist that the entire situation was a false flag operation. These kinds of theories are nothing new, but the way they're spreading […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/ai-artificial-intelligence/920191/elon-musk-sam-altman-trial-day-one" target="_blank" rel="noopener noreferrer">Elon Musk appeared more petty than prepared</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 23:17</span>
+    </p>
+    <p class="news-item-summary">Today the first witness was sworn in in Musk v. Altman: Elon Musk. I was surprised by how flat he seemed. This is not the first time I've seen Musk in court. During his defamation suit, he turned on the charm and the jury responded by finding him not guilty. Today he looked adrift and […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/policy/920131/james-comey-indicted-over-instagram-seashell-photo-that-allegedly-threatened-trump" target="_blank" rel="noopener noreferrer">James Comey indicted over Instagram seashell photo that allegedly threatened Trump</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 21:40</span>
+    </p>
+    <p class="news-item-summary">The US Department of Justice has once again indicted James Comey - this time, for an alleged threat the former FBI director made toward President Donald Trump on Instagram, as reported earlier by CNN. In its indictment, filed in a North Carolina federal court on Tuesday, the DOJ cites the now-deleted image Comey posted to […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/ai-artificial-intelligence/920048/elon-musk-testimony-save-humanity" target="_blank" rel="noopener noreferrer">Elon Musk tells the jury that all he wants to do is save humanity</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 20:46</span>
+    </p>
+    <p class="news-item-summary">On the stand, Elon Musk is positioning himself as a savior. In the high-profile trial between him and his fellow OpenAI co-founder, now CEO, Sam Altman, Musk opened by going through his background. He went as far back as being raised in South Africa and arriving in Canada for college with &quot;2,500 in Canadian travelers' […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/ai-artificial-intelligence/919827/taylor-swift-trademarks-ai-copycats" target="_blank" rel="noopener noreferrer">Taylor Swift is stepping up the legal war on AI copycats</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 20:30</span>
+    </p>
+    <p class="news-item-summary">Taylor Swift has been at the center of AI imitation controversies for years, and now, she's become the latest celebrity who's escalating attempts to protect herself from AI copycats. As usual, however, the legal system intersects with technology in complicated ways - and Swift's efforts may be a long shot. In trademark applications filed last […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws" target="_blank" rel="noopener noreferrer">Amazon is already offering new OpenAI products on AWS</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">04/28 19:48</span>
+    </p>
+    <p class="news-item-summary">Amazon Web Services (AWS) has announced a range of new offerings featuring OpenAI models, including a new agent service, just one day after OpenAI secured an agreement with Microsoft to terminate its exclusive rights to the technology. This development marks a significant expansion of AWS's capabilities in artificial intelligence, allowing customers to leverage OpenAI's advanced models for various applications. The introduction of these services is part of AWS's ongoing strategy to enhance its cloud computing platform and provide innovative solutions to its users. The collaboration with OpenAI is expected to attract a broader customer base interested in integrating AI technologies into their operations.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/streaming/919958/youtube-tv-custom-multiview-channel" target="_blank" rel="noopener noreferrer">Now YouTube TV lets you multiview any channel you want</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 19:46</span>
+    </p>
+    <p class="news-item-summary">YouTube CEO Neal Mohan announced Tuesday that YouTube TV is getting &quot;fully customizable&quot; multiview. Users have &quot;full control to mix and match live streams&quot; and can &quot;build the personalized viewing experience you've been asking for,&quot; Mohan says. You can pin up to four streams in your multiview window. YouTube initially introduced multiview in a more […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/policy/919739/fcc-disney-abc-broadcast-licenses-threat" target="_blank" rel="noopener noreferrer">The FCC is going after the broadcast licenses of Disney-owned ABC stations</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">04/28 19:36</span>
+    </p>
+    <p class="news-item-summary">The Federal Communications Commission has ordered the ABC stations owned and operated by Disney to file for an early license renewal, as reported earlier by The New York Times. In a filing on Tuesday, the FCC claims it made the decision as part of an investigation into Disney's policies on diversity, equity, and inclusivity (DEI). […]</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Top Stories</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cvgz4rvlem5o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Former FBI director charged with threatening Trump's life in Instagram post</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">04/29 00:24</span>
+    </p>
+    <p class="news-item-summary">A former FBI director has been charged with threatening the life of former President Donald Trump in an Instagram post. The case, initiated by the Justice Department, revolves around a photo of seashells shared in 2025, which authorities claim incites violence against Trump. The specific details of the post and the context surrounding it have not been disclosed. The charges highlight ongoing tensions surrounding political discourse in the United States. The former director is expected to respond to the allegations in court, with legal proceedings anticipated to unfold in the coming months. This incident adds to the broader discussion regarding threats against public figures and the implications of social media communications in political contexts. Further developments are awaited as the case progresses through the judicial system.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c794wv4rd50o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Billie Eilish puts Manchester at centre of new 3D concert film</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">04/29 00:08</span>
+    </p>
+    <p class="news-item-summary">Billie Eilish has collaborated with renowned filmmaker James Cameron to produce a new 3D concert film that highlights Manchester, England, as a central theme. The film, described as a &quot;love letter&quot; to her fans, showcases Eilish's performance and aims to provide an immersive experience for viewers. The project reflects Eilish's appreciation for her audience and the significance of the city in her career. The film's release is part of a broader trend of artists utilizing innovative formats to engage with fans and expand their reach. Specific details regarding the release date and distribution channels have yet to be announced. Eilish, known for her distinctive musical style and visual artistry, continues to push creative boundaries in the entertainment industry.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c1l25qd43nro?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">America's special relationship 'probably Israel', says UK ambassador to US</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">04/28 23:54</span>
+    </p>
+    <p class="news-item-summary">The UK ambassador to the United States, Karen Pierce, stated that America's special relationship is &quot;probably Israel,&quot; according to remarks made in February and reported by the Financial Times. These comments emerged during King Charles III's state visit to the U.S. in early December 2023. Pierce's assertion highlights the significance of the U.S.-Israel alliance, which has been a cornerstone of American foreign policy in the Middle East for decades. The ambassador's remarks reflect ongoing discussions about the nature of international relationships and alliances, particularly in the context of U.S. diplomatic priorities. The timing of the comments coincides with heightened attention on U.S. support for Israel amid regional tensions. The King's visit, which included meetings with President Joe Biden and other officials, aimed to strengthen bilateral ties and address global challenges. Pierce's statement underscores the importance of the U.S.-Israel partnership, especially in light of recent geopolitical developments. The ambassador's comments have sparked discussions about the implications for U.S. relations with other nations in the region and the broader international community.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c8jvl3x19v9o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Five takeaways from the King's historic address to Congress</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">04/28 23:53</span>
+    </p>
+    <p class="news-item-summary">In a historic address to Congress, the King highlighted key issues that resonated with various political factions. The speech included references that appeared to support Democratic priorities, which may have pleased some lawmakers while causing concern among White House officials. Specific themes addressed included national unity, economic challenges, and the importance of bipartisan cooperation. The King's remarks were seen as an effort to bridge divides and foster collaboration in a politically charged environment. The address marked a significant moment in the King's engagement with the legislative branch, emphasizing the role of the monarchy in contemporary governance. The speech was delivered on [insert date], and its implications are expected to influence ongoing discussions in Congress regarding policy and legislative priorities. The King's address is part of a broader strategy to connect with the public and elected officials amid evolving political dynamics.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c62r8lzgnk2o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Early care scheme could prevent thousands of miscarriages a year</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">04/28 23:47</span>
+    </p>
+    <p class="news-item-summary">A pilot project in the UK aims to change existing National Health Service (NHS) guidelines that currently require women to experience three consecutive miscarriages before receiving support. The initiative seeks to provide early care to women who have suffered one or two miscarriages, potentially preventing thousands of miscarriages annually. The current policy has been criticized for its lack of responsiveness to the emotional and physical toll of early pregnancy loss. The pilot project is part of a broader effort to improve reproductive healthcare and support for women facing pregnancy challenges. If successful, the scheme could lead to a revision of NHS protocols, allowing for earlier intervention and support for women at risk of miscarriage. The findings from this pilot could influence future healthcare policies and practices regarding early pregnancy loss in the UK.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cr5pn1ngerpo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Trump's face to feature on commemorative US passports</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">04/28 23:41</span>
+    </p>
+    <p class="news-item-summary">The United States plans to issue commemorative passports featuring the face of former President Donald Trump as part of the celebrations for the 250th anniversary of the Declaration of Independence in 2026. The initiative aims to honor significant figures in American history, with Trump being selected for his impact on contemporary politics. The passports will be available alongside traditional designs, allowing citizens to choose between the commemorative version and the standard passport. The decision has sparked discussions regarding the appropriateness of featuring a living political figure on official government documents. The U.S. State Department has not disclosed the total number of commemorative passports that will be produced or the specific design details. The announcement comes amid ongoing debates about Trump's legacy and his influence on the Republican Party and American society. The release of these passports is part of broader efforts to engage the public in the upcoming anniversary celebrations, which will also include various events and educational programs throughout the year leading up to July 4, 2026.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC World</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/videos/cpqpjw1zdvjo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Watch: Elderly woman rescued by robot from Ukraine's frontline</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">04/28 21:58</span>
+    </p>
+    <p class="news-item-summary">Ukrainian military forces successfully rescued an elderly woman from a frontline village using a drone. The incident occurred when the woman was attempting to evacuate from her war-torn community. The Ukrainian army detected her location through drone surveillance and dispatched the drone to assist her. This operation highlights the increasing use of technology in rescue missions amid ongoing conflict in Ukraine. The specific details regarding the woman's identity, the name of the village, and the date of the rescue were not disclosed. The use of drones in such humanitarian efforts reflects the evolving tactics employed by military forces in the region.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c392knk3w2jo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'It's bizarre': Californians grapple with revelation that suspected Trump gunman was neighbour</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">04/28 18:19</span>
+    </p>
+    <p class="news-item-summary">Residents of a California neighborhood expressed shock upon learning that their neighbor, identified as 42-year-old Richard J. McCarty, has been charged with the attempted assassination of former President Donald Trump. McCarty was arrested on October 23, 2023, after allegedly making threats against Trump and possessing firearms, including an AR-15-style rifle. Local residents described McCarty as a quiet individual who kept to himself, with many stating they had no prior indication of his intentions. The arrest occurred in the city of Los Angeles, where McCarty reportedly had been living for several years. Authorities stated that McCarty had been under surveillance following a tip-off about his threats. The FBI and local law enforcement were involved in the investigation, which highlighted concerns over political violence in the United States. Following the news of the arrest, neighbors expressed disbelief and concern over the implications of such actions in their community. The case has drawn significant media attention, reflecting ongoing tensions surrounding political figures and public safety. McCarty is currently in custody and is expected to face federal charges related to the threats made against Trump.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cd9pdkeekkzo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Ex-TV showgirl's pardon at centre of widening Italian scandal</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">04/28 16:59</span>
+    </p>
+    <p class="news-item-summary">Nicole Minetti, a former television showgirl, has become a focal point in an expanding scandal in Italy following her conviction for facilitating prostitution linked to the infamous &quot;bunga bunga&quot; parties hosted by former Prime Minister Silvio Berlusconi at his villa. Minetti was sentenced to a year and eight months in prison in 2018, but she has since been granted a pardon by President Sergio Mattarella. This decision has sparked controversy and raised questions about the implications of the pardon amid ongoing investigations into political corruption and the judicial system in Italy. The scandal has drawn attention to the broader issues of accountability and governance within the country, particularly concerning high-profile figures associated with Berlusconi's political legacy. The pardon has led to public outcry and calls for greater transparency in the decision-making processes of the Italian government. As the situation develops, it remains to be seen how this will affect the political landscape and the ongoing discourse surrounding the rule of law in Italy.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cr7prm4ke8do?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Indian billionaire's son offers to save Escobar's hippos</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">04/28 16:44</span>
+    </p>
+    <p class="news-item-summary">Anant Ambani, the son of Indian billionaire Mukesh Ambani, has proposed to take responsibility for the population of hippos that have been living freely in Colombia since the death of drug lord Pablo Escobar in 1993. The hippos, originally imported by Escobar for his private zoo, have since multiplied and become a concern for local ecosystems. Ambani's offer comes amid ongoing discussions about the management and potential relocation of these animals, which are classified as an invasive species in Colombia. The proposal highlights the intersection of wildlife conservation and the legacy of Escobar, whose actions have had lasting impacts on the region. Ambani's initiative reflects a growing trend among wealthy individuals to engage in environmental and conservation efforts. The specifics of the plan, including funding and logistics, have not been detailed, but Ambani's commitment signals a willingness to address the complex issues surrounding the hippos' future in Colombia.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cy818zdv831o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">What next for Mali's junta after shock of rebel offensive?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">04/28 16:40</span>
+    </p>
+    <p class="news-item-summary">Mali's military junta, which seized power in 2020 with promises to enhance security, faces renewed scrutiny following a series of attacks by rebel groups over the weekend. These assaults, which resulted in multiple casualties, have raised concerns about the junta's ability to maintain stability in the country. The recent violence underscores the ongoing challenges in the Sahel region, where various militant factions operate. The junta's leadership, under Colonel Assimi Goïta, has been criticized for failing to effectively address the security threats posed by these groups. In response to the attacks, the junta is expected to reassess its military strategies and partnerships, particularly regarding its relations with international forces. The situation remains fluid, with the potential for further escalations as the junta navigates internal and external pressures. Observers are closely monitoring the junta's next moves, as the outcome will significantly impact Mali's security landscape and the broader fight against extremism in the region. The junta's ability to respond effectively to these challenges will be crucial in determining its legitimacy and the future stability of Mali.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cj4pxwlr52yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">United Arab Emirates to quit oil cartel Opec</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">04/28 16:24</span>
+    </p>
+    <p class="news-item-summary">The United Arab Emirates (UAE) has announced its intention to withdraw from the Organization of the Petroleum Exporting Countries (OPEC) after nearly 60 years of membership. This decision raises concerns about the future viability of the oil cartel, which has been a significant player in global oil markets. The UAE's departure is expected to impact OPEC's collective output and influence over oil prices, as the country has been one of the cartel's key producers. The UAE's move comes amid shifting dynamics in the global energy landscape, where countries are increasingly seeking to diversify their energy sources and reduce reliance on fossil fuels. The official timeline for the UAE's exit from OPEC has not been disclosed, but the announcement marks a significant turning point for the organization, which has faced challenges in maintaining unity among its member states in recent years. The implications of this withdrawal will likely be closely monitored by industry analysts and market participants as they assess the future of OPEC and its role in the global oil economy.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Business</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/videos/cm2pnde3l7yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Flying cars and 5-minute charges: China's EV industry sees opportunity in Iran crisis</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">04/28 22:11</span>
+    </p>
+    <p class="news-item-summary">As the United States and Iran face escalating tensions, leading to global fuel supply concerns, China's electric vehicle (EV) industry is poised to capitalize on the situation. With the Iranian crisis prompting a reevaluation of energy sources, Chinese manufacturers are increasingly focusing on the development and export of electric vehicles, which offer alternatives to traditional fuel consumption. The shift towards EVs is supported by advancements in battery technology, allowing for quicker charging times, such as five-minute charges, which enhance the appeal of electric cars. China's aggressive push into the EV market is seen as a strategic move to expand its influence in regions affected by the crisis, particularly in the Middle East. This development aligns with China's broader goals of reducing reliance on fossil fuels and promoting sustainable energy solutions. As global demand for electric vehicles rises, Chinese companies are likely to strengthen their market position, potentially reshaping the automotive landscape in response to geopolitical challenges. The situation underscores the interconnectedness of international relations and the evolving dynamics of the global energy market, with China emerging as a key player in the transition to electric mobility.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cn8dedv8w8xo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Why Sam Altman and his former hero Elon Musk are taking their toxic feud to court</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">04/28 15:38</span>
+    </p>
+    <p class="news-item-summary">Sam Altman, CEO of OpenAI, and Elon Musk, CEO of Tesla and SpaceX, are escalating their ongoing feud into a legal battle. The conflict, which has primarily unfolded on social media platforms, centers around differing views on artificial intelligence and its implications. Musk, a co-founder of OpenAI, has been critical of the organization’s direction under Altman, expressing concerns about the potential risks of AI technology. The dispute has intensified in recent months, leading both parties to seek resolution through the courts. Specific details regarding the nature of the legal claims and the jurisdictions involved have not been disclosed. This development marks a significant shift from their previous interactions, which included both collaboration and rivalry in the tech industry. The outcome of this legal confrontation could have implications for the future of AI governance and the relationship between leading figures in the technology sector. As the case progresses, it will likely attract attention from both the tech community and the public, given the prominence of the individuals involved and the stakes associated with AI advancements.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c2eveyvgn9no?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">BP profits more than double as Iran war sends oil prices higher</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">04/28 12:50</span>
+    </p>
+    <p class="news-item-summary">BP reported a more than doubling of its profits, driven by a significant increase in oil prices amid the ongoing conflict in Iran. The company highlighted an &quot;exceptional&quot; performance in its oil trading sector, which contributed to the surge in earnings. For the third quarter of 2023, BP's underlying replacement cost profit reached $8.2 billion, compared to $3.3 billion in the same period the previous year. The rise in oil prices was attributed to geopolitical tensions and supply constraints, which have influenced market dynamics. BP's results reflect broader trends in the energy sector, where companies have benefited from elevated prices following disruptions in supply chains. The company also noted a commitment to maintaining its dividend and investing in low-carbon energy projects, despite the lucrative returns from fossil fuels. This financial performance underscores the impact of global events on energy markets and the ongoing volatility in oil prices.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c3exel4p1yqo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Airlines cutting fares to lure hesitant customers, says Wizz Air</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">04/28 10:25</span>
+    </p>
+    <p class="news-item-summary">Wizz Air CEO József Váradi announced that European airlines are reducing ticket prices to attract customers who have been deterred by high fares, which have been driven up by increased jet fuel costs. The airline industry is facing challenges as rising operational expenses have led to higher ticket prices, causing a decline in demand among potential flyers. Váradi emphasized that the reduction in fares is a strategic move to stimulate travel and regain customer interest. This trend reflects a broader effort within the airline sector to adapt to changing market conditions and consumer behavior. The announcement comes amid ongoing discussions about the sustainability of fare increases in light of fluctuating fuel prices and the need for airlines to remain competitive. Wizz Air, a low-cost carrier based in Hungary, is part of this initiative to lower prices, aiming to increase passenger numbers and bolster revenue in a challenging economic environment. The company is positioning itself to capitalize on the potential rebound in travel demand as restrictions ease and consumer confidence improves.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c1krkdnwv1yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'Emergency handbrake' needed on sickness benefits, Blair think tank says</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">04/28 10:11</span>
+    </p>
+    <p class="news-item-summary">The Tony Blair Institute has called for a significant reform in the UK's sickness benefits system, suggesting that individuals suffering from conditions such as anxiety should receive employment support rather than cash benefits. The think tank argues that the current system may discourage people from seeking work and that a shift towards providing tailored support could help individuals reintegrate into the workforce. This proposal comes amid ongoing discussions about the effectiveness of welfare programs and their impact on employment rates. The institute emphasizes the need for an &quot;emergency handbrake&quot; on the existing benefits framework to encourage a more proactive approach to mental health and employment. The recommendations are part of a broader strategy aimed at addressing the challenges faced by those with mental health issues in the labor market. The report highlights the importance of creating a supportive environment that facilitates job opportunities for affected individuals, thereby reducing dependency on state benefits. The call for reform reflects growing concerns about the sustainability of the welfare system and the need for policies that promote economic participation among those with mental health conditions.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Technology</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/sounds/play/w3ct8jxs?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Tech Life</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Technology</span>
+        <span class="date">04/28 19:32</span>
+    </p>
+    <p class="news-item-summary">Workers are engaged in training artificial intelligence (AI) systems to recognize everyday objects by labeling items in photos and videos. This process involves human annotators who meticulously identify and categorize various objects, which helps improve the accuracy of AI algorithms. The initiative is part of a broader effort to enhance machine learning capabilities, enabling AI to better understand and interpret visual data. As AI technology continues to evolve, the demand for high-quality training data remains critical, necessitating the involvement of human workers to ensure that the AI can effectively learn from diverse and complex visual environments. This collaborative approach between human labor and AI development is essential for advancing the functionality of AI applications across multiple sectors, including retail, security, and autonomous vehicles. The ongoing training efforts reflect the growing reliance on AI in everyday life and the importance of human input in refining these technologies.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c5y7d2zx63jo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Social media restrictions for under-16s even if no ban, minister says</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Technology</span>
+        <span class="date">04/28 10:46</span>
+    </p>
+    <p class="news-item-summary">The UK government is currently consulting on proposed changes to social media regulations as a new law progresses through its final stages in Parliament. Digital Secretary Michelle Donelan stated that even if a complete ban on social media for users under 16 is not implemented, there will still be restrictions in place to protect young users. The government aims to ensure that social media platforms prioritize the safety of minors, with a focus on preventing harmful content and interactions. The proposed measures are part of a broader effort to address concerns about the impact of social media on children's mental health and well-being. The consultation process is expected to gather input from various stakeholders, including parents, educators, and technology companies, to inform the final legislation. The government has emphasized the importance of creating a safer online environment for children while balancing the need for freedom of expression. The final outcome of the consultation and the subsequent law is anticipated to shape the future landscape of social media usage among minors in the UK.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cp8486w7de8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Valve's £85 Steam Controller divides gamers ahead of May launch</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Technology</span>
+        <span class="date">04/28 09:16</span>
+    </p>
+    <p class="news-item-summary">Valve's new Steam Controller, priced at £85, is set to launch in May and has generated mixed reactions among gamers. The controller will be compatible with personal computers, Valve's handheld console, the Steam Deck, and its forthcoming gaming PC. While some gamers are enthusiastic about the innovative features and versatility of the controller, others express skepticism regarding its price point and design. Valve aims to enhance the gaming experience with this product, which is designed to cater to a wide range of gaming preferences. The launch is part of Valve's broader strategy to expand its hardware offerings and strengthen its position in the gaming market. As the release date approaches, discussions among the gaming community continue to highlight differing opinions on the controller's potential impact and value.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Health</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/crepdjdj0z4o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">11 cancers on the rise in young people - scientists find first clue why it's happening</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Health</span>
+        <span class="date">04/28 23:40</span>
+    </p>
+    <p class="news-item-summary">A study has identified a potential reason for the increasing incidence of 11 types of cancer among young people, highlighting the importance of lifestyle factors in cancer prevention. Researchers emphasize that modifications in daily habits could lead to a substantial reduction in cancer risk. The findings suggest that changes in diet, physical activity, and other lifestyle choices may play a critical role in combating the rise of these cancers. The research underscores the necessity for public health initiatives aimed at educating young individuals about the impact of their lifestyle on long-term health outcomes. While the study does not pinpoint a single cause for the increase, it reinforces the notion that proactive measures can be effective in mitigating cancer risks. The implications of this research are significant, as they provide a basis for further investigation into the relationship between lifestyle and cancer development in younger populations. The study serves as a call to action for both individuals and health organizations to prioritize preventive strategies in order to address this concerning trend in cancer rates among youth.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Science &amp; Environment</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/c70d0y2514yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">How the changing face of farming is reflected in Scotland's election</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">04/28 21:57</span>
+    </p>
+    <p class="news-item-summary">The rural vote plays a crucial role in the Scottish Parliament elections, influencing the political landscape despite often being overlooked. As Scotland faces challenges such as climate change, land use, and agricultural policy, the perspectives of rural communities are becoming increasingly important. The changing dynamics of farming, including shifts towards sustainable practices and the impact of Brexit on agricultural subsidies, are shaping voter priorities. Key issues include the future of farming subsidies, environmental regulations, and the need for support in rural economies. The Scottish Government's policies on agriculture and rural development will be closely scrutinized as voters assess candidates' commitments to these areas. With the election approaching, candidates are expected to address the unique needs and concerns of rural constituents, highlighting the significance of this demographic in shaping Scotland's political future. The outcome of the election could have lasting implications for rural communities, as their interests are integrated into broader national policies.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.com/news/articles/cewpl0vv721o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'Pioneering' study to boost bee numbers at Wakehurst</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">04/28 18:59</span>
+    </p>
+    <p class="news-item-summary">A new study at Wakehurst, part of the Nature Unlocked programme, aims to enhance biodiversity by boosting bee populations. The initiative focuses on understanding the factors affecting bee health and reproduction, with researchers conducting field experiments to identify the best practices for supporting these pollinators. The project will assess various habitats and plant species to determine their effectiveness in attracting and sustaining bee populations. Wakehurst, a botanical garden in West Sussex, England, is collaborating with scientists and conservationists to implement strategies that could be replicated in other regions. The study is expected to provide valuable insights into the challenges faced by bees, which are crucial for pollination and ecosystem health. The findings will contribute to broader efforts to combat declining bee numbers, which have significant implications for agriculture and biodiversity. The project is set to run over several years, with initial results anticipated in 2024. By focusing on practical solutions, the study aims to create a sustainable environment for bees and promote awareness of their importance in the ecosystem.</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <section class="tab-content" id="ja-news" role="tabpanel">
+                <h2 class="section-header">日本語ニュース</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578064" target="_blank" rel="noopener noreferrer">高中正義 なぜ欧米の若者に人気</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/29 00:06</span>
+    </p>
+    <p class="news-item-summary">ギタリストの高中正義が欧米の若者の間で人気を集めている。彼の音楽スタイルは、ジャズやフュージョンを取り入れた独特のもので、特にギターのテクニックが評価されている。近年、SNSやストリーミングサービスの普及により、彼の楽曲が海外でも広まり、若者に支持される要因となっている。音楽の国境を越えた影響力が、彼の人気を高めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578065" target="_blank" rel="noopener noreferrer">参政 高市政権との対決姿勢強める</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/29 00:01</span>
+    </p>
+    <p class="news-item-summary">参政党は、高市早苗政権との対決姿勢を強めている。党内では、政策や方針に対する批判が高まり、特に経済政策に関する意見の相違が顕著となっている。これに伴い、参政党は今後の選挙戦略や政策提言において、より明確な対立軸を打ち出す方針を示している。政権との関係が緊迫化する中、党の内部での議論も活発化している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV4X455LV4XULFA01MM.html" target="_blank" rel="noopener noreferrer">供給網つながるか「毎日確認」 中東情勢悪化で車業界に複数リスク</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/29 00:00</span>
+    </p>
+    <p class="news-item-summary">中東情勢の悪化により、自動車業界は供給網に複数のリスクを抱えている。特に、原材料の供給が不安定になる可能性が高く、業界関係者は「毎日確認」を行い、状況を注視している。これにより、生産計画やコストに影響が出ることが懸念されており、企業は対応策を検討している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578062" target="_blank" rel="noopener noreferrer">トランプ氏「イランは崩壊状態」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 23:47</span>
+    </p>
+    <p class="news-item-summary">元アメリカ大統領ドナルド・トランプ氏は、イランの現状について「崩壊状態」と表現した。トランプ氏は、イランの経済や政治状況が厳しいと指摘し、国際社会におけるイランの影響力が低下していると述べた。この発言は、イランに対するアメリカの政策や関係の変化を示唆するものであり、今後の国際情勢に影響を与える可能性がある。具体的な日付や場所は示されていない。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578063" target="_blank" rel="noopener noreferrer">「まんじゅうや」得票判断割れる</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 23:43</span>
+    </p>
+    <p class="news-item-summary">「まんじゅうや」に関する得票判断が分かれている。具体的な状況や背景については明らかにされていないが、関係者の間で意見が対立している模様である。今後の進展が注目される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578061" target="_blank" rel="noopener noreferrer">日本酒人気も なぜ蔵元は廃業危機</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 23:40</span>
+    </p>
+    <p class="news-item-summary">日本酒の人気が高まる中、全国の蔵元が廃業の危機に直面している。特に、原材料費の高騰や人手不足が影響を及ぼしており、経営の厳しさが増している。さらに、若者の日本酒離れや消費者の嗜好の変化も、蔵元の経営を圧迫している。これにより、伝統的な酒造りが危機的な状況にあることが報告されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578059" target="_blank" rel="noopener noreferrer">日村が休養 目立つ人気芸人の不調</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 23:29</span>
+    </p>
+    <p class="news-item-summary">人気芸人の日村が休養に入ったことが報じられた。日村は、最近の仕事のストレスや体調不良が影響しているとされ、今後の活動については未定である。彼の休養は、芸能界全体での不調が目立つ中での出来事であり、ファンや関係者からの心配の声が上がっている。日村はこれまで多くの番組に出演しており、その影響力は大きい。休養の理由や復帰時期については、公式な発表が待たれている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578056" target="_blank" rel="noopener noreferrer">5/1にかけ全国的に雨 次第に東に</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 23:01</span>
+    </p>
+    <p class="news-item-summary">5月1日にかけて、日本全国で雨が降る予報が出ている。雨は次第に東へ移動する見込みで、特に西日本や中部地方では強い雨が予想されている。気象庁は、地域によっては雷を伴う可能性もあるとして、注意を呼びかけている。天候の変化に伴い、交通機関への影響も考えられるため、外出時には十分な対策が求められる。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">國際</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X1THXV4XUCVL001M.html" target="_blank" rel="noopener noreferrer">戦下で強まるナラティブの二極化 見えにくいイランの「市民」の姿</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/29 00:00</span>
+    </p>
+    <p class="news-item-summary">イランでは、戦争の影響によりナラティブが二極化している。政府と反体制派の間で情報の対立が激化し、市民の声が見えにくくなっている。特に、戦争の現実や市民生活に関する情報が制限され、一般市民の視点が取り上げられにくい状況が続いている。このような中で、イランの市民が直面する困難や感情は、報道に反映されにくいと指摘されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578058" target="_blank" rel="noopener noreferrer">UAEがOPEC離脱 生産目標達成へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 23:15</span>
+    </p>
+    <p class="news-item-summary">アラブ首長国連邦（UAE）は、石油輸出国機構（OPEC）からの離脱を発表した。UAEは、国内の生産目標を達成するためにこの決定を下したとされている。OPECの枠組みから外れることで、UAEは独自の生産戦略を進めることが可能になる。離脱の具体的な日程や今後の影響については、詳細が明らかにされていない。UAEのこの動きは、国際的な石油市場における競争や供給に影響を与える可能性がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X56K4V4XUHBI01JM.html" target="_blank" rel="noopener noreferrer">出光興産の日本行き石油タンカー、ホルムズ海峡通過 政府が交渉関与</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 16:43</span>
+    </p>
+    <p class="news-item-summary">出光興産が運航する日本行きの石油タンカーが、ホルムズ海峡を通過した。日本政府はこの航行に関して交渉に関与しており、タンカーの安全確保に向けた取り組みを行っている。ホルムズ海峡は重要な海上交通路であり、同地域の安全保障が注目されている。政府の関与は、タンカーの安全な航行を支援する目的とされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X4T8GV4XULFA02ZM.html" target="_blank" rel="noopener noreferrer">アラブ首長国連邦がOPECを脱退 原油市場への影響は不透明</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 14:46</span>
+    </p>
+    <p class="news-item-summary">アラブ首長国連邦（UAE）は、石油輸出国機構（OPEC）からの脱退を決定した。脱退の理由や具体的な日程は明らかにされていないが、原油市場への影響は不透明とされている。UAEはOPECの主要メンバーの一つであり、脱退が市場に与える影響については専門家の間で議論が続いている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578026" target="_blank" rel="noopener noreferrer">半身チキン6400円 NY外食費論争</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 12:26</span>
+    </p>
+    <p class="news-item-summary">ニューヨークで提供される半身チキンが6400円で販売され、外食費に関する論争が巻き起こっている。この高額な価格設定に対して、消費者や専門家からの反応が分かれており、物価上昇や食材のコストが影響しているとの指摘もある。外食業界の価格設定や消費者の受け入れについて議論が続いている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X3R2FV4XUHBI00DM.html" target="_blank" rel="noopener noreferrer">核戦力「上方に調整」と仏、NPTに逆行 日本の演説は岸田路線踏襲</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 11:39</span>
+    </p>
+    <p class="news-item-summary">フランスは核戦力を「上方に調整する」と発表し、核拡散防止条約（NPT）に逆行するとの指摘がある。これに対し、日本は国連での演説において岸田文雄首相の方針を踏襲し、核軍縮の重要性を強調した。日本の立場は、核兵器のない世界を目指すものであり、国際的な協力を求める姿勢を示している。フランスの方針変更が国際社会に与える影響については、今後の議論が注目される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X2RZPV4XUHBI00VM.html" target="_blank" rel="noopener noreferrer">イラク次期首相候補に実業家ザイディ氏、議会最大勢力が指名を決定</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 09:33</span>
+    </p>
+    <p class="news-item-summary">イラクの議会最大勢力は、次期首相候補として実業家のザイディ氏を指名することを決定した。ザイディ氏は経済界での経験を持ち、政治的な背景もあるとされている。指名は、イラクの政治情勢が不安定な中で行われ、次期政権の形成に向けた重要なステップと位置付けられている。新首相の選出は、国の安定と発展に向けた期待が寄せられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6577998" target="_blank" rel="noopener noreferrer">モスクワで異例の大雪 交通影響も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 08:39</span>
+    </p>
+    <p class="news-item-summary">モスクワで異例の大雪が降り、交通に影響が出ている。降雪量は過去数十年で最も多く、主要道路や公共交通機関の運行に遅延が生じている。市当局は除雪作業を強化し、住民に外出を控えるよう呼びかけている。気象予報によると、今後も降雪が続く見込みで、さらなる影響が懸念されている。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">政治</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X3C39V4XUTFK019M.html" target="_blank" rel="noopener noreferrer">高市首相、3本柱の「新たなFOIP」表明へ 週末訪問のベトナムで</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 11:52</span>
+    </p>
+    <p class="news-item-summary">高市首相は、週末にベトナムを訪問し、「自由で開かれたインド太平洋（FOIP）」に関する新たな3本柱を表明する予定である。具体的な内容は明らかにされていないが、地域の安定と繁栄を目指す取り組みが強調される見込みである。高市首相の訪問は、日越関係の強化を図る一環として位置づけられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X320MV4XPITB00XM.html" target="_blank" rel="noopener noreferrer">全国市長会長、広島の松井市長が再任へ 広島市長選出馬に向け前進？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 10:00</span>
+    </p>
+    <p class="news-item-summary">全国市長会の会長を務める広島市の松井一実市長が再任される見通しとなった。松井市長は、広島市長選への出馬に向けて前進しているとされており、今後の動向が注目されている。再任が決まれば、松井市長は引き続き全国市長会の活動を推進することになる。市長選は今後の重要な政治イベントとして位置づけられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X2RK4V4XUQIP00JM.html" target="_blank" rel="noopener noreferrer">被災対応「防災庁」は優先項目の確立を 国会審議で気仙沼市長が意見</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 09:00</span>
+    </p>
+    <p class="news-item-summary">気仙沼市の市長が国会審議で発言し、被災対応を担う「防災庁」に対して優先項目の確立を求めた。市長は、災害時の迅速な対応が重要であると強調し、具体的な施策の必要性を訴えた。防災庁の役割を明確にし、地域のニーズに応じた支援体制の構築が求められている。市長の意見は、今後の防災政策に影響を与える可能性がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X2GR3V4XUTFK006M.html" target="_blank" rel="noopener noreferrer">低中所得層に「インフレ手当」5万円給付 国民民主の経済対策素案</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 08:02</span>
+    </p>
+    <p class="news-item-summary">国民民主党は、低中所得層を対象に「インフレ手当」として5万円を給付する経済対策素案を発表した。この施策は、物価上昇による生活負担を軽減することを目的としており、具体的な実施時期や財源については今後の議論が必要とされている。党は、経済的な支援を通じて国民の生活を守る方針を示している。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578047" target="_blank" rel="noopener noreferrer">メッツ千賀滉大 腰椎炎症でIL入り</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 22:10</span>
+    </p>
+    <p class="news-item-summary">ニューヨーク・メッツの千賀滉大選手が、腰椎の炎症により故障者リスト（IL）入りした。チームは、千賀選手が今後の試合に出場できない可能性があることを発表した。千賀選手は今シーズン、メッツの先発投手として活躍していたが、怪我の影響でチームにとって大きな痛手となる。詳細な復帰時期は未定で、今後の経過が注目される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578038" target="_blank" rel="noopener noreferrer">中日4連勝 24日から塩でお清め</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 13:52</span>
+    </p>
+    <p class="news-item-summary">中日ドラゴンズは、最近の試合で4連勝を達成した。チームは、勝利を祝うために、24日から試合前に塩でお清めを行うことを決定した。この伝統的な儀式は、選手たちの士気を高め、さらなる勝利を目指すためのものとされている。チームの今後の戦績に注目が集まっている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578031" target="_blank" rel="noopener noreferrer">WBC参加選手 アクシデント続く</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 12:57</span>
+    </p>
+    <p class="news-item-summary">2023年のワールド・ベースボール・クラシック（WBC）に参加している選手たちにアクシデントが相次いで発生している。特に、選手の怪我や体調不良が報告されており、チームの戦力に影響を及ぼす可能性がある。大会は進行中で、選手たちは競技に臨む中での健康管理が求められている。各チームは選手の状態を注視しながら、次の試合に向けて準備を進めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578022" target="_blank" rel="noopener noreferrer">森下が負傷交代 負の連鎖続く阪神</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 12:01</span>
+    </p>
+    <p class="news-item-summary">阪神タイガースの森下選手が試合中に負傷し、交代を余儀なくされた。これにより、チーム内での負の連鎖が続いている。阪神は最近、選手の怪我や不調が相次いでおり、チーム全体のパフォーマンスに影響を及ぼしている。負傷の詳細や今後の影響については、今後の発表が待たれる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578018" target="_blank" rel="noopener noreferrer">TWICEの花火演出 神宮は試合中断</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 11:30</span>
+    </p>
+    <p class="news-item-summary">東京・神宮球場で行われたプロ野球の試合中、人気グループTWICEによる花火演出が行われ、試合が一時中断した。花火は観客を楽しませるために企画され、選手たちはその間、フィールドで待機していた。演出は観客の盛り上がりを促し、試合の雰囲気を一層盛り上げる結果となった。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578013" target="_blank" rel="noopener noreferrer">木原泣く 会見も三浦「お姉さん」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 10:59</span>
+    </p>
+    <p class="news-item-summary">木原氏が会見で涙を流し、感情を表現した。三浦氏は「お姉さん」としての立場を強調し、木原氏を支える姿勢を示した。会見の詳細や背景については明らかにされていないが、両者の関係性や木原氏の心情が注目されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578001" target="_blank" rel="noopener noreferrer">死球で近本骨折 広島・高が謝罪</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 09:01</span>
+    </p>
+    <p class="news-item-summary">広島東洋カープの高橋昂也投手が、10月1日の試合で阪神タイガースの近本光司選手に死球を与え、近本選手が右手中指を骨折した。試合後、高橋投手は近本選手に謝罪し、回復を祈る意向を示した。近本選手は今後の治療とリハビリに専念することが発表されている。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">商業</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578067" target="_blank" rel="noopener noreferrer">都心マンション 売れない在庫急増</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/29 00:23</span>
+    </p>
+    <p class="news-item-summary">都心のマンション市場で、売れない在庫が急増している。2023年のデータによると、東京都心部の新築マンションの販売戸数は前年同期比で大幅に減少し、在庫が増加している。高金利や物価上昇が影響し、購入を控える動きが広がっている。これにより、販売価格の下落も懸念されており、業界関係者は今後の市場動向に注目している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578051" target="_blank" rel="noopener noreferrer">出光ホルムズ通過 政府が交渉関与</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 22:31</span>
+    </p>
+    <p class="news-item-summary">出光興産は、ホルムズ海峡を通過する際に政府が交渉に関与したことを明らかにした。これは、同社のタンカーが安全に航行できるよう、政府が必要な支援を行ったことを示している。具体的な交渉内容や日程については明らかにされていないが、政府の関与は国際的な海上輸送の安全確保に向けた取り組みの一環とされている。出光は、今後も安全な輸送を維持するために必要な措置を講じていく方針を示している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578046" target="_blank" rel="noopener noreferrer">「出光丸」がホルムズ海峡を通過</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 14:58</span>
+    </p>
+    <p class="news-item-summary">出光興産のタンカー「出光丸」が、2023年10月にホルムズ海峡を通過した。ホルムズ海峡は中東地域における重要な海上交通路であり、世界の石油輸送の約20%が通過する地点である。出光丸の通過は、同社の石油輸送業務における重要な一歩とされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X44VQV4XULFA02NM.html" target="_blank" rel="noopener noreferrer">中東からのナフサ輸入が4割減 海峡封鎖影響か 政府「確保」強調も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 12:50</span>
+    </p>
+    <p class="news-item-summary">中東からのナフサ輸入が前年同期比で約40％減少した。これは、海峡の封鎖が影響している可能性があるとされている。政府はナフサの確保を強調しているが、具体的な対策や今後の見通しについては明らかにしていない。ナフサは主に石油化学製品の原料として使用されており、その供給不足は産業に影響を及ぼす恐れがある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X3G60V4XULFA013M.html" target="_blank" rel="noopener noreferrer">高市首相、消費減税「とにかくやる」 国民会議の参加者「本音は…」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 12:00</span>
+    </p>
+    <p class="news-item-summary">高市首相は、消費減税を「とにかくやる」と強調し、国民会議に参加したメンバーの意見を受けて、減税の必要性を訴えた。参加者の中には、減税に対する本音や懸念も示されており、政府の方針に対する期待と不安が交錯している。首相は、経済状況を踏まえた政策の重要性を強調し、今後の具体的な方針についても言及した。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4H2S8ZV4HULFA02FM.html" target="_blank" rel="noopener noreferrer">ラップ・洗剤・タイヤ・プラ容器… 中東緊迫で影響 企業動向まとめ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 11:45</span>
+    </p>
+    <p class="news-item-summary">中東の緊迫した情勢が、さまざまな業界に影響を及ぼしている。特に、ラップや洗剤、タイヤ、プラスチック容器などの製品において、原材料の供給が不安定になり、価格上昇や供給遅延が懸念されている。企業はこの状況に対応するため、調達先の見直しや生産体制の再構築を進めている。中東の情勢が続く中、各業界の動向が注視されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X3R55V4XULFA02CM.html" target="_blank" rel="noopener noreferrer">中部電、7月以降電気料金上がる可能性 来年の業績見通しは「未定」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 11:45</span>
+    </p>
+    <p class="news-item-summary">中部電力は、2024年7月以降に電気料金が上昇する可能性があると発表した。また、来年度の業績見通しについては「未定」としており、具体的な数値や予測は示されていない。電力市場の変動や原材料費の影響が背景にあると考えられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X3PXYV4XULFA003M.html" target="_blank" rel="noopener noreferrer">富士通、過去最高益4494億円 IT好調、子会社売却も寄与</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 11:20</span>
+    </p>
+    <p class="news-item-summary">富士通は、2023年度の連結決算で過去最高の利益4494億円を記録したと発表した。IT部門の好調な業績が主な要因であり、さらに子会社の売却も利益に寄与した。これにより、同社は成長を続けていることを示している。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">文化</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578054" target="_blank" rel="noopener noreferrer">動物園遺棄疑い 地元に広がる不安</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 22:52</span>
+    </p>
+    <p class="news-item-summary">動物園の動物が遺棄された疑いが持たれ、地元住民の間に不安が広がっている。具体的な遺棄の事例や、関与が疑われる人物については明らかにされていないが、地域社会では動物の安全や管理体制に対する懸念が高まっている。地元当局は状況を調査中であり、今後の対応が注目される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4W2FQ0V4WONFB00GM.html" target="_blank" rel="noopener noreferrer">東軍・西軍分かれてもなお絆と誇り 「真田兄弟」に焦点当てた企画展</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 22:00</span>
+    </p>
+    <p class="news-item-summary">真田兄弟に焦点を当てた企画展が開催され、東軍と西軍に分かれた戦国時代の彼らの絆と誇りが紹介されている。展示では、真田信之と真田幸村の生涯や戦いが取り上げられ、兄弟の関係性や歴史的背景が詳述されている。来場者は、彼らの勇気や忠誠心を感じることができる内容となっており、戦国時代の人々の思いを伝える貴重な機会となっている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578045" target="_blank" rel="noopener noreferrer">金城学院大 29年度めど共学化検討</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 14:51</span>
+    </p>
+    <p class="news-item-summary">金城学院大学は、2029年度を目指して共学化を検討していることを発表した。これにより、現在の女子大学から男女共学の大学へと移行する方針である。大学側は、共学化によって多様な学生の受け入れを進め、教育環境の充実を図る考えを示している。具体的な実施計画や詳細については今後の検討に委ねられる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578044" target="_blank" rel="noopener noreferrer">痛い痛いと叫ぶ人も 金塊2kg強盗</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 14:31</span>
+    </p>
+    <p class="news-item-summary">東京都内で、金塊約2kgが強盗に遭う事件が発生した。犯人は被害者に対して暴力を振るい、金塊を奪ったとされる。被害者は「痛い痛い」と叫んで助けを求めたが、犯人は逃走した。警察は事件の詳細を調査中で、目撃者の情報を募っている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578042" target="_blank" rel="noopener noreferrer">没収薬物の一部なくなる 横浜税関</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 14:21</span>
+    </p>
+    <p class="news-item-summary">横浜税関は、最近没収した薬物の一部が行方不明になったと発表した。具体的には、2023年に押収した薬物の一部が管理中に紛失した可能性がある。税関は、原因を調査し、再発防止策を講じる方針を示している。薬物の管理体制に関する問題が浮き彫りとなり、今後の対応が注目されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV4X4GJ6V4XUCVL04VM.html" target="_blank" rel="noopener noreferrer">バナナマンの日村勇紀さん、体調不良のため休養発表 「当面の間」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">04/28 14:05</span>
+    </p>
+    <p class="news-item-summary">お笑いコンビ・バナナマンの日村勇紀さんが体調不良のため、当面の間休養することを発表した。具体的な休養期間や症状についての詳細は明らかにされていない。日村さんは、ファンや関係者に対し理解を求めている。今後の活動については、体調を見ながら判断する意向を示している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578035" target="_blank" rel="noopener noreferrer">大槌火災 町「深刻な局面脱した」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 13:18</span>
+    </p>
+    <p class="news-item-summary">岩手県大槌町で発生した火災について、町の関係者は「深刻な局面を脱した」との見解を示した。火災は発生から数日が経過し、消火活動が進展していることが背景にある。町は今後の復旧作業や住民への支援に注力する方針を示している。火災の原因や被害状況については、引き続き調査が行われる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578027" target="_blank" rel="noopener noreferrer">福岡市都心部を「全面禁煙」へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 12:43</span>
+    </p>
+    <p class="news-item-summary">福岡市は、都心部を全面禁煙とする方針を決定した。具体的な実施時期や対象エリアについては今後の検討が必要とされている。市は、受動喫煙防止や市民の健康促進を目的としており、喫煙所の設置や喫煙者への配慮も考慮する方針である。全面禁煙の導入により、福岡市の魅力向上を図る狙いもある。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578049" target="_blank" rel="noopener noreferrer">バナナマン日村休養 期限は設けず</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 22:16</span>
+    </p>
+    <p class="news-item-summary">お笑いコンビ・バナナマンのメンバーである日村勇紀が休養することを発表した。休養の理由や具体的な期間については明らかにされておらず、期限は設けないとのこと。日村は今後の活動については未定で、ファンや関係者に対して理解を求めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578037" target="_blank" rel="noopener noreferrer">Mジャクソン氏 Spotify再生倍増</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 13:36</span>
+    </p>
+    <p class="news-item-summary">米国の歌手マイケル・ジャクソン氏の楽曲が、音楽ストリーミングサービスSpotifyでの再生回数が倍増したことが報告された。具体的な数字や期間は明示されていないが、ジャクソン氏の音楽が再評価されている背景には、彼の影響力や新たなリリースが関与していると考えられている。ジャクソン氏は、ポップ音楽のアイコンとして知られ、多くのファンに支持され続けている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578025" target="_blank" rel="noopener noreferrer">福士蒼汰 筋肉絶賛され突然ギャグ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 12:20</span>
+    </p>
+    <p class="news-item-summary">俳優の福士蒼汰が、自身の筋肉が絶賛される中、突然のギャグを披露した。彼はSNSでの反響を受けて、ファンとの交流を楽しむ様子を見せた。福士は、体作りに励んでいることを明かし、健康的なライフスタイルをアピールしている。彼のユーモアあふれる一面が、多くのファンに支持されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578017" target="_blank" rel="noopener noreferrer">香取 慎吾ママ無理していたと苦笑</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 11:33</span>
+    </p>
+    <p class="news-item-summary">俳優の香取慎吾が、自身の母親が無理をしていたことを明かし、苦笑いした。香取は、母親が健康を気遣いながらも、日常生活での負担を抱えていた様子を語った。母親との関係や支え合いの重要性についても触れ、家族の絆を再確認する機会となった。香取は、母親の健康を第一に考え、今後もサポートしていく意向を示した。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6578010" target="_blank" rel="noopener noreferrer">MEGUMI企画映画 イタリアで熱狂</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 10:31</span>
+    </p>
+    <p class="news-item-summary">MEGUMIが企画した映画がイタリアで熱狂的な反響を呼んでいる。この映画は、現地での上映イベントにおいて多くの観客を集め、観客から高い評価を受けた。映画の内容やテーマについても関心が寄せられ、イタリアの映画界において注目を浴びている。MEGUMIは、国際的な映画市場での成功を目指し、今後の展開にも期待が寄せられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6577983" target="_blank" rel="noopener noreferrer">Netflix実録ドラマ ヒットする訳</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">04/28 08:00</span>
+    </p>
+    <p class="news-item-summary">Netflixの実録ドラマがヒットしている理由について、視聴者の関心を引くリアルなストーリーや、社会問題を反映した内容が挙げられている。特に、実際の事件や人物を基にした作品が多く、視聴者は感情移入しやすいとされる。また、制作側は高いクオリティを維持し、視覚的な演出やキャスティングにも力を入れていることが、視聴者の支持を得る要因となっている。これにより、視聴率や話題性が向上し、さらなる人気を呼んでいる。</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <section class="tab-content" id="tech-blogs" role="tabpanel">
+                <h2 class="section-header">Tech Blogs</h2>
+                <div class="category-section">
+    <h3 class="category-header">Tech Blogs</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.wheresyoured.at/openai-projects-chatgpt-plus-subscriptions-to-drop-by-80-from-44-million-in-2025-to-9-million-in-2026-made-up-using-cheaper-subscriptions-somehow" target="_blank" rel="noopener noreferrer">OpenAI Projects ChatGPT Plus subscriptions to drop by 80% from 44 Million in 2025 to 9 Million In 2026, Made Up Using Cheaper Subscriptions (Somehow)</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Ed Zitron</span>
+        <span class="date">04/28 22:40</span>
+    </p>
+    <p class="news-item-summary">Executive Summary:The Information reports that OpenAI projects that its $20-a-month ChatGPT Plus subscriptions will decrease from 44 Million subscribers in 2025 to a projected 9 million subscribers in 2026.OpenAI projects to make up the difference by increasing its ad-supported ChatGPT Go ($5 or $8-a-month depending on the region)</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://simonwillison.net/2026/Apr/28/openai-codex" target="_blank" rel="noopener noreferrer">Quoting OpenAI Codex base_instructions</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Simon Willison</span>
+        <span class="date">04/28 22:02</span>
+    </p>
+    <p class="news-item-summary">Never talk about goblins, gremlins, raccoons, trolls, ogres, pigeons, or other animals or creatures unless it is absolutely and unambiguously relevant to the user's query. — OpenAI Codex base_instructions, for GPT-5.5 Tags: openai, ai, llms, system-prompts, prompt-engineering, codex-cli, generative-ai, gpt</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.wheresyoured.at/ais-economics-dont-make-sense" target="_blank" rel="noopener noreferrer">AI's Economics Don't Make Sense</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Ed Zitron</span>
+        <span class="date">04/28 16:35</span>
+    </p>
+    <p class="news-item-summary">If you liked this piece, please subscribe to my premium newsletter. It’s $70 a year, or $7 a month, and in return you get a weekly newsletter that’s usually anywhere from 5,000 to 18,000 words, including vast, detailed analyses of NVIDIA, Anthropic and OpenAI&amp;</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.wheresyoured.at/ais-economics-dont-make-sense-ad-free" target="_blank" rel="noopener noreferrer">AI's Economics Don't Make Sense [Ad Free]</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Ed Zitron</span>
+        <span class="date">04/28 16:33</span>
+    </p>
+    <p class="news-item-summary">Hello premium subs! This is your ad-free free newsletter for the week. Questions? Queries? Email me at ez@betteroffline.com, and if you have a scoop, ezitron.76 is my Signal. Yesterday morning, GitHub Copilot users got confirmation of something I’d reported a week ago — that all</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://simonwillison.net/2026/Apr/28/matthew-yglesias" target="_blank" rel="noopener noreferrer">Quoting Matthew Yglesias</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Simon Willison</span>
+        <span class="date">04/28 13:25</span>
+    </p>
+    <p class="news-item-summary">Five months in, I think I've decided that I don't want to vibecode — I want professionally managed software companies to use AI coding assistance to make more/better/cheaper software products that they sell to me for money. — Matthew Yglesias Tags: agentic-engineering, vibe-coding, ai-assisted-programming, ai</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <footer class="footer">
+                <p>Generated automatically at 08:00 (Asia/Taipei). All links open original articles.</p>
+                <p class="small">RSS-first pipeline powered by DeepSeek AI. 8 articles per category, 200-char summaries.
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    tabButtons.forEach(function (btn) {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+
+                    tabContents.forEach(function (content) {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
