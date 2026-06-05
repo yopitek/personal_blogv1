@@ -15,5 +15,9 @@ Thumbs.db
 *.swo
 *~
 
+# Wrangler / Cloudflare Workers
+.wrangler/
+__pycache__/
+
 # Temporary files
 *.tmp
