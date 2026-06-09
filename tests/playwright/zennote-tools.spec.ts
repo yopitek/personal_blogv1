@@ -66,7 +66,8 @@ test.describe('ig_card_tool', () => {
   });
 
   test('font loading is non-blocking', async ({ page }) => {
-    const fontLink = page.locator('link[href*="fonts.googleapis.com"]');
+    // Use nth(1) to skip the preconnect link, target the actual stylesheet
+    const fontLink = page.locator('link[href*="fonts.googleapis.com"][rel="stylesheet"]');
     const media = await fontLink.getAttribute('media');
     expect(media).toContain('print');
   });
@@ -96,9 +97,10 @@ test.describe('decoder', () => {
   });
 
   test('loading spinner present before React mounts', async ({ page }) => {
-    // The spinner exists in HTML before JS replaces #root content
-    const content = await page.content();
-    expect(content).toContain('loading-spinner');
+    // Fetch raw HTML before JS executes to see the spinner
+    const response = await page.goto(`${BASE}/decoder/`, { waitUntil: 'commit' });
+    const html = await response?.text();
+    expect(html).toContain('loading-spinner');
   });
 
   test('no Google Fonts reference', async ({ page }) => {
