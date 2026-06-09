@@ -33,7 +33,7 @@ params:
   featuredImageField: image
   rssFullContent: true
   
-  favicon: /img/logo.png
+  favicon: /img/logo.webp
   
   footer:
     since: 2025
@@ -49,7 +49,7 @@ params:
     avatar:
       enabled: true
       local: true
-      src: img/logo.png
+      src: img/logo.webp
   
   article:
     math: true

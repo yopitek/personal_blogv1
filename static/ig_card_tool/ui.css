@@ -277,36 +277,16 @@ body {
 }
 
 /* ---------------------------------------------------------
-   Export Size – Platform Selector (v1.2)
+   Export Error Banner
 --------------------------------------------------------- */
-.export-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.export-btn {
-  height: 40px;
-  border-radius: 12px;
-
-  background: #FFFFFF;
-  border: 1px solid var(--border-soft);
-
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-
-  cursor: pointer;
-  transition: border-color .15s ease, color .15s ease;
-}
-
-.export-btn:hover {
-  border-color: #9CA3AF;
-}
-
-.export-btn.is-active {
-  border: 2px solid var(--accent);
-  color: var(--text-main);
+.export-error {
+  background: #FEE2E2;
+  color: #991B1B;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 /* ---------------------------------------------------------

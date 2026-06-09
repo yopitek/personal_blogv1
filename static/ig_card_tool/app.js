@@ -6,9 +6,9 @@
 // ============================================
 const themes = [
     { id: "minimal", name: "深夜雜誌", category: "dark", bg: "#2C3E5C", fg: "#FFFFFF", accent: "#F4E8D8", shadow: "0 16px 40px rgba(44,62,92,0.35)", tagStyle: "none", typography: { weight: 600, lineHeight: 1.35, letterSpacing: "0.03em" } },
-    { id: "kawaii", name: "柔和可愛", category: "light", bg: "#FFF1F4", fg: "#FF7A8A", accent: "#FFD6DC", shadow: "0 10px 28px rgba(255,122,138,0.18)", tagStyle: "none", typography: { weight: 600, lineHeight: 1.35, letterSpacing: "0.03em" } },
+    { id: "kawaii", name: "柔和可愛", category: "light", bg: "#FFF1F4", fg: "#C9405A", accent: "#FFD6DC", shadow: "0 10px 28px rgba(255,122,138,0.18)", tagStyle: "none", typography: { weight: 600, lineHeight: 1.35, letterSpacing: "0.03em" } },
     { id: "soft-pastel", name: "薰衣草紫", category: "light", bg: "#F9E4FF", fg: "#000000", accent: "#E8D4F0", shadow: "0 14px 36px rgba(249,228,255,0.35)", tagStyle: "none", typography: { weight: 600, lineHeight: 1.4, letterSpacing: "0.03em" } },
-    { id: "youth-pop", name: "青春活力", category: "light", bg: "#FFF8E6", fg: "#FF9F1C", accent: "#FFD48A", shadow: "0 10px 26px rgba(255,159,28,0.22)", tagStyle: "none", typography: { weight: 700, lineHeight: 1.25, letterSpacing: "0.04em" } },
+    { id: "youth-pop", name: "青春活力", category: "light", bg: "#FFF8E6", fg: "#B86000", accent: "#FFD48A", shadow: "0 10px 26px rgba(255,159,28,0.22)", tagStyle: "none", typography: { weight: 700, lineHeight: 1.25, letterSpacing: "0.04em" } },
     { id: "nature-calm", name: "自然恬靜", category: "light", bg: "#EFF6F2", fg: "#4E6B5C", accent: "#CFE4DA", shadow: "0 10px 28px rgba(78,107,92,0.18)", tagStyle: "none", typography: { weight: 500, lineHeight: 1.45, letterSpacing: "0.02em" }, border: "1px solid #000000" },
     { id: "editorial-serif", name: "活力橘調", category: "warm", bg: "#D97941", fg: "#FFFFFF", accent: "#F5E6D3", shadow: "0 16px 40px rgba(217,121,65,0.35)", tagStyle: "none", typography: { weight: 600, lineHeight: 1.4, letterSpacing: "0.03em" } },
     { id: "business-clean", name: "復古芥末", category: "warm", bg: "#B8944A", fg: "#FFFFFF", accent: "#F0E8D8", shadow: "0 14px 36px rgba(184,148,74,0.35)", tagStyle: "none", typography: { weight: 600, lineHeight: 1.4, letterSpacing: "0.03em" } },
@@ -147,12 +147,16 @@ function applyActiveStates() {
     // Style selector
     const styleItems = styleSelector.querySelectorAll(".style-item");
     for (const el of styleItems) {
-        el.classList.toggle("is-active", el.dataset.themeId === CardState.themeId);
+        const isActive = el.dataset.themeId === CardState.themeId;
+        el.classList.toggle("is-active", isActive);
+        el.setAttribute("aria-pressed", String(isActive));
     }
 
     // Text alignment buttons
     for (const btn of alignButtons) {
-        btn.classList.toggle("is-active", btn.dataset.align === CardState.textAlign);
+        const isActive = btn.dataset.align === CardState.textAlign;
+        btn.classList.toggle("is-active", isActive);
+        btn.setAttribute("aria-pressed", String(isActive));
     }
 
     // Slider values
@@ -161,8 +165,14 @@ function applyActiveStates() {
     paddingValue.textContent = CardState.paddingPx + "px";
 
     fontSizeSlider.value = String(CardState.fontSizePx);
+    fontSizeSlider.setAttribute("aria-valuenow", CardState.fontSizePx);
+    fontSizeSlider.setAttribute("aria-valuetext", CardState.fontSizePx + "px");
     radiusSlider.value = String(CardState.radiusPx);
+    radiusSlider.setAttribute("aria-valuenow", CardState.radiusPx);
+    radiusSlider.setAttribute("aria-valuetext", CardState.radiusPx + "px");
     paddingSlider.value = String(CardState.paddingPx);
+    paddingSlider.setAttribute("aria-valuenow", CardState.paddingPx);
+    paddingSlider.setAttribute("aria-valuetext", CardState.paddingPx + "px");
 
     // Font select - find the matching option
     for (let i = 0; i < fontSelect.options.length; i++) {
@@ -186,6 +196,8 @@ function buildStyleGrid() {
         btn.style.background = t.bg;
         btn.style.color = t.fg;
         btn.textContent = t.name;
+        btn.setAttribute("aria-label", t.name);
+        btn.setAttribute("aria-pressed", "false");
         btn.addEventListener("click", function () {
             updateState({ themeId: t.id });
         });
@@ -256,7 +268,14 @@ async function exportPNG() {
 
     } catch (error) {
         console.error("Export failed:", error);
-        alert("Export failed: " + error.message + "\n\nPlease try again or take a screenshot instead.");
+        const errDiv = $("#export-error");
+        if (errDiv) {
+            errDiv.textContent = "Export failed: " + error.message + ". Please try again or take a screenshot.";
+            errDiv.style.display = "block";
+            setTimeout(() => {
+                errDiv.style.display = "none";
+            }, 5000);
+        }
     } finally {
         exportBtn.disabled = false;
     }
@@ -270,17 +289,26 @@ function bindEvents() {
 
     fontSelect.addEventListener("change", (e) => updateState({ fontFamily: e.target.value }));
 
-    fontSizeSlider.addEventListener("input", (e) =>
-        updateState({ fontSizePx: clamp(e.target.value, RANGE.fontSizePx.min, RANGE.fontSizePx.max) })
-    );
+    fontSizeSlider.addEventListener("input", (e) => {
+        const val = clamp(e.target.value, RANGE.fontSizePx.min, RANGE.fontSizePx.max);
+        updateState({ fontSizePx: val });
+        fontSizeSlider.setAttribute("aria-valuenow", val);
+        fontSizeSlider.setAttribute("aria-valuetext", val + "px");
+    });
 
-    radiusSlider.addEventListener("input", (e) =>
-        updateState({ radiusPx: clamp(e.target.value, RANGE.radiusPx.min, RANGE.radiusPx.max) })
-    );
+    radiusSlider.addEventListener("input", (e) => {
+        const val = clamp(e.target.value, RANGE.radiusPx.min, RANGE.radiusPx.max);
+        updateState({ radiusPx: val });
+        radiusSlider.setAttribute("aria-valuenow", val);
+        radiusSlider.setAttribute("aria-valuetext", val + "px");
+    });
 
-    paddingSlider.addEventListener("input", (e) =>
-        updateState({ paddingPx: clamp(e.target.value, RANGE.paddingPx.min, RANGE.paddingPx.max) })
-    );
+    paddingSlider.addEventListener("input", (e) => {
+        const val = clamp(e.target.value, RANGE.paddingPx.min, RANGE.paddingPx.max);
+        updateState({ paddingPx: val });
+        paddingSlider.setAttribute("aria-valuenow", val);
+        paddingSlider.setAttribute("aria-valuetext", val + "px");
+    });
 
     for (const btn of alignButtons) {
         btn.addEventListener("click", () => {

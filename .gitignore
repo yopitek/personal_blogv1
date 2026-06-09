@@ -21,3 +21,6 @@ __pycache__/
 
 # Temporary files
 *.tmp
+
+.env
+.env.*

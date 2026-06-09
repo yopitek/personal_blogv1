@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Text Card Editor | Zennote</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/logo.png" sizes="any">
     <meta name="description"
         content="Create beautiful text cards for Instagram, Facebook, and social media. Free online tool." />
 
@@ -13,7 +14,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Klee+One&family=M+PLUS+2:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&family=Zen+Maru+Gothic&display=swap"
+        media="print" onload="this.onload=null;this.media='all'"
         rel="stylesheet">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Klee+One&family=M+PLUS+2:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&family=Zen+Maru+Gothic&display=swap"
+            rel="stylesheet">
+    </noscript>
 
     <link rel="stylesheet" href="ui.css" />
 </head>
@@ -48,7 +55,8 @@
             <div class="form-group">
                 <label class="label" for="font-size">Font Size（字體大小）</label>
                 <div class="range-row">
-                    <input type="range" id="font-size" min="24" max="56" value="32" />
+                    <input type="range" id="font-size" min="24" max="56" value="32"
+                        aria-valuemin="24" aria-valuemax="56" aria-valuenow="32" aria-valuetext="32px" />
                     <div class="range-value" id="font-size-value">32px</div>
                 </div>
             </div>
@@ -77,7 +85,8 @@
             <div class="form-group">
                 <label class="label" for="radius">Radius（卡片圓角角度）</label>
                 <div class="range-row">
-                    <input type="range" id="radius" min="8" max="28" value="20" />
+                    <input type="range" id="radius" min="8" max="28" value="20"
+                        aria-valuemin="8" aria-valuemax="28" aria-valuenow="20" aria-valuetext="20px" />
                     <div class="range-value" id="radius-value">20px</div>
                 </div>
             </div>
@@ -85,17 +94,19 @@
             <div class="form-group">
                 <label class="label" for="padding">Padding（邊框間距）</label>
                 <div class="range-row">
-                    <input type="range" id="padding" min="24" max="64" value="32" />
+                    <input type="range" id="padding" min="24" max="64" value="32"
+                        aria-valuemin="24" aria-valuemax="64" aria-valuenow="32" aria-valuetext="32px" />
                     <div class="range-value" id="padding-value">32px</div>
                 </div>
             </div>
 
             <button id="export-btn" class="btn-primary">Download PNG</button>
+            <div id="export-error" class="export-error" role="alert" style="display:none;"></div>
         </aside>
     </div>
 
     <!-- html-to-image library for PNG export -->
-    <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+    <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js" integrity="sha384-gzjNkFAaF1gM3sMZAXpMyKzIyM5jq5PdNRVbUtH2gplE1h8AViFNb1VfQ9Fkdxe" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 
