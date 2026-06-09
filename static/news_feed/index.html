@@ -9,6 +9,13 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="description" content="Daily Multilingual News Digest - 中文、English、日本語">
     <title>每日電子新聞報 | 2026年06月09日 星期二</title>
+    <meta property="og:title" content="每日電子新聞報 | 2026年06月09日 星期二">
+    <meta property="og:description" content="每日精選中文、英文、日文新聞摘要，AI 自動生成。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zennote.app/news_feed/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="每日電子新聞報 | 2026年06月09日 星期二">
+    <meta name="twitter:description" content="每日精選中文、英文、日文新聞摘要。">
 
     <style>
         *,
@@ -268,13 +275,13 @@
             </header>
 
             <nav class="tab-nav" role="tablist">
-                <button class="tab-btn active" role="tab" aria-selected="true" data-tab="zh-news">中文新聞</button>
-                <button class="tab-btn" role="tab" aria-selected="false" data-tab="en-news">English News</button>
-                <button class="tab-btn" role="tab" aria-selected="false" data-tab="ja-news">日本語ニュース</button>
-                <button class="tab-btn" role="tab" aria-selected="false" data-tab="tech-blogs">Tech Blogs</button>
+                <button class="tab-btn active" role="tab" aria-selected="true" data-tab="zh-news" id="tab-zh-news" aria-controls="zh-news">中文新聞</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="en-news" id="tab-en-news" aria-controls="en-news">English News</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="ja-news" id="tab-ja-news" aria-controls="ja-news">日本語ニュース</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="tech-blogs" id="tab-tech-blogs" aria-controls="tech-blogs">Tech Blogs</button>
             </nav>
 
-            <section class="tab-content active" id="zh-news" role="tabpanel">
+            <section class="tab-content active" id="zh-news" role="tabpanel" aria-labelledby="tab-zh-news">
                 <h2 class="section-header">中文新聞</h2>
                 <div class="category-section">
     <h3 class="category-header">頭條新聞</h3>
@@ -833,7 +840,7 @@
 </div>
             </section>
 
-            <section class="tab-content" id="en-news" role="tabpanel">
+            <section class="tab-content" id="en-news" role="tabpanel" aria-labelledby="tab-en-news">
                 <h2 class="section-header">English News</h2>
                 <div class="category-section">
     <h3 class="category-header">Startup</h3>
@@ -1237,7 +1244,7 @@
 </div>
             </section>
 
-            <section class="tab-content" id="ja-news" role="tabpanel">
+            <section class="tab-content" id="ja-news" role="tabpanel" aria-labelledby="tab-ja-news">
                 <h2 class="section-header">日本語ニュース</h2>
                 <div class="category-section">
     <h3 class="category-header">頭條</h3>
@@ -1736,7 +1743,7 @@
 </div>
             </section>
 
-            <section class="tab-content" id="tech-blogs" role="tabpanel">
+            <section class="tab-content" id="tech-blogs" role="tabpanel" aria-labelledby="tab-tech-blogs">
                 <h2 class="section-header">Tech Blogs</h2>
                 <div class="category-section">
     <h3 class="category-header">Tech Blogs</h3>
@@ -1787,23 +1794,54 @@
         document.addEventListener('DOMContentLoaded', function () {
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
+            const tabNav = document.querySelector('.tab-nav');
+
+            function activateTab(button) {
+                const targetTab = button.getAttribute('data-tab');
+                tabButtons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                button.classList.add('active');
+                button.setAttribute('aria-selected', 'true');
+
+                tabContents.forEach(function (content) {
+                    content.classList.remove('active');
+                });
+                document.getElementById(targetTab).classList.add('active');
+            }
 
             tabButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
-                    const targetTab = this.getAttribute('data-tab');
-
-                    tabButtons.forEach(function (btn) {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-selected', 'false');
-                    });
-                    this.classList.add('active');
-                    this.setAttribute('aria-selected', 'true');
-
-                    tabContents.forEach(function (content) {
-                        content.classList.remove('active');
-                    });
-                    document.getElementById(targetTab).classList.add('active');
+                    activateTab(this);
                 });
+            });
+
+            // Keyboard navigation
+            tabNav.addEventListener('keydown', function (e) {
+                const currentTab = document.querySelector('.tab-btn.active');
+                const tabs = Array.from(tabButtons);
+                const idx = tabs.indexOf(currentTab);
+
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const nextIdx = (idx + 1) % tabs.length;
+                    activateTab(tabs[nextIdx]);
+                    tabs[nextIdx].focus();
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prevIdx = (idx - 1 + tabs.length) % tabs.length;
+                    activateTab(tabs[prevIdx]);
+                    tabs[prevIdx].focus();
+                } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    activateTab(tabs[0]);
+                    tabs[0].focus();
+                } else if (e.key === 'End') {
+                    e.preventDefault();
+                    activateTab(tabs[tabs.length - 1]);
+                    tabs[tabs.length - 1].focus();
+                }
             });
         });
     </script>
