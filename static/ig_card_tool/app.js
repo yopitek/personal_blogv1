@@ -48,12 +48,14 @@ const RANGE = {
     paddingPx: { min: 24, max: 64 }
 };
 
-// 5 Google Fonts
+// 7 Google Fonts (Traditional Chinese)
 const fontOptions = [
     { family: "'Noto Sans TC', sans-serif", label: "思源黑體 TC" },
     { family: "'Noto Serif TC', serif", label: "思源宋體 TC" },
-    { family: "'M PLUS 2', sans-serif", label: "M PLUS 2" },
+    { family: "'LXGW WenKai TC', serif", label: "霞鶩文楷 TC" },
+    { family: "'Iansui', cursive", label: "芫荽體" },
     { family: "'Zen Maru Gothic', sans-serif", label: "Zen Maru Gothic" },
+    { family: "'M PLUS 2', sans-serif", label: "M PLUS 2" },
     { family: "'Klee One', cursive", label: "Klee One" },
 ];
 
