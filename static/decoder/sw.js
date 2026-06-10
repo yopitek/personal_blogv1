@@ -1,9 +1,10 @@
-const CACHE_NAME = 'decoder-v1';
+const CACHE_NAME = 'decoder-v2';
 const ASSETS = [
-  '/',
   '/decoder/',
   '/decoder/index.html',
   '/decoder/manifest.json',
+  '/decoder/assets/index-CJB5h_iK.js',
+  '/decoder/assets/index-B9O8-oZP.css',
 ];
 
 self.addEventListener('install', (event) => {
@@ -19,7 +20,25 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
-  );
+  const url = new URL(event.request.url);
+  const isHtml = url.pathname.endsWith('/') || url.pathname.endsWith('.html');
+
+  if (isHtml) {
+    // Network-first for HTML: always try to get fresh HTML,
+    // fall back to cache if offline
+    event.respondWith(
+      fetch(event.request)
+        .then((res) => {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          return res;
+        })
+        .catch(() => caches.match(event.request))
+    );
+  } else {
+    // Cache-first for assets (JS, CSS, etc.)
+    event.respondWith(
+      caches.match(event.request).then((cached) => cached || fetch(event.request))
+    );
+  }
 });
