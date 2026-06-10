@@ -48,7 +48,7 @@ const RANGE = {
     paddingPx: { min: 24, max: 64 }
 };
 
-// 7 Google Fonts
+// 8 Google Fonts
 const fontOptions = [
     { family: "'Noto Sans TC', sans-serif", label: "思源黑體 TC" },
     { family: "'Noto Serif TC', serif", label: "思源宋體 TC" },
@@ -57,6 +57,7 @@ const fontOptions = [
     { family: "'M PLUS 2', sans-serif", label: "M PLUS 2" },
     { family: "'Zen Maru Gothic', sans-serif", label: "Zen Maru Gothic" },
     { family: "'Klee One', cursive", label: "Klee One" },
+    { family: "'Hannari', serif", label: "Hannari" },
 ];
 
 // ============================================
