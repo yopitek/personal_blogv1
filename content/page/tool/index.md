@@ -27,6 +27,8 @@ menu:
 
 每日精選中文、英文、日文新聞摘要，每天早上上九點準時更新最新資訊。
 
+![預覽](/img/tools/news_feed.png)
+
 [每日電子新聞報](https://zennote.app/news_feed/)
 
 
@@ -37,6 +39,8 @@ menu:
 Instagram/Facebook/X 社群媒體 貼文公告
 
 也很適合用來放在Line群組中傳達事項使用
+
+![預覽](/img/tools/ig_card_tool.png)
 
 [Instagram/Facebook/X 卡片編輯工具 ](https://zennote.app/ig_card_tool/)
 
@@ -51,6 +55,8 @@ Instagram/Facebook/X 社群媒體 貼文公告
 
 支援六種不同商品情境風格
 
+![預覽](/img/tools/shopee_writer.png)
+
 [蝦皮商城/蝦皮賣場/露天拍賣/Yahoo拍賣/電商 AI文案生成工具](https://shopee-writer.vercel.app/)
 
 
@@ -60,6 +66,8 @@ Instagram/Facebook/X 社群媒體 貼文公告
 
 
 ### 門禁卡號轉換程式
+
+![預覽](/img/tools/decoder.png)
 
 支援多種門禁卡格式轉換，包括 DEC10（8H10D）、HEX8、UID bytes 等格式。
 

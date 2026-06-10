@@ -290,6 +290,36 @@ body {
 }
 
 /* ---------------------------------------------------------
+   Export Size Selector
+--------------------------------------------------------- */
+.export-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.export-btn {
+  flex: 1;
+  height: 40px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: border-color .15s ease, color .15s ease;
+}
+
+.export-btn:hover {
+  border-color: #9CA3AF;
+}
+
+.export-btn.is-active {
+  border: 2px solid var(--accent);
+  color: var(--text-main);
+}
+
+/* ---------------------------------------------------------
    Primary Action Button
 --------------------------------------------------------- */
 .btn-primary {

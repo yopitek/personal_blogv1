@@ -12,9 +12,15 @@
   <meta name="description"
     content="Access Card ID Converter - Convert card IDs between DEC10, HEX8, and UID byte formats. 門禁卡號轉換程式" />
   <meta name="theme-color" content="#3b82f6">
+  <link rel="manifest" href="/decoder/manifest.json">
   <title>Access Card ID Converter / 門禁卡號轉換程式</title>
-  <script type="module" crossorigin src="/decoder/assets/index-D-w3Is4Z.js"></script>
+  <script type="module" crossorigin src="/decoder/assets/index-BV-AQ-Zd.js"></script>
   <link rel="stylesheet" crossorigin href="/decoder/assets/index-B9O8-oZP.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/decoder/sw.js'));
+    }
+  </script>
 </head>
 
 <body>

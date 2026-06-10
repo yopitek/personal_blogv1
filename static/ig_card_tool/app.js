@@ -29,7 +29,8 @@ const CardState = {
     fontSizePx: 32,
     textAlign: "center",
     radiusPx: 20,
-    paddingPx: 32
+    paddingPx: 32,
+    exportSize: "1:1"
 };
 
 // ============================================
@@ -237,15 +238,27 @@ async function exportPNG() {
         }
 
         // Export with higher quality settings
+        // Temporarily resize for selected export dimensions
+        const origWidth = previewCard.style.width;
+        const origHeight = previewCard.style.minHeight;
+        if (CardState.exportSize === "1:1") {
+            previewCard.style.width = "1080px";
+            previewCard.style.minHeight = "1080px";
+        } else if (CardState.exportSize === "9:16") {
+            previewCard.style.width = "1080px";
+            previewCard.style.minHeight = "1920px";
+        }
         const dataUrl = await htmlToImage.toPng(previewCard, {
-            pixelRatio: 3, // Higher quality for mobile screens
+            pixelRatio: 1,
             cacheBust: true,
             backgroundColor: null,
             style: {
-                // Ensure fonts are applied
                 fontFamily: CardState.fontFamily
             }
         });
+        // Restore original dimensions
+        previewCard.style.width = origWidth;
+        previewCard.style.minHeight = origHeight;
 
         // Improved download for mobile and desktop
         const link = document.createElement("a");
@@ -320,6 +333,13 @@ function bindEvents() {
     }
 
     exportBtn.addEventListener("click", exportPNG);
+
+    // Export size selector
+    document.querySelectorAll(".export-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            updateState({ exportSize: btn.dataset.size });
+        });
+    });
 }
 
 // ============================================
