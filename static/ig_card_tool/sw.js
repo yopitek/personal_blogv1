@@ -17,7 +17,7 @@ self.addEventListener("install", (evt) => {
 self.addEventListener("activate", (evt) => {
   evt.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+      Promise.all(keys.filter((k) => k.startsWith('ig-card-tool-') && k !== CACHE_NAME).map((k) => caches.delete(k)))
     )
   );
   self.clients.claim();

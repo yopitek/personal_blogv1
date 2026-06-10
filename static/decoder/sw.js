@@ -1,9 +1,9 @@
-const CACHE_NAME = 'decoder-v2';
+const CACHE_NAME = 'decoder-v3';
 const ASSETS = [
   '/decoder/',
   '/decoder/index.html',
   '/decoder/manifest.json',
-  '/decoder/assets/index-CJB5h_iK.js',
+  '/decoder/assets/index-DztHIU44.js',
   '/decoder/assets/index-B9O8-oZP.css',
 ];
 
@@ -14,7 +14,7 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(caches.keys().then((keys) =>
-    Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+    Promise.all(keys.filter((k) => k.startsWith('decoder-') && k !== CACHE_NAME).map((k) => caches.delete(k)))
   ));
   self.clients.claim();
 });

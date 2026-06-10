@@ -1,6 +1,9 @@
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://analytics.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://analytics.umami.is; frame-src 'self';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<!-- Umami Analytics — replace YOUR_WEBSITE_ID and YOUR_SCRIPT_URL -->
-<script async defer src="YOUR_SCRIPT_URL" data-website-id="YOUR_WEBSITE_ID"></script>
+{{- with .Site.Params.analytics }}
+{{- if and .umamiUrl .umamiId }}
+<script async defer src="{{ .umamiUrl }}" data-website-id="{{ .umamiId }}"></script>
+{{- end }}
+{{- end }}
