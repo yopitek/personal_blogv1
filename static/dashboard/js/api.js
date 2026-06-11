@@ -50,5 +50,99 @@ export const DashboardAPI = {
   async getAgriculture() { return await apiFetch('agriculture') || await mockData('agriculture'); },
   async getEducation() { return await apiFetch('education') || await mockData('education'); },
   async getActivities() { return await apiFetch('activities') || await mockData('activities'); },
-  async getLunar() { return await apiFetch('lunar') || await mockData('lunar'); }
+  async getLunar() { return await apiFetch('lunar') || await mockData('lunar'); },
+
+  async searchJudicial(caseNo, keyword, court, year) {
+    const params = new URLSearchParams();
+    if (caseNo) params.set('caseno', caseNo);
+    if (keyword) params.set('q', keyword);
+    if (court) params.set('court', court);
+    if (year) params.set('year', year);
+    try {
+      const res = await apiFetch(`judicial?${params}`);
+      if (res?.items?.length) return res;
+    } catch {}
+    return judicialMock(caseNo, keyword, court, year);
+  },
+
+  async searchRealEstate(params) {
+    const qs = new URLSearchParams();
+    for (const [k, v] of Object.entries(params)) {
+      if (v) qs.set(k, v);
+    }
+    try {
+      const res = await apiFetch(`realestate?${qs}`);
+      if (res?.items?.length) return res;
+    } catch {}
+    return realEstateMock(params);
+  },
+
+  async searchSchoolDist(district, address) {
+    const params = new URLSearchParams({ district, address });
+    try {
+      const res = await apiFetch(`schooldist?${params}`);
+      if (res?.schools?.length) return res;
+    } catch {}
+    return schoolDistMock(district, address);
+  }
 };
+
+function judicialMock(caseNo, keyword, court, year) {
+  if (caseNo) {
+    const parts = caseNo.replace(/[臺台]/g, '臺').match(/(.+法院)?(\d+)年度(\S+)字第(\d+)號/);
+    const extracted = parts ? {
+      court: parts[1] || '未知法院',
+      year: parts[2],
+      type: parts[3],
+      number: parts[4]
+    } : null;
+
+    return {
+      items: [{
+        case_no: caseNo,
+        title: extracted ? `${extracted.court}${extracted.year}年度${extracted.type}字第${extracted.number}號` : caseNo,
+        court: extracted?.court || '',
+        date: `${parseInt(extracted?.year || '113') + 1}-01-15`,
+        judge: '審判長 ○○○',
+        excerpt: `案由：${keyword || '刑事案件'}。主文：原判決關於罪刑部分撤銷。理由：…（裁判書全文需至司法院法學資料檢索系統查看）`,
+        url: `https://judgment.judicial.gov.tw/FJUD/default.aspx`
+      }],
+      total: 1,
+      source: '司法院法學資料檢索系統 (案號查詢)'
+    };
+  }
+  const k = keyword || '';
+  const items = [
+    { case_no: '113年度台上字第1234號', title: `${k}案件`, court: court || '最高法院', date: '114-03-15', judge: '審判長 王大明', excerpt: `被告因涉${k}罪嫌，經檢察官提起公訴。本院審酌被告犯罪動機、手段、所生危害及犯後態度...`, url: '#' },
+    { case_no: '113年度上訴字第567號', title: `違反${k}防制條例`, court: court || '臺灣高等法院', date: '114-01-20', judge: '審判長 李小華', excerpt: `上訴人因${k}案件，不服第一審判決提起上訴。本院審理後認上訴為無理由...`, url: '#' },
+    { case_no: '112年度訴字第890號', title: `加重${k}等`, court: court || '臺北地方法院', date: '113-09-08', judge: '審判長 陳志明', excerpt: `公訴意旨略以：被告基於${k}之犯意，於民國112年3月間...`, url: '#' },
+    { case_no: '113年度台上字第2345號', title: `${k}未遂`, court: '最高法院', date: '114-04-02', judge: '審判長 張文華', excerpt: `按刑法第X條之${k}罪，以行為人主觀上具有...`, url: '#' },
+    { case_no: '114年度上易字第112號', title: `${k}損害賠償`, court: '臺灣高等法院', date: '114-05-10', judge: '審判長 林美玲', excerpt: `上訴人主張被上訴人因${k}行為致其受有損害，請求賠償...`, url: '#' }
+  ];
+  return { items: items.slice(0, 5), total: items.length, source: '司法院法學資料檢索系統 (展示資料)' };
+}
+
+function realEstateMock(params) {
+  const d = params.district || '信義區';
+  const addr = params.address || '信義路五段';
+  const type = params.type || '買賣';
+  const bld = params.building || '住宅大樓';
+  const y = params.endY || '114';
+  const items = [
+    { address: `臺北市${d}${addr}7號`, type, building: bld, total_price: '3,280', unit_price: '128.5', area: '25.5', date: `${y}-03-20` },
+    { address: `臺北市${d}松仁路100號`, type, building: bld, total_price: '5,600', unit_price: '145.2', area: '38.6', date: `${y}-02-15` },
+    { address: `臺北市${d}${addr}22號`, type, building: bld, total_price: '2,150', unit_price: '98.7', area: '21.8', date: `${y}-04-01` },
+    { address: `臺北市${d}基隆路一段150號`, type, building: bld, total_price: '1,880', unit_price: '85.3', area: '22.0', date: `${y}-01-10` },
+    { address: `臺北市${d}光復南路200號`, type, building: bld, total_price: '4,200', unit_price: '112.8', area: '37.2', date: `${y}-03-28` },
+  ];
+  return { items, total: items.length, source: '內政部實價登錄 (展示資料)' };
+}
+
+function schoolDistMock(district, address) {
+  const schools = [
+    { name: `${district}國民小學`, level: '國民小學', type: '公立', quota: '額滿', address: `台北市${district}${address}附近` },
+    { name: `${district}國民中學`, level: '國民中學', type: '公立', quota: '正常', address: `台北市${district}${address}約500公尺` },
+    { name: `私立復興實驗中學`, level: '國民小學/中學', type: '私立', quota: '招生中', address: `台北市${district}` },
+  ];
+  return { schools, source: '台北市政府教育局 (展示資料)' };
+}

@@ -4,280 +4,187 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>台北市民儀表板 — TPE Citizen Dashboard</title>
-<meta name="description" content="台北市民每日第一頁 — 一覽天氣、交通、股市、農產、地震、YouBike、停車場等生活資訊。">
+<meta name="description" content="台北市民每日第一頁 — 一覽天氣、交通、股市、農產、地震、YouBike。含線上查詢工具：停車位、司法案件、實價登錄、學區。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme.css">
 <script>window.DASHBOARD_API='https://tpe-dashboard-api.goolai.workers.dev/api';</script>
+<script>
+window.__switchTab = function(tab) {
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  var match = document.querySelector('[data-tab="' + tab + '"]');
+  if (match) match.classList.add('active');
+  var dp = document.getElementById('dashboard-panel');
+  document.querySelectorAll('.tool-panel').forEach(function(p) { p.classList.remove('active'); });
+  if (tab === 'dashboard') {
+    if (dp) dp.classList.remove('hidden');
+  } else {
+    if (dp) dp.classList.add('hidden');
+    var panel = document.getElementById(tab);
+    if (panel) panel.classList.add('active');
+  }
+};
+
+window.__switchSchoolMode = function(mode) {
+  var btns = document.querySelectorAll('#tool-schooldist [data-mode]');
+  btns.forEach(function(b) { b.classList.remove('active'); });
+  var match = document.querySelector('#tool-schooldist [data-mode="' + mode + '"]');
+  if (match) match.classList.add('active');
+  var addrForm = document.getElementById('sd-form-address');
+  var schForm = document.getElementById('sd-form-school');
+  if (addrForm) addrForm.style.display = mode === 'address' ? '' : 'none';
+  if (schForm) schForm.style.display = mode === 'school' ? '' : 'none';
+  var el = document.getElementById('sd-results');
+  if (el) el.innerHTML = '<div class="results-empty">請選擇查詢模式：地址查學校 或 學校查學區</div>';
+};
+</script>
 <script type="module" src="js/app.js"></script>
 </head>
 <body>
-
 <div class="wrapper">
 
-  <!-- ═══ HERO BANNER (Card 0) ═══ -->
-  <div class="hero-banner">
-    <div class="hero-left">
-      <span class="hero-date-solar" id="hero-solar">──年─月─日</span>
-      <span class="hero-date-weekday" id="hero-weekday">週─</span>
-      <span class="hero-date-lunar" id="hero-lunar">載入中...</span>
-      <span class="hero-date-term" id="hero-term"></span>
-    </div>
-    <div class="hero-right">
-      <span class="hero-update-badge" id="update-badge">更新中</span>
-      <span class="hero-site-title">TAIPEI CITIZEN DASHBOARD</span>
-    </div>
+<div class="hero-banner">
+  <div class="hero-left">
+    <span class="hero-date-solar" id="hero-solar">──年─月─日</span>
+    <span class="hero-date-weekday" id="hero-weekday">週─</span>
+    <span class="hero-date-lunar" id="hero-lunar">載入中...</span>
+    <span class="hero-date-term" id="hero-term"></span>
   </div>
-
-  <!-- ═══ ALERT BANNER ═══ -->
-  <div class="alert-banner" id="alert-banner">
-    <div class="alert-dot"></div>
-    <div>
-      <div class="alert-title" id="alert-title"></div>
-      <div class="alert-desc" id="alert-desc"></div>
-    </div>
+  <div class="hero-right">
+    <span class="hero-update-badge" id="update-badge">更新中</span>
+    <span class="hero-site-title">TAIPEI CITIZEN DASHBOARD</span>
   </div>
+</div>
 
-  <!-- ═══ ROW 1: 環境與災防 ═══ -->
-  <div class="section-label">環境與災防</div>
-  <div class="grid-top">
+<div class="alert-banner" id="alert-banner">
+  <div class="alert-dot"></div>
+  <div><div class="alert-title" id="alert-title"></div><div class="alert-desc" id="alert-desc"></div></div>
+</div>
 
-    <!-- Card 1: Weather (2fr) -->
-    <div class="card card-weather" id="card-weather">
-      <div class="card-header">
-        <span class="card-icon-dot teal"></span>
-        <span class="card-title">今日天氣 · 台北市</span>
-        <span class="card-source">CWA 氣象署</span>
-      </div>
-      <div class="card-body" id="weather-body">
-        <div class="skeleton skeleton-number"></div>
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
+<nav class="tab-bar" id="tab-bar">
+  <button class="tab-btn active" data-tab="dashboard" onclick="window.__switchTab('dashboard')">◈ 儀表板</button>
+  <button class="tab-btn" data-tab="tool-parking" onclick="window.__switchTab('tool-parking')">🅿 查詢停車位</button>
+  <button class="tab-btn" data-tab="tool-judicial" onclick="window.__switchTab('tool-judicial')">⚖ 查詢司法案件全文</button>
+  <button class="tab-btn" data-tab="tool-realestate" onclick="window.__switchTab('tool-realestate')">🏠 查詢實價登錄資料</button>
+  <button class="tab-btn" data-tab="tool-schooldist" onclick="window.__switchTab('tool-schooldist')">🏫 查詢台北市房子學區</button>
+</nav>
 
-    <!-- Card 2: AQI / UV (1fr) -->
-    <div class="card" id="card-aqi">
-      <div class="card-header">
-        <span class="card-icon-dot green"></span>
-        <span class="card-title">空氣品質</span>
-        <span class="card-source">WAQI</span>
-      </div>
-      <div class="card-body" id="aqi-body">
-        <div class="skeleton skeleton-number"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
+<div class="dashboard-panel" id="dashboard-panel">
 
-    <!-- Card 3: Earthquake (1fr) -->
-    <div class="card" id="card-earthquake">
-      <div class="card-header">
-        <span class="card-icon-dot coral"></span>
-        <span class="card-title">最近地震</span>
-        <span class="card-source">CWA</span>
-      </div>
-      <div class="card-body" id="eq-body">
-        <div class="skeleton skeleton-number"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
+<div class="section-label">環境與災防</div>
+<div class="grid-top">
+  <div class="card card-weather" id="card-weather"><div class="card-header"><span class="card-icon-dot teal"></span><span class="card-title">今日天氣 · 台北市</span><span class="card-source">CWA</span></div><div class="card-body" id="weather-body"><div class="skeleton skeleton-number"></div><div class="skeleton skeleton-text"></div></div></div>
+  <div class="card" id="card-aqi"><div class="card-header"><span class="card-icon-dot green"></span><span class="card-title">空氣品質</span><span class="card-source">WAQI</span></div><div class="card-body" id="aqi-body"><div class="skeleton skeleton-number"></div></div></div>
+  <div class="card" id="card-earthquake"><div class="card-header"><span class="card-icon-dot coral"></span><span class="card-title">最近地震</span><span class="card-source">CWA</span></div><div class="card-body" id="eq-body"><div class="skeleton skeleton-number"></div></div></div>
+</div>
 
-  </div>
+<div class="section-label">一週預報</div>
+<div class="card card-span-3" style="display:block"><div class="card-header"><span class="card-icon-dot teal"></span><span class="card-title">台北市 7 日天氣預報</span><span class="card-source">CWA</span></div><div class="card-body" id="weekly-body"><div class="skeleton skeleton-block"></div></div></div>
 
-  <!-- ═══ ROW 2: 一週天氣 ═══ -->
-  <div class="section-label">一週預報</div>
-  <div class="card card-span-3" id="card-weekly" style="display:block">
-    <div class="card-header">
-      <span class="card-icon-dot teal"></span>
-      <span class="card-title">台北市 7 日天氣預報</span>
-      <span class="card-source">CWA</span>
-    </div>
-    <div class="card-body" id="weekly-body">
-      <div class="skeleton skeleton-block"></div>
-    </div>
-  </div>
+<div class="section-label">交通即時</div>
+<div class="grid-row-4">
+  <div class="card"><div class="card-header"><span class="card-icon-dot blue"></span><span class="card-title">台北捷運</span><span class="card-source">臺北捷運</span></div><div class="card-body"><div class="mrt-lines"><div class="mrt-line"><span class="mrt-line-dot" style="background:#EF4823"></span><span class="mrt-line-name">淡水信義線</span><span class="mrt-status mrt-ok">正常</span></div><div class="mrt-line"><span class="mrt-line-dot" style="background:#008659"></span><span class="mrt-line-name">松山新店線</span><span class="mrt-status mrt-ok">正常</span></div><div class="mrt-line"><span class="mrt-line-dot" style="background:#F5A311"></span><span class="mrt-line-name">中和新蘆線</span><span class="mrt-status mrt-ok">正常</span></div><div class="mrt-line"><span class="mrt-line-dot" style="background:#0070BD"></span><span class="mrt-line-name">板南線</span><span class="mrt-status mrt-ok">正常</span></div><div class="mrt-line"><span class="mrt-line-dot" style="background:#C4A46B"></span><span class="mrt-line-name">文湖線</span><span class="mrt-status mrt-ok">正常</span></div><div class="mrt-line"><span class="mrt-line-dot" style="background:#F5A311"></span><span class="mrt-line-name">環狀線</span><span class="mrt-status mrt-ok">正常</span></div></div></div></div>
+  <div class="card" id="card-youbike"><div class="card-header"><span class="card-icon-dot teal"></span><span class="card-title">YouBike 熱點</span><span class="card-source">data.taipei</span></div><div class="card-body" id="youbike-body"><div class="skeleton skeleton-text"></div></div></div>
+  <div class="card" id="card-highway"><div class="card-header"><span class="card-icon-dot gold"></span><span class="card-title">國道路況</span><span class="card-source">1968</span></div><div class="card-body" id="highway-body"><div class="skeleton skeleton-text"></div></div></div>
+  <div class="card" id="card-parking-overview"><div class="card-header"><span class="card-icon-dot gold"></span><span class="card-title">停車場空位</span><span class="card-source">TCMSV</span></div><div class="card-body" id="parking-body"><div class="skeleton skeleton-number"></div></div></div>
+</div>
 
-  <!-- ═══ ROW 3: 交通即時 ═══ -->
-  <div class="section-label">交通即時</div>
-  <div class="grid-row-4">
+<div class="section-label">市場與財經</div>
+<div class="grid-row-3">
+  <div class="card" id="card-stock-tw"><div class="card-header"><span class="card-icon-dot coral"></span><span class="card-title">台股即時</span><span class="card-source">TWSE</span></div><div class="card-body" id="stock-tw-body"><div class="skeleton skeleton-number"></div></div></div>
+  <div class="card" id="card-stock-us"><div class="card-header"><span class="card-icon-dot blue"></span><span class="card-title">美股指數</span><span class="card-source">Yahoo Finance</span></div><div class="card-body" id="stock-us-body"><div class="skeleton skeleton-text"></div></div></div>
+  <div class="card card-span-2" style="display:block"><div class="card-header"><span class="card-icon-dot green"></span><span class="card-title">農漁產品行情</span><span class="card-source">MOA</span></div><div class="card-body" id="agri-body"><div class="skeleton skeleton-block"></div></div></div>
+</div>
 
-    <!-- Card 5: MRT -->
-    <div class="card" id="card-mrt">
-      <div class="card-header">
-        <span class="card-icon-dot blue"></span>
-        <span class="card-title">台北捷運</span>
-        <span class="card-source">臺北捷運</span>
-      </div>
-      <div class="card-body">
-        <div class="mrt-lines">
-          <div class="mrt-line"><span class="mrt-line-dot" style="background:#EF4823"></span><span class="mrt-line-name">淡水信義線</span><span class="mrt-status mrt-ok">正常</span></div>
-          <div class="mrt-line"><span class="mrt-line-dot" style="background:#008659"></span><span class="mrt-line-name">松山新店線</span><span class="mrt-status mrt-ok">正常</span></div>
-          <div class="mrt-line"><span class="mrt-line-dot" style="background:#F5A311"></span><span class="mrt-line-name">中和新蘆線</span><span class="mrt-status mrt-ok">正常</span></div>
-          <div class="mrt-line"><span class="mrt-line-dot" style="background:#0070BD"></span><span class="mrt-line-name">板南線</span><span class="mrt-status mrt-ok">正常</span></div>
-          <div class="mrt-line"><span class="mrt-line-dot" style="background:#C4A46B"></span><span class="mrt-line-name">文湖線</span><span class="mrt-status mrt-ok">正常</span></div>
-          <div class="mrt-line"><span class="mrt-line-dot" style="background:#F5A311"></span><span class="mrt-line-name">環狀線</span><span class="mrt-status mrt-ok">正常</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 6: YouBike -->
-    <div class="card" id="card-youbike">
-      <div class="card-header">
-        <span class="card-icon-dot teal"></span>
-        <span class="card-title">YouBike 熱點</span>
-        <span class="card-source">data.taipei</span>
-      </div>
-      <div class="card-body" id="youbike-body">
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-    <!-- Card 7: Highway -->
-    <div class="card" id="card-highway">
-      <div class="card-header">
-        <span class="card-icon-dot gold"></span>
-        <span class="card-title">國道路況</span>
-        <span class="card-source">1968</span>
-      </div>
-      <div class="card-body" id="highway-body">
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-    <!-- Card 8: Parking -->
-    <div class="card" id="card-parking">
-      <div class="card-header">
-        <span class="card-icon-dot gold"></span>
-        <span class="card-title">停車場空位</span>
-        <span class="card-source">TCMSV</span>
-      </div>
-      <div class="card-body" id="parking-body">
-        <div class="skeleton skeleton-number"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ═══ ROW 4: 市場與財經 ═══ -->
-  <div class="section-label">市場與財經</div>
-  <div class="grid-row-3">
-
-    <!-- Card 9: Taiwan Stock -->
-    <div class="card" id="card-stock-tw">
-      <div class="card-header">
-        <span class="card-icon-dot coral"></span>
-        <span class="card-title">台股即時</span>
-        <span class="card-source">TWSE</span>
-      </div>
-      <div class="card-body" id="stock-tw-body">
-        <div class="skeleton skeleton-number"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-    <!-- Card 10: US Stock -->
-    <div class="card" id="card-stock-us">
-      <div class="card-header">
-        <span class="card-icon-dot blue"></span>
-        <span class="card-title">美股指數</span>
-        <span class="card-source">Yahoo Finance</span>
-      </div>
-      <div class="card-body" id="stock-us-body">
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-    <!-- Card 11: Agriculture -->
-    <div class="card card-span-2" id="card-agriculture" style="display:block">
-      <div class="card-header">
-        <span class="card-icon-dot green"></span>
-        <span class="card-title">農漁產品行情</span>
-        <span class="card-source">MOA 農業部</span>
-      </div>
-      <div class="card-body" id="agri-body">
-        <div class="skeleton skeleton-block"></div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ═══ ROW 5: 民生資訊 ═══ -->
-  <div class="section-label">民生資訊</div>
-  <div class="grid-row-3">
-
-    <!-- Card 12: Holidays -->
-    <div class="card" id="card-holidays">
-      <div class="card-header">
-        <span class="card-icon-dot gold"></span>
-        <span class="card-title">假日倒數</span>
-        <span class="card-source">行政院</span>
-      </div>
-      <div class="card-body" id="holidays-body">
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-    <!-- Card 13: Activities -->
-    <div class="card" id="card-activities">
-      <div class="card-header">
-        <span class="card-icon-dot coral"></span>
-        <span class="card-title">台北活動</span>
-        <span class="card-source">data.taipei</span>
-      </div>
-      <div class="card-body" id="activities-body">
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text short"></div>
-      </div>
-    </div>
-
-    <!-- Card 14: Reservoir (v1.1 placeholder) -->
-    <div class="card" id="card-reservoir">
-      <div class="card-header">
-        <span class="card-icon-dot blue"></span>
-        <span class="card-title">水庫蓄水</span>
-        <span class="card-source">水利署</span>
-      </div>
-      <div class="card-body" id="reservoir-body">
-        <div class="reservoir-list">
-          <div class="reservoir-item">
-            <div class="reservoir-name">翡翠水庫</div>
-            <div class="reservoir-bar">
-              <div class="reservoir-track"><div class="reservoir-fill" style="width:68%"></div></div>
-              <span class="reservoir-pct">68%</span>
-            </div>
-          </div>
-          <div class="reservoir-item">
-            <div class="reservoir-name">石門水庫</div>
-            <div class="reservoir-bar">
-              <div class="reservoir-track"><div class="reservoir-fill" style="width:42%"></div></div>
-              <span class="reservoir-pct">42%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ═══ FOOTER ═══ -->
-  <div class="footer">
-    <div class="footer-sources">
-      資料來源：<span>CWA 氣象署</span> · <span>WAQI</span> · <span>MOA 農業部</span> · <span>Yahoo Finance</span> · <span>臺北市政府</span> · <span>data.taipei</span>
-    </div>
-    <div class="footer-meta">
-      每日 08:00 自動更新 · TPE Citizen Dashboard v2.0
-    </div>
-  </div>
+<div class="section-label">民生資訊</div>
+<div class="grid-row-3">
+  <div class="card" id="card-holidays"><div class="card-header"><span class="card-icon-dot gold"></span><span class="card-title">假日倒數</span><span class="card-source">行政院</span></div><div class="card-body" id="holidays-body"><div class="skeleton skeleton-text"></div></div></div>
+  <div class="card" id="card-activities"><div class="card-header"><span class="card-icon-dot coral"></span><span class="card-title">台北活動</span><span class="card-source">data.taipei</span></div><div class="card-body" id="activities-body"><div class="skeleton skeleton-text"></div></div></div>
+  <div class="card" id="card-reservoir"><div class="card-header"><span class="card-icon-dot blue"></span><span class="card-title">水庫蓄水</span><span class="card-source">水利署</span></div><div class="card-body"><div class="reservoir-list"><div class="reservoir-item"><div class="reservoir-name">翡翠水庫</div><div class="reservoir-bar"><div class="reservoir-track"><div class="reservoir-fill" style="width:68%"></div></div><span class="reservoir-pct">68%</span></div></div><div class="reservoir-item"><div class="reservoir-name">石門水庫</div><div class="reservoir-bar"><div class="reservoir-track"><div class="reservoir-fill" style="width:42%"></div></div><span class="reservoir-pct">42%</span></div></div></div></div></div>
+</div>
 
 </div>
 
-<button class="refresh-btn" onclick="location.reload()" title="重新整理">↻</button>
+<div class="tool-panel" id="tool-parking">
+<div class="tool-header"><h2>查詢台北市停車位</h2><p>即時查詢台北市各行政區停車場剩餘車位數量。資料來源：臺北市停車管理工程處 TCMSV。</p></div>
+<form class="query-form" onsubmit="return false">
+  <div class="form-group" style="flex:2"><label>行政區</label><select id="pk-district"><option value="">全部行政區</option><option value="信義區">信義區</option><option value="大安區">大安區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="中正區">中正區</option><option value="內湖區">內湖區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="南港區">南港區</option><option value="文山區">文山區</option><option value="萬華區">萬華區</option><option value="大同區">大同區</option></select></div>
+  <div class="form-group" style="flex:2"><label>停車場名稱</label><input type="text" id="pk-keyword" placeholder="例如：世貿、市府..."></div>
+  <button class="query-btn" id="pk-search">查詢車位</button>
+</form>
+<div class="results-area" id="pk-results"><div class="results-empty">請選擇行政區或輸入關鍵字查詢</div></div>
+</div>
 
+<div class="tool-panel" id="tool-judicial">
+<div class="tool-header"><h2>查詢司法案件全文</h2><p>輸入案號或關鍵字，查詢台灣各級法院裁判書全文。資料來源：司法院法學資料檢索系統。</p></div>
+<form class="query-form" onsubmit="return false">
+  <div class="form-group" style="flex:3"><label>案號（精準查詢）</label><input type="text" id="jd-caseno" placeholder="例如：臺灣臺北地方法院108年度易字第305號刑事判決"></div>
+  <div style="display:flex;align-items:center;padding-top:18px;color:var(--text-dim);font-size:var(--font-size-xs)">或</div>
+  <div class="form-group" style="flex:2"><label>關鍵字</label><input type="text" id="jd-keyword" placeholder="例如：毒品、詐欺..."></div>
+  <div class="form-group" style="flex:1"><label>法院</label><select id="jd-court"><option value="">全部</option><option value="最高法院">最高法院</option><option value="臺灣高等法院">臺灣高等法院</option><option value="臺北地方法院">臺北地方法院</option><option value="士林地方法院">士林地方法院</option><option value="新北地方法院">新北地方法院</option></select></div>
+  <div class="form-group" style="flex:1"><label>年度</label><select id="jd-year"><option value="">不限</option><option value="115">115年</option><option value="114">114年</option><option value="113">113年</option><option value="112">112年</option></select></div>
+  <button class="query-btn" id="jd-search">搜尋裁判書</button>
+</form>
+<div class="results-area" id="jd-results"><div class="results-empty">請輸入案號或關鍵字查詢裁判書</div></div>
+</div>
+
+<div class="tool-panel" id="tool-realestate">
+<div class="tool-header"><h2>查詢實價登錄資料</h2><p>查詢台北市不動產交易實價登錄資訊。資料來源：內政部不動產交易實價查詢服務網。</p></div>
+<form class="query-form" onsubmit="return false">
+  <div class="form-group" style="flex:1"><label>縣市</label><select id="re-city"><option value="臺北市" selected>臺北市</option></select></div>
+  <div class="form-group" style="flex:1.5"><label>行政區</label><select id="re-district"><option value="">請選擇</option><option value="信義區">信義區</option><option value="大安區">大安區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="中正區">中正區</option><option value="內湖區">內湖區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="南港區">南港區</option><option value="文山區">文山區</option><option value="萬華區">萬華區</option><option value="大同區">大同區</option></select></div>
+  <div class="form-group" style="flex:2"><label>路段 / 門牌 / 社區名稱</label><input type="text" id="re-address" placeholder="例如：信義路五段、忠孝東路..."></div>
+</form>
+<form class="query-form" onsubmit="return false" style="margin-top:0;border-top:1px solid var(--border-divider);border-radius:0 0 var(--card-radius) var(--card-radius)">
+  <div class="form-group" style="flex:1.5"><label>交易類型</label><select id="re-type"><option value="買賣" selected>買賣</option><option value="租賃">租賃</option></select></div>
+  <div class="form-group" style="flex:1.5"><label>建物型態</label><select id="re-building"><option value="">全部</option><option value="公寓">公寓</option><option value="透天厝">透天厝</option><option value="華廈">華廈</option><option value="住宅大樓">住宅大樓</option><option value="辦公大樓">辦公大樓</option><option value="套房">套房</option><option value="店面">店面</option></select></div>
+  <div class="form-group" style="flex:1"><label>起始年月 (民國)</label><select id="re-startY"><option value="101">101</option><option value="102">102</option><option value="103">103</option><option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option><option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option><option value="112">112</option><option value="113">113</option><option value="114" selected>114</option><option value="115">115</option></select></div>
+  <div class="form-group" style="flex:0.6"><label>月</label><select id="re-startM"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select></div>
+  <div style="display:flex;align-items:center;padding-top:18px;color:var(--text-dim)">至</div>
+  <div class="form-group" style="flex:1"><label>結束年月</label><select id="re-endY"><option value="101">101</option><option value="102">102</option><option value="103">103</option><option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option><option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option><option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115" selected>115</option></select></div>
+  <div class="form-group" style="flex:0.6"><label>月</label><select id="re-endM"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6" selected>6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select></div>
+</form>
+<form class="query-form" onsubmit="return false" style="margin-top:0;border-top:1px solid var(--border-divider);border-radius:0 0 var(--card-radius) var(--card-radius)">
+  <div class="form-group" style="flex:1"><label>總價最小 (萬)</label><input type="number" id="re-price-min" placeholder="不限"></div>
+  <div class="form-group" style="flex:1"><label>總價最大 (萬)</label><input type="number" id="re-price-max" placeholder="不限"></div>
+  <div class="form-group" style="flex:1"><label>面積最小 (坪)</label><input type="number" id="re-area-min" placeholder="不限"></div>
+  <div class="form-group" style="flex:1"><label>面積最大 (坪)</label><input type="number" id="re-area-max" placeholder="不限"></div>
+  <button class="query-btn" id="re-search">查詢交易</button>
+</form>
+<div class="results-area" id="re-results"><div class="results-empty">請選擇條件查詢實價登錄</div></div>
+</div>
+
+<div class="tool-panel" id="tool-schooldist">
+<div class="tool-header"><h2>查詢台北市房子學區</h2><p>兩種查詢模式：輸入地址查詢所屬學校，或輸入學校名稱查詢對應學區範圍（鄰里）。資料來源：台北市政府教育局學區劃分公告。</p></div>
+
+<div style="display:flex;gap:12px;margin-bottom:0">
+  <button class="tab-btn active" style="border-radius:14px;padding:8px 20px;font-size:var(--font-size-sm)" data-mode="address" onclick="window.__switchSchoolMode('address')">📍 地址查學校</button>
+  <button class="tab-btn" style="border-radius:14px;padding:8px 20px;font-size:var(--font-size-sm)" data-mode="school" onclick="window.__switchSchoolMode('school')">🏫 學校查學區</button>
+</div>
+
+<form class="query-form" id="sd-form-address" onsubmit="return false">
+  <div class="form-group" style="flex:2"><label>行政區</label><select id="sd-district"><option value="">請選擇</option><option value="信義區">信義區</option><option value="大安區">大安區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="中正區">中正區</option><option value="內湖區">內湖區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="南港區">南港區</option><option value="文山區">文山區</option><option value="萬華區">萬華區</option><option value="大同區">大同區</option></select></div>
+  <div class="form-group" style="flex:3"><label>里名</label><select id="sd-village"><option value="">請先選擇行政區</option></select></div>
+  <div class="form-group" style="flex:3"><label>路段 / 地址關鍵字</label><input type="text" id="sd-address" placeholder="例如：信義路五段、忠孝東路四段..."></div>
+  <button class="query-btn" id="sd-search-address">查詢學區</button>
+</form>
+
+<form class="query-form" id="sd-form-school" onsubmit="return false" style="display:none">
+  <div class="form-group" style="flex:2"><label>學校層級</label><select id="sd-level"><option value="all">全部</option><option value="elementary">國民小學</option><option value="junior">國民中學</option></select></div>
+  <div class="form-group" style="flex:2"><label>行政區</label><select id="sd-district2"><option value="">全部</option><option value="信義區">信義區</option><option value="大安區">大安區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="中正區">中正區</option><option value="內湖區">內湖區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="南港區">南港區</option><option value="文山區">文山區</option><option value="萬華區">萬華區</option><option value="大同區">大同區</option></select></div>
+  <div class="form-group" style="flex:4"><label>學校名稱關鍵字</label><input type="text" id="sd-school-name" placeholder="例如：仁愛、敦化、信義..."></div>
+  <button class="query-btn" id="sd-search-school">查詢學區範圍</button>
+</form>
+
+<div class="results-area" id="sd-results"><div class="results-empty">請選擇查詢模式：地址查學校 或 學校查學區</div></div>
+</div>
+
+<div class="footer">
+  <div class="footer-sources">資料來源：<span>CWA 氣象署</span> · <span>WAQI</span> · <span>MOA 農業部</span> · <span>Yahoo Finance</span> · <span>臺北市政府</span> · <span>司法院</span> · <span>內政部</span></div>
+  <div class="footer-meta">每日 08:00 自動更新 · TPE Citizen Dashboard v2.0</div>
+</div>
+
+</div>
+<button class="refresh-btn" onclick="location.reload()" title="重新整理">↻</button>
 </body>
 </html>

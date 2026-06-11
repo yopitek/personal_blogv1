@@ -1,9 +1,93 @@
-import http.server, json, urllib.request, urllib.parse, sys
+import http.server, json, urllib.request, urllib.parse, sys, asyncio, os
 from datetime import datetime
+from urllib.parse import parse_qs, urlparse
 
 CWA_KEY = "CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4"
 WAQI_TOKEN = "8a014c2f5972f2889639d4c7929f890e76ebd41a"
 TH_KEY = "sk--pyKU-tAYczCfBQB3wBaNw"
+
+# ── Judicial Search (via mcp-taiwan-legal-db) ──
+
+_jud_search = None
+_waf = None
+
+class _NoOpCache:
+    async def initialize(self): pass
+    async def get_search(self, *a, **kw): return None
+    async def set_search(self, *a, **kw): pass
+    async def close(self): pass
+
+async def _warmup_waf():
+    global _waf
+    if _waf is None:
+        legal_path = "/home/yopitek/Project/mcp-taiwan-legal-db"
+        sys.path.insert(0, legal_path)
+        from mcp_server.tools.waf_bypass import JudicialWAFBypass
+        _waf = JudicialWAFBypass()
+    print("[judicial] Warming up WAF cookies (this may take ~30s)...", flush=True)
+    await _waf.ensure_ready()
+    print("[judicial] WAF cookies ready!", flush=True)
+
+def _get_jud_search():
+    global _jud_search, _waf
+    if _jud_search is None:
+        legal_path = "/home/yopitek/Project/mcp-taiwan-legal-db"
+        sys.path.insert(0, legal_path)
+        from mcp_server.tools.judicial_search import JudicialSearchClient
+        if _waf is None:
+            from mcp_server.tools.waf_bypass import JudicialWAFBypass
+            _waf = JudicialWAFBypass()
+        _jud_search = JudicialSearchClient(_NoOpCache(), _waf)
+    return _jud_search
+
+def fetch_judicial(params):
+    global _waf
+    keyword = params.get("q", [""])[0]
+    caseno = params.get("caseno", [""])[0]
+    court = params.get("court", [""])[0]
+    year = params.get("year", [""])[0]
+    
+    async def _search():
+        client = _get_jud_search()
+        if caseno:
+            parts = caseno.replace("臺","台").replace("台","臺")
+            m = __import__('re').search(r'(\d+)\s*年度?\s*(\S+)\s*字第?\s*(\d+)\s*號', caseno)
+            if m:
+                return await client.search(
+                    case_word=m.group(2), case_number=m.group(3),
+                    year_from=int(m.group(1)), year_to=int(m.group(1)),
+                    court=court or "", max_results=5)
+        return await client.search(
+            keyword=keyword, court=court,
+            year_from=int(year) if year else 0,
+            max_results=10)
+
+    if _waf is None:
+        try:
+            asyncio.run(_warmup_waf())
+        except Exception as e:
+            print(f"[judicial] WAF warmup failed: {e}", flush=True)
+
+    try:
+        result = asyncio.run(_search())
+        items = []
+        for r in (result.get("results") or []):
+            y = r.get("case_year","")
+            w = r.get("case_word","")
+            n = r.get("case_number","")
+            items.append({
+                "case_no": f'{r.get("court","")}{y}年度{w}字第{n}號',
+                "title": r.get("title", ""),
+                "court": r.get("court", ""),
+                "date": r.get("date", ""),
+                "judge": r.get("judge", ""),
+                "excerpt": (r.get("summary") or r.get("content") or "")[:300],
+                "jid": r.get("jid", ""),
+                "url": f'https://judgment.judicial.gov.tw/FJUD/data.aspx?ty={r.get("case_type","")}&id={r.get("jid","")}' if r.get("jid") else ""
+            })
+        return {"items": items, "total": len(items), "source": "司法院法學資料檢索系統"}
+    except Exception as e:
+        return {"items": [], "total": 0, "source": "司法院", "error": str(e)}
 
 MOCK = {
     "weather": {"temperature":{"current":28,"feel":32,"min":25,"max":31},"condition":"多雲時陣雨","humidity":82,"wind":12,"rain_prob_today":60,"rain_prob_tomorrow":40},
@@ -77,7 +161,7 @@ def fetch_earthquake():
         "tpe_intensity": 2
     }
 
-REAL = {"weather":fetch_weather,"aqi":fetch_aqi,"lunar":fetch_lunar,"earthquake":fetch_earthquake}
+REAL = {"weather":fetch_weather,"aqi":fetch_aqi,"lunar":fetch_lunar,"earthquake":fetch_earthquake,"judicial":lambda:fetch_judicial({})}
 
 class Handler(http.server.BaseHTTPRequestHandler):
     def reply(self, data, code=200):
@@ -87,9 +171,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps(data, ensure_ascii=False).encode())
     def do_GET(self):
-        key = self.path.split("?")[0].replace("/api/","")
+        parsed = urlparse(self.path)
+        key = parsed.path.replace("/api/","")
+        params = parse_qs(parsed.query)
         if key == "health":
             return self.reply({"status":"ok"})
+        if key == "judicial":
+            return self.reply(fetch_judicial(params))
         fn = REAL.get(key)
         if fn:
             try: return self.reply(fn())
