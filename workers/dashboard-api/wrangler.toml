@@ -1,0 +1,27 @@
+# TPE Dashboard API Worker
+name = "tpe-dashboard-api"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+# Set by deploy.sh:
+account_id = "23b7d04464dce0263f7bcd34183998c4"
+
+# KV Namespace for cache
+# [[kv_namespaces]]
+# binding = "DASHBOARD_CACHE"
+# id = "PLACEHOLDER_KV_ID"  # Will be replaced after KV namespace created
+
+[vars]
+CWA_KEY = "CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4"
+WAQI_TOKEN = "8a014c2f5972f2889639d4c7929f890e76ebd41a"
+TH_KEY = "sk--pyKU-tAYczCfBQB3wBaNw"
+
+# Cron trigger: daily 08:00 TPE (00:00 UTC)
+[triggers]
+crons = ["0 0 * * *"]
+
+# Routes (custom domain mapping)
+# After deploy: map to api.zennote.app or use workers.dev subdomain
+
+# [env.production]
+# Uncomment for production-specific overrides (env vars, routes, etc.)
