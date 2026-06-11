@@ -1177,7 +1177,7 @@ async function getLegalFulltext(env, caseNumber) {
     const elapsed = ((Date.now() - t0) / 1000).toFixed(2);
     const searchUrl = `https://judgment.judicial.gov.tw/FJUD/default.aspx`;
     throw Object.assign(new Error(`${err.message} — 可直接至司法院查詢: ${searchUrl}`), {
-      detail: `Cloudflare 版司法全文目前僅支援可由 MCP 直接取得的近期案件；此案請先改用本機版/後續 Railway fallback。原始原因：${err.message}`,
+      detail: `Cloudflare 版司法全文目前僅支援可由 MCP 直接取得的近期案件；此案請先改用司法院查詢，後續會補 Railway fallback。原始原因：${err.message}`,
       source_url: searchUrl,
       _elapsed: parseFloat(elapsed)
     });

@@ -921,7 +921,22 @@ window.__viewFulltext = async function(caseNo, btnEl) {
     btnEl.textContent = '收合 ▲';
 
   } catch (err) {
-    fullArea.innerHTML = `<div style="color:#f87171;font-size:12px;padding:8px">❌ ${err.message}</div>`;
+    const msg = String(err?.message || '擷取失敗');
+    const isCfTimeout = /timeout|Cloudflare|MCP|近期案件|舊案/i.test(msg);
+    fullArea.innerHTML = isCfTimeout
+      ? `
+        <div style="padding:10px;border:1px solid rgba(248,113,113,.25);border-radius:6px;background:rgba(248,113,113,.06)">
+          <div style="color:#fca5a5;font-size:12px;font-weight:600;margin-bottom:6px">⚠ 目前 Cloudflare 版無法直接抓到這筆全文</div>
+          <div style="color:var(--text-dim);font-size:11px;line-height:1.7">
+            這通常是因為該案件不在 Cloudflare Worker 可用的近期 MCP corpus 內，或 MCP 連線逾時。<br>
+            你可以先複製案號，到司法院法學資料檢索系統直接查詢；之後補上 Railway fallback 後，這裡就能自動抓舊案全文。
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+            <button onclick="window.__copyCaseNo('${caseNo.replace(/'/g, "\\'")}')" class="jd-act-btn">📋 複製案號</button>
+            <a href="https://judgment.judicial.gov.tw/FJUD/default.aspx" target="_blank" class="jd-act-btn link">🔗 開啟司法院查詢</a>
+          </div>
+        </div>`
+      : `<div style="color:#f87171;font-size:12px;padding:8px">❌ ${msg}</div>`;
     fullArea.style.display = 'block';
     btnEl.textContent = '查看全文 ▼';
   } finally {
@@ -932,6 +947,10 @@ window.__viewFulltext = async function(caseNo, btnEl) {
 window.__copyJudicial = function(caseNo) {
   const d = _fulltextCache[caseNo];
   if (d?.jfull) navigator.clipboard.writeText(d.jfull).then(() => alert('已複製！'));
+};
+
+window.__copyCaseNo = function(caseNo) {
+  navigator.clipboard.writeText(caseNo).then(() => alert('案號已複製，請到司法院貼上查詢'));
 };
 
 window.__dlJudicial = function(caseNo, fmt) {
