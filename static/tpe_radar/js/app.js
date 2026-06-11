@@ -850,6 +850,29 @@ function _downloadFile(filename, content, mime = 'text/plain;charset=utf-8') {
   URL.revokeObjectURL(a.href);
 }
 
+async function _fetchJudicialWithTimeout(caseNo, timeoutMs = 12000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(JUDICIAL_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ case_number: caseNo }),
+      signal: controller.signal
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.detail || data.error || '擷取失敗');
+    return data;
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      throw new Error('Cloudflare 版查詢逾時；近期案件可稍後再試，舊案請先用本機版或直接前往司法院');
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 // Global: called by onclick on each "查看全文" button
 window.__viewFulltext = async function(caseNo, btnEl) {
   const cardEl = btnEl.closest('.jd-result-card');
@@ -871,13 +894,7 @@ window.__viewFulltext = async function(caseNo, btnEl) {
     // Use cache if available
     let data = _fulltextCache[caseNo];
     if (!data) {
-      const res = await fetch(JUDICIAL_API, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ case_number: caseNo })
-      });
-      data = await res.json();
-      if (!res.ok) throw new Error(data.detail || '擷取失敗');
+      data = await _fetchJudicialWithTimeout(caseNo);
       _fulltextCache[caseNo] = data;
     }
 

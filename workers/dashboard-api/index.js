@@ -927,6 +927,16 @@ async function warmCache(env) {
   console.log(`[CRON] Warm complete: ${results.join(', ')}`);
 }
 
+async function fetchWithTimeout(url, options = {}, timeoutMs = 10000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(`timeout:${timeoutMs}`), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 // ══════════════════════════════════════════════════════════════════
 //  POST /api/school-district
 //  台北市學區查詢 — TGOS geocode → 教育局 SchoolNeighbor API
@@ -934,6 +944,16 @@ async function warmCache(env) {
 
 async function getSchoolDistrict(address) {
   if (!address) throw new Error('address is required');
+  if (!address.includes('號')) {
+    throw new Error('請輸入完整門牌地址（需含號），例如：臺北市大安區通化街165巷1號');
+  }
+  if (!address.replace(/台/g, '臺').includes('臺北市')) {
+    throw new Error('目前僅支援臺北市地址');
+  }
+
+  // TGOS WebAPI requires an API key. If not configured, return a clear message
+  // instead of a confusing JSON parse failure.
+  throw new Error('Cloudflare 版學區查詢尚未設定 TGOS API key；目前請先用本機版或既有靜態學區資料');
 
   // Normalize address
   const addr = address.replace(/台北/g, '臺北').trim();
@@ -1048,7 +1068,7 @@ async function mcpCall(thKey, method, params, sessionId) {
   if (sessionId) headers['Mcp-Session-Id'] = sessionId;
 
   const body = JSON.stringify({ jsonrpc: '2.0', id: 1, method, params });
-  const resp = await fetch(TH_MCP_URL, { method: 'POST', headers, body });
+  const resp = await fetchWithTimeout(TH_MCP_URL, { method: 'POST', headers, body }, 8000);
 
   const newSid = resp.headers.get('mcp-session-id') || sessionId;
   const text   = await resp.text();
@@ -1083,7 +1103,7 @@ async function getLegalFulltext(env, caseNumber) {
 
   try {
     // Step 1: MCP initialize
-    const initResp = await fetch(TH_MCP_URL, {
+    const initResp = await fetchWithTimeout(TH_MCP_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -1097,9 +1117,12 @@ async function getLegalFulltext(env, caseNumber) {
         jsonrpc: '2.0', id: 0, method: 'initialize',
         params: { protocolVersion: '2024-11-05', capabilities: {}, clientInfo: { name: 'tpe-worker', version: '2.1' } }
       })
-    });
+    }, 8000);
     const sid = initResp.headers.get('mcp-session-id');
-    if (!sid) throw new Error('MCP init failed: no session ID');
+    if (!sid) {
+      const initText = await initResp.text().catch(() => '');
+      throw new Error(`Cloudflare Worker 無法建立 MCP session${initText ? '' : ''}`);
+    }
 
     // Step 2: notifications/initialized
     await mcpCall(thKey, 'notifications/initialized', {}, sid);
@@ -1154,7 +1177,7 @@ async function getLegalFulltext(env, caseNumber) {
     const elapsed = ((Date.now() - t0) / 1000).toFixed(2);
     const searchUrl = `https://judgment.judicial.gov.tw/FJUD/default.aspx`;
     throw Object.assign(new Error(`${err.message} — 可直接至司法院查詢: ${searchUrl}`), {
-      detail: err.message,
+      detail: `Cloudflare 版司法全文目前僅支援可由 MCP 直接取得的近期案件；此案請先改用本機版/後續 Railway fallback。原始原因：${err.message}`,
       source_url: searchUrl,
       _elapsed: parseFloat(elapsed)
     });
