@@ -501,26 +501,101 @@ function initTabs() {}
 
 // ═══════════════════ TOOL: 停車位查詢 ═══════════════════
 
-function initTools() {
-  const pkBtn = $('#pk-search');
-  if (pkBtn) pkBtn.addEventListener('click', searchParking);
+function initTools() {}
 
-  const jdBtn = $('#jd-search');
-  if (jdBtn) jdBtn.addEventListener('click', searchJudicial);
+// Export tool functions to window (called from HTML onclick)
+window._doSearchParking = searchParking;
+window._doSearchJudicial = searchJudicial;
+window._doSearchRealEstate = searchRealEstate;
 
-  const reBtn = $('#re-search');
-  if (reBtn) reBtn.addEventListener('click', searchRealEstate);
+let _parkingMap = null;
+let _parkingMarkers = [];
 
-  const sdAddrBtn = $('#sd-search-address');
-  if (sdAddrBtn) sdAddrBtn.addEventListener('click', () => searchSchoolDist('address'));
+async function searchParking() {
+  const btn = $('#pk-search');
+  const el = $('#pk-results');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>查詢中';
 
-  const sdSchBtn = $('#sd-search-school');
-  if (sdSchBtn) sdSchBtn.addEventListener('click', () => searchSchoolDist('school'));
+  try {
+    const district = $('#pk-district').value;
+    const keyword = ($('#pk-keyword').value || '').trim();
+    const data = await DashboardAPI.getParking();
+    const lots = data?.lots || [];
+    let filtered = lots;
+    if (district) filtered = filtered.filter(l => (l.area || '').includes(district) || (l.name || '').includes(district));
+    if (keyword) filtered = filtered.filter(l => (l.name || '').includes(keyword));
+    const showList = filtered.length ? filtered : lots.slice(0, 6);
 
-  const sdDistrict = $('#sd-district');
-  if (sdDistrict) sdDistrict.addEventListener('change', updateVillages);
+    el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${showList.length}</span> 個停車場</span><span style="font-size:var(--font-size-xs);color:var(--text-dim)">${data?.district || '信義區'}</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:var(--space-lg);overflow-y:auto;max-height:450px">
+          <table class="result-table"><thead><tr><th>停車場</th><th>車位</th><th>狀態</th></tr></thead>
+          <tbody>${showList.map(l => {
+            const a = l.available || 0;
+            const tag = a > 50 ? 'tag-green' : a > 10 ? 'tag-gold' : 'tag-coral';
+            const label = a > 50 ? '充足' : a > 10 ? '尚可' : '快滿';
+            return `<tr style="cursor:pointer" onclick="window._flyToParking&&window._flyToParking('${(l.id||l.name||'').replace(/'/g,'')}')">
+              <td><span class="highlight">${l.name||'—'}</span></td><td>${a} 位</td><td><span class="tag ${tag}">${label}</span></td></tr>`;
+          }).join('')}</tbody></table>
+        </div>
+        <div id="parking-map" style="height:450px;background:var(--accent-teal-light);border-radius:0 var(--card-radius-sm) var(--card-radius-sm) 0"></div>
+      </div>`;
 
-  window.__switchSchoolMode = switchSchoolMode;
+    setTimeout(() => initParkingMap(showList), 400);
+  } catch (e) {
+    el.innerHTML = `<div class="results-empty">載入失敗：${e.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '查詢車位';
+  }
+}
+
+function initParkingMap(lots) {
+  const mapEl = document.getElementById('parking-map');
+  if (!mapEl) return;
+  if (_parkingMap) { _parkingMap.remove(); _parkingMap = null; }
+
+  _parkingMap = L.map('parking-map', { center: [25.0330, 121.5654], zoom: 14, zoomControl: true, attributionControl: false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(_parkingMap);
+
+  const coords = {
+    '臺北大巨蛋園區停車場':[25.0413,121.5605],'臺北文創停車場':[25.0439,121.5615],
+    '台北君悅酒店停車場':[25.0353,121.5622],'府前廣場地下停車場':[25.0375,121.5637],
+    '信義國小地下停車場':[25.0331,121.5585],'興雅國中地下停車場':[25.0380,121.5660],
+    '台北市政府':[25.0375,121.5637],'市府轉運站':[25.0403,121.5650],
+    '信義廣場地下停車場':[25.0332,121.5601],'松壽廣場地下停車場':[25.0350,121.5640],
+    '松山工農地下停車場':[25.0368,121.5665],'信義區行政中心':[25.0340,121.5662],
+    '信安街67巷':[25.0317,121.5563],'松德臨時':[25.0365,121.5710],
+    '世貿中心':[25.0344,121.5623],'台北101':[25.0339,121.5645],
+  };
+
+  _parkingMarkers = [];
+  lots.forEach(lot => {
+    let coord = coords[lot.name] || coords[lot.id];
+    if (!coord) {
+      for (const [k,v] of Object.entries(coords)) {
+        if ((lot.name||'').includes(k) || k.includes(lot.name||'')) { coord = v; break; }
+      }
+    }
+    if (!coord) return;
+    const a = lot.available || 0;
+    const color = a > 50 ? '#7BA87B' : a > 10 ? '#D4A853' : '#E8867A';
+    const icon = L.divIcon({
+      className: 'pk-marker',
+      html: `<div style="background:${color};width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.3);border:2px solid #fff">${a}</div>`,
+      iconSize: [32,32], iconAnchor: [16,16]
+    });
+    const m = L.marker([coord[0], coord[1]], { icon }).addTo(_parkingMap);
+    m.bindPopup(`<b>${lot.name}</b><br>剩餘車位：${a} 位`);
+    m._lotId = lot.id || lot.name;
+    _parkingMarkers.push(m);
+  });
+
+  window._flyToParking = function(id) {
+    const m = _parkingMarkers.find(m => m._lotId === id);
+    if (m && _parkingMap) { _parkingMap.flyTo(m.getLatLng(), 16); m.openPopup(); }
+  };
 }
 
 function switchSchoolMode(mode) {
@@ -732,35 +807,6 @@ async function searchBySchool(el) {
       </div>`).join('')}</div>
     <div style="font-size:10px;color:var(--text-dim);text-align:center;padding:12px">學區範圍以台北市政府教育局最新公告為準</div>`;
 }
-  const btn = $('#pk-search');
-  const el = $('#pk-results');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span>查詢中';
-
-  try {
-    const district = $('#pk-district').value;
-    const keyword = ($('#pk-keyword').value || '').trim();
-    const data = await DashboardAPI.getParking();
-    const lots = data?.lots || [];
-
-    let filtered = lots;
-    if (district) filtered = filtered.filter(l => l.area === district || l.name.includes(district));
-    if (keyword) filtered = filtered.filter(l => l.name.includes(keyword));
-
-    if (!filtered.length) {
-      el.innerHTML = '<div class="results-empty">查無符合條件的停車場</div>';
-    } else {
-      el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${filtered.length}</span> 個停車場</span></div>
-        <table class="result-table"><thead><tr><th>停車場名稱</th><th>剩餘車位</th><th>狀態</th></tr></thead>
-        <tbody>${filtered.map(l => `<tr><td><span class="highlight">${l.name}</span></td><td>${l.available || 0} 位</td><td><span class="tag ${(l.available || 0) > 50 ? 'tag-green' : (l.available || 0) > 10 ? 'tag-gold' : 'tag-coral'}">${(l.available || 0) > 50 ? '充足' : (l.available || 0) > 10 ? '尚可' : '快滿'}</span></td></tr>`).join('')}</tbody></table>`;
-    }
-  } catch (e) {
-    el.innerHTML = `<div class="results-empty">載入失敗：${e.message}</div>`;
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '查詢車位';
-  }
-}
 
 // ═══════════════════ TOOL: 司法案件全文查詢 ═══════════════════
 
@@ -839,40 +885,5 @@ async function searchRealEstate() {
   } finally {
     btn.disabled = false;
     btn.textContent = '查詢交易';
-  }
-}
-
-// ═══════════════════ TOOL: 學區查詢 ═══════════════════
-
-async function searchSchoolDist() {
-  const btn = $('#sd-search');
-  const el = $('#sd-results');
-  const district = $('#sd-district').value;
-  const address = ($('#sd-address').value || '').trim();
-  if (!district || !address) { el.innerHTML = '<div class="results-empty">請選擇行政區並輸入路段</div>'; return; }
-
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span>查詢中';
-
-  try {
-    const data = await DashboardAPI.searchSchoolDist(district, address);
-    const schools = data?.schools || [];
-
-    if (!schools.length) {
-      el.innerHTML = '<div class="results-empty">查無學區資料，請確認地址正確</div>';
-    } else {
-      el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${schools.length}</span> 所學校</span></div>
-        <div class="result-cards">${schools.map(s => `
-          <div class="result-card-item">
-            <div class="rc-title">${s.name || ''}</div>
-            <div class="rc-meta"><span>${s.level || ''}</span><span>${s.type || '一般'}</span>${s.quota ? `<span class="tag ${s.quota.includes('額滿') ? 'tag-coral' : 'tag-green'}">${s.quota}</span>` : ''}</div>
-            ${s.address ? `<div style="font-size:var(--font-size-xs);color:var(--text-dim);margin-top:6px">${s.address}</div>` : ''}
-          </div>`).join('')}</div>`;
-    }
-  } catch (e) {
-    el.innerHTML = '<div class="results-empty">學區查詢系統暫時無法連線</div>';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '查詢學區';
   }
 }

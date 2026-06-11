@@ -9,6 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme.css">
 <script>window.DASHBOARD_API='https://tpe-dashboard-api.goolai.workers.dev/api';</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 window.__switchTab = function(tab) {
   document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -37,6 +39,17 @@ window.__switchSchoolMode = function(mode) {
   var el = document.getElementById('sd-results');
   if (el) el.innerHTML = '<div class="results-empty">請選擇查詢模式：地址查學校 或 學校查學區</div>';
 };
+
+window.__searchParking = function() { window._doSearchParking && window._doSearchParking(); };
+window.__searchJudicial = function() { window._doSearchJudicial && window._doSearchJudicial(); };
+window.__searchRealEstate = function() { window._doSearchRealEstate && window._doSearchRealEstate(); };
+
+// Ensure initTools is called when module is ready
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    if (!window._doSearchParking) console.warn('Tool functions not loaded - initTools may have failed');
+  }, 8000);
+});
 </script>
 <script type="module" src="js/app.js"></script>
 </head>
@@ -110,7 +123,7 @@ window.__switchSchoolMode = function(mode) {
 <form class="query-form" onsubmit="return false">
   <div class="form-group" style="flex:2"><label>行政區</label><select id="pk-district"><option value="">全部行政區</option><option value="信義區">信義區</option><option value="大安區">大安區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="中正區">中正區</option><option value="內湖區">內湖區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="南港區">南港區</option><option value="文山區">文山區</option><option value="萬華區">萬華區</option><option value="大同區">大同區</option></select></div>
   <div class="form-group" style="flex:2"><label>停車場名稱</label><input type="text" id="pk-keyword" placeholder="例如：世貿、市府..."></div>
-  <button class="query-btn" id="pk-search">查詢車位</button>
+  <button class="query-btn" id="pk-search" onclick="window.__searchParking()">查詢車位</button>
 </form>
 <div class="results-area" id="pk-results"><div class="results-empty">請選擇行政區或輸入關鍵字查詢</div></div>
 </div>
@@ -123,7 +136,7 @@ window.__switchSchoolMode = function(mode) {
   <div class="form-group" style="flex:2"><label>關鍵字</label><input type="text" id="jd-keyword" placeholder="例如：毒品、詐欺..."></div>
   <div class="form-group" style="flex:1"><label>法院</label><select id="jd-court"><option value="">全部</option><option value="最高法院">最高法院</option><option value="臺灣高等法院">臺灣高等法院</option><option value="臺北地方法院">臺北地方法院</option><option value="士林地方法院">士林地方法院</option><option value="新北地方法院">新北地方法院</option></select></div>
   <div class="form-group" style="flex:1"><label>年度</label><select id="jd-year"><option value="">不限</option><option value="115">115年</option><option value="114">114年</option><option value="113">113年</option><option value="112">112年</option></select></div>
-  <button class="query-btn" id="jd-search">搜尋裁判書</button>
+  <button class="query-btn" id="jd-search" onclick="window.__searchJudicial()">搜尋裁判書</button>
 </form>
 <div class="results-area" id="jd-results"><div class="results-empty">請輸入案號或關鍵字查詢裁判書</div></div>
 </div>
@@ -149,7 +162,7 @@ window.__switchSchoolMode = function(mode) {
   <div class="form-group" style="flex:1"><label>總價最大 (萬)</label><input type="number" id="re-price-max" placeholder="不限"></div>
   <div class="form-group" style="flex:1"><label>面積最小 (坪)</label><input type="number" id="re-area-min" placeholder="不限"></div>
   <div class="form-group" style="flex:1"><label>面積最大 (坪)</label><input type="number" id="re-area-max" placeholder="不限"></div>
-  <button class="query-btn" id="re-search">查詢交易</button>
+  <button class="query-btn" id="re-search" onclick="window.__searchRealEstate()">查詢交易</button>
 </form>
 <div class="results-area" id="re-results"><div class="results-empty">請選擇條件查詢實價登錄</div></div>
 </div>
