@@ -810,9 +810,12 @@ async function searchBySchool(el) {
 
 // ═══════════════════ TOOL: 司法案件全文查詢 ═══════════════════
 
-const JUDICIAL_API = window.location.hostname === 'localhost'
-  ? 'http://localhost:8003/api/legal/fulltext'
-  : 'https://tpe-tools.zennote.app/api/legal/fulltext'; // Production backend (Phase 2)
+const TOOLS_API = window.location.hostname === 'localhost'
+  ? 'http://localhost:8003/api'
+  : 'https://tpe-dashboard-api.goolai.workers.dev/api';
+
+const JUDICIAL_API = `${TOOLS_API}/legal/fulltext`;
+const SCHOOL_DISTRICT_API = `${TOOLS_API}/school-district`;
 
 // Cache fetched full texts so re-clicking is instant
 const _fulltextCache = {};

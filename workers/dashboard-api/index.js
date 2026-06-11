@@ -1,31 +1,37 @@
 /**
- * TPE Dashboard API Proxy — Cloudflare Worker v2.0
+ * TPE Dashboard API Proxy — Cloudflare Worker v2.1
  * Real data for all endpoints. No more mock data.
  *
  * Endpoints:
- *   GET /api/weather       → CWA 36hr forecast (F-D0047-063)
- *   GET /api/weather-7d    → CWA 7-day forecast (F-D0047-091)
- *   GET /api/aqi           → WAQI Taipei Guting @12420
- *   GET /api/uv            → CWA UV index
- *   GET /api/earthquake    → CWA earthquake (E-A0015-001)
- *   GET /api/youbike       → Taipei City YouBike 2.0 (direct blob)
- *   GET /api/parking       → TCMSV realtime (join available + metadata)
- *   GET /api/stock         → Yahoo Finance (TWII, DJI, IXIC, GSPC…)
- *   GET /api/agriculture   → MOA AgriProducts (real 329+ records)
- *   GET /api/education     → Taiwan holiday schedule (computed)
- *   GET /api/activities    → Taipei cultural events
- *   GET /api/lunar         → Twinkle Hub MCP
- *   GET /api/health        → Health check
+ *   GET  /api/weather         → CWA 36hr forecast (F-D0047-063)
+ *   GET  /api/weather-7d      → CWA 7-day forecast (F-D0047-091)
+ *   GET  /api/aqi             → WAQI Taipei Guting @12420
+ *   GET  /api/uv              → CWA UV index
+ *   GET  /api/earthquake      → CWA earthquake (E-A0015-001)
+ *   GET  /api/youbike         → Taipei City YouBike 2.0 (direct blob)
+ *   GET  /api/parking         → TCMSV realtime (join available + metadata)
+ *   GET  /api/stock           → Yahoo Finance (TWII, DJI, IXIC, GSPC…)
+ *   GET  /api/agriculture     → MOA AgriProducts (real 329+ records)
+ *   GET  /api/education       → Taiwan holiday schedule (computed)
+ *   GET  /api/activities      → Taipei cultural events
+ *   GET  /api/lunar           → Twinkle Hub MCP
+ *   GET  /api/health          → Health check
+ *   POST /api/school-district → 台北市學區查詢 (TGOS geocode + 教育局 API)
+ *   POST /api/legal/fulltext  → 司法院裁判書全文 (Twinkle Hub MCP)
  */
+
+// TH_KEY is stored in Worker env vars (wrangler secret)
+const TH_MCP_URL = 'https://api.twinkleai.tw/mcp/';
 
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const path = url.pathname.replace('/api/', '');
+    const path = url.pathname.replace(/^\/api\//, '');
 
     const headers = {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
       'Content-Type': 'application/json; charset=utf-8',
       'Cache-Control': 'public, max-age=60'
     };
@@ -36,6 +42,27 @@ export default {
 
     try {
       let data;
+
+      // POST endpoints
+      if (request.method === 'POST') {
+        const body = await request.json().catch(() => ({}));
+        switch (path) {
+          case 'school-district':
+            data = await getSchoolDistrict(body.address || '');
+            return new Response(JSON.stringify(data), {
+              headers: { ...headers, 'Cache-Control': 'public, max-age=86400' }
+            });
+          case 'legal/fulltext':
+            data = await getLegalFulltext(env, body.case_number || '');
+            return new Response(JSON.stringify(data), {
+              headers: { ...headers, 'Cache-Control': 'public, max-age=604800' } // 7 days
+            });
+          default:
+            return new Response(JSON.stringify({ error: 'Unknown POST endpoint', path }), { status: 404, headers });
+        }
+      }
+
+      // GET endpoints
       switch (path) {
         case 'weather':       data = await getWeather(env); break;
         case 'weather-7d':    data = await getWeather7d(env); break;
@@ -50,7 +77,7 @@ export default {
         case 'activities':    data = await getActivities(env); break;
         case 'lunar':         data = await getLunar(env); break;
         case 'judicial':      data = await getJudicial(env, url.searchParams); break;
-        case 'health':        data = { status: 'ok', version: '2.0' }; break;
+        case 'health':        data = { status: 'ok', version: '2.1' }; break;
         default:
           return new Response(JSON.stringify({ error: 'Unknown endpoint', path }), { status: 404, headers });
       }
@@ -898,4 +925,238 @@ async function warmCache(env) {
     }
   }
   console.log(`[CRON] Warm complete: ${results.join(', ')}`);
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  POST /api/school-district
+//  台北市學區查詢 — TGOS geocode → 教育局 SchoolNeighbor API
+// ══════════════════════════════════════════════════════════════════
+
+async function getSchoolDistrict(address) {
+  if (!address) throw new Error('address is required');
+
+  // Normalize address
+  const addr = address.replace(/台北/g, '臺北').trim();
+
+  // Step 1: TGOS geocode
+  const tgosParams = new URLSearchParams({
+    Address: addr,
+    SR: 'TW97TM2',
+    type: 'JSON'
+  });
+  const tgosResp = await fetch(
+    `https://map.tpgos.gov.taipei/embed/webapi.cfm?${tgosParams}`,
+    { headers: { 'User-Agent': 'Mozilla/5.0', 'Referer': 'https://zennote.app/' } }
+  );
+  if (!tgosResp.ok) throw new Error(`TGOS HTTP ${tgosResp.status}`);
+
+  const tgosText = await tgosResp.text();
+  let geo;
+  try { geo = JSON.parse(tgosText); } catch { throw new Error('TGOS parse error'); }
+
+  if (!geo.DETAIL) throw new Error('地址無法定位，請輸入更完整的門牌（含巷弄號）');
+
+  const detail  = geo.DETAIL;
+  const zone    = detail.ZONE  || '';
+  const lie     = detail.LI    || '';
+  const lin     = detail.LIN   ? `${detail.LIN}鄰` : '';
+  const x       = detail.X     || '';
+  const y       = detail.Y     || '';
+
+  // Step 2: Query elementary schools
+  const elemResp = await fetch(
+    `https://schooldistrict.tp.edu.tw/SchoolneighborAction?cmd=1&sno=${encodeURIComponent(lie)}&sntype=E`,
+    { headers: { 'User-Agent': 'Mozilla/5.0' } }
+  );
+  const elemText = elemResp.ok ? await elemResp.text() : '';
+
+  // Step 3: Query junior high schools
+  const jrResp = await fetch(
+    `https://schooldistrict.tp.edu.tw/SchoolneighborAction?cmd=1&sno=${encodeURIComponent(lie)}&sntype=J`,
+    { headers: { 'User-Agent': 'Mozilla/5.0' } }
+  );
+  const jrText = jrResp.ok ? await jrResp.text() : '';
+
+  function parseSchools(html) {
+    if (!html) return { display: '查無資料', list: [], overenrolled: false, deadline: '' };
+    const names = [];
+    const re = /class="[^"]*school[^"]*"[^>]*>([^<]{2,30})/gi;
+    let m;
+    while ((m = re.exec(html)) !== null) names.push(m[1].trim());
+    // Simpler fallback: extract any Chinese school name pattern
+    if (!names.length) {
+      const re2 = /([^\s<>]{2,6}(國小|國中|中學))/g;
+      while ((m = re2.exec(html)) !== null) {
+        if (!names.includes(m[1])) names.push(m[1]);
+      }
+    }
+    const display = names.length ? names.join('、') : '查無資料';
+    const list    = names.map(n => ({ name: n, is_big: false, address: '', website: '', tel: '' }));
+    return { display, list, overenrolled: false, deadline: '' };
+  }
+
+  const elem = parseSchools(elemText);
+  const jr   = parseSchools(jrText);
+
+  return {
+    address: addr,
+    ward: `${zone} ${lie} ${lin}`,
+    zone, lie, lin, x, y,
+    elementary:             elem.display,
+    elementary_list:        elem.list,
+    elementary_overenrolled: elem.overenrolled,
+    elementary_deadline:    elem.deadline,
+    junior:                 jr.display,
+    junior_list:            jr.list,
+    junior_overenrolled:    jr.overenrolled,
+    junior_deadline:        jr.deadline,
+    _source: 'cloudflare-worker'
+  };
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  POST /api/legal/fulltext
+//  司法院裁判書全文 — Twinkle Hub MCP get_judicial_full
+//  Works for cases in MCP corpus (recent ~12 months).
+//  Falls back to a link to 司法院 for older cases.
+// ══════════════════════════════════════════════════════════════════
+
+function parseCaseNumberFull(raw) {
+  const courtM  = raw.match(/^(.+?法院)/);
+  const yearM   = raw.match(/(\d+)\s*年度/);
+  const typeM   = raw.match(/年度\S*?(\S+?)字第/);
+  const numM    = raw.match(/第\s*(\d+)\s*號/);
+  const jtypeM  = raw.match(/(刑事|民事)/);
+  return {
+    court:    courtM  ? courtM[1]  : '',
+    year:     yearM   ? yearM[1]   : '',
+    caseType: typeM   ? typeM[1]   : '',
+    number:   numM    ? numM[1]    : '',
+    jtype:    jtypeM  ? jtypeM[1]  : '',
+  };
+}
+
+async function mcpCall(thKey, method, params, sessionId) {
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${thKey}`,
+    'Accept': 'application/json, text/event-stream',
+    'User-Agent': 'Mozilla/5.0 (Cloudflare-Worker)',
+    'Origin': 'https://hub.twinkleai.tw',
+    'Referer': 'https://hub.twinkleai.tw/',
+  };
+  if (sessionId) headers['Mcp-Session-Id'] = sessionId;
+
+  const body = JSON.stringify({ jsonrpc: '2.0', id: 1, method, params });
+  const resp = await fetch(TH_MCP_URL, { method: 'POST', headers, body });
+
+  const newSid = resp.headers.get('mcp-session-id') || sessionId;
+  const text   = await resp.text();
+
+  // Parse SSE response
+  for (const line of text.split('\n')) {
+    const data = line.startsWith('data:') ? line.slice(5).trim() : line.trim();
+    if (!data) continue;
+    try {
+      const obj = JSON.parse(data);
+      if (obj.result?.content) {
+        for (const c of obj.result.content) {
+          if (c.type === 'text') {
+            try { return { sid: newSid, result: JSON.parse(c.text) }; }
+            catch { return { sid: newSid, result: { raw_text: c.text } }; }
+          }
+        }
+      }
+      if (obj.result) return { sid: newSid, result: obj.result };
+      if (obj.error)  return { sid: newSid, error: obj.error.message };
+    } catch {}
+  }
+  return { sid: newSid, error: 'No parseable response' };
+}
+
+async function getLegalFulltext(env, caseNumber) {
+  if (!caseNumber) throw new Error('case_number is required');
+
+  const thKey = env.TH_KEY || 'sk--pyKU-tAYczCfBQB3wBaNw';
+  const parsed = parseCaseNumberFull(caseNumber);
+  const t0 = Date.now();
+
+  try {
+    // Step 1: MCP initialize
+    const initResp = await fetch(TH_MCP_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${thKey}`,
+        'Accept': 'application/json, text/event-stream',
+        'User-Agent': 'Mozilla/5.0 (Cloudflare-Worker)',
+        'Origin': 'https://hub.twinkleai.tw',
+        'Referer': 'https://hub.twinkleai.tw/',
+      },
+      body: JSON.stringify({
+        jsonrpc: '2.0', id: 0, method: 'initialize',
+        params: { protocolVersion: '2024-11-05', capabilities: {}, clientInfo: { name: 'tpe-worker', version: '2.1' } }
+      })
+    });
+    const sid = initResp.headers.get('mcp-session-id');
+    if (!sid) throw new Error('MCP init failed: no session ID');
+
+    // Step 2: notifications/initialized
+    await mcpCall(thKey, 'notifications/initialized', {}, sid);
+
+    // Step 3: search_judicial to find jid
+    const searchResult = await mcpCall(thKey, 'tools/call', {
+      name: 'search_judicial',
+      arguments: {
+        query: `${parsed.year}年度${parsed.caseType}字第${parsed.number}號 ${parsed.court}`,
+        limit: 3
+      }
+    }, sid);
+
+    if (searchResult.error) throw new Error(searchResult.error);
+
+    const hits = Array.isArray(searchResult.result) ? searchResult.result : [];
+    if (!hits.length) throw new Error('MCP corpus 無此案件（可能為舊案件或未公開）');
+
+    const hit = hits[0];
+    const jid = hit.jid || hit.id || '';
+
+    if (!jid) throw new Error('無法取得案件 JID');
+
+    // Step 4: get_judicial_full
+    const fullResult = await mcpCall(thKey, 'tools/call', {
+      name: 'get_judicial_full',
+      arguments: { jid }
+    }, sid);
+
+    if (fullResult.error) throw new Error(fullResult.error);
+    if (!fullResult.result?.jfull) throw new Error('全文為空');
+
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(2);
+    return {
+      case_number:   caseNumber,
+      title:         fullResult.result.jtitle || '',
+      court:         parsed.court,
+      year:          parsed.year,
+      case_type:     parsed.caseType,
+      number:        parsed.number,
+      judgment_type: parsed.jtype,
+      jfull:         fullResult.result.jfull,
+      jid:           jid,
+      source_url:    `https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=${encodeURIComponent(jid)}`,
+      char_count:    fullResult.result.jfull.length,
+      _source:       'cloudflare-mcp',
+      _elapsed:      parseFloat(elapsed)
+    };
+
+  } catch (err) {
+    // Graceful fallback: return helpful error with link to 司法院
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(2);
+    const searchUrl = `https://judgment.judicial.gov.tw/FJUD/default.aspx`;
+    throw Object.assign(new Error(`${err.message} — 可直接至司法院查詢: ${searchUrl}`), {
+      detail: err.message,
+      source_url: searchUrl,
+      _elapsed: parseFloat(elapsed)
+    });
+  }
 }
