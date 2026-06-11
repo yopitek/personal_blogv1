@@ -1,23 +1,15 @@
 /**
- * TPE Dashboard API Proxy — Cloudflare Worker v2.1
- * Real data for all endpoints. No more mock data.
+ * TPE Dashboard API Proxy — Cloudflare Worker v2.2
+ * Real data for all endpoints.
  *
- * Endpoints:
- *   GET  /api/weather         → CWA 36hr forecast (F-D0047-063)
- *   GET  /api/weather-7d      → CWA 7-day forecast (F-D0047-091)
- *   GET  /api/aqi             → WAQI Taipei Guting @12420
- *   GET  /api/uv              → CWA UV index
- *   GET  /api/earthquake      → CWA earthquake (E-A0015-001)
- *   GET  /api/youbike         → Taipei City YouBike 2.0 (direct blob)
- *   GET  /api/parking         → TCMSV realtime (join available + metadata)
- *   GET  /api/stock           → Yahoo Finance (TWII, DJI, IXIC, GSPC…)
- *   GET  /api/agriculture     → MOA AgriProducts (real 329+ records)
- *   GET  /api/education       → Taiwan holiday schedule (computed)
- *   GET  /api/activities      → Taipei cultural events
- *   GET  /api/lunar           → Twinkle Hub MCP
- *   GET  /api/health          → Health check
- *   POST /api/school-district → 台北市學區查詢 (TGOS geocode + 教育局 API)
- *   POST /api/legal/fulltext  → 司法院裁判書全文 (Twinkle Hub MCP)
+ * POST /api/legal/fulltext strategy:
+ *   1. Try Twinkle Hub MCP (fast, recent cases)
+ *   2. On timeout/fail → try RAILWAY_URL fallback (Playwright, all cases)
+ *   3. Both fail → return 404 with helpful message
+ *
+ * Set RAILWAY_URL secret to enable Railway fallback:
+ *   wrangler secret put RAILWAY_URL
+ *   value: https://<your-service>.railway.app
  */
 
 // TH_KEY is stored in Worker env vars (wrangler secret)
@@ -56,8 +48,7 @@ export default {
             data = await getLegalFulltext(env, body.case_number || '');
             return new Response(JSON.stringify(data), {
               headers: { ...headers, 'Cache-Control': 'public, max-age=604800' } // 7 days
-            });
-          default:
+            });          default:
             return new Response(JSON.stringify({ error: 'Unknown POST endpoint', path }), { status: 404, headers });
         }
       }
@@ -1173,13 +1164,50 @@ async function getLegalFulltext(env, caseNumber) {
     };
 
   } catch (err) {
-    // Graceful fallback: return helpful error with link to 司法院
-    const elapsed = ((Date.now() - t0) / 1000).toFixed(2);
+    const mcpElapsed = ((Date.now() - t0) / 1000).toFixed(2);
+
+    // ── Railway fallback ──────────────────────────────────────────────────────
+    const railwayUrl = (env.RAILWAY_URL || '').replace(/\/$/, '');
+    if (railwayUrl) {
+      try {
+        const t1 = Date.now();
+        const rbody = JSON.stringify({ case_number: caseNumber });
+        const rResp = await fetchWithTimeout(
+          `${railwayUrl}/api/legal/fulltext`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: rbody,
+          },
+          50000  // 50s — Playwright scraping takes ~10-15s
+        );
+        if (rResp.ok) {
+          const rData = await rResp.json();
+          if (rData.jfull) {
+            rData._source      = 'railway-playwright';
+            rData._mcp_elapsed = parseFloat(mcpElapsed);
+            rData._elapsed     = parseFloat(((Date.now() - t0) / 1000).toFixed(2));
+            return rData;
+          }
+        }
+        const rErr = await rResp.text().catch(() => 'unknown');
+        throw new Error(`Railway returned ${rResp.status}: ${rErr.slice(0, 200)}`);
+      } catch (rErr) {
+        const totalElapsed = ((Date.now() - t0) / 1000).toFixed(2);
+        throw Object.assign(new Error(`MCP 與 Railway 均失敗 — ${rErr.message}`), {
+          detail: `MCP: ${err.message} / Railway: ${rErr.message}`,
+          source_url: 'https://judgment.judicial.gov.tw/FJUD/default.aspx',
+          _elapsed: parseFloat(totalElapsed),
+        });
+      }
+    }
+
+    // No Railway URL configured
     const searchUrl = `https://judgment.judicial.gov.tw/FJUD/default.aspx`;
-    throw Object.assign(new Error(`${err.message} — 可直接至司法院查詢: ${searchUrl}`), {
-      detail: `Cloudflare 版司法全文目前僅支援可由 MCP 直接取得的近期案件；此案請先改用司法院查詢，後續會補 Railway fallback。原始原因：${err.message}`,
+    throw Object.assign(new Error(`${err.message}`), {
+      detail: err.message,
       source_url: searchUrl,
-      _elapsed: parseFloat(elapsed)
+      _elapsed: parseFloat(mcpElapsed),
     });
   }
 }
