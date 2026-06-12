@@ -66,14 +66,19 @@ export const DashboardAPI = {
   },
 
   async searchRealEstate(params) {
-    const qs = new URLSearchParams();
-    for (const [k, v] of Object.entries(params)) {
-      if (v) qs.set(k, v);
-    }
     try {
-      const res = await apiFetch(`realestate?${qs}`);
-      if (res?.items?.length) return res;
-    } catch {}
+      // Call real Worker POST endpoint with MCP lvr-trades
+      const res = await fetch(`${API_BASE}/realestate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params)
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (data?.items?.length) return data;
+    } catch (e) {
+      console.warn('Real estate API failed:', e.message);
+    }
     return realEstateMock(params);
   },
 

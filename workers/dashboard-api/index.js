@@ -48,6 +48,11 @@ export default {
             data = await getLegalFulltext(env, body.case_number || '');
             return new Response(JSON.stringify(data), {
               headers: { ...headers, 'Cache-Control': 'public, max-age=604800' } // 7 days
+            });
+          case 'realestate':
+            data = await getRealEstate(env, body);
+            return new Response(JSON.stringify(data), {
+              headers: { ...headers, 'Cache-Control': 'public, max-age=3600' } // 1hr
             });          default:
             return new Response(JSON.stringify({ error: 'Unknown POST endpoint', path }), { status: 404, headers });
         }
@@ -1047,7 +1052,7 @@ function parseCaseNumberFull(raw) {
   };
 }
 
-async function mcpCall(thKey, method, params, sessionId) {
+async function mcpCall(thKey, method, params, sessionId, timeoutMs = 8000) {
   const headers = {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${thKey}`,
@@ -1059,7 +1064,7 @@ async function mcpCall(thKey, method, params, sessionId) {
   if (sessionId) headers['Mcp-Session-Id'] = sessionId;
 
   const body = JSON.stringify({ jsonrpc: '2.0', id: 1, method, params });
-  const resp = await fetchWithTimeout(TH_MCP_URL, { method: 'POST', headers, body }, 8000);
+  const resp = await fetchWithTimeout(TH_MCP_URL, { method: 'POST', headers, body }, timeoutMs);
 
   const newSid = resp.headers.get('mcp-session-id') || sessionId;
   const text   = await resp.text();
@@ -1210,4 +1215,46 @@ async function getLegalFulltext(env, caseNumber) {
       _elapsed: parseFloat(mcpElapsed),
     });
   }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  POST /api/realestate
+//  實價登錄查詢 via Twinkle Hub MCP lvr-trades dataset
+// ══════════════════════════════════════════════════════════════════
+
+async function getRealEstate(env, params) {
+  const {
+    district = '',
+    address = '',
+    type = '買賣',
+    building = '',
+    startY = '112', startM = '1',
+    endY = '115',   endM = '6',
+    priceMin = '', priceMax = '',
+    areaMin = '',  areaMax = '',
+  } = params;
+
+  if (!address && !district) throw new Error('請輸入行政區或地址');
+
+  // Route to Railway service — it can do full MCP session (no 30s Cloudflare CPU limit)
+  const railwayUrl = (env.RAILWAY_URL || '').replace(/\/$/, '');
+  if (railwayUrl) {
+    const resp = await fetchWithTimeout(
+      `${railwayUrl}/api/realestate`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      },
+      45000
+    );
+    if (resp.ok) {
+      const data = await resp.json();
+      return data;
+    }
+    const errText = await resp.text().catch(() => '');
+    throw new Error(`Railway realestate failed ${resp.status}: ${errText.slice(0, 100)}`);
+  }
+
+  throw new Error('RAILWAY_URL not configured — cannot query real estate data');
 }
