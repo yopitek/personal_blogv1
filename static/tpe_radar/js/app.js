@@ -4,6 +4,31 @@
  */
 import { DashboardAPI } from './api.js';
 
+// ── Fallback: ensure parking search functions exist even if api.js module fails ──
+const _API_BASE = window.DASHBOARD_API || 'https://tpe-dashboard-api.goolai.workers.dev/api';
+if (typeof DashboardAPI !== 'undefined' && !DashboardAPI.searchParkingAPI) {
+  DashboardAPI.searchParkingAPI = async (keyword, district) => {
+    const params = new URLSearchParams();
+    if (keyword) params.set('q', keyword);
+    if (district) params.set('district', district);
+    try {
+      const res = await fetch(`${_API_BASE}/parking/search?${params}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) { console.warn('searchParkingAPI fallback:', e); return null; }
+  };
+}
+if (typeof DashboardAPI !== 'undefined' && !DashboardAPI.searchParkingDistrict) {
+  DashboardAPI.searchParkingDistrict = async (district) => {
+    try {
+      const res = await fetch(`${_API_BASE}/parking/district?district=${encodeURIComponent(district)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) { console.warn('searchParkingDistrict fallback:', e); return null; }
+  };
+}
+window.DashboardAPI = DashboardAPI;
+
 const $ = (s) => document.querySelector(s);
 const html = (el, str) => { el.innerHTML = str; return el; };
 

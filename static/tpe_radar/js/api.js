@@ -83,6 +83,16 @@ export const DashboardAPI = {
       return null;
     }
   },
+  async searchParkingDistrict(district) {
+    try {
+      const res = await fetch(`${API_BASE}/parking/district?district=${encodeURIComponent(district)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) {
+      console.warn('searchParkingDistrict failed:', e.message);
+      return null;
+    }
+  },
   async getStock() { return await apiFetch('stock') || await mockData('stock'); },
   async getAgriculture() { return await apiFetch('agriculture') || await mockData('agriculture'); },
   async getEducation() { return await apiFetch('education') || await mockData('education'); },
