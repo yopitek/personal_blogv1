@@ -1891,3 +1891,18 @@ body::before {
 }
 .jd-act-btn.accent:hover { border-color: var(--gold, #f59e0b); }
 .jd-act-btn.link { color: var(--accent-teal, #06b6d4); }
+
+/* ── Parking Tool ── */
+.pk-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 0 6px;
+  border-bottom: 1px solid var(--border-divider);
+  margin-bottom: 6px;
+}
+.pk-table tbody tr:hover td { background: rgba(6,182,212,0.04); }
+.pk-row-match td { background: rgba(90,175,122,0.06); }
+.pk-row-match td:first-child { border-left: 3px solid #5aaf7a; }

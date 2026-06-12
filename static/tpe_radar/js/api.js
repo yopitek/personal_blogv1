@@ -67,6 +67,22 @@ export const DashboardAPI = {
   async getYoubike() { return await apiFetch('youbike') || await mockData('youbike'); },
   async getHighway() { return await apiFetch('highway') || await mockData('highway'); },
   async getParking() { return await apiFetch('parking') || await mockData('parking'); },
+
+  // Full parking search — returns {count, lots, district, query}
+  // lots schema: {id, name, area, address, tel, totalcar, availablecar, lat, lng}
+  async searchParkingAPI(keyword, district) {
+    const params = new URLSearchParams();
+    if (keyword) params.set('q', keyword);
+    if (district) params.set('district', district);
+    try {
+      const res = await fetch(`${API_BASE}/parking/search?${params}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (e) {
+      console.warn('searchParkingAPI failed:', e.message);
+      return null;
+    }
+  },
   async getStock() { return await apiFetch('stock') || await mockData('stock'); },
   async getAgriculture() { return await apiFetch('agriculture') || await mockData('agriculture'); },
   async getEducation() { return await apiFetch('education') || await mockData('education'); },

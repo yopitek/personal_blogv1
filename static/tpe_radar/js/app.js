@@ -518,38 +518,102 @@ window._doSearchRealEstate = searchRealEstate;
 let _parkingMap = null;
 let _parkingMarkers = [];
 
+// ── Helpers ──────────────────────────────────────────────────────
+function _availSlots(lot) { return lot.availablecar ?? lot.available ?? lot.slots ?? 0; }
+function _slotTag(n) {
+  if (n > 50) return ['tag-green', '充足'];
+  if (n > 10) return ['tag-gold', '尚可'];
+  if (n > 0)  return ['tag-coral', '快滿'];
+  return ['tag-coral', '已滿'];
+}
+function _lotRow(lot, isMatch) {
+  const a = _availSlots(lot);
+  const [tagCls, tagLabel] = _slotTag(a);
+  return `<tr class="${isMatch ? 'pk-row-match' : ''}" style="cursor:pointer"
+    onclick="window._flyToParking&&window._flyToParking('${(lot.id||lot.name||'').replace(/'/g,'')}')"  >
+    <td><span class="${isMatch ? 'highlight' : ''}">${lot.name||'—'}</span>
+      ${lot.address ? `<div style="font-size:10px;color:var(--text-dim);margin-top:2px">${lot.address}</div>` : ''}
+    </td>
+    <td style="text-align:right;font-weight:600">${a} 位</td>
+    <td><span class="tag ${tagCls}">${tagLabel}</span></td>
+  </tr>`;
+}
+
 async function searchParking() {
   const btn = $('#pk-search');
-  const el = $('#pk-results');
+  const el  = $('#pk-results');
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span>查詢中';
 
   try {
-    const district = $('#pk-district').value;
-    const keyword = ($('#pk-keyword').value || '').trim();
-    const data = await DashboardAPI.getParking();
-    const lots = data?.lots || [];
-    let filtered = lots;
-    if (district) filtered = filtered.filter(l => (l.area || '').includes(district) || (l.name || '').includes(district));
-    if (keyword) filtered = filtered.filter(l => (l.name || '').includes(keyword));
-    const showList = filtered.length ? filtered : lots.slice(0, 6);
+    const district = ($('#pk-district')?.value || '').trim();
+    const keyword  = ($('#pk-keyword')?.value  || '').trim();
 
-    el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${showList.length}</span> 個停車場</span><span style="font-size:var(--font-size-xs);color:var(--text-dim)">${data?.district || '信義區'}</span></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
-        <div style="padding:var(--space-lg);overflow-y:auto;max-height:450px">
-          <table class="result-table"><thead><tr><th>停車場</th><th>車位</th><th>狀態</th></tr></thead>
-          <tbody>${showList.map(l => {
-            const a = l.available || 0;
-            const tag = a > 50 ? 'tag-green' : a > 10 ? 'tag-gold' : 'tag-coral';
-            const label = a > 50 ? '充足' : a > 10 ? '尚可' : '快滿';
-            return `<tr style="cursor:pointer" onclick="window._flyToParking&&window._flyToParking('${(l.id||l.name||'').replace(/'/g,'')}')">
-              <td><span class="highlight">${l.name||'—'}</span></td><td>${a} 位</td><td><span class="tag ${tag}">${label}</span></td></tr>`;
-          }).join('')}</tbody></table>
+    if (!district && !keyword) {
+      el.innerHTML = '<div class="results-empty">請選擇行政區或輸入停車場名稱</div>';
+      return;
+    }
+
+    // Primary search: keyword + district (or just one of them)
+    const data = await DashboardAPI.searchParkingAPI(keyword, district);
+    if (!data) throw new Error('無法取得停車場資料');
+
+    const allLots = data.lots || [];
+    if (!allLots.length) {
+      el.innerHTML = `<div class="results-empty">找不到符合「${keyword||district}」的停車場</div>`;
+      return;
+    }
+
+    // Split: matched lots vs nearby (rest of district)
+    let matchedLots, nearbyLots;
+
+    if (keyword) {
+      // Keyword search: matching = exact keyword, nearby = same district without keyword match
+      matchedLots = allLots.filter(l => (l.name||'').includes(keyword));
+      nearbyLots  = allLots.filter(l => !(l.name||'').includes(keyword));
+
+      // If keyword-only (no district), fetch full district for nearby
+      if (!district && matchedLots.length && matchedLots[0].area) {
+        const nearbyData = await DashboardAPI.searchParkingAPI('', matchedLots[0].area);
+        const nLots = nearbyData?.lots || [];
+        const matchedIds = new Set(matchedLots.map(l => l.id));
+        nearbyLots = nLots.filter(l => !matchedIds.has(l.id));
+      }
+    } else {
+      // District-only: no matches to highlight, show all as nearby
+      matchedLots = [];
+      nearbyLots  = allLots;
+    }
+
+    const totalDistrict = matchedLots.length + nearbyLots.length;
+
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:480px">
+        <div style="overflow-y:auto;max-height:480px;padding:var(--space-md)">
+          ${matchedLots.length ? `
+            <div class="pk-section-label">🔍 查詢結果 (${matchedLots.length})</div>
+            <table class="result-table pk-table">
+              <thead><tr><th>停車場</th><th>車位</th><th>狀態</th></tr></thead>
+              <tbody>${matchedLots.map(l => _lotRow(l, true)).join('')}</tbody>
+            </table>` : ''}
+
+          ${nearbyLots.length ? `
+            <div class="pk-section-label" style="margin-top:${matchedLots.length?'var(--space-lg)':'0'}">
+              📍 ${matchedLots.length ? '同區其他停車場' : (district || allLots[0]?.area || '全區')} 停車場 (${nearbyLots.length})
+            </div>
+            <table class="result-table pk-table">
+              <thead><tr><th>停車場</th><th>車位</th><th>狀態</th></tr></thead>
+              <tbody>${nearbyLots.map(l => _lotRow(l, false)).join('')}</tbody>
+            </table>` : ''}
         </div>
-        <div id="parking-map" style="height:450px;background:var(--accent-teal-light);border-radius:0 var(--card-radius-sm) var(--card-radius-sm) 0"></div>
+        <div id="parking-map" style="height:480px;border-radius:0 var(--card-radius-sm) var(--card-radius-sm) 0"></div>
+      </div>
+      <div style="padding:6px var(--space-md);font-size:10px;color:var(--text-dim);border-top:1px solid var(--border-divider)">
+        共 ${totalDistrict} 個停車場 · 資料來源：臺北市停車管理工程處 TCMSV
       </div>`;
 
-    setTimeout(() => initParkingMap(showList), 400);
+    setTimeout(() => initParkingMap(matchedLots, nearbyLots), 300);
+
   } catch (e) {
     el.innerHTML = `<div class="results-empty">載入失敗：${e.message}</div>`;
   } finally {
@@ -558,50 +622,66 @@ async function searchParking() {
   }
 }
 
-function initParkingMap(lots) {
+function initParkingMap(matchedLots, nearbyLots) {
   const mapEl = document.getElementById('parking-map');
   if (!mapEl) return;
   if (_parkingMap) { _parkingMap.remove(); _parkingMap = null; }
 
-  _parkingMap = L.map('parking-map', { center: [25.0330, 121.5654], zoom: 14, zoomControl: true, attributionControl: false });
+  // Collect all lots with real coordinates from API
+  const allForMap = [
+    ...matchedLots.map(l => ({ ...l, _isMatch: true })),
+    ...nearbyLots.map(l => ({ ...l, _isMatch: false })),
+  ].filter(l => l.lat && l.lng);
+
+  if (!allForMap.length) { mapEl.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-dim)">地圖資料不足</div>'; return; }
+
+  // Center: average of all coords, or first matched lot
+  const centerLot = matchedLots.find(l => l.lat && l.lng) || allForMap[0];
+  _parkingMap = L.map('parking-map', {
+    center: [centerLot.lat, centerLot.lng],
+    zoom: matchedLots.length ? 15 : 14,
+    zoomControl: true, attributionControl: false
+  });
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(_parkingMap);
 
-  const coords = {
-    '臺北大巨蛋園區停車場':[25.0413,121.5605],'臺北文創停車場':[25.0439,121.5615],
-    '台北君悅酒店停車場':[25.0353,121.5622],'府前廣場地下停車場':[25.0375,121.5637],
-    '信義國小地下停車場':[25.0331,121.5585],'興雅國中地下停車場':[25.0380,121.5660],
-    '台北市政府':[25.0375,121.5637],'市府轉運站':[25.0403,121.5650],
-    '信義廣場地下停車場':[25.0332,121.5601],'松壽廣場地下停車場':[25.0350,121.5640],
-    '松山工農地下停車場':[25.0368,121.5665],'信義區行政中心':[25.0340,121.5662],
-    '信安街67巷':[25.0317,121.5563],'松德臨時':[25.0365,121.5710],
-    '世貿中心':[25.0344,121.5623],'台北101':[25.0339,121.5645],
-  };
-
   _parkingMarkers = [];
-  lots.forEach(lot => {
-    let coord = coords[lot.name] || coords[lot.id];
-    if (!coord) {
-      for (const [k,v] of Object.entries(coords)) {
-        if ((lot.name||'').includes(k) || k.includes(lot.name||'')) { coord = v; break; }
-      }
-    }
-    if (!coord) return;
-    const a = lot.available || 0;
-    const color = a > 50 ? '#7BA87B' : a > 10 ? '#D4A853' : '#E8867A';
+  allForMap.forEach(lot => {
+    const a = _availSlots(lot);
+    const isMatch = lot._isMatch;
+    // Matched: bold green/gold/red circle; Nearby: smaller, semi-transparent
+    const size = isMatch ? 36 : 28;
+    const color = a > 50 ? '#5aaf7a' : a > 10 ? '#d4a44c' : '#e07070';
+    const border = isMatch ? '3px solid #fff' : '2px solid rgba(255,255,255,0.7)';
+    const opacity = isMatch ? '1' : '0.75';
     const icon = L.divIcon({
-      className: 'pk-marker',
-      html: `<div style="background:${color};width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.3);border:2px solid #fff">${a}</div>`,
-      iconSize: [32,32], iconAnchor: [16,16]
+      className: '',
+      html: `<div style="background:${color};width:${size}px;height:${size}px;border-radius:50%;
+               display:flex;align-items:center;justify-content:center;color:#fff;
+               font-size:${isMatch?12:10}px;font-weight:700;
+               box-shadow:0 2px 6px rgba(0,0,0,0.25);border:${border};opacity:${opacity}">
+               ${a}</div>`,
+      iconSize: [size, size], iconAnchor: [size/2, size/2]
     });
-    const m = L.marker([coord[0], coord[1]], { icon }).addTo(_parkingMap);
-    m.bindPopup(`<b>${lot.name}</b><br>剩餘車位：${a} 位`);
+    const m = L.marker([lot.lat, lot.lng], { icon }).addTo(_parkingMap);
+    m.bindPopup(`
+      <b>${lot.name}</b><br>
+      剩餘車位：<b style="color:${color}">${a} 位</b> / 總位：${lot.totalcar||'—'}<br>
+      ${lot.address ? `<span style="font-size:11px;color:#666">${lot.address}</span>` : ''}
+    `);
     m._lotId = lot.id || lot.name;
+    if (isMatch) m.openPopup();
     _parkingMarkers.push(m);
   });
 
+  // Fit map to show all markers
+  if (allForMap.length > 1) {
+    const bounds = L.latLngBounds(allForMap.map(l => [l.lat, l.lng]));
+    _parkingMap.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
+  }
+
   window._flyToParking = function(id) {
     const m = _parkingMarkers.find(m => m._lotId === id);
-    if (m && _parkingMap) { _parkingMap.flyTo(m.getLatLng(), 16); m.openPopup(); }
+    if (m && _parkingMap) { _parkingMap.flyTo(m.getLatLng(), 16, { duration: 0.8 }); m.openPopup(); }
   };
 }
 

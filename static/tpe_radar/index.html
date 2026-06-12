@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 8000);
 });
 </script>
-<script type="module" src="js/app.js?v=20260612-1504"></script>
+<script type="module" src="js/app.js?v=20260612-1512"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -119,13 +119,27 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="tool-panel" id="tool-parking">
-<div class="tool-header"><h2>查詢台北市停車位</h2><p>即時查詢台北市各行政區停車場剩餘車位數量。資料來源：臺北市停車管理工程處 TCMSV。</p></div>
+<div class="tool-header"><h2>查詢台北市停車位</h2><p>選擇行政區可查看全區所有公共停車場即時車位，並在地圖上顯示剩餘數量。資料來源：臺北市停車管理工程處 TCMSV。</p></div>
 <form class="query-form" onsubmit="return false">
-  <div class="form-group" style="flex:2"><label>行政區</label><select id="pk-district"><option value="">全部行政區</option><option value="信義區">信義區</option><option value="大安區">大安區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="中正區">中正區</option><option value="內湖區">內湖區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="南港區">南港區</option><option value="文山區">文山區</option><option value="萬華區">萬華區</option><option value="大同區">大同區</option></select></div>
-  <div class="form-group" style="flex:2"><label>停車場名稱</label><input type="text" id="pk-keyword" placeholder="例如：世貿、市府..."></div>
-  <button class="query-btn" id="pk-search" onclick="window.__searchParking()">查詢車位</button>
+  <div class="form-group" style="flex:2">
+    <label>行政區</label>
+    <select id="pk-district" onchange="window._doSearchParking()">
+      <option value="">全部行政區</option>
+      <option value="信義區">信義區</option><option value="大安區">大安區</option>
+      <option value="中山區">中山區</option><option value="松山區">松山區</option>
+      <option value="中正區">中正區</option><option value="內湖區">內湖區</option>
+      <option value="士林區">士林區</option><option value="北投區">北投區</option>
+      <option value="南港區">南港區</option><option value="文山區">文山區</option>
+      <option value="萬華區">萬華區</option><option value="大同區">大同區</option>
+    </select>
+  </div>
+  <div class="form-group" style="flex:2">
+    <label>停車場名稱（選填）</label>
+    <input type="text" id="pk-keyword" placeholder="例如：大安森林公園、世貿..." onkeydown="if(event.key==='Enter')window._doSearchParking()">
+  </div>
+  <button class="query-btn" id="pk-search" onclick="window._doSearchParking()">查詢車位</button>
 </form>
-<div class="results-area" id="pk-results"><div class="results-empty">請選擇行政區或輸入關鍵字查詢</div></div>
+<div class="results-area" id="pk-results"><div class="results-empty">請選擇行政區或輸入停車場名稱查詢</div></div>
 </div>
 
 <div class="tool-panel" id="tool-judicial">
