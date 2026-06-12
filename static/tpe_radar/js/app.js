@@ -503,6 +503,9 @@ function initTabs() {}
 
 function initTools() {}
 
+// Bootstrap — trigger dashboard load when DOM is ready
+document.addEventListener('DOMContentLoaded', init);
+
 // Export tool functions to window (called from HTML onclick)
 window._doSearchParking = searchParking;
 window._doSearchJudicial = searchJudicial;
