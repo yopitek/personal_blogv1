@@ -215,11 +215,13 @@ function renderParking(data) {
       <div class="parking-number">${(data.total || 0).toLocaleString()}</div>
       <div class="parking-district">${data.district || '信義區'} 剩餘汽車位</div>
     </div>
-    <div class="parking-lot-list">${lots.map(l => `
-      <div class="parking-lot-item">
+    <div class="parking-lot-list">${lots.map(l => {
+      const count = l.available ?? l.slots ?? 0;
+      return `<div class="parking-lot-item">
         <span class="pl-name">${l.name}</span>
-        <span class="pl-slots${(l.available || 0) < 50 ? ' low' : ''}">${(l.available || 0).toLocaleString()} 位</span>
-      </div>`).join('')}</div>`);
+        <span class="pl-slots${count < 50 ? ' low' : ''}">${count.toLocaleString()} 位</span>
+      </div>`;
+    }).join('')}</div>`);
 }
 
 // ═══════════════════ STOCK ═══════════════════
@@ -315,15 +317,17 @@ function renderAgriculture(data) {
 function renderHolidays(data) {
   const el = $('#holidays-body');
   if (!data) { html(el, errorCard('假日資料載入失敗', '重試', initEducation)); return; }
-  const today = new Date();
-  const isMakeup = data.makeup_day?.includes('補班');
+  // "本月無補班" contains '補班' — must check it's not a "no makeup" message
+  const isMakeup = data.makeup_day
+    && data.makeup_day.includes('補班')
+    && !data.makeup_day.includes('無');
   html(el, `
     <div class="holiday-badge">
       <div class="holiday-badge-label">${isMakeup ? '今日補班' : (data.school_status || '今日正常')}</div>
     </div>
     <div class="holiday-next">
       <span class="hn-label">下個假日</span>
-      <span class="hn-value">${data.next_holiday?.name || ''} ${data.next_holiday?.date?.substring(5) || ''}</span>
+      <span class="hn-value">${data.next_holiday?.name || ''} ${data.next_holiday?.date?.substring(5) || data.next_holiday?.date || ''}</span>
     </div>
     <div class="holiday-next">
       <span class="hn-label">倒數</span>

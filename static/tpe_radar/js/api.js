@@ -39,7 +39,28 @@ function mockData(key) {
 
 export const DashboardAPI = {
   async getWeather() { return await apiFetch('weather') || await mockData('weather'); },
-  async getWeather7d() { return await apiFetch('weather-7d') || await mockData('weather-7d'); },
+  async getWeather7d() {
+    const live = await apiFetch('weather-7d');
+    if (live?.days?.length) return live;
+    // Dynamic fallback — generate today + 6 days so dates are never stale
+    const dayNames = ['週日','週一','週二','週三','週四','週五','週六'];
+    const conds = [
+      { condition:'晴', icon:'sunny', rain:5 },
+      { condition:'晴時多雲', icon:'sunny', rain:15 },
+      { condition:'多雲', icon:'cloudy', rain:30 },
+      { condition:'陰短暫陣雨', icon:'rain', rain:60 },
+      { condition:'雷陣雨', icon:'rain', rain:80 },
+    ];
+    const seed = new Date().getDate();
+    const today = new Date();
+    const days = Array.from({length:7}, (_,i) => {
+      const d = new Date(today); d.setDate(today.getDate() + i);
+      const c = conds[(seed + i * 3) % conds.length];
+      return { day: dayNames[d.getDay()], date: `${d.getMonth()+1}/${d.getDate()}`,
+        temp_high: 27 + (i % 4), temp_low: 22 + (i % 3), ...c };
+    });
+    return { days };
+  },
   async getAqi() { return await apiFetch('aqi') || await mockData('aqi'); },
   async getUv() { return await apiFetch('uv') || await mockData('uv'); },
   async getEarthquake() { return await apiFetch('earthquake') || await mockData('earthquake'); },
