@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不敗學習力 - 學霸都在用的10大聰明讀書法</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --bg-light: #ffffff;
+            --bg-light-secondary: #f8fafc;
+            --bg-dark: #0f172a;
+            --bg-dark-secondary: #1e293b;
+            --text-light: #1e293b;
+            --text-dark: #f1f5f9;
+            --border-light: #e2e8f0;
+            --border-dark: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        body.light-mode {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            color: var(--text-light);
+        }
+
+        body.dark-mode {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--text-dark);
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        body.light-mode ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        body.dark-mode ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card Styles */
+        .card {
+            transition: all 0.3s ease;
+            border: 1px solid;
+        }
+
+        body.light-mode .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: var(--border-light);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        body.dark-mode .card {
+            background: rgba(30, 41, 59, 0.6);
+            border-color: var(--border-dark);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        body.light-mode .card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        body.dark-mode .card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary);
+        }
+
+        /* Button Styles */
+        .btn {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* TOC Styles */
+        .toc-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .toc-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 0;
+            background: var(--primary);
+            transition: height 0.2s ease;
+        }
+
+        .toc-link:hover::before,
+        .toc-link.active::before {
+            height: 100%;
+        }
+
+        body.light-mode .toc-link:hover {
+            color: var(--primary);
+            padding-left: 1.5rem;
+        }
+
+        body.dark-mode .toc-link:hover {
+            color: var(--accent);
+            padding-left: 1.5rem;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.2); opacity: 0.15; }
+        }
+
+        /* Number Badge */
+        .number-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Quote Styles */
+        .quote-block {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 4px solid var(--primary);
+            font-style: italic;
+        }
+
+        .quote-block::before {
+            content: '"';
+            position: absolute;
+            left: -0.5rem;
+            top: -1rem;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        /* Tag Styles */
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        body.light-mode .tag {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        body.dark-mode .tag {
+            background: rgba(6, 182, 212, 0.2);
+            color: #67e8f9;
+        }
+
+        .tag:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile TOC */
+        .mobile-toc {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .mobile-toc-content {
+            position: absolute;
+            bottom: 4rem;
+            right: 0;
+            width: 280px;
+            max-height: 400px;
+            overflow-y: auto;
+            border-radius: 16px;
+            padding: 1.5rem;
+            transform: scale(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        body.light-mode .mobile-toc-content {
+            background: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-mode .mobile-toc-content {
+            background: #1e293b;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .mobile-toc-content.show {
+            transform: scale(1);
+        }
+
+        /* Icon Container */
+        .icon-container {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Grid Layout */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Highlight Pulse */
+        @keyframes highlight-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(14, 165, 233, 0); }
+        }
+
+        .highlight-card {
+            animation: highlight-pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="btn fixed top-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center text-xl" style="background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Desktop TOC -->
+    <aside id="desktopToc" class="hidden lg:block fixed left-6 top-1/2 transform -translate-y-1/2 z-40 w-64 card rounded-2xl p-6 backdrop-blur-md">
+        <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+            <i class="fas fa-list text-blue-500"></i>
+            目錄導航
+        </h3>
+        <nav class="space-y-2 text-sm">
+            <a href="#hero" class="toc-link block py-2">核心理念</a>
+            <a href="#methods" class="toc-link block py-2">十大核心方法</a>
+            <a href="#method-1" class="toc-link block py-2 pl-6">1. 學習力</a>
+            <a href="#method-2" class="toc-link block py-2 pl-6">2. 記憶力</a>
+            <a href="#method-3" class="toc-link block py-2 pl-6">3. 筆記力</a>
+            <a href="#method-4" class="toc-link block py-2 pl-6">4. 閱讀力</a>
+            <a href="#method-5" class="toc-link block py-2 pl-6">5. 複習力</a>
+            <a href="#method-6" class="toc-link block py-2 pl-6">6. 拖延症</a>
+            <a href="#method-7" class="toc-link block py-2 pl-6">7. 專注力</a>
+            <a href="#method-8" class="toc-link block py-2 pl-6">8. 時間管理</a>
+            <a href="#method-9" class="toc-link block py-2 pl-6">9. 情緒管理</a>
+            <a href="#method-10" class="toc-link block py-2 pl-6">10. 恆毅力</a>
+            <a href="#action" class="toc-link block py-2">立即行動</a>
+            <a href="#insights" class="toc-link block py-2">核心洞察</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile TOC -->
+    <div class="mobile-toc lg:hidden">
+        <div id="mobileTocContent" class="mobile-toc-content">
+            <nav class="space-y-2 text-sm">
+                <a href="#hero" class="toc-link block py-2">核心理念</a>
+                <a href="#methods" class="toc-link block py-2">十大核心方法</a>
+                <a href="#method-1" class="toc-link block py-2 pl-4">1. 學習力</a>
+                <a href="#method-2" class="toc-link block py-2 pl-4">2. 記憶力</a>
+                <a href="#method-3" class="toc-link block py-2 pl-4">3. 筆記力</a>
+                <a href="#method-4" class="toc-link block py-2 pl-4">4. 閱讀力</a>
+                <a href="#method-5" class="toc-link block py-2 pl-4">5. 複習力</a>
+                <a href="#method-6" class="toc-link block py-2 pl-4">6. 拖延症</a>
+                <a href="#method-7" class="toc-link block py-2 pl-4">7. 專注力</a>
+                <a href="#method-8" class="toc-link block py-2 pl-4">8. 時間管理</a>
+                <a href="#method-9" class="toc-link block py-2 pl-4">9. 情緒管理</a>
+                <a href="#method-10" class="toc-link block py-2 pl-4">10. 恆毅力</a>
+                <a href="#action" class="toc-link block py-2">立即行動</a>
+                <a href="#insights" class="toc-link block py-2">核心洞察</a>
+            </nav>
+        </div>
+        <button id="mobileTocToggle" class="btn w-14 h-14 rounded-full flex items-center justify-center text-xl" style="background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:pl-80">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg card rounded-3xl p-8 md:p-12 mb-12 fade-in">
+            <div class="relative z-10">
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="tag">學習方法</span>
+                    <span class="tag">自我成長</span>
+                    <span class="tag">心理學</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                    不敗學習力
+                    <span class="block text-2xl md:text-3xl font-normal mt-2" style="color: var(--primary);">
+                        學霸都在用的10大聰明讀書法
+                    </span>
+                </h1>
+                <div class="flex items-center gap-4 text-lg mb-8">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-user text-cyan-500"></i>
+                        <span>劉軒</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-cyan-500"></i>
+                        <span class="mono">哈佛心理學碩士</span>
+                    </div>
+                </div>
+                <p class="text-xl md:text-2xl font-light leading-relaxed max-w-3xl">
+                    結合個人經歷、心理學研究與學霸經驗，打破「寒窗苦讀」迷思。真正的學霸不只掌握高效技巧，更懂得自我管理並維持健康身心。
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Concept Section -->
+        <section class="mb-12 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+                <i class="fas fa-lightbulb text-yellow-500 text-3xl"></i>
+                核心理念：學習力冰山理論
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card rounded-2xl p-6 hover:scale-105 transition-transform">
+                    <div class="icon-container mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">高效學習技巧</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>記憶法</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>筆記法</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>閱讀策略</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>複習策略</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card rounded-2xl p-6 hover:scale-105 transition-transform">
+                    <div class="icon-container mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">自我管理習慣</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>克服拖延</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>時間管理</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>專注力訓練</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>目標設定</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card rounded-2xl p-6 hover:scale-105 transition-transform">
+                    <div class="icon-container mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">健康的身心</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>情緒管理</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>恆毅力培養</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>成長思維</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>身心平衡</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Quote -->
+        <section class="mb-12 fade-in">
+            <div class="card rounded-2xl p-8 md:p-10 highlight-card">
+                <div class="quote-block text-2xl md:text-3xl font-light leading-relaxed">
+                    Just do what you gotta do!
+                    <span class="block text-lg md:text-xl mt-4 not-italic" style="color: var(--primary);">
+                        不是做所有事，而是找出必須做的事
+                    </span>
+                </div>
+                <div class="mt-6 flex items-center gap-3 text-sm">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white font-bold text-lg">
+                        J
+                    </div>
+                    <div>
+                        <div class="font-semibold">Joe - 哈佛學霸室友</div>
+                        <div class="text-xs opacity-70">每天打DJ、練田徑，成績卻全A</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ten Methods Section -->
+        <section id="methods" class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3 fade-in">
+                <i class="fas fa-star text-yellow-500 text-3xl"></i>
+                十大核心方法
+            </h2>
+
+            <!-- Method 1 -->
+            <div id="method-1" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">1</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">學習力：重新認識學習</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">你為何而學？</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="leading-relaxed">找到內在動力是學習的起點。劉軒在哈佛發現，學霸室友Joe每天打DJ、練田徑，成績卻全A。秘訣是：<strong>「Just do what you gotta do!」</strong>（做你該做的事）</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-arrow-right text-cyan-500 mt-1"></i>
+                            <span>不是做所有事，而是找出必須做的事</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-arrow-right text-cyan-500 mt-1"></i>
+                            <span>研究課綱，掌握脈絡，知道如何取捨</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-arrow-right text-cyan-500 mt-1"></i>
+                            <span><strong>學習不等於考試</strong> - 學得會、學得懂、記得住才是目標</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-arrow-right text-cyan-500 mt-1"></i>
+                            <span>人人都能成為高效學習者，不需要天賦或補習</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Method 2 -->
+            <div id="method-2" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">2</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">記憶力：讓知識牢牢記住</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">記憶三部曲：編碼 → 存檔 → 提取</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-xl border-2 border-cyan-500">
+                            <h4 class="font-bold mb-2 text-cyan-500">編碼優化</h4>
+                            <p class="text-sm">畫面與故事。大腦偏好圖像和故事，把要記的詞彙編成荒謬但有畫面的故事，比死背有效10倍。</p>
+                        </div>
+                        <div class="p-4 rounded-xl border-2 border-blue-500">
+                            <h4 class="font-bold mb-2 text-blue-500">存檔優化</h4>
+                            <p class="text-sm"><strong>集組法</strong>：把資訊分組<br><strong>聯想法</strong>：創造連結（諧音、位置記憶）</p>
+                        </div>
+                        <div class="p-4 rounded-xl border-2 border-purple-500">
+                            <h4 class="font-bold mb-2 text-purple-500">提取練習</h4>
+                            <p class="text-sm">主動回想比重複閱讀有效得多。<strong>教別人</strong>（費曼學習法）是最強的提取練習。</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(14, 165, 233, 0.1));">
+                        <p class="font-semibold mb-2"><i class="fas fa-lightbulb text-yellow-500"></i> 關鍵洞察</p>
+                        <p class="text-sm">學習的核心是把知識從<strong>短期記憶</strong>搬到<strong>長期記憶</strong>。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 3 -->
+            <div id="method-3" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">3</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">筆記力：記錄是為了學習</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">康乃爾筆記法</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-5 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20">
+                            <div class="font-bold text-lg mb-2 flex items-center gap-2 text-gray-900">
+                                <i class="fas fa-pen text-cyan-500"></i>
+                                筆記欄（右）
+                            </div>
+                            <p class="text-sm text-gray-800">上課記錄重點</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
+                            <div class="font-bold text-lg mb-2 flex items-center gap-2 text-gray-900">
+                                <i class="fas fa-key text-blue-500"></i>
+                                線索欄（左）
+                            </div>
+                            <p class="text-sm text-gray-800">課後整理關鍵詞、問題</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
+                            <div class="font-bold text-lg mb-2 flex items-center gap-2 text-gray-900">
+                                <i class="fas fa-file-alt text-purple-500"></i>
+                                摘要欄（底）
+                            </div>
+                            <p class="text-sm text-gray-800">總結核心概念</p>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-l-4 border-cyan-500" style="background: rgba(6, 182, 212, 0.05);">
+                        <h4 class="font-bold mb-3">黃金原則</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span>不要照抄，用自己的話組織</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span>留白方便補充</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span>使用符號標記重點</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span>及時整理（24小時內）</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <span>視覺化輔助</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 4 -->
+            <div id="method-4" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">4</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">閱讀力：讀得快更要讀得懂</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">SQ3R 閱讀法</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="grid md:grid-cols-5 gap-3">
+                        <div class="p-4 text-center rounded-xl bg-gradient-to-b from-cyan-500 to-cyan-600 text-white">
+                            <div class="font-bold text-3xl mb-2">S</div>
+                            <div class="text-sm font-semibold">Survey</div>
+                            <div class="text-xs mt-1">瀏覽</div>
+                        </div>
+                        <div class="p-4 text-center rounded-xl bg-gradient-to-b from-blue-500 to-blue-600 text-white">
+                            <div class="font-bold text-3xl mb-2">Q</div>
+                            <div class="text-sm font-semibold">Question</div>
+                            <div class="text-xs mt-1">提問</div>
+                        </div>
+                        <div class="p-4 text-center rounded-xl bg-gradient-to-b from-purple-500 to-purple-600 text-white">
+                            <div class="font-bold text-3xl mb-2">R</div>
+                            <div class="text-sm font-semibold">Read</div>
+                            <div class="text-xs mt-1">閱讀</div>
+                        </div>
+                        <div class="p-4 text-center rounded-xl bg-gradient-to-b from-pink-500 to-pink-600 text-white">
+                            <div class="font-bold text-3xl mb-2">R</div>
+                            <div class="text-sm font-semibold">Recite</div>
+                            <div class="text-xs mt-1">複述</div>
+                        </div>
+                        <div class="p-4 text-center rounded-xl bg-gradient-to-b from-red-500 to-red-600 text-white">
+                            <div class="font-bold text-3xl mb-2">R</div>
+                            <div class="text-sm font-semibold">Review</div>
+                            <div class="text-xs mt-1">複習</div>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));">
+                        <p class="font-semibold mb-2"><i class="fas fa-info-circle text-purple-500"></i> 速讀真相</p>
+                        <p class="text-sm">不是越快越好，而是快速篩選、掌握結構、調整速度。關鍵是<strong>理解</strong>而非速度。主動閱讀：帶著問題、預測內容、連結已知、批判思考。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 5 -->
+            <div id="method-5" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">5</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">複習力：記憶的科學</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">遺忘曲線與間隔複習</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(251, 146, 60, 0.1));">
+                        <h4 class="font-bold mb-3 flex items-center gap-2">
+                            <i class="fas fa-chart-line text-red-500"></i>
+                            艾賓浩斯遺忘曲線
+                        </h4>
+                        <div class="grid grid-cols-3 gap-3 text-center text-sm">
+                            <div>
+                                <div class="text-2xl font-bold text-red-500">74%</div>
+                                <div class="text-xs">1天後忘記</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-orange-500">77%</div>
+                                <div class="text-xs">1週後忘記</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-yellow-500">79%</div>
+                                <div class="text-xs">1個月後忘記</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-2 border-green-500">
+                        <h4 class="font-bold mb-3 text-green-600 flex items-center gap-2">
+                            <i class="fas fa-calendar-check"></i>
+                            間隔複習黃金時間點
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-semibold text-sm">20分鐘後</span>
+                            <span class="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-semibold text-sm">1天後</span>
+                            <span class="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-semibold text-sm">1週後</span>
+                            <span class="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-semibold text-sm">1個月後</span>
+                            <span class="px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 font-semibold text-sm">3個月後</span>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl" style="background: rgba(14, 165, 233, 0.1);">
+                        <h4 class="font-bold mb-2">主動回想 vs 被動重讀</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-times text-red-500 mt-1"></i>
+                                <span>重讀讓你「覺得」記得，實際效果差</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>主動回想雖難但極有效</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-tools text-blue-500 mt-1"></i>
+                                <span><strong>實踐方法：</strong>閃卡、默寫、講解、做題</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 6 -->
+            <div id="method-6" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">6</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">拖延症：理解並克服</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">拖延不是懶惰</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="leading-relaxed p-4 rounded-xl" style="background: rgba(251, 146, 60, 0.1);">
+                        拖延是<strong>情緒調節問題</strong>，為了逃避焦慮、挫折、無聊等負面情緒。
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl border-l-4 border-cyan-500" style="background: rgba(6, 182, 212, 0.05);">
+                            <h4 class="font-bold mb-3 text-cyan-600"><i class="fas fa-bolt"></i> 兩分鐘法則</h4>
+                            <p class="text-sm">兩分鐘能完成的立刻做</p>
+                        </div>
+                        <div class="p-5 rounded-xl border-l-4 border-red-500" style="background: rgba(239, 68, 68, 0.05);">
+                            <h4 class="font-bold mb-3 text-red-600"><i class="fas fa-clock"></i> 番茄工作法</h4>
+                            <p class="text-sm">25分鐘專注 + 5分鐘休息</p>
+                        </div>
+                        <div class="p-5 rounded-xl border-l-4 border-purple-500" style="background: rgba(168, 85, 247, 0.05);">
+                            <h4 class="font-bold mb-3 text-purple-600"><i class="fas fa-calendar"></i> 執行意圖</h4>
+                            <p class="text-sm">具體規劃何時何地做什麼</p>
+                        </div>
+                        <div class="p-5 rounded-xl border-l-4 border-green-500" style="background: rgba(16, 185, 129, 0.05);">
+                            <h4 class="font-bold mb-3 text-green-600"><i class="fas fa-gift"></i> 獎勵機制</h4>
+                            <p class="text-sm">完成後給自己小獎勵</p>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(239, 68, 68, 0.1));">
+                        <h4 class="font-bold mb-2 flex items-center gap-2">
+                            <i class="fas fa-heart text-pink-500"></i>
+                            自我同情
+                        </h4>
+                        <p class="text-sm">過度自責導致更嚴重拖延，溫柔對待自己反而能更快重回正軌。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 7 -->
+            <div id="method-7" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">7</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">專注力：深度工作的能力</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">注意力是有限資源</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 text-white">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i class="fas fa-bolt"></i>
+                                深度工作
+                            </h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>✓ 高專注</li>
+                                <li>✓ 無干擾</li>
+                                <li>✓ 高價值</li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-xl border-2 border-gray-300 dark:border-gray-600">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i class="fas fa-water"></i>
+                                淺層工作
+                            </h4>
+                            <ul class="space-y-1 text-sm opacity-70">
+                                <li>× 易分心</li>
+                                <li>× 常打斷</li>
+                                <li>× 低價值</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-2 border-blue-500">
+                        <h4 class="font-bold mb-3 text-blue-600">培養專注的方法</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">1</span>
+                                <span><strong>單任務處理</strong> - 多工是假象，效率極低</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+                                <span><strong>消除數位干擾</strong> - 關閉通知、無手機時段</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">3</span>
+                                <span><strong>專注儀式</strong> - 固定時間地點、準備動作</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">4</span>
+                                <span><strong>番茄鐘</strong> - 訓練持久專注力</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">5</span>
+                                <span><strong>冥想練習</strong> - 每天5-10分鐘訓練覺察</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-xl" style="background: rgba(16, 185, 129, 0.1);">
+                        <p class="text-sm"><i class="fas fa-spa text-green-500"></i> <strong>真正的休息：</strong>走動、與自然接觸、放空，不是刷手機。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 8 -->
+            <div id="method-8" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">8</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">時間管理：掌握有限資源</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">不是做完所有事，而是做對的事</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));">
+                        <h4 class="font-bold mb-2 flex items-center gap-2">
+                            <i class="fas fa-chart-pie text-indigo-500"></i>
+                            帕累托法則 (80/20)
+                        </h4>
+                        <p class="text-sm">80%成果來自20%努力，找出關鍵20%集中火力。</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-4 rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white">
+                            <div class="text-xs mb-1">重要 + 緊急</div>
+                            <div class="font-bold">立刻做</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gradient-to-br from-green-500 to-green-600 text-white">
+                            <div class="text-xs mb-1">重要 + 不緊急</div>
+                            <div class="font-bold">規劃做 ⭐</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 text-white">
+                            <div class="text-xs mb-1">不重要 + 緊急</div>
+                            <div class="font-bold">委託處理</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gradient-to-br from-gray-400 to-gray-500 text-white">
+                            <div class="text-xs mb-1">不重要 + 不緊急</div>
+                            <div class="font-bold">減少/不做</div>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-2 border-cyan-500">
+                        <h4 class="font-bold mb-3 text-cyan-600">黃金法則</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-cyan-500 mt-1"></i>
+                                <span>每天只設定 <strong>3個主要任務</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-cyan-500 mt-1"></i>
+                                <span><strong>吃青蛙</strong> - 一早做最難的事</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-cyan-500 mt-1"></i>
+                                <span><strong>時間預留</strong> - 估計時間 × 1.5</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-cyan-500 mt-1"></i>
+                                <span>週計畫 + 日計畫</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 9 -->
+            <div id="method-9" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">9</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">情緒管理：與壓力共存</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">學習與情緒密不可分</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-800/30">
+                            <h4 class="font-bold mb-2 text-green-700 dark:text-green-300 flex items-center gap-2">
+                                <i class="fas fa-smile"></i>
+                                適度壓力
+                            </h4>
+                            <ul class="space-y-1 text-sm text-green-800 dark:text-green-200">
+                                <li>✓ 提升表現</li>
+                                <li>✓ 激發潛能</li>
+                                <li>✓ 挑戰略高於能力</li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-xl bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900/30 dark:to-red-800/30">
+                            <h4 class="font-bold mb-2 text-red-700 dark:text-red-300 flex items-center gap-2">
+                                <i class="fas fa-frown"></i>
+                                過度壓力
+                            </h4>
+                            <ul class="space-y-1 text-sm text-red-800 dark:text-red-200">
+                                <li>× 焦慮</li>
+                                <li>× 失眠</li>
+                                <li>× 效率下降</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-l-4 border-blue-500" style="background: rgba(59, 130, 246, 0.05);">
+                        <h4 class="font-bold mb-3 text-blue-600">處理考試焦慮</h4>
+                        <div class="space-y-2 text-sm">
+                            <div><strong>身體：</strong>深呼吸、漸進式肌肉放鬆、運動</div>
+                            <div><strong>心理：</strong>重新框架（緊張→興奮）、自我對話、專注當下</div>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-2 border-purple-500">
+                        <h4 class="font-bold mb-3 text-purple-600">面對挫折的4步驟</h4>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-2 text-sm">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500 text-white flex items-center justify-center text-xs font-bold">1</span>
+                                <span>接納情緒 - 允許自己沮喪</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+                                <span>成長視角 - 這次失敗教會我什麼？</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500 text-white flex items-center justify-center text-xs font-bold">3</span>
+                                <span>自我同情 - 像對待好友一樣對待自己</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-sm">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500 text-white flex items-center justify-center text-xs font-bold">4</span>
+                                <span>尋求支持 - 不要一個人承擔</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl" style="background: rgba(236, 72, 153, 0.1);">
+                        <p class="text-sm"><i class="fas fa-shield-alt text-pink-500"></i> <strong>建立韌性：</strong>規律作息、正念練習、感恩日記、社交連結。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Method 10 -->
+            <div id="method-10" class="card rounded-2xl p-6 md:p-8 mb-6 fade-in">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="number-badge">10</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">恆毅力與成長型思維</h3>
+                        <p class="text-lg font-semibold" style="color: var(--primary);">恆毅力 = 熱情 + 毅力</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));">
+                        <p class="font-semibold mb-2"><i class="fas fa-trophy text-yellow-500"></i> Angela Duckworth 研究證明</p>
+                        <p class="text-sm">成功不靠天賦，靠恆毅力。</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl border-2 border-red-500">
+                            <h4 class="font-bold mb-2 text-red-600 flex items-center gap-2">
+                                <i class="fas fa-times-circle"></i>
+                                定型思維
+                            </h4>
+                            <p class="text-sm mb-2">「我不擅長數學」</p>
+                            <ul class="space-y-1 text-xs">
+                                <li>• 能力固定</li>
+                                <li>• 逃避挑戰</li>
+                                <li>• 害怕失敗</li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20">
+                            <h4 class="font-bold mb-2 text-green-600 flex items-center gap-2">
+                                <i class="fas fa-check-circle"></i>
+                                成長型思維
+                            </h4>
+                            <p class="text-sm mb-2">「我<strong>還</strong>不擅長，但可以進步」</p>
+                            <ul class="space-y-1 text-xs">
+                                <li>• 能力可提升</li>
+                                <li>• 擁抱挑戰</li>
+                                <li>• 從失敗學習</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl border-l-4 border-cyan-500" style="background: rgba(6, 182, 212, 0.05);">
+                        <h4 class="font-bold mb-3 text-cyan-600">培養成長思維</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-comment text-cyan-500 mt-1"></i>
+                                <span><strong>語言力量</strong> - 加「還」字：「我還不會」</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-star text-cyan-500 mt-1"></i>
+                                <span><strong>讚美過程</strong> - 稱讚努力而非聰明</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-lightbulb text-cyan-500 mt-1"></i>
+                                <span><strong>從失敗學習</strong> - 問「學到什麼」而非「為何這麼笨」</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-target text-cyan-500 mt-1"></i>
+                                <span><strong>設定學習目標</strong> - 關注學會什麼，不只分數</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-5 rounded-xl border-2 border-purple-500">
+                        <h4 class="font-bold mb-3 text-purple-600">刻意練習的原則</h4>
+                        <div class="grid md:grid-cols-2 gap-3 text-sm">
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-arrow-up text-purple-500 mt-1"></i>
+                                <span>走出舒適圈，在學習區挑戰</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-redo text-purple-500 mt-1"></i>
+                                <span>即時回饋，快速調整</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-crosshairs text-purple-500 mt-1"></i>
+                                <span>專注弱點，不是重複會的</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-calendar-day text-purple-500 mt-1"></i>
+                                <span>持續堅持，每天進步一點</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(168, 85, 247, 0.1));">
+                        <h4 class="font-bold mb-3 flex items-center gap-2">
+                            <i class="fas fa-question-circle text-pink-500"></i>
+                            找到你的 Why
+                        </h4>
+                        <div class="space-y-1 text-sm">
+                            <div><strong>好奇心</strong> - 對世界的探索欲</div>
+                            <div><strong>目標感</strong> - 知道為何而學</div>
+                            <div><strong>意義感</strong> - 與價值觀連結</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Guide Section -->
+        <section id="action" class="mb-12 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+                <i class="fas fa-rocket text-orange-500 text-3xl"></i>
+                立即行動指南
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">今天就開始</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-green-500 mt-1"></i>
+                            <span>選一學科用康乃爾筆記法整理</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-green-500 mt-1"></i>
+                            <span>設定第一個番茄鐘（25分鐘）</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-green-500 mt-1"></i>
+                            <span>關閉手機通知，創造無干擾時段</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-green-500 mt-1"></i>
+                            <span>寫下明天的3個主要任務</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-calendar-week"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">本週建立</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-blue-500 mt-1"></i>
+                            <span>規劃間隔複習時間表</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-blue-500 mt-1"></i>
+                            <span>嘗試費曼技巧，向他人解釋概念</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-blue-500 mt-1"></i>
+                            <span>做一次SQ3R閱讀練習</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-blue-500 mt-1"></i>
+                            <span>開始感恩日記</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">長期培養</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-purple-500 mt-1"></i>
+                            <span>每天固定時間專注學習</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-purple-500 mt-1"></i>
+                            <span>定期自我測驗檢驗成效</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-purple-500 mt-1"></i>
+                            <span>持續反思調整策略</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play text-purple-500 mt-1"></i>
+                            <span>保持好奇心，享受學習</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Insights Section -->
+        <section id="insights" class="mb-12 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+                <i class="fas fa-gem text-purple-500 text-3xl"></i>
+                核心洞察
+            </h2>
+
+            <div class="bento-grid">
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">💡</div>
+                    <div>
+                        <h4 class="font-bold mb-2">學習力可以學習</h4>
+                        <p class="text-sm">不是天賦，是技能</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">⚙️</div>
+                    <div>
+                        <h4 class="font-bold mb-2">系統勝過努力</h4>
+                        <p class="text-sm">用對方法比苦讀有效</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">🧠</div>
+                    <div>
+                        <h4 class="font-bold mb-2">提取是最強記憶法</h4>
+                        <p class="text-sm">主動回想勝過重讀</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">🎯</div>
+                    <div>
+                        <h4 class="font-bold mb-2">專注是稀缺資源</h4>
+                        <p class="text-sm">保護並善用注意力</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">⏰</div>
+                    <div>
+                        <h4 class="font-bold mb-2">時間管理是選擇管理</h4>
+                        <p class="text-sm">做對的事</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">🌱</div>
+                    <div>
+                        <h4 class="font-bold mb-2">成長思維決定上限</h4>
+                        <p class="text-sm">相信能進步就會進步</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">🔥</div>
+                    <div>
+                        <h4 class="font-bold mb-2">內在動力是長期燃料</h4>
+                        <p class="text-sm">找到 Why</p>
+                    </div>
+                </div>
+                <div class="card rounded-2xl p-6 flex items-start gap-4">
+                    <div class="text-3xl">❤️</div>
+                    <div>
+                        <h4 class="font-bold mb-2">身心是學習基礎</h4>
+                        <p class="text-sm">健康、情緒同等重要</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing Section -->
+        <section class="card rounded-3xl p-8 md:p-12 mb-12 fade-in text-center" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(168, 85, 247, 0.1));">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">終身學習之路</h2>
+            <p class="text-lg md:text-xl leading-relaxed mb-6 max-w-3xl mx-auto">
+                學習不會因為沒了考試而停止。在快速變化的時代，我們必須成為終身學習者。
+            </p>
+            <div class="text-2xl md:text-3xl font-bold mb-4" style="color: var(--primary);">
+                最重要的是：始終保持好奇心
+            </div>
+            <div class="quote-block max-w-2xl mx-auto text-lg mb-6">
+                探索世界吧！只要你研究得夠深，幾乎所有東西都會變得非常有趣。
+                <div class="text-sm mt-2 not-italic" style="color: var(--primary);">— 費曼（物理學家）</div>
+            </div>
+            <p class="text-xl md:text-2xl font-semibold mb-4">
+                相信自己能夠成長。
+            </p>
+            <p class="text-lg mb-6">
+                每個人都有成為高效學習者的潛力，從今天開始實踐，打造屬於你的不敗學習力！
+            </p>
+            <div class="inline-block px-8 py-4 rounded-full text-white font-bold text-xl" style="background: linear-gradient(135deg, var(--primary), var(--accent));">
+                Just do what you gotta do!
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference or default to system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            body.classList.replace('light-mode', 'dark-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.replace('light-mode', 'dark-mode');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.replace('dark-mode', 'light-mode');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile TOC Toggle
+        const mobileTocToggle = document.getElementById('mobileTocToggle');
+        const mobileTocContent = document.getElementById('mobileTocContent');
+
+        mobileTocToggle.addEventListener('click', () => {
+            mobileTocContent.classList.toggle('show');
+        });
+
+        // Close mobile TOC when clicking a link
+        const mobileTocLinks = mobileTocContent.querySelectorAll('a');
+        mobileTocLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileTocContent.classList.remove('show');
+            });
+        });
+
+        // Fade In Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Active TOC Link on Scroll
+        const sections = document.querySelectorAll('section[id], div[id^="method-"]');
+        const tocLinks = document.querySelectorAll('.toc-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
