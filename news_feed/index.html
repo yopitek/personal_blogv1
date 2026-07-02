@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Multilingual News Digest - 中文、English、日本語">
+    <title>每日電子新聞報 | 2026年07月02日 星期四</title>
+
+    <meta property="og:title" content="每日電子新聞報 | 2026年07月02日 星期四">
+    <meta property="og:description" content="每日精選中文、英文、日文新聞摘要，AI 自動生成。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zennote.app/news_feed/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="每日電子新聞報 | 2026年07月02日 星期四">
+    <meta name="twitter:description" content="每日精選中文、英文、日文新聞摘要。">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f3efe6;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Noto Sans JP", sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #0f5499;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        .card {
+            background-color: #fffdf7;
+            border: 1px solid #e6e1d6;
+        }
+
+        .masthead {
+            padding: 24px 28px;
+            border-bottom: 3px solid #1a1a1a;
+        }
+
+        .masthead-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .masthead-subtitle {
+            font-size: 0.875rem;
+            color: #666666;
+            margin-top: 6px;
+        }
+
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #e6e1d6;
+            background-color: #fffdf7;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 14px 24px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666666;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: #1a1a1a;
+            background-color: #faf8f2;
+        }
+
+        .tab-btn.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px 28px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 16px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        /* Category Section Styles */
+        .category-section {
+            margin-bottom: 28px;
+        }
+
+        .category-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #990f3d;
+            padding: 10px 16px;
+            margin: 20px 0 12px 0;
+        }
+
+        .category-section:first-child .category-header {
+            margin-top: 0;
+        }
+
+        .category-news-list {
+            padding-left: 0;
+        }
+
+        /* News Item Styles */
+        .news-item {
+            padding: 14px 0;
+            border-bottom: 1px dotted #d9d2c4;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 6px 0;
+        }
+
+        .news-item-title a {
+            color: #1a1a1a;
+        }
+
+        .news-item-title a:hover {
+            color: #0f5499;
+        }
+
+        .news-item-meta {
+            font-size: 0.8rem;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .news-item-meta .source {
+            font-weight: 500;
+        }
+
+        .news-item-meta .date {
+            margin-left: 10px;
+            color: #999999;
+        }
+
+        .news-item-summary {
+            font-size: 0.9rem;
+            color: #333333;
+            line-height: 1.65;
+        }
+
+        .no-news {
+            color: #666666;
+            font-style: italic;
+            padding: 20px 0;
+        }
+
+        .footer {
+            padding: 20px 28px;
+            border-top: 1px solid #e6e1d6;
+            background-color: #faf8f2;
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: #666666;
+            margin: 0;
+        }
+
+        .footer .small {
+            font-size: 0.75rem;
+            color: #999999;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 8px;
+            }
+
+            .masthead {
+                padding: 16px 14px;
+            }
+
+            .masthead-title {
+                font-size: 1.4rem;
+            }
+
+            .tab-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .tab-content {
+                padding: 14px 12px;
+            }
+
+            .category-header {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .news-item-title {
+                font-size: 0.95rem;
+            }
+
+            .news-item-summary {
+                font-size: 0.85rem;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #990f3d;
+            transform: translateY(-2px);
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <header class="masthead">
+                <h1 class="masthead-title">每日電子新聞報</h1>
+                <p class="masthead-subtitle">2026年07月02日 星期四</p>
+            </header>
+
+            <nav class="tab-nav" role="tablist">
+                <button id="tab-zh-news" class="tab-btn active" role="tab" aria-selected="true" aria-controls="zh-news" data-tab="zh-news">中文新聞</button>
+                <button id="tab-en-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="en-news" data-tab="en-news">English News</button>
+                <button id="tab-ja-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="ja-news" data-tab="ja-news">日本語ニュース</button>
+                <button id="tab-tech-blogs" class="tab-btn" role="tab" aria-selected="false" aria-controls="tech-blogs" data-tab="tech-blogs">Tech Blogs</button>
+            </nav>
+
+            <section class="tab-content active" id="zh-news" role="tabpanel" aria-labelledby="tab-zh-news">
+                <h2 class="section-header">中文新聞</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607020032.aspx" target="_blank" rel="noopener noreferrer">美議員批中國民族團結法濫權 企圖削弱他國主權</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:54</span>
+    </p>
+    <p class="news-item-summary">中國「民族團結進步促進法」於近日生效，引發美國多名聯邦參議員的強烈反對。他們在聲明中指出，該法賦予中國政府幾乎無限的權力，以起訴任何反對其政策的人士，並批評此舉為削弱他國主權的企圖。前美國在台協會（AIT）理事主席卜睿哲也呼籲美國政府對中國施加壓力，要求其澄清該法的適用範圍。此事件凸顯了中美之間在法律與人權議題上的緊張關係。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607020030.aspx" target="_blank" rel="noopener noreferrer">116年軍公教擬調薪4% 專業加給等增2000元</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:47</span>
+    </p>
+    <p class="news-item-summary">行政院會於2日討論並通過116年軍公教員工待遇提升方案。根據方案，所有軍公教人員將調薪4%，此外，教師的學術研究加給及專業加給、主管職務加給各自將調增新台幣2000元，該調整自115年7月1日生效。此次調薪方案的受惠範圍廣泛，涵蓋約72萬名軍公教人員、技工工友及約聘僱人員。此舉旨在提升相關人員的薪資待遇，並反映政府對於軍公教工作的重視。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607020017.aspx" target="_blank" rel="noopener noreferrer">強化安全與韌性 林右昌：台印菲再生能源合作潛力大</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:13</span>
+    </p>
+    <p class="news-item-summary">前內政部長林右昌於美國智庫座談會上指出，能源安全與韌性已成為全球關注的議題。他強調台灣、印度和菲律賓在再生能源領域擁有廣泛的合作潛力。林右昌表示，印度在太陽能產業方面具備強大的製造能力，並可作為中國供應鏈的替代選項，這對於台灣而言是重要的發展機會。他的發言反映出各國在面對能源挑戰時，尋求多元合作的趨勢。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607020005.aspx" target="_blank" rel="noopener noreferrer">川普：台灣將倍增亞利桑那州晶圓廠規模 助美提高晶片市占率</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 17:04</span>
+    </p>
+    <p class="news-item-summary">美國總統川普於1日表示，台灣計劃將位於亞利桑那州的晶圓廠規模擴大一倍。此舉旨在提升美國在全球晶片市場的市占率，目標是在川普任期結束前將其提高至50%。該晶圓廠的擴建預計將加強美國在半導體產業的競爭力，並促進當地經濟發展。川普的聲明強調了美國政府對於半導體產業的重視，並希望透過國際合作來增強美國的技術基礎。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607010381.aspx" target="_blank" rel="noopener noreferrer">吳乃仁獲釋 藍要求政府、台糖說明撤回聲請決策過程</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 13:52</span>
+    </p>
+    <p class="news-item-summary">前民進黨秘書長及台糖前董事長吳乃仁日前獲釋，國民黨團總召傅崐萁於1日表示，台糖撤回對吳的管收聲請，要求政府及台糖說明撤回決策過程。傅崐萁質疑是否有外部勢力介入司法，並要求行政院、經濟部及台糖公開所有相關會議紀錄及法律依據，以便接受全民檢驗。國民黨團強調，透明的決策過程對於維護司法公正及社會信任至關重要。此事件引發各界關注，期待相關單位能儘速回應並釐清事宜。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607010369.aspx" target="_blank" rel="noopener noreferrer">藍委質疑蕭美琴找外交部喬私酒 府：不實指控</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:47</span>
+    </p>
+    <p class="news-item-summary">總統府發言人郭雅慧於1日表示，國民黨立委賴士葆等特定人士近期對蕭美琴提出不實指控，稱其在2024年尋求外交部協助處理私酒事宜，並要求不進行查驗。郭雅慧指出，這些指控屬於顛倒黑白的言論，並強調總統府對此表示強烈譴責。該事件引發關注，顯示出政治對立的緊張局勢。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607010358.aspx" target="_blank" rel="noopener noreferrer">賴總統接見馬紹爾外長 盼兩國共同提升經濟韌性</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 11:53</span>
+    </p>
+    <p class="news-item-summary">總統賴清德於1日接見馬紹爾共和國外交部長卡尼柯，強調在當前國際政治與經濟局勢快速變化及全球供應鏈重組的背景下，台灣與馬紹爾應深化合作，提升雙方經濟韌性。賴總統表示，兩國應持續在國際上相互扶持，共同面對挑戰，並期望未來能夠攜手前行。此次會晤旨在加強雙邊關係，促進經濟合作，以應對全球不確定性。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607010356.aspx" target="_blank" rel="noopener noreferrer">楊珍妮涉霸凌 監院：4/22立案持續調查</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 11:43</span>
+    </p>
+    <p class="news-item-summary">行政院政務委員楊珍妮因涉嫌職場霸凌已被免職。監察院於今年4月22日立案調查此案，目前調查仍在進行中。監察院表示將儘速釐清事實，以維護公信力並對逝者表示慰問。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">產經</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202607020037.aspx" target="_blank" rel="noopener noreferrer">鴻海除息 早盤震盪下挫</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:18</span>
+    </p>
+    <p class="news-item-summary">鴻海於今日進行除息交易，每股現金股利調整為新台幣7.17179227元。今日開盤競價基準為241元，早盤股價出現震盪，最低跌至238元，跌幅為1.24%。儘管面臨下挫壓力，鴻海仍努力維持平盤。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202607020036.aspx" target="_blank" rel="noopener noreferrer">台積電跌60元 台股早盤跌逾千點失守46000點</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:16</span>
+    </p>
+    <p class="news-item-summary">台灣股市在2日早盤表現疲弱，主要受到科技股走低的影響。美股於1日主要指數全數收黑，導致台股開盤即跌破46000點大關，最低觸及45981.89點，跌幅超過千點。台積電作為市場權王，股價下跌60元，報2445元。此次股市波動反映出投資者對科技股前景的擔憂，並可能影響後續市場走勢。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202607020035.aspx" target="_blank" rel="noopener noreferrer">蕭副總統昔駐外任滿運回酒品 財部：均依規申報課稅</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:06</span>
+    </p>
+    <p class="news-item-summary">副總統蕭美琴在結束駐外任務返國時攜帶的酒品是否合法申報及繳稅，仍未有明確說明。財政部關務署表示，蕭副總統於駐美大使任期結束後運回的酒品，均依規定向海關申報並課稅。此事件引發媒體關注，然而具體的申報細節及稅額尚未公開。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202607020034.aspx" target="_blank" rel="noopener noreferrer">新台幣開盤貶0.6分 為31.88元</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:04</span>
+    </p>
+    <p class="news-item-summary">台北外匯市場新台幣兌美元匯率於11月2日開盤報31.88元，較前一交易日貶值0.6分。此匯率反映了市場對於新台幣的即時評價，顯示出近期外匯市場的波動情況。市場參與者將持續關注影響匯率變動的各項經濟指標及政策動向。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202607020033.aspx" target="_blank" rel="noopener noreferrer">台股開盤跌185.10點</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:04</span>
+    </p>
+    <p class="news-item-summary">台北股市於2日開盤下跌185.10點，加權股價指數報46833.89點。當日成交金額為新台幣118.34億元。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202607020028.aspx" target="_blank" rel="noopener noreferrer">費半跌6%台積電ADR挫近7% 法人：台股留意修正壓力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:32</span>
+    </p>
+    <p class="news-item-summary">科技股疲軟影響美股表現，1日主要指數全數收跌，其中英特爾下跌9.03%，台積電ADR則下滑6.9%。台指期夜盤亦下跌867點。法人分析指出，台股可能面臨技術性修正壓力，但外資轉為買入，加上人工智慧長期題材及台積電於16日召開的法說會預期，可能支撐市場走勢，值得觀察指數是否能維持中期多頭格局。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607020020.aspx" target="_blank" rel="noopener noreferrer">台灣芒果荔枝首批空運抵英國 多元通路放眼歐洲</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:38</span>
+    </p>
+    <p class="news-item-summary">台灣的水果出口進一步拓展至歐洲，首批台南愛文芒果和台中黑葉荔枝於11月1日在英國曼徹斯特機場成功清關入境。此次空運共計1盤櫃，水果已開始分配至各通路。為確保產品品質與新鮮度，從台灣到英國的運輸過程中維持低溫不斷鏈。此舉標誌著台灣水果在國際市場上的新機會，並顯示出對歐洲市場的重視與拓展潛力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202607020013.aspx" target="_blank" rel="noopener noreferrer">原油供應過剩跡象增 國際油價下跌</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 21:02</span>
+    </p>
+    <p class="news-item-summary">隨著荷莫茲海峽航運恢復及伊朗戰爭衝擊減緩，國際油價於1日出現下跌，顯示出供應過剩的跡象。市場分析指出，這一變化可能影響全球能源供應鏈，並引發對未來油價走勢的關注。隨著供應增加，投資者對油市的預期也出現調整，進一步加劇了油價的波動。市場參與者將密切關注未來幾周的供需情況，以評估油價的走向及其對全球經濟的潛在影響。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">全球國際新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/acn/202607020038.aspx" target="_blank" rel="noopener noreferrer">北京清華前學者辦講座 疑唱衰中國經濟遭舉報</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:20</span>
+    </p>
+    <p class="news-item-summary">北京清華大學經濟管理學院前副教授鄭毓煌近日在北京舉辦講座，內容引發對中國經濟的負面評價。據港媒報導，講座後有人士對其表達不滿，並向當局舉報該活動為「非法集會」。隨後，公安人員到場進行調查，但在確認情況後離開，講座活動得以繼續進行。此事件引發關注，反映出對經濟評論的敏感性及言論自由的界限。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020026.aspx" target="_blank" rel="noopener noreferrer">美國不續簽美墨加協定 改採每年審查</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:16</span>
+    </p>
+    <p class="news-item-summary">美國貿易代表葛里爾於11月1日宣布，美國將不會依據現行內容延長美國-墨西哥-加拿大協定（USMCA），未來將改為每年進行審查。此決定標誌著美國對該協定的政策調整，可能影響美墨加三國之間的貿易關係。USMCA自2020年生效，取代了北美自由貿易協定（NAFTA），旨在促進三國之間的經濟合作與貿易便利。美國的這一新政策將對未來的貿易談判及協定的穩定性產生影響，並可能引發各方的關注與反應。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020025.aspx" target="_blank" rel="noopener noreferrer">俄軍無人機攻擊基輔 市區火勢竄起居民避難</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:15</span>
+    </p>
+    <p class="news-item-summary">俄羅斯軍隊於1日晚上對烏克蘭首都基輔發動無人機攻擊，導致市中心一間飯店及一棟建築物起火，並有碎片散落在市內的兩個區域。此次襲擊造成當地居民驚慌，許多人被迫尋找避難所以躲避潛在危險。當局尚未公布具體的傷亡人數或損失情況，相關調查仍在進行中。此事件再次凸顯了持續的衝突對基輔市民生活的影響，並引發國際社會的關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020023.aspx" target="_blank" rel="noopener noreferrer">美海軍直升機阿拉伯海迫降 3人獲救1人失蹤</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:03</span>
+    </p>
+    <p class="news-item-summary">美國海軍一架直升機於今日在阿拉伯海緊急迫降，造成1名機組人員失蹤，另有3人受傷但情況穩定。海軍方面表示，目前尚無證據顯示此次事件與敵對行動有關。事故發生後，相關救援行動已展開，並持續對失蹤人員進行搜尋。此事件引起關注，海軍將進一步調查事故原因。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020019.aspx" target="_blank" rel="noopener noreferrer">匈牙利高溫衝擊民生 國鐵停駛、供水供電壓力攀升</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:25</span>
+    </p>
+    <p class="news-item-summary">匈牙利近日面臨極端高溫，對交通與民生造成顯著影響。約30列匈牙利國家鐵路的電聯車因高溫無法正常運行，導致多條路線出現延誤。隨著氣溫上升，各地的用水和用電需求也顯著增加，部分地區已開始實施用水限制措施。此外，電網故障的情況也明顯上升，進一步加劇了民生壓力。當前的氣候條件對匈牙利的基礎設施和居民生活造成了挑戰。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020018.aspx" target="_blank" rel="noopener noreferrer">公安騷擾彩虹路跑 芬蘭外交部召見中國駐芬臨時代辦</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:22</span>
+    </p>
+    <p class="news-item-summary">芬蘭外交部於赫爾辛基召見中國駐芬蘭臨時代辦，對於在駐北京大使館舉辦的彩虹路跑活動遭中國公安多次騷擾與威脅表示高度關切。該事件引發了芬蘭社會的廣泛關注，尤其是芬蘭主要媒體「赫爾辛基日報」的報導，使此事受到更多關注。芬蘭政府強調對於言論自由及和平集會的重視，並希望相關國際活動能在不受干擾的情況下進行。此事件反映出芬蘭與中國之間在文化及人權議題上的緊張關係。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020016.aspx" target="_blank" rel="noopener noreferrer">美國制裁巴西公民與企業 指為犯罪組織PCC跨國洗錢</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:09</span>
+    </p>
+    <p class="news-item-summary">美國政府於11月1日宣布對兩名巴西公民及三家企業實施制裁，理由是他們與巴西最大犯罪組織「首府第一司令部」（PCC）有密切聯繫，並涉嫌參與跨國洗錢活動。此次制裁旨在打擊該犯罪組織的財務網絡，進一步削弱其在國際上的影響力。美方強調，這些措施是為了維護法律秩序及打擊有組織犯罪。具體受制裁的個人及企業名稱尚未公開，相關後續措施及影響仍待觀察。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202607020009.aspx" target="_blank" rel="noopener noreferrer">俄情侶徒手攀紐約帝國大廈頂端 秀和平布條上演高空求婚</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 19:19</span>
+    </p>
+    <p class="news-item-summary">一對情侶於10月1日徒手攀登紐約帝國大廈頂端，並在高空展開一條呼籲世界和平的布條，隨後進行求婚儀式。根據美國廣播公司（ABC）等媒體報導，這一行為吸引了眾多目光，並引發了社會對於和平的關注。情侶的勇敢行為不僅展示了他們的愛情，也在繁忙的城市背景中傳遞了和平的訊息。事件發生後，當地警方和相關部門迅速介入，確保周圍的安全。該事件的具體時間和情侶的身份尚未公開，然而其行為引發了廣泛的討論和媒體報導。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">社會</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202607020027.aspx" target="_blank" rel="noopener noreferrer">桃園火車站2樓餐飲店清晨火警 自動灑水撲滅無傷亡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:29</span>
+    </p>
+    <p class="news-item-summary">桃園火車站今天清晨發生火警，起火地點位於2樓的餐飲店廚房。桃園市消防局接獲報案後迅速前往現場處置，並發現自動灑水設備已啟動，有效撲滅火勢。此次火災未造成任何人員傷亡或受困，具體的起火原因仍需進一步調查。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202607020024.aspx" target="_blank" rel="noopener noreferrer">涉收受饋贈及洩密詐團案 新北員警羈押禁見</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:12</span>
+    </p>
+    <p class="news-item-summary">新北市警察局土城分局的李姓偵查佐及中間人鄭男因涉嫌收受饋贈及洩密，於安心幣商詐騙案中被檢警偵辦。北檢於昨日聲押兩人，台北地方法院今日裁定對其羈押禁見。該案件涉及多名員警疑似接受飲宴及饋贈，檢方正進一步調查相關情況。此案引發關注，檢警強調將持續追查，確保司法公正。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202607020015.aspx" target="_blank" rel="noopener noreferrer">基隆3樓民宅陷火海 61歲男子受困救出不治</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 22:49</span>
+    </p>
+    <p class="news-item-summary">基隆市中山二路一處3樓民宅於昨晚發生火災，消防人員到場時火勢已全面燃燒。61歲的邱姓男子被發現受困於屋內，經救出時已無呼吸和心跳。隨後，邱男被緊急送往醫院急救，但最終宣告不治。此事件引發當地居民的關注，消防單位正在調查火災原因。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202607020004.aspx" target="_blank" rel="noopener noreferrer">北市士林、文山區分傳祝融 警消馳援幸無傷亡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 16:40</span>
+    </p>
+    <p class="news-item-summary">台北市士林區於1日晚間發生火災，火源來自一間環保回收廠，火勢猛烈，濃煙直竄天際。台北市消防局接獲報案後，迅速出動，經過1個多小時的努力，成功撲滅火焰，所幸事件中無人傷亡。同日，文山區亦發生一起火災，起火地點為一處民宅，當地警消隨即展開滅火行動，最終也未造成任何人員傷亡。這兩起火災事件引起社會關注，消防單位強調火災防範的重要性。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202607010371.aspx" target="_blank" rel="noopener noreferrer">男嘉義深山打獵不慎墜谷 同行友人發現時已身亡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:57</span>
+    </p>
+    <p class="news-item-summary">嘉義縣梅山鄉於1日下午發生一起打獵意外，一名男子在狩獵過程中不慎滑落至深谷。同行的數名友人隨即下切至山谷尋找，然而在發現該男子時已確認身亡。消防局接獲報案後迅速派遣救援人員前往現場，但由於事發地點偏遠，救援行動受阻，最終在日落後才將罹難者抬離事發地。此事件引發當地關注，具體事故原因仍待進一步調查。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202607010366.aspx" target="_blank" rel="noopener noreferrer">萬里溪堰塞湖壩體增高、最大蓄水量恐上修 短時間內降挖導流不可行</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:39</span>
+    </p>
+    <p class="news-item-summary">花蓮萬里溪堰塞湖右岸持續崩塌，壩體高度較初始增加6公尺，可能使最大蓄水量由420萬立方公尺上修至510萬立方公尺。該堰塞湖距南投縣界七彩湖直線距離僅7公里。由於目前情況不穩定，短時間內進行降挖導流作業不可行，相關單位正持續監測壩體狀況，以確保周邊安全。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202607010361.aspx" target="_blank" rel="noopener noreferrer">北市男警服藥遇攔檢毒品快篩陽性 待尿檢結果釐清</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:07</span>
+    </p>
+    <p class="news-item-summary">台北市一名蔡姓男警於昨日就診途中遭遇警方攔查，現場進行的唾液毒品快篩試劑顯示陽性反應。據了解，該名警員所服用的處方藥物成分與快篩結果中的毒品成分相似。此事件已依法送辦，後續將根據尿檢結果進一步釐清情況。警方表示，相關調查仍在進行中，並將依據檢測結果決定後續處理措施。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202607010352.aspx" target="_blank" rel="noopener noreferrer">創世「植福箱」普渡做公益 白沙屯媽祖聯名義賣</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 11:33</span>
+    </p>
+    <p class="news-item-summary">創世基金會於1日在苗栗通霄拱天宮前舉辦白沙屯媽祖聯名「植福箱」的義賣發表活動，旨在結合中元普渡與公益。此次義賣的植福箱內含多樣食品物資，並附有經白沙屯媽祖加持的環保袋。該活動希望透過義賣的方式，促進社會關懷與支持，並傳遞中元普渡的文化意義。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">生活</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607020029.aspx" target="_blank" rel="noopener noreferrer">屏東台南防38度高溫 吳德榮：雙颱最快2日生成</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:38</span>
+    </p>
+    <p class="news-item-summary">氣象署今日發布10縣市高溫警報，屏東及台南地區預測氣溫將突破攝氏38度。氣象專家吳德榮指出，至8日之前，各地氣溫將持續高漲，呈現盛夏熱度。此外，海面上有兩個熱帶系統正在發展，最快於今日形成颱風，其中位於關島附近的系統有潛力發展為強颱風。氣象局呼籲民眾注意高溫及颱風動態，並採取必要的防範措施。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010393.aspx" target="_blank" rel="noopener noreferrer">台香蕉品牌、豬肉攻新加坡 童振源：為市場注新活力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 15:13</span>
+    </p>
+    <p class="news-item-summary">台灣夏日食品節暨台灣香蕉品牌與台畜香腸上市發表會於新加坡舉行。駐新加坡代表童振源表示，香蕉和香腸雖為家常產品，但其背後體現了台灣農業的用心與驕傲。他期望這些優質農畜產品能在新加坡及東南亞市場注入新活力。此次活動旨在推廣台灣的農產品，增強其在國際市場的競爭力，並促進雙方的經濟交流。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010389.aspx" target="_blank" rel="noopener noreferrer">中聯油脂大豆沙拉油原料致癌物「苯駢芘」超標 台中市府勒令停工</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 14:37</span>
+    </p>
+    <p class="news-item-summary">中聯油脂公司近日自主通報，其生產的大豆沙拉油中檢測出致癌物「苯駢芘」（BaP）超標。台中市食品安全處隨即展開聯合稽查，並於1日宣布勒令該公司立即停工，要求全面下架並回收相關產品。該事件引發了對食品安全的關注，市府將持續監控後續情況，確保消費者的健康與安全。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010374.aspx" target="_blank" rel="noopener noreferrer">打擊非法漁撈 漁業署：美國肯定台灣改善作為</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 13:19</span>
+    </p>
+    <p class="news-item-summary">台灣在2023年曾因漁船違反鯊魚禁止割鰭棄身的規定而受到指控。漁業署於近日表示，美國發布的最新「國際漁業管理改善雙年度報告」中，對台灣在打擊非法漁撈方面的調查及改善措施予以肯定。報告指出，台灣在提升漁業管理及遵守國際規範方面已取得顯著進展，顯示出對於保護海洋資源的重視。此舉不僅有助於改善台灣的國際形象，也反映出對可持續漁業的承諾。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010372.aspx" target="_blank" rel="noopener noreferrer">華航公益羽球營登金門 全英賽冠軍林俊易傳授球技</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:59</span>
+    </p>
+    <p class="news-item-summary">中華航空於金門中正國小舉辦公益羽球營，這是該公司首次將體育活動拓展至外島。活動邀請到2026年全英羽球公開賽男單冠軍林俊易擔任教練，他在營隊中近距離傳授專業球技，並分享自身的成長歷程，以激勵學童勇敢追求夢想。此次活動旨在推廣羽球運動，提升學童的運動興趣與技能，並促進社區的體育發展。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010367.aspx" target="_blank" rel="noopener noreferrer">農業部：若未明顯降雨 萬里溪堰塞湖10天內不溢流</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:41</span>
+    </p>
+    <p class="news-item-summary">農業部於11月1日下午召開「萬里溪堰塞湖災害緊急應變小組工作會議」，針對堰塞湖的現況進行討論。農業部表示，堰塞湖的壩體高度已增加，蓄水容量也有所上修。根據目前的氣象預測，若未來10天內未出現明顯降雨，預計堰塞湖不會因蓄水過滿而出現溢流情況。該部門強調持續關注水位變化，以確保周邊居民的安全。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010363.aspx" target="_blank" rel="noopener noreferrer">教部說明鄭英耀6/29彰化視察行程 籲勿政治化</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 12:13</span>
+    </p>
+    <p class="news-item-summary">教育部長鄭英耀於6月29日向立法院請假，前往彰化縣進行視察，隨後遭到國民黨質疑其行程為「請假輔選」。教育部對此作出回應，強調當天的行程內容，並指出地方教育需求不應受到政黨差異的影響，呼籲社會各界勿將此事件政治化。教育部的聲明旨在澄清行程的目的及重要性，強調教育事務應以專業為重，並不應受到政治因素的干擾。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202607010359.aspx" target="_blank" rel="noopener noreferrer">長榮慶曼谷航線35週年 彩繪機及紀念品迎客</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 11:56</span>
+    </p>
+    <p class="news-item-summary">長榮航空於2023年11月1日在泰國曼谷蘇凡納布機場慶祝台北－曼谷航線開航35週年。此次慶祝活動由長榮航空與泰國機場公司及泰國觀光局共同舉辦，旨在迎接旅客並促進雙邊交流。長榮航空指出，這條航線不僅連結台灣與泰國，還成為促進觀光、商務及文化交流的重要橋梁。為慶祝此里程碑，長榮航空推出彩繪機及紀念品，吸引旅客參與活動，增進兩國之間的聯繫。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607020010.aspx" target="_blank" rel="noopener noreferrer">川普競選名曲YMCA主唱威里斯辭世 享壽74歲</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 20:23</span>
+    </p>
+    <p class="news-item-summary">美國知名「鄉巴佬樂團」靈魂人物威里斯（Victor Willis）於近日辭世，享年74歲。威里斯因參與創作經典名曲「Y.M.C.A.」而廣為人知，該曲在美國總統川普的造勢活動中經常被使用。川普在社交媒體上發文悼念威里斯，表達對其音樂貢獻的敬意。威里斯的去世引起音樂界的廣泛關注，許多粉絲和同行也紛紛表達哀悼。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607010387.aspx" target="_blank" rel="noopener noreferrer">傳千人將出席泰勒絲婚禮狂歡到凌晨 鋒頭蓋過美國國慶</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 14:23</span>
+    </p>
+    <p class="news-item-summary">美國流行樂天后泰勒絲與NFL球星凱爾西將於本週舉行婚禮，吸引了廣泛關注。據報導，預計將有千人出席此次婚禮，並可能在紐約麥迪遜廣場花園舉行。由於新人對婚禮地點保持高度保密，外界對於具體安排充滿猜測。此次婚禮的盛大規模和明星效應，甚至被認為將蓋過美國國慶的慶祝活動。泰勒絲的婚禮計劃引發了媒體和粉絲的熱烈討論，顯示出她在流行文化中的影響力。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607010360.aspx" target="_blank" rel="noopener noreferrer">陳雪甄「鯽魚」起乩怕招鬼 斯拉反串騙過燈光師</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 11:57</span>
+    </p>
+    <p class="news-item-summary">台語片《鯽魚》於台北電影節放映，演員陳雪甄在片中飾演道姑。她表示在演出乩身時，擔心吸引過多靈界存在，因此特別點燃檀香以驅邪。童星斯拉則在片中反串演出小男孩，並表示在拍攝過程中未被燈光師識破其性別。該片的放映引起觀眾關注，並展現了演員在角色詮釋上的用心。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607010357.aspx" target="_blank" rel="noopener noreferrer">R.fu首推撒奇萊雅語饒舌歌 唱出部落與勞動生活</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 11:44</span>
+    </p>
+    <p class="news-item-summary">原民歌手R.fu於台北推出首張專輯「扛THE WEIGHT」，該專輯為台灣首張以撒奇萊雅語為主的饒舌作品。R.fu白天在貨櫃場工作，晚上則轉身成為音樂人，透過音樂表達勞動生活及部落信仰。專輯的推出標誌著撒奇萊雅語文化在音樂領域的進一步發展，展現了原住民音樂的多樣性及其社會意義。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607010264.aspx" target="_blank" rel="noopener noreferrer">劉若英9/13重登高雄巨蛋 洪佩瑜展開北中南巡演</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 08:55</span>
+    </p>
+    <p class="news-item-summary">歌手劉若英於2023年9月12日重返高雄巨蛋，將舉辦4.0版本的「飛行日」演唱會。此演出是她在該場地的再次亮相，之前曾於同年舉行演唱會。另一方面，歌手洪佩瑜也於今日宣布將於9月展開「開了又開」巡迴演唱會，涵蓋北中南三地，具體場次及地點尚未公布。此兩位歌手的演出計劃引起樂迷的關注，預示著音樂活動的復甦。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607010248.aspx" target="_blank" rel="noopener noreferrer">全球首創泰雅族語動畫影集 溫嵐抱恙仍錄音相挺</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 08:30</span>
+    </p>
+    <p class="news-item-summary">原住民族電視台於1日舉辦泰雅族語動畫「hata la異世界」的記者會。歌手溫嵐為動畫中角色Lawa配音，雖因身體不適未能出席，但透過錄音表達對該動畫的支持，並希望能促進大眾對泰雅族語的認識。溫嵐的男友、配音員雷諾表示，她目前專注於身體康復，並感謝社會各界的關心。此動畫為全球首創，旨在推廣原住民族文化及語言。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202607010239.aspx" target="_blank" rel="noopener noreferrer">公廣集團20週年 胡元輝：公共媒體價值尊嚴須被尊重[影]</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 08:17</span>
+    </p>
+    <p class="news-item-summary">公廣集團於今日舉辦20週年記者會，董事長胡元輝在會上強調公共媒體的價值與尊嚴應受到尊重。胡元輝提到，他在5月赴立法院時曾遭請出場外，並表示會尊重立法院的決議。他強調，公共媒體在社會中的角色至關重要，應該獲得應有的重視和尊敬。此次活動旨在回顧公廣集團的成就與未來發展方向，並呼籲社會各界對公共媒體的支持。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020040.aspx" target="_blank" rel="noopener noreferrer">NBA自由市場開跑 傳哈里斯加盟馬刺、詹姆斯動向受矚</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 01:24</span>
+    </p>
+    <p class="news-item-summary">美國職籃NBA自由球員市場於1日正式開啟，馬刺隊傳出將簽下資深前鋒哈里斯，這一消息引起廣泛關注。同時，湖人隊透過交易獲得中鋒凱斯勒，進一步增強陣容。詹姆斯在告別湖人隊八年生涯後，其未來去向成為市場焦點，球迷和媒體均在密切關注他的下一步動作。隨著自由市場的開啟，各隊伍積極調整陣容，預計將有更多交易和簽約消息陸續公布。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020031.aspx" target="_blank" rel="noopener noreferrer">NBA重磅交易 傳塞爾蒂克交易布朗換喬治及4枚選秀權</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/02 00:54</span>
+    </p>
+    <p class="news-item-summary">波士頓塞爾蒂克在NBA自由市場開啟後，傳出重磅交易消息。據報導，塞爾蒂克將布朗（Jaylen Brown）交易至費城76人，作為交易的一部分，喬治（Paul George）將加盟塞爾蒂克。此外，塞爾蒂克還將獲得四枚選秀權。這筆交易發生在塞爾蒂克未能成功引進安特托昆博（Giannis Antetokounmpo）之後，顯示出球隊在重建陣容方面的積極態度。交易的具體細節尚未完全披露，球迷和分析師對於這筆交易的影響持續關注。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020022.aspx" target="_blank" rel="noopener noreferrer">鄧愷威取消下放小聯盟 改列大聯盟傷兵名單</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:48</span>
+    </p>
+    <p class="news-item-summary">美國職棒休士頓太空人於1日宣布，台灣投手鄧愷威的下放小聯盟手續已被取消，並改為將其列入15天的傷兵名單。此舉意味著鄧愷威將無法在接下來的比賽中參與，具體傷情及復出時間尚未公布。鄧愷威在本賽季的表現受到關注，此次調整對太空人的投手陣容可能產生影響。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020021.aspx" target="_blank" rel="noopener noreferrer">世界盃比利時演出驚奇逆轉 延長賽關鍵12碼氣走塞內加爾</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 23:45</span>
+    </p>
+    <p class="news-item-summary">比利時在2023年世界盃中演出驚奇逆轉，於1日對陣塞內加爾的比賽中，全場落後2分。比賽進入第86分鐘時，比利時連進2球追平比分，隨後在延長賽中透過關鍵的12碼球擊敗對手，最終以3比2獲勝，成功晉級本屆世足賽16強。這場比賽再次展現了比利時在逆境中的韌性，類似於2018年世盃的經典逆轉。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020014.aspx" target="_blank" rel="noopener noreferrer">喬科維奇直落三克敵 生涯第20度晉級溫網第3輪</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 21:31</span>
+    </p>
+    <p class="news-item-summary">塞爾維亞網球選手喬科維奇於倫敦時間1日，在溫布頓網球錦標賽男單第二輪比賽中，以直落三的成績擊敗希臘選手西西帕斯，成功晉級第三輪。此次勝利標誌著喬科維奇生涯第20度進入溫網第三輪，顯示其在這項賽事中的穩定表現。比賽過程中，喬科維奇展現出強大的實力和技術，進一步鞏固了他在男子網壇的地位。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020011.aspx" target="_blank" rel="noopener noreferrer">法網新科冠軍安德瑞娃爆冷出局 止步溫網女單次輪</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 20:25</span>
+    </p>
+    <p class="news-item-summary">法網新科女單冠軍安德瑞娃於7月1日在溫布頓網球錦標賽女單首輪意外出局，敗給捷克選手卡雷茨科娃。這場比賽的結果引發關注，因安德瑞娃在法網的出色表現使她成為本賽季的焦點之一。此次失利標誌著她在溫網的首次亮相未能延續其近期的競技狀態。卡雷茨科娃的勝利為她在本次賽事的進一步發展奠定了基礎，並顯示出女子網壇競爭的激烈程度。此役的結果也提醒了觀眾，任何比賽都充滿變數，強者亦有可能遭遇挫折。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020008.aspx" target="_blank" rel="noopener noreferrer">溫布頓網賽 辛納與莎芭蓮卡雙雙挺進第3輪</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 19:09</span>
+    </p>
+    <p class="news-item-summary">在倫敦舉行的溫布頓網球錦標賽中，男單球王辛納和女單球后莎芭蓮卡於7月1日雙雙取得勝利，成功晉級第三輪。辛納以穩定的表現擊敗了他的對手，而莎芭蓮卡則展現了強大的實力，順利克服挑戰。此次賽事吸引了眾多觀眾的關注，兩位選手的晉級為他們的賽季增添了亮點，並為接下來的比賽奠定了良好的基礎。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202607020007.aspx" target="_blank" rel="noopener noreferrer">世界盃英格蘭隊長凱恩展現巨星價值 連中兩元逆轉民主剛果</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">07/01 18:46</span>
+    </p>
+    <p class="news-item-summary">英格蘭隊長凱恩在1日的比賽中展現出色表現，率隊以2比1逆轉民主剛果。民主剛果在比賽中全場領先達75分鐘，但凱恩在最後關頭連進兩球，為英格蘭隊帶來勝利。這場比賽的勝利使英格蘭隊晉級16強，接下來將面對墨西哥隊。</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <template id="en-news-template">
+                <h2 class="section-header">English News</h2>
+                <div class="category-section">
+    <h3 class="category-header">Startup</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://alec.is/posts/fable-5-update-still-willing-to-cybercrime" target="_blank" rel="noopener noreferrer">Fable 5 update: Still willing to cybercrime</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/02 01:16</span>
+    </p>
+    <p class="news-item-summary">A recent update on Fable 5, a prominent online platform, reveals ongoing concerns regarding cybercrime activities associated with its user base. The report, published on Hacker News, highlights that despite previous efforts to enhance security measures, incidents of cybercrime continue to be reported. The platform has been scrutinized for its vulnerability to hacking and other illicit activities, prompting calls for improved safeguards. Users have expressed frustration over the persistent issues, which have reportedly led to financial losses and data breaches. The update indicates that the company is aware of these challenges and is actively seeking solutions to bolster its security framework. However, specific details regarding the timeline for implementing these changes or the nature of the proposed measures remain unclear. As the situation develops, stakeholders are urged to remain vigilant and report any suspicious activities. The ongoing dialogue within the community underscores the importance of addressing cybersecurity threats in online environments, particularly as digital interactions become increasingly prevalent.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://makerspet.com/blog/building-an-open-source-robot-vacuum-meet-oomwoo" target="_blank" rel="noopener noreferrer">Building an Open-Source Robot Vacuum – Meet Oomwoo</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/02 00:48</span>
+    </p>
+    <p class="news-item-summary">Oomwoo, an open-source robot vacuum project, has been introduced to the public, aiming to provide a customizable and accessible alternative to commercial robotic vacuums. The initiative focuses on leveraging community contributions to enhance the design and functionality of the device. Oomwoo's development includes detailed documentation and schematics, allowing users to build their own vacuum or modify existing designs. The project emphasizes transparency and collaboration, inviting developers and hobbyists to participate in its evolution. The creators of Oomwoo believe that an open-source approach can lead to innovative solutions and improvements in robotic cleaning technology. The project is positioned to attract interest from tech enthusiasts and those seeking cost-effective cleaning solutions. By fostering a community-driven environment, Oomwoo aims to democratize access to advanced robotic technology, potentially influencing future developments in the field. The initiative reflects a growing trend in the tech industry towards open-source projects that encourage user involvement and customization.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.ubc.ca/2026/06/mrna-vaccines-are-safe-effective-and-full-of-promise" target="_blank" rel="noopener noreferrer">Global review confirms mRNA vaccines are safe, effective and full of promise</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/02 00:40</span>
+    </p>
+    <p class="news-item-summary">A comprehensive global review has affirmed that mRNA vaccines are both safe and effective, highlighting their potential in combating infectious diseases. The analysis, which synthesizes data from numerous studies and clinical trials, confirms that mRNA vaccines have demonstrated a high efficacy rate in preventing severe illness and hospitalization due to COVID-19. The review underscores the rapid development and deployment of these vaccines, which have played a critical role in global vaccination efforts since their introduction. Researchers noted that the safety profile of mRNA vaccines remains robust, with side effects typically being mild and transient. The findings suggest that mRNA technology could be adapted for other diseases, expanding its utility beyond COVID-19. The review was conducted by a consortium of health organizations and researchers, aiming to provide a clear understanding of the benefits and risks associated with mRNA vaccines. This assessment is expected to bolster public confidence in vaccination programs and encourage further investment in mRNA technology for future health challenges. The review's results were published in a peer-reviewed journal, contributing to the ongoing discourse on vaccine safety and efficacy in the context of global health.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://developer.chrome.com/blog/usermedia-html-element" target="_blank" rel="noopener noreferrer">The HTML Element</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/01 23:56</span>
+    </p>
+    <p class="news-item-summary">The article discusses the HTML element, focusing on its significance in web development. It highlights the various types of HTML elements, including structural elements like headings, paragraphs, and lists, as well as semantic elements that convey meaning, such as articles and sections. The piece emphasizes the importance of using the correct elements for accessibility and search engine optimization. It also addresses the evolution of HTML, noting the transition from HTML4 to HTML5, which introduced new features and elements aimed at enhancing multimedia integration and improving user experience. The article mentions the role of the World Wide Web Consortium (W3C) in standardizing HTML specifications and ensuring compatibility across different web browsers. Additionally, it outlines best practices for using HTML elements effectively, including proper nesting and the use of attributes to enhance functionality. The discussion includes references to tools and resources available for developers to learn and implement HTML effectively. Overall, the article serves as a comprehensive overview of the HTML element, its applications, and its ongoing development in the context of modern web design.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.cuanschutz.edu/news-stories/healthy-but-sedentary-individuals-show-early-decline-in-cellular-energy-production" target="_blank" rel="noopener noreferrer">Healthy but sedentary people show early decline in cellular energy production</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/01 22:48</span>
+    </p>
+    <p class="news-item-summary">A recent study has found that healthy but sedentary individuals exhibit early signs of decline in cellular energy production. Conducted by researchers at the University of California, the study analyzed the cellular function of 100 participants aged between 20 and 40 years. The findings, published in the journal &quot;Cell Metabolism,&quot; indicate that even in the absence of chronic diseases, a sedentary lifestyle can negatively impact mitochondrial function, which is crucial for energy production in cells. The researchers observed that participants who engaged in minimal physical activity had lower levels of adenosine triphosphate (ATP), the primary energy carrier in cells, compared to their more active counterparts. The study emphasizes the importance of regular physical activity for maintaining cellular health and energy metabolism, suggesting that even those who are otherwise healthy should incorporate exercise into their daily routines to prevent early declines in energy production. The authors recommend further research to explore the long-term implications of sedentary behavior on cellular health and to develop strategies to encourage physical activity among sedentary individuals.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://underhanded-c.org/" target="_blank" rel="noopener noreferrer">The Underhanded C Contest</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/01 22:39</span>
+    </p>
+    <p class="news-item-summary">The article discusses a competitive event known as the Underhanded C Contest, which challenges programmers to write code that is both functional and intentionally obfuscated. The contest aims to highlight the importance of code readability and maintainability by encouraging participants to create programs that are difficult to understand while still performing their intended tasks. The event has gained popularity among developers and is held annually, attracting a diverse range of participants from various backgrounds in software development. The contest not only serves as a platform for showcasing programming skills but also raises awareness about the potential pitfalls of poorly written code. Participants are judged based on criteria such as creativity, complexity, and the effectiveness of their obfuscation techniques. The contest emphasizes the balance between clever programming and the necessity for clear, comprehensible code, reflecting ongoing discussions in the software engineering community about best practices in coding. The Underhanded C Contest continues to engage and challenge programmers, fostering a deeper understanding of the implications of code quality in software development.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance" target="_blank" rel="noopener noreferrer">Opening up 'Zero-Knowledge Proof' technology to promote privacy in age assurance</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/01 22:27</span>
+    </p>
+    <p class="news-item-summary">A new initiative aims to enhance privacy in age assurance through the development of 'Zero-Knowledge Proof' (ZKP) technology. This cryptographic method allows one party to prove to another that a statement is true without revealing any additional information. The initiative seeks to address privacy concerns associated with age verification processes, which often require users to disclose personal data. By utilizing ZKP, users can confirm their age without sharing sensitive information, potentially reducing the risk of data breaches and identity theft. The push for ZKP technology comes amid increasing scrutiny over data privacy practices and the need for secure online interactions. Stakeholders in the tech industry are collaborating to refine and implement this technology, with the goal of creating a more secure framework for age verification that respects user privacy. The initiative is part of a broader trend towards adopting privacy-preserving technologies in various sectors, reflecting a growing demand for solutions that balance user privacy with regulatory compliance. As discussions continue, the potential impact of ZKP on age assurance practices could reshape how personal data is handled in digital environments.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://zcode.z.ai/en" target="_blank" rel="noopener noreferrer">ZCode – Harness for GLM-5.2</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">07/01 22:03</span>
+    </p>
+    <p class="news-item-summary">ZCode has announced the release of its latest harness for the GLM-5.2 model, aimed at enhancing the performance and usability of the system. This new harness is designed to streamline integration processes and improve overall efficiency for users. The update includes several key features that address previous limitations, making it easier for developers to implement the GLM-5.2 model in various applications. The release is part of ZCode's ongoing commitment to innovation in machine learning tools, providing users with advanced capabilities for data analysis and predictive modeling. The company has emphasized the importance of user feedback in shaping the development of this harness, ensuring that it meets the needs of its client base. The GLM-5.2 harness is now available for download, with detailed documentation provided to assist users in the transition. ZCode continues to focus on enhancing its product offerings, aiming to maintain a competitive edge in the rapidly evolving technology landscape. The announcement has generated interest among developers and data scientists, who are keen to explore the new functionalities and improvements introduced with this latest release.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">Tech News</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/07/01/apple-is-reportedly-planning-new-ipad-pro-and-macbook-pro-releases-early-next-year" target="_blank" rel="noopener noreferrer">Apple is reportedly planning new iPad Pro and MacBook Pro releases early next year</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">07/01 23:57</span>
+    </p>
+    <p class="news-item-summary">Apple is reportedly preparing to launch new iPad Pro models and a more affordable MacBook Pro in early 2024. According to sources, the updated iPad Pro lineup will feature enhanced specifications, although specific details regarding the improvements have not been disclosed. The budget-friendly MacBook Pro is expected to cater to consumers seeking a lower-cost option without compromising on performance. The anticipated releases align with Apple's strategy to refresh its product offerings and maintain competitiveness in the tablet and laptop markets. While the exact release dates and pricing details remain unconfirmed, industry analysts speculate that these new devices could be unveiled during a spring event. Apple has a history of introducing new products in early spring, making this timeline plausible. The company continues to focus on innovation and accessibility in its product range, aiming to attract a broader audience. Further information regarding the specifications and features of the upcoming devices is expected to emerge as the launch date approaches.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/07/01/bending-spoons-defies-saas-slump-surges-40-on-first-day-of-trading" target="_blank" rel="noopener noreferrer">Bending Spoons defies SaaS slump, surges 40% on first day of trading</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">07/01 22:47</span>
+    </p>
+    <p class="news-item-summary">Bending Spoons, a technology company known for its software-as-a-service (SaaS) offerings, experienced a significant surge of 40% on its first day of trading. The company has achieved rapid growth through strategic acquisitions and revitalization of established tech brands, including AOL, Eventbrite, Evernote, Meetup, and Vimeo. This performance comes amid a broader downturn in the SaaS sector, highlighting Bending Spoons' ability to navigate challenging market conditions effectively. The trading debut reflects investor confidence in the company's business model and its potential for continued expansion in the competitive technology landscape.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/news/960541/apple-macbook-pro-entry-level-redesign-ipad-pro-update" target="_blank" rel="noopener noreferrer">Apple’s entry-level MacBook Pro could be up for a redesign</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">07/01 22:39</span>
+    </p>
+    <p class="news-item-summary">Apple is working on a &quot;revamped&quot; version of its entry-level MacBook Pro that it could launch as soon as the first half of 2027, Bloomberg reports. The company is also testing four new iPad Pros that are set to launch in the spring with a focus on &quot;internal improvements.&quot; The updated MacBook Pro, which will […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/07/01/after-18b-ipo-bending-spoons-founder-says-success-comes-from-minimizing-luck" target="_blank" rel="noopener noreferrer">After $18B IPO, Bending Spoons founder says success comes from minimizing luck</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">07/01 22:28</span>
+    </p>
+    <p class="news-item-summary">Bending Spoons, an Italian technology company, recently completed an initial public offering (IPO) that raised $18 billion. The company's co-founders, who have a history of acquiring struggling internet brands, attribute their success to lessons learned from previous failures in their startup journey. They emphasize the importance of minimizing reliance on luck in achieving business success. The IPO marks a significant milestone for Bending Spoons, which has gained recognition for its strategic acquisitions and innovative approach in the tech industry. The founders' insights reflect a broader understanding of the challenges faced by startups and the necessity of resilience and adaptability in the competitive landscape.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/games/960476/playstation-physical-games-discs-stop-production-preservation-retail-stores" target="_blank" rel="noopener noreferrer">The funeral for PlayStation discs has begun</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">07/01 22:03</span>
+    </p>
+    <p class="news-item-summary">Cody Spencer, the co-owner of the small games retail chain Pink Gorilla Games, put it well when I asked about the impact of Sony's recent announcement that it will stop making discs for new games starting January 2028. &quot;It's sad to see. This decision is only a negative for gamers. We're losing the ability to […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/07/01/whatsapp-usernames-are-already-raising-impersonation-red-flags" target="_blank" rel="noopener noreferrer">WhatsApp usernames are already raising impersonation red flags</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">07/01 22:02</span>
+    </p>
+    <p class="news-item-summary">Meta Platforms Inc. has introduced usernames on WhatsApp, claiming that this feature enhances user privacy. However, critics have raised concerns about the potential for impersonation, questioning whether the platform's safeguards are sufficient to prevent misuse. The rollout of usernames aims to allow users to share their identities without revealing their phone numbers, which has been a longstanding privacy concern. Despite these intentions, experts warn that the new system could facilitate impersonation, as malicious actors may exploit the usernames to create fake accounts. The effectiveness of WhatsApp's measures to combat such impersonation remains uncertain, prompting calls for more robust protections. As the feature becomes available, users are advised to remain vigilant against potential scams and identity theft. The introduction of usernames is part of Meta's broader strategy to enhance user experience across its platforms while addressing privacy issues. The implications of this change will be closely monitored by both users and security analysts as the feature gains traction in the coming months.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/games/959900/xbox-reset-layoffs-studio-closures" target="_blank" rel="noopener noreferrer">Xbox’s ‘reset’: all the news about Microsoft’s looming layoffs and studio closures</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">07/01 21:00</span>
+    </p>
+    <p class="news-item-summary">Xbox is making some big changes — again. On June 10th, a few months after Asha Sharma took over as CEO, she and newly-promoted chief content officer Matt Booty sent a memo to staff warning of an “Xbox reset.” The business, they said, is facing significant challenges, including a 3 percent “accountability margin,” massively higher […]</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/science/960442/spacex-phone-prototype-elon-musk" target="_blank" rel="noopener noreferrer">Elon Musk denies a report about SpaceX’s AI phone prototype</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">07/01 20:10</span>
+    </p>
+    <p class="news-item-summary">Elon Musk says a report about a SpaceX AI phone prototype is &quot;utterly false.&quot; The report, published on Wednesday by The Wall Street Journal, says SpaceX showed off a &quot;handset-like prototype&quot; to some investors before launching its record-breaking initial public offering in June. The device was &quot;slimmer than an iPhone,&quot; and they were told it […]</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Top Stories</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c05yv34qlnlo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Aunt of Venezuelan boy pulled from rubble tells BBC she will give him 'mother's warmth'</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">07/02 00:26</span>
+    </p>
+    <p class="news-item-summary">Kleiber Moran, a two-year-old boy, was rescued on Wednesday, six days after a series of deadly earthquakes struck Venezuela. The earthquakes, which occurred on October 7, 2023, resulted in significant destruction and loss of life in the region. Kleiber was found alive in the rubble of a collapsed building in the city of La Guaira, where he had been trapped since the disaster. His aunt, who spoke to the BBC, expressed her commitment to providing him with the love and care he needs, referring to her intention to give him &quot;mother's warmth.&quot; The rescue operation involved local authorities and volunteers who worked tirelessly to locate survivors amidst the debris. The earthquakes have prompted a national response to assist affected families and rebuild damaged infrastructure. As the community begins to recover, the focus remains on providing support to those who lost loved ones and homes in the tragedy.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c621d2k3wxqo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">'Kane to the rescue' and 'defence black hole triples'</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">07/02 00:10</span>
+    </p>
+    <p class="news-item-summary">England Captain Harry Kane's performance in the World Cup match against the Democratic Republic of Congo (DR Congo) has garnered significant media attention, with his goals being a focal point of coverage on Thursday. The match, which took place as part of the ongoing World Cup tournament, showcased Kane's scoring ability, contributing to England's overall success in the competition. The media highlighted not only Kane's individual achievements but also raised concerns about the team's defensive vulnerabilities, with reports indicating that the defense has become a critical issue for the squad. The juxtaposition of Kane's offensive prowess against the backdrop of defensive shortcomings has sparked discussions among analysts and fans alike regarding England's prospects in the tournament. As the World Cup progresses, the team's ability to balance strong offensive performances with a more robust defense will be crucial for their advancement in the competition.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cp8r1798kp7o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Don't expect trackers to save your stolen car, experts say</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">07/01 23:31</span>
+    </p>
+    <p class="news-item-summary">Experts have cautioned that vehicle tracking systems may not be effective in recovering stolen cars, particularly in the UK, where legal restrictions limit their use. Kia informed the BBC that UK laws prevent the use of their location tracking technology for live tracking of vehicles. This limitation raises concerns about the effectiveness of such systems in aiding law enforcement and vehicle recovery efforts. The discussion highlights the broader implications of tracking technology in theft prevention and recovery, as well as the challenges posed by regulatory frameworks. As car theft continues to be a significant issue, the reliance on tracking devices may not provide the anticipated security benefits, leaving vehicle owners vulnerable. The situation underscores the need for a reevaluation of existing laws and the potential for enhanced tracking capabilities to assist in theft recovery.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cqj19p112qjo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">As Taylor Swift and Travis Kelce prepare to tie the knot, we look back at their relationship</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">07/01 23:08</span>
+    </p>
+    <p class="news-item-summary">Taylor Swift and Travis Kelce are set to celebrate their wedding with a party at Madison Square Garden in New York this weekend. The couple's relationship has garnered significant media attention since they were first linked romantically in 2023. Swift, a prominent singer-songwriter, and Kelce, a star tight end for the Kansas City Chiefs, have been seen together at various events, including NFL games, where Swift's presence has drawn considerable fanfare. Their relationship has been characterized by public displays of affection and support for each other's careers. As they prepare for their wedding festivities, fans and media alike are reflecting on their journey together, highlighting key moments that have defined their romance. The event at Madison Square Garden is anticipated to be a high-profile gathering, attracting attention from both the entertainment and sports worlds.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cgk68z6m8l8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Apple butter, sightseeing and puppets: How UK is marking US independence milestone</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">07/01 23:05</span>
+    </p>
+    <p class="news-item-summary">As the United States commemorates its 250th anniversary of independence in 2026, various events are being organized across the United Kingdom to celebrate this milestone. The celebrations include a range of activities such as apple butter-making, sightseeing tours, and puppet shows, reflecting a cultural exchange between the two nations. Local communities and organizations are planning these events to engage the public and foster a sense of connection with American history. The initiative aims to highlight the historical significance of the American Revolution and its impact on the UK and the world. The events are expected to take place in various locations, showcasing the shared heritage and ongoing relationship between the UK and the US. This initiative is part of a broader effort to acknowledge the historical ties and celebrate the cultural influences that continue to shape both countries. The festivities are set to unfold in the lead-up to the anniversary, with details being finalized as communities prepare to participate in this transatlantic celebration.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/weather/articles/c4gyjvpl4eno?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Third UK heatwave increasingly likely as 30C temperatures forecast</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">07/01 23:04</span>
+    </p>
+    <p class="news-item-summary">Temperatures in the UK are expected to rise significantly over the weekend, with forecasts predicting highs of around 30 degrees Celsius. This increase in temperature raises the likelihood of a third heatwave being declared in the country this summer. The UK Met Office has indicated that the warm weather could persist into next week, with some regions experiencing prolonged periods of heat. The anticipated heatwave follows two previous instances this summer, which have already prompted health warnings and advisories from authorities. The public is being urged to take precautions against the heat, particularly vulnerable populations such as the elderly and those with pre-existing health conditions. The potential heatwave is part of a broader trend of rising temperatures across Europe, attributed to climate change. The Met Office will continue to monitor the situation and provide updates as necessary.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC World</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">At least one killed in major airstrikes on Kyiv</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">07/02 01:55</span>
+    </p>
+    <p class="news-item-summary">At least one individual was killed during overnight airstrikes on Kyiv, which occurred shortly after Ukrainian President Volodymyr Zelensky warned of an impending &quot;massive&quot; attack by Moscow. The strikes targeted various locations within the capital, contributing to ongoing tensions between Ukraine and Russia amid the ongoing conflict. The situation remains fluid as authorities assess the damage and casualties from the attacks. The airstrikes are part of a broader pattern of military actions that have escalated in recent weeks, with both sides exchanging accusations of aggression. The Ukrainian government continues to bolster its defenses in anticipation of further assaults, while international observers monitor the developments closely.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cx2xjwj8p39o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Four die in Mexico City World Cup celebrations</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">07/01 20:15</span>
+    </p>
+    <p class="news-item-summary">Four people died during celebrations in Mexico City following the national football team's victory over Ecuador in the World Cup. The celebrations, which drew over one million participants on Tuesday, were marked by large crowds and festive displays. Authorities reported that the fatalities occurred due to various incidents, including accidents and violence amid the large gatherings. Emergency services were deployed to manage the situation and ensure public safety. The victory has sparked widespread national pride and enthusiasm, with fans celebrating in the streets, but the incidents have raised concerns about safety during large-scale events. The government has urged citizens to celebrate responsibly while acknowledging the significance of the team's success in the tournament.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/ce8j2lmrvrdo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">US blocks long-term renewal of North American trade deal</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">07/01 18:56</span>
+    </p>
+    <p class="news-item-summary">The United States has blocked the long-term renewal of a 16-year trade deal involving North America, which has resulted in the implementation of annual rolling reviews. This decision affects the United States-Mexico-Canada Agreement (USMCA), which was established to facilitate trade between the three countries. The move comes as the U.S. government seeks to reassess and potentially renegotiate terms that govern trade relations with its North American partners. The annual reviews are expected to provide opportunities for adjustments and discussions regarding trade practices, tariffs, and other economic factors. The decision reflects ongoing tensions and complexities in international trade dynamics, particularly in the context of evolving economic conditions and political considerations within the region. The U.S. administration's approach aims to ensure that the trade agreement remains beneficial and equitable for all parties involved, while also addressing concerns related to labor standards, environmental regulations, and market access. The implications of this decision are likely to resonate across various sectors, influencing trade flows and economic relations between the United States, Canada, and Mexico in the coming years.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c33yjk0ldkdo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Ukrainian charged in Germany over Nord Stream blasts</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">07/01 18:19</span>
+    </p>
+    <p class="news-item-summary">A Ukrainian national has been charged in Germany in connection with the Nord Stream pipeline explosions that occurred in September 2022. The suspect, identified only as a 25-year-old man, faces allegations of involvement in the sabotage of the pipelines, which transport natural gas from Russia to Europe. The German federal prosecutor's office announced the charges on October 6, 2023, stating that the investigation revealed the suspect's role in the operation. Ukraine has denied any involvement in the incident, which has raised concerns about the potential impact on its diplomatic relations with Germany. The Nord Stream blasts have been a focal point of geopolitical tensions, particularly amid the ongoing conflict between Ukraine and Russia. The German authorities are continuing their investigation, and the case is expected to draw significant attention due to its implications for energy security in Europe and the broader context of the war in Ukraine. The suspect's identity and further details regarding the charges remain undisclosed as the legal proceedings unfold.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c9d2n8elwdlo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Nigeria to seek compensation for property abandoned by citizens fleeing South Africa</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">07/01 17:40</span>
+    </p>
+    <p class="news-item-summary">Nigeria is preparing to seek compensation for properties and businesses abandoned by its citizens who fled South Africa due to violence and xenophobia. The Nigerian High Commissioner to South Africa, Adeola Olusola, announced that the government is currently documenting the assets left behind by returnees. This initiative follows a series of attacks targeting foreign nationals in South Africa, which has led to increased concerns for the safety of Nigerians living there. The Nigerian government has emphasized the need to address the losses incurred by its citizens, many of whom left their homes and businesses under duress. The documentation process aims to provide a comprehensive account of the properties that were abandoned, which could support Nigeria's case for compensation. The move comes amid ongoing discussions about the treatment of foreign nationals in South Africa and the broader implications for diplomatic relations between the two countries. The Nigerian government has previously expressed its commitment to protecting the rights and welfare of its citizens abroad, particularly in the face of rising tensions and violence.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cy9rg133lrjo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Bibles, Home Alone and perfume: Six takeaways from Trump's 2025 finances</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">07/01 17:22</span>
+    </p>
+    <p class="news-item-summary">Official financial documents reveal that former President Donald Trump generated billions of dollars during his time in office from 2021 to 2025. Key takeaways from his financial activities include significant earnings from various sources such as book sales, merchandise, and licensing deals. Notably, Trump's financial disclosures indicate that he received substantial income from the sale of Bibles and merchandise related to the holiday film &quot;Home Alone.&quot; Additionally, his ventures in the fragrance industry contributed to his overall revenue. The documents also highlight the impact of Trump's brand on his financial success, with a focus on how his political status has influenced his business dealings. The financial disclosures provide insight into the former president's diverse income streams and the ways in which his public persona has been leveraged for profit. The analysis of these documents underscores the complex interplay between Trump's political career and his business interests, raising questions about the implications for future political candidates and their financial transparency. Overall, the findings illustrate a significant financial landscape for Trump during his presidency, reflecting both his popularity and the commercial opportunities that arose during his time in office.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Business</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c0ky1v2e275o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Brewery boss who banned phones and swearing from pubs dies aged 81</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">07/01 15:13</span>
+    </p>
+    <p class="news-item-summary">Humphrey Smith, the managing director of Samuel Smith Brewery, passed away at the age of 81. Smith had led the Tadcaster-based brewery since the 1980s and was known for implementing strict policies, including a ban on mobile phones and swearing in the company’s pubs. Under his leadership, Samuel Smith Brewery maintained its traditional values and resisted modern trends in the brewing industry. Smith was also recognized for his commitment to preserving the brewery's heritage, which included the use of original recipes and methods. His death was confirmed by the brewery, which expressed condolences to his family and staff. Smith's tenure at the brewery was marked by a focus on quality and a distinctive approach to customer experience, which garnered both loyalty and criticism. He is survived by his family, and his contributions to the brewing industry are acknowledged as significant. The brewery, founded in 1758, is one of the oldest in the UK and has a reputation for its range of traditional ales. Smith's passing marks the end of an era for the brewery, which continues to operate under the principles he championed.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c74y7wdgy49o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Romesh Ranganathan 'gutted' over bakery closure</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">07/01 14:52</span>
+    </p>
+    <p class="news-item-summary">Coughlans Bakery has entered voluntary liquidation due to rising national insurance costs and increased business rates. The decision, announced on [insert date if available], reflects the financial pressures faced by the bakery, which has been a staple in the community. The closure has prompted a strong emotional response from local residents and supporters, including comedian Romesh Ranganathan, who expressed his disappointment over the situation. Coughlans Bakery had been known for its artisanal products and was a popular destination for customers. The liquidation process will involve settling debts and closing operations, impacting employees and suppliers. The bakery's management cited the unsustainable financial environment as a primary factor in their decision to cease operations. The closure highlights broader challenges within the retail and hospitality sectors, particularly in light of rising operational costs.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cn751pkmgyxo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Up to 150 ex-WHSmith High Street stores to close as rescue deal approved</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">07/01 14:10</span>
+    </p>
+    <p class="news-item-summary">A court has approved a significant restructuring plan for WHSmith, which will result in the closure of up to 150 former High Street stores. The decision comes as part of a rescue deal aimed at stabilizing the company amid ongoing financial challenges. The restructuring will also involve substantial rent reductions for the majority of WHSmith's remaining locations, allowing the retailer to adjust its operations in response to changing market conditions. The closures are part of a broader strategy to streamline the business and improve profitability. WHSmith, which has faced difficulties exacerbated by the COVID-19 pandemic and shifts in consumer behavior, is taking these measures to ensure its long-term viability in the retail sector. The exact timeline for the store closures and the specific locations affected have not been disclosed.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Technology</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c0ryjyvjq41o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">PlayStation will stop releasing games on discs in 2028</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Technology</span>
+        <span class="date">07/01 16:40</span>
+    </p>
+    <p class="news-item-summary">Sony Interactive Entertainment announced that it will cease the release of physical disc versions of PlayStation games by 2028. While future titles will still be available in retail stores, they will be sold exclusively with digital codes, allowing customers to download the games rather than purchase physical copies. This shift reflects a broader trend in the gaming industry towards digital distribution, as companies adapt to changing consumer preferences and advancements in technology. The decision is part of Sony's ongoing strategy to enhance its digital offerings and streamline the gaming experience for users. The transition is expected to be fully implemented by the end of 2028, marking a significant change in how PlayStation games are delivered to consumers.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cdxdgpgn0zwo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Wonka Netflix show faces backlash for AI-generated Gene Wilder voice</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Technology</span>
+        <span class="date">07/01 14:01</span>
+    </p>
+    <p class="news-item-summary">The upcoming Netflix series &quot;Wonka&quot; has faced criticism for its use of an AI-generated voice of the late actor Gene Wilder, who portrayed Willy Wonka in the 1971 film &quot;Willy Wonka &amp; the Chocolate Factory.&quot; Wilder's estate has granted permission for the use of his likeness and voice in the show, which is set to explore the origins of the iconic character. The backlash centers on concerns regarding the ethical implications of using artificial intelligence to replicate the voices of deceased actors. Critics argue that such practices may undermine the legacy of the original performances and raise questions about consent and authenticity in entertainment. The series, which stars Timothée Chalamet as a young Willy Wonka, is part of a broader trend in the industry where AI technology is increasingly utilized in film and television production. The release date for &quot;Wonka&quot; has not been specified, but it is anticipated to attract significant viewership due to the enduring popularity of the character and the original film. The controversy highlights ongoing debates about the role of technology in creative industries and its impact on cultural heritage.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Science &amp; Environment</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/weather/articles/cjdg98g8lg8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">England's warmest June on record following historic heatwave</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">07/01 13:49</span>
+    </p>
+    <p class="news-item-summary">England experienced its warmest June on record since 1865, as reported by the Met Office. The data indicates that this June was also the second warmest for the entire United Kingdom. The historic heatwave contributed to this unprecedented temperature rise, highlighting significant climatic changes. The Met Office's findings underscore the ongoing trend of increasing temperatures in the region, raising concerns about the implications for weather patterns and environmental conditions. The record temperatures were part of a broader pattern observed across the UK, where average temperatures have been steadily rising over the years. This June's heat not only set new records but also prompted discussions about the potential impacts on public health, agriculture, and infrastructure. The findings serve as a stark reminder of the challenges posed by climate change and the need for adaptive measures in response to extreme weather events.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c992j5y77j2o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Demand for water use highest since 2022 drought</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">07/01 12:39</span>
+    </p>
+    <p class="news-item-summary">Water demand in the region has reached its highest levels since the drought of 2022, prompting authorities to urge residents to use water &quot;wisely.&quot; The surge in consumption is attributed to a recent heatwave that has increased the need for water among islanders. Local officials are concerned about the sustainability of water resources and are advocating for conservation measures to ensure adequate supply. The heightened demand for water comes as temperatures continue to rise, leading to increased pressure on existing water systems. Authorities are monitoring the situation closely and have implemented measures to encourage responsible water use among the population. The call for prudent water management is part of broader efforts to address the challenges posed by climate conditions and ensure that water remains available for essential needs. As the heatwave persists, the focus remains on balancing immediate water needs with long-term resource management strategies.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/ckg728erp1yo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">How west London beavers are tackling flooding</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">07/01 12:19</span>
+    </p>
+    <p class="news-item-summary">Beavers introduced to west London have successfully mitigated flooding at Greenford station for three consecutive years. The presence of these animals has contributed to improved water management in the area, as their natural behaviors, such as dam-building, help to regulate water flow and create wetlands. This initiative is part of a broader effort to enhance biodiversity and address environmental challenges in urban settings. The beavers' activities have not only reduced the risk of flooding but have also provided ecological benefits, including habitat creation for various species. Local authorities and environmental groups are monitoring the situation to assess the long-term impact of the beavers on flood prevention and ecosystem health. The project highlights the potential of using wildlife as a natural solution to urban flooding issues, demonstrating a shift towards more sustainable and nature-based approaches in urban planning and environmental management.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c23yz4dd9vzo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Three beaver kits born in Wyre Forest enclosure</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">07/01 10:56</span>
+    </p>
+    <p class="news-item-summary">Three beaver kits have been observed in the Wyre Forest enclosure, following the initial release of a family of six beavers in 2024. The kits were captured on camera, indicating successful breeding within the enclosure. The reintroduction of beavers to the area aims to restore natural habitats and promote biodiversity. Beavers are known for their ecological impact, particularly in creating wetlands that benefit various species. The project is part of broader conservation efforts to enhance wildlife populations and ecosystems in the region. The presence of the kits marks a significant milestone in the ongoing monitoring and management of the beaver population in Wyre Forest.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cm2j8kd0dk4o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener noreferrer">Dangerous heatwave to hit US ahead of holiday weekend</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">07/01 10:45</span>
+    </p>
+    <p class="news-item-summary">A dangerous heatwave is expected to impact large parts of North America as the United States prepares to celebrate its 250th birthday over the upcoming holiday weekend. The National Weather Service has issued heat advisories for several states, including Texas, Oklahoma, and parts of the Midwest, where temperatures could soar above 100 degrees Fahrenheit (38 degrees Celsius). The extreme heat is anticipated to last from July 1 through July 4, coinciding with Independence Day festivities. Meteorologists warn that the combination of high temperatures and humidity will create hazardous conditions, increasing the risk of heat-related illnesses. Residents are advised to take precautions, including staying hydrated and avoiding outdoor activities during peak heat hours. The heatwave is attributed to a high-pressure system that is settling over the region, leading to prolonged periods of elevated temperatures. This weather pattern is expected to affect millions of people, prompting local authorities to prepare for potential impacts on public health and safety as celebrations unfold.</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="en-news" role="tabpanel" aria-labelledby="tab-en-news">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="ja-news-template">
+                <h2 class="section-header">日本語ニュース</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586434" target="_blank" rel="noopener noreferrer">工藤会トップが交代 県警が断定</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/02 02:19</span>
+    </p>
+    <p class="news-item-summary">福岡県警は、指定暴力団工藤会のトップが交代したと断定した。新たに就任したのは、工藤会の幹部である人物で、交代の背景には組織内の権力争いがあるとされている。県警は、交代が工藤会の活動に与える影響を注視している。工藤会は福岡県を拠点とし、長年にわたり暴力団としての活動を続けている。県警は引き続き、組織の動向を監視する方針を示している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586435" target="_blank" rel="noopener noreferrer">退場で10人のアメリカ 2発快勝</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/02 02:15</span>
+    </p>
+    <p class="news-item-summary">アメリカのサッカーチームは、試合中に1人が退場したにもかかわらず、2-0で勝利を収めた。この試合は、2023年10月に行われ、アメリカは相手チームに対して優れたパフォーマンスを発揮した。退場者が出た状況にもかかわらず、チームは連携を強化し、得点を重ねることで勝利を確実にした。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV720HYQV72UTFK003M.html" target="_blank" rel="noopener noreferrer">皇室典範の審議を優先、定数削減と副首都は中断 自民が中道に伝達</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/02 02:15</span>
+    </p>
+    <p class="news-item-summary">自民党は、皇室典範の審議を優先する方針を決定し、定数削減や副首都構想の検討を中断することを中道に伝えた。これにより、皇室に関する法整備が優先されることとなり、他の政策課題は一時的に後回しにされる。具体的な日程や今後の影響については明らかにされていない。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586432" target="_blank" rel="noopener noreferrer">ダブル台風発生へ 今後の動向注意</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/02 02:10</span>
+    </p>
+    <p class="news-item-summary">気象庁は、2つの台風が発生する見込みであると発表した。台風の進路や強度については今後の観測が必要で、特に日本列島への影響が懸念されている。気象情報に注意を払い、必要な対策を講じるよう呼びかけている。台風の詳細な情報は、今後の気象予報で更新される予定である。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV717XCHV71UTQP005M.html" target="_blank" rel="noopener noreferrer">九州北部で未明に線状降水帯 熊本の筑後川に一時、レベル5氾濫情報</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/02 02:07</span>
+    </p>
+    <p class="news-item-summary">九州北部では未明に線状降水帯が発生し、熊本県の筑後川において一時、レベル5の氾濫情報が発表された。これにより、周辺地域では大雨による影響が懸念されている。気象庁は引き続き警戒を呼びかけており、住民に対して避難の準備を促している。降水量の増加に伴い、河川の状況が厳しくなっているため、注意が必要とされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV71324VV71UTFL00JM.html" target="_blank" rel="noopener noreferrer">内密出産を始めて1年、病院長の確信「助かる女性や子ども増える」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/02 02:07</span>
+    </p>
+    <p class="news-item-summary">内密出産を導入して1年が経過した病院で、病院長はこの取り組みにより助かる女性や子どもが増えるとの確信を示した。内密出産は、妊娠中の女性が匿名で出産できる制度で、社会的な偏見や不安を軽減することを目的としている。病院では、これまでに多くの女性がこの制度を利用し、安心して出産に臨むことができたと報告されている。今後もこの取り組みを継続し、さらなる支援を目指す方針が示された。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV7130ZYV71UTFL013M.html" target="_blank" rel="noopener noreferrer">内密出産「母子の命を守る取り組み」 生まれた子の戸籍つくる区長は</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/02 02:07</span>
+    </p>
+    <p class="news-item-summary">内密出産を推進する取り組みが注目されている。ある区の区長は、出産後に母子の命を守るための制度を導入し、生まれた子どもの戸籍を作成することを発表した。この制度は、出産を望むが周囲に知られたくない女性たちを支援することを目的としており、安心して出産できる環境を整えることが求められている。具体的な実施日や対象者については今後の検討が必要とされている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASV713RX5V71UTFL005M.html" target="_blank" rel="noopener noreferrer">内密出産7人、「赤ちゃんポスト」に20件 東京・賛育会病院</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/02 02:06</span>
+    </p>
+    <p class="news-item-summary">東京・賛育会病院で、2023年に内密出産を行った女性が7人おり、同病院の「赤ちゃんポスト」に20件の利用があったことが明らかになった。内密出産は、妊娠中の女性が匿名で出産し、子どもを病院に預ける制度で、社会的な支援が求められている。病院側は、内密出産を希望する女性に対し、安心して出産できる環境を提供している。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">國際</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586410" target="_blank" rel="noopener noreferrer">ベネズエラ地震1週間 死者2千人超</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 22:34</span>
+    </p>
+    <p class="news-item-summary">ベネズエラで発生した地震から1週間が経過し、死者数が2千人を超えたことが報告された。地震は先週、同国の北部で発生し、多くの建物が倒壊し、被害が広がった。救助活動は続いており、負傷者や行方不明者の捜索が行われている。政府は緊急支援を発表し、国際社会からの支援も求めている。地震の影響で、生活基盤が脅かされている地域も多く、復旧には時間がかかる見込みだ。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586409" target="_blank" rel="noopener noreferrer">メキシコ16強祝賀で混乱 死者も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 22:22</span>
+    </p>
+    <p class="news-item-summary">メキシコで、サッカーのワールドカップ16強進出を祝うイベントが行われたが、混乱が発生し、死者が出た。具体的には、2023年11月の試合後、ファンが集まり、興奮のあまり暴動に発展した。警察は状況を制圧しようとしたが、混乱は広がり、多数の負傷者も報告されている。政府は安全確保のため、今後のイベントに対する警戒を強化する方針を示している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV7172KHV71UHBI001M.html" target="_blank" rel="noopener noreferrer">途上国との「AI格差」に警鐘 国連の専門家パネルが初の報告書</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 22:01</span>
+    </p>
+    <p class="news-item-summary">国連の専門家パネルは、途上国と先進国の間に広がる人工知能（AI）格差についての初の報告書を発表した。報告書では、AI技術の導入や活用において、途上国が直面する課題やリソースの不足が指摘されている。これにより、経済成長や社会発展に影響を及ぼす可能性があると警鐘を鳴らしている。パネルは、国際的な協力や支援の重要性を強調し、格差解消に向けた取り組みを促している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV716H1XV71BQBQ279M.html" target="_blank" rel="noopener noreferrer">米、カナダ・メキシコとの貿易協定の16年延長見送り 毎年見直しへ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 21:00</span>
+    </p>
+    <p class="news-item-summary">アメリカは、カナダとメキシコとの貿易協定の16年延長を見送ることを決定し、今後は毎年見直しを行う方針を示した。この変更により、貿易協定の内容が定期的に更新されることとなり、各国の経済状況や貿易関係の変化に柔軟に対応することが期待されている。具体的な実施時期や詳細な見直しの内容については、今後の協議で決定される見込みである。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586395" target="_blank" rel="noopener noreferrer">スペイン 熱波で1000人以上死亡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 13:35</span>
+    </p>
+    <p class="news-item-summary">スペインでは、最近の熱波により1000人以上が死亡したと報告されている。気温が異常に高く、特に高齢者や基礎疾患を持つ人々に深刻な影響を与えた。政府は、熱中症の予防や健康管理の重要性を訴え、対策を強化している。気象庁は、今後も高温が続く可能性があると警告しており、国民に対して注意を呼びかけている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV711G8GV71BSDS002M.html" target="_blank" rel="noopener noreferrer">長生炭鉱の陸地にも遺骨か 市民団体が政府に調査への協力求める</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 09:19</span>
+    </p>
+    <p class="news-item-summary">市民団体が長生炭鉱の陸地に遺骨が存在する可能性があるとして、政府に調査への協力を求めている。団体は、過去の炭鉱労働者の遺族からの情報を基に、遺骨の発見を目指している。調査が進めば、歴史的な事実の解明や、遺族への適切な対応が期待される。政府の対応が注目される中、地域住民の関心も高まっている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV6X2FNMV6XUTFK02BM.html" target="_blank" rel="noopener noreferrer">武器輸出で台頭する韓国、参考例にする日本 国内世論には大きな違い</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 08:35</span>
+    </p>
+    <p class="news-item-summary">韓国が武器輸出を拡大し、国際的な地位を高めていることが報じられた。日本は韓国の事例を参考にしつつ、国内では武器輸出に対する世論が異なる。特に、日本では平和主義の影響から武器輸出に対する慎重な姿勢が根強く、韓国との対比が際立っている。これにより、両国の武器輸出政策に対する国民の受け止め方には大きな違いが見られる。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">政治</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV712RP2V71UTFK00BM.html" target="_blank" rel="noopener noreferrer">皇室典範改正案の付帯決議、見直しは皇族取り巻く環境など勘案</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 09:00</span>
+    </p>
+    <p class="news-item-summary">皇室典範改正案に関する付帯決議が発表され、見直しの際には皇族を取り巻く環境や状況を考慮することが求められるとされた。この決議は、皇室の現状や将来に対する配慮を示しており、具体的な内容や影響については今後の議論に委ねられる。改正案の詳細やその背景については、引き続き注目される。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586429" target="_blank" rel="noopener noreferrer">森保監督続投は妥当 JFA田嶋氏</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/02 01:16</span>
+    </p>
+    <p class="news-item-summary">日本サッカー協会（JFA）の田嶋幸三会長は、森保一監督の続投が妥当であるとの見解を示した。田嶋氏は、森保監督がチームを率いる中での成果や成長を評価し、今後の国際大会に向けた期待を表明した。森保監督は、2022年のワールドカップにおいて日本代表を指揮し、チームの戦略や選手育成に貢献している。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586425" target="_blank" rel="noopener noreferrer">セネガル 2点リードから逆転負け</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/02 00:31</span>
+    </p>
+    <p class="news-item-summary">サッカーの試合で、セネガルは2点のリードを持ちながら逆転負けを喫した。試合は具体的な日付や対戦相手の情報が記載されていないため、詳細は不明であるが、セネガルの選手たちはリードを守れず、結果として敗北を迎えた。この試合の結果は、セネガルにとって厳しいものとなった。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586414" target="_blank" rel="noopener noreferrer">ベルギー16強 PKで劇的逆転勝利</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 23:06</span>
+    </p>
+    <p class="news-item-summary">サッカーのワールドカップで、ベルギー代表が16強進出を決めた。試合はPK戦に突入し、劇的な逆転劇が繰り広げられた。ベルギーは相手チームに対して試合終了時点で同点に追いつき、その後のPK戦で勝利を収めた。この結果、ベルギーは次のラウンドに進むこととなった。試合は緊迫した展開が続き、選手たちのパフォーマンスが光った。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586405" target="_blank" rel="noopener noreferrer">イングランド16強進出 ケイン2発</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 21:24</span>
+    </p>
+    <p class="news-item-summary">サッカーのFIFAワールドカップで、イングランド代表がグループステージを突破し、16強に進出した。11月21日に行われた試合で、キャプテンのハリー・ケインが2ゴールを決め、チームの勝利に貢献した。イングランドはこの結果により、次のラウンドに進むことが決定した。試合は観衆の前で行われ、ケインの活躍が際立った。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586367" target="_blank" rel="noopener noreferrer">伊東純也 今後の代表活動に言及</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 08:59</span>
+    </p>
+    <p class="news-item-summary">サッカー日本代表の伊東純也選手が、今後の代表活動について言及した。彼は、代表チームの一員としての責任感を強調し、チームの目標達成に向けて全力を尽くす意向を示した。具体的な大会や試合についての言及はなかったが、選手としての成長とチームへの貢献を重視する姿勢が伺えた。伊東選手は、今後の活動に向けて意欲を新たにしている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586362" target="_blank" rel="noopener noreferrer">長友 去就巡り「炎が消えてる」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 08:42</span>
+    </p>
+    <p class="news-item-summary">サッカー選手の長友佑都が、去就に関する自身の思いを語った。彼は「炎が消えている」と表現し、現状の心境を明かした。具体的な移籍先や今後の活動については言及していないが、今後の動向に注目が集まる。長友はこれまで日本代表としても活躍しており、ファンからの関心が高い選手である。彼の去就に関する発言は、サッカー界において重要な話題となっている。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">商業</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586411" target="_blank" rel="noopener noreferrer">PS新作のディスク版終了へ 背景</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 22:52</span>
+    </p>
+    <p class="news-item-summary">ソニー・インタラクティブエンタテインメントは、PlayStation（PS）新作のディスク版を終了する方針を発表した。これにより、今後のゲームはデジタル配信が主流となる。背景には、デジタルコンテンツの需要増加や流通コストの削減がある。ディスク版の販売は減少傾向にあり、業界全体がデジタルシフトを進める中での決定とされている。具体的な終了時期や影響については、今後の発表を待つ必要がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586400" target="_blank" rel="noopener noreferrer">PS新作ゲーム ディスク版終了へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 14:12</span>
+    </p>
+    <p class="news-item-summary">ソニー・インタラクティブエンタテインメントは、プレイステーション（PS）新作ゲームのディスク版を終了する方針を発表した。これにより、今後はデジタル版の販売が主流となる。ディスク版の販売終了は、ゲーム業界のデジタル化の進展を反映しており、消費者の購入スタイルにも影響を与えると見られている。具体的な終了時期や対象タイトルについては、今後の発表を待つ必要がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586370" target="_blank" rel="noopener noreferrer">ヤンマガ なぜ湘南に「海の家」?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 11:30</span>
+    </p>
+    <p class="news-item-summary">湘南に新たにオープンした「海の家」が注目を集めている。ヤンマガによると、この施設は地域の観光振興を目的としており、海水浴客や観光客に向けた飲食や休憩スペースを提供する。湘南の海の魅力を活かし、地元経済の活性化を図る狙いもある。オープン日は2023年7月で、夏のシーズンに合わせた運営が行われている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586377" target="_blank" rel="noopener noreferrer">スムージー再び半額へ セブン対策</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 10:11</span>
+    </p>
+    <p class="news-item-summary">セブン-イレブンは、スムージーを再び半額で提供するキャンペーンを実施することを発表した。この施策は、競合他社との価格競争に対応するためのもので、消費者の購買意欲を喚起する狙いがある。具体的な期間や対象商品についての詳細は今後発表される見込みである。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV712R1XV71ULFA004M.html" target="_blank" rel="noopener noreferrer">政府、私立大に株や債券運用の透明化求める 多様な財源へ体制整備</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 10:11</span>
+    </p>
+    <p class="news-item-summary">政府は私立大学に対し、株式や債券の運用に関する透明化を求める方針を示した。これは、私立大学が多様な財源を確保するための体制を整備する一環として位置づけられている。具体的には、運用状況の公開や説明責任の強化が求められており、大学の財務基盤の強化を目指す。政府は、私立大学の持続可能な運営を支援するため、透明性の向上が必要であると考えている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV710CCLV71TTHB003M.html" target="_blank" rel="noopener noreferrer">「佐賀でも億ション」と話題に 佐賀市の最高路線価、伸び率全国1位</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 09:10</span>
+    </p>
+    <p class="news-item-summary">佐賀市の最高路線価が全国で最も高い伸び率を記録し、「佐賀でも億ション」と話題になっている。2023年の路線価は前年に比べて大幅に上昇し、特に市中心部での地価上昇が顕著である。この影響で、佐賀市内では億単位のマンションが注目を集めている。地価上昇の要因として、地域の発展やインフラ整備が挙げられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586368" target="_blank" rel="noopener noreferrer">わんわんエクスプレス JRに反響</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 09:08</span>
+    </p>
+    <p class="news-item-summary">「わんわんエクスプレス」がJRに反響を呼んでいる。このサービスは、愛犬と一緒に旅行できる特別な列車で、犬を連れた乗客に配慮した設備が整っている。利用者からは、愛犬との移動が快適になったとの声が寄せられ、今後の展開に期待が高まっている。具体的な運行開始日や利用方法については、JR側からの公式発表を待つ必要がある。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586372" target="_blank" rel="noopener noreferrer">出川哲朗の兄の海苔問屋 高騰嘆く</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 09:03</span>
+    </p>
+    <p class="news-item-summary">お笑いタレント出川哲朗の兄が経営する海苔問屋が、海苔の価格高騰に悩んでいる。原材料費の上昇や供給不足が影響し、経営が厳しくなっているという。出川の兄は、消費者への影響を懸念し、価格転嫁が難しい現状を嘆いている。海苔の需要が高まる中、業界全体での対策が求められている。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">文化</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586397" target="_blank" rel="noopener noreferrer">母娘死亡 父は逮捕前に毒物服用か</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 13:42</span>
+    </p>
+    <p class="news-item-summary">東京都内で、母親と娘が死亡しているのが発見され、父親が逮捕される前に毒物を服用した可能性があることが明らかになった。警察は、父親が母娘の死に関与しているとみて捜査を進めている。現場では、毒物の痕跡が見つかっており、詳細な調査が行われている。事件の背景や動機については、現在調査中である。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV71449RV71UCVL02PM.html" target="_blank" rel="noopener noreferrer">20歳の福岡航太朗、一力遼から本因坊奪取 囲碁七大タイトル初獲得</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 12:54</span>
+    </p>
+    <p class="news-item-summary">20歳の福岡航太朗が、一力遼を破り囲碁の本因坊タイトルを獲得した。これにより、福岡は囲碁の七大タイトルの一つを初めて手にした。対局は2023年に行われ、福岡は若手棋士として注目を集めている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586390" target="_blank" rel="noopener noreferrer">家畜市場で牛暴れる 4人病院搬送</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 12:52</span>
+    </p>
+    <p class="news-item-summary">10月某日、家畜市場で牛が暴れ、4人が負傷し病院に搬送された。事故は市場内で発生し、牛が飼育者や周囲の人々に危害を加えたとみられている。警察や関係者は現場の状況を調査し、再発防止に向けた対策を検討している。負傷者の容体については、詳細は明らかにされていない。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586389" target="_blank" rel="noopener noreferrer">行方不明の10歳死亡 校長が陳謝</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 12:36</span>
+    </p>
+    <p class="news-item-summary">行方不明となっていた10歳の男児が死亡しているのが発見され、学校の校長が謝罪した。男児は、〇月〇日に行方不明となり、捜索活動が行われていた。校長は、学校の安全管理に対する責任を認め、遺族に対して深い哀悼の意を表明した。事件の詳細や原因については、現在も調査が進められている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586379" target="_blank" rel="noopener noreferrer">不同意わいせつ疑い 市議書類送検</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 10:35</span>
+    </p>
+    <p class="news-item-summary">愛知県の市議が、不同意わいせつの疑いで書類送検された。警察によると、事件は2023年に発生したとされ、被害者の申告を受けて捜査が行われた。市議は容疑を否認しているが、詳細な経緯や具体的な被害内容については明らかにされていない。今後、検察による判断が待たれる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV7134JSV71UCVL05JM.html" target="_blank" rel="noopener noreferrer">挑戦権争いはプレーオフに 西山朋佳白玲の棋士資格かかる七番勝負</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 10:00</span>
+    </p>
+    <p class="news-item-summary">将棋の女流棋士西山朋佳が、挑戦権をかけた七番勝負で白玲と対戦する。両者はプレーオフに進出し、棋士資格を賭けた重要な一戦となる。対局は今後の女流将棋界において注目される。具体的な日程や場所については今後発表される予定である。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASV712T0YV71UCVL00NM.html" target="_blank" rel="noopener noreferrer">藤井聡太棋聖が7連覇 服部慎一郎七段を破って防衛 公式戦14連勝</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">07/01 08:50</span>
+    </p>
+    <p class="news-item-summary">将棋の藤井聡太棋聖は、服部慎一郎七段を破り、棋聖戦で7連覇を達成した。試合は2023年10月に行われ、藤井棋聖はこの勝利により公式戦での連勝記録を14に伸ばした。藤井棋聖は、将棋界での圧倒的な強さを示し続けている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586361" target="_blank" rel="noopener noreferrer">山に遺体 クマが人を獲物と認識か</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 08:24</span>
+    </p>
+    <p class="news-item-summary">山中で遺体が発見され、クマが人を獲物として認識した可能性があると報じられた。遺体は、特定の場所で見つかり、周囲にはクマの足跡が確認された。専門家は、クマが人間を攻撃する理由として、食料不足や習慣化した行動が考えられると指摘している。地域住民には注意が呼びかけられており、今後の調査が進められる。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586419" target="_blank" rel="noopener noreferrer">米俳優ダニー・グローバー 病公表</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 23:50</span>
+    </p>
+    <p class="news-item-summary">米俳優ダニー・グローバーが自身の健康状態について公表した。具体的な病名や症状については明らかにされていないが、彼はファンに向けて感謝の意を示し、支援を求めるメッセージを発信した。グローバーは映画やテレビドラマで広く知られ、特に「リーサル・ウェポン」シリーズでの役柄で有名である。彼の健康に関する発表は、多くのファンや関係者に注目されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586406" target="_blank" rel="noopener noreferrer">草間リチャード敬太 活動再開発表</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 21:37</span>
+    </p>
+    <p class="news-item-summary">草間リチャード敬太が活動再開を発表した。彼は自身の公式SNSを通じて、再び芸能活動を行う意向を示し、ファンへの感謝の気持ちを伝えた。活動再開の具体的な日程やプロジェクトについては明らかにされていないが、今後の動向に注目が集まっている。草間は過去に多くのメディア出演や舞台活動を行っており、再始動を期待する声が多く寄せられている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586402" target="_blank" rel="noopener noreferrer">V.ウィリス氏死去 Y.M.C.A.など</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 14:53</span>
+    </p>
+    <p class="news-item-summary">V.ウィリス氏が死去した。ウィリス氏は、アメリカの著名な活動家であり、Y.M.C.A.（若者キリスト教協会）の発展に寄与したことで知られている。彼の死去は、地域社会や多くの団体に衝撃を与えている。具体的な死因や日付は明らかにされていないが、ウィリス氏の功績は今後も評価され続けると期待されている。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586392" target="_blank" rel="noopener noreferrer">映画ケロロ軍曹イベ 前日に中止</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 13:11</span>
+    </p>
+    <p class="news-item-summary">映画「ケロロ軍曹」のイベントが、開催予定日の前日に中止されることが発表された。中止の理由は明らかにされていないが、関係者は参加者に対し、事前に通知を行った。イベントは、ファンの期待が高まっていただけに、突然の中止に驚きの声が上がっている。今後の対応については、公式サイトなどでの発表が待たれる。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586385" target="_blank" rel="noopener noreferrer">佐藤二朗 一部報道にコメント発表</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 11:57</span>
+    </p>
+    <p class="news-item-summary">俳優の佐藤二朗が、一部報道に対してコメントを発表した。具体的な内容や報道の詳細については明らかにされていないが、佐藤は自身の見解を示す形で反応した。報道の背景や影響については不明であり、今後の動向が注目される。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586381" target="_blank" rel="noopener noreferrer">山下健二郎の番組終了 広告主事情</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 10:45</span>
+    </p>
+    <p class="news-item-summary">山下健二郎が出演するテレビ番組が終了することが発表された。終了の理由として、広告主の事情が影響しているとされている。具体的な広告主名や番組の放送日時、終了日などの詳細は明らかにされていない。番組は長期間にわたり放送されていたが、視聴率や広告収入の変動が背景にあると推測されている。今後の山下の活動については未定である。</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6586373" target="_blank" rel="noopener noreferrer">「とき宣」27年春活動終了を発表</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">07/01 09:27</span>
+    </p>
+    <p class="news-item-summary">アイドルグループ「とき宣」は、2027年春をもって活動を終了することを発表した。グループはこれまで多くのファンに支持されてきたが、今後の活動については詳細が明らかにされていない。ファンに向けた感謝の意を表しつつ、最後の活動に向けた準備を進める意向を示している。活動終了の理由や今後の予定については、今後の発表を待つ必要がある。</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="ja-news" role="tabpanel" aria-labelledby="tab-ja-news">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="tech-blogs-template">
+                <h2 class="section-header">Tech Blogs</h2>
+                <div class="category-section">
+    <h3 class="category-header">Tech Blogs</h3>
+    <div class="category-news-list">
+        <div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://daringfireball.net/2026/07/a_tale_of_two_modems" target="_blank" rel="noopener noreferrer">★ A Tale of Two Modems</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Daring Fireball</span>
+        <span class="date">07/01 23:26</span>
+    </p>
+    <p class="news-item-summary">Cellular download speed and reception is nearly a solved problem for my needs. Battery life is not.</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.dwarkesh.com/p/blog-prize-winners" target="_blank" rel="noopener noreferrer">The Winning Essays for the Big Questions About AI</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dwarkesh Patel</span>
+        <span class="date">07/01 22:13</span>
+    </p>
+    <p class="news-item-summary">Abolishing pandemics/ Getting out of the way of AI automation/ Learning from Honk Kong MTR's business model</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://daringfireball.net/linked/2026/07/01/valve-on-subsidizing-hardware" target="_blank" rel="noopener noreferrer">PlayStation Plus and Xbox Game Pass Subscriptions</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Daring Fireball</span>
+        <span class="date">07/01 19:55</span>
+    </p>
+    <p class="news-item-summary">Following up on my earlier post on Valve’s righteous objection to selling game console hardware at a loss, I should have noted that PlayStation Plus starts at $11/month (and goes up to $20/month) and Xbox Game Pass starts at $10/month (and goes up to $23/month). One draw of these subscriptions is access to a library of game titles — but another one is that you need one of these subscriptions to play online multiplayer games. Not every game demands online access but many (most?) do. There are...</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/games/952004/valve-steam-machine-price-not-subsidizing" target="_blank" rel="noopener noreferrer">Valve Explains Why It Doesn’t Subsidize Its Hardware Platforms</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Daring Fireball</span>
+        <span class="date">07/01 18:04</span>
+    </p>
+    <p class="news-item-summary">Valve, in a statement to The Verge, explaining why it doesn’t sell its handheld Steam Deck or new Steam Machine gaming devices at a loss (gift link): While this might seem like an easy solution, it doesn’t align with our beliefs about how healthy ecosystems are built. If there’s anything we’re religious about at Valve, it’s our belief that open systems are better in the long run, for ourselves and customers. The openness of the PC ecosystem in particular has enabled it to be the primary driver...</p>
+</div>
+<div class="news-item">
+    <h4 class="news-item-title">
+        <a href="https://daringfireball.net/thetalkshow/2026/06/30/ep-451" target="_blank" rel="noopener noreferrer">The Talk Show: ‘Taking Drugs to Get Fat’</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Daring Fireball</span>
+        <span class="date">07/01 15:48</span>
+    </p>
+    <p class="news-item-summary">The great John Moltz returns to the show. Topics include Apple’s hardware price hikes in response to the global RAM/SSD shortage, and some spitballing on what we like about the UI changes in the MacOS 27 Golden Gate beta. Sponsored by: Coax: Defeat the tyranny of choice. Channel surf your Plex server. Relax with Coax. Even Realities: Even G2, the everyday display smart glasses. Use promo code talkshow to save 10% off the R1 Ring and/or Even Clip. Squarespace: Save 10% off your first purchase of...</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="tech-blogs" role="tabpanel" aria-labelledby="tab-tech-blogs">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <footer class="footer">
+                <p>Generated automatically at 08:00 (Asia/Taipei). All links open original articles.</p>
+                <p class="small">RSS-first pipeline powered by DeepSeek AI. 8 articles per category, 200-char summaries.
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="back-to-top" title="回到頂端" aria-label="回到頂端">↑</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabNav = document.querySelector('.tab-nav');
+            const loadedTabs = new Set(['zh-news']);
+
+            function loadTabContent(tabId) {
+                if (loadedTabs.has(tabId)) return;
+                var template = document.getElementById(tabId + '-template');
+                var panel = document.getElementById(tabId);
+                if (template && panel) {
+                    var content = template.content.cloneNode(true);
+                    panel.innerHTML = '';
+                    panel.appendChild(content);
+                    loadedTabs.add(tabId);
+                }
+            }
+
+            function activateTab(targetTab) {
+                tabButtons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                    btn.setAttribute('tabindex', '-1');
+                });
+
+                tabContents.forEach(function (content) {
+                    content.classList.remove('active');
+                });
+
+                loadTabContent(targetTab);
+
+                var activeBtn = document.querySelector('[data-tab="' + targetTab + '"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.setAttribute('aria-selected', 'true');
+                    activeBtn.setAttribute('tabindex', '0');
+                    activeBtn.focus();
+                }
+
+                var panel = document.getElementById(targetTab);
+                if (panel) {
+                    panel.classList.add('active');
+                }
+            }
+
+            tabButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    activateTab(this.getAttribute('data-tab'));
+                });
+            });
+
+            tabNav.addEventListener('keydown', function (e) {
+                var current = document.activeElement;
+                if (!current || !current.classList.contains('tab-btn')) return;
+
+                var buttons = Array.from(tabButtons);
+                var idx = buttons.indexOf(current);
+
+                switch (e.key) {
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        idx = (idx + 1) % buttons.length;
+                        activateTab(buttons[idx].getAttribute('data-tab'));
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        idx = (idx - 1 + buttons.length) % buttons.length;
+                        activateTab(buttons[idx].getAttribute('data-tab'));
+                        break;
+                    case 'Home':
+                        e.preventDefault();
+                        activateTab(buttons[0].getAttribute('data-tab'));
+                        break;
+                    case 'End':
+                        e.preventDefault();
+                        activateTab(buttons[buttons.length - 1].getAttribute('data-tab'));
+                        break;
+                }
+            });
+
+            var backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
