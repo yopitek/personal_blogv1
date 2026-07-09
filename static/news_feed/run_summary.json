@@ -1,13 +1,13 @@
 {
   "run_date": "2026-07-09",
-  "start_time": "2026-07-09T07:16:13.080442+08:00",
-  "end_time": "2026-07-09T07:17:19.739487+08:00",
-  "duration_seconds": 66.66,
-  "feeds_fetched": 1079,
-  "articles_normalized": 609,
-  "articles_deduplicated": 511,
-  "articles_selected": 164,
-  "summaries_generated": 164,
+  "start_time": "2026-07-09T10:04:18.134117+08:00",
+  "end_time": "2026-07-09T10:18:50.291809+08:00",
+  "duration_seconds": 872.16,
+  "feeds_fetched": 1075,
+  "articles_normalized": 463,
+  "articles_deduplicated": 367,
+  "articles_selected": 141,
+  "summaries_generated": 141,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -47,10 +47,10 @@
   },
   "source_health": {
     "total_sources": 18,
-    "ok_sources": 15,
-    "empty_sources": 3,
-    "failed_sources": 0,
-    "selected_articles": 7,
+    "ok_sources": 14,
+    "empty_sources": 4,
+    "failed_sources": 4,
+    "selected_articles": 6,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -69,8 +69,8 @@
         "source_name": "Gary Marcus",
         "group": "AI / ML",
         "url": "https://garymarcus.substack.com/feed",
-        "status": "ok",
-        "fetched_count": 20
+        "status": "empty",
+        "fetched_count": 0
       },
       {
         "tab": "tech_blogs",
@@ -109,8 +109,8 @@
         "source_name": "Gwern Branwen",
         "group": "AI / ML",
         "url": "https://gwern.substack.com/feed",
-        "status": "ok",
-        "fetched_count": 14
+        "status": "empty",
+        "fetched_count": 0
       },
       {
         "tab": "tech_blogs",
@@ -229,8 +229,8 @@
         "source_name": "Cory Doctorow",
         "group": "Commentary",
         "url": "https://pluralistic.net/feed/",
-        "status": "empty",
-        "fetched_count": 0
+        "status": "ok",
+        "fetched_count": 30
       }
     ]
   },
