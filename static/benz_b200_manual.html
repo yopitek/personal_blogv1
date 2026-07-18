@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz GLB 200 (2024) 互動式車主使用手冊 - AMG 數位座艙</title>
+    <meta name="description" content="全新 2024 年式小改款 Mercedes-Benz GLB 200 W247 車主專屬互動式圖解手冊。詳細介紹懷檔操作、多功能方向盤按鍵、MBUX 2.0 系統設定、5+2 空間折疊與電動尾門高度限制等五大隱藏版實用功能。">
+    <meta name="keywords" content="Mercedes-Benz, GLB 200, GLB 2024, 車主手冊, MBUX 2.0, 懷檔操作, 23P智慧駕駛輔助, 尾門限制, 5加2七人座">
+    <meta name="author" content="Yupitek Car Club">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Mercedes-Benz GLB 200 (2024) 互動式車主使用手冊 - AMG 數位座艙">
+    <meta property="og:description" content="掌握 GLB 200 的所有隱藏功能與駕駛技巧。橫式 MBUX 模擬座艙設計，帶您深入了解 1.33T+48V 輕油電系統及智慧輔助駕駛操作。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="glb_cockpit_blueprint.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) for SEO / AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Mercedes-Benz GLB 200 (2024) 互動式車主使用手冊",
+      "description": "2024 年小改款 GLB 200 車主專屬圖解手冊，包含 MBUX 2.0 系統操作、23P 跟車、尾門調整等實用教學。",
+      "image": "glb_cockpit_blueprint.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Yupitek"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mercedes-Benz GLB 200 2024",
+        "model": "GLB 200 Facelift W247",
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "Mercedes-Benz"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0c0d12;
+            --panel-bg: #14161f;
+            --panel-border: #222633;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --amg-red: #ff3b30;
+            --ambient-color: #00a8ff; /* Default polar blue */
+            --ambient-glow: 0 0 15px rgba(0, 168, 255, 0.4);
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-speed: 0.4s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            overflow: hidden; /* Lock scroll for horizontal slider */
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Carbon fiber texture & Grid lines background */
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                linear-gradient(45deg, rgba(20, 22, 31, 0.6) 25%, transparent 25%), 
+                linear-gradient(-45deg, rgba(20, 22, 31, 0.6) 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, rgba(20, 22, 31, 0.6) 75%), 
+                linear-gradient(-45deg, transparent 75%, rgba(20, 22, 31, 0.6) 75%),
+                radial-gradient(circle, transparent 20%, var(--bg-color) 80%),
+                linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+            background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px, 100% 100%, 40px 40px, 40px 40px;
+            opacity: 0.95;
+        }
+
+        /* Top Status Bar (AMG Theme) */
+        header {
+            height: 60px;
+            background: linear-gradient(180deg, #10121a 0%, rgba(16, 18, 26, 0.8) 100%);
+            border-bottom: 1px solid var(--panel-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            z-index: 10;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        .logo-section h1 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .logo-section span {
+            color: var(--amg-red);
+            font-style: italic;
+            font-weight: 800;
+        }
+
+        /* Ambient Light selector - 64-color ambient light picker simulation */
+        .ambient-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .ambient-control span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        .color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .color-dot:hover {
+            transform: scale(1.2);
+        }
+
+        .color-dot.active {
+            border-color: #fff;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        /* Main Workspace */
+        .main-container {
+            flex: 1;
+            display: flex;
+            position: relative;
+            height: calc(100vh - 60px);
+        }
+
+        /* Sidebar navigation (MBUX style) */
+        nav {
+            width: 80px;
+            background-color: #10121a;
+            border-right: 1px solid var(--panel-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            z-index: 5;
+        }
+
+        .nav-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .nav-btn {
+            width: 100%;
+            height: 60px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all var(--transition-speed);
+            position: relative;
+        }
+
+        .nav-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: transform 0.2s;
+        }
+
+        .nav-btn span {
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-color);
+        }
+
+        .nav-btn:hover svg {
+            transform: scale(1.1);
+        }
+
+        .nav-btn.active {
+            color: var(--ambient-color);
+            text-shadow: var(--ambient-glow);
+        }
+
+        .nav-btn.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15%;
+            height: 70%;
+            width: 3px;
+            background-color: var(--ambient-color);
+            box-shadow: var(--ambient-glow);
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Engine Start Button section */
+        .engine-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .engine-start-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #252836 0%, #161822 100%);
+            border: 2px solid #3a3f55;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.05), 0 4px 8px rgba(0,0,0,0.5);
+            transition: all 0.2s;
+        }
+
+        .engine-start-btn::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ff3b30;
+            opacity: 0.4;
+            transition: all 0.3s;
+        }
+
+        .engine-start-btn.running {
+            border-color: var(--amg-red);
+            box-shadow: 0 0 15px rgba(255, 59, 48, 0.6);
+        }
+
+        .engine-start-btn.running::after {
+            background-color: #34c759;
+            opacity: 1;
+            box-shadow: 0 0 8px #34c759;
+        }
+
+        .engine-label {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        /* Slider viewport - Horizontal scrolling */
+        .slider-viewport {
+            flex: 1;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides-wrapper {
+            display: flex;
+            height: 100%;
+            width: 700%; /* 7 chapters = 700% */
+            transition: transform var(--transition-speed) cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Slide layout */
+        .slide {
+            width: calc(100vw - 80px); /* Subtract sidebar width */
+            height: 100%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .slide-header {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+        }
+
+        .slide-title-group h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .slide-title-group h2 span {
+            color: var(--ambient-color);
+            text-shadow: var(--ambient-glow);
+        }
+
+        .slide-title-group p {
+            color: var(--text-muted);
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+
+        .chapter-badge {
+            background-color: var(--panel-border);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--text-muted);
+        }
+
+        /* Slide Layout: 2 Columns */
+        .slide-content {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+            min-height: 0; /* Important for scroll sizing */
+        }
+
+        .text-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+
+        .visual-column {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background-color: rgba(255,255,255,0.01);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03);
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            min-height: 350px;
+        }
+
+        /* Styled Images */
+        .visual-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .visual-column:hover img {
+            transform: scale(1.02);
+        }
+
+        .visual-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+            padding: 15px 25px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .visual-caption strong {
+            color: var(--text-color);
+        }
+
+        /* Text Styles */
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background-color: var(--ambient-color);
+            box-shadow: var(--ambient-glow);
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        /* Info Alert Box */
+        .alert-box {
+            background-color: rgba(0, 168, 255, 0.05);
+            border-left: 4px solid var(--ambient-color);
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 12px;
+        }
+
+        .alert-box.important {
+            background-color: rgba(255, 59, 48, 0.05);
+            border-left-color: var(--amg-red);
+        }
+
+        .alert-box svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Step List */
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 15px;
+            background-color: rgba(255,255,255,0.02);
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: background var(--transition-speed);
+        }
+
+        .step-item:hover {
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        .step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--panel-border);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .step-text h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .step-text p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation Arrows (Floating) */
+        .slide-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(16, 18, 26, 0.8);
+            border: 1px solid var(--panel-border);
+            color: var(--text-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            transition: all 0.2s;
+            opacity: 0.6;
+        }
+
+        .slide-nav-btn:hover {
+            opacity: 1;
+            color: var(--ambient-color);
+            border-color: var(--ambient-color);
+            box-shadow: var(--ambient-glow);
+        }
+
+        .slide-nav-btn.prev {
+            left: 20px;
+        }
+
+        .slide-nav-btn.next {
+            right: 20px;
+        }
+
+        .slide-nav-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Screen Shutdown Animation (Start Engine State) */
+        .screen-offline-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050608;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            opacity: 1;
+        }
+
+        .screen-offline-overlay.online {
+            opacity: 0;
+        }
+
+        .offline-message {
+            text-align: center;
+            font-family: var(--font-display);
+        }
+
+        .offline-message svg {
+            width: 48px;
+            height: 48px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+
+        .offline-message h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .offline-message p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            opacity: 0.7;
+        }
+
+        /* Slide 1 custom dashboard cards */
+        .dash-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .dash-card {
+            background-color: rgba(255,255,255,0.02);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: border 0.3s;
+        }
+
+        .dash-card:hover {
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        .dash-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ambient-color);
+        }
+
+        .dash-card-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .dash-card-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .dash-card-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Tab panels for Slide 6 (5 Settings) */
+        .settings-tabs-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .settings-tabs-nav {
+            display: flex;
+            border-bottom: 1px solid var(--panel-border);
+            gap: 5px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .settings-tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .settings-tab-btn:hover {
+            color: var(--text-color);
+        }
+
+        .settings-tab-btn.active {
+            color: var(--ambient-color);
+            border-bottom-color: var(--ambient-color);
+            text-shadow: var(--ambient-glow);
+        }
+
+        .settings-tab-pane {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .settings-tab-pane.active {
+            display: flex;
+        }
+
+        .instruction-box {
+            background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 100%);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .instruction-box ol {
+            margin-left: 20px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .instruction-box li {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Keyless sensor slot graphic overlay */
+        .key-slot-graphic {
+            border: 2px dashed rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: radial-gradient(circle, rgba(255,255,255,0.01) 0%, rgba(0,0,0,0.3) 100%);
+            margin-top: 15px;
+        }
+
+        .key-slot-graphic svg {
+            width: 48px;
+            height: 48px;
+            opacity: 0.4;
+            animation: bounce 2s infinite;
+        }
+
+        /* Keyframes */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Hide default scrollbars but allow scrolling in text columns */
+        .text-column::-webkit-scrollbar, .slide::-webkit-scrollbar, .settings-tabs-nav::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        .text-column::-webkit-scrollbar-track, .slide::-webkit-scrollbar-track, .settings-tabs-nav::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .text-column::-webkit-scrollbar-thumb, .slide::-webkit-scrollbar-thumb, .settings-tabs-nav::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        .text-column::-webkit-scrollbar-thumb:hover, .slide::-webkit-scrollbar-thumb:hover, .settings-tabs-nav::-webkit-scrollbar-thumb:hover {
+            background: var(--ambient-color);
+        }
+
+        /* Quick Info Table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.85rem;
+        }
+
+        .info-table th, .info-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--panel-border);
+        }
+
+        .info-table th {
+            font-family: var(--font-display);
+            font-weight: 800;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .info-table tr:hover td {
+            background-color: rgba(255,255,255,0.01);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <!-- Header Status Bar -->
+    <header>
+        <div class="logo-section">
+            <!-- Mercedes Star SVG -->
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <path d="M50,5 L50,50 L11,72.5 L50,50 L89,72.5 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M50,50 L50,95 L11,72.5 M50,50 L50,95 L89,72.5" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
+            </svg>
+            <h1>Mercedes-Benz <span>GLB 200</span></h1>
+        </div>
+
+        <!-- 64-color ambient light picker -->
+        <div class="ambient-control">
+            <span>車室氛圍燈:</span>
+            <div class="color-dot active" style="color: #00a8ff; background-color: #00a8ff;" onclick="setAmbient('#00a8ff', this)"></div>
+            <div class="color-dot" style="color: #ff2d55; background-color: #ff2d55;" onclick="setAmbient('#ff2d55', this)"></div>
+            <div class="color-dot" style="color: #ff9500; background-color: #ff9500;" onclick="setAmbient('#ff9500', this)"></div>
+            <div class="color-dot" style="color: #af52de; background-color: #af52de;" onclick="setAmbient('#af52de', this)"></div>
+            <div class="color-dot" style="color: #34c759; background-color: #34c759;" onclick="setAmbient('#34c759', this)"></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar Navigation (MBUX panel) -->
+        <nav>
+            <div class="nav-items">
+                <button class="nav-btn active" onclick="goToSlide(0)">
+                    <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    <span>首頁</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(1)">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                    <span>駕駛艙</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(2)">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    <span>排檔桿</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(3)">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    <span>跟車</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(4)">
+                    <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1.5 6h-6v3h6V9zm0 4.5h-6v3h6v-3zM4.5 16.5h6v-3h-6v3zm0-4.5h6V9h-6v3z"/></svg>
+                    <span>MBUX</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(5)">
+                    <svg viewBox="0 0 24 24"><path d="M4 18h16V6H4v12zm9-11h5v3h-5V7zm-7 0h5v3H6V7zm0 5h5v3H6v-3zm7 0h5v3h-5v-3z"/></svg>
+                    <span>座椅</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(6)">
+                    <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                    <span>保養</span>
+                </button>
+            </div>
+
+            <!-- Engine Start Button -->
+            <div class="engine-section">
+                <button class="engine-start-btn" id="startBtn" onclick="toggleEngine()"></button>
+                <span class="engine-label">ENGINE<br>START/STOP</span>
+            </div>
+        </nav>
+
+        <!-- Slider Viewport -->
+        <div class="slider-viewport">
+            <button class="slide-nav-btn prev" onclick="moveSlide(-1)">&larr;</button>
+            <button class="slide-nav-btn next" onclick="moveSlide(1)">&rarr;</button>
+
+            <div class="slides-wrapper" id="slidesWrapper">
+
+                <!-- Slide 1: Welcome & Overview -->
+                <div class="slide">
+                    <div class="screen-offline-overlay" id="screenOverlay">
+                        <div class="offline-message">
+                            <!-- Power icon -->
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/>
+                            </svg>
+                            <h2>數位儀表與車載系統處於離線狀態</h2>
+                            <p>請點擊左下角「ENGINE START/STOP」按鈕發動車輛啟動系統</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>Mercedes-Benz <span>GLB 200</span> 車主指南</h2>
+                            <p>探索您的 W247 奢華家庭七人座緊湊型 SUV</p>
+                        </div>
+                        <span class="chapter-badge">INTRODUCTION</span>
+                    </div>
+                    
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <p>歡迎您加入 Mercedes-Benz 車主的行列。2024 年式小改款 GLB 200 (W247) 在外觀、駕駛質感與車載科技上皆帶來全面革新。</p>
+                            
+                            <h3>小改款核心技術規格</h3>
+                            <table class="info-table">
+                                <thead>
+                                    <tr>
+                                        <th>項目</th>
+                                        <th>規格數據</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>動力單元</strong></td>
+                                        <td>1,332 cc 直列四缸渦輪增壓引擎</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>油電系統</strong></td>
+                                        <td>48V 輕油電 (EQ Boost / 額外動力 +14 hp)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>最大輸出</strong></td>
+                                        <td>163 hp / 5500 rpm (扭力 27.5 kgm)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>變速系統</strong></td>
+                                        <td>DCT 雙離合器 7 速自手排變速箱</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>座椅配置</strong></td>
+                                        <td>5 + 2 彈性七人座空間規劃</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="dash-cards-grid">
+                                <div class="dash-card">
+                                    <div class="dash-card-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                    </div>
+                                    <div class="dash-card-info">
+                                        <h4>MBUX 2.0 系統</h4>
+                                        <p>捨棄觸控板，升級更直覺的無線 Apple CarPlay 與高畫質主題切換。</p>
+                                    </div>
+                                </div>
+                                <div class="dash-card">
+                                    <div class="dash-card-icon">
+                                        <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.5c.57-1.23.88-2.58.88-4.04 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.05.5-9 4.77-9 9.95 0 5.52 4.48 10 10 10 1.46 0 2.81-.31 4.04-.88l-1.5-2.6c-.79.3-1.64.48-2.54.48z"/></svg>
+                                    </div>
+                                    <div class="dash-card-info">
+                                        <h4>48V 節能科技</h4>
+                                        <p>具備滑行熄火與能量回收，兼顧市區行駛油耗與平順怠速運轉。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="visual-column">
+                            <img src="glb_cockpit_blueprint.jpg" alt="Mercedes-Benz GLB 200 Cockpit Layout">
+                            <div class="visual-caption">
+                                <strong>圖 1.1：駕駛艙佈局設計圖</strong> - 2024 年式小改款 GLB 200 數位座艙藍圖。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Cockpit Layout -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第一章：駕駛艙佈局與基礎操作</h2>
+                            <p>了解電容感應多功能方向盤與鞍座收納區</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 1</span>
+                    </div>
+
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <h3>1.1 儀表與中控雙螢幕佈局</h3>
+                            <p>小改款車室取消了舊款鞍座的軌跡觸控板，騰出的空間轉化為精緻的置物盒、防塵拉簾杯架及手機無線充電板。</p>
+                            
+                            <h3>1.2 雙肋式多功能方向盤</h3>
+                            <p>方向盤按鍵採用全新「電容感應」感壓式按鍵，手指輕滑或按壓即可快速操作：</p>
+                            
+                            <div class="alert-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                                </svg>
+                                <div>
+                                    <strong>操作小提示：</strong><br>
+                                    方向盤左右肋條中央的黑色小方塊（Touch Control）是光學感應板。操作時只需用拇指指腹在其上滑動，即可像遙控器一樣移動螢幕光標，按下即代表「確認」。
+                                </div>
+                            </div>
+
+                            <h3>1.3 按鍵功能對稱劃分</h3>
+                            <p><strong>左側按鍵群：</strong> 主要負責數位儀表的樣式切換（Classic 經典、Sport 運動、Discreet 簡約）與行車資訊查閱，並整合了 Level 2 跟車系統控制。</p>
+                            <p><strong>右側按鍵群：</strong> 主要負責 MBUX 2.0 多媒體娛樂主機、藍牙電話接聽與 volume 音量滑動調節。</p>
+                        </div>
+
+                        <div class="visual-column">
+                            <img src="glb_steering_wheel.jpg" alt="Multi-function Steering Wheel Controls">
+                            <div class="visual-caption">
+                                <strong>圖 1.2：多功能方向盤控制鍵解說圖</strong> - 左右兩側電容觸控肋條按鍵功能劃分。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Shift Lever / Gear Selection -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第二章：懷檔系統與駕駛模式</h2>
+                            <p>掌握 DIRECT SELECT 懷檔操作與 DYNAMIC 模式切換</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 2</span>
+                    </div>
+
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <h3>2.1 排檔操作指南</h3>
+                            <p>賓士車主必須習慣的 **DIRECT SELECT 懷檔**，位於轉向柱右側。以下是正確起步與排檔的步驟：</p>
+                            
+                            <ul class="step-list">
+                                <li class="step-item">
+                                    <div class="step-num">1</div>
+                                    <div class="step-text">
+                                        <h4>打入 D 檔 (前進)</h4>
+                                        <p>踩住煞車踏板，將懷檔撥桿往**下**壓到底，儀表板將顯示 D1。</p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-num">2</div>
+                                    <div class="step-text">
+                                        <h4>打入 R 檔 (倒車)</h4>
+                                        <p>踩住煞車踏板，將懷檔撥桿往**上**撥到底，中控螢幕將自動啟動倒車顯影或 360 環景。</p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-num">3</div>
+                                    <div class="step-text">
+                                        <h4>排入 P 檔 (停車)</h4>
+                                        <p>當車輛安全停穩後，直接按下撥桿最外側端點的 **「P」按鈕**。系統會自動扣上電子手煞車。</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="alert-box important">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                </svg>
+                                <div>
+                                    <strong>注意：方向燈與雨刷在左邊！</strong><br>
+                                    右側撥桿是排檔專用，因此所有的方向燈撥桿、大燈超車閃爍及雨刷速度轉鈕，都整合在**左側後方**的單一撥桿中。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="visual-column">
+                            <img src="glb_cockpit_blueprint.jpg" alt="Gear shift details blueprint">
+                            <div class="visual-caption">
+                                <strong>圖 2.1：駕駛座控制與懷檔</strong> - 位於方向盤右側的懷檔撥桿細節標註。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: ADAS Driver Assistance -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第三章：智慧駕駛輔助系統 (ADAS)</h2>
+                            <p>安全跟車、車道維持與主動煞車輔助</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 3</span>
+                    </div>
+
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <h3>3.1 DISTRONIC 智慧跟車操作</h3>
+                            <p>小改款升級進階輔助駕駛，操作由方向盤左側肋條按鍵直接控制：</p>
+                            
+                            <ul class="step-list">
+                                <li class="step-item">
+                                    <div class="step-num">A</div>
+                                    <div class="step-text">
+                                        <h4>啟動系統</h4>
+                                        <p>按壓方向盤左側 **SET+** 或 **SET-** 鍵即可啟動定速跟車。按壓 **RES** 恢復前次設定速度。</p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-num">B</div>
+                                    <div class="step-text">
+                                        <h4>調整與前車車距</h4>
+                                        <p>在左側的車距滑動條（橫式條狀按鈕）上輕觸滑動。往右滑增加車距，往左滑縮短車距。</p>
+                                    </div>
+                                </li>
+                                <li class="step-item">
+                                    <div class="step-num">C</div>
+                                    <div class="step-text">
+                                        <h4>手放開提示 (電容方向盤)</h4>
+                                        <p>當主動轉向輔助圖示（綠色方向盤）亮起，車輛會自動行駛於車道中央。手輕放外圈感應，無需搖晃方向盤即可解除手離方向盤警告。</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <h3>3.2 自動停車輔助 (Active Parking Assist)</h3>
+                            <p>在時速 35 km/h 以下行駛，中控螢幕亮起 <strong>「P」</strong> 圖示即可按下停車快捷鍵，選取格位放開煞車，系統會自動控制方向、檔位與煞車完成停車。</p>
+                        </div>
+
+                        <div class="visual-column">
+                            <img src="glb_steering_wheel.jpg" alt="Steering wheel ADAS buttons">
+                            <div class="visual-caption">
+                                <strong>圖 3.1：跟車系統控制鍵區</strong> - 方向盤左側肋條跟車車距與車速設定按鍵。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: MBUX 2.0 Infotainment -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第四章：MBUX 2.0 系統與智慧座艙</h2>
+                            <p>體驗極速 MBUX 2.0、主題切換與無線智慧連結</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 4</span>
+                    </div>
+
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <h3>4.1 無線 Apple CarPlay / Android Auto 連結步驟</h3>
+                            <p>2024 年式小改款 GLB 200 原廠標準配備 **無線智慧型手機整合系統**：</p>
+                            
+                            <ol style="margin-left: 20px; line-height: 1.6; font-size: 0.95rem; display:flex; flex-direction:column; gap:8px;">
+                                <li>開啟手機的 <strong>藍牙 (Bluetooth)</strong> 與 <strong>Wi-Fi</strong> 功能。</li>
+                                <li>在中控螢幕主選單選擇 <strong>「電話」</strong> 或 <strong>「智慧型手機」</strong> 項目。</li>
+                                <li>點擊 <strong>「連接新裝置」</strong>，尋找您的手機藍牙名稱並點擊配對。</li>
+                                <li>於手機端點選允許配對，並選擇 <strong>「使用 CarPlay / 啟用 Android Auto」</strong>。</li>
+                                <li>以後每次上車，不需接線，系統即可自動無縫啟動鏡射畫面。</li>
+                            </ol>
+
+                            <h3>4.2 氛圍燈與儀表板主題風格切換</h3>
+                            <p>MBUX 2.0 提供三款數位儀表顯示主題，完美融入賓士經典的 64 色氛圍燈系統：</p>
+                            <p><strong>Classic 經典：</strong> 雙圓指針錶盤，中間顯示輔助行車或導航地圖資訊。</p>
+                            <p><strong>Sport 運動：</strong> 紅色跑車指針搭配中央單圓錶，顯示動態輸出與增壓值。</p>
+                            <p><strong>Discreet 簡約：</strong> 將視覺資訊簡化至極致，大幅減少夜間長途駕駛產生的眼部疲勞。</p>
+                        </div>
+
+                        <div class="visual-column">
+                            <img src="glb_mbux_interface.jpg" alt="MBUX 2.0 Screens and customization theme">
+                            <div class="visual-caption">
+                                <strong>圖 4.1：MBUX 2.0 雙螢幕介面與主題</strong> - 中控螢幕及儀表板主題切換設定示範。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Foldable Seats and Tailgate -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第五章：5+2 座椅配置與尾門調整</h2>
+                            <p>極致靈活的空間機能與尾門高度限制</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 5</span>
+                    </div>
+
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <h3>5.1 5+2 七人座空間變化說明</h3>
+                            <p>GLB 200 在緊湊的車身結構下提供了 5+2 七人座配置。座椅可以進行豐富的收折滑動：</p>
+                            
+                            <table class="info-table">
+                                <thead>
+                                    <tr>
+                                        <th>座椅排數</th>
+                                        <th>調整功能</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>第一排駕駛與副駕</strong></td>
+                                        <td>配備多向電動調整與記憶功能。</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>第二排座椅 (40:20:40)</strong></td>
+                                        <td>支援前後滑移 14 公分，椅背角度可調，並具備 Easy-Entry 第三排快速進出拉繩。</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>第三排隱藏座椅 (50:50)</strong></td>
+                                        <td>可平整收折於行李箱底板下方。配備杯架及 Type-C 充電孔。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h3>5.2 尾門開啟高度限制 (機械車位防碰撞)</h3>
+                            <p>如果您經常停放機械車位或限高停車場，務必設定尾門限制高度：</p>
+                            <p><strong>設定步驟：</strong> 手動拉動或遙控開啟尾門至想要的位置（高度至少需高於半開狀態），隨後長按尾門飾板內側的紅色<strong>「關閉按鈕」約 3 秒</strong>。車尾發出「嗶嗶」兩聲，即鎖定此開啟高度。再次手動推至頂端長按 3 秒即可取消限制。</p>
+                        </div>
+
+                        <div class="visual-column">
+                            <img src="glb_seating_tailgate.jpg" alt="5+2 Seating Layout and Tailgate Blueprint">
+                            <div class="visual-caption">
+                                <strong>圖 5.1：座椅折疊與尾門藍圖</strong> - 三排座椅配置及電動尾門開啟限制說明。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Five Hidden Settings -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第六章：車主必學！五大實用隱藏設定</h2>
+                            <p>解鎖賓士精心設計的貼心便利設定</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 6</span>
+                    </div>
+
+                    <div class="slide-content" style="display: block;"> <!-- Custom layout for Slide 6 tabs -->
+                        <div class="settings-tabs-container">
+                            <div class="settings-tabs-nav" id="settingsNav">
+                                <button class="settings-tab-btn active" onclick="switchSettingTab(0)">1. 尾門高度限制</button>
+                                <button class="settings-tab-btn" onclick="switchSettingTab(1)">2. 遙控一鍵起閉窗</button>
+                                <button class="settings-tab-btn" onclick="switchSettingTab(2)">3. 便利進出 Easy-Entry</button>
+                                <button class="settings-tab-btn" onclick="switchSettingTab(3)">4. 大燈照明延遲熄滅</button>
+                                <button class="settings-tab-btn" onclick="switchSettingTab(4)">5. 單門/全車解鎖模式</button>
+                            </div>
+
+                            <div class="settings-tab-content">
+                                <!-- Tab 1 -->
+                                <div class="settings-tab-pane active">
+                                    <h3>尾門高度限制設定</h3>
+                                    <p>有效避免尾門向上開啟時撞擊低矮天花板、灑水管線或機械車位支架。</p>
+                                    <div class="instruction-box">
+                                        <strong>設定步驟：</strong>
+                                        <ol>
+                                            <li>發動或插上鑰匙，開啟後尾門。</li>
+                                            <li>當尾門上升至合適高度時，用手將其扶住，或手動拉至所需的高度限制位置。</li>
+                                            <li>持續按壓後尾門飾板上的紅色<strong>「關閉按鈕」持續約 3 秒</strong>。</li>
+                                            <li>聽到車尾揚聲器發出<strong>「嗶嗶」兩聲</strong>，代表目前高度已成功設定為最高開啟位置。</li>
+                                            <li>若要恢復全開狀態，手動將尾門推到最頂端，再次長按關閉按鈕 3 秒直至提示音響起即可。</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 2 -->
+                                <div class="settings-tab-pane">
+                                    <h3>車外鑰匙一鍵起閉車窗與天窗</h3>
+                                    <p>在炎熱的夏天，您可以在走向愛車時預先降下所有車窗進行散熱；下車發現天窗忘記關時，也不需要重新上車啟動電源。</p>
+                                    <div class="instruction-box">
+                                        <strong>操作方式：</strong>
+                                        <ol>
+                                            <li><strong>一鍵開啟：</strong> 按住遙控器上的<strong>「解鎖（開鎖）按鈕」不放</strong>，所有車窗與天窗將會同時降下與開啟。直到您放開按鈕為止。</li>
+                                            <li><strong>一鍵關閉：</strong> 離車時，按住遙控器上的<strong>「上鎖按鈕」不放</strong>，所有已開啟的車窗與天窗將自動完全升起與關閉，免除重新上車的繁瑣。</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 3 -->
+                                <div class="settings-tab-pane">
+                                    <h3>駕駛座便利進出功能 (Easy-Entry / Exit)</h3>
+                                    <p>在您開門下車或發動起步時，方向盤與座椅會自動退開及復位，讓上下車動作優雅無壓。</p>
+                                    <div class="instruction-box">
+                                        <strong>設定方式：</strong>
+                                        <ol>
+                                            <li>啟動中控 MBUX 螢幕，進入首頁的 <strong>「設定」</strong> 選單。</li>
+                                            <li>選擇 <strong>「車輛」</strong> 頁面，隨後點選 <strong>「便利進出功能」 (Easy-Entry/Exit)</strong>。</li>
+                                            <li>勾選啟用該功能。</li>
+                                            <li><strong>運作效果：</strong> 熄火開門時，方向盤會自動升至最高處以騰出大腿空間；若座椅位置偏前，座椅會往後退。當再次上車按下 Start 按鈕，座椅和方向盤會自動回覆至記憶之駕駛姿勢。</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 4 -->
+                                <div class="settings-tab-pane">
+                                    <h3>外部照明延遲熄滅設定</h3>
+                                    <p>在深夜沒有路燈的停車場，讓車輛大燈充當您的手電筒，在您離車後持續照明安全道路。</p>
+                                    <div class="instruction-box">
+                                        <strong>設定路徑：</strong>
+                                        <ol>
+                                            <li>開啟 MBUX 中控螢幕，選擇 <strong>「設定」</strong> &rarr; <strong>「燈光」</strong>。</li>
+                                            <li>找到 <strong>「外部照明延遲熄滅」</strong> (Exterior light delay)。</li>
+                                            <li>您可以自訂點亮時間，例如選擇：<strong>15 秒、30 秒、60 秒</strong> 或關閉。</li>
+                                            <li>設定完成後，鎖車時大燈及迎賓燈將保持亮起，達到設定時間後自動熄滅。</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <!-- Tab 5 -->
+                                <div class="settings-tab-pane">
+                                    <h3>單門 / 全車門解鎖模式快速切換</h3>
+                                    <p>預設按壓鑰匙解鎖會開啟全車四門。如果您經常單獨開車，可設定為僅解鎖駕駛座，防止歹徒從其他車門乘隙潛入。</p>
+                                    <div class="instruction-box">
+                                        <strong>切換步驟：</strong>
+                                        <ol>
+                                            <li>拿出車鑰匙。</li>
+                                            <li>同時**按住遙控鑰匙上的「上鎖鍵」與「解鎖鍵」不放，持續大約 5 秒**。</li>
+                                            <li>注意觀察鑰匙頂端的紅色 LED 指示燈，當<strong>閃爍兩次</strong>時代表切換成功。</li>
+                                            <li><strong>切換後效果：</strong> 按一下解鎖鍵，僅解鎖駕駛座門與油箱蓋；連續按兩下解鎖鍵，才會解鎖全車車門。重複相同長按步驟可切換回全車解鎖。</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 8: Maintenance & Emergency -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <div class="slide-title-group">
+                            <h2>第七章：車輛維護與緊急操作</h2>
+                            <p>輕油電邏輯、胎壓警示重設與鑰匙沒電緊急啟動</p>
+                        </div>
+                        <span class="chapter-badge">CHAPTER 7</span>
+                    </div>
+
+                    <div class="slide-content">
+                        <div class="text-column">
+                            <h3>7.1 胎壓監測警示重設 (TPMS Reset)</h3>
+                            <p>當儀表板亮起胎壓警告，請將輪胎氣壓補充至油箱蓋內側標示的標準胎壓，隨後進行手動重設歸零：</p>
+                            
+                            <ol style="margin-left: 20px; line-height: 1.6; font-size: 0.95rem; display:flex; flex-direction:column; gap:8px;">
+                                <li>點按啟動按鈕（不踩煞車）開啟儀表電源。</li>
+                                <li>使用方向盤左側 <strong>Touch Control</strong> 滑動，切換儀表板至 <strong>「保養 (Service)」</strong> 選單。</li>
+                                <li>選取並點入 <strong>「輪胎 (Tyres)」</strong> 選項。</li>
+                                <li>向下滑動 Touch Control，會彈出 <strong>「是否將當前壓力儲存為新參考值？」</strong> 的提示。</li>
+                                <li>按下確認鍵點選「是」，行駛數公里後即可完成新胎壓基準監控設定。</li>
+                            </ol>
+
+                            <h3>7.2 遙控器沒電！如何緊急發動引擎</h3>
+                            <p>當鑰匙電池過低，儀表顯示「未偵測到鑰匙」時，請執行以下步驟緊急發動車輛：</p>
+                            
+                            <ul class="step-list">
+                                <li class="step-item" style="padding: 8px 12px;">
+                                    <div class="step-num" style="width: 20px; height: 20px; font-size:0.65rem;">1</div>
+                                    <div class="step-text">
+                                        <p>在中控鞍座水杯架前部，尋找印有 <strong>「鑰匙與訊號發射器 🔑」</strong> 圖案的實體凹槽。</p>
+                                    </div>
+                                </li>
+                                <li class="step-item" style="padding: 8px 12px;">
+                                    <div class="step-num" style="width: 20px; height: 20px; font-size:0.65rem;">2</div>
+                                    <div class="step-text">
+                                        <p>將沒電的遙控鑰匙整支平放在該感應凹槽內，讓車載晶片讀取物理訊號。</p>
+                                    </div>
+                                </li>
+                                <li class="step-item" style="padding: 8px 12px;">
+                                    <div class="step-num" style="width: 20px; height: 20px; font-size:0.65rem;">3</div>
+                                    <div class="step-text">
+                                        <p>踏緊煞車踏板，再次按下 <strong>Engine Start/Stop 按鈕</strong>。車輛即可順利發動。</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="visual-column">
+                            <div class="key-slot-graphic">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    <circle cx="12" cy="16" r="1.5"/>
+                                </svg>
+                                <div style="text-align: center;">
+                                    <h4 style="font-family: var(--font-display); font-size: 1rem; color: #fff; margin-bottom:5px;">KEYLESS EMERGENCY ZONE</h4>
+                                    <p style="font-size:0.8rem; color: var(--text-muted);">請將沒電的鑰匙放置於中央杯架凹槽發射器感應區上</p>
+                                </div>
+                            </div>
+                            <div class="visual-caption">
+                                <strong>圖 7.1：緊急感應啟動區</strong> - 鞍座杯架下方內嵌鑰匙射頻感應線圈，無電狀態可近場啟動引擎。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Animations and Interactions -->
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 7; // Slides wrapper has 7 slide divisions
+        let isEngineRunning = false;
+        let audioCtx = null;
+        let engineOscillator = null;
+        let engineGain = null;
+
+        // Ambient lighting color controller
+        function setAmbient(color, dot) {
+            document.documentElement.style.setProperty('--ambient-color', color);
+            // Convert Hex to RGB for subtle glow adjustments
+            const r = parseInt(color.slice(1,3), 16);
+            const g = parseInt(color.slice(3,5), 16);
+            const b = parseInt(color.slice(5,7), 16);
+            document.documentElement.style.setProperty('--ambient-glow', `0 0 15px rgba(${r}, ${g}, ${b}, 0.5)`);
+            
+            // Toggle active class on dot selectors
+            document.querySelectorAll('.color-dot').forEach(el => el.classList.remove('active'));
+            dot.classList.add('active');
+        }
+
+        // Horizontal navigation transitions
+        function goToSlide(index) {
+            if (index < 0 || index >= totalSlides) return;
+            currentSlide = index;
+            
+            const wrapper = document.getElementById('slidesWrapper');
+            // Calculate translation based on slide index
+            const percentage = -currentSlide * 100 / totalSlides;
+            wrapper.style.transform = `translateX(${percentage}%)`;
+            
+            // Update active state in sidebar navigation
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach((btn, idx) => {
+                if (idx === currentSlide) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function moveSlide(direction) {
+            let next = currentSlide + direction;
+            if (next >= 0 && next < totalSlides) {
+                goToSlide(next);
+            }
+        }
+
+        // Tab switching logic for Slide 6 (5 Settings)
+        function switchSettingTab(tabIndex) {
+            const tabs = document.querySelectorAll('.settings-tab-btn');
+            const panes = document.querySelectorAll('.settings-tab-pane');
+            
+            tabs.forEach((tab, idx) => {
+                if (idx === tabIndex) {
+                    tab.classList.add('active');
+                    panes[idx].classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                    panes[idx].classList.remove('active');
+                }
+            });
+        }
+
+        // Web Audio API Engine Sound Synthesizer (High value feature)
+        function startEngineAudio() {
+            try {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                // Starter Crank Sound Effects
+                playStarterSound();
+
+                // Wait 1 second (cranking duration) then start stable idle hum
+                setTimeout(() => {
+                    if (!isEngineRunning) return; // In case user clicked stop quickly
+                    
+                    // low frequency engine rumble oscillator
+                    engineOscillator = audioCtx.createOscillator();
+                    const filter = audioCtx.createBiquadFilter();
+                    engineGain = audioCtx.createGain();
+
+                    // Low-frequency sawtooth wave mimics pistons firing
+                    engineOscillator.type = 'sawtooth';
+                    engineOscillator.frequency.setValueAtTime(32, audioCtx.currentTime); // Low 32Hz hum
+                    
+                    // Lowpass filter to muffle the harsh sound, making it a cabin hum
+                    filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(100, audioCtx.currentTime);
+                    
+                    // Add subtle low frequency vibration (LFO) for engine roughness
+                    const lfo = audioCtx.createOscillator();
+                    const lfoGain = audioCtx.createGain();
+                    lfo.frequency.value = 6; // 6Hz rumble
+                    lfoGain.gain.value = 1.5; // pitch modulation width
+                    
+                    lfo.connect(lfoGain);
+                    lfoGain.connect(engineOscillator.frequency);
+                    
+                    engineGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                    // Fade engine sound in
+                    engineGain.gain.linearRampToValueAtTime(0.08, audioCtx.currentTime + 0.5);
+
+                    engineOscillator.connect(filter);
+                    filter.connect(engineGain);
+                    engineGain.connect(audioCtx.destination);
+
+                    lfo.start();
+                    engineOscillator.start();
+                }, 1000);
+
+            } catch (err) {
+                console.warn("Web Audio API is not supported or blocked: ", err);
+            }
+        }
+
+        function playStarterSound() {
+            // Noise buffer for mechanical cranking sound
+            const bufferSize = audioCtx.sampleRate * 0.8;
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const data = buffer.getChannelData(0);
+            for (let i = 0; i < bufferSize; i++) {
+                data[i] = Math.random() * 2 - 1;
+            }
+
+            const noise = audioCtx.createBufferSource();
+            noise.buffer = buffer;
+
+            const noiseFilter = audioCtx.createBiquadFilter();
+            noiseFilter.type = 'bandpass';
+            noiseFilter.frequency.value = 150;
+
+            const noiseGain = audioCtx.createGain();
+            noiseGain.gain.setValueAtTime(0.07, audioCtx.currentTime);
+            // Rhythmically modulate starter sound
+            noiseGain.gain.setValueAtTime(0.07, audioCtx.currentTime);
+            noiseGain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+            noiseGain.gain.linearRampToValueAtTime(0.06, audioCtx.currentTime + 0.4);
+            noiseGain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.7);
+            noiseGain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.9);
+
+            noise.connect(noiseFilter);
+            noiseFilter.connect(noiseGain);
+            noiseGain.connect(audioCtx.destination);
+            noise.start();
+        }
+
+        function stopEngineAudio() {
+            if (engineGain) {
+                // Smooth fade out
+                engineGain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+                setTimeout(() => {
+                    if (engineOscillator) {
+                        engineOscillator.stop();
+                        engineOscillator.disconnect();
+                        engineOscillator = null;
+                    }
+                }, 400);
+            }
+        }
+
+        // Toggle engine startup state
+        function toggleEngine() {
+            const startBtn = document.getElementById('startBtn');
+            const screenOverlay = document.getElementById('screenOverlay');
+            
+            isEngineRunning = !isEngineRunning;
+            
+            if (isEngineRunning) {
+                startBtn.classList.add('running');
+                screenOverlay.classList.add('online');
+                // Play synthesised audio engine humming
+                startEngineAudio();
+            } else {
+                startBtn.classList.remove('running');
+                screenOverlay.classList.remove('online');
+                // Stop audio synthesizer
+                stopEngineAudio();
+            }
+        }
+    </script>
+</body>
+</html>
