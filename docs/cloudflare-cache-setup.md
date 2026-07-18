@@ -26,13 +26,13 @@
 
 ### Rule 1: Static JS/CSS assets (long-term cache)
 
-| 欄位 | 值 |
-|------|-----|
+| 欄位                               | 值                                            |
+| -------------------------------- | -------------------------------------------- |
 | **When incoming requests match** | `URI Path` → `contains` → `/decoder/assets/` |
-| **OR** | `URI Path` → `contains` → `/ig_card_tool/` |
-| **Then** | **Eligible for cache** |
-| **Edge TTL** | `Override` → `30 days` |
-| **Browser TTL** | `Override` → `7 days` |
+| **OR**                           | `URI Path` → `contains` → `/ig_card_tool/`   |
+| **Then**                         | **Eligible for cache**                       |
+| **Edge TTL**                     | `Override` → `30 days`                       |
+| **Browser TTL**                  | `Override` → `7 days`                        |
 
 ### Rule 2: Images (medium-term cache)
 

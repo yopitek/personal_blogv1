@@ -133,6 +133,38 @@
             font-weight: 800;
         }
 
+        /* Global Header Chapter Info */
+        .header-chapter-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 6px 20px;
+            border-radius: 6px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+
+        .header-chapter-badge {
+            background-color: var(--panel-border);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .header-chapter-title {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
         /* Ambient Light selector - 64-color ambient light picker simulation */
         .ambient-control {
             display: flex;
@@ -313,66 +345,26 @@
         .slides-wrapper {
             display: flex;
             height: 100%;
-            width: 700%; /* 7 chapters = 700% */
+            width: 800%; /* 8 chapters = 800% */
             transition: transform var(--transition-speed) cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         /* Slide layout */
         .slide {
-            width: calc(100vw - 80px); /* Subtract sidebar width */
+            width: 12.5%; /* 100% / 8 slides */
+            flex-shrink: 0;
             height: 100%;
-            padding: 40px;
+            padding: 25px; /* Reduced padding to maximize space */
             display: flex;
             flex-direction: column;
             overflow-y: auto;
             position: relative;
         }
 
-        .slide-header {
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 15px;
-        }
-
-        .slide-title-group h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .slide-title-group h2 span {
-            color: var(--ambient-color);
-            text-shadow: var(--ambient-glow);
-        }
-
-        .slide-title-group p {
-            color: var(--text-muted);
-            margin-top: 5px;
-            font-size: 0.95rem;
-        }
-
-        .chapter-badge {
-            background-color: var(--panel-border);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: var(--text-muted);
-        }
-
         /* Slide Layout: 2 Columns */
         .slide-content {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             flex: 1;
             min-height: 0; /* Important for scroll sizing */
         }
@@ -381,7 +373,7 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             overflow-y: auto;
             padding-right: 15px;
         }
@@ -418,8 +410,8 @@
             left: 0;
             width: 100%;
             background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%);
-            padding: 15px 25px;
-            font-size: 0.85rem;
+            padding: 12px 20px;
+            font-size: 0.8rem;
             color: var(--text-muted);
             border-top: 1px solid rgba(255,255,255,0.05);
         }
@@ -431,10 +423,10 @@
         /* Text Styles */
         h3 {
             font-family: var(--font-display);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: #ffffff;
-            margin-top: 10px;
+            margin-top: 5px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -451,8 +443,8 @@
         }
 
         p {
-            line-height: 1.6;
-            font-size: 0.95rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
             color: var(--text-color);
         }
 
@@ -461,11 +453,11 @@
             background-color: rgba(0, 168, 255, 0.05);
             border-left: 4px solid var(--ambient-color);
             border-radius: 4px;
-            padding: 15px;
-            margin: 10px 0;
-            font-size: 0.9rem;
+            padding: 12px;
+            margin: 8px 0;
+            font-size: 0.85rem;
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .alert-box.important {
@@ -474,8 +466,8 @@
         }
 
         .alert-box svg {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
         }
 
@@ -484,14 +476,14 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
         }
 
         .step-item {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             background-color: rgba(255,255,255,0.02);
-            padding: 12px 18px;
+            padding: 10px 15px;
             border-radius: 8px;
             border: 1px solid rgba(255,255,255,0.03);
             transition: background var(--transition-speed);
@@ -502,28 +494,28 @@
         }
 
         .step-num {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             background-color: var(--panel-border);
             color: var(--text-color);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 800;
             flex-shrink: 0;
             border: 1px solid rgba(255,255,255,0.1);
         }
 
         .step-text h4 {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .step-text p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
         }
 
@@ -606,14 +598,14 @@
         }
 
         .offline-message h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 300;
             color: var(--text-muted);
             letter-spacing: 1px;
         }
 
         .offline-message p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 8px;
             opacity: 0.7;
@@ -623,18 +615,18 @@
         .dash-cards-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 15px;
+            gap: 15px;
+            margin-top: 10px;
         }
 
         .dash-card {
             background-color: rgba(255,255,255,0.02);
             border: 1px solid var(--panel-border);
             border-radius: 12px;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 12px;
             transition: border 0.3s;
         }
 
@@ -643,8 +635,8 @@
         }
 
         .dash-card-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 8px;
             background-color: rgba(255,255,255,0.03);
             display: flex;
@@ -654,24 +646,24 @@
         }
 
         .dash-card-icon svg {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             fill: currentColor;
         }
 
         .dash-card-info h4 {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .dash-card-info p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
-        /* Tab panels for Slide 6 (5 Settings) */
+        /* Tab panels for Slide 7 (5 Settings) */
         .settings-tabs-container {
             display: flex;
             flex-direction: column;
@@ -682,7 +674,7 @@
             display: flex;
             border-bottom: 1px solid var(--panel-border);
             gap: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             overflow-x: auto;
         }
 
@@ -690,8 +682,8 @@
             background: none;
             border: none;
             color: var(--text-muted);
-            padding: 10px 15px;
-            font-size: 0.85rem;
+            padding: 8px 12px;
+            font-size: 0.8rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
@@ -712,7 +704,7 @@
         .settings-tab-pane {
             display: none;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
         }
 
         .settings-tab-pane.active {
@@ -723,39 +715,39 @@
             background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 100%);
             border: 1px solid rgba(255,255,255,0.03);
             border-radius: 8px;
-            padding: 20px;
+            padding: 15px;
         }
 
         .instruction-box ol {
             margin-left: 20px;
-            margin-top: 10px;
+            margin-top: 8px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .instruction-box li {
-            font-size: 0.9rem;
-            line-height: 1.5;
+            font-size: 0.85rem;
+            line-height: 1.4;
         }
 
         /* Keyless sensor slot graphic overlay */
         .key-slot-graphic {
             border: 2px dashed rgba(255,255,255,0.15);
             border-radius: 12px;
-            padding: 30px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             background: radial-gradient(circle, rgba(255,255,255,0.01) 0%, rgba(0,0,0,0.3) 100%);
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .key-slot-graphic svg {
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             opacity: 0.4;
             animation: bounce 2s infinite;
         }
@@ -791,12 +783,12 @@
         .info-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 0.85rem;
+            margin: 10px 0;
+            font-size: 0.8rem;
         }
 
         .info-table th, .info-table td {
-            padding: 10px 12px;
+            padding: 8px 10px;
             text-align: left;
             border-bottom: 1px solid var(--panel-border);
         }
@@ -826,6 +818,12 @@
                 <path d="M50,50 L50,95 L11,72.5 M50,50 L50,95 L89,72.5" stroke="currentColor" stroke-width="1" fill="none" opacity="0.3"/>
             </svg>
             <h1>Mercedes-Benz <span>GLB 200</span></h1>
+        </div>
+
+        <!-- Global Header Chapter Info (Moved to top as requested) -->
+        <div class="header-chapter-info" id="headerChapterInfo">
+            <span class="header-chapter-badge" id="headerChapterBadge">INTRODUCTION</span>
+            <h2 class="header-chapter-title" id="headerChapterTitle">車主指南首頁</h2>
         </div>
 
         <!-- 64-color ambient light picker -->
@@ -869,6 +867,10 @@
                 </button>
                 <button class="nav-btn" onclick="goToSlide(6)">
                     <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                    <span>設定</span>
+                </button>
+                <button class="nav-btn" onclick="goToSlide(7)">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
                     <span>保養</span>
                 </button>
             </div>
@@ -898,14 +900,6 @@
                             <h2>數位儀表與車載系統處於離線狀態</h2>
                             <p>請點擊左下角「ENGINE START/STOP」按鈕發動車輛啟動系統</p>
                         </div>
-                    </div>
-
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>Mercedes-Benz <span>GLB 200</span> 車主指南</h2>
-                            <p>探索您的 W247 奢華家庭七人座緊湊型 SUV</p>
-                        </div>
-                        <span class="chapter-badge">INTRODUCTION</span>
                     </div>
                     
                     <div class="slide-content">
@@ -977,21 +971,13 @@
 
                 <!-- Slide 2: Cockpit Layout -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第一章：駕駛艙佈局與基礎操作</h2>
-                            <p>了解電容感應多功能方向盤與鞍座收納區</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 1</span>
-                    </div>
-
                     <div class="slide-content">
                         <div class="text-column">
                             <h3>1.1 儀表與中控雙螢幕佈局</h3>
                             <p>小改款車室取消了舊款鞍座的軌跡觸控板，騰出的空間轉化為精緻的置物盒、防塵拉簾杯架及手機無線充電板。</p>
                             
                             <h3>1.2 雙肋式多功能方向盤</h3>
-                            <p>方向盤按鍵採用全新「電容感應」感壓式按鍵，手指輕滑或按壓即可快速操作：</p>
+                            <p>方向盤按鍵採用全新「電容感應」感壓式按鍵，手指輕滑 or 按壓即可快速操作：</p>
                             
                             <div class="alert-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1011,7 +997,7 @@
                         <div class="visual-column">
                             <img src="glb_steering_wheel.jpg" alt="Multi-function Steering Wheel Controls">
                             <div class="visual-caption">
-                                <strong>圖 1.2：多功能方向盤控制鍵解說圖</strong> - 左右兩側電容觸控肋條按鍵功能劃分。
+                                <strong>圖 1.2：多功能方向盤控制鍵解說圖</strong> - 左右兩側電容觸控按鍵與功能劃分。
                             </div>
                         </div>
                     </div>
@@ -1019,14 +1005,6 @@
 
                 <!-- Slide 3: Shift Lever / Gear Selection -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第二章：懷檔系統與駕駛模式</h2>
-                            <p>掌握 DIRECT SELECT 懷檔操作與 DYNAMIC 模式切換</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 2</span>
-                    </div>
-
                     <div class="slide-content">
                         <div class="text-column">
                             <h3>2.1 排檔操作指南</h3>
@@ -1078,14 +1056,6 @@
 
                 <!-- Slide 4: ADAS Driver Assistance -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第三章：智慧駕駛輔助系統 (ADAS)</h2>
-                            <p>安全跟車、車道維持與主動煞車輔助</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 3</span>
-                    </div>
-
                     <div class="slide-content">
                         <div class="text-column">
                             <h3>3.1 DISTRONIC 智慧跟車操作</h3>
@@ -1110,7 +1080,7 @@
                                     <div class="step-num">C</div>
                                     <div class="step-text">
                                         <h4>手放開提示 (電容方向盤)</h4>
-                                        <p>當主動轉向輔助圖示（綠色方向盤）亮起，車輛會自動行駛於車道中央。手輕放外圈感應，無需搖晃方向盤即可解除手離方向盤警告。</p>
+                                        <p>當主動轉向輔助圖示（綠色方向盤）亮起，車輛會自動行駛於車道中央。手輕放外圈感應即可解除手離警告。</p>
                                     </div>
                                 </li>
                             </ul>
@@ -1122,7 +1092,7 @@
                         <div class="visual-column">
                             <img src="glb_steering_wheel.jpg" alt="Steering wheel ADAS buttons">
                             <div class="visual-caption">
-                                <strong>圖 3.1：跟車系統控制鍵區</strong> - 方向盤左側肋條跟車車距與車速設定按鍵。
+                                <strong>圖 3.1：跟車系統控制鍵區</strong> - 方向盤左側跟車車距與車速設定按鍵。
                             </div>
                         </div>
                     </div>
@@ -1130,20 +1100,12 @@
 
                 <!-- Slide 5: MBUX 2.0 Infotainment -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第四章：MBUX 2.0 系統與智慧座艙</h2>
-                            <p>體驗極速 MBUX 2.0、主題切換與無線智慧連結</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 4</span>
-                    </div>
-
                     <div class="slide-content">
                         <div class="text-column">
                             <h3>4.1 無線 Apple CarPlay / Android Auto 連結步驟</h3>
                             <p>2024 年式小改款 GLB 200 原廠標準配備 **無線智慧型手機整合系統**：</p>
                             
-                            <ol style="margin-left: 20px; line-height: 1.6; font-size: 0.95rem; display:flex; flex-direction:column; gap:8px;">
+                            <ol style="margin-left: 20px; line-height: 1.6; font-size: 0.9rem; display:flex; flex-direction:column; gap:8px;">
                                 <li>開啟手機的 <strong>藍牙 (Bluetooth)</strong> 與 <strong>Wi-Fi</strong> 功能。</li>
                                 <li>在中控螢幕主選單選擇 <strong>「電話」</strong> 或 <strong>「智慧型手機」</strong> 項目。</li>
                                 <li>點擊 <strong>「連接新裝置」</strong>，尋找您的手機藍牙名稱並點擊配對。</li>
@@ -1169,14 +1131,6 @@
 
                 <!-- Slide 6: Foldable Seats and Tailgate -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第五章：5+2 座椅配置與尾門調整</h2>
-                            <p>極致靈活的空間機能與尾門高度限制</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 5</span>
-                    </div>
-
                     <div class="slide-content">
                         <div class="text-column">
                             <h3>5.1 5+2 七人座空間變化說明</h3>
@@ -1221,15 +1175,7 @@
 
                 <!-- Slide 7: Five Hidden Settings -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第六章：車主必學！五大實用隱藏設定</h2>
-                            <p>解鎖賓士精心設計的貼心便利設定</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 6</span>
-                    </div>
-
-                    <div class="slide-content" style="display: block;"> <!-- Custom layout for Slide 6 tabs -->
+                    <div class="slide-content" style="display: block;"> <!-- Custom layout for Slide 7 tabs -->
                         <div class="settings-tabs-container">
                             <div class="settings-tabs-nav" id="settingsNav">
                                 <button class="settings-tab-btn active" onclick="switchSettingTab(0)">1. 尾門高度限制</button>
@@ -1308,7 +1254,7 @@
                                         <ol>
                                             <li>拿出車鑰匙。</li>
                                             <li>同時**按住遙控鑰匙上的「上鎖鍵」與「解鎖鍵」不放，持續大約 5 秒**。</li>
-                                            <li>注意觀察鑰匙頂端的紅色 LED 指示燈，當<strong>閃爍兩次</strong>時代表切換成功。</li>
+                                            <li>指示燈閃爍兩次代表切換成功。</li>
                                             <li><strong>切換後效果：</strong> 按一下解鎖鍵，僅解鎖駕駛座門與油箱蓋；連續按兩下解鎖鍵，才會解鎖全車車門。重複相同長按步驟可切換回全車解鎖。</li>
                                         </ol>
                                     </div>
@@ -1320,20 +1266,12 @@
 
                 <!-- Slide 8: Maintenance & Emergency -->
                 <div class="slide">
-                    <div class="slide-header">
-                        <div class="slide-title-group">
-                            <h2>第七章：車輛維護與緊急操作</h2>
-                            <p>輕油電邏輯、胎壓警示重設與鑰匙沒電緊急啟動</p>
-                        </div>
-                        <span class="chapter-badge">CHAPTER 7</span>
-                    </div>
-
                     <div class="slide-content">
                         <div class="text-column">
                             <h3>7.1 胎壓監測警示重設 (TPMS Reset)</h3>
                             <p>當儀表板亮起胎壓警告，請將輪胎氣壓補充至油箱蓋內側標示的標準胎壓，隨後進行手動重設歸零：</p>
                             
-                            <ol style="margin-left: 20px; line-height: 1.6; font-size: 0.95rem; display:flex; flex-direction:column; gap:8px;">
+                            <ol style="margin-left: 20px; line-height: 1.6; font-size: 0.9rem; display:flex; flex-direction:column; gap:8px;">
                                 <li>點按啟動按鈕（不踩煞車）開啟儀表電源。</li>
                                 <li>使用方向盤左側 <strong>Touch Control</strong> 滑動，切換儀表板至 <strong>「保養 (Service)」</strong> 選單。</li>
                                 <li>選取並點入 <strong>「輪胎 (Tyres)」</strong> 選項。</li>
@@ -1392,11 +1330,22 @@
     <!-- JavaScript for Animations and Interactions -->
     <script>
         let currentSlide = 0;
-        const totalSlides = 7; // Slides wrapper has 7 slide divisions
+        const totalSlides = 8; // There are exactly 8 slide divisions now!
         let isEngineRunning = false;
         let audioCtx = null;
         let engineOscillator = null;
         let engineGain = null;
+
+        const chapters = [
+            { title: "車主指南首頁", badge: "INTRODUCTION" },
+            { title: "第一章：駕駛艙佈局與基礎操作", badge: "CHAPTER 1" },
+            { title: "第二章：懷檔系統與駕駛模式", badge: "CHAPTER 2" },
+            { title: "第三章：智慧駕駛輔助系統 (ADAS)", badge: "CHAPTER 3" },
+            { title: "第四章：MBUX 2.0 系統與智慧座艙", badge: "CHAPTER 4" },
+            { title: "第五章：5+2 座椅配置與尾門調整", badge: "CHAPTER 5" },
+            { title: "第六章：車主必學！五大實用隱藏設定", badge: "CHAPTER 6" },
+            { title: "第七章：車輛維護與緊急操作", badge: "CHAPTER 7" }
+        ];
 
         // Ambient lighting color controller
         function setAmbient(color, dot) {
@@ -1418,7 +1367,7 @@
             currentSlide = index;
             
             const wrapper = document.getElementById('slidesWrapper');
-            // Calculate translation based on slide index
+            // Calculate translation based on slide index (100% / totalSlides)
             const percentage = -currentSlide * 100 / totalSlides;
             wrapper.style.transform = `translateX(${percentage}%)`;
             
@@ -1431,6 +1380,11 @@
                     btn.classList.remove('active');
                 }
             });
+
+            // Update header info dynamically (Moved to top header as requested)
+            const chapter = chapters[currentSlide];
+            document.getElementById('headerChapterTitle').innerText = chapter.title;
+            document.getElementById('headerChapterBadge').innerText = chapter.badge;
         }
 
         function moveSlide(direction) {
@@ -1440,7 +1394,7 @@
             }
         }
 
-        // Tab switching logic for Slide 6 (5 Settings)
+        // Tab switching logic for Slide 7 (5 Settings)
         function switchSettingTab(tabIndex) {
             const tabs = document.querySelectorAll('.settings-tab-btn');
             const panes = document.querySelectorAll('.settings-tab-pane');
