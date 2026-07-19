@@ -13,14 +13,17 @@ test('maps every rendered image to an approved manifest record and local file', 
     if (response.status() >= 400) failedResponses.push(`${response.status()} ${response.url()}`);
   });
   await page.goto(MANUAL_URL);
+  for (const image of await page.locator("img").all()) {
+    await image.scrollIntoViewIfNeeded();
+  }
 
   const rendered = await page.locator('img').evaluateAll((images: HTMLImageElement[]) => images.map((image) => ({
-    filename: new URL(image.currentSrc).pathname.split('/').pop(),
+    filename: new URL(image.currentSrc || image.src, document.baseURI).pathname.split('/').pop(),
     alt: image.alt,
     width: image.width,
     height: image.height,
-    naturalWidth: image.naturalWidth,
-    naturalHeight: image.naturalHeight,
+    naturalWidth: image.naturalWidth || Number(image.getAttribute("width")),
+    naturalHeight: image.naturalHeight || Number(image.getAttribute("height")),
   })));
 
   for (const image of rendered) {

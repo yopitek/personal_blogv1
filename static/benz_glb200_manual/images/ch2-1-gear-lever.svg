@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">DIRECT SELECT 懷檔操作示意</title>
+  <desc id="desc">踩住煞車後，撥桿往下排入 D，往上排入 R，車輛完全停穩後按末端 P 按鈕。</desc>
+  <rect width="1200" height="800" fill="#11171d"/>
+  <rect x="56" y="56" width="1088" height="688" rx="8" fill="#1b242c" stroke="#52616c" stroke-width="2"/>
+  <text x="96" y="126" fill="#eef4f7" font-family="sans-serif" font-size="42" font-weight="700">DIRECT SELECT 懷檔操作示意</text>
+  <text x="96" y="170" fill="#b8c5cc" font-family="sans-serif" font-size="24">依 Mercedes-Benz X247 官方車主手冊重繪，外觀與圖示依實車為準</text>
+  <g transform="translate(240 222)">
+    <rect x="133" y="0" width="94" height="420" rx="45" fill="#2c343b" stroke="#a9b5bc" stroke-width="4"/>
+    <rect x="154" y="24" width="52" height="372" rx="25" fill="#171c20"/>
+    <path d="M180 126 L440 210" fill="none" stroke="#9ba6ad" stroke-width="54" stroke-linecap="round"/>
+    <path d="M180 126 L440 210" fill="none" stroke="#242a2f" stroke-width="44" stroke-linecap="round"/>
+    <ellipse cx="455" cy="215" rx="70" ry="56" fill="#13181c" stroke="#c7d0d5" stroke-width="4"/>
+    <text x="455" y="230" text-anchor="middle" fill="#eef4f7" font-family="sans-serif" font-size="42" font-weight="800">P</text>
+    <path d="M82 128 L82 42" stroke="#f3b35b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M82 42 L57 76 M82 42 L107 76" stroke="#f3b35b" stroke-width="12" stroke-linecap="round"/>
+    <text x="35" y="28" fill="#ffd48d" font-family="sans-serif" font-size="38" font-weight="800">R</text>
+    <path d="M82 158 L82 256" stroke="#69d2a3" stroke-width="12" stroke-linecap="round"/>
+    <path d="M82 256 L57 222 M82 256 L107 222" stroke="#69d2a3" stroke-width="12" stroke-linecap="round"/>
+    <text x="35" y="310" fill="#8de8bf" font-family="sans-serif" font-size="38" font-weight="800">D</text>
+    <path d="M524 218 L616 218" stroke="#f08a82" stroke-width="12" stroke-linecap="round"/>
+    <path d="M616 218 L582 193 M616 218 L582 243" stroke="#f08a82" stroke-width="12" stroke-linecap="round"/>
+    <text x="640" y="230" fill="#ffaaa4" font-family="sans-serif" font-size="38" font-weight="800">完全停穩後按 P</text>
+  </g>
+  <rect x="96" y="650" width="1008" height="58" rx="6" fill="#25333c"/>
+  <text x="600" y="688" text-anchor="middle" fill="#e5edf1" font-family="sans-serif" font-size="26" font-weight="700">換檔前踩住煞車，不要同時踩油門；每次確認儀表檔位已反白</text>
+</svg>

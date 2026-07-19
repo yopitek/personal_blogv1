@@ -464,6 +464,53 @@
     .gear-d { background: var(--color-success); }
     .gear-r { background: var(--color-warning); }
     .gear-p { background: var(--color-danger); }
+    .gear-practice {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr);
+      gap: 28px;
+      margin-top: 24px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-border);
+    }
+    .gear-practice figure { margin: 0; }
+    .gear-practice img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-panel);
+      background: var(--color-surface);
+    }
+    .gear-practice figcaption { margin-top: 9px; color: var(--color-text-muted); font-size: 13px; }
+    .gear-controls { display: grid; align-content: start; gap: 12px; }
+    .gear-controls button {
+      display: grid;
+      min-height: 52px;
+      grid-template-columns: 40px 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-control);
+      background: var(--color-surface-raised);
+      color: var(--color-text);
+      text-align: left;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .gear-controls button[aria-pressed="true"] {
+      border-color: var(--color-link-strong);
+      box-shadow: inset 4px 0 0 var(--color-link-strong);
+    }
+    .gear-result {
+      min-height: 84px;
+      margin: 4px 0 0;
+      padding: 14px;
+      border-left: 3px solid var(--color-link-strong);
+      background: #182733;
+      color: var(--color-text);
+    }
     .faq { margin-top: 34px; }
     .faq details {
       border-top: 1px solid var(--color-border);
@@ -514,6 +561,7 @@
         padding: 48px 0;
       }
       .intro-grid, .topic { grid-template-columns: 1fr; gap: 24px; }
+      .gear-practice { grid-template-columns: 1fr; }
       .chapter-heading { grid-template-columns: 52px 1fr; gap: 12px; }
       .chapter-number { font-size: 34px; }
       .topic { padding: 30px 0; }
@@ -704,6 +752,24 @@
               </ol>
             </div>
             <div class="topic-note warning"><strong>安全要點</strong><br>車輛仍在移動時不得排入 P。換檔時應踩住煞車且不要同時踩油門。</div>
+          </section>
+
+          <section class="gear-practice" id="gear-practice" aria-labelledby="gear-practice-title">
+            <figure>
+              <picture>
+                <source srcset="images/ch2-1-gear-lever.webp" type="image/webp">
+                <img src="images/ch2-1-gear-lever.png" width="1200" height="800" loading="lazy" decoding="async" alt="DIRECT SELECT 懷檔操作示意：往下排 D、往上排 R、末端按鍵排 P">
+              </picture>
+              <figcaption>依 X247 官方車主手冊第 326 至 331 頁人工重繪；這是操作示意，按鍵外觀請以實車為準。</figcaption>
+            </figure>
+            <div class="gear-controls">
+              <h3 id="gear-practice-title">D、R、P 模擬練習</h3>
+              <p>先踩住煞車，再選擇要練習的檔位。此練習不會控制實車。</p>
+              <button type="button" data-gear="D" aria-pressed="false"><span class="gear-key gear-d">D</span><span>練習 D 前進檔</span></button>
+              <button type="button" data-gear="R" aria-pressed="false"><span class="gear-key gear-r">R</span><span>練習 R 倒車檔</span></button>
+              <button type="button" data-gear="P" aria-pressed="false"><span class="gear-key gear-p">P</span><span>練習 P 停車檔</span></button>
+              <p class="gear-result" role="status" aria-live="polite">請選擇 D、R 或 P，畫面會顯示操作方向與確認方式。</p>
+            </div>
           </section>
 
           <section class="topic" aria-labelledby="topic-2-2">
@@ -1043,6 +1109,22 @@
       simpleModeToggle.addEventListener('click', () => {
         setSimpleMode(simpleModeToggle.getAttribute('aria-pressed') !== 'true');
       });
+
+      const gearPractice = document.querySelector("#gear-practice");
+      if (gearPractice) {
+        const gearResult = gearPractice.querySelector("[role=status]");
+        const gearCopy = {
+          D: "D 前進檔：踩住煞車，將右側懷檔往下撥過第一段阻力點，再確認儀表 D 已反白。",
+          R: "R 倒車檔：踩住煞車，將右側懷檔往上撥過第一段阻力點，再確認儀表 R 已反白。",
+          P: "P 停車檔：車輛完全停穩後按懷檔末端 P 按鈕，再確認儀表 P 已反白。",
+        };
+        gearPractice.querySelectorAll("[data-gear]").forEach((button) => {
+          button.addEventListener("click", () => {
+            gearPractice.querySelectorAll("[data-gear]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+            gearResult.textContent = gearCopy[button.dataset.gear];
+          });
+        });
+      }
 
       const indexFromHash = () => {
         const match = window.location.hash.match(/^#chapter-(\d)$/);

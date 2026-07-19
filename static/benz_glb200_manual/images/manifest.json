@@ -39,6 +39,48 @@
       "usedInHtml": true
     },
     {
+      "id": "gear-selector-reference",
+      "filename": "ch2-1-gear-lever.webp",
+      "usage": "DIRECT SELECT accessible practice fallback",
+      "accuracyTier": "red-manual-redraw",
+      "source": "Human redraw verified against Mercedes-Benz X247 owner manual F247 0109 02 pp. 326-331",
+      "copyright": "Original instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "DIRECT SELECT 懷檔操作示意：往下排 D、往上排 R、末端按鍵排 P",
+      "approval": { "status": "approved", "approvedBy": "Codex document verification", "approvedOn": "2026-07-19" },
+      "usedInHtml": true
+    },
+    {
+      "id": "gear-selector-reference-fallback",
+      "filename": "ch2-1-gear-lever.png",
+      "usage": "DIRECT SELECT accessible practice PNG fallback",
+      "accuracyTier": "red-manual-redraw",
+      "source": "Raster derivative of ch2-1-gear-lever.svg",
+      "copyright": "Original instructional redraw",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "DIRECT SELECT 懷檔操作示意：往下排 D、往上排 R、末端按鍵排 P",
+      "approval": { "status": "approved", "approvedBy": "Codex document verification", "approvedOn": "2026-07-19" },
+      "usedInHtml": true
+    },
+    {
+      "id": "gear-selector-reference-source",
+      "filename": "ch2-1-gear-lever.svg",
+      "usage": "Source for the DIRECT SELECT instructional redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "Human-authored vector source",
+      "copyright": "Original instructional redraw",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "DIRECT SELECT 懷檔操作示意原稿",
+      "approval": { "status": "approved", "approvedBy": "Codex document verification", "approvedOn": "2026-07-19" },
+      "usedInHtml": false
+    },
+    {
       "id": "cockpit-layout",
       "filename": "glb_cockpit_blueprint.png",
       "usage": "Cockpit layout reference",
