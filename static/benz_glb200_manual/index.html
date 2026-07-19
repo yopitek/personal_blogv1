@@ -433,6 +433,31 @@
       color: var(--color-text-muted);
       font-size: 13px;
     }
+    .media-fallback {
+      display: flex;
+      min-height: 120px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px;
+      border: 1px solid var(--color-warning);
+      border-radius: var(--radius-panel);
+      background: var(--color-condition-surface);
+    }
+    .media-fallback[hidden] { display: none; }
+    .media-fallback p { margin: 0; color: var(--color-text-muted); }
+    .media-fallback strong { color: var(--color-warning-text); }
+    .media-fallback button {
+      min-height: 44px;
+      flex: 0 0 auto;
+      border: 1px solid var(--color-link-strong);
+      border-radius: var(--radius-control);
+      background: #182733;
+      color: var(--color-text);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
     .topic-media[data-tier="red"] figcaption::before { content: "準確操作圖 · "; color: var(--color-danger-text); font-weight: 700; }
     .topic-media[data-tier="yellow"] figcaption::before { content: "功能示意 · "; color: var(--color-warning-text); font-weight: 700; }
     .topic-media[data-tier="green"] figcaption::before { content: "情境示意 · "; color: #9fe0c0; font-weight: 700; }
@@ -604,6 +629,7 @@
     }
     @media (max-width: 420px) {
       h1 { font-size: 36px; }
+      .media-fallback { align-items: stretch; flex-direction: column; }
       h2 { font-size: 28px; }
       h3 { font-size: 21px; }
       .spec-list li { padding: 10px 8px; }
@@ -729,6 +755,7 @@
               <source srcset="images/ch1-1-dashboard.webp" type="image/webp">
               <img src="images/ch1-1-dashboard.png" width="1200" height="800" loading="lazy" decoding="async" alt="駕駛儀表與中央觸控螢幕位置關係示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊與台灣配備資料人工重繪；外觀依實車。</figcaption>
           </figure>
           </section>
@@ -745,6 +772,7 @@
               <source srcset="images/ch1-2-steering-wheel.webp" type="image/webp">
               <img src="images/ch1-2-steering-wheel.png" width="1200" height="800" loading="lazy" decoding="async" alt="多功能方向盤左右控制區與 Touch Control 示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊人工重繪；按鍵與飾板外觀依實車。</figcaption>
           </figure>
           </section>
@@ -764,6 +792,7 @@
               <source srcset="images/ch1-3-button-map.webp" type="image/webp">
               <img src="images/ch1-3-button-map.png" width="1200" height="800" loading="lazy" decoding="async" alt="方向盤左側儀表與右側娛樂功能分區概念圖">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>功能分區示意，不代表實際按鍵形狀。</figcaption>
           </figure>
           </section>
@@ -830,6 +859,7 @@
               <source srcset="images/ch2-2-left-stalk.webp" type="image/webp">
               <img src="images/ch2-2-left-stalk.png" width="1200" height="800" loading="lazy" decoding="async" alt="方向盤左後方組合開關操作位置示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊人工重繪；圖示與撥桿外觀依實車。</figcaption>
           </figure>
           </section>
@@ -867,6 +897,7 @@
               <source srcset="images/ch3-1-distronic-buttons.webp" type="image/webp">
               <img src="images/ch3-1-distronic-buttons.png" width="1200" height="800" loading="lazy" decoding="async" alt="DISTRONIC 速度與車距控制區位置示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊人工重繪；僅限實車配備，按鍵依 VIN。</figcaption>
           </figure>
           </section>
@@ -884,6 +915,7 @@
               <source srcset="images/ch3-2-parking-assist.webp" type="image/webp">
               <img src="images/ch3-2-parking-assist.png" width="1200" height="800" loading="lazy" decoding="async" alt="藍色休旅車使用停車輔助對準停車格的情境示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>情境示意；系統偵測範圍與接管方式依實車。</figcaption>
           </figure>
           </section>
@@ -925,6 +957,7 @@
               <source srcset="images/ch4-1-carplay-connect.webp" type="image/webp">
               <img src="images/ch4-1-carplay-connect.png" width="1200" height="800" loading="lazy" decoding="async" alt="手機透過藍牙與 Wi-Fi 連接中央螢幕的情境示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>連線概念圖；實際手機介面與相容性依裝置。</figcaption>
           </figure>
           </section>
@@ -941,6 +974,7 @@
               <source srcset="images/ch4-2-theme-switch.webp" type="image/webp">
               <img src="images/ch4-2-theme-switch.png" width="1200" height="800" loading="lazy" decoding="async" alt="Classic、Sport 與 Understated 三種儀表主題概念圖">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>主題示意，不重現特定 MBUX 軟體畫面。</figcaption>
           </figure>
           </section>
@@ -984,6 +1018,7 @@
               <source srcset="images/ch5-1-seven-seat-layout.webp" type="image/webp">
               <img src="images/ch5-1-seven-seat-layout.png" width="1200" height="800" loading="lazy" decoding="async" alt="5+2 座椅配置與第三排收折概念圖">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>空間變化示意，不代表精確車身與座椅比例。</figcaption>
           </figure>
           </section>
@@ -1005,6 +1040,7 @@
               <source srcset="images/ch5-2-tailgate-button.webp" type="image/webp">
               <img src="images/ch5-2-tailgate-button.png" width="1200" height="800" loading="lazy" decoding="async" alt="電動尾門關閉與停止按鍵位置示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊人工重繪；僅限實車配備 EASY-PACK 尾門。</figcaption>
           </figure>
           </section>
@@ -1044,6 +1080,7 @@
               <source srcset="images/ch6-1-key-window.webp" type="image/webp">
               <img src="images/ch6-1-key-window.png" width="1200" height="800" loading="lazy" decoding="async" alt="在車外按住遙控鑰匙同步開關車窗的情境示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>便利功能情境示意；天窗與可用範圍依實車。</figcaption>
           </figure>
           </section>
@@ -1064,6 +1101,7 @@
               <source srcset="images/ch6-2-light-delay.webp" type="image/webp">
               <img src="images/ch6-2-light-delay.png" width="1200" height="800" loading="lazy" decoding="async" alt="停車後外部照明延遲熄滅照亮返家路徑的情境示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>照明情境示意；選項與持續時間依實車軟體。</figcaption>
           </figure>
           </section>
@@ -1084,6 +1122,7 @@
               <source srcset="images/ch6-3-lock-mode.webp" type="image/webp">
               <img src="images/ch6-3-lock-mode.png" width="1200" height="800" loading="lazy" decoding="async" alt="僅解鎖駕駛門與解鎖全部車門的模式概念圖">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>模式示意，不代表實際鑰匙按鍵外觀。</figcaption>
           </figure>
           </section>
@@ -1126,6 +1165,7 @@
               <source srcset="images/ch7-1-tpms-reset.webp" type="image/webp">
               <img src="images/ch7-1-tpms-reset.png" width="1200" height="800" loading="lazy" decoding="async" alt="胎壓校正、輪胎選單、採用目前胎壓與行駛學習流程圖">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊人工重繪；繁中選單名稱依實車。</figcaption>
           </figure>
           </section>
@@ -1147,6 +1187,7 @@
               <source srcset="images/ch7-2-key-emergency-slot.webp" type="image/webp">
               <img src="images/ch7-2-key-emergency-slot.png" width="1200" height="800" loading="lazy" decoding="async" alt="杯架附近遙控鑰匙緊急感應符號位置示意">
             </picture>
+            <div class="media-fallback" hidden><p><strong>圖片暫時無法載入</strong><br>操作文字與圖片說明仍可正常閱讀。</p><button type="button" data-retry-media>重新載入圖片</button></div>
             <figcaption>依官方手冊人工重繪；請以車內實際鑰匙符號定位。</figcaption>
           </figure>
           </section>
@@ -1267,6 +1308,26 @@
           });
         });
       }
+
+      document.querySelectorAll(".topic-media").forEach((media) => {
+        const image = media.querySelector("img");
+        const fallback = media.querySelector(".media-fallback");
+        const retry = media.querySelector("[data-retry-media]");
+        if (!image || !fallback || !retry) return;
+        const showFallback = () => { fallback.hidden = false; };
+        image.addEventListener("error", showFallback);
+        image.addEventListener("load", () => { fallback.hidden = true; });
+        if (image.complete && image.naturalWidth === 0) showFallback();
+        retry.addEventListener("click", () => {
+          const nonce = Date.now();
+          media.querySelectorAll("source").forEach((source) => {
+            source.dataset.baseSrcset = source.dataset.baseSrcset || source.srcset.split("?")[0];
+            source.srcset = source.dataset.baseSrcset + "?retry=" + nonce;
+          });
+          image.dataset.baseSrc = image.dataset.baseSrc || image.getAttribute("src").split("?")[0];
+          image.src = image.dataset.baseSrc + "?retry=" + nonce;
+        });
+      });
 
       const indexFromHash = () => {
         const match = window.location.hash.match(/^#chapter-(\d)$/);

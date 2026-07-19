@@ -49,4 +49,16 @@ test.describe('GLB 200 accessible controls', () => {
     await page.locator('#chapter-7 .simple-explanation').scrollIntoViewIfNeeded();
     await expect(page.locator('#chapter-7 .simple-explanation')).toBeInViewport();
   });
+
+  test("has no critical or serious axe-core violations", async ({ page }) => {
+    test.skip(!process.env.AXE_CORE_PATH, "Set AXE_CORE_PATH for the release accessibility audit");
+    await page.goto(MANUAL_URL);
+    await page.addScriptTag({ path: process.env.AXE_CORE_PATH });
+    const results = await page.evaluate(async () => {
+      const axe = (window as typeof window & { axe: { run: (options: unknown) => Promise<{ violations: Array<{ id: string; impact: string | null; nodes: unknown[] }> }> } }).axe;
+      return axe.run({ runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"] } });
+    });
+    const blockers = results.violations.filter((violation) => violation.impact === "critical" || violation.impact === "serious");
+    expect(blockers).toEqual([]);
+  });
 });
