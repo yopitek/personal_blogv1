@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-19",
+  "assets": [
+    {
+      "id": "hero-exterior",
+      "filename": "glb_200.png",
+      "usage": "Manual cover vehicle image",
+      "accuracyTier": "green-reference",
+      "source": "Project owner supplied asset",
+      "copyright": "Publication authorized by project owner",
+      "width": 663,
+      "height": 376,
+      "format": "image/png",
+      "alt": "藍色 Mercedes-Benz GLB 200 休旅車前側視圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "hero-exterior-webp",
+      "filename": "glb_200.webp",
+      "usage": "Optimized manual cover vehicle image",
+      "accuracyTier": "green-reference",
+      "source": "Lossy WebP derivative of approved glb_200.png",
+      "copyright": "Publication authorized by project owner",
+      "width": 663,
+      "height": 376,
+      "format": "image/webp",
+      "alt": "藍色 Mercedes-Benz GLB 200 休旅車前側視圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "cockpit-layout",
+      "filename": "glb_cockpit_blueprint.png",
+      "usage": "Cockpit layout reference",
+      "accuracyTier": "red-control-reference",
+      "source": "Planned illustration prompt; official or vehicle reference required",
+      "copyright": "Not produced",
+      "width": null,
+      "height": null,
+      "format": "image/png",
+      "alt": "GLB 200 駕駛艙控制區配置圖",
+      "approval": { "status": "planned-not-approved", "approvedBy": null, "approvedOn": null },
+      "usedInHtml": false
+    },
+    {
+      "id": "steering-controls",
+      "filename": "glb_steering_wheel_isometric.png",
+      "usage": "Steering-wheel control reference",
+      "accuracyTier": "red-control-reference",
+      "source": "Planned illustration prompt; official or vehicle reference required",
+      "copyright": "Not produced",
+      "width": null,
+      "height": null,
+      "format": "image/png",
+      "alt": "GLB 200 方向盤左右控制區示意圖",
+      "approval": { "status": "planned-not-approved", "approvedBy": null, "approvedOn": null },
+      "usedInHtml": false
+    },
+    {
+      "id": "mbux-interface",
+      "filename": "glb_mbux_interface_isometric.png",
+      "usage": "MBUX interface concept illustration",
+      "accuracyTier": "yellow-concept",
+      "source": "Planned illustration prompt",
+      "copyright": "Not produced",
+      "width": null,
+      "height": null,
+      "format": "image/png",
+      "alt": "MBUX 雙螢幕介面示意圖",
+      "approval": { "status": "planned-not-approved", "approvedBy": null, "approvedOn": null },
+      "usedInHtml": false
+    },
+    {
+      "id": "seating-tailgate",
+      "filename": "glb_seating_tailgate_blueprint.png",
+      "usage": "Seating and tailgate concept illustration",
+      "accuracyTier": "red-control-reference",
+      "source": "Planned illustration prompt; official or vehicle reference required",
+      "copyright": "Not produced",
+      "width": null,
+      "height": null,
+      "format": "image/png",
+      "alt": "GLB 200 七人座與電動尾門配置圖",
+      "approval": { "status": "planned-not-approved", "approvedBy": null, "approvedOn": null },
+      "usedInHtml": false
+    }
+  ]
+}

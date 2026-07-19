@@ -5,14 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mercedes-Benz GLB 200 七人座車主指南</title>
   <meta name="description" content="台灣 2024 Mercedes-Benz GLB 200 X247 七人座車主指南，整理駕駛艙、DIRECT SELECT、MBUX、座椅、尾門與緊急操作。">
+  <meta name="author" content="ZenNote 編輯">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#111317">
   <link rel="canonical" href="https://zennote.app/benz_glb200_manual">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Mercedes-Benz GLB 200 七人座車主指南">
   <meta property="og:description" content="台灣 2024 GLB 200 X247 的七章操作指南與安全提醒。">
   <meta property="og:url" content="https://zennote.app/benz_glb200_manual">
+  <meta property="og:site_name" content="ZenNote">
+  <meta property="og:locale" content="zh_TW">
   <meta property="og:image" content="https://zennote.app/benz_glb200_manual/images/glb_200.png">
-  <link rel="preload" as="image" href="images/glb_200.png" fetchpriority="high">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="663">
+  <meta property="og:image:height" content="376">
+  <meta property="og:image:alt" content="藍色 Mercedes-Benz GLB 200 休旅車前側視圖">
+  <meta property="article:published_time" content="2026-07-18T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-07-19T10:00:00+08:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mercedes-Benz GLB 200 七人座車主指南">
+  <meta name="twitter:description" content="台灣 2024 GLB 200 X247 的七章操作指南與安全提醒。">
+  <meta name="twitter:image" content="https://zennote.app/benz_glb200_manual/images/glb_200.png">
+  <meta name="twitter:image:alt" content="藍色 Mercedes-Benz GLB 200 休旅車前側視圖">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "@id": "https://zennote.app/benz_glb200_manual#article",
+      "url": "https://zennote.app/benz_glb200_manual",
+      "mainEntityOfPage": "https://zennote.app/benz_glb200_manual",
+      "headline": "Mercedes-Benz GLB 200 七人座車主指南",
+      "description": "台灣 2024 Mercedes-Benz GLB 200 X247 七人座車主指南，整理駕駛艙、DIRECT SELECT、MBUX、座椅、尾門與緊急操作。",
+      "image": "https://zennote.app/benz_glb200_manual/images/glb_200.png",
+      "datePublished": "2026-07-18T00:00:00+08:00",
+      "dateModified": "2026-07-19T10:00:00+08:00",
+      "inLanguage": "zh-Hant-TW",
+      "proficiencyLevel": "Beginner",
+      "author": {
+        "@type": "Organization",
+        "name": "ZenNote 編輯",
+        "url": "https://zennote.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ZenNote",
+        "url": "https://zennote.app/"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "2024 Mercedes-Benz GLB 200 X247"
+      }
+    }
+  </script>
+  <link rel="preload" as="image" href="images/glb_200.webp" type="image/webp" fetchpriority="high">
   <style>
     :root {
       color-scheme: dark;
@@ -547,7 +592,10 @@
             </ul>
           </div>
           <figure class="hero-media">
-            <img src="images/glb_200.png" width="663" height="376" alt="藍色 Mercedes-Benz GLB 200 休旅車前側視圖" decoding="async" fetchpriority="high">
+            <picture>
+              <source srcset="images/glb_200.webp" type="image/webp">
+              <img src="images/glb_200.png" width="663" height="376" alt="藍色 Mercedes-Benz GLB 200 休旅車前側視圖" decoding="async" fetchpriority="high">
+            </picture>
             <figcaption>GLB 200 車型示意；實車外觀依年式與配備而異。</figcaption>
           </figure>
         </div>
@@ -937,7 +985,7 @@
   </main>
 
   <footer>
-    <p>獨立製作的 GLB 200 車主學習指南 · 查核日期 2026-07-19</p>
+    <p>ZenNote 編輯 · 獨立製作的 GLB 200 車主學習指南 · <time datetime="2026-07-19">查核日期 2026-07-19</time></p>
   </footer>
   <script>
     (() => {
@@ -952,6 +1000,25 @@
       const chapterLinks = [...document.querySelectorAll('a[href^="#chapter-"]')];
       let current = 0;
       let scrollTimer;
+
+      const faqStructuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': 'https://zennote.app/benz_glb200_manual#faq',
+        mainEntity: [...document.querySelectorAll('.faq details')].map((details) => ({
+          '@type': 'Question',
+          name: details.querySelector('summary').textContent.trim(),
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: details.querySelector('p').textContent.trim(),
+          },
+        })),
+      };
+      const faqStructuredDataScript = document.createElement('script');
+      faqStructuredDataScript.type = 'application/ld+json';
+      faqStructuredDataScript.dataset.source = 'visible-faq';
+      faqStructuredDataScript.textContent = JSON.stringify(faqStructuredData);
+      document.head.append(faqStructuredDataScript);
 
       const setSimpleMode = (enabled, persist = true) => {
         document.body.classList.toggle('simple-mode', enabled);
