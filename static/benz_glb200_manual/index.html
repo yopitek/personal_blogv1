@@ -146,6 +146,24 @@
       color: var(--color-text);
       background: var(--color-surface);
     }
+    .mode-toggle {
+      flex: none;
+      min-width: 58px;
+      min-height: 40px;
+      padding: 8px 10px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-control);
+      background: var(--color-surface);
+      color: var(--color-text);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .mode-toggle[aria-pressed="true"] {
+      border-color: var(--color-link);
+      background: var(--color-link-strong);
+    }
     main { overflow: clip; }
     .hero {
       min-height: min(680px, calc(100dvh - var(--header-height) - 48px));
@@ -321,6 +339,17 @@
       line-height: 1;
     }
     .chapter-heading p { max-width: 72ch; margin: 10px 0 0; color: var(--color-text-muted); }
+    .simple-explanation {
+      display: none;
+      max-width: 78ch;
+      margin: -18px 0 34px 90px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--color-link);
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+    }
+    .simple-explanation strong { color: var(--color-text); }
+    .simple-mode .simple-explanation { display: block; }
     .topic {
       display: grid;
       grid-template-columns: minmax(0, .72fr) minmax(300px, .28fr);
@@ -422,6 +451,7 @@
       .brand { font-size: 13px; }
       .chapter-nav a { min-width: 38px; padding: 8px; }
       .chapter-nav .label { display: none; }
+      .simple-explanation { margin-left: 64px; }
       .hero { min-height: auto; }
       .hero-inner {
         width: min(100% - 28px, var(--content));
@@ -455,6 +485,7 @@
         overflow: visible;
         scroll-margin-top: calc(var(--header-height) + var(--safe-top));
       }
+      .simple-explanation { margin-left: 0; }
     }
     @media (max-width: 420px) {
       h1 { font-size: 36px; }
@@ -463,6 +494,8 @@
       .spec-list li { padding: 10px 8px; }
       .spec-list strong { font-size: 16px; }
       .spec-list span { font-size: 11px; }
+      .mode-toggle { min-width: 40px; width: 40px; padding: 8px 4px; }
+      .mode-toggle-label { display: none; }
       .chapter-heading { grid-template-columns: 1fr; }
       .chapter-number { font-size: 28px; }
       .steps li { padding-left: 50px; }
@@ -493,6 +526,9 @@
           <li><a href="#chapter-7"><span>07</span><span class="label"> 保養緊急</span></a></li>
         </ol>
       </nav>
+      <button class="mode-toggle" id="simple-mode-toggle" type="button" aria-label="開啟簡易模式" aria-pressed="false">
+        <span aria-hidden="true">簡</span><span class="mode-toggle-label" aria-hidden="true">易</span>
+      </button>
     </div>
   </header>
 
@@ -561,6 +597,7 @@
               <p>先分清楚兩塊螢幕與方向盤左右控制區，再開始操作車內功能。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>方向盤左邊主要管駕駛儀表，右邊主要管音樂、電話與中央螢幕。</p>
 
           <section class="topic" aria-labelledby="topic-1-1">
             <div>
@@ -607,6 +644,7 @@
               <p>懷檔位於方向盤右後方。每次換檔後，都要確認駕駛儀表上的檔位位置已反白。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>踩住煞車後，右側懷檔往下是 D、往上是 R；完全停穩後按末端按鈕才是 P。</p>
 
           <section class="topic" aria-labelledby="topic-2-1">
             <div>
@@ -646,6 +684,7 @@
               <p>這些系統是否存在及可用範圍，都必須依指定 VIN 與實車配備確認。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>跟車與停車系統都只是輔助。眼睛要看路，腳要隨時準備煞車，責任仍在駕駛。</p>
 
           <section class="topic" aria-labelledby="topic-3-1">
             <div>
@@ -683,6 +722,7 @@
               <p>首次連線時先停妥車輛；選單名稱與可用服務依軟體、手機及地區而異。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>先停妥車輛再連手機。左側方向盤控制駕駛儀表，手機投影與媒體主要在中央螢幕操作。</p>
 
           <section class="topic" aria-labelledby="topic-4-1">
             <div>
@@ -723,6 +763,7 @@
               <p>調整座椅或尾門前先清空移動範圍，行車前確認座椅與椅背確實卡入定位。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>移動第二排或操作尾門前先清空周圍；完成後要確認座椅、椅背與尾門都到位。</p>
 
           <section class="topic" aria-labelledby="topic-5-1">
             <div>
@@ -770,6 +811,7 @@
               <p>鑰匙與照明功能會因配備、地區與選單版本不同，實際文字以車內畫面為準。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>鑰匙便利功能要持續按住按鍵才會動作，放開就停止；離車前仍要親眼確認門窗。</p>
 
           <section class="topic" aria-labelledby="topic-6-1">
             <div>
@@ -824,6 +866,7 @@
               <p>不要用重設警示取代輪胎檢查。緊急啟動失敗時，停止反覆操作並聯絡合格維修據點。</p>
             </div>
           </header>
+          <p class="simple-explanation"><strong>白話重點：</strong>胎壓警示要先檢查輪胎再重設；鑰匙沒電時找車內的鑰匙符號，不要憑位置猜測。</p>
 
           <section class="topic" aria-labelledby="topic-7-1">
             <div>
@@ -905,9 +948,34 @@
       const previous = document.querySelector('#previous-chapter');
       const next = document.querySelector('#next-chapter');
       const progress = document.querySelector('#chapter-progress');
+      const simpleModeToggle = document.querySelector('#simple-mode-toggle');
       const chapterLinks = [...document.querySelectorAll('a[href^="#chapter-"]')];
       let current = 0;
       let scrollTimer;
+
+      const setSimpleMode = (enabled, persist = true) => {
+        document.body.classList.toggle('simple-mode', enabled);
+        simpleModeToggle.setAttribute('aria-pressed', String(enabled));
+        simpleModeToggle.setAttribute('aria-label', enabled ? '關閉簡易模式' : '開啟簡易模式');
+        if (persist) {
+          try {
+            localStorage.setItem('glb-simple-mode', String(enabled));
+          } catch (_) {
+            // The reading mode remains usable when storage is unavailable.
+          }
+        }
+      };
+
+      let savedSimpleMode = false;
+      try {
+        savedSimpleMode = localStorage.getItem('glb-simple-mode') === 'true';
+      } catch (_) {
+        savedSimpleMode = false;
+      }
+      setSimpleMode(savedSimpleMode, false);
+      simpleModeToggle.addEventListener('click', () => {
+        setSimpleMode(simpleModeToggle.getAttribute('aria-pressed') !== 'true');
+      });
 
       const indexFromHash = () => {
         const match = window.location.hash.match(/^#chapter-(\d)$/);
