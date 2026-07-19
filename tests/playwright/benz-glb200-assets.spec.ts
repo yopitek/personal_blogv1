@@ -59,3 +59,34 @@ test('serves the optimized hero below the transfer budget with a PNG fallback', 
   expect(await image.evaluate((element: HTMLImageElement) => element.currentSrc.endsWith('/images/glb_200.webp'))).toBe(true);
   expect(fs.statSync(path.join(IMAGE_DIR, 'glb_200.webp')).size).toBeLessThan(180 * 1024);
 });
+
+test("renders the complete 15-image editorial set with responsive formats", async ({ page }) => {
+  const expected = [
+    "ch1-1-dashboard", "ch1-2-steering-wheel", "ch1-3-button-map",
+    "ch2-2-left-stalk", "ch3-1-distronic-buttons", "ch3-2-parking-assist",
+    "ch4-1-carplay-connect", "ch4-2-theme-switch", "ch5-1-seven-seat-layout",
+    "ch5-2-tailgate-button", "ch6-1-key-window", "ch6-2-light-delay",
+    "ch6-3-lock-mode", "ch7-1-tpms-reset", "ch7-2-key-emergency-slot",
+  ];
+  await page.goto(MANUAL_URL);
+
+  await expect(page.locator(".topic-media")).toHaveCount(15);
+  for (const name of expected) {
+    const picture = page.locator("picture[data-asset=\"" + name + "\"]");
+    await expect(picture).toHaveCount(1);
+    await expect(picture.locator("source[type=\"image/avif\"]")).toHaveAttribute("srcset", "images/" + name + ".avif");
+    await expect(picture.locator("source[type=\"image/webp\"]")).toHaveAttribute("srcset", "images/" + name + ".webp");
+    await expect(picture.locator("img")).toHaveAttribute("src", "images/" + name + ".png");
+    await expect(picture.locator("img")).toHaveAttribute("loading", "lazy");
+  }
+});
+
+test("keeps every red-tier image traceable to a manual redraw rather than generation", () => {
+  const redAssets = manifest.assets.filter((asset: { accuracyTier: string }) => asset.accuracyTier.startsWith("red"));
+  expect(redAssets.length).toBeGreaterThanOrEqual(8);
+  for (const asset of redAssets) {
+    expect(asset.approval.status).toBe("approved");
+    expect(asset.source).toMatch(/manual|F247|official/i);
+    expect(asset.source).not.toMatch(/generated|\bAI\b/i);
+  }
+});

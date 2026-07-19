@@ -414,6 +414,28 @@
       font-size: 14px;
     }
     .topic-note strong { color: var(--color-text); }
+    .topic-media {
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+    .topic-media picture,
+    .topic-media img { display: block; width: 100%; }
+    .topic-media img {
+      height: auto;
+      aspect-ratio: 3 / 2;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-panel);
+      background: var(--color-surface);
+      object-fit: cover;
+    }
+    .topic-media figcaption {
+      margin-top: 9px;
+      color: var(--color-text-muted);
+      font-size: 13px;
+    }
+    .topic-media[data-tier="red"] figcaption::before { content: "準確操作圖 · "; color: var(--color-danger-text); font-weight: 700; }
+    .topic-media[data-tier="yellow"] figcaption::before { content: "功能示意 · "; color: var(--color-warning-text); font-weight: 700; }
+    .topic-media[data-tier="green"] figcaption::before { content: "情境示意 · "; color: #9fe0c0; font-weight: 700; }
     .warning {
       border-color: #785750 !important;
       background: var(--color-danger-surface) !important;
@@ -701,6 +723,14 @@
               <p>小改款車室取消舊款中央鞍座的觸控板，中央區域改為置物空間與杯架；手機無線充電板依實車配備而定。</p>
             </div>
             <div class="topic-note"><strong>新手提示</strong><br>正前方是駕駛儀表，中間是中央觸控螢幕。兩者是分開但連動的螢幕。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch1-1-dashboard">
+              <source srcset="images/ch1-1-dashboard.avif" type="image/avif">
+              <source srcset="images/ch1-1-dashboard.webp" type="image/webp">
+              <img src="images/ch1-1-dashboard.png" width="1200" height="800" loading="lazy" decoding="async" alt="駕駛儀表與中央觸控螢幕位置關係示意">
+            </picture>
+            <figcaption>依官方手冊與台灣配備資料人工重繪；外觀依實車。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-1-2">
@@ -709,6 +739,14 @@
               <p>方向盤左右控制區可分別操作駕駛儀表與 MBUX。Touch Control 支援單指滑動與按壓確認；方向盤握環的電容感應則用於部分駕駛輔助功能，兩者不是同一功能。</p>
             </div>
             <div class="topic-note"><strong>操作方式</strong><br>用拇指指腹在 Touch Control 上滑動移動選項，按下代表確認。靈敏度可依實車選單調整。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch1-2-steering-wheel">
+              <source srcset="images/ch1-2-steering-wheel.avif" type="image/avif">
+              <source srcset="images/ch1-2-steering-wheel.webp" type="image/webp">
+              <img src="images/ch1-2-steering-wheel.png" width="1200" height="800" loading="lazy" decoding="async" alt="多功能方向盤左右控制區與 Touch Control 示意">
+            </picture>
+            <figcaption>依官方手冊人工重繪；按鍵與飾板外觀依實車。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-1-3">
@@ -720,6 +758,14 @@
               </ul>
             </div>
             <div class="topic-note"><strong>記憶口訣</strong><br>左儀表、右娛樂。</div>
+          <figure class="topic-media" data-tier="yellow">
+            <picture data-asset="ch1-3-button-map">
+              <source srcset="images/ch1-3-button-map.avif" type="image/avif">
+              <source srcset="images/ch1-3-button-map.webp" type="image/webp">
+              <img src="images/ch1-3-button-map.png" width="1200" height="800" loading="lazy" decoding="async" alt="方向盤左側儀表與右側娛樂功能分區概念圖">
+            </picture>
+            <figcaption>功能分區示意，不代表實際按鍵形狀。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-1">
@@ -778,6 +824,14 @@
               <p>右側撥桿專供排檔使用，因此方向燈、大燈閃爍與雨刷控制集中在方向盤左後方的組合開關。</p>
             </div>
             <div class="topic-note"><strong>記憶口訣</strong><br>左撥雨刷燈、右撥進退檔。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch2-2-left-stalk">
+              <source srcset="images/ch2-2-left-stalk.avif" type="image/avif">
+              <source srcset="images/ch2-2-left-stalk.webp" type="image/webp">
+              <img src="images/ch2-2-left-stalk.png" width="1200" height="800" loading="lazy" decoding="async" alt="方向盤左後方組合開關操作位置示意">
+            </picture>
+            <figcaption>依官方手冊人工重繪；圖示與撥桿外觀依實車。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-2">
@@ -807,6 +861,14 @@
               <p>系統對行人、動物、單車、靜止或橫向移動物體等情境可能沒有反應或反應受限，且只提供部分減速能力。</p>
             </div>
             <div class="topic-note conditional"><strong>配備條件</strong><br>僅適用於實車配備 Active Distance Assist DISTRONIC 的車輛。主動轉向輔助是另一項依市場與套件而異的功能。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch3-1-distronic-buttons">
+              <source srcset="images/ch3-1-distronic-buttons.avif" type="image/avif">
+              <source srcset="images/ch3-1-distronic-buttons.webp" type="image/webp">
+              <img src="images/ch3-1-distronic-buttons.png" width="1200" height="800" loading="lazy" decoding="async" alt="DISTRONIC 速度與車距控制區位置示意">
+            </picture>
+            <figcaption>依官方手冊人工重繪；僅限實車配備，按鍵依 VIN。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-3-2">
@@ -816,6 +878,14 @@
               <p>系統可協助加速、煞車、轉向與換檔，但駕駛仍對整個停車過程負責。系統可能偵測不到高於或低於感測範圍的物體，也可能誤判車位。</p>
             </div>
             <div class="topic-note warning"><strong>駕駛責任</strong><br>確認路徑中沒有人、動物或障礙物，並隨時準備踩煞車或取消程序。</div>
+          <figure class="topic-media" data-tier="green">
+            <picture data-asset="ch3-2-parking-assist">
+              <source srcset="images/ch3-2-parking-assist.avif" type="image/avif">
+              <source srcset="images/ch3-2-parking-assist.webp" type="image/webp">
+              <img src="images/ch3-2-parking-assist.png" width="1200" height="800" loading="lazy" decoding="async" alt="藍色休旅車使用停車輔助對準停車格的情境示意">
+            </picture>
+            <figcaption>情境示意；系統偵測範圍與接管方式依實車。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-3">
@@ -849,6 +919,14 @@
               </ol>
             </div>
             <div class="topic-note conditional"><strong>相容性</strong><br>Android Auto 無線功能依手機、地區與車輛設定而異。後續自動連線也會受使用者設定檔與先前連線狀態影響。</div>
+          <figure class="topic-media" data-tier="green">
+            <picture data-asset="ch4-1-carplay-connect">
+              <source srcset="images/ch4-1-carplay-connect.avif" type="image/avif">
+              <source srcset="images/ch4-1-carplay-connect.webp" type="image/webp">
+              <img src="images/ch4-1-carplay-connect.png" width="1200" height="800" loading="lazy" decoding="async" alt="手機透過藍牙與 Wi-Fi 連接中央螢幕的情境示意">
+            </picture>
+            <figcaption>連線概念圖；實際手機介面與相容性依裝置。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-4-2">
@@ -857,6 +935,14 @@
               <p>使用方向盤左側 Touch Control 開啟駕駛儀表選單。官方手冊列出 Classic、Sport 與 Understated 等顯示；可用顏色、資訊與繁中名稱依實車軟體版本而定。</p>
             </div>
             <div class="topic-note"><strong>操作提醒</strong><br>只在交通狀況允許時操作資訊系統；無法確保安全時，先停妥車輛。</div>
+          <figure class="topic-media" data-tier="yellow">
+            <picture data-asset="ch4-2-theme-switch">
+              <source srcset="images/ch4-2-theme-switch.avif" type="image/avif">
+              <source srcset="images/ch4-2-theme-switch.webp" type="image/webp">
+              <img src="images/ch4-2-theme-switch.png" width="1200" height="800" loading="lazy" decoding="async" alt="Classic、Sport 與 Understated 三種儀表主題概念圖">
+            </picture>
+            <figcaption>主題示意，不重現特定 MBUX 軟體畫面。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-4">
@@ -892,6 +978,14 @@
               </table>
             </div>
             <div class="topic-note warning"><strong>Easy-Entry</strong><br>拉動第二排椅背把手後，應握住椅背移動座椅，不可拉著把手拖動。先確認移動範圍內無人或物品。</div>
+          <figure class="topic-media" data-tier="yellow">
+            <picture data-asset="ch5-1-seven-seat-layout">
+              <source srcset="images/ch5-1-seven-seat-layout.avif" type="image/avif">
+              <source srcset="images/ch5-1-seven-seat-layout.webp" type="image/webp">
+              <img src="images/ch5-1-seven-seat-layout.png" width="1200" height="800" loading="lazy" decoding="async" alt="5+2 座椅配置與第三排收折概念圖">
+            </picture>
+            <figcaption>空間變化示意，不代表精確車身與座椅比例。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-5-2">
@@ -905,6 +999,14 @@
               </ol>
             </div>
             <div class="topic-note conditional"><strong>配備條件</strong><br>僅適用於實車配備 EASY-PACK 電動尾門的車輛。尾門停在限制位置時，拉一下外側把手可暫時完全開啟。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch5-2-tailgate-button">
+              <source srcset="images/ch5-2-tailgate-button.avif" type="image/avif">
+              <source srcset="images/ch5-2-tailgate-button.webp" type="image/webp">
+              <img src="images/ch5-2-tailgate-button.png" width="1200" height="800" loading="lazy" decoding="async" alt="電動尾門關閉與停止按鍵位置示意">
+            </picture>
+            <figcaption>依官方手冊人工重繪；僅限實車配備 EASY-PACK 尾門。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-5">
@@ -936,6 +1038,14 @@
               </ul>
             </div>
             <div class="topic-note warning"><strong>防夾傷</strong><br>開啟或關閉時全程觀察車窗與天窗。放開按鍵即可中止動作。</div>
+          <figure class="topic-media" data-tier="green">
+            <picture data-asset="ch6-1-key-window">
+              <source srcset="images/ch6-1-key-window.avif" type="image/avif">
+              <source srcset="images/ch6-1-key-window.webp" type="image/webp">
+              <img src="images/ch6-1-key-window.png" width="1200" height="800" loading="lazy" decoding="async" alt="在車外按住遙控鑰匙同步開關車窗的情境示意">
+            </picture>
+            <figcaption>便利功能情境示意；天窗與可用範圍依實車。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-6-2">
@@ -948,6 +1058,14 @@
               </ol>
             </div>
             <div class="topic-note"><strong>選單差異</strong><br>繁中名稱與可選時間依 MBUX 軟體版本為準。</div>
+          <figure class="topic-media" data-tier="green">
+            <picture data-asset="ch6-2-light-delay">
+              <source srcset="images/ch6-2-light-delay.avif" type="image/avif">
+              <source srcset="images/ch6-2-light-delay.webp" type="image/webp">
+              <img src="images/ch6-2-light-delay.png" width="1200" height="800" loading="lazy" decoding="async" alt="停車後外部照明延遲熄滅照亮返家路徑的情境示意">
+            </picture>
+            <figcaption>照明情境示意；選項與持續時間依實車軟體。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-6-3">
@@ -960,6 +1078,14 @@
               </ol>
             </div>
             <div class="topic-note"><strong>恢復全車解鎖</strong><br>重複相同的按鍵組合與時間即可切回。</div>
+          <figure class="topic-media" data-tier="yellow">
+            <picture data-asset="ch6-3-lock-mode">
+              <source srcset="images/ch6-3-lock-mode.avif" type="image/avif">
+              <source srcset="images/ch6-3-lock-mode.webp" type="image/webp">
+              <img src="images/ch6-3-lock-mode.png" width="1200" height="800" loading="lazy" decoding="async" alt="僅解鎖駕駛門與解鎖全部車門的模式概念圖">
+            </picture>
+            <figcaption>模式示意，不代表實際鑰匙按鍵外觀。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-6">
@@ -994,6 +1120,14 @@
               </ol>
             </div>
             <div class="topic-note warning"><strong>先檢查再重設</strong><br>輪胎明顯洩氣、破損或原因不明時，不得直接重設後繼續行駛。TPMS 也不能即時警告所有突發性洩壓。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch7-1-tpms-reset">
+              <source srcset="images/ch7-1-tpms-reset.avif" type="image/avif">
+              <source srcset="images/ch7-1-tpms-reset.webp" type="image/webp">
+              <img src="images/ch7-1-tpms-reset.png" width="1200" height="800" loading="lazy" decoding="async" alt="胎壓校正、輪胎選單、採用目前胎壓與行駛學習流程圖">
+            </picture>
+            <figcaption>依官方手冊人工重繪；繁中選單名稱依實車。</figcaption>
+          </figure>
           </section>
 
           <section class="topic" aria-labelledby="topic-7-2">
@@ -1007,6 +1141,14 @@
               </ol>
             </div>
             <div class="topic-note conditional"><strong>位置確認</strong><br>不要只依「杯架前方」猜測位置。找不到時，開啟車內數位車主手冊搜尋鑰匙感應位置。</div>
+          <figure class="topic-media" data-tier="red">
+            <picture data-asset="ch7-2-key-emergency-slot">
+              <source srcset="images/ch7-2-key-emergency-slot.avif" type="image/avif">
+              <source srcset="images/ch7-2-key-emergency-slot.webp" type="image/webp">
+              <img src="images/ch7-2-key-emergency-slot.png" width="1200" height="800" loading="lazy" decoding="async" alt="杯架附近遙控鑰匙緊急感應符號位置示意">
+            </picture>
+            <figcaption>依官方手冊人工重繪；請以車內實際鑰匙符號定位。</figcaption>
+          </figure>
           </section>
 
           <section class="faq" aria-labelledby="faq-7">
