@@ -26,7 +26,7 @@ test.describe('GLB 200 production release gate', () => {
     await expect(page.locator('.topic-media')).toHaveCount(15);
 
     const images = page.locator('img');
-    await expect(images).toHaveCount(16);
+    await expect(images).toHaveCount(17);
     for (const image of await images.all()) await image.scrollIntoViewIfNeeded();
 
     const imageUrls = await images.evaluateAll((elements: HTMLImageElement[]) =>
