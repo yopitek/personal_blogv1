@@ -1,0 +1,84 @@
+{
+    "slug": "einstein",
+    "title": {
+        "en": "Albert Einstein",
+        "zh-TW": "愛因斯坦",
+        "zh-CN": "爱因斯坦",
+        "ja": "アルベルト・アインシュタイン",
+        "fr": "Albert Einstein"
+    },
+    "subtitle": {
+        "en": "The Cosmic Dreamer",
+        "zh-TW": "宇宙夢想家",
+        "zh-CN": "宇宙梦想家",
+        "ja": "宇宙の夢想家",
+        "fr": "Le Rêveur Cosmique"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": "p01",
+            "key": "compass_wonder",
+            "image": "images/p01.png",
+            "audio_key": "p01"
+        },
+        {
+            "id": "p02",
+            "key": "daydreaming_student",
+            "image": "images/p02.png",
+            "audio_key": "p02"
+        },
+        {
+            "id": "p03",
+            "key": "patent_clerk",
+            "image": "images/p03.png",
+            "audio_key": "p03"
+        },
+        {
+            "id": "p04",
+            "key": "miracle_year",
+            "image": "images/p04.png",
+            "audio_key": "p04",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p05",
+            "key": "light_bends",
+            "image": "images/p05.png",
+            "audio_key": "p05"
+        },
+        {
+            "id": "p06",
+            "key": "fleeing_nazis",
+            "image": "images/p06.png",
+            "audio_key": "p06"
+        },
+        {
+            "id": "p07",
+            "key": "roosevelt_letter",
+            "image": "images/p07.png",
+            "audio_key": "p07",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p08",
+            "key": "lonely_quest",
+            "image": "images/p08.png",
+            "audio_key": "p08"
+        },
+        {
+            "id": "p09",
+            "key": "humble_genius",
+            "image": "images/p09.png",
+            "audio_key": "p09"
+        },
+        {
+            "id": "p10",
+            "key": "eternal_legacy",
+            "image": "images/p10.png",
+            "audio_key": "p10",
+            "style": "museum_poster"
+        }
+    ]
+}
