@@ -1,0 +1,84 @@
+{
+    "slug": "steve_jobs",
+    "title": {
+        "en": "Steve Jobs",
+        "zh-TW": "賈伯斯",
+        "zh-CN": "史蒂夫·乔布斯",
+        "ja": "スティーブ・ジョブズ",
+        "fr": "Steve Jobs"
+    },
+    "subtitle": {
+        "en": "The Man Who Thought Different",
+        "zh-TW": "不同凡想的人",
+        "zh-CN": "非同凡想的人",
+        "ja": "異端の創造者",
+        "fr": "L'Homme Qui Pensait Différemment"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": "p01",
+            "key": "abandoned_chosen",
+            "image": "images/p01.png",
+            "audio_key": "p01"
+        },
+        {
+            "id": "p02",
+            "key": "garage_discovery",
+            "image": "images/p02.png",
+            "audio_key": "p02"
+        },
+        {
+            "id": "p03",
+            "key": "two_steves",
+            "image": "images/p03.png",
+            "audio_key": "p03"
+        },
+        {
+            "id": "p04",
+            "key": "macintosh_launch",
+            "image": "images/p04.png",
+            "audio_key": "p04",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p05",
+            "key": "boardroom_betrayal",
+            "image": "images/p05.png",
+            "audio_key": "p05"
+        },
+        {
+            "id": "p06",
+            "key": "wilderness_years",
+            "image": "images/p06.png",
+            "audio_key": "p06"
+        },
+        {
+            "id": "p07",
+            "key": "think_different",
+            "image": "images/p07.png",
+            "audio_key": "p07",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p08",
+            "key": "shadow_falls",
+            "image": "images/p08.png",
+            "audio_key": "p08"
+        },
+        {
+            "id": "p09",
+            "key": "final_revolutions",
+            "image": "images/p09.png",
+            "audio_key": "p09"
+        },
+        {
+            "id": "p10",
+            "key": "stay_hungry",
+            "image": "images/p10.png",
+            "audio_key": "p10",
+            "style": "museum_poster"
+        }
+    ]
+}

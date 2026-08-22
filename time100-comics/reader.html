@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME100 Reader v1.1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reader-specific tweaks */
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            Back to Library
+        </a>
+        <div class="language-selector">
+            <select id="lang-select">
+                <option value="en">English</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="zh-CN">简体中文</option>
+                <option value="ja">日本語</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="reader-container">
+        <!-- Left: Image -->
+        <div class="comic-panel">
+            <img id="comic-img" class="comic-image" src="" alt="Comic Page">
+
+            <div class="nav-controls">
+                <button id="btn-prev" class="nav-btn" aria-label="Previous Page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                </button>
+                <span id="page-counter" style="color:white; display:flex; align-items:center; font-size:0.9rem;">1 /
+                    10</span>
+                <button id="btn-next" class="nav-btn" aria-label="Next Page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right: Text & Audio -->
+        <div class="text-panel">
+            <div id="text-content">
+                <div class="page-indicator" id="page-label">PAGE 01</div>
+                <h2 class="section-title" id="page-title">Loading...</h2>
+                <div class="narrative-text" id="page-text"></div>
+            </div>
+
+            <!-- Play Entire Book Section -->
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                <button id="btn-play-entire-book" class="play-entire-book-btn">
+                    <svg id="icon-play-book" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg id="icon-pause-book" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        style="display:none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                    <span id="play-book-label">Play Entire Book</span>
+                </button>
+                <div id="book-progress"
+                    style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; display: none;">
+                    Page 1 of 10
+                </div>
+            </div>
+
+            <!-- Single Page Narration -->
+            <div class="audio-player">
+                <button id="btn-play" class="play-btn">
+                    <svg id="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg id="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                        style="display:none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                </button>
+                <div style="flex:1;">
+                    <div style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:4px">NARRATION</div>
+                    <div style="height:4px; background:var(--border); border-radius:2px; overflow:hidden;">
+                        <div id="audio-progress"
+                            style="height:100%; width:0%; background:var(--accent); transition:width 0.1s linear;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-element"></audio>
+
+    <script src="main.js"></script>
+    <script>
+        const Reader = {
+            bookSlug: new URLSearchParams(window.location.search).get('book') || 'stephen_hawking',
+            currentPage: 0,
+            totalPages: 0,
+            pagesData: null,
+            i18nData: null,
+            audioEl: document.getElementById('audio-element'),
+            isPlaying: false,
+            isEntireBookPlaying: false, // New state for entire book mode
+
+            async init() {
+                await this.loadContent();
+
+                // Event Listeners
+                document.getElementById('btn-prev').addEventListener('click', () => this.changePage(-1));
+                document.getElementById('btn-next').addEventListener('click', () => this.changePage(1));
+                document.getElementById('btn-play').addEventListener('click', () => this.toggleAudio());
+                document.getElementById('btn-play-entire-book').addEventListener('click', () => this.toggleEntireBook());
+
+                this.audioEl.addEventListener('timeupdate', () => this.updateProgress());
+                this.audioEl.addEventListener('ended', () => {
+                    if (this.isEntireBookPlaying) {
+                        // Auto-advance to next page in entire book mode
+                        this.advanceToNextPage();
+                    } else {
+                        // Single page mode - just stop
+                        this.isPlaying = false;
+                        this.updatePlayButton();
+                    }
+                });
+
+                // Listen for language changes
+                window.addEventListener('languageChanged', async (e) => {
+                    // Stop any playback when language changes
+                    this.stopEntireBook();
+                    this.audioEl.pause();
+                    this.isPlaying = false;
+                    this.updatePlayButton();
+
+                    // Reload content with new language
+                    await this.loadContent();
+                });
+
+                // Keyboard Nav
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') this.changePage(1);
+                    if (e.key === 'ArrowLeft') this.changePage(-1);
+                    if (e.key === ' ') {
+                        e.preventDefault(); // prevent scroll
+                        if (this.isEntireBookPlaying) {
+                            this.toggleEntireBook(); // Pause/resume entire book
+                        } else {
+                            this.toggleAudio(); // Single page toggle
+                        }
+                    }
+                });
+            },
+
+            async loadContent() {
+                const data = await App.fetchBookData(this.bookSlug);
+                console.log("Book Data Loaded:", data);
+                if (!data) {
+                    console.error("Failed to load book data for slug:", this.bookSlug);
+                    return;
+                }
+
+                this.pagesData = data.pages;
+                this.i18nData = data.i18n;
+                this.totalPages = this.pagesData.pages ? this.pagesData.pages.length : 0;
+
+                console.log("i18n Data:", this.i18nData);
+                console.log("Total Pages:", this.totalPages);
+
+                this.renderPage();
+            },
+
+            renderPage() {
+                const pageIndex = this.currentPage;
+                const pageId = `page${String(pageIndex + 1).padStart(2, '0')}`; // page01
+                const pIdShort = `p${String(pageIndex + 1).padStart(2, '0')}`;   // p01
+
+                // 1. Image
+                const img = document.getElementById('comic-img');
+                img.classList.remove('loaded');
+                img.src = `books/${this.bookSlug}/images/${pIdShort}.png`;
+                img.onload = () => img.classList.add('loaded');
+
+                // 2. Text - Support both nested (p01.title) and flat (page01_title) structures
+                const pageData = this.i18nData[pIdShort] || {};
+                let title = pageData.title || this.i18nData[`${pageId}_title`];
+                let text = pageData.text || this.i18nData[`${pageId}_text`];
+
+                const lang = App.state.language;
+                document.getElementById('page-title').textContent = title || `Title Missing (${lang}.${pIdShort})`;
+                document.getElementById('page-text').textContent = text || `Text Missing (${lang}.${pIdShort})`;
+                document.getElementById('page-label').textContent = `PAGE ${String(pageIndex + 1).padStart(2, '0')}`;
+
+                // 3. UI
+                document.getElementById('page-counter').textContent = `${pageIndex + 1} / ${this.totalPages}`;
+                document.getElementById('btn-prev').disabled = pageIndex === 0;
+                document.getElementById('btn-next').disabled = pageIndex === this.totalPages - 1;
+
+                // 4. Audio Source
+                const audioPath = `books/${this.bookSlug}/audio/${lang}/${pIdShort}.mp3`;
+
+                // Update audio source
+                this.audioEl.src = audioPath;
+
+                // Reset single-page audio UI
+                this.isPlaying = false;
+                this.updatePlayButton();
+                document.getElementById('audio-progress').style.width = '0%';
+
+                // Update entire book progress if in that mode
+                if (this.isEntireBookPlaying) {
+                    this.updateBookProgress();
+                }
+            },
+
+            changePage(delta) {
+                const newPage = this.currentPage + delta;
+                if (newPage >= 0 && newPage < this.totalPages) {
+                    // Manual navigation stops entire book mode
+                    if (this.isEntireBookPlaying) {
+                        this.stopEntireBook();
+                    }
+
+                    this.currentPage = newPage;
+                    this.renderPage();
+                }
+            },
+
+            toggleAudio() {
+                // Stop entire book mode if active
+                if (this.isEntireBookPlaying) {
+                    this.stopEntireBook();
+                }
+
+                if (this.audioEl.paused) {
+                    this.audioEl.play();
+                    this.isPlaying = true;
+                } else {
+                    this.audioEl.pause();
+                    this.isPlaying = false;
+                }
+                this.updatePlayButton();
+            },
+
+            updatePlayButton() {
+                const playIcon = document.getElementById('icon-play');
+                const pauseIcon = document.getElementById('icon-pause');
+                if (this.isPlaying) {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                } else {
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                }
+            },
+
+            updateProgress() {
+                if (this.audioEl.duration) {
+                    const percent = (this.audioEl.currentTime / this.audioEl.duration) * 100;
+                    document.getElementById('audio-progress').style.width = `${percent}%`;
+                }
+            },
+
+            // === ENTIRE BOOK PLAYBACK METHODS ===
+
+            toggleEntireBook() {
+                if (this.isEntireBookPlaying) {
+                    // Pause or stop
+                    if (this.audioEl.paused) {
+                        // Resume
+                        this.audioEl.play();
+                        this.updateEntireBookButton(true);
+                    } else {
+                        // Pause
+                        this.audioEl.pause();
+                        this.updateEntireBookButton(false);
+                    }
+                } else {
+                    // Start entire book playback
+                    this.startEntireBook();
+                }
+            },
+
+            startEntireBook() {
+                // Stop single-page narration if playing
+                if (this.isPlaying) {
+                    this.audioEl.pause();
+                    this.isPlaying = false;
+                    this.updatePlayButton();
+                }
+
+                // Jump to page 1 if not already there
+                if (this.currentPage !== 0) {
+                    this.currentPage = 0;
+                    this.renderPage();
+                }
+
+                // Enter entire book mode
+                this.isEntireBookPlaying = true;
+                this.updateBookProgress();
+                document.getElementById('book-progress').style.display = 'block';
+
+                // Start playing
+                this.audioEl.play();
+                this.updateEntireBookButton(true);
+            },
+
+            stopEntireBook() {
+                this.isEntireBookPlaying = false;
+                this.audioEl.pause();
+                document.getElementById('book-progress').style.display = 'none';
+                this.updateEntireBookButton(false);
+            },
+
+            advanceToNextPage() {
+                if (!this.isEntireBookPlaying) return;
+
+                if (this.currentPage < this.totalPages - 1) {
+                    // Move to next page
+                    this.currentPage++;
+                    this.renderPage();
+
+                    // Auto-play next page
+                    setTimeout(() => {
+                        if (this.isEntireBookPlaying) {
+                            this.audioEl.play();
+                        }
+                    }, 300); // Small delay for page transition
+                } else {
+                    // Reached the end
+                    this.stopEntireBook();
+                }
+            },
+
+            updateEntireBookButton(isPlaying) {
+                const playIcon = document.getElementById('icon-play-book');
+                const pauseIcon = document.getElementById('icon-pause-book');
+                const label = document.getElementById('play-book-label');
+
+                if (isPlaying) {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                    label.textContent = this.getLocalizedText('pauseBook');
+                } else {
+                    playIcon.style.display = 'block';
+                    pauseIcon.style.display = 'none';
+                    label.textContent = this.getLocalizedText('playBook');
+                }
+            },
+
+            updateBookProgress() {
+                const progressEl = document.getElementById('book-progress');
+                const lang = App.state.language;
+                const current = this.currentPage + 1;
+                const total = this.totalPages;
+
+                // Multi-language progress text
+                const progressText = {
+                    'en': `Page ${current} of ${total}`,
+                    'zh-TW': `第 ${current} 頁／共 ${total} 頁`,
+                    'zh-CN': `第 ${current} 页／共 ${total} 页`,
+                    'ja': `${current} / ${total} ページ`,
+                    'fr': `Page ${current} sur ${total}`
+                };
+
+                progressEl.textContent = progressText[lang] || progressText['en'];
+            },
+
+            getLocalizedText(key) {
+                const lang = App.state.language;
+                const texts = {
+                    playBook: {
+                        'en': 'Play Entire Book',
+                        'zh-TW': '播放整本書',
+                        'zh-CN': '播放整本书',
+                        'ja': '全ページ再生',
+                        'fr': 'Lire le livre entier'
+                    },
+                    pauseBook: {
+                        'en': 'Pause',
+                        'zh-TW': '暫停',
+                        'zh-CN': '暂停',
+                        'ja': '一時停止',
+                        'fr': 'Pause'
+                    }
+                };
+
+                return texts[key][lang] || texts[key]['en'];
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            Reader.init();
+        });
+    </script>
+</body>
+
+</html>
