@@ -1,0 +1,184 @@
+{
+    "meta": {
+        "person": "kobe_bryant",
+        "version": "1.1",
+        "total_prompts": 10,
+        "style": "comic_caricature_with_museum_highlights",
+        "created": "2025-12-22",
+        "updated": "2025-12-23",
+        "special_feature": "Museum-quality 3D axonometric miniature posters for life highlights (ALL ENGLISH)"
+    },
+    "museum_poster_system_prompt": {
+        "description": "Museum-quality poster generation for life highlights",
+        "core_principle": "Create a museum-quality 3D axonometric miniature poster for the given subject.",
+        "workflow": {
+            "step_1": "Scene Construction: Identify the category (sports, history, arts, science). Research the specific environment, character actions, costume details, and atmosphere. Build a detailed 3D miniature diorama at center, with DreamWorks animation quality materials and soft lighting. For sports: emphasize explosive action and frozen moment impact.",
+            "step_2": "Atmosphere & Background: Use subtle ink wash texture with flowing light mist instead of plain white. Adjust color palette to theme. Create 'historic slice' or 'precious collection' premium quality.",
+            "step_3": "Typography: Generate elegant ENGLISH typography at bottom center. Main title in powerful serif font matching theme. Below: famous quote, date, and historical significance in elegant serif. Layout like a museum collection nameplate - refined and balanced."
+        },
+        "applicable_to_pages": [
+            "p07",
+            "p08",
+            "p10"
+        ],
+        "language": "ENGLISH ONLY"
+    },
+    "global_style_lock": {
+        "art_style": "Comic book illustration style with caricature elements. For life highlights (p07, p08, p10), use museum-quality 3D axonometric miniature poster style.",
+        "character_consistency": "Kobe Bryant with intense focused eyes, strong jawline, confident smile, athletic build. Lakers #8 (young, explosive) and #24 (mature, skilled). Consistent character design across all pages.",
+        "color_palette": "Lakers purple (#552583) and gold (#FDB927), black and gold for Mamba branding. Basketball court hardwood, bright arena lighting. For highlights: elegant museum-quality atmospheric backgrounds.",
+        "technical_specs": "High-quality digital illustration, dynamic composition for action scenes. For highlights: 3D axonometric miniature style with soft DreamWorks-quality lighting and textures. Museum posters include ENGLISH typography. Portrait orientation suitable for left panel layout.",
+        "tone": "Inspiring, celebratory of excellence, respectful (especially regarding tragedy). Focus on Mamba Mentality, competitive fire, and lasting legacy.",
+        "critical_rules": [
+            "CARICATURE style for regular pages - exaggerated features (intense eyes, competitive expression)",
+            "MUSEUM POSTER style for p07, p08, p10 - 3D axonometric miniature with ENGLISH typography",
+            "NOT photorealistic - this is comic art / museum miniature art",
+            "For museum posters: Include elegant ENGLISH typography at bottom with event name and famous quote",
+            "Consistent character design - same facial features across all pages",
+            "Purple and gold Lakers colors prominent throughout",
+            "Mamba (snake) imagery used symbolically",
+            "Respectful portrayal of tragedy (p10) - abstract, not graphic",
+            "ALL TEXT IN ENGLISH - NO CHINESE CHARACTERS"
+        ]
+    },
+    "pages": [
+        {
+            "page_id": "p01",
+            "scene": "italian_childhood",
+            "prompt": "Comic book illustration: Young boy Kobe Bryant (age 8-10) playing basketball on an outdoor court in Italy. Caricature style with large curious eyes showing intense focus, athletic build for his age. Wearing 1980s-style Italian street clothes. Background shows Italian architecture (terracotta roofs, old buildings) with other kids watching. Warm Mediterranean sunlight. Basketball in hand, mid-dribble or jump shot. Expression shows pure joy and competitive fire. Comic art style, vibrant colors. NO text or watermarks.",
+            "character_notes": "Young Kobe - intense eyes even as child, athletic, passionate about basketball",
+            "background": "Italian setting, outdoor basketball court, Mediterranean atmosphere",
+            "mood": "Joyful, passionate, international upbringing"
+        },
+        {
+            "page_id": "p02",
+            "scene": "high_school_phenom",
+            "prompt": "Comic book illustration: Teenage Kobe Bryant (age 17) in Lower Merion High School basketball uniform, holding NBA Draft announcement paper. Caricature style with determined expression, confident swagger, youthful energy. Standing at podium or in gym. Background shows split scene: high school championship banner on one side, NBA logo/Lakers logo on other side. Bold decision moment. Dynamic composition showing transition from high school to NBA. Purple and gold Lakers colors beginning to appear. Comic art style. NO text or watermarks.",
+            "character_notes": "Teen Kobe - confident smile, determined eyes, athletic build, #33 high school jersey",
+            "background": "High school gym transitioning to NBA draft setting",
+            "mood": "Bold decision, confidence, breaking barriers"
+        },
+        {
+            "page_id": "p03",
+            "scene": "young_laker_rise",
+            "prompt": "Comic book illustration: Young Kobe Bryant in Lakers #8 jersey with Shaquille O'Neal. Caricature style emphasizing Kobe's explosive athleticism and youthful energy. Dynamic action pose - dunking or mid-flight. Shaq in background as supportive presence. Lakers purple and gold colors dominant. Staples Center arena setting with crowd energy. Kobe's expression shows hunger and fearlessness. Athletic, muscular build, around age 19-22. Comic art style with vibrant Lakers colors. NO text or watermarks.",
+            "character_notes": "Young Kobe #8 - explosive, athletic, fearless expression, learning from veterans",
+            "background": "Staples Center arena, Lakers court, crowd energy",
+            "mood": "Youthful energy, explosive athleticism, dynamic duo"
+        },
+        {
+            "page_id": "p04",
+            "scene": "championship_dynasty",
+            "prompt": "Comic book illustration: Kobe Bryant and Lakers team celebrating with three championship trophies (2000, 2001, 2002). Caricature style with Kobe and Shaq as central figures. Kobe in #8 jersey, championship confetti falling (purple and gold). Multiple Larry O'Brien trophies visible. Triumphant expressions, arms raised in celebration. Teammates in background. Dynamic celebratory composition. Lakers purple and gold colors with golden championship glow. Comic art style. NO text or watermarks.",
+            "character_notes": "Championship-era Kobe #8 - triumphant smile, champion mentality, team success",
+            "background": "Championship celebration, confetti, trophies, arena celebration",
+            "mood": "Triumphant, championship glory, dynasty era"
+        },
+        {
+            "page_id": "p05",
+            "scene": "mamba_mentality",
+            "prompt": "Comic book illustration: Kobe Bryant in Lakers #24 jersey in intense workout scene. Caricature style emphasizing focused intensity, muscular definition, sweat dripping. Early morning gym setting (4am workout). Black Mamba snake imagery incorporated symbolically (coiled around basketball or in background design). Kobe doing workout with basketball, weights, or shooting alone in empty gym. Expression shows absolute focus and determination. Purple and gold with black Mamba accents. Comic art style with dramatic lighting. NO text or watermarks.",
+            "character_notes": "Mature Kobe #24 - intense focused eyes, Mamba mentality, obsessive work ethic",
+            "background": "Early morning gym, dramatic lighting, symbolic Mamba imagery",
+            "mood": "Intense focus, relentless work ethic, Mamba Mentality"
+        },
+        {
+            "page_id": "p06",
+            "scene": "championship_return",
+            "prompt": "Comic book illustration: Kobe Bryant in #24 jersey hoisting Larry O'Brien Championship Trophy high above head. Caricature style showing mature, focused Kobe. Finals MVP moment. Redemption and triumph in expression. Solo leader moment - Kobe as central figure. Lakers purple and gold dominant. Championship confetti and celebration atmosphere. Pau Gasol and teammates in background. Golden championship glow. Expression shows vindication and pride. Comic art style. NO text or watermarks.",
+            "character_notes": "Champion Kobe #24 - mature leader, redemption arc, proving critics wrong",
+            "background": "Championship celebration, Lakers court, Finals MVP moment",
+            "mood": "Redemption, vindication, solo leadership triumph"
+        },
+        {
+            "page_id": "p07",
+            "scene": "final_game_60_points",
+            "style": "MUSEUM_POSTER",
+            "life_highlight": "Kobe's 60-Point Farewell",
+            "prompt": "Museum-quality 3D axonometric miniature poster for Kobe Bryant's 60-point final game. Sports history frozen moment. Create a detailed 3D miniature diorama scene: Kobe Bryant in Lakers #24 purple and gold jersey, in his iconic fadeaway shooting pose, at center court of Staples Center. Surrounding him are standing, cheering fans in the stands (miniature scale). DreamWorks animation quality rendering with soft lighting and high-precision materials. Background: subtle ink wash texture with flowing purple-gold light mist, ethereal atmosphere. At the bottom: elegant ENGLISH typography layout - main title 'KOBE'S 60-POINT FAREWELL' in powerful serif font with purple-gold colors, below it 'Mamba Out' in gold, and 'April 13, 2016 | Staples Center | The Greatest Farewell in NBA History' in elegant serif. Museum collection quality, historic moment preserved. Portrait orientation.",
+            "character_notes": "Retiring Kobe #24 - emotional farewell, legendary final performance, 60 points",
+            "background": "Museum-quality 3D axonometric Staples Center miniature with atmospheric lighting",
+            "mood": "Legendary farewell, historic moment, emotional triumph",
+            "english_typography": {
+                "main_title": "KOBE'S 60-POINT FAREWELL",
+                "subtitle": "Mamba Out",
+                "date_quote": "April 13, 2016 | Staples Center | The Greatest Farewell in NBA History"
+            }
+        },
+        {
+            "page_id": "p08",
+            "scene": "academy_award",
+            "style": "MUSEUM_POSTER",
+            "life_highlight": "Oscar Winner",
+            "prompt": "Museum-quality 3D axonometric miniature poster for Kobe Bryant winning Academy Award. Crossover achievement moment. Create a detailed 3D miniature diorama scene: Kobe Bryant in elegant black tuxedo, holding golden Oscar statuette in one hand and basketball in other hand, standing on Oscar ceremony stage with elegant podium and golden backdrop. DreamWorks animation quality rendering with soft golden spotlight from above. Background: subtle ink wash texture with flowing black-gold light mist, sophistication atmosphere. At the bottom: elegant ENGLISH typography layout - main title 'OSCAR WINNER' in elegant serif font with black-gold colors, below it the quote 'The beauty in being a dreamer is you imagine it first, then you make it happen' in gold, and 'March 4, 2018 | 90th Academy Awards | First Professional Athlete to Win an Oscar' in elegant serif. Museum collection quality, historic crossover achievement. Portrait orientation.",
+            "character_notes": "Artistic Kobe - elegant in tuxedo, holding Oscar statuette and basketball",
+            "background": "Museum-quality 3D axonometric Oscar ceremony stage miniature",
+            "mood": "Elegant achievement, crossover success, artistic triumph",
+            "english_typography": {
+                "main_title": "OSCAR WINNER",
+                "subtitle": "The beauty in being a dreamer is you imagine it first, then you make it happen",
+                "date_quote": "March 4, 2018 | 90th Academy Awards | First Professional Athlete to Win an Oscar"
+            }
+        },
+        {
+            "page_id": "p09",
+            "scene": "legacy_mentor",
+            "prompt": "Comic book illustration: Kobe Bryant coaching young basketball players, with daughter Gianna Bryant prominently featured playing basketball. Caricature style showing mature, mentoring Kobe. Warm, supportive expression. Mamba Sports Academy setting. Kobe demonstrating technique or watching Gianna practice. Young athletes of diverse backgrounds training. Emphasis on passing knowledge to next generation. Purple and gold accents. Father-daughter bond visible. Positive, educational atmosphere. Comic art style with warm, inspiring lighting. NO text or watermarks.",
+            "character_notes": "Mentor Kobe - warm smile, teaching pose, proud father, passing torch",
+            "background": "Mamba Sports Academy, basketball court, young players training",
+            "mood": "Mentorship, family love, passing the torch, next generation"
+        },
+        {
+            "page_id": "p10",
+            "scene": "eternal_impact",
+            "style": "MUSEUM_POSTER",
+            "life_highlight": "Mamba Forever",
+            "prompt": "Museum-quality 3D axonometric miniature poster for Kobe Bryant global memorial - Mamba Forever. Create a 3D miniature memorial scene: Central focus on Kobe's #8 and #24 Lakers jerseys hanging side by side in retirement ceremony (golden backlit glow). Surrounding scene includes miniature versions of: global mourning murals from Los Angeles and worldwide, candle tributes, purple and gold flower arrangements. Above: Black Mamba snake ascending into starry sky, symbolizing eternal spirit. DreamWorks animation quality rendering with soft, reverent lighting. Background: deep purple-gold gradient fading to warm golden-white sanctified light, subtle ink wash texture. At the bottom: elegant ENGLISH typography layout - main title 'MAMBA FOREVER' in dignified serif font with purple-gold colors, below it the quote 'The most important thing is to try and inspire people so that they can be great in whatever they want to do' in gold, and '1978 - 2020 | Eternal Mamba Spirit | 5x NBA Champion | Hall of Fame 2020' in elegant serif. Museum memorial quality, eternal legacy preserved. Portrait orientation.",
+            "character_notes": "Legacy Kobe - abstract spiritual representation, #8 and #24 jerseys, eternal impact",
+            "background": "Museum-quality 3D axonometric memorial scene with global tributes miniature",
+            "mood": "Respectful mourning, eternal legacy, global impact, spiritual transcendence",
+            "english_typography": {
+                "main_title": "MAMBA FOREVER",
+                "subtitle": "The most important thing is to try and inspire people so that they can be great in whatever they want to do",
+                "date_quote": "1978 - 2020 | Eternal Mamba Spirit | 5x NBA Champion | Hall of Fame 2020"
+            }
+        }
+    ],
+    "generation_notes": {
+        "consistency_reminders": [
+            "Same intense focused eyes in every image",
+            "Same facial structure across all ages (young to mature)",
+            "Lakers purple and gold colors throughout",
+            "#8 jersey for younger Kobe (p01-p04)",
+            "#24 jersey for mature Kobe (p05-p10)",
+            "Mamba (snake) imagery used symbolically where appropriate",
+            "ALL TEXT IN ENGLISH - NO CHINESE CHARACTERS"
+        ],
+        "museum_poster_guidelines": [
+            "Pages P07, P08, P10 use museum-quality 3D axonometric miniature poster style",
+            "Include elegant ENGLISH typography at bottom of museum posters",
+            "Main title + famous quote/date in layered text",
+            "Background: subtle ink wash texture with flowing light mist",
+            "Color palette adjusted to event theme (purple-gold for basketball, black-gold for Oscar, reverent glow for memorial)",
+            "DreamWorks-quality 3D rendering with soft lighting and high-precision materials",
+            "Emphasize frozen-moment dramatic impact for sports scenes",
+            "Dignified and museum-collection quality composition"
+        ],
+        "technical_requirements": [
+            "Portrait orientation for left-panel layout",
+            "High resolution for print quality",
+            "Comic book illustration for pages p01-p06, p09",
+            "Museum poster 3D miniature for pages p07, p08, p10",
+            "Vibrant Lakers colors (purple #552583, gold #FDB927)",
+            "For museum posters: Include ENGLISH calligraphy in composition",
+            "NO text/logos/watermarks in regular comics (museum posters have intentional ENGLISH typography)"
+        ],
+        "cultural_sensitivity": [
+            "Respectful portrayal of helicopter tragedy (p10)",
+            "Abstract, symbolic representation - no graphic imagery",
+            "Focus on legacy, spirit, and global mourning",
+            "Emphasis on Mamba Forever and eternal impact",
+            "Dignified, memorial quality for final page"
+        ]
+    }
+}
