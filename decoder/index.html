@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2'><rect x='2' y='5' width='20' height='14' rx='2'/><line x1='2' y1='10' x2='22' y2='10'/><circle cx='7' cy='14' r='1'/></svg>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="description"
+    content="Access Card ID Converter - Convert card IDs between DEC10, HEX8, and UID byte formats. 門禁卡號轉換程式" />
+  <meta name="theme-color" content="#3b82f6">
+  <link rel="manifest" href="/decoder/manifest.json">
+  <title>Access Card ID Converter / 門禁卡號轉換程式</title>
+  <script type="module" crossorigin src="/decoder/assets/index-DztHIU44.js"></script>
+  <link rel="stylesheet" crossorigin href="/decoder/assets/index-B9O8-oZP.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/decoder/sw.js'));
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root">
+    <div id="loading-spinner" style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:system-ui,sans-serif;color:#6b7280;font-size:14px;">
+      <div style="text-align:center;">
+        <div style="width:32px;height:32px;border:3px solid #e5e7eb;border-top-color:#3b82f6;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;"></div>
+        <p>載入中...</p>
+      </div>
+    </div>
+  </div>
+  <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+  <noscript>
+    <p style="text-align:center;padding:48px;font-family:system-ui,sans-serif;font-size:16px;color:#374151;">
+      此工具需要 JavaScript 才能運作。請啟用 JavaScript 後重新載入。
+    </p>
+  </noscript>
+</body>
+
+</html>

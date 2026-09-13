@@ -1,0 +1,1077 @@
+{
+  "schemaVersion": 2,
+  "updated": "2026-07-19",
+  "contract": {
+    "editorialSlots": 15,
+    "hero": "glb_200.png",
+    "gearFallback": "ch2-1-gear-lever.webp",
+    "promptExtrasNotRendered": [
+      "cover-hero.jpg",
+      "ch2-1-gear-lever.jpg"
+    ]
+  },
+  "assets": [
+    {
+      "id": "hero-exterior",
+      "filename": "glb_200.png",
+      "usage": "Manual cover vehicle image",
+      "accuracyTier": "green-owner-reference",
+      "source": "Project owner supplied asset",
+      "copyright": "Publication authorized by project owner",
+      "width": 663,
+      "height": 376,
+      "format": "image/png",
+      "alt": "藍色 Mercedes-Benz GLB 200 休旅車前側視圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "hero-exterior-webp",
+      "filename": "glb_200.webp",
+      "usage": "Optimized manual cover vehicle image",
+      "accuracyTier": "green-owner-reference",
+      "source": "Derivative of project owner supplied asset",
+      "copyright": "Publication authorized by project owner",
+      "width": 663,
+      "height": 376,
+      "format": "image/webp",
+      "alt": "藍色 Mercedes-Benz GLB 200 休旅車前側視圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "gear-selector-reference-webp",
+      "filename": "ch2-1-gear-lever.webp",
+      "usage": "DIRECT SELECT accessible practice fallback",
+      "accuracyTier": "red-manual-redraw",
+      "source": "Human redraw verified against F247 0109 02 pp. 326-331 official manual",
+      "copyright": "Original instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "DIRECT SELECT 懷檔操作示意：往下排 D、往上排 R、末端按鍵排 P",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "gear-selector-reference-png",
+      "filename": "ch2-1-gear-lever.png",
+      "usage": "DIRECT SELECT accessible practice fallback",
+      "accuracyTier": "red-manual-redraw",
+      "source": "Human redraw verified against F247 0109 02 pp. 326-331 official manual",
+      "copyright": "Original instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "DIRECT SELECT 懷檔操作示意：往下排 D、往上排 R、末端按鍵排 P",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "gear-selector-reference-svg",
+      "filename": "ch2-1-gear-lever.svg",
+      "usage": "DIRECT SELECT accessible practice fallback",
+      "accuracyTier": "red-manual-redraw",
+      "source": "Human redraw verified against F247 0109 02 pp. 326-331 official manual",
+      "copyright": "Original instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "DIRECT SELECT 懷檔操作示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch1-1-dashboard-avif",
+      "filename": "ch1-1-dashboard.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-453 and official Taiwan 2024 equipment release",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "駕駛儀表與中央觸控螢幕位置關係示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-1-dashboard-webp",
+      "filename": "ch1-1-dashboard.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-453 and official Taiwan 2024 equipment release",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "駕駛儀表與中央觸控螢幕位置關係示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-1-dashboard-png",
+      "filename": "ch1-1-dashboard.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-453 and official Taiwan 2024 equipment release",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "駕駛儀表與中央觸控螢幕位置關係示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-1-dashboard-source",
+      "filename": "ch1-1-dashboard.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-453 and official Taiwan 2024 equipment release",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "駕駛儀表與中央觸控螢幕位置關係示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch1-2-steering-wheel-avif",
+      "filename": "ch1-2-steering-wheel.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-452 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "多功能方向盤左右控制區與 Touch Control 示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-2-steering-wheel-webp",
+      "filename": "ch1-2-steering-wheel.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-452 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "多功能方向盤左右控制區與 Touch Control 示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-2-steering-wheel-png",
+      "filename": "ch1-2-steering-wheel.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-452 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "多功能方向盤左右控制區與 Touch Control 示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-2-steering-wheel-source",
+      "filename": "ch1-2-steering-wheel.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 448-452 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "多功能方向盤左右控制區與 Touch Control 示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch1-3-button-map-avif",
+      "filename": "ch1-3-button-map.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; no exact controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "方向盤左側儀表與右側娛樂功能分區概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-3-button-map-webp",
+      "filename": "ch1-3-button-map.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; no exact controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "方向盤左側儀表與右側娛樂功能分區概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch1-3-button-map-png",
+      "filename": "ch1-3-button-map.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; no exact controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "方向盤左側儀表與右側娛樂功能分區概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch2-2-left-stalk-avif",
+      "filename": "ch2-2-left-stalk.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 273-274 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "方向盤左後方組合開關操作位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch2-2-left-stalk-webp",
+      "filename": "ch2-2-left-stalk.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 273-274 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "方向盤左後方組合開關操作位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch2-2-left-stalk-png",
+      "filename": "ch2-2-left-stalk.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 273-274 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "方向盤左後方組合開關操作位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch2-2-left-stalk-source",
+      "filename": "ch2-2-left-stalk.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 273-274 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "方向盤左後方組合開關操作位置示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch3-1-distronic-buttons-avif",
+      "filename": "ch3-1-distronic-buttons.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 375-381 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "DISTRONIC 速度與車距控制區位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch3-1-distronic-buttons-webp",
+      "filename": "ch3-1-distronic-buttons.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 375-381 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "DISTRONIC 速度與車距控制區位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch3-1-distronic-buttons-png",
+      "filename": "ch3-1-distronic-buttons.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 375-381 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "DISTRONIC 速度與車距控制區位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch3-1-distronic-buttons-source",
+      "filename": "ch3-1-distronic-buttons.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 375-381 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "DISTRONIC 速度與車距控制區位置示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch3-2-parking-assist-avif",
+      "filename": "ch3-2-parking-assist.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no control layout represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "藍色休旅車使用停車輔助對準停車格的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch3-2-parking-assist-webp",
+      "filename": "ch3-2-parking-assist.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no control layout represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "藍色休旅車使用停車輔助對準停車格的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch3-2-parking-assist-png",
+      "filename": "ch3-2-parking-assist.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no control layout represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "藍色休旅車使用停車輔助對準停車格的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch4-1-carplay-connect-avif",
+      "filename": "ch4-1-carplay-connect.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; abstract UI only",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "手機透過藍牙與 Wi-Fi 連接中央螢幕的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch4-1-carplay-connect-webp",
+      "filename": "ch4-1-carplay-connect.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; abstract UI only",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "手機透過藍牙與 Wi-Fi 連接中央螢幕的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch4-1-carplay-connect-png",
+      "filename": "ch4-1-carplay-connect.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; abstract UI only",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "手機透過藍牙與 Wi-Fi 連接中央螢幕的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch4-2-theme-switch-avif",
+      "filename": "ch4-2-theme-switch.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; not a software screenshot",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "Classic、Sport 與 Understated 三種儀表主題概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch4-2-theme-switch-webp",
+      "filename": "ch4-2-theme-switch.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; not a software screenshot",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "Classic、Sport 與 Understated 三種儀表主題概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch4-2-theme-switch-png",
+      "filename": "ch4-2-theme-switch.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; not a software screenshot",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "Classic、Sport 與 Understated 三種儀表主題概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-1-seven-seat-layout-avif",
+      "filename": "ch5-1-seven-seat-layout.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; proportions illustrative",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "5+2 座椅配置與第三排收折概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-1-seven-seat-layout-webp",
+      "filename": "ch5-1-seven-seat-layout.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; proportions illustrative",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "5+2 座椅配置與第三排收折概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-1-seven-seat-layout-png",
+      "filename": "ch5-1-seven-seat-layout.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; proportions illustrative",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "5+2 座椅配置與第三排收折概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-2-tailgate-button-avif",
+      "filename": "ch5-2-tailgate-button.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 p. 192 and F247 0159 02 p. 195 official manuals",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "電動尾門關閉與停止按鍵位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-2-tailgate-button-webp",
+      "filename": "ch5-2-tailgate-button.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 p. 192 and F247 0159 02 p. 195 official manuals",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "電動尾門關閉與停止按鍵位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-2-tailgate-button-png",
+      "filename": "ch5-2-tailgate-button.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 p. 192 and F247 0159 02 p. 195 official manuals",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "電動尾門關閉與停止按鍵位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch5-2-tailgate-button-source",
+      "filename": "ch5-2-tailgate-button.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 p. 192 and F247 0159 02 p. 195 official manuals",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "電動尾門關閉與停止按鍵位置示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch6-1-key-window-avif",
+      "filename": "ch6-1-key-window.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no exact key controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "在車外按住遙控鑰匙同步開關車窗的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-1-key-window-webp",
+      "filename": "ch6-1-key-window.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no exact key controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "在車外按住遙控鑰匙同步開關車窗的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-1-key-window-png",
+      "filename": "ch6-1-key-window.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no exact key controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "在車外按住遙控鑰匙同步開關車窗的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-2-light-delay-avif",
+      "filename": "ch6-2-light-delay.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no exact menu represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "停車後外部照明延遲熄滅照亮返家路徑的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-2-light-delay-webp",
+      "filename": "ch6-2-light-delay.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no exact menu represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "停車後外部照明延遲熄滅照亮返家路徑的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-2-light-delay-png",
+      "filename": "ch6-2-light-delay.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "green-editorial",
+      "source": "Project owner supplied atmosphere illustration; no exact menu represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "停車後外部照明延遲熄滅照亮返家路徑的情境示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-3-lock-mode-avif",
+      "filename": "ch6-3-lock-mode.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; no exact key controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "僅解鎖駕駛門與解鎖全部車門的模式概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-3-lock-mode-webp",
+      "filename": "ch6-3-lock-mode.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; no exact key controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "僅解鎖駕駛門與解鎖全部車門的模式概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch6-3-lock-mode-png",
+      "filename": "ch6-3-lock-mode.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Project owner supplied conceptual illustration; no exact key controls represented",
+      "copyright": "Project owner supplied asset; publication authorized by project owner",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "僅解鎖駕駛門與解鎖全部車門的模式概念圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny (project owner)",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-1-tpms-reset-avif",
+      "filename": "ch7-1-tpms-reset.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Generated with Codex built-in image_gen from approved conceptual TPMS prompt; not an MBUX screenshot",
+      "copyright": "Original project illustration generated at project owner request",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "確認四輪胎壓後進入胎壓功能並完成重新學習的概念流程圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny request; Codex safety review",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-1-tpms-reset-webp",
+      "filename": "ch7-1-tpms-reset.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Generated with Codex built-in image_gen from approved conceptual TPMS prompt; not an MBUX screenshot",
+      "copyright": "Original project illustration generated at project owner request",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "確認四輪胎壓後進入胎壓功能並完成重新學習的概念流程圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny request; Codex safety review",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-1-tpms-reset-png",
+      "filename": "ch7-1-tpms-reset.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "yellow-editorial",
+      "source": "Generated with Codex built-in image_gen from approved conceptual TPMS prompt; not an MBUX screenshot",
+      "copyright": "Original project illustration generated at project owner request",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "確認四輪胎壓後進入胎壓功能並完成重新學習的概念流程圖",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Benny request; Codex safety review",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-1-tpms-reset-source",
+      "filename": "ch7-1-tpms-reset.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 693-694 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "胎壓校正、輪胎選單、採用目前胎壓與行駛學習流程圖原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "ch7-2-key-emergency-slot-avif",
+      "filename": "ch7-2-key-emergency-slot.avif",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 302-303 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/avif",
+      "alt": "杯架附近遙控鑰匙緊急感應符號位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-2-key-emergency-slot-webp",
+      "filename": "ch7-2-key-emergency-slot.webp",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 302-303 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/webp",
+      "alt": "杯架附近遙控鑰匙緊急感應符號位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-2-key-emergency-slot-png",
+      "filename": "ch7-2-key-emergency-slot.png",
+      "usage": "Chapter instructional media",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 302-303 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/png",
+      "alt": "杯架附近遙控鑰匙緊急感應符號位置示意",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": true
+    },
+    {
+      "id": "ch7-2-key-emergency-slot-source",
+      "filename": "ch7-2-key-emergency-slot.svg",
+      "usage": "Source for official-manual-based redraw",
+      "accuracyTier": "red-manual-redraw",
+      "source": "F247 0109 02 pp. 302-303 official manual",
+      "copyright": "Original human-authored instructional redraw; official manual used as factual reference",
+      "width": 1200,
+      "height": 800,
+      "format": "image/svg+xml",
+      "alt": "杯架附近遙控鑰匙緊急感應符號位置示意原稿",
+      "approval": {
+        "status": "approved",
+        "approvedBy": "Codex document verification",
+        "approvedOn": "2026-07-19"
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "optional-cover-prompt",
+      "filename": "cover-hero.jpg",
+      "usage": "Optional unused prompt output",
+      "accuracyTier": "optional-prompt",
+      "source": "b200_image_prompt.md",
+      "copyright": "Not produced",
+      "width": null,
+      "height": null,
+      "format": "image/jpeg",
+      "alt": "",
+      "approval": {
+        "status": "planned-not-approved",
+        "approvedBy": null,
+        "approvedOn": null
+      },
+      "usedInHtml": false
+    },
+    {
+      "id": "optional-gear-prompt",
+      "filename": "ch2-1-gear-lever.jpg",
+      "usage": "Optional unused prompt output replaced by verified redraw",
+      "accuracyTier": "optional-prompt",
+      "source": "b200_image_prompt.md",
+      "copyright": "Not produced",
+      "width": null,
+      "height": null,
+      "format": "image/jpeg",
+      "alt": "",
+      "approval": {
+        "status": "planned-not-approved",
+        "approvedBy": null,
+        "approvedOn": null
+      },
+      "usedInHtml": false
+    }
+  ]
+}

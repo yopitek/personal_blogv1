@@ -1,0 +1,84 @@
+{
+    "slug": "benjamin_franklin",
+    "title": {
+        "en": "Benjamin Franklin",
+        "zh-TW": "班傑明·富蘭克林",
+        "zh-CN": "本杰明·富兰克林",
+        "ja": "ベンジャミン・フランクリン",
+        "fr": "Benjamin Franklin"
+    },
+    "subtitle": {
+        "en": "The First American",
+        "zh-TW": "美國第一人",
+        "zh-CN": "美国第一人",
+        "ja": "アメリカ最初の偉人",
+        "fr": "Le Premier Américain"
+    },
+    "cover_image": "images/cover.png",
+    "total_pages": 10,
+    "pages": [
+        {
+            "id": "p01",
+            "key": "runaway_arrives",
+            "image": "images/p01.png",
+            "audio_key": "p01"
+        },
+        {
+            "id": "p02",
+            "key": "self_taught",
+            "image": "images/p02.png",
+            "audio_key": "p02"
+        },
+        {
+            "id": "p03",
+            "key": "escape_boston",
+            "image": "images/p03.png",
+            "audio_key": "p03"
+        },
+        {
+            "id": "p04",
+            "key": "poor_richard",
+            "image": "images/p04.png",
+            "audio_key": "p04"
+        },
+        {
+            "id": "p05",
+            "key": "kite_experiment",
+            "image": "images/p05.png",
+            "audio_key": "p05",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p06",
+            "key": "diplomat_france",
+            "image": "images/p06.png",
+            "audio_key": "p06"
+        },
+        {
+            "id": "p07",
+            "key": "treaty_paris",
+            "image": "images/p07.png",
+            "audio_key": "p07"
+        },
+        {
+            "id": "p08",
+            "key": "constitutional_convention",
+            "image": "images/p08.png",
+            "audio_key": "p08",
+            "style": "museum_poster"
+        },
+        {
+            "id": "p09",
+            "key": "republic_warning",
+            "image": "images/p09.png",
+            "audio_key": "p09"
+        },
+        {
+            "id": "p10",
+            "key": "legacy_eternal",
+            "image": "images/p10.png",
+            "audio_key": "p10",
+            "style": "museum_poster"
+        }
+    ]
+}

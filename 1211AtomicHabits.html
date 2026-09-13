@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原子習慣：細微改變帶來巨大成就</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --color-primary: #2D5016;
+            --color-secondary: #7C9070;
+            --color-accent: #D4A574;
+            --color-light: #F5F1E8;
+            --color-dark: #1A1A1A;
+            --color-card-light: #FFFFFF;
+            --color-card-dark: #2A2A2A;
+            --gradient-warm: linear-gradient(135deg, #E8DCC4 0%, #F5F1E8 100%);
+            --gradient-earth: linear-gradient(135deg, #7C9070 0%, #2D5016 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+            background: var(--color-light);
+            color: var(--color-dark);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-x: hidden;
+        }
+
+        body.dark-mode {
+            background: #0F0F0F;
+            color: #E8E8E8;
+            --color-card-light: #1F1F1F;
+            --color-light: #0F0F0F;
+            --gradient-warm: linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+            font-weight: 700;
+        }
+
+        .serif {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+        }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* Bento Cards */
+        .bento-card {
+            background: var(--color-card-light);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(124, 144, 112, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .bento-card.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bento-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(45, 80, 22, 0.15);
+            border-color: var(--color-secondary);
+        }
+
+        body.dark-mode .bento-card {
+            background: var(--color-card-dark);
+            border-color: rgba(124, 144, 112, 0.25);
+        }
+
+        body.dark-mode .bento-card:hover {
+            box-shadow: 0 20px 60px rgba(124, 144, 112, 0.2);
+        }
+
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-earth);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .bento-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Card Sizes */
+        .card-full {
+            grid-column: span 6;
+        }
+
+        .card-large {
+            grid-column: span 4;
+        }
+
+        .card-medium {
+            grid-column: span 3;
+        }
+
+        .card-small {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+
+            .card-full,
+            .card-large,
+            .card-medium,
+            .card-small {
+                grid-column: span 1;
+            }
+        }
+
+        /* Hero Section */
+        .hero-card {
+            background: var(--gradient-warm);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::after {
+            content: '1%';
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            font-size: 300px;
+            font-weight: 900;
+            color: rgba(45, 80, 22, 0.05);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        body.dark-mode .hero-card::after {
+            color: rgba(124, 144, 112, 0.08);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        body.dark-mode .hero-title {
+            color: var(--color-secondary);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--color-secondary);
+            font-weight: 300;
+        }
+
+        /* Quote Card */
+        .quote-card {
+            background: var(--gradient-earth);
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-style: italic;
+            font-family: 'Crimson Pro', serif;
+            position: relative;
+            padding: 3rem;
+        }
+
+        .quote-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 8rem;
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        /* Data Card */
+        .data-card {
+            background: linear-gradient(135deg, #F5F1E8 0%, #E8DCC4 100%);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        body.dark-mode .data-card {
+            background: linear-gradient(135deg, #2A2A2A 0%, #1F1F1F 100%);
+        }
+
+        .data-number {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        body.dark-mode .data-number {
+            color: var(--color-accent);
+        }
+
+        .data-label {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+            font-weight: 500;
+        }
+
+        /* Icon Cards */
+        .icon-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: var(--gradient-earth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Tag Pills */
+        .tag-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag-pill {
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            background: rgba(124, 144, 112, 0.1);
+            border: 1px solid rgba(124, 144, 112, 0.3);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            transition: all 0.3s;
+        }
+
+        .tag-pill:hover {
+            background: var(--color-secondary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        body.dark-mode .tag-pill {
+            background: rgba(124, 144, 112, 0.15);
+            color: var(--color-secondary);
+        }
+
+        /* List Items */
+        .custom-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .custom-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid rgba(124, 144, 112, 0.1);
+        }
+
+        .custom-list li:last-child {
+            border-bottom: none;
+        }
+
+        .custom-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Progress Bar */
+        .progress-visual {
+            margin-top: 2rem;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(124, 144, 112, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-earth);
+            border-radius: 10px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--color-card-light);
+            border: 2px solid rgba(124, 144, 112, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode-toggle i {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .dark-mode-toggle i {
+            color: var(--color-accent);
+        }
+
+        /* Action Button */
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: var(--gradient-earth);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .action-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.3);
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        body.dark-mode .section-header {
+            color: var(--color-accent);
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        body.dark-mode .section-description {
+            color: rgba(232, 232, 232, 0.8);
+        }
+
+        /* Numbered Cards */
+        .numbered-card {
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .card-number {
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(124, 144, 112, 0.2);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Story Card */
+        .story-card {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(124, 144, 112, 0.1) 100%);
+            border-left: 4px solid var(--color-accent);
+        }
+
+        /* Collapsible Content */
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .collapsible-icon {
+            transition: transform 0.3s;
+        }
+
+        .collapsible-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .collapsible-content.open {
+            max-height: 2000px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Decorative Elements */
+        .decorative-line {
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-earth);
+            margin: 1.5rem 0;
+            border-radius: 2px;
+        }
+
+        /* Footer */
+        .footer-card {
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+        }
+
+        body.dark-mode .footer-card {
+            background: var(--gradient-earth);
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .hero-card {
+                min-height: 300px;
+            }
+
+            .bento-card {
+                padding: 1.5rem;
+            }
+
+            .quote-card {
+                font-size: 1.2rem;
+                padding: 2rem;
+            }
+
+            .icon-card {
+                flex-direction: column;
+            }
+
+            .dark-mode-toggle {
+                width: 50px;
+                height: 50px;
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-secondary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <div class="container">
+        <!-- Bento Grid Container -->
+        <div class="bento-grid">
+
+            <!-- Hero Card -->
+            <div class="bento-card card-full hero-card">
+                <h1 class="hero-title">原子習慣</h1>
+                <p class="hero-subtitle serif">細微改變帶來巨大成就的實證法則</p>
+                <p class="hero-subtitle" style="margin-top: 1rem; opacity: 0.7;">詹姆斯·克利爾 著 | 蔡世偉 譯</p>
+            </div>
+
+            <!-- Core Concept - Large Card -->
+            <div class="bento-card card-large">
+                <h2 class="section-header">核心理念</h2>
+                <div class="decorative-line"></div>
+                <p class="section-description">
+                    《原子習慣》揭示了一個強大的真理：<strong>真正的改變來自微小但持續的進步，而非宏大的目標</strong>。作者詹姆斯·克利爾結合神經科學、心理學和行為經濟學研究，提出完整的「行為改變四法則」系統，幫助我們建立好習慣、打破壞習慣。
+                </p>
+            </div>
+
+            <!-- Data Card - 1% -->
+            <div class="bento-card card-small data-card">
+                <div class="data-number">1%</div>
+                <div class="data-label">每天進步</div>
+                <div class="progress-visual">
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Card - 37x -->
+            <div class="bento-card card-small data-card">
+                <div class="data-number">37×</div>
+                <div class="data-label">一年後成長</div>
+                <div class="progress-visual">
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Card - British Cycling -->
+            <div class="bento-card card-medium story-card">
+                <div class="icon-wrapper" style="margin-bottom: 1rem;">
+                    <i class="fas fa-bicycle"></i>
+                </div>
+                <h3 class="section-header" style="font-size: 1.5rem;">英國自行車隊的奇蹟</h3>
+                <p class="section-description">
+                    2003年表現平庸的隊伍，透過在每個細節上追求1%的改進（從座墊設計到選手洗手方式），五年後在北京奧運贏得<strong>60%的金牌</strong>。這就是習慣的複利效應。
+                </p>
+            </div>
+
+            <!-- Quote Card -->
+            <div class="bento-card card-medium quote-card">
+                真正的改變來自身分認同的轉變。習慣是你成為那種人的證據。
+            </div>
+
+            <!-- Three Levels -->
+            <div class="bento-card card-large">
+                <h2 class="section-header">三個層次的改變</h2>
+                <div class="decorative-line"></div>
+                <ul class="custom-list">
+                    <li><strong>成果層次</strong>：你想達成的目標（減重10公斤）</li>
+                    <li><strong>過程層次</strong>：你的習慣和系統（建立健身習慣）</li>
+                    <li><strong>身分層次</strong>：你的信念和自我認同（成為健康的人）</li>
+                </ul>
+                <p class="section-description" style="margin-top: 1.5rem;">
+                    最持久的改變來自<strong>身分認同的轉變</strong>。當你說「我不抽菸」而非「我正在戒菸」，你已經改變了自我認知。
+                </p>
+            </div>
+
+            <!-- Habit Loop -->
+            <div class="bento-card card-small">
+                <div class="icon-wrapper">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 style="margin-top: 1rem; font-size: 1.3rem;">習慣迴路</h3>
+                <div class="tag-pills">
+                    <span class="tag-pill">提示</span>
+                    <span class="tag-pill">渴望</span>
+                    <span class="tag-pill">回應</span>
+                    <span class="tag-pill">獎賞</span>
+                </div>
+            </div>
+
+            <!-- Four Laws Header -->
+            <div class="bento-card card-full"
+                style="background: var(--gradient-earth); color: white; text-align: center; padding: 3rem;">
+                <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); color: white; margin-bottom: 1rem;">行為改變四法則</h2>
+                <p class="serif" style="font-size: 1.3rem; opacity: 0.9;">建立好習慣的系統化方法</p>
+            </div>
+
+            <!-- Law 1 -->
+            <div class="bento-card card-medium numbered-card">
+                <div class="card-number">01</div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="section-header" style="font-size: 1.8rem; margin-top: 1rem;">讓提示顯而易見</h3>
+                <div class="decorative-line"></div>
+                <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                    <p style="font-weight: 600; color: var(--color-secondary);">展開詳情</p>
+                    <i class="fas fa-chevron-down collapsible-icon"></i>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="custom-list" style="margin-top: 1rem;">
+                        <li><strong>習慣計分卡</strong>：列出所有日常行為並標記好壞</li>
+                        <li><strong>執行意向</strong>：「我會於[時間]，在[地點]進行[行為]」</li>
+                        <li><strong>習慣堆疊</strong>：將新習慣連結到現有習慣</li>
+                        <li><strong>環境設計</strong>：讓好習慣的提示顯而易見</li>
+                    </ul>
+                    <p class="section-description" style="margin-top: 1rem;">
+                        荷蘭家庭將電表從地下室移到走廊後，用電量減少<strong>30%</strong>。環境設計比意志力更重要。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Law 2 -->
+            <div class="bento-card card-medium numbered-card">
+                <div class="card-number">02</div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="section-header" style="font-size: 1.8rem; margin-top: 1rem;">讓習慣有吸引力</h3>
+                <div class="decorative-line"></div>
+                <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                    <p style="font-weight: 600; color: var(--color-secondary);">展開詳情</p>
+                    <i class="fas fa-chevron-down collapsible-icon"></i>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="custom-list" style="margin-top: 1rem;">
+                        <li><strong>誘惑綑綁</strong>：將想做的事與必須做的事綑綁</li>
+                        <li><strong>群體力量</strong>：加入把你想要的行為視為常態的群體</li>
+                        <li><strong>多巴胺機制</strong>：在預期愉悅時分泌，而非體驗時</li>
+                    </ul>
+                    <p class="section-description" style="margin-top: 1rem;">
+                        學生羅南·拜恩將Netflix連接到健身自行車，只有踩到一定速度影片才播放——用追劇對抗肥胖。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Law 3 -->
+            <div class="bento-card card-medium numbered-card">
+                <div class="card-number">03</div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="section-header" style="font-size: 1.8rem; margin-top: 1rem;">讓行動輕而易舉</h3>
+                <div class="decorative-line"></div>
+                <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                    <p style="font-weight: 600; color: var(--color-secondary);">展開詳情</p>
+                    <i class="fas fa-chevron-down collapsible-icon"></i>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="custom-list" style="margin-top: 1rem;">
+                        <li><strong>重複次數</strong>：平均需要66次才能自動化</li>
+                        <li><strong>最小努力原則</strong>：降低好習慣的阻力</li>
+                        <li><strong>兩分鐘法則</strong>：將習慣縮小到兩分鐘可完成</li>
+                        <li><strong>承諾機制</strong>：在意志力充足時鎖定未來行為</li>
+                    </ul>
+                    <p class="section-description" style="margin-top: 1rem;">
+                        「每天跑步30分鐘」變成「穿上跑鞋」，「讀完一本書」變成「讀一頁」。重點是<strong>出現</strong>。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Law 4 -->
+            <div class="bento-card card-medium numbered-card">
+                <div class="card-number">04</div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="section-header" style="font-size: 1.8rem; margin-top: 1rem;">讓獎賞令人滿足</h3>
+                <div class="decorative-line"></div>
+                <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                    <p style="font-weight: 600; color: var(--color-secondary);">展開詳情</p>
+                    <i class="fas fa-chevron-down collapsible-icon"></i>
+                </div>
+                <div class="collapsible-content">
+                    <ul class="custom-list" style="margin-top: 1rem;">
+                        <li><strong>立即滿足</strong>：為延遲回饋的習慣添加即時獎賞</li>
+                        <li><strong>習慣追蹤</strong>：視覺化進度本身就是獎賞</li>
+                        <li><strong>不要錯過兩次</strong>：錯過一次是意外，兩次是新習慣</li>
+                        <li><strong>習慣契約</strong>：利用社會壓力維持習慣</li>
+                    </ul>
+                    <p class="section-description" style="margin-top: 1rem;">
+                        股票經紀人特倫特每天用120個迴紋針，每打完一通業務電話就移動一個。24歲年薪達<strong>六位數</strong>。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Strategy Toolbox -->
+            <div class="bento-card card-large"
+                style="background: linear-gradient(135deg, rgba(212, 165, 116, 0.15) 0%, rgba(124, 144, 112, 0.15) 100%);">
+                <h2 class="section-header">核心策略工具箱</h2>
+                <div class="decorative-line"></div>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">習慣計分卡</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">列出所有行為，標記好壞</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">執行意向</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">明確規劃時間地點</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">習慣堆疊</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">連結到現有習慣</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">環境設計</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">讓提示顯而易見</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">誘惑綑綁</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">綑綁想做與必須做的事</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-hourglass-start"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">兩分鐘法則</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">縮小到可立即開始的版本</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">習慣追蹤</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">視覺化進度</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon-wrapper" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">習慣契約</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">公開承諾並設定懲罰</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Strategies -->
+            <div class="bento-card card-medium">
+                <h3 class="section-header" style="font-size: 1.8rem;">進階策略</h3>
+                <div class="decorative-line"></div>
+                <ul class="custom-list">
+                    <li><strong>基因決定機會領域</strong>：選對戰場，配合性格和能力</li>
+                    <li><strong>金髮女孩原則</strong>：任務不太簡單也不太困難</li>
+                    <li><strong>克服無聊</strong>：專業人士在無聊時仍然堅持</li>
+                    <li><strong>定期反思</strong>：習慣+刻意練習=精通</li>
+                </ul>
+            </div>
+
+            <!-- Key Principles -->
+            <div class="bento-card card-large">
+                <h2 class="section-header">關鍵心法</h2>
+                <div class="decorative-line"></div>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div
+                        style="padding: 1.5rem; background: rgba(124, 144, 112, 0.08); border-radius: 16px; border-left: 4px solid var(--color-secondary);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--color-primary);">專注系統，非目標
+                        </h4>
+                        <p style="opacity: 0.8;">目標決定方向，系統決定進步</p>
+                    </div>
+                    <div
+                        style="padding: 1.5rem; background: rgba(124, 144, 112, 0.08); border-radius: 16px; border-left: 4px solid var(--color-secondary);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--color-primary);">改變身分認同</h4>
+                        <p style="opacity: 0.8;">成為那種人，而非想成為</p>
+                    </div>
+                    <div
+                        style="padding: 1.5rem; background: rgba(124, 144, 112, 0.08); border-radius: 16px; border-left: 4px solid var(--color-secondary);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--color-primary);">每天1%進步</h4>
+                        <p style="opacity: 0.8;">微小改變長期累積產生巨大效果</p>
+                    </div>
+                    <div
+                        style="padding: 1.5rem; background: rgba(124, 144, 112, 0.08); border-radius: 16px; border-left: 4px solid var(--color-secondary);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--color-primary);">重複勝於完美</h4>
+                        <p style="opacity: 0.8;">習慣形成靠次數</p>
+                    </div>
+                    <div
+                        style="padding: 1.5rem; background: rgba(124, 144, 112, 0.08); border-radius: 16px; border-left: 4px solid var(--color-secondary);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--color-primary);">環境勝於意志力</h4>
+                        <p style="opacity: 0.8;">設計環境，減少依賴自制力</p>
+                    </div>
+                    <div
+                        style="padding: 1.5rem; background: rgba(124, 144, 112, 0.08); border-radius: 16px; border-left: 4px solid var(--color-secondary);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--color-primary);">立即滿足很重要</h4>
+                        <p style="opacity: 0.8;">為延遲回饋的習慣添加即時獎賞</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Closing Quote -->
+            <div class="bento-card card-full quote-card"
+                style="font-size: 1.8rem; text-align: center; padding: 4rem 2rem;">
+                你不需要成為不同的人，只需要成為自己的更好版本。
+            </div>
+
+            <!-- Conclusion -->
+            <div class="bento-card card-large">
+                <h2 class="section-header">結語</h2>
+                <div class="decorative-line"></div>
+                <p class="section-description" style="font-size: 1.15rem; line-height: 1.9;">
+                    改變不是一蹴而就的事件，而是持續進化的過程。每個微小的習慣都是一次投票，為你想成為的那種人投票。時間會證明，這些投票累積起來的力量。
+                </p>
+                <p class="section-description" style="font-size: 1.15rem; line-height: 1.9; margin-top: 1.5rem;">
+                    透過每天微小但一致的改進，任何人都可以達成驚人成就。關鍵不在於意志力，而在於設計正確的系統。
+                </p>
+                <div
+                    style="margin-top: 2rem; padding: 2rem; background: rgba(124, 144, 112, 0.1); border-radius: 16px; text-align: center;">
+                    <p
+                        style="font-size: 1.3rem; font-weight: 600; color: var(--color-primary); font-family: 'Playfair Display', serif;">
+                        真正的改變來自身分認同的轉變。<br>習慣是你成為那種人的證據。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="bento-card card-full footer-card">
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">📚 原子習慣書摘</p>
+                <p style="opacity: 0.8;">由 Zenote Pipeline 生成</p>
+                <p style="opacity: 0.6; margin-top: 1rem; font-size: 0.9rem;">James Clear · Atomic Habits</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const icon = darkModeToggle.querySelector('i');
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // Intersection Observer for Scroll Reveal
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('reveal');
+                    }, index * 50);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all bento cards
+        document.querySelectorAll('.bento-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Progress Bar Animation
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.progress-fill').forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                });
+            }, 500);
+        });
+
+        // Collapsible Content
+        function toggleCollapsible(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.collapsible-icon');
+
+            content.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add subtle parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-card');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Add keyboard navigation for dark mode
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'd' && e.ctrlKey) {
+                e.preventDefault();
+                darkModeToggle.click();
+            }
+        });
+    </script>
+</body>
+
+</html>
