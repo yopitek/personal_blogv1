@@ -1,0 +1,16 @@
+{
+  "name": "Text Card Editor",
+  "short_name": "Zennote Card",
+  "description": "Create beautiful text cards for Instagram, Facebook, and social media.",
+  "start_url": "/ig_card_tool/",
+  "display": "standalone",
+  "background_color": "#F9FAFB",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/img/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
