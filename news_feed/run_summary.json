@@ -1,0 +1,339 @@
+{
+  "run_date": "2026-10-03",
+  "start_time": "2026-10-03T23:12:01.950905+08:00",
+  "end_time": "2026-10-03T23:27:45.622023+08:00",
+  "duration_seconds": 943.67,
+  "feeds_fetched": 1209,
+  "articles_normalized": 649,
+  "articles_deduplicated": 554,
+  "articles_selected": 222,
+  "summaries_generated": 222,
+  "items_per_category": 8,
+  "categories": {
+    "zh_news": [
+      "頭條新聞",
+      "產經",
+      "股市",
+      "全球國際新聞",
+      "社會",
+      "生活",
+      "娛樂",
+      "運動",
+      "房市"
+    ],
+    "en_news": [
+      "Startup",
+      "Tech News",
+      "BBC Top Stories",
+      "BBC World",
+      "BBC Business",
+      "BBC Education",
+      "BBC Technology",
+      "BBC Health",
+      "BBC Science & Environment"
+    ],
+    "ja_news": [
+      "頭條",
+      "國際",
+      "政治",
+      "運動",
+      "商業",
+      "文化",
+      "娛樂"
+    ],
+    "tech_blogs": [
+      "Tech Blogs"
+    ],
+    "ptt_hot": [
+      "八卦板",
+      "股票板",
+      "科技業板",
+      "軟體工作板",
+      "電蝦板"
+    ],
+    "dcard_hot": [
+      "科技業板",
+      "AI 工作者板",
+      "3C 板",
+      "理財板"
+    ]
+  },
+  "source_health": {
+    "total_sources": 18,
+    "ok_sources": 14,
+    "empty_sources": 4,
+    "failed_sources": 4,
+    "selected_articles": 3,
+    "sources": [
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Simon Willison",
+        "group": "AI / ML",
+        "url": "https://simonwillison.net/atom/everything/",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 30
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Gary Marcus",
+        "group": "AI / ML",
+        "url": "https://garymarcus.substack.com/feed",
+        "type": "rss",
+        "status": "empty",
+        "fetched_count": 0
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Dwarkesh Patel",
+        "group": "AI / ML",
+        "url": "https://www.dwarkeshpatel.com/feed",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 20
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Max Woolf",
+        "group": "AI / ML",
+        "url": "https://minimaxir.com/rss.xml",
+        "type": "rss",
+        "status": "empty",
+        "fetched_count": 0
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "George Hotz",
+        "group": "AI / ML",
+        "url": "https://geohot.github.io/blog/feed.xml",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 10
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Gwern Branwen",
+        "group": "AI / ML",
+        "url": "https://gwern.substack.com/feed",
+        "type": "rss",
+        "status": "empty",
+        "fetched_count": 0
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "matklad",
+        "group": "Software Engineering",
+        "url": "https://matklad.github.io/feed.xml",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 10
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Eli Bendersky",
+        "group": "Software Engineering",
+        "url": "https://eli.thegreenplace.net/feeds/all.atom.xml",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 5
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Fabien Sanglard",
+        "group": "Software Engineering",
+        "url": "https://fabiensanglard.net/rss.xml",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 30
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Miguel Grinberg",
+        "group": "Software Engineering",
+        "url": "https://blog.miguelgrinberg.com/feed",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 10
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Krebs on Security",
+        "group": "Security",
+        "url": "https://krebsonsecurity.com/feed/",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 10
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Troy Hunt",
+        "group": "Security",
+        "url": "https://www.troyhunt.com/rss/",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 15
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Paul Graham",
+        "group": "Startups / Product",
+        "url": "https://aaronsw.com/2002/feeds/pgessays.rss",
+        "type": "rss",
+        "status": "empty",
+        "fetched_count": 0
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Steve Blank",
+        "group": "Startups / Product",
+        "url": "https://steveblank.com/feed/",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 20
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Ed Zitron",
+        "group": "Startups / Product",
+        "url": "https://www.wheresyoured.at/rss",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 15
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Keygen",
+        "group": "Startups / Product",
+        "url": "https://keygen.sh/blog/feed.xml",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 30
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Daring Fireball",
+        "group": "Commentary",
+        "url": "https://daringfireball.net/feeds/main",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 30
+      },
+      {
+        "tab": "tech_blogs",
+        "language": "en",
+        "category": "Tech Blogs",
+        "source_name": "Cory Doctorow",
+        "group": "Commentary",
+        "url": "https://pluralistic.net/feed/",
+        "type": "rss",
+        "status": "ok",
+        "fetched_count": 30
+      }
+    ]
+  },
+  "dcard_snapshot": {
+    "collected_at": "2026-10-03T23:11:29+08:00",
+    "age_hours": 0.0,
+    "boards": [
+      {
+        "slug": "tech_job",
+        "name": "科技業板",
+        "status": "ok",
+        "count": 21
+      },
+      {
+        "slug": "ai_builder",
+        "name": "AI 工作者板",
+        "status": "ok",
+        "count": 24
+      },
+      {
+        "slug": "3c",
+        "name": "3C 板",
+        "status": "ok",
+        "count": 18
+      },
+      {
+        "slug": "money",
+        "name": "理財板",
+        "status": "ok",
+        "count": 20
+      }
+    ],
+    "total_posts": 83
+  },
+  "ptt_snapshot": {
+    "collected_at": "2026-10-03T23:11:12+08:00",
+    "age_hours": 0.0,
+    "boards": [
+      {
+        "board": "Gossiping",
+        "name": "八卦板",
+        "status": "ok",
+        "count": 20
+      },
+      {
+        "board": "Stock",
+        "name": "股票板",
+        "status": "ok",
+        "count": 9
+      },
+      {
+        "board": "Tech_Job",
+        "name": "科技業板",
+        "status": "ok",
+        "count": 15
+      },
+      {
+        "board": "Soft_Job",
+        "name": "軟體工作板",
+        "status": "ok",
+        "count": 10
+      },
+      {
+        "board": "PC_Shopping",
+        "name": "電蝦板",
+        "status": "ok",
+        "count": 11
+      }
+    ],
+    "total_posts": 65,
+    "origin": "tools/collect_ptt.py (direct HTTP)",
+    "live_status": "policy_blocked"
+  },
+  "status": "success"
+}
