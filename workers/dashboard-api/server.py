@@ -2,9 +2,9 @@ import http.server, json, urllib.request, urllib.parse, sys, asyncio, os
 from datetime import datetime
 from urllib.parse import parse_qs, urlparse
 
-CWA_KEY = "CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4"
-WAQI_TOKEN = "8a014c2f5972f2889639d4c7929f890e76ebd41a"
-TH_KEY = "sk--pyKU-tAYczCfBQB3wBaNw"
+CWA_KEY = os.environ.get("CWA_KEY", "")
+WAQI_TOKEN = os.environ.get("WAQI_TOKEN", "")
+TH_KEY = os.environ.get("TH_KEY", "")
 
 # ── Judicial Search (via mcp-taiwan-legal-db) ──
 

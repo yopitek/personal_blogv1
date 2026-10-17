@@ -12,9 +12,7 @@ account_id = "23b7d04464dce0263f7bcd34183998c4"
 # id = "PLACEHOLDER_KV_ID"  # Will be replaced after KV namespace created
 
 [vars]
-CWA_KEY = "CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4"
-WAQI_TOKEN = "8a014c2f5972f2889639d4c7929f890e76ebd41a"
-TH_KEY = "sk--pyKU-tAYczCfBQB3wBaNw"
+# CWA_KEY, WAQI_TOKEN, TH_KEY are secrets: set with `npx wrangler secret put <NAME>` (see deploy.sh); never commit values.
 
 # Cron trigger: daily 08:00 TPE (00:00 UTC)
 [triggers]

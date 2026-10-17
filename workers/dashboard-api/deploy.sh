@@ -38,7 +38,7 @@ echo "✅ KV namespace: $KV_ID"
 
 # 5. Set secrets
 echo "Setting secrets..."
-echo -n "$CWA_KEY" | npx wrangler secret put CWA_KEY
+echo -n "$CWA_KEY" | npx wrangler secret put CWA_API_KEY
 echo -n "$WAQI_TOKEN" | npx wrangler secret put WAQI_TOKEN
 echo -n "$TH_KEY" | npx wrangler secret put TH_KEY
 echo "✅ Secrets set"

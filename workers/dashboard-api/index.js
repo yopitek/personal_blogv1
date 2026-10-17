@@ -573,13 +573,19 @@ function getLunarData() {
 // ── Route Handlers ──
 const _moduleCache = {};
 
+// CWA open-data key comes from the CWA_API_KEY secret (npx wrangler secret put CWA_API_KEY); never hardcode it.
+function requireCwaKey(env) {
+  if (!env.CWA_API_KEY) throw new Error('CWA_API_KEY secret is not set');
+  return env.CWA_API_KEY;
+}
+
 async function handleWeather(env) {
   const cacheKey = 'weather_v2';
   if (env.DASHBOARD_CACHE) {
     const cached = await env.DASHBOARD_CACHE.get(cacheKey, 'json');
     if (cached) return cached;
   }
-  const auth = env.CWA_API_KEY || 'CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4';
+  const auth = requireCwaKey(env);
   const url = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-063?Authorization=${auth}&locationName=%E5%A4%A7%E5%AE%89%E5%8D%80&format=JSON`;
   try {
     const res = await fetch(url);
@@ -624,7 +630,7 @@ async function handleUv(env) {
     const cached = await env.DASHBOARD_CACHE.get(cacheKey, 'json');
     if (cached) return cached;
   }
-  const auth = env.CWA_API_KEY || 'CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4';
+  const auth = requireCwaKey(env);
   const url = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=${auth}&format=JSON&stationID=466920`;
   try {
     const res = await fetch(url);
@@ -645,7 +651,7 @@ async function handleEarthquake(env) {
     const cached = await env.DASHBOARD_CACHE.get(cacheKey, 'json');
     if (cached) return cached;
   }
-  const auth = env.CWA_API_KEY || 'CWA-12BF0804-63A3-4C3B-A00B-6BCD43B201B4';
+  const auth = requireCwaKey(env);
   const url = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/E-A0015-001?Authorization=${auth}&format=JSON`;
   try {
     const controller = new AbortController();
