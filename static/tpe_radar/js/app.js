@@ -500,45 +500,65 @@ function startPolling() {
 // ═══════════════════ BOOTSTRAP ═══════════════════
 
 async function init() {
-  await Promise.all([
-    initHero(),
-    initWeather(),
-    initAqi(),
-    initEarthquake(),
-    initWeekly(),
-    initYoubike(),
-    initHighway(),
-    initParking(),
-    initStock(),
-    initAgriculture(),
-    initEducation(),
-    initActivities()
-  ]);
-
-  // Wire retry buttons on error cards
-  ['#weather-body', '#aqi-body', '#eq-body', '#weekly-body',
-   '#youbike-body', '#highway-body', '#parking-body',
-   '#stock-tw-body', '#stock-us-body', '#agri-body',
-   '#holidays-body'].forEach(s => wireRetry(s, init));
-
-  startPolling();
   initTabs();
   initTools();
+
+  const inits = [
+    initHero(), initWeather(), initAqi(), initEarthquake(),
+    initWeekly(), initYoubike(), initHighway(), initParking(),
+    initStock(), initAgriculture(), initEducation(), initActivities()
+  ];
+
+  inits.forEach(p => p.catch(() => {}));
+
+  Promise.all(inits).then(() => {
+    ['#weather-body', '#aqi-body', '#eq-body', '#weekly-body',
+     '#youbike-body', '#highway-body', '#parking-body',
+     '#stock-tw-body', '#stock-us-body', '#agri-body',
+     '#holidays-body'].forEach(s => wireRetry(s, init));
+    startPolling();
+  }).catch(() => {});
 }
 
 function initTabs() {}
 
 // ═══════════════════ TOOL: 停車位查詢 ═══════════════════
 
-function initTools() {}
+function initTools() {
+  const sdDistrict = $('#sd-district');
+  if (sdDistrict) {
+    sdDistrict.addEventListener('change', updateVillages);
+  }
+  const sdSearchAddr = $('#sd-search-address');
+  if (sdSearchAddr) {
+    sdSearchAddr.addEventListener('click', () => searchSchoolDist('address'));
+  }
+  const sdSearchSch = $('#sd-search-school');
+  if (sdSearchSch) {
+    sdSearchSch.addEventListener('click', () => searchSchoolDist('school'));
+  }
+  const sdSchoolName = $('#sd-school-name');
+  if (sdSchoolName) {
+    sdSchoolName.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); searchSchoolDist('school'); }
+    });
+  }
+  const sdAddress = $('#sd-address');
+  if (sdAddress) {
+    sdAddress.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); searchSchoolDist('address'); }
+    });
+  }
+}
 
-// Bootstrap — trigger dashboard load when DOM is ready
 document.addEventListener('DOMContentLoaded', init);
 
 // Export tool functions to window (called from HTML onclick)
 window._doSearchParking = searchParking;
 window._doSearchJudicial = searchJudicial;
 window._doSearchRealEstate = searchRealEstate;
+window._doSearchSchoolDist = searchSchoolDist;
+window.__switchSchoolMode = switchSchoolMode;
 
 let _parkingMap = null;
 let _parkingMarkers = [];
@@ -723,6 +743,32 @@ function switchSchoolMode(mode) {
   if (el) el.innerHTML = '<div class="results-empty">請選擇查詢模式：地址查學校 或 學校查學區</div>';
 }
 
+const _SCHOOL_API = {
+  byVillage: _API_BASE + '/school-village',
+  byName: _API_BASE + '/school-search',
+  neighbor: _API_BASE + '/school-neighbor',
+};
+
+async function _fetchSchoolApi(url, params, isPost = true) {
+  const query = new URLSearchParams(params).toString();
+  const fullUrl = query ? `${url}?${query}` : url;
+  const res = await fetch(fullUrl);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
+  try { return JSON.parse(text); }
+  catch { return []; }
+}
+
+function _gradeLabel(code) {
+  return String(code) === '3' ? '國民小學' : String(code) === '5' ? '國民中學' : '未知';
+}
+
+function _guessLevel(name) {
+  if (/國小|實小|國民小學/.test(name)) return '國民小學';
+  if (/國中|實中|高中國中部|國民中學/.test(name)) return '國民中學';
+  return '';
+}
+
 function updateVillages() {
   const district = $('#sd-district').value;
   const sel = $('#sd-village');
@@ -745,93 +791,6 @@ const SCHOOL_DB = {
     '文山區': ['景美里','景行里','景東里','景慶里','景仁里','景華里','萬有里','萬祥里','萬隆里','萬年里','萬和里','萬盛里','興豐里','興光里','興家里','興得里','興業里','興安里','興福里','興旺里','興泰里','興昌里','試院里','華興里','明義里','明興里','木柵里','木新里','順興里','忠順里','樟林里','樟新里','樟腳里','老泉里','指南里','萬興里','博嘉里','政大里'],
     '萬華區': ['福星里','萬壽里','西門里','新起里','菜園里','富民里','福音里','仁德里','青山里','富福里','糖廍里','雙園里','頂碩里','和平里','綠堤里','華江里','柳鄉里','日善里','和德里','忠德里','孝德里','錦德里','銘德里','榮德里','保德里','壽德里','興德里','日祥里','忠貞里','新忠里','新和里','新安里','凌霄里','騰雲里'],
     '大同區': ['玉泉里','建明里','建功里','建泰里','永樂里','朝陽里','星明里','光能里','大有里','延平里','南芳里','民權里','景星里','隆和里','國順里','國慶里','重慶里','保安里','至聖里','斯文里','揚雅里','蓬萊里','雙連里','老師里']
-  },
-  schools: {
-    '信義區': {
-      elementary: [
-        { name:'興雅國小', area:'信義計畫區', villages:['興雅里','西村里','正和里'], quota:'額滿' },
-        { name:'光復國小', area:'光復南路', villages:['正和里','興隆里','中興里'], quota:'正常' },
-        { name:'三興國小', area:'三張犁', villages:['三張里','三犁里','六合里'], quota:'正常' },
-        { name:'信義國小', area:'信義路五段', villages:['安康里','黎順里','黎平里'], quota:'額滿' },
-        { name:'吳興國小', area:'吳興街', villages:['惠安里','景新里','黎安里'], quota:'正常' },
-        { name:'福德國小', area:'福德街', villages:['松友里','松光里','中坡里'], quota:'正常' },
-        { name:'永春國小', area:'永春', villages:['永春里','永吉里','五常里'], quota:'正常' },
-        { name:'永吉國小', area:'永吉路', villages:['永吉里','敦厚里','雅祥里'], quota:'正常' },
-        { name:'博愛國小', area:'松仁路/信義', villages:['安康里','泰和里'], quota:'額滿' },
-      ],
-      junior: [
-        { name:'興雅國中', area:'信義計畫區', villages:['興雅里','西村里','正和里','興隆里','中興里'], quota:'正常' },
-        { name:'信義國中', area:'信義路五段', villages:['安康里','黎順里','黎平里','黎忠里','景新里'], quota:'額滿' },
-        { name:'瑠公國中', area:'吳興街', villages:['惠安里','景聯里','景勤里','黎安里'], quota:'正常' },
-        { name:'永春國中', area:'永春', villages:['永春里','永吉里','五常里','長春里'], quota:'正常' },
-        { name:'永吉國中', area:'永吉路', villages:['永吉里','敦厚里','雅祥里','富台里'], quota:'正常' },
-      ]
-    },
-    '大安區': {
-      elementary: [
-        { name:'仁愛國小', area:'仁愛路', villages:['仁愛里','光信里','車層里'], quota:'額滿' },
-        { name:'國北教大實小', area:'和平東路/敦南', villages:['臥龍里','虎嘯里','群英里'], quota:'額滿' },
-        { name:'建安國小', area:'建國南路', villages:['建安里','群英里','群賢里'], quota:'正常' },
-        { name:'大安國小', area:'大安森林公園', villages:['民炤里','民輝里','龍生里'], quota:'正常' },
-        { name:'幸安國小', area:'幸安/新生', villages:['民炤里','誠安里','義村里'], quota:'正常' },
-        { name:'龍安國小', area:'龍安/新生南路', villages:['龍安里','錦華里','龍泉里'], quota:'額滿' },
-        { name:'古亭國小', area:'古亭/羅斯福路', villages:['古風里','古莊里','龍泉里'], quota:'正常' },
-        { name:'銘傳國小', area:'公館/舟山路', villages:['大學里','學府里','水源里'], quota:'正常' },
-      ],
-      junior: [
-        { name:'大安國中', area:'大安森林公園', villages:['民炤里','民輝里','龍生里','龍坡里'], quota:'正常' },
-        { name:'仁愛國中', area:'仁愛路', villages:['仁愛里','光信里','德安里','敦安里'], quota:'額滿' },
-        { name:'金華國中', area:'金華街/永康', villages:['永康里','光明里','錦泰里','福住里'], quota:'額滿' },
-        { name:'龍門國中', area:'龍安/和平', villages:['龍安里','錦華里','龍泉里','古風里'], quota:'正常' },
-        { name:'懷生國中', area:'懷生/復興', villages:['誠安里','昌隆里','義村里','和安里'], quota:'正常' },
-      ]
-    },
-    '中山區': {
-      elementary: [
-        { name:'長安國小', area:'長安東路', villages:['正義里','正得里','民安里'], quota:'正常' },
-        { name:'吉林國小', area:'吉林路', villages:['中庄里','行政里','新生里'], quota:'正常' },
-        { name:'中山國小', area:'中山北路', villages:['集英里','圓山里','晴光里'], quota:'正常' },
-        { name:'大直國小', area:'大直', villages:['大直里','永安里','成功里'], quota:'正常' },
-        { name:'濱江國小', area:'濱江/大直', villages:['金泰里','成功里'], quota:'額滿' },
-        { name:'永安國小', area:'大直/明水路', villages:['永安里','大直里','北安里'], quota:'正常' },
-      ],
-      junior: [
-        { name:'大同國中 (中山)', area:'中山/大同交界', villages:['集英里','圓山里','晴光里'], quota:'正常' },
-        { name:'長安國中', area:'長安東路', villages:['正義里','中庄里','行政里'], quota:'正常' },
-        { name:'北安國中', area:'大直', villages:['大直里','永安里','成功里','北安里'], quota:'正常' },
-        { name:'濱江國中', area:'濱江', villages:['金泰里','成功里','下埤里'], quota:'正常' },
-      ]
-    },
-    '中正區': {
-      elementary: [
-        { name:'國語實小', area:'南海路', villages:['龍光里','南門里','南福里'], quota:'額滿' },
-        { name:'北市大附小', area:'愛國西路', villages:['建國里','光復里','黎明里'], quota:'額滿' },
-        { name:'東門國小', area:'東門/仁愛', villages:['東門里','文北里','文祥里'], quota:'正常' },
-        { name:'螢橋國小', area:'螢橋/廈門街', villages:['螢圃里','螢雪里','永功里'], quota:'正常' },
-        { name:'忠義國小', area:'中華路/南機場', villages:['永昌里','忠勤里','龍興里'], quota:'正常' },
-      ],
-      junior: [
-        { name:'中正國中', area:'中正紀念堂', villages:['東門里','文北里','南門里','龍光里'], quota:'額滿' },
-        { name:'螢橋國中', area:'螢橋', villages:['螢圃里','螢雪里','永功里','永昌里'], quota:'正常' },
-        { name:'古亭國中', area:'古亭', villages:['水源里','富水里','文盛里'], quota:'正常' },
-        { name:'南門國中', area:'南門/植物園', villages:['南門里','龍光里','南福里','愛國里'], quota:'正常' },
-      ]
-    },
-    '松山區': {
-      elementary: [
-        { name:'敦化國小', area:'敦化北路', villages:['敦化里','福成里','精忠里'], quota:'額滿' },
-        { name:'民生國小', area:'民生社區', villages:['莊敬里','東榮里','三民里'], quota:'額滿' },
-        { name:'民權國小', area:'民權東路/民生', villages:['富錦里','新益里','富泰里'], quota:'正常' },
-        { name:'松山國小', area:'松山車站', villages:['慈祐里','自強里','鵬程里'], quota:'正常' },
-        { name:'西松國小', area:'西松/南京東路', villages:['安平里','吉祥里','東光里'], quota:'正常' },
-      ],
-      junior: [
-        { name:'敦化國中', area:'敦化北路', villages:['敦化里','福成里','精忠里','中正里'], quota:'額滿' },
-        { name:'民生國中', area:'民生社區', villages:['莊敬里','東榮里','三民里','富錦里'], quota:'額滿' },
-        { name:'介壽國中', area:'介壽/光復', villages:['介壽里','東勢里','中華里','中崙里'], quota:'正常' },
-        { name:'西松國中', area:'西松', villages:['安平里','吉祥里','東光里','龍田里'], quota:'正常' },
-      ]
-    }
   }
 };
 
@@ -849,75 +808,199 @@ async function searchByAddress(el) {
   const village = $('#sd-village').value;
   const address = ($('#sd-address').value || '').trim();
   if (!district) { el.innerHTML = '<div class="results-empty">請選擇行政區</div>'; return; }
+  if (!village) { el.innerHTML = '<div class="results-empty">請選擇里名</div>'; return; }
 
-  const distSchools = SCHOOL_DB.schools[district];
-  if (!distSchools) { el.innerHTML = '<div class="results-empty">該行政區尚無學區資料</div>'; return; }
+  el.innerHTML = '<div class="results-empty"><span class="spinner"></span> 查詢學區中…</div>';
 
-  let elemResults = distSchools.elementary || [];
-  let jrResults = distSchools.junior || [];
+  try {
+    const schools = await _fetchSchoolApi(_SCHOOL_API.byVillage, {
+      district: district, village: village
+    });
 
-  if (village) {
-    elemResults = elemResults.filter(s => (s.villages || []).includes(village));
-    jrResults = jrResults.filter(s => (s.villages || []).includes(village));
-  }
-  if (address) {
-    const q = address.toLowerCase();
-    elemResults = elemResults.filter(s => (s.area || '').includes(address) || (s.name || '').includes(address));
-  }
+    let allSchools = schools.map(s => ({
+      name: s.schoolName || '',
+      level: _gradeLabel(s.schoolGrade),
+      tel: s.TEL || '',
+      address: s.ADDR || '',
+      website: s.SITE || '',
+      isBig: s.isBig !== '0',
+      sect: s.sectName || district,
+    }));
 
-  const allSchools = [
-    ...elemResults.map(s => ({ ...s, level: '國民小學' })),
-    ...jrResults.map(s => ({ ...s, level: '國民中學' }))
-  ];
+    if (address) {
+      allSchools = allSchools.filter(s => (s.address || '').includes(address) || (s.name || '').includes(address));
+    }
 
-  if (!allSchools.length) {
-    el.innerHTML = `<div class="results-empty">未找到 ${district}${village ? village : ''} 的學區資料<br><span style="font-size:10px;color:var(--text-dim)">請嘗試更精確的里名或路段</span></div>`;
-    return;
-  }
+    if (!allSchools.length) {
+      el.innerHTML = `<div class="results-empty">未找到 ${district} ${village} 的學區資料<br><span style="font-size:10px;color:var(--text-dim)">請確認行政區與里名是否正確</span></div>`;
+      return;
+    }
 
-  el.innerHTML = `<div class="results-header"><span>${district}${village ? ' ' + village : ''} — 找到 <span class="results-count">${allSchools.length}</span> 所學校</span></div>
+    el.innerHTML = `<div class="results-header"><span>${district} ${village} — 找到 <span class="results-count">${allSchools.length}</span> 所學校</span><span style="font-size:10px;color:var(--text-dim)">即時查詢</span></div>
     <div class="result-cards">${allSchools.map(s => `
       <div class="result-card-item">
-        <div class="rc-title">${s.name}</div>
-        <div class="rc-meta"><span>${s.level}</span><span>${s.area || district}</span><span class="tag ${s.quota === '額滿' ? 'tag-coral' : 'tag-green'}">${s.quota || '正常'}</span></div>
-        ${s.villages ? `<div style="font-size:var(--font-size-xs);color:var(--text-dim);margin-top:6px">學區範圍：${s.villages.join('、')}</div>` : ''}
+        <div class="rc-title">${s.name}${s.isBig ? ' <span style="color:var(--gold);font-size:9px">大學區</span>' : ''}</div>
+        <div class="rc-meta"><span>${s.level}</span><span>${s.address || s.sect}</span></div>
+        ${s.tel ? `<div style="font-size:var(--font-size-xs);color:var(--text-dim);margin-top:4px">📞 ${s.tel}</div>` : ''}
+        ${s.website ? `<div style="font-size:var(--font-size-xs);margin-top:2px"><a href="https://${s.website}" target="_blank" style="color:var(--accent-teal)">🔗 ${s.website}</a></div>` : ''}
       </div>`).join('')}</div>
-    <div style="font-size:10px;color:var(--text-dim);text-align:center;padding:12px">資料來源：台北市政府教育局學區劃分公告 · 僅供參考，實際學區以當年公告為準</div>`;
+    <div style="font-size:10px;color:var(--text-dim);text-align:center;padding:12px">資料來源：台北市政府教育局 schooldistrict.tp.edu.tw · 即時查詢，實際學區以當年公告為準</div>`;
+  } catch (e) {
+    el.innerHTML = `<div class="results-empty">學區查詢失敗：${e.message}<br><span style="font-size:10px;color:var(--text-dim)">請稍後再試</span></div>`;
+  }
 }
 
 async function searchBySchool(el) {
   const level = $('#sd-level').value;
   const district = $('#sd-district2').value;
   const nameQ = ($('#sd-school-name').value || '').trim();
+  if (!nameQ) { el.innerHTML = '<div class="results-empty">請輸入學校名稱關鍵字</div>'; return; }
 
-  let results = [];
-  for (const [d, data] of Object.entries(SCHOOL_DB.schools)) {
-    if (district && d !== district) continue;
-    const schools = [];
-    if (level !== 'junior') schools.push(...(data.elementary || []).map(s => ({ ...s, level: '國民小學', district: d })));
-    if (level !== 'elementary') schools.push(...(data.junior || []).map(s => ({ ...s, level: '國民中學', district: d })));
-    results.push(...schools);
-  }
+  el.innerHTML = '<div class="results-empty"><span class="spinner"></span> 查詢學校中…</div>';
 
-  if (nameQ) {
-    results = results.filter(s => s.name.includes(nameQ) || (s.area || '').includes(nameQ));
-  }
+  try {
+    const matched = await _fetchSchoolApi(_SCHOOL_API.byName, { q: nameQ });
+    if (!matched.length) {
+      el.innerHTML = '<div class="results-empty">未找到符合條件的學校，請更換關鍵字</div>';
+      return;
+    }
 
-  if (!results.length) {
-    el.innerHTML = '<div class="results-empty">未找到符合條件的學校，請更換關鍵字</div>';
-    return;
-  }
+    const results = [];
+    for (const s of matched) {
+      let villages = [], districts = [];
+      try {
+        const neighbors = await _fetchSchoolApi(_SCHOOL_API.neighbor, { name: s.schoolName }, false);
+        villages = [...new Set(neighbors.map(n => (n.lie || '') + '里'))].filter(v => v !== '里');
+        districts = [...new Set(neighbors.map(n => n.sect || '').filter(Boolean))];
+      } catch {}
 
-  el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${results.length}</span> 所學校</span></div>
+      const guessedLevel = _guessLevel(s.schoolName);
+      if (level === 'elementary' && guessedLevel === '國民中學') continue;
+      if (level === 'junior' && guessedLevel === '國民小學') continue;
+      if (district && !districts.includes(district) && !(s.ADDR || '').includes(district)) continue;
+
+      results.push({
+        name: s.schoolName,
+        level: guessedLevel || '未知',
+        tel: s.TEL || '',
+        address: s.ADDR || '',
+        website: s.SITE || '',
+        isBig: s.isBig !== '0',
+        villages, districts,
+      });
+    }
+
+    if (!results.length) {
+      el.innerHTML = '<div class="results-empty">未找到符合條件的學校，請更換關鍵字</div>';
+      return;
+    }
+
+    el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${results.length}</span> 所學校</span><span style="font-size:10px;color:var(--text-dim)">即時查詢</span></div>
     <div class="result-cards">${results.map(s => `
       <div class="result-card-item">
-        <div class="rc-title">${s.name} <span style="font-size:var(--font-size-xs);color:var(--text-dim)">${s.district}</span></div>
+        <div class="rc-title">${s.name}${s.isBig ? ' <span style="color:var(--gold);font-size:9px">大學區</span>' : ''} <span style="font-size:var(--font-size-xs);color:var(--text-dim)">${(s.districts || []).join('、')}</span></div>
         <div class="rc-detail-row"><span class="rc-label">層級</span><span class="rc-value">${s.level}</span></div>
-        <div class="rc-detail-row"><span class="rc-label">範圍</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.area || s.district}</span></div>
-        <div class="rc-detail-row"><span class="rc-label">學區鄰里</span><span class="rc-value" style="font-size:var(--font-size-xs)">${(s.villages || []).join('、')}</span></div>
-        <div class="rc-detail-row"><span class="rc-label">額滿狀態</span><span class="rc-value"><span class="tag ${s.quota === '額滿' ? 'tag-coral' : 'tag-green'}">${s.quota || '正常'}</span></span></div>
+        <div class="rc-detail-row"><span class="rc-label">地址</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.address || ''}</span></div>
+        ${s.tel ? `<div class="rc-detail-row"><span class="rc-label">電話</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.tel}</span></div>` : ''}
+        <div class="rc-detail-row"><span class="rc-label">學區鄰里</span><span class="rc-value" style="font-size:var(--font-size-xs)">${(s.villages || []).join('、') || '查無範圍'}</span></div>
+        ${s.website ? `<div class="rc-detail-row"><span class="rc-label">網站</span><span class="rc-value" style="font-size:var(--font-size-xs)"><a href="https://${s.website}" target="_blank" style="color:var(--accent-teal)">${s.website}</a></span></div>` : ''}
       </div>`).join('')}</div>
     <div style="font-size:10px;color:var(--text-dim);text-align:center;padding:12px">學區範圍以台北市政府教育局最新公告為準</div>`;
+  } catch (e) {
+    el.innerHTML = `<div class="results-empty">學校查詢失敗：${e.message}<br><span style="font-size:10px;color:var(--text-dim)">請稍後再試</span></div>`;
+  }
+}
+
+    const results = [];
+    for (const s of matched) {
+      let villages = [], districts = [];
+      try {
+        const neighbors = await _fetchSchoolApi(_SCHOOL_API.neighbor, { name: s.schoolName }, false);
+        villages = [...new Set(neighbors.map(n => (n.lie || '') + '里'))].filter(v => v !== '里');
+        districts = [...new Set(neighbors.map(n => n.sect || '').filter(Boolean))];
+      } catch {}
+
+      const guessedLevel = _guessLevel(s.schoolName);
+      if (level === 'elementary' && guessedLevel === '國民中學') continue;
+      if (level === 'junior' && guessedLevel === '國民小學') continue;
+      if (district && !districts.includes(district) && !(s.ADDR || '').includes(district)) continue;
+
+      results.push({
+        name: s.schoolName,
+        level: guessedLevel || '未知',
+        tel: s.TEL || '',
+        address: s.ADDR || '',
+        website: s.SITE || '',
+        isBig: s.isBig !== '0',
+        villages, districts,
+      });
+    }
+
+    if (!results.length) {
+      el.innerHTML = '<div class="results-empty">未找到符合條件的學校，請更換關鍵字</div>';
+      return;
+    }
+
+    el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${results.length}</span> 所學校</span><span style="font-size:10px;color:var(--text-dim)">即時查詢</span></div>
+    <div class="result-cards">${results.map(s => `
+      <div class="result-card-item">
+        <div class="rc-title">${s.name}${s.isBig ? ' <span style="color:var(--gold);font-size:9px">大學區</span>' : ''} <span style="font-size:var(--font-size-xs);color:var(--text-dim)">${(s.districts || []).join('、')}</span></div>
+        <div class="rc-detail-row"><span class="rc-label">層級</span><span class="rc-value">${s.level}</span></div>
+        <div class="rc-detail-row"><span class="rc-label">地址</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.address || ''}</span></div>
+        ${s.tel ? `<div class="rc-detail-row"><span class="rc-label">電話</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.tel}</span></div>` : ''}
+        <div class="rc-detail-row"><span class="rc-label">學區鄰里</span><span class="rc-value" style="font-size:var(--font-size-xs)">${(s.villages || []).join('、') || '查無範圍'}</span></div>
+        ${s.website ? `<div class="rc-detail-row"><span class="rc-label">網站</span><span class="rc-value" style="font-size:var(--font-size-xs)"><a href="https://${s.website}" target="_blank" style="color:var(--accent-teal)">${s.website}</a></span></div>` : ''}
+      </div>`).join('')}</div>
+    <div style="font-size:10px;color:var(--text-dim);text-align:center;padding:12px">學區範圍以台北市政府教育局最新公告為準</div>`;
+  } catch (e) {
+    el.innerHTML = `<div class="results-empty">學校查詢失敗：${e.message}<br><span style="font-size:10px;color:var(--text-dim)">請稍後再試</span></div>`;
+  }
+}
+
+    const results = [];
+    for (const s of matched) {
+      let villages = [], districts = [];
+      try {
+        const neighbors = await _fetchSchoolApi(_SCHOOL_API.neighbor, { name: s.schoolName }, false);
+        villages = [...new Set(neighbors.map(n => (n.lie || '') + '里'))].filter(v => v !== '里');
+        districts = [...new Set(neighbors.map(n => n.sect || '').filter(Boolean))];
+      } catch {}
+
+      const guessedLevel = _guessLevel(s.schoolName);
+      if (level === 'elementary' && guessedLevel === '國民中學') continue;
+      if (level === 'junior' && guessedLevel === '國民小學') continue;
+      if (district && !districts.includes(district) && !(s.ADDR || '').includes(district)) continue;
+
+      results.push({
+        name: s.schoolName,
+        level: guessedLevel || '未知',
+        tel: s.TEL || '',
+        address: s.ADDR || '',
+        website: s.SITE || '',
+        isBig: s.isBig !== '0',
+        villages, districts,
+      });
+    }
+
+    if (!results.length) {
+      el.innerHTML = '<div class="results-empty">未找到符合條件的學校，請更換關鍵字</div>';
+      return;
+    }
+
+    el.innerHTML = `<div class="results-header"><span>找到 <span class="results-count">${results.length}</span> 所學校</span><span style="font-size:10px;color:var(--text-dim)">即時查詢</span></div>
+    <div class="result-cards">${results.map(s => `
+      <div class="result-card-item">
+        <div class="rc-title">${s.name}${s.isBig ? ' <span style="color:var(--gold);font-size:9px">大學區</span>' : ''} <span style="font-size:var(--font-size-xs);color:var(--text-dim)">${(s.districts || []).join('、')}</span></div>
+        <div class="rc-detail-row"><span class="rc-label">層級</span><span class="rc-value">${s.level}</span></div>
+        <div class="rc-detail-row"><span class="rc-label">地址</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.address || ''}</span></div>
+        ${s.tel ? `<div class="rc-detail-row"><span class="rc-label">電話</span><span class="rc-value" style="font-size:var(--font-size-xs)">${s.tel}</span></div>` : ''}
+        <div class="rc-detail-row"><span class="rc-label">學區鄰里</span><span class="rc-value" style="font-size:var(--font-size-xs)">${(s.villages || []).join('、') || '查無範圍'}</span></div>
+        ${s.website ? `<div class="rc-detail-row"><span class="rc-label">網站</span><span class="rc-value" style="font-size:var(--font-size-xs)"><a href="https://${s.website}" target="_blank" style="color:var(--accent-teal)">${s.website}</a></span></div>` : ''}
+      </div>`).join('')}</div>
+    <div style="font-size:10px;color:var(--text-dim);text-align:center;padding:12px">學區範圍以台北市政府教育局最新公告為準</div>`;
+  } catch (e) {
+    el.innerHTML = `<div class="results-empty">學校查詢失敗：${e.message}<br><span style="font-size:10px;color:var(--text-dim)">請稍後再試</span></div>`;
+  }
 }
 
 // ═══════════════════ TOOL: 司法案件全文查詢 ═══════════════════
@@ -942,7 +1025,7 @@ function _buildMdContent(d) {
     `- **案由**: ${d.title}`,
     `- **字數**: ${(d.char_count || 0).toLocaleString()} 字`,
     `- **來源**: ${d.source_url || '司法院裁判書系統'}`,
-    `- **擷取方式**: ${d._source === 'mcp' ? 'Twinkle Hub MCP' : 'Playwright 司法院'} (${d._elapsed}s)`,
+    `- **擷取方式**: ${d._source === 'mcp' ? 'Twinkle Hub MCP' : d._source === 'worker' ? 'Worker 直擷取' : 'Playwright 司法院'} (${d._elapsed}s)`,
     '',
     '---',
     '',
@@ -973,11 +1056,14 @@ async function _fetchJudicialWithTimeout(caseNo, timeoutMs = 12000) {
       signal: controller.signal
     });
     const data = await res.json().catch(() => ({}));
+    if (data.error === 'blocked') {
+      return data;
+    }
     if (!res.ok) throw new Error(data.detail || data.error || '擷取失敗');
     return data;
   } catch (err) {
     if (err.name === 'AbortError') {
-      throw new Error('Cloudflare 版查詢逾時；近期案件可稍後再試，舊案請先用本機版或直接前往司法院');
+      throw new Error('查詢逾時；請稍後再試，或直接前往司法院法學資料檢索系統查看全文');
     }
     throw err;
   } finally {
@@ -1010,8 +1096,26 @@ window.__viewFulltext = async function(caseNo, btnEl) {
       _fulltextCache[caseNo] = data;
     }
 
+    if (data.error === 'blocked') {
+      fullArea.innerHTML = `
+        <div style="padding:10px;border:1px solid rgba(248,113,113,.25);border-radius:6px;background:rgba(248,113,113,.06)">
+          <div style="color:#fca5a5;font-size:12px;font-weight:600;margin-bottom:6px">⚠ 無法直接抓取此案件全文</div>
+          <div style="color:var(--text-dim);font-size:11px;line-height:1.7">
+            司法院網站有 F5 WAF 防護，Worker 無法直接擷取裁判書全文。<br>
+            請至司法院法學資料檢索系統直接查詢。
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+            <button onclick="window.__copyCaseNo('${caseNo.replace(/'/g, "\\'")}')" class="jd-act-btn">📋 複製案號</button>
+            <a href="${data.fallback_url || 'https://judgment.judicial.gov.tw/FJUD/default.aspx'}" target="_blank" class="jd-act-btn link">🔗 開啟司法院查詢</a>
+          </div>
+        </div>`;
+      fullArea.style.display = 'block';
+      btnEl.textContent = '查看全文 ▼';
+      return;
+    }
+
     const safeName = caseNo.replace(/\s/g, '_').replace(/[\/\\:*?"<>|]/g, '');
-    const src = data._source === 'mcp' ? '⚡ MCP' : '🌐 Playwright';
+    const src = data._source === 'mcp' ? '⚡ MCP' : data._source === 'worker' ? '🌐 Worker' : '🌐 Playwright';
 
     // Render full text
     fullArea.innerHTML = `

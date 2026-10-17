@@ -113,16 +113,13 @@ export const DashboardAPI = {
   },
 
   async searchRealEstate(params) {
+    const query = new URLSearchParams();
+    if (params.district) query.set('district', params.district);
+    if (params.address) query.set('q', params.address);
+    if (params.limit) query.set('limit', params.limit);
     try {
-      // Call real Worker POST endpoint with MCP lvr-trades
-      const res = await fetch(`${API_BASE}/realestate`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(params)
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      if (data?.items?.length) return data;
+      const res = await apiFetch(`realestate?${query}`);
+      if (res?.items?.length) return res;
     } catch (e) {
       console.warn('Real estate API failed:', e.message);
     }
