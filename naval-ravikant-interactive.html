@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>納瓦爾寶典：關於財富與幸福的智慧 | Zenote</title>
+    <meta name="description" content="矽谷傳奇投資人 Naval Ravikant 用最清晰的思考方式，拆解「財富」與「幸福」這兩個人人追求卻常感困惑的課題。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            height: 1px;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-gray-100 min-h-screen">
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">Z</span>
+                </div>
+                <span class="text-xl font-semibold">Zenote</span>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block px-4 py-2 bg-purple-500/20 rounded-full text-purple-300 text-sm mb-6">
+                        商業 · 投資 · 人生哲學
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        納瓦爾寶典
+                    </h1>
+                    <p class="text-2xl text-gray-300 mb-4">
+                        The Almanack of Naval Ravikant
+                    </p>
+                    <p class="text-xl text-gray-400 mb-8">
+                        作者：Eric Jorgenson
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        矽谷傳奇投資人、AngelList 創辦人 Naval Ravikant
+                        用最清晰的思考方式，拆解「財富」與「幸福」這兩個人人追求卻常感困惑的課題。這不是一本教你快速致富的秘訣，而是一份關於「如何思考」的地圖。
+                    </p>
+                </div>
+                <div class="glass-effect rounded-3xl p-8 h-96 flex items-center justify-center">
+                    <div class="text-center">
+                        <div
+                            class="w-48 h-64 mx-auto bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-2xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10 flex flex-col items-center justify-center px-6">
+                                <!-- Lightbulb/Wisdom Icon -->
+                                <svg class="w-32 h-32 text-white mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                                <div class="text-xs text-white/90 font-medium tracking-widest">ALMANACK</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Why This Book Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 gradient-text">為什麼值得讀這本書？</h2>
+            <div class="glass-effect rounded-2xl p-8 hover-lift">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    你有沒有過這樣的經驗？在會議上，大家熱烈討論一個複雜的專案，有人用一堆專業術語說得天花亂墜，你聽得似懂非懂。這時，角落那位一直沉默的同事突然開口，用三句話就把問題本質講清楚了——你瞬間豁然開朗。納瓦爾·拉維康特（Naval
+                    Ravikant）就是這樣的人。他用最清晰的思考方式，將複雜的人生課題拆解成可理解、可執行的智慧。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Key Ideas Section -->
+    <section class="py-20 px-6 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">核心觀念</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Idea 1 -->
+                <div class="glass-effect rounded-2xl p-8 hover-lift">
+                    <div class="w-12 h-12 bg-purple-500/30 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-2xl font-bold text-purple-300">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-300">判斷力比努力更重要</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        在槓桿時代，一個正確決定的價值遠超過無數個小時的埋頭苦幹。納瓦爾說，現代經濟中，努力被高估了，判斷力卻被嚴重低估。
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        方向對了，走得慢也會到；方向錯了，跑得越快，離目標越遠。你的目標不該是「省時間來省錢」，而應該是「省時間來賺錢」——把時間投資在培養判斷力上。
+                    </p>
+                </div>
+
+                <!-- Idea 2 -->
+                <div class="glass-effect rounded-2xl p-8 hover-lift">
+                    <div class="w-12 h-12 bg-pink-500/30 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-2xl font-bold text-pink-300">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-300">清晰思考始於看清現實</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        我們常被自己的「期望」蒙蔽。納瓦爾指出：「痛苦，來自於你終於看清現實的那一刻。」
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        如何看清現實？必須把「自我」縮到最小。當你強烈希望某件事「應該」如何時，你就很難看見它「實際」是如何。試著像給朋友建議一樣給自己建議。
+                    </p>
+                </div>
+
+                <!-- Idea 3 -->
+                <div class="glass-effect rounded-2xl p-8 hover-lift">
+                    <div class="w-12 h-12 bg-indigo-500/30 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-2xl font-bold text-indigo-300">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-300">拋棄身份標籤，才能自由思考</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        我們從小被灌輸各種身份：「我是好學生」、「我是保守派」、「我是創業家」。這些標籤會鎖死你的思考。
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        納瓦爾說：「要誠實，就必須不帶身份地說話。」當你不把自己定義為某類人，你才能就事論事，根據基本原則重新評估每一件事。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Deep Dive Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 gradient-text">深度理解</h2>
+            <div class="space-y-6">
+                <div class="glass-effect rounded-2xl p-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-300">做一個清醒的現實主義者</h3>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>
+                            這三個觀念其實環環相扣，核心只有一個：<strong class="text-white">做一個清醒的現實主義者</strong>。
+                        </p>
+                        <p>
+                            納瓦爾的整個思維體系，建立在「理性決策」之上。他認為，在高度槓桿化的世界（透過資本、科技、媒體或人力放大影響力），決策品質的微小差異，會帶來結果的指數級差距。如果你的決策正確率從
+                            70% 提升到 80%，你創造的價值可能不是增加 10%，而是數百倍。
+                        </p>
+                        <p>
+                            而要做出理性決策，你必須對抗兩大敵人：<strong class="text-purple-300">情緒化的「猴子腦」</strong>與<strong
+                                class="text-pink-300">僵化的「身份認同」</strong>。猴子腦讓你對現實現狀產生即時的情緒反應，渴望事情按你的意願發展；身份認同則讓你固守一套過時或未經檢驗的信念，像戴著有色眼鏡看世界。
+                        </p>
+                        <p>
+                            納瓦爾的解法是建立一套「心智模型」工具箱。他把演化論、微觀經濟學、複雜理論、複利效應、可證偽性等基礎學科的核心概念，內化成思考的直覺。例如，他用「委託-代理問題」來看公司治理：當員工覺得自己是主人（委託人），就會盡心盡力；若覺得自己只是代理人，就會優先考慮自身利益。因此，好的制度要讓每個人的利益與所創造的價值緊密掛鉤。
+                        </p>
+                        <p class="text-lg font-medium text-purple-200 pt-4">
+                            這不是要你成為冷血的計算機器，而是透過理解真實世界的運作規則，減少因無知和偏見帶來的內耗與錯誤，最終獲得真正的自由——財富自由（不再為錢出售時間）與心靈自由（不再被情緒和身份綁架）。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Action Steps Section -->
+    <section class="py-20 px-6 bg-black/20">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">可以帶走的行動</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- Action 1 -->
+                <div class="glass-effect rounded-2xl p-6 hover-lift">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-purple-500/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-purple-300">每週留一天「空白日」</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                刻意在行事曆上留白，至少每週一天（最好兩天），不安排任何會議或行程。這段時間不用來追趕進度，只用來發呆、散步、閱讀或思考。偉大的點子總是在你感到「無聊」後才出現。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action 2 -->
+                <div class="glass-effect rounded-2xl p-6 hover-lift">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-pink-500/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-pink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-pink-300">練習「用基礎原理解釋」</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                遇到任何新概念或複雜問題時，強迫自己用最簡單的語言解釋給一個聰明的 12 歲孩子聽。如果你做不到，就代表你還沒真正理解。這能幫你剝離華麗的術語，直達問題核心。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action 3 -->
+                <div class="glass-effect rounded-2xl p-6 hover-lift">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-indigo-500/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-indigo-300">檢視你的「身份包袱」</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                列出你常用的自我標籤（例如：我是經理、我是某黨支持者、我是內向的人）。逐一問自己：這個信念是什麼時候、如何形成的？它現在還服務於我嗎？試著在接下來一週，有意識地不讓這些標籤主導你的決定。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action 4 -->
+                <div class="glass-effect rounded-2xl p-6 hover-lift">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-purple-500/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-purple-300">建立「決策清單」</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                面對重大選擇（換工作、投資、合作）時，問自己兩個問題：第一，我是否被「希望它成真」的慾望蒙蔽了事實？第二，如果無法決定，答案就是「否」。在充滿選擇的現代社會，猶豫就代表不夠好。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action 5 -->
+                <div class="glass-effect rounded-2xl p-6 hover-lift md:col-span-2">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-pink-500/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-6 h-6 text-pink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-pink-300">收集「心智模型」</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                準備一個筆記本或數位文件，開始建立你的心智模型庫。每讀到一個有解釋力的基礎原則（如複利、機會成本、倖存者偏差），就用自己的話和一個生活實例寫下來。定期回顧，讓它們成為你直覺的一部分。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Quote Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-effect rounded-3xl p-12 text-center">
+                <svg class="w-16 h-16 text-purple-400 mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <p class="text-2xl md:text-3xl font-medium text-gray-200 leading-relaxed mb-6">
+                    財富與幸福不是拼命追來的，而是當你學會清晰思考、看清現實後，自然會抵達的彼岸。
+                </p>
+                <p class="text-gray-400">— Naval Ravikant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-14 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">Z</span>
+                </div>
+                <span class="text-2xl font-semibold">Zenote</span>
+            </div>
+            <p class="text-gray-400 mb-6">
+                用心閱讀，深度思考，持續成長
+            </p>
+            <p class="text-gray-500 text-sm">
+                © 2024 Zenote. 用 AI 與人文關懷製作。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.hover-lift').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+
+</html>

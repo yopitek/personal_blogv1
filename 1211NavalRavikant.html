@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<parameter name="CodeContent">
+    <!DOCTYPE html>
+    <html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>納瓦爾寶典：財富與幸福的智慧</title>
+        <meta name="description" content="矽谷傳奇投資人 Naval Ravikant 的智慧彙編 - 財富和幸福都是可以學習的技能">
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <style>
+            * {
+                font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+            }
+
+            body {
+                transition: background-color 0.5s ease, color 0.5s ease;
+            }
+
+            .bento-card {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .bento-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+
+            .dark .bento-card:hover {
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            }
+
+            .gradient-wealth {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+
+            .gradient-happiness {
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            }
+
+            .gradient-hero {
+                background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+            }
+
+            .dark .gradient-hero {
+                background: linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #831843 100%);
+            }
+
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .quote-mark {
+                font-size: 4rem;
+                line-height: 0;
+                opacity: 0.2;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .action-btn {
+                transition: all 0.3s ease;
+            }
+
+            .action-btn:hover {
+                transform: scale(1.05);
+            }
+
+            .principle-number {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .icon-float {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-500">
+
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle"
+            class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+            <i class="fas fa-moon dark:hidden text-slate-700"></i>
+            <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+        </button>
+
+        <!-- Hero Section -->
+        <header class="gradient-hero text-white py-20 px-6 mb-12 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 text-9xl icon-float">💰</div>
+                <div class="absolute bottom-10 right-10 text-9xl icon-float" style="animation-delay: 1s;">😊</div>
+            </div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="fade-in">
+                    <div class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+                        <span class="text-sm font-medium">🚀 矽谷傳奇智慧</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        納瓦爾寶典
+                    </h1>
+                    <p class="text-2xl md:text-3xl font-light mb-4 opacity-90">財富與幸福的智慧</p>
+                    <p class="text-xl md:text-2xl font-light mb-4 opacity-90">The Almanack of Naval Ravikant</p>
+                    <div class="flex flex-wrap gap-4 text-sm md:text-base opacity-80">
+                        <span><i class="fas fa-user mr-2"></i>編著：Eric Jorgenson</span>
+                        <span><i class="fas fa-lightbulb mr-2"></i>原創思想：Naval Ravikant</span>
+                        <span><i class="fas fa-building mr-2"></i>AngelList 聯合創始人</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-6 pb-20">
+
+            <!-- Core Concept -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700 fade-in">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="p-4 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl">
+                            <i class="fas fa-gem text-3xl text-white"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-2">核心理念</h2>
+                            <p class="text-slate-500 dark:text-slate-400">The Core Philosophy</p>
+                        </div>
+                    </div>
+                    <p class="text-lg md:text-xl leading-relaxed text-slate-700 dark:text-slate-300">
+                        《納瓦爾寶典》是矽谷傳奇投資人 Naval Ravikant 智慧的彙編。Naval 是 AngelList
+                        的聯合創始人，早期投資了 Uber、Twitter
+                        等知名公司。本書的核心主題是：<span
+                            class="font-bold text-indigo-600 dark:text-indigo-400">財富和幸福都是可以學習的技能</span>，而非運氣或天賦的產物。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Two Main Parts -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-3 bento-card gradient-wealth text-white rounded-3xl p-8 border-2 border-indigo-300 dark:border-indigo-700 fade-in">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-3xl font-bold mb-4">第一部分：財富</h3>
+                    <p class="text-xl mb-4 opacity-90">如何在不靠運氣的情況下致富</p>
+                    <ul class="space-y-2 text-lg opacity-90">
+                        <li>✓ 財富 vs. 金錢 vs. 地位</li>
+                        <li>✓ 特定知識與槓桿的力量</li>
+                        <li>✓ 判斷力比努力更重要</li>
+                        <li>✓ 長期遊戲與複利</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="md:col-span-3 bento-card gradient-happiness text-white rounded-3xl p-8 border-2 border-pink-300 dark:border-pink-700 fade-in">
+                    <div class="text-5xl mb-4">😊</div>
+                    <h3 class="text-3xl font-bold mb-4">第二部分：幸福</h3>
+                    <p class="text-xl mb-4 opacity-90">學習快樂的藝術</p>
+                    <ul class="space-y-2 text-lg opacity-90">
+                        <li>✓ 幸福是一種選擇</li>
+                        <li>✓ 活在當下的力量</li>
+                        <li>✓ 冥想與正念練習</li>
+                        <li>✓ 健康第一的優先順序</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Concepts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-2 bento-card bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-3xl p-6 border border-blue-200 dark:border-blue-800 fade-in">
+                    <div class="text-4xl mb-3">🎯</div>
+                    <h4 class="text-xl font-bold mb-2">財富</h4>
+                    <p class="text-slate-700 dark:text-slate-300 text-sm">睡覺時也能為你賺錢的資產</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 rounded-3xl p-6 border border-purple-200 dark:border-purple-800 fade-in">
+                    <div class="text-4xl mb-3">💵</div>
+                    <h4 class="text-xl font-bold mb-2">金錢</h4>
+                    <p class="text-slate-700 dark:text-slate-300 text-sm">轉移時間和財富的工具</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/30 dark:to-red-900/30 rounded-3xl p-6 border border-orange-200 dark:border-orange-800 fade-in">
+                    <div class="text-4xl mb-3">👑</div>
+                    <h4 class="text-xl font-bold mb-2">地位</h4>
+                    <p class="text-slate-700 dark:text-slate-300 text-sm">社會階層中的位置（零和遊戲）</p>
+                </div>
+            </div>
+
+            <!-- Specific Knowledge -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-4 bento-card bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 fade-in">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                        <span class="p-3 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl">
+                            <i class="fas fa-brain text-white"></i>
+                        </span>
+                        特定知識
+                    </h2>
+                    <ul class="space-y-3 text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-cyan-500 mt-1"></i>
+                            <span>無法通過培訓獲得的知識</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-cyan-500 mt-1"></i>
+                            <span>通過追求真正的好奇心和熱情找到的</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-cyan-500 mt-1"></i>
+                            <span>對你來說感覺像玩耍，對別人卻是工作</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-cyan-500 mt-1"></i>
+                            <span>通常具有高度技術性或創造性</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/30 dark:to-blue-900/30 rounded-3xl p-8 border border-cyan-200 dark:border-cyan-800 fade-in flex flex-col justify-center items-center text-center">
+                    <div class="text-6xl mb-4">🎮</div>
+                    <h3 class="text-xl font-bold mb-2">找到你的天職</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">對你是玩耍<br>對別人是工作</p>
+                </div>
+            </div>
+
+            <!-- Four Types of Leverage -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-3xl p-8 md:p-10 fade-in">
+                    <h2 class="text-3xl font-bold mb-8 text-center">四種槓桿形式</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="text-4xl mb-3">👥</div>
+                            <h3 class="text-xl font-bold mb-2">勞動力</h3>
+                            <p class="text-sm opacity-90">僱用人為你工作</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="text-4xl mb-3">💰</div>
+                            <h3 class="text-xl font-bold mb-2">資本</h3>
+                            <p class="text-sm opacity-90">使用金錢賺更多錢</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="text-4xl mb-3">💻</div>
+                            <h3 class="text-xl font-bold mb-2">代碼</h3>
+                            <p class="text-sm opacity-90">軟件和技術，可無限複製</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="text-4xl mb-3">📱</div>
+                            <h3 class="text-xl font-bold mb-2">媒體</h3>
+                            <p class="text-sm opacity-90">書籍、播客，觸及百萬人</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-6 text-lg opacity-90">
+                        ⭐ 代碼和媒體是最民主的槓桿形式——你不需要任何人的許可就可以使用它們
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quote Card 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 rounded-3xl p-10 md:p-16 border border-slate-300 dark:border-slate-600 fade-in relative overflow-hidden">
+                    <div class="quote-mark absolute top-4 left-4 text-slate-300 dark:text-slate-600">"</div>
+                    <blockquote
+                        class="text-2xl md:text-3xl font-medium text-center italic relative z-10 text-slate-800 dark:text-slate-200">
+                        如果我失去所有的錢，被隨機丟在任何英語國家的街頭，<br>
+                        在 5-10 年內我會再次富有，<br>
+                        因為這只是我已發展的技能組合，任何人都可以發展。
+                    </blockquote>
+                    <div class="quote-mark absolute bottom-4 right-4 text-slate-300 dark:text-slate-600 rotate-180">"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Four Types of Luck -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div class="md:col-span-6">
+                    <h2 class="text-4xl font-bold mb-8 text-center fade-in">
+                        <span
+                            class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">四種運氣</span>
+                    </h2>
+                </div>
+
+                <div
+                    class="md:col-span-3 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center text-white font-bold">
+                            1</div>
+                        <h3 class="text-lg font-bold">盲目運氣</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">完全隨機</p>
+                </div>
+
+                <div
+                    class="md:col-span-3 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                            2</div>
+                        <h3 class="text-lg font-bold">堅持創造的運氣</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">通過不斷嘗試增加機會</p>
+                </div>
+
+                <div
+                    class="md:col-span-3 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                            3</div>
+                        <h3 class="text-lg font-bold">專業知識發現的運氣</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">識別別人錯過的機會</p>
+                </div>
+
+                <div
+                    class="md:col-span-3 bento-card bg-gradient-to-br from-pink-500 to-rose-500 text-white rounded-3xl p-6 border-2 border-pink-300 dark:border-pink-700 fade-in">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-white/30 rounded-full flex items-center justify-center font-bold">4
+                        </div>
+                        <h3 class="text-lg font-bold">獨特性格吸引的運氣</h3>
+                    </div>
+                    <p class="text-sm opacity-90">⭐ 最強大：建立獨特品牌，讓運氣主動找上你</p>
+                </div>
+            </div>
+
+            <!-- Happiness Formula -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 text-white rounded-3xl p-10 md:p-16 text-center fade-in">
+                    <h2 class="text-4xl md:text-5xl font-black mb-8">幸福公式</h2>
+                    <div class="text-3xl md:text-5xl font-bold mb-4">
+                        幸福 = 現實 - 期望
+                    </div>
+                    <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+                        你可以改變現實（獲得更多），<br>
+                        或減少期望（想要更少）<br>
+                        <span class="text-2xl">💡 第二種往往更有效且在你的控制之內</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Three Choices -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 fade-in">
+                    <h2 class="text-3xl font-bold mb-6 text-center">面對任何情況的三個選擇</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl">
+                            <div class="text-5xl mb-4">✏️</div>
+                            <h3 class="text-2xl font-bold mb-2 text-green-600 dark:text-green-400">改變它</h3>
+                            <p class="text-slate-600 dark:text-slate-400">採取行動改變現狀</p>
+                        </div>
+                        <div class="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl">
+                            <div class="text-5xl mb-4">🙏</div>
+                            <h3 class="text-2xl font-bold mb-2 text-blue-600 dark:text-blue-400">接受它</h3>
+                            <p class="text-slate-600 dark:text-slate-400">完全接受當下</p>
+                        </div>
+                        <div class="text-center p-6 bg-purple-50 dark:bg-purple-900/20 rounded-2xl">
+                            <div class="text-5xl mb-4">🚪</div>
+                            <h3 class="text-2xl font-bold mb-2 text-purple-600 dark:text-purple-400">離開它</h3>
+                            <p class="text-slate-600 dark:text-slate-400">勇敢離開</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-6 text-lg text-slate-600 dark:text-slate-400">
+                        ❌ 不好的選擇：希望改變但不改變，希望離開但不離開，也不接受
+                    </p>
+                </div>
+            </div>
+
+            <!-- Happiness Habits -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div class="md:col-span-6">
+                    <h2 class="text-4xl font-bold mb-8 text-center fade-in">
+                        <span class="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">Naval
+                            的幸福習慣</span>
+                    </h2>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border-2 border-orange-200 dark:border-orange-800 fade-in">
+                    <div class="text-4xl mb-3">💪</div>
+                    <h3 class="text-xl font-bold mb-2">每天運動</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">越難的鍛煉，越簡單的一天</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border-2 border-green-200 dark:border-green-800 fade-in">
+                    <div class="text-4xl mb-3">☕</div>
+                    <h3 class="text-xl font-bold mb-2">戒掉咖啡因</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">更穩定、更少焦慮</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border-2 border-blue-200 dark:border-blue-800 fade-in">
+                    <div class="text-4xl mb-3">🧘</div>
+                    <h3 class="text-xl font-bold mb-2">減少判斷</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">每次判斷都在創造負面性</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border-2 border-purple-200 dark:border-purple-800 fade-in">
+                    <div class="text-4xl mb-3">😊</div>
+                    <h3 class="text-xl font-bold mb-2">告訴別人你是快樂的人</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">創造一致性偏見</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border-2 border-pink-200 dark:border-pink-800 fade-in">
+                    <div class="text-4xl mb-3">📱</div>
+                    <h3 class="text-xl font-bold mb-2">減少智能手機使用</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">屏幕活動與較低幸福感相關</p>
+                </div>
+
+                <div
+                    class="md:col-span-2 bento-card bg-white dark:bg-slate-800 rounded-3xl p-6 border-2 border-red-200 dark:border-red-800 fade-in">
+                    <div class="text-4xl mb-3">📰</div>
+                    <h3 class="text-xl font-bold mb-2">避免新聞</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">新聞讓你焦慮和憤怒</p>
+                </div>
+            </div>
+
+            <!-- Quote Card 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 rounded-3xl p-10 md:p-16 border-2 border-amber-300 dark:border-amber-700 fade-in relative overflow-hidden">
+                    <div class="quote-mark absolute top-4 left-4 text-amber-300 dark:text-amber-600">"</div>
+                    <blockquote
+                        class="text-2xl md:text-3xl font-medium text-center italic relative z-10 text-slate-800 dark:text-slate-200">
+                        醫生不會讓你健康，營養師不會讓你苗條，<br>
+                        老師不會讓你聰明，大師不會讓你平靜，<br>
+                        導師不會讓你富有，教練不會讓你健康。<br><br>
+                        <span class="text-amber-600 dark:text-amber-400 font-bold">最終，你必須承擔責任。拯救你自己。</span>
+                    </blockquote>
+                    <div class="quote-mark absolute bottom-4 right-4 text-amber-300 dark:text-amber-600 rotate-180">"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Principles -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-3 bento-card bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 rounded-3xl p-8 border-2 border-indigo-200 dark:border-indigo-800 fade-in">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="text-3xl">💰</span>
+                        財富創造原則
+                    </h2>
+                    <ul class="space-y-3 text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">1</span>
+                            <span>追求財富（資產），而非金錢或地位</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">2</span>
+                            <span>你無法通過出租時間致富——必須擁有股權</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">3</span>
+                            <span>找到並建立特定知識</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">4</span>
+                            <span>與長期夥伴玩長期遊戲</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">5</span>
+                            <span>運用槓桿：代碼和媒體最強大</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">6</span>
+                            <span>通過判斷力獲得報酬</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">7</span>
+                            <span>建立心智模型，大量閱讀</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">8</span>
+                            <span>找到感覺像玩耍的工作</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="md:col-span-3 bento-card bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/30 dark:to-rose-900/30 rounded-3xl p-8 border-2 border-pink-200 dark:border-pink-800 fade-in">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="text-3xl">😊</span>
+                        幸福建立原則
+                    </h2>
+                    <ul class="space-y-3 text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">1</span>
+                            <span>幸福 = 現實 - 期望</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">2</span>
+                            <span>減少欲望，每個欲望都是選擇的不快樂</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">3</span>
+                            <span>活在當下，接受現實</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">4</span>
+                            <span>通過習慣建立幸福（運動、冥想、減少判斷）</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">5</span>
+                            <span>拯救自己——為自己的生命負責</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">6</span>
+                            <span>做你自己——沒有人能比你更擅長</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">7</span>
+                            <span>健康第一：身體、心理、靈性</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="principle-number text-2xl font-bold">8</span>
+                            <span>擁抱死亡，它帶來意義</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Final Quote -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+                <div
+                    class="md:col-span-6 bento-card bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-900 dark:to-black text-white rounded-3xl p-10 md:p-16 text-center fade-in">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="text-5xl mb-6">🌟</div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">關鍵洞見</h2>
+                        <p class="text-lg md:text-xl opacity-90 mb-8">
+                            財富和幸福都在你的掌控之中。<br>
+                            它們是可以學習的技能，而非運氣或天賦的問題。<br><br>
+                            <span class="text-2xl font-bold">你不需要成為不同的人，<br>你只需要成為自己更好的版本。</span>
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button
+                                class="action-btn px-8 py-4 bg-white text-slate-900 rounded-xl font-bold shadow-xl hover:shadow-2xl">
+                                <i class="fas fa-rocket mr-2"></i>開始行動
+                            </button>
+                            <button
+                                class="action-btn px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-xl font-bold hover:bg-white/20">
+                                <i class="fas fa-book mr-2"></i>深入閱讀
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zenote Branding -->
+            <div class="mt-12 text-center text-sm text-slate-500 dark:text-slate-400 fade-in">
+                <p class="mb-2">📚 本書摘由 Zenote AI 書摘系統生成</p>
+                <p>Powered by Advanced AI · Designed for Readers</p>
+            </div>
+
+        </main>
+
+        <script>
+            // Dark Mode Toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+
+            // Check for saved theme preference or default to light mode
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                html.classList.add('dark');
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                const theme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Action button interactions
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Add ripple effect
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.05)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                        }, 150);
+                    }, 150);
+                });
+            });
+
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('header');
+                if (header) {
+                    header.style.transform = `translateY(${scrolled * 0.5}px)`;
+                    header.style.opacity = 1 - (scrolled / 500);
+                }
+            });
+        </script>
+
+    </body>
+
+    </html>
