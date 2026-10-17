@@ -603,12 +603,13 @@ async function handleWeather(env) {
   return { ...MOCK.weather, _source: 'mock (CWA timeout/error)' };
 }
 
-async function handleAqi() {
+async function handleAqi(env) {
   const cacheKey = 'aqi_v2';
   if (_moduleCache[cacheKey] && Date.now() - _moduleCache[cacheKey]._ts < 3600000) {
     return _moduleCache[cacheKey];
   }
-  const token = '8a014c2f5972f2889639d4c7929f890e76ebd41a';
+  if (!env.WAQI_TOKEN) return { ...MOCK.aqi, _source: 'mock (WAQI_TOKEN secret not set)' };
+  const token = env.WAQI_TOKEN;
   const url = `https://api.waqi.info/feed/@12420/?token=${token}`;
   try {
     const res = await fetch(url);
@@ -854,7 +855,7 @@ export default {
           data = await handleWeather(env);
           break;
         case '/api/aqi':
-          data = await handleAqi();
+          data = await handleAqi(env);
           break;
         case '/api/uv':
           data = await handleUv(env);

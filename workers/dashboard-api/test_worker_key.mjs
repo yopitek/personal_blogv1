@@ -26,3 +26,23 @@ test('source contains no hardcoded CWA key', async () => {
   const { readFileSync } = await import('node:fs');
   assert.doesNotMatch(readFileSync(new URL('./index.js', import.meta.url), 'utf8'), /CWA-[0-9A-F]{8}-/);
 });
+
+async function waqiCalls(env) {
+  calls.length = 0;
+  await worker.fetch(new Request('https://example.test/api/aqi'), env, {});
+  return calls.filter((u) => u.includes('api.waqi.info'));
+}
+
+test('without WAQI_TOKEN the worker never calls WAQI with a built-in token', async () => {
+  assert.deepEqual(await waqiCalls({}), []);
+});
+
+test('with WAQI_TOKEN the worker uses it', async () => {
+  const urls = await waqiCalls({ WAQI_TOKEN: 'TESTWAQI123' });
+  assert.ok(urls.length > 0 && urls.every((u) => u.includes('token=TESTWAQI123')));
+});
+
+test('source contains no hardcoded 40-hex token', async () => {
+  const { readFileSync } = await import('node:fs');
+  assert.doesNotMatch(readFileSync(new URL('./index.js', import.meta.url), 'utf8'), /['"`][0-9a-f]{40}['"`]/);
+});
