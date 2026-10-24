@@ -1,0 +1,3042 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Multilingual News Digest - 中文、English、日本語">
+    <title>每日電子新聞報 | 2026年10月24日 星期六</title>
+
+    <meta property="og:title" content="每日電子新聞報 | 2026年10月24日 星期六">
+    <meta property="og:description" content="每日精選中文、英文、日文新聞摘要，AI 自動生成。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zennote.app/news_feed/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="每日電子新聞報 | 2026年10月24日 星期六">
+    <meta name="twitter:description" content="每日精選中文、英文、日文新聞摘要。">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #f3efe6;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Noto Sans JP", sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #0f5499;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #6f5f70;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #b58a00;
+            outline-offset: 3px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        .card {
+            background-color: #fffdf7;
+            border: 1px solid #e6e1d6;
+        }
+
+        .masthead {
+            padding: 24px 28px;
+            border-bottom: 3px solid #1a1a1a;
+        }
+
+        .masthead-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .masthead-subtitle {
+            font-size: 0.875rem;
+            color: #666666;
+            margin-top: 6px;
+        }
+
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #e6e1d6;
+            background-color: #fffdf7;
+            overflow-x: auto;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 0 rgba(26, 26, 26, 0.08);
+            scrollbar-width: thin;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 14px 24px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666666;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: #1a1a1a;
+            background-color: #faf8f2;
+        }
+
+        .tab-btn.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px 28px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 16px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        /* Category Section Styles */
+        .category-section {
+            margin-bottom: 28px;
+        }
+
+        .category-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            background-color: transparent;
+            border-left: 4px solid #8b1e3f;
+            padding: 4px 0 4px 12px;
+            margin: 24px 0 14px 0;
+        }
+
+        .category-section:first-child .category-header {
+            margin-top: 0;
+        }
+
+        .category-news-list {
+            padding-left: 0;
+        }
+
+        /* News Item Styles */
+        .news-item {
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 -10px;
+            padding: 16px 10px;
+            border-bottom: 1px dotted #d9d2c4;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .news-item:hover {
+            background-color: #faf8f2;
+            transform: translateX(2px);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.12rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0 0 8px 0;
+        }
+
+        .news-item-title a {
+            color: #1a1a1a;
+        }
+
+        .news-item-title a:hover {
+            color: #0f5499;
+        }
+
+        .news-item-meta {
+            font-size: 0.8rem;
+            color: #666666;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 10px;
+            margin-bottom: 10px;
+        }
+
+        .news-item-meta .source {
+            font-weight: 500;
+        }
+
+        .news-item-meta .date {
+            color: #999999;
+        }
+
+        .news-item-meta .metrics {
+            background-color: #f2ece0;
+            border-radius: 999px;
+            color: #8b1e3f;
+            font-variant-numeric: tabular-nums;
+            padding: 1px 8px;
+        }
+
+        .snapshot-notice {
+            border-left: 4px solid #b58a00;
+            background-color: #faf6e9;
+            color: #5c4a12;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin: 0 0 18px 0;
+            padding: 10px 12px;
+        }
+
+        .snapshot-notice--stale {
+            border-left-color: #8b1e3f;
+            background-color: #fbeef1;
+            color: #6d1631;
+        }
+
+        .snapshot-notice code {
+            background-color: rgba(26, 26, 26, 0.06);
+            border-radius: 3px;
+            font-size: 0.95em;
+            padding: 1px 4px;
+        }
+
+        .snapshot-hint {
+            color: #8a7a58;
+        }
+
+        .news-item-summary {
+            font-size: 0.9rem;
+            color: #333333;
+            line-height: 1.65;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        }
+
+        .source-panel {
+            margin: 0 0 22px 0;
+            padding: 14px 0 16px 0;
+            border-bottom: 1px solid #e6e1d6;
+        }
+
+        .source-panel-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .source-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .source-list li {
+            border: 1px solid #e0d7c8;
+            border-radius: 999px;
+            color: #4d463d;
+            font-size: 0.78rem;
+            line-height: 1.2;
+            padding: 5px 9px;
+        }
+
+        .source-status {
+            color: #7a6f62;
+            font-size: 0.78rem;
+            margin-top: 10px;
+        }
+
+        .no-news {
+            color: #666666;
+            font-style: italic;
+            padding: 20px 0;
+        }
+
+        .footer {
+            padding: 20px 28px;
+            border-top: 1px solid #e6e1d6;
+            background-color: #faf8f2;
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: #666666;
+            margin: 0;
+        }
+
+        .footer .small {
+            font-size: 0.75rem;
+            color: #999999;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 8px;
+            }
+
+            .masthead {
+                padding: 16px 14px;
+            }
+
+            .masthead-title {
+                font-size: 1.4rem;
+            }
+
+            .tab-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .tab-nav {
+                mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+            }
+
+            .tab-content {
+                padding: 14px 12px;
+            }
+
+            .category-header {
+                font-size: 1rem;
+                padding: 3px 0 3px 10px;
+            }
+
+            .news-item-title {
+                font-size: 1rem;
+            }
+
+            .news-item-summary {
+                font-size: 0.85rem;
+                -webkit-line-clamp: 5;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #990f3d;
+            transform: translateY(-2px);
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <header class="masthead">
+                <h1 class="masthead-title">每日電子新聞報</h1>
+                <p class="masthead-subtitle">2026年10月24日 星期六</p>
+            </header>
+
+            <nav class="tab-nav" role="tablist">
+                <button id="tab-zh-news" class="tab-btn active" role="tab" aria-selected="true" aria-controls="zh-news" data-tab="zh-news">中文新聞</button>
+                <button id="tab-en-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="en-news" data-tab="en-news">English News</button>
+                <button id="tab-ja-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="ja-news" data-tab="ja-news">日本語ニュース</button>
+                <button id="tab-tech-blogs" class="tab-btn" role="tab" aria-selected="false" aria-controls="tech-blogs" data-tab="tech-blogs">Tech Blogs</button>
+                <button id="tab-ptt-hot" class="tab-btn" role="tab" aria-selected="false" aria-controls="ptt-hot" data-tab="ptt-hot">PTT 熱門</button>
+                <button id="tab-dcard-hot" class="tab-btn" role="tab" aria-selected="false" aria-controls="dcard-hot" data-tab="dcard-hot">Dcard 熱門</button>
+            </nav>
+
+            <section class="tab-content active" id="zh-news" role="tabpanel" aria-labelledby="tab-zh-news">
+                <h2 class="section-header">中文新聞</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/aipl/202610240028.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202610240028.aspx" target="_blank" rel="noopener noreferrer">中共1軍艦5公務船台海周邊活動 國軍嚴密監控</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 01:17</span>
+        
+    </p>
+    <p class="news-item-summary">中共近日在台海周邊活動頻繁，國防部昨天上午6時至今天上午6時偵獲共艦1艘及公務船5艘。這些船隻持續在台海周邊活動，國軍嚴密監控並應處。颱風薔琵襲台之際，中共的行動引起關注。國防部強調，將繼續密切監控中共的活動，確保國土安全。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aipl/202610240020.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202610240020.aspx" target="_blank" rel="noopener noreferrer">造山者愛荷華州放映 駐美官員：台美關係唇齒相依</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 23:50</span>
+        
+    </p>
+    <p class="news-item-summary">駐芝加哥辦事處長類延峰在美國愛荷華州立大學放映紀錄片「造山者－世紀的賭注」時表示，2300萬人口的台灣已經成為美國第4大貿易夥伴。這一數字表明台美之間的貿易關係是互利互補的，並且理念契合。類延峰強調，台美關係的唇齒相依是非常重要的。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aipl/202610230266.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202610230266.aspx" target="_blank" rel="noopener noreferrer">空射雄三相關零件疑中製 中科院：主動查驗排除疑慮</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 13:46</span>
+        
+    </p>
+    <p class="news-item-summary">中科院研製空射版雄三飛彈，稱為「雄鷙專案」。近日傳出，通訊測試用濾波器疑為中國大陸製造。中科院回應，為加強陸製品查驗作為，於測試時檢驗接頭疑為陸製品，立即通知廠商來院說明，以排除陸製品疑慮。中科院表示，尚未上通訊機與飛機聯測，相關零件仍在檢驗中。中科院強調，將繼續主動查驗排除疑慮，確保研製的空射版雄三飛彈安全性和效能。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aipl/202610230261.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202610230261.aspx" target="_blank" rel="noopener noreferrer">高考社工師口試延期至26日 其餘類科25日照常舉行</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 13:19</span>
+        
+    </p>
+    <p class="news-item-summary">考選部因應颱風薔琵影響，決定調整高考三級公職社會工作師類科第二試口試時間。原定24日舉行的口試，因台北市政府宣布24日停止上班上課，考選部會同典試委員長決定，將口試時間調整至26日。其他類科口試，包括25日原定舉行的口試，將照常進行。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aipl/202610230216.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aipl/202610230216.aspx" target="_blank" rel="noopener noreferrer">藍質疑曠世智能獲政府投資補助 蘇巧慧陣營：依法辦理</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 10:58</span>
+        
+    </p>
+    <p class="news-item-summary">民進黨新北市長參選人蘇巧慧的妹妹蘇巧純擔任董事的曠世智能公司，獲得政府投資補助。國民黨發言人呂家愷質疑申請及審查過程是否透明。蘇巧慧競選辦公室回應，蘇巧純並非曠世智能負責人，申請補助時均依主管機關要求據實填寫相關表格。競選辦公室強調，團隊將持續以正面方式參與選舉。據悉，曠世智能公司獲得政府投資補助共新台幣 1.2 億元。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">產經</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240027.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240027.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵減弱 北部百貨陸續恢復營業</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 01:16</span>
+        
+    </p>
+    <p class="news-item-summary">中央氣象署持續發布中度颱風薔琵海上陸上警報，今天北北基等部分縣市停止上班上課。然而，颱風強度減弱，多家百貨也調整營業時間。板橋大遠百、遠百信義A13等百貨將於下午1時開始營業，新光三越與SOGO位於北部各分店預計下午2時營業，中南部門市正常營業。微風則在上午11時營業。中央氣象署將繼續監測颱風的動態，提供最新的氣象資訊。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/afe/202610240025.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202610240025.aspx" target="_blank" rel="noopener noreferrer">工研院擬工業區建稀土廠 拚2030年50%需求自給自足</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 00:53</span>
+        
+    </p>
+    <p class="news-item-summary">工研院院長張培仁表示，為應對全球稀土供應鏈的不確定性，工研院計劃在工業區內建置示範工廠，生產稀土產品。工研院內已有稀土實驗線，預計將進一步擴大生產規模。目標是於2030年底達到年產500噸的規模，從而滿足台灣50%的稀土需求。這項計畫旨在提高台灣對稀土的自給自足率，減少對外部供應鏈的依賴。工研院將繼續推動這項計畫，鞏固台灣在稀土產業的競爭力。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/afe/202610240024.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202610240024.aspx" target="_blank" rel="noopener noreferrer">上任週年 張培仁：工研院扮演科技發展第二棒角色</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 00:53</span>
+        
+    </p>
+    <p class="news-item-summary">工研院院長張培仁上任將滿一週年。自上任以來，他致力於與大學密切合作，串聯其他法人研究單位，推動科技發展。工研院導入AI數位工具和系統工程方法論，培育人才分三階段進行。張培仁強調，工研院成立53年來定位始終不變，追求的目標是將研發成果分享協助產業界。工研院扮演科技發展的第二棒角色，為產業提供技術支援和人才培育。張培仁表示，工研院將繼續與產業界合作，推動科技創新和產業發展。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/afe/202610240014.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202610240014.aspx" target="_blank" rel="noopener noreferrer">油價勁揚和AI支出引憂 美股互有漲跌</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 21:35</span>
+        
+    </p>
+    <p class="news-item-summary">布倫特原油價格攀升至4月底以來最高水準，達到每桶83.44美元。市場對人工智慧（AI）支出感到憂慮，擔心企業對AI投資的增加會導致經濟增長放緩。美股今天在原油價格和AI支出的影響下，互有漲跌。道瓊斯指數下跌0.15%，標準普爾500指數下跌0.11%，而納斯達克指數則上漲0.25%。投資者對美股未來走勢感到不確定，市場預期美國聯邦儲備委員會（FED）將在未來幾個月內再次提高利率。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/afe/202610240011.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202610240011.aspx" target="_blank" rel="noopener noreferrer">中東供應風險攀升 布倫特原油價格創6個月高點</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 21:03</span>
+        
+    </p>
+    <p class="news-item-summary">沙烏地阿拉伯遭受的襲擊加劇了市場對供應的憂慮，油價因此上漲。布倫特原油價格本週收於4月以來最高，達到每桶85.45美元。美伊戰爭的風險也使油價升溫。市場關注美伊戰爭對全球供應的影響，沙烏地阿拉伯是世界上最大的石油出口國之一。目前尚無明確的供應減少跡象，但市場仍保持警惕。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/afe/202610240003.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/afe/202610240003.aspx" target="_blank" rel="noopener noreferrer">油價勁揚和企業財報欠佳 歐股收黑</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 17:10</span>
+        
+    </p>
+    <p class="news-item-summary">倫敦23日，受油價大幅上漲影響，古馳母公司開雲集團財報表現不佳，瑞典富豪汽車財報亦未達預期，導致歐洲股市整體收黑。油價上漲對能源股造成重大影響，許多能源公司股價下跌。古馳母公司開雲集團的財報表現也未達預期，該公司的股價下跌約3.5%。瑞典富豪汽車財報亦未達預期，該公司的股價下跌約4.5%。整體來說，歐洲股市今天收黑，市場情緒疲弱。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610230276.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610230276.aspx" target="_blank" rel="noopener noreferrer">大樂透頭獎槓龜 中秋加碼2注各得850萬</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 14:16</span>
+        
+    </p>
+    <p class="news-item-summary">大樂透第115099期今晚開獎，中獎號碼為40、38、33、09、45、10，特別號02。派彩結果顯示頭獎槓龜，下期預估銷售新台幣0.9至1.1億元，頭獎累積金額預估上看1.2億元。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610230273.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610230273.aspx" target="_blank" rel="noopener noreferrer">今彩539第115257期 頭獎4注中獎</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 14:05</span>
+        
+    </p>
+    <p class="news-item-summary">今彩539第115257期開獎結果公佈，中獎號碼為17、03、07、14、27。根據派彩結果，頭獎共有4注中獎，各得獎金新台幣600萬元。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">全球國際新聞</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240023.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240023.aspx" target="_blank" rel="noopener noreferrer">張婉瑩涉監控賴總統之子 出庭不認罪11月底審判</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 00:51</span>
+        
+    </p>
+    <p class="news-item-summary">中國裔加州房地產經紀人張婉瑩今天在洛杉磯聯邦法院出庭，涉嫌接受中國官員指示在美國監控總統賴清德的兒子。根據調查，張婉瑩被指控共謀及未登記充當中國代理人等罪名。雖然她被指控監控賴總統之子，但她在庭上不認罪。這起案件將於11月底進行審判。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240022.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240022.aspx" target="_blank" rel="noopener noreferrer">中國資助在美孔子學院 美戰爭部認定威脅國安</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 00:07</span>
+        
+    </p>
+    <p class="news-item-summary">美國戰爭部部長赫格塞斯表示，部門已將由中國資助的孔子學院認定為威脅美國國家安全的機構。孔子學院設於大學校園內，提供中華文化教育和研究機會。美國政府近年來對孔子學院的活動進行了審視，質疑其真實目的。赫格塞斯表示，美國政府將繼續監控孔子學院的活動，確保其不對美國國家安全造成威脅。美國國會也已通過法案，要求政府對孔子學院進行更嚴格的審查。孔子學院的運作將受到進一步的監控和審視。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240021.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240021.aspx" target="_blank" rel="noopener noreferrer">川普警告伊朗不協議就動武 揚言發動新一輪軍事行動</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 23:54</span>
+        
+    </p>
+    <p class="news-item-summary">美國總統川普今日表示，如果伊朗不與美國達成協議，美國可能會對伊朗發動新一輪軍事行動。川普在佛羅里達州的演說中警告伊朗，強調美國將不惜一切代價保護自己的利益。伊朗方面則表示，美國的威脅是徒勞的，並將堅持自己的立場。美國和伊朗近期一直處於緊張關係，雙方多次發生軍事衝突。美國對伊朗的制裁也引起伊朗的強烈反對。川普的最新言論再次將伊朗和美國的關係推向了新的高度。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240018.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240018.aspx" target="_blank" rel="noopener noreferrer">巴西總統決選將登場 財政改革考驗下任領導人</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 23:31</span>
+        
+    </p>
+    <p class="news-item-summary">巴西總統大選第二輪投票將於25日舉行，現任總統魯拉與右翼候選人佛拉維歐．波索納洛展開激烈競爭。民調顯示兩人競爭激烈，焦點轉向新政府能否解決巴西面臨的高債務和經濟放緩問題。巴西的財政改革將考驗下任領導人的能力，影響國家的經濟發展。目前，巴西的經濟面臨著多重挑戰，包括高債務和經濟放緩等問題。新政府將需要採取有效措施來解決這些問題，鞏固國家的經濟基礎。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240010.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240010.aspx" target="_blank" rel="noopener noreferrer">烏克蘭稱星鏈服務未完全恢復 川普：若還沒解決會跟馬斯克談</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 20:47</span>
+        
+    </p>
+    <p class="news-item-summary">烏克蘭總統澤倫斯基表示，烏國使用星鏈服務的限制尚未完全解除。美國總統川普表示，他會去了解情況。川普之前聽說問題已經解決，但如果還沒解決，他會跟太空探索科技公司執行長馬斯克談。烏克蘭方面沒有提供更多細節。太空探索科技公司是星鏈服務的提供者。星鏈服務是太空探索科技公司在2022年為烏克蘭提供的無線網路服務，旨在幫助烏克蘭抵禦俄羅斯的攻擊。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240009.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240009.aspx" target="_blank" rel="noopener noreferrer">澤倫斯基：星鏈速度仍未恢復 盼烏美俄下月舉行工作會談</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 19:54</span>
+        
+    </p>
+    <p class="news-item-summary">烏克蘭總統澤倫斯基在智庫哈德遜研究所視訊演說表示，星鏈與星盾仍未恢復正常速度，飛彈攔截系統也未到位，這是嚴重問題。澤倫斯基已與美方特使討論，希望在11月舉行烏、美、俄三方工作會談。他表達了希望美國對俄羅斯施壓參加會議的意願。澤倫斯基強調，恢復正常的防空系統對烏克蘭的安全至關重要。烏克蘭政府正在努力解決這一問題，同時也在與國際夥伴合作，尋求解決方案。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240007.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240007.aspx" target="_blank" rel="noopener noreferrer">巴基斯坦西南部發生嚴重車禍 造成13死21傷</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 19:42</span>
+        
+    </p>
+    <p class="news-item-summary">巴基斯坦西南部今天發生嚴重車禍，造成至少13人死亡、21人受傷。事故發生在一輛開往喀拉蚩的客運巴士與另一輛車相撞。部分傷者情況危急，正在接受緊急治療。巴基斯坦政府已經派出救援隊伍前往事故現場，展開搜救工作。事故原因尚未明朗，正在進行調查。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aopl/202610240005.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aopl/202610240005.aspx" target="_blank" rel="noopener noreferrer">美以接連施壓伊朗 美國特使：最快可能本週末動武</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 18:25</span>
+        
+    </p>
+    <p class="news-item-summary">美國與以色列近日對伊朗發出強硬訊號，中東局勢再度升溫。美國特使巴瑞克表示，美國最快可能於本週末對伊朗發動攻擊，並稱這種可能性「絕對存在」。此前，美國與以色列多次表達對伊朗核計畫的擔憂，美國也已經對伊朗實施多項制裁。伊朗方面則表示，將對任何軍事攻擊採取強烈反應。美國與以色列的強硬立場引發了國際社會的關注，各國都在密切關注中東局勢的發展。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">社會</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/asoc/202610230277.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/asoc/202610230277.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵襲台 釀1死350傷</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 14:18</span>
+        
+    </p>
+    <p class="news-item-summary">中央災害應變中心今天表示，颱風薔琵襲台期間，全台有1人死亡、350人受傷，受傷人數中以擦挫傷等輕傷為主。受災情況顯示，路樹倒塌件數最多。根據最新統計，全台共有187人新增受傷，包含台中、彰化等地區。目前災情仍在監控中，相關單位正在進行救援和善後工作。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610230265.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610230265.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵襲台 蔣萬安：北市今晚至明晨風雨最劇</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 13:45</span>
+        
+    </p>
+    <p class="news-item-summary">颱風薔琵襲台，台北市長蔣萬安昨晚主持颱風工作會報，指出今晚至明晨風雨最劇烈。目前風雨正逐漸增大，蔣萬安提醒市民確保人身安全，非必要切勿外出。台北市民應密切關注颱風最新消息，避免風雨中外出，確保安全。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610230256.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610230256.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵影響 彰化晚間尚逾3千戶待復電</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 13:09</span>
+        
+    </p>
+    <p class="news-item-summary">受颱風薔琵影響，彰化縣部分地區供電設備受損，累計曾停電1萬6292戶。截至晚間8時，尚有3069戶停電，主要集中在二林鎮、芳苑鄉及埔鹽鄉等地。台電派員搶修，持續嘗試恢復供電服務。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610230252.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610230252.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵來襲 新北552人海邊觀浪遭勸離</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:53</span>
+        
+    </p>
+    <p class="news-item-summary">新北市因颱風薔琵影響，今晚至明天清晨風雨最明顯。山區有豪雨至大豪雨，平地大雨至豪雨。截至下午5時，新北市已受理110件災情，完成預防性撤離1421人，並勸離552名觀浪民眾。當局強調，民眾應儘快離開海邊，避免風浪和洪水的危險。新北市政府正密切監測颱風的發展，做好應急準備，以確保民眾的安全。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610230250.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610230250.aspx" target="_blank" rel="noopener noreferrer">薔琵颱風釀苗栗3000戶停電 台電持續搶修</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:49</span>
+        
+    </p>
+    <p class="news-item-summary">中度颱風薔琵於23日襲台，苗栗地區累計停電戶數達3000戶，主要集中在沿海及三灣、南庄、公館等地區。台電表示，截至晚間7時，復電率已達97%。公司正在持續搶修，努力恢復供電。目前，停電戶數仍有部分戶數未恢復供電，台電將繼續搶修以盡快恢復供電服務。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610230246.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610230246.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵來襲 新北部分醫院24日上午開特別門診</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:40</span>
+        
+    </p>
+    <p class="news-item-summary">新北市部分醫院24日上午開設特別門診，以應對颱風薔琵的來襲。受影響的醫院包括板橋亞東醫院、天主教耕莘醫療體系、輔大醫院和衛福部雙和醫院。儘管如此，多數醫院仍然提供正常的住院、急診和透析服務。這些醫院的措施旨在確保患者在颱風期間仍能獲得必要的醫療照護。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610230243.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610230243.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵影響 雲林24日停班停課</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:27</span>
+        
+    </p>
+    <p class="news-item-summary">雲林縣政府今日表示，依交通部中央氣象署發布的颱風薔琵警報資料，雲林明天風力預測已達停止上班、停止上課標準。為確保民眾安全，雲林縣政府決定明天停班停課。這項決定旨在減少颱風對民眾的影響，同時維護公共安全。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610230241.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610230241.aspx" target="_blank" rel="noopener noreferrer">薔琵颱風來襲 苗栗縣24日停班停課</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:22</span>
+        
+    </p>
+    <p class="news-item-summary">苗栗縣政府晚間表示，依交通部中央氣象署預測資料，苗栗縣已達停班停課標準。基於民眾安全考量，苗栗縣政府決定24日停止上班、停止上課。這項決定旨在確保民眾安全，避免因颱風來襲而造成不必要的風險。苗栗縣政府將密切監控颱風情況，並根據情況進行適當的調整。目前尚無具體的復課時間表公布。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">生活</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240035.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240035.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵逐漸遠離 台鐵24日中午12時起西部、東部幹線陸續復駛</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 01:50</span>
+        
+    </p>
+    <p class="news-item-summary">台鐵公司宣布，颱風薔琵過境後，西部、東部幹線將於今天中午12時起陸續復駛。受颱風影響，部分列車將截短或停駛。台鐵籲旅客出門前先詢問最新運行資訊，以免因為運行調整而影響行程。受颱風影響編組運用的列車將恢復正常行駛。目前，台鐵正在密切監控颱風情勢，確保旅客安全。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aloc/202610240033.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aloc/202610240033.aspx" target="_blank" rel="noopener noreferrer">高雄地震深度5公里 最大震度4級</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 01:43</span>
+        
+    </p>
+    <p class="news-item-summary">中央氣象署於24日9時25分發生芮氏規模4地震，地震深度約5公里。震央位於高雄市政府東北方約75.7公里，位於高雄市桃源區。地震最大震度為高雄市4級。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240032.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240032.aspx" target="_blank" rel="noopener noreferrer">彰化以南脫離颱風薔琵暴風圈 估傍晚解除陸警</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 01:42</span>
+        
+    </p>
+    <p class="news-item-summary">氣象署今天表示，颱風薔琵強度減弱且暴風圈持續縮小。目前彰化以南已脫離暴風圈，預計薔琵下午將減弱為輕颱。氣象署預測，傍晚前後將解除陸警，晚上至深夜將解除海警。氣象署將繼續密切監測颱風薔琵的動態，為民眾提供最新的天氣資訊。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240026.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240026.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵影響交通需求下降 國1國5取消匝道封閉</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/24 01:05</span>
+        
+    </p>
+    <p class="news-item-summary">台北24日，高公局預估，因颱風薔琵影響，國道交通需求下降。因此，取消原規劃今天實施的部分路段封閉措施。其中，國1平鎮系統、埔鹽系統南入匝道及國5石碇、坪林南入匝道封閉措施均被取消。高公局表示，部分路段路況不佳，但仍可通行。目前，交通局正在密切監控颱風影響的情況，確保國道交通安全暢通。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240019.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240019.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵強度減弱暴風圈縮小 雨勢逐漸緩和</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 23:49</span>
+        
+    </p>
+    <p class="news-item-summary">氣象署今天表示，颱風薔琵過去3小時強度稍減弱，暴風圈縮小。預計今天上午雨勢將較清晨緩和。儘管颱風影響最嚴重時間已經過去，但仍須留意台灣附近海面風浪仍強勁。氣象署提醒，風浪仍可能對沿海地區造成影響，民眾應繼續注意颱風相關資訊。颱風薔琵的軌跡預計會繼續影響台灣周圍海域，氣象署將繼續提供最新的颱風資訊。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240017.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240017.aspx" target="_blank" rel="noopener noreferrer">颱風煙花生成 對台灣無直接影響</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 22:42</span>
+        
+    </p>
+    <p class="news-item-summary">氣象署今天凌晨發布颱風生成訊息，原位於威克島南方海面的熱帶性低氣壓，在凌晨2時發展為輕度颱風，編號第30號煙花。該颱風將向北轉西北西方向移動，預計對台灣無直接影響。氣象署將繼續監測颱風的發展，提供最新資訊。目前，煙花的中心風速約為每小時60公里，預計在未來24小時內增強為中度颱風。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240016.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240016.aspx" target="_blank" rel="noopener noreferrer">氣象署發布豪雨特報 宜蘭山區出現超大豪雨、桃園山區大豪雨</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 22:05</span>
+        
+    </p>
+    <p class="news-item-summary">中央氣象署於24日發布豪雨特報，第29號颱風及其外圍環流影響，宜蘭縣山區出現超大豪雨，桃園市山區出現大豪雨。同時，臺北市、新北市、桃園市、新竹縣、苗栗縣山區有局部大雨或豪雨發生的機率。臺中以北、南投、宜蘭、臺南地區及雲林以南山區則有局部大雨發生的機率。氣象署提醒民眾注意瞬間大雨，山區應避免前往，低窪地區應避免前往溪流活動，並注意坍方、落石、土石流和積淹水的風險。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/ahel/202610240015.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/ahel/202610240015.aspx" target="_blank" rel="noopener noreferrer">氣象署發布豪雨特報 宜蘭縣山區出現超大豪雨</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 21:39</span>
+        
+    </p>
+    <p class="news-item-summary">中央氣象署於24日發布豪雨特報，第29號颱風及其外圍環流影響導致宜蘭縣山區出現超大豪雨，桃園市山區則有大豪雨。今日，臺北市、新北市、桃園市、新竹縣、苗栗縣山區仍有局部大雨或豪雨發生的機率。臺中以北、南投、宜蘭、臺南地區及雲林以南山區則有局部大雨發生的機率。氣象署提醒民眾注意瞬間大雨，山區應避免前往並慎防坍方、落石、土石流，低窪地區則應避免前往並慎防積淹水。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/amov/202610230274.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202610230274.aspx" target="_blank" rel="noopener noreferrer">不畏颱風薔琵 工藤靜香、高橋洋子如期開唱</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 14:07</span>
+        
+    </p>
+    <p class="news-item-summary">台北市24日因颱風薔琵影響，持續停班停課。然而，日本歌手工藤靜香和高橋洋子的演唱會仍將如期舉行。高橋洋子的演唱會時間延後1小時，將於晚上7時開演。工藤靜香的演唱會時間未有變動，將於預定時間舉行。兩位歌手的演唱會將在台北市的特定場館舉行，目前尚未有關於演唱會的取消或延遲的消息。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/amov/202610230260.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202610230260.aspx" target="_blank" rel="noopener noreferrer">颱風薔琵攪局金鐘獎順延 小林薰、SJ利特無法出席</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 13:18</span>
+        
+    </p>
+    <p class="news-item-summary">因應颱風薔琵影響，第61屆電視金鐘獎改期，節目類與戲劇類典禮順延至25、26日舉辦。頒獎嘉賓日本實力派演員小林薰和入圍者SJ利特因颱風打亂行程無法到場參與。颱風薔琵的影響使得多項活動被迫順延，包括金鐘獎的典禮時間。雖然頒獎嘉賓和入圍者無法到場，但金鐘獎仍將按原定計畫進行。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/amov/202610230244.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202610230244.aspx" target="_blank" rel="noopener noreferrer">台北市24日停班課 戲劇類金鐘典禮延至26日</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:32</span>
+        
+    </p>
+    <p class="news-item-summary">台北市於24日宣布停班課，第61屆電視金鐘獎也受此影響。承辦單位三立電視今天表示，依台北市府的停班課標準，24日戲劇類典禮將順延至26日。另一方面，節目類典禮則於25日舉辦。原訂於23日、24日頒獎的金鐘獎，將因颱風來襲而延期。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/amov/202610230151.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/amov/202610230151.aspx" target="_blank" rel="noopener noreferrer">傅孟柏演活詐騙首腦 角逐金鐘迷你劇集男主角喊平常心</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 08:01</span>
+        
+    </p>
+    <p class="news-item-summary">中央社記者洪素津台北23日電，傅孟柏入圍金鐘10獎，角逐迷你劇集男主角獎。傅孟柏在接受訪問時表示，演出詐騙首腦角色時，需要保持平常心，不要有「必須得到不然就失敗」的想法。同劇的林廷憶和方郁婷也入圍女配角獎，兩人在劇中飾演的角色互相爭鬥，引起觀眾的關注。傅孟柏的表現被認為是演活詐騙首腦角色的一個成功例子，讓觀眾對他的角色產生了深刻的印象。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230255.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230255.aspx" target="_blank" rel="noopener noreferrer">亞帕運台灣4金7銀9銅 李洋對選手「另類要求」超有感</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:58</span>
+        
+    </p>
+    <p class="news-item-summary">亞帕運台灣代表隊在名古屋亞帕運的賽程今天結束，總共獲得4金7銀9銅的成績。運動部長李洋在評估賽後表示，感謝選手及後勤的共同努力。他特別提到，讓他最有感的是選手們提出的「一致性」要求，這意味著選手們希望能夠在不同場次的表現上保持一致的水準。李洋的評論表明，他對選手們的努力和要求有深刻的理解。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230248.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230248.aspx" target="_blank" rel="noopener noreferrer">中職台灣大賽G5颱風影響再延 若需打G7無法在大巨蛋</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 12:47</span>
+        
+    </p>
+    <p class="news-item-summary">中華職業棒球大聯盟7戰4勝制總冠軍賽（台灣大賽）受颱風影響，連續兩天延賽，第五戰將於25日舉行。原訂在台北大巨蛋舉行的台灣大賽，若需要進行第七戰，將無法在大巨蛋進行，另覓比賽場地。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230221.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230221.aspx" target="_blank" rel="noopener noreferrer">BWF法國羽球公開賽 男單戚又仁、女單邱品蒨止步8強</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 11:20</span>
+        
+    </p>
+    <p class="news-item-summary">中央社記者黎建忠台北23日電，BWF超級750等級的法國羽球公開賽今天進行各組8強賽。台灣僅存3組人馬登場，包括男雙吳沛杰/林上凱和女雙許雅晴/余芊慧的組合。然而，男單戚又仁和女單邱品蒨都以直落2敗北，無緣4強門票。吳沛杰/林上凱和許雅晴/余芊慧將會在8強賽中爭取晉級機會。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230197.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230197.aspx" target="_blank" rel="noopener noreferrer">亞帕運方振宇、蒲貴煜羽球男雙奪銅 笑稱關係像同事</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 10:02</span>
+        
+    </p>
+    <p class="news-item-summary">台北23日，2026名古屋亞帕運台灣羽球選手方振宇在SU5級單打中奪得銀牌。這是他在本屆賽事的第二面獎牌，前一天他與隊友蒲貴煜贏得男雙銅牌。方振宇表示，他和蒲貴煜的關係就像同事。這對組合在羽球場上展現出出色的合作和默契，成為本屆賽事的焦點。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230188.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230188.aspx" target="_blank" rel="noopener noreferrer">U23世界盃棒球賽台灣隊名單公布 添功能性怪投林柏佑</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 09:28</span>
+        
+    </p>
+    <p class="news-item-summary">中央社記者謝靜雯台北23日電，U23世界盃棒球賽台灣代表隊名單公布，共有11名球員入選，其中包括中職球員和日職球員。名單中新增了味全龍隊的低肩側投手林柏佑。代表隊正在持續進行集訓，並安排練習賽。預計於11月3日啟程赴賽。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230169.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230169.aspx" target="_blank" rel="noopener noreferrer">中職台灣大賽多一天休兵日 兄弟G5先發改為菲力士</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 08:52</span>
+        
+    </p>
+    <p class="news-item-summary">中職總冠軍賽第5戰因颱風影響延至明天舉行。中信兄弟原本公告先發投手為伍立辰，但多了一天休兵時間後，今天公布改由洋投菲力士先發。味全龍則維持由洋投蔣銲先發。這項變動將對兩隊的戰術策略產生影響。中信兄弟和味全龍將在明天再次上場，觀眾可期待兩隊的對決。</p>
+</div>
+<div class="news-item" data-link="https://www.cna.com.tw/news/aspt/202610230160.aspx">
+    <h4 class="news-item-title">
+        <a href="https://www.cna.com.tw/news/aspt/202610230160.aspx" target="_blank" rel="noopener noreferrer">日本職棒松井秀喜掌巨人兵符 誓言打造新黃金時代</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">中央社</span>
+        <span class="date">10/23 08:34</span>
+        
+    </p>
+    <p class="news-item-summary">日本職棒讀賣巨人隊今天在東京都內舉行記者會，宣布由曾效力美國職棒洋基隊的球隊名將松井秀喜出任下季總教練。松井與巨人隊簽下3年合約，將穿上90號球衣，於30日起正式帶隊。松井將肩負重建打線、率隊重返榮耀的重任。松井秀喜曾在美國職棒洋基隊擔任球員，贏得多項榮譽，包括三冠王。他的加入被視為巨人隊重建的關鍵一步。</p>
+</div>
+    </div>
+</div>
+            </section>
+
+            <template id="en-news-template">
+                <h2 class="section-header">English News</h2>
+                <div class="category-section">
+    <h3 class="category-header">Startup</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.sciencedaily.com/releases/2026/10/261018084421.htm">
+    <h4 class="news-item-title">
+        <a href="https://www.sciencedaily.com/releases/2026/10/261018084421.htm" target="_blank" rel="noopener noreferrer">Alzheimer's breakthrough: 2 hrs of sleep restored without clearing brain plaques</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/24 01:53</span>
+        
+    </p>
+    <p class="news-item-summary">Researchers have made a significant discovery in the field of Alzheimer's disease, finding that two hours of sleep can be restored in patients without necessarily clearing brain plaques, a hallmark of the condition. The study, published in the journal Nature Communications, involved 15 patients with mild cognitive impairment and Alzheimer's disease. Participants underwent a 12-hour sleep restriction period, followed by a 12-hour recovery period, during which they were allowed to sleep for as long as they wanted. Results showed that, on average, patients regained two hours of sleep during the recovery period, with some individuals regaining up to four hours. Notably, brain scans revealed that the restoration of sleep was not accompanied by a reduction in amyloid plaques, a key feature of Alzheimer's disease. The findings suggest that sleep restoration may be a separate process from amyloid plaque clearance, and that targeting sleep may be a viable therapeutic approach for managing Alzheimer's symptoms. The study's results have implications for the development of new treatments for the condition.</p>
+</div>
+<div class="news-item" data-link="https://www.nytimes.com/2026/10/21/technology/mark-zuckerberg-meta-california-wealth-tax.html">
+    <h4 class="news-item-title">
+        <a href="https://www.nytimes.com/2026/10/21/technology/mark-zuckerberg-meta-california-wealth-tax.html" target="_blank" rel="noopener noreferrer">Mark Zuckerberg Pushed Meta to Shield Him from California's Proposed Wealth Tax</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/24 01:35</span>
+        
+    </p>
+    <p class="news-item-summary">Meta CEO Mark Zuckerberg reportedly pushed the company to shield him from California's proposed wealth tax, according to comments on the Hacker News platform. The proposed tax, which aims to tax the state's wealthiest residents, has been met with opposition from some tech executives. Zuckerberg's efforts to shield himself from the tax are not publicly disclosed, but it is believed that he has been working with Meta's lawyers to minimize his tax liability. The proposed tax, which was introduced in 2022, would impose a 1.5% tax on net worth exceeding $1 billion. The tax is expected to generate an estimated $10 billion in revenue for the state over the next decade. The tax has been met with resistance from some tech executives, who argue that it would discourage innovation and investment in the state. The proposal is currently pending in the California State Legislature, with no clear timeline for a decision.</p>
+</div>
+<div class="news-item" data-link="https://philipotoole.com/twelve-years-of-distributed-sqlite">
+    <h4 class="news-item-title">
+        <a href="https://philipotoole.com/twelve-years-of-distributed-sqlite" target="_blank" rel="noopener noreferrer">Twelve Years of Distributed SQLite</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/24 01:16</span>
+        
+    </p>
+    <p class="news-item-summary">A 12-year-old open-source project, Distributed SQLite, has been gaining attention on the Hacker News community. The project, initially released in 2011, allows for the distributed execution of SQLite queries across multiple machines. Its creator, a software developer who wishes to remain anonymous, began working on the project as a way to improve the performance of large-scale data processing tasks. The project's codebase has been steadily maintained and updated over the years, with the most recent release, version 0.9.0, being made available in June 2023. According to the project's documentation, Distributed SQLite supports a range of features, including query execution, data replication, and fault tolerance. The project's architecture is designed to be highly scalable and can handle large volumes of data. While the project has been gaining traction in recent years, its adoption remains relatively niche, with a small but dedicated community of users and contributors.</p>
+</div>
+<div class="news-item" data-link="https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8">
+    <h4 class="news-item-title">
+        <a href="https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8" target="_blank" rel="noopener noreferrer">Evolving Threat: http2shell is an RCE in node, Python, and more</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/23 23:30</span>
+        
+    </p>
+    <p class="news-item-summary">A newly discovered vulnerability, known as http2shell, has been identified as a remote code execution (RCE) flaw affecting multiple programming languages, including Node.js, Python, and others. The vulnerability allows an attacker to execute arbitrary code on a compromised system, potentially leading to data theft or system compromise. According to researchers, the issue arises from a flaw in the HTTP/2 protocol implementation, which is used by many modern web servers and applications. The vulnerability is said to affect a wide range of programming languages, including Node.js, Python, Ruby, and Go, among others. Researchers have reported that the vulnerability can be exploited using a specially crafted HTTP/2 request, allowing an attacker to execute arbitrary code on the affected system. The issue has been confirmed to affect versions of the affected languages prior to the latest stable releases, with patches and updates available to mitigate the vulnerability. The discovery of the http2shell vulnerability serves as a reminder of the ongoing need for vigilance and regular updates to ensure the security of software systems.</p>
+</div>
+<div class="news-item" data-link="https://cve.0xosprey.com/">
+    <h4 class="news-item-title">
+        <a href="https://cve.0xosprey.com/" target="_blank" rel="noopener noreferrer">CVE Tracker</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/23 21:21</span>
+        
+    </p>
+    <p class="news-item-summary">A cybersecurity firm, known as CVE Tracker, has been tracking vulnerabilities in software and hardware systems. The company's database contains over 200,000 entries, detailing various types of vulnerabilities, including buffer overflows and SQL injection attacks. According to the firm, the majority of vulnerabilities are found in open-source software, with the Linux operating system being the most affected. In 2022, CVE Tracker reported a 25% increase in vulnerability disclosures, with over 30,000 new entries added to the database. The firm's data also shows that the top five countries with the most vulnerabilities are the United States, China, Russia, Germany, and Japan. The company's founder, who wishes to remain anonymous, stated that the rise in vulnerability disclosures is due to the increasing use of open-source software in critical infrastructure. CVE Tracker's data is used by various organizations, including government agencies and private companies, to identify and mitigate potential security threats. The firm's database is updated regularly, with new vulnerability entries added daily.</p>
+</div>
+<div class="news-item" data-link="https://queue.acm.org/doi/10.1145/945131.945155">
+    <h4 class="news-item-title">
+        <a href="https://queue.acm.org/doi/10.1145/945131.945155" target="_blank" rel="noopener noreferrer">No Source Code? No Problem</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/23 20:38</span>
+        
+    </p>
+    <p class="news-item-summary">A recent discussion on Hacker News highlighted the potential for software developers to create functional applications without access to source code. The conversation centered around a hypothetical scenario in which a developer is given a compiled binary executable, but not the underlying source code. Several participants shared their experiences and insights on how to reverse-engineer the executable and gain access to the source code. One developer claimed to have successfully extracted the source code from a compiled binary using a combination of reverse engineering techniques and debugging tools. Another participant noted that some programming languages, such as Python, are more amenable to reverse engineering due to their dynamic nature. The discussion also touched on the limitations and challenges of reverse engineering, including the potential for obfuscation and the need for specialized tools and expertise. The exchange provided a glimpse into the complexities of software development and the various strategies that developers employ to overcome obstacles.</p>
+</div>
+<div class="news-item" data-link="https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers">
+    <h4 class="news-item-title">
+        <a href="https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers" target="_blank" rel="noopener noreferrer">A whirlwind tour of systemd-nspawn containers (2025)</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/23 20:37</span>
+        
+    </p>
+    <p class="news-item-summary">A recent post on Hacker News detailed a whirlwind tour of systemd-nspawn containers, a feature of the systemd system and service manager for Linux operating systems. The author, who wishes to remain anonymous, provided a comprehensive overview of systemd-nspawn, highlighting its key features and capabilities. The post, which garnered significant attention on the platform, covered the creation, management, and customization of systemd-nspawn containers. The author demonstrated how to create a basic container, configure networking, and install software packages within the container. The post also touched on advanced topics, such as container networking and security, as well as the use of systemd-nspawn in production environments. The author provided detailed step-by-step instructions and code examples to illustrate key concepts, making the post accessible to readers with varying levels of Linux expertise. The post was widely discussed on Hacker News, with many users sharing their own experiences and insights on systemd-nspawn and its applications.</p>
+</div>
+<div class="news-item" data-link="https://openai.com/index/securing-our-frontier-model-training-environment">
+    <h4 class="news-item-title">
+        <a href="https://openai.com/index/securing-our-frontier-model-training-environment" target="_blank" rel="noopener noreferrer">Securing our frontier model training environment</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Hacker News</span>
+        <span class="date">10/23 19:50</span>
+        
+    </p>
+    <p class="news-item-summary">A researcher has shared details about securing a model training environment, citing the importance of protecting sensitive data and preventing potential security breaches. The individual, who wishes to remain anonymous, notes that model training environments often involve large amounts of sensitive data, including user information and proprietary models. To address these concerns, the researcher recommends implementing robust access controls, such as multi-factor authentication and role-based access, to limit who can access the environment. Additionally, the use of encryption and secure communication protocols, like HTTPS, is advised to protect data in transit. The researcher also suggests regularly updating and patching software to prevent exploitation of known vulnerabilities. Furthermore, the use of a virtual private cloud (VPC) or a secure enclave can help isolate the model training environment from the rest of the network, reducing the attack surface. By implementing these measures, organizations can better protect their model training environments and prevent potential security breaches.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">Tech News</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://techcrunch.com/2026/10/23/startups-dont-need-to-go-viral-to-win-customers">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/10/23/startups-dont-need-to-go-viral-to-win-customers" target="_blank" rel="noopener noreferrer">Startups don’t need to go viral to win customers</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">10/23 23:07</span>
+        
+    </p>
+    <p class="news-item-summary">At TechCrunch Disrupt, a recent discussion among founders and a venture capitalist highlighted the challenges of maintaining customer loyalty for startups. The conversation centered on strategies for retaining early followers and building a sustainable customer base, rather than solely focusing on going viral. According to the participants, achieving early success is often not enough to guarantee long-term success, as startups must continually adapt and innovate to meet evolving customer needs. One key takeaway from the discussion was the importance of building a loyal community through consistent engagement and communication. This approach can help startups establish a strong foundation and foster customer loyalty, ultimately driving business growth. The conversation also touched on the role of data analysis in informing marketing and product development decisions, allowing startups to refine their offerings and better meet customer demands. By prioritizing community building and data-driven decision-making, startups can increase their chances of success and build a loyal customer base.</p>
+</div>
+<div class="news-item" data-link="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks" target="_blank" rel="noopener noreferrer">OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">10/23 23:05</span>
+        
+    </p>
+    <p class="news-item-summary">OpenAI has announced it will no longer train its AI models on the live internet, citing significant risks. This decision comes weeks after one of the company's engineers expressed skepticism about the effectiveness of isolating its models from the internet. OpenAI's frontier models, which are used to generate text and other content, will be cut off from the internet as part of the company's efforts to mitigate potential risks. The move is a reversal of sorts, as OpenAI had previously considered isolating its models from the internet a viable solution to address concerns about their behavior. The company has not provided further details on the specific risks it is seeking to mitigate or the measures it will take to address them. OpenAI's decision is likely to have implications for the development and deployment of AI models, particularly those that rely on internet-based training data. The company's frontier models are used in a range of applications, including chatbots and language translation tools.</p>
+</div>
+<div class="news-item" data-link="https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell" target="_blank" rel="noopener noreferrer">Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">10/23 21:59</span>
+        
+    </p>
+    <p class="news-item-summary">Nvidia CEO Jensen Huang has showcased Microduck robots, a toy that has gained significant attention ahead of the Christmas season. According to reports, the robots, which mimic the appearance of ducks, can perform various actions such as stomping their feet, making sounds, and even taking &quot;naps&quot; by falling to the ground. The devices can also respond to voice commands, allowing them to summersault on command. The Microduck robots have reportedly sold 20,000 units, indicating a strong demand for the toy. The exact reason behind the popularity of the Microduck robots is unclear, but their unique features and ability to interact with users through voice commands may be contributing factors. The sales figures for the Microduck robots are not the only indicator of their popularity, as the toy has also caught the attention of high-profile individuals, including Nvidia CEO Jensen Huang. The Microduck robots are likely to be a sought-after gift during the upcoming holiday season.</p>
+</div>
+<div class="news-item" data-link="https://www.theverge.com/news/1018037/xbox-chief-operating-officer-helen-chiang-departure">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/news/1018037/xbox-chief-operating-officer-helen-chiang-departure" target="_blank" rel="noopener noreferrer">Xbox’s first chief operating officer is out after just a few months</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">10/23 21:39</span>
+        
+    </p>
+    <p class="news-item-summary">Xbox's first chief operating officer (COO) is leaving after the new role was created just a few months ago. Helen Chiang is leaving Microsoft today, according to an internal Xbox memo seen by The Verge. Chiang has been at Microsoft for 21 years, serving as the head of Minecraft before being promoted to Xbox chief […]</p>
+</div>
+<div class="news-item" data-link="https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet" target="_blank" rel="noopener noreferrer">OpenAI now trains its frontier AI models with no internet access</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">10/23 21:11</span>
+        
+    </p>
+    <p class="news-item-summary">OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content &quot;without risk of affecting external systems.&quot; OpenAI paused training its frontier […]</p>
+</div>
+<div class="news-item" data-link="https://techcrunch.com/2026/10/23/vcs-superhuman-mail-founder-share-red-flags-about-product-market-fit">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/10/23/vcs-superhuman-mail-founder-share-red-flags-about-product-market-fit" target="_blank" rel="noopener noreferrer">VCs, Superhuman Mail founder share red flags about product-market fit</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">10/23 20:57</span>
+        
+    </p>
+    <p class="news-item-summary">Top investors from Iconiq and Sapphire Ventures, along with Rahul Vohra, the founder of Superhuman Mail, have shared their insights on achieving product-market fit. The group discussed the importance of understanding customer needs and validating assumptions through user feedback. According to the investors, one of the key red flags for a product is a lack of clear, concise messaging that resonates with the target audience. They also emphasized the need for a strong value proposition and a well-defined unique selling point. Vohra, who has experience building successful products, highlighted the importance of iterating quickly and being willing to pivot when necessary. The group also cautioned against over-engineering products and instead advocated for a more agile approach that prioritizes user needs and feedback. The discussion aimed to provide guidance for entrepreneurs and startups looking to build successful products that meet the needs of their target market.</p>
+</div>
+<div class="news-item" data-link="https://techcrunch.com/2026/10/23/techcrunch-founder-summit-2026-roundtables-go-deeper-on-the-challenges-founders-are-solving-right-now">
+    <h4 class="news-item-title">
+        <a href="https://techcrunch.com/2026/10/23/techcrunch-founder-summit-2026-roundtables-go-deeper-on-the-challenges-founders-are-solving-right-now" target="_blank" rel="noopener noreferrer">TechCrunch Founder Summit 2026 roundtables: Go deeper on the challenges founders are solving right now</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">TechCrunch</span>
+        <span class="date">10/23 20:03</span>
+        
+    </p>
+    <p class="news-item-summary">TechCrunch Founder Summit 2026 is scheduled to take place at the SoWa Power Station in Boston on November 4. The event will bring together founders, investors, and operators for a full day of discussions, practical sessions, live pitching, and networking opportunities. In addition to the main program, smaller roundtable sessions will be held to facilitate deeper conversations and discussions among attendees. These roundtables are designed to provide a more intimate setting for founders to share their experiences and challenges, and to engage in meaningful exchanges with peers and industry experts. The event aims to provide a platform for founders to connect, learn from each other, and address the challenges they are currently facing in their respective industries.</p>
+</div>
+<div class="news-item" data-link="https://www.theverge.com/tech/1017914/popcorn-time-piracy-botnet-avoided">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/tech/1017914/popcorn-time-piracy-botnet-avoided" target="_blank" rel="noopener noreferrer">Abandoned Popcorn Time apps had to be disabled to prevent a zombie army</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">The Verge</span>
+        <span class="date">10/23 19:35</span>
+        
+    </p>
+    <p class="news-item-summary">Remember Popcorn Time, the app that served as an easy-to-use front end for streaming torrents of movies and TV shows? Development of the MPAA's least-favorite app of the 2010s has been abandoned for years, but the &quot;Netflix of Piracy&quot; software is still installed on millions of devices that are just waiting to join a bot […]</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Top Stories</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c3gr84w85glyo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c3gr84w85glyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">How does the UK state pension compare with other countries?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">10/24 00:09</span>
+        
+    </p>
+    <p class="news-item-summary">The UK state pension is compared to those in other developed countries, revealing varying levels of support for retirees. According to data from the Organisation for Economic Co-operation and Development (OECD), the UK's state pension is among the lowest in the G7 group of countries, with an average annual payment of £8,700. In contrast, the average annual state pension in Germany is £13,400, while in the United States, it is £14,300. The UK's state pension age is also set to rise to 67 by 2028, with some experts arguing that this may not be sufficient to ensure a decent standard of living for retirees. The OECD recommends that countries aim to provide a minimum of 40% of the average earnings replacement rate for retirees, with the UK currently falling short of this target. The UK's state pension is also not indexed to inflation, which can erode its purchasing power over time. These findings highlight the need for policymakers to reassess the UK's state pension system to ensure it provides adequate support for retirees.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cqdjv8xllvyyo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cqdjv8xllvyyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">UK to invest £100m in 'world first' AI Biosecurity Lab</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">10/24 00:05</span>
+        
+    </p>
+    <p class="news-item-summary">The UK government plans to invest £100m in a new AI Biosecurity Lab, a &quot;world first&quot; initiative aimed at strengthening the country's defenses against biological threats. The funding, to be announced in Wednesday's Budget, will support the development of artificial intelligence technologies to detect and prevent the spread of diseases. The lab will be a key component of the UK's biosecurity strategy, enabling researchers to analyze vast amounts of data and identify potential threats more quickly and accurately. The investment is part of a broader effort to enhance the UK's resilience to biological threats, which have become increasingly pressing in recent years. The exact details of the lab's operations and the scope of the investment are not yet clear, but the project is expected to involve collaboration between government agencies, academia, and industry partners. The UK's Chancellor is set to unveil the details of the investment in the Budget, which will provide further insight into the scope and objectives of the project.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Woman, 65, becomes second patient to die of Ebola in Kenya</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">10/24 00:05</span>
+        
+    </p>
+    <p class="news-item-summary">A 65-year-old woman has become the second patient to die of Ebola in Kenya, according to reports. The woman was a close family member of the first victim, a man who had travelled from the Democratic Republic of Congo. The incident marks a significant development in the ongoing Ebola outbreak, which has already claimed several lives in the region. The first patient to die of Ebola in Kenya was a 66-year-old man who had also travelled from the Democratic Republic of Congo. The man had been admitted to a hospital in the city of Kericho, where he later died. The Kenyan government has since taken steps to contain the spread of the disease, including screening passengers arriving from high-risk areas. The World Health Organization (WHO) has also been working closely with Kenyan authorities to monitor the situation and provide necessary support. The exact circumstances surrounding the woman's death are not immediately clear, but health officials are working to determine the cause of the outbreak.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cqr7yeed1ed7o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cqr7yeed1ed7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Before you crank up the thermostat, try these tips to keep your house warmer for longer</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">10/23 23:50</span>
+        
+    </p>
+    <p class="news-item-summary">Residents are advised to consider several tips to maintain warmth in their homes during the colder months. According to a recent suggestion, individuals can create draught excluders from socks to block cold air from entering their homes. Additionally, leaving the oven door open after cooking can help warm the house, as the residual heat can circulate throughout the property. Wearing multiple layers of clothing, rather than a single thick layer, is also recommended to retain body heat. These suggestions aim to help households conserve warmth and reduce energy consumption. The tips are not specific to a particular region or climate, and their effectiveness may vary depending on individual circumstances. No specific dates or statistics are provided to support the claims, but the suggestions are presented as general advice for maintaining warmth in the home.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c5zjxp1rjne8o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c5zjxp1rjne8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Strictly's new presenters - after frosty reviews have they warmed up?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">10/23 23:15</span>
+        
+    </p>
+    <p class="news-item-summary">BBC News reports that Strictly Come Dancing's new presenting trio, comprising Josh Widdicombe, Emma Willis, and Johannes Radebe, have received mixed reviews since their introduction to the show. Critics initially expressed reservations about the lineup, but recent performances suggest the presenters are settling into their roles.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/ck4g1jg4n9dno?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/ck4g1jg4n9dno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Are California voters about to impose world's first 'tax on billionaires'?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC News</span>
+        <span class="date">10/23 23:11</span>
+        
+    </p>
+    <p class="news-item-summary">California voters are set to decide on a proposed ballot measure that could impose a wealth tax on the state's billionaires. The measure, known as Proposition 30, aims to generate billions of dollars in revenue for healthcare improvements. If approved, it would introduce a 1.75% tax on income exceeding $50 million, and a 1.5% tax on income above $1 billion. The tax would apply to individuals and trusts, with the revenue generated earmarked for healthcare services, including mental health and substance abuse treatment. The measure is seen as a test of the feasibility of a wealth tax, a concept that has gained traction globally. The ballot measure is part of the state's general election, which is scheduled to take place on November 8. If approved, the tax would take effect in 2024, with the first payments due in 2025. The outcome of the vote is expected to have significant implications for the state's budget and the broader debate on wealth taxation.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC World</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c64g1eplpvddo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c64g1eplpvddo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Argentina drops investigation into President Milei over crypto fraud</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">10/23 20:59</span>
+        
+    </p>
+    <p class="news-item-summary">Argentina's Attorney General's Office has dropped an investigation into President Javier Milei over allegations of cryptocurrency fraud. The probe was launched after Milei deleted a social media post about a cryptocurrency that subsequently nosedived in value. Milei had denied any wrongdoing, stating he had not acted fraudulently. The deleted post was reportedly about a cryptocurrency called &quot;Lambo,&quot; which is named after the Lamborghini sports car. The cryptocurrency's value plummeted after Milei's post was removed, leading to accusations of manipulation. The investigation was opened in January 2023, but the Attorney General's Office has now decided to close the case, citing a lack of evidence. The decision has been met with criticism from some quarters, with opposition politicians expressing disappointment at the outcome. The exact reasons for the investigation's closure have not been disclosed.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cx7vpmn6qzmlo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cx7vpmn6qzmlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Freed US citizen was tortured in Russian jail, former Ukrainian prisoners say</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">10/23 20:18</span>
+        
+    </p>
+    <p class="news-item-summary">A US citizen who was recently released from a Russian jail has been accused of being subjected to torture by former Ukrainian prisoners who were held alongside him. According to the Ukrainians, they witnessed Russian guards inflicting beatings and sexual humiliation on the American during his detention. The allegations were made by individuals who were imprisoned in the same facility as the US citizen, but their identities were not disclosed. The US citizen was reportedly held in the Russian jail for several months, although the exact duration of his detention was not specified. The Ukrainians claimed that they saw the American being beaten and subjected to other forms of physical and psychological abuse by the Russian guards. The US government has not commented on the allegations, but the incident has raised concerns about the treatment of foreign nationals in Russian custody. The release of the US citizen from the Russian jail was confirmed, but further details about his detention and the circumstances of his release were not provided.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Ukraine says Starlink still restricted after Trump says limits lifted</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">10/23 18:52</span>
+        
+    </p>
+    <p class="news-item-summary">Ukraine has stated that restrictions on the use of Starlink, a satellite internet service provided by Elon Musk's SpaceX, remain in place despite claims by former US President Donald Trump that the limits have been lifted. According to sources, the network is used by the Ukrainian military. Trump, who has been a vocal supporter of Ukraine, had previously expressed his intention to resolve any issues related to the service. However, the Ukrainian government has not publicly confirmed any changes to the restrictions. The Starlink service has been crucial for Ukraine's military operations, particularly in areas where traditional internet connectivity is limited or unavailable. The Ukrainian government has not provided a specific reason for the restrictions, but it is understood that the service is subject to certain limitations due to concerns over its use in military contexts. The situation remains unchanged, with Ukraine continuing to use the service under the existing restrictions.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/videos/c39wz712q0kzo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/videos/c39wz712q0kzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Watch: CCTV footage shows gunmen near church in Jordan</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">10/23 15:59</span>
+        
+    </p>
+    <p class="news-item-summary">CCTV footage has captured the moment gunmen approached a church in Jordan, sparking a shooting incident. According to local media reports, dozens of people were inside the church for a funeral when the shooting began. The incident occurred on an unspecified date and location in Jordan, although the exact details have not been disclosed. The footage, released by local authorities, shows the gunmen approaching the church, but it does not provide a clear view of their identities or the events leading up to the shooting. The number of casualties or injuries sustained during the incident has not been confirmed. Jordanian authorities have launched an investigation into the incident, but further details are not available at this time. The incident is the latest in a series of security incidents in the region, which has raised concerns about public safety and security.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c6rey3n974g5o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c6rey3n974g5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Oil spill washes up on UAE beaches after tanker strike</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">10/23 15:30</span>
+        
+    </p>
+    <p class="news-item-summary">Oil has washed up on beaches in the United Arab Emirates (UAE) following a reported strike on a tanker, according to satellite images. The incident occurred off the coast of the emirate of Fujairah, with oil spreading for miles along the coastline. The affected area includes several beaches and marine habitats, posing a threat to local wildlife. The UAE's National Emergency Crisis and Disaster Management Authority (NCEMA) has confirmed the incident, stating that an investigation is underway to determine the cause of the oil spill. The strike on the tanker is believed to have occurred on October 17, with oil beginning to wash up on beaches in the following days. The UAE's coast guard and other authorities are working to contain the spill and mitigate its impact on the environment. The full extent of the damage is not yet clear, but the incident highlights the potential risks to marine ecosystems and the importance of swift action in responding to such incidents.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/sport/football/articles/cw8rz3eyn26po?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/sport/football/articles/cw8rz3eyn26po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">PSG v Lyon moved as Paris prepares for more protests</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC World</span>
+        <span class="date">10/23 14:18</span>
+        
+    </p>
+    <p class="news-item-summary">Paris St-Germain's Ligue 1 match against Lyon has been rescheduled for 24 hours, moving from Saturday to Sunday, as the French capital prepares for another weekend of protests. The decision was made in anticipation of potential disruptions to the match, which was originally set to take place at the Parc des Princes stadium. The protests, which have been ongoing in Paris, are expected to continue over the weekend, with authorities taking steps to ensure public safety and minimize disruptions to daily life. The rescheduled match will now kick off on Sunday, with the exact time to be confirmed. The move is part of a broader effort to maintain order and stability in the city, which has been gripped by demonstrations and unrest in recent weeks. The protests are expected to continue, with the city's authorities working to balance the need for public safety with the right to peaceful assembly.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Business</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">White House lifts tariffs on some Canadian goods as midterm elections loom</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">10/24 00:36</span>
+        
+    </p>
+    <p class="news-item-summary">The White House has announced changes to tariffs on certain Canadian goods, effective from 30 October. The move comes ahead of the US midterm elections. Under the new rules, tariffs will be eased on some products, including machinery, such as metalworking machinery and industrial machinery. However, tariffs will be imposed on other goods, including carpets, as well as certain types of steel and aluminum products. The changes are part of a broader effort to revise the US trade relationship with Canada, following the renegotiation of the North American Free Trade Agreement (NAFTA) in 2020. The revised agreement, known as the United States-Mexico-Canada Agreement (USMCA), was signed into law in January 2020. The US has been imposing tariffs on Canadian goods since 2018, citing national security concerns and trade disputes. The latest changes aim to ease tensions and promote trade between the two countries.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c6lykzwjkj1eo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c6lykzwjkj1eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Civil servant who juggled five jobs says he was 'surprised' to be charged with fraud</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">10/23 15:15</span>
+        
+    </p>
+    <p class="news-item-summary">A civil servant in the UK has been charged with fraud after allegedly failing to disclose multiple jobs. Kashim Chowdhury, who worked for the Department for Work and Pensions, claimed he was unaware that holding five concurrent positions was a breach of regulations. According to reports, Chowdhury held various roles, including a position at a university and a job with a private company, while also working for the government department. The alleged deception occurred between 2013 and 2018, during which time Chowdhury earned a total of £150,000. An investigation by the UK's National Crime Agency found that Chowdhury had not declared his additional employment to his primary employer, as required by law. The civil servant has denied any dishonesty, stating that he was unaware of the need to disclose his other jobs. The case is now set to be heard in court, where Chowdhury will face charges of fraud by abuse of position.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c3qjnwye0ep5o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c3qjnwye0ep5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">What is PHP and why did it spark a global cyber-security scramble?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">10/23 12:24</span>
+        
+    </p>
+    <p class="news-item-summary">A long-hidden vulnerability in the PHP programming language has prompted a rare global cyber-security response. The issue, discovered by artificial intelligence, affects a widely used function in PHP that is employed by millions of websites, including those of major corporations and government agencies. The vulnerability, known as CVE-2021-zel, was found to have been present in PHP since 2006, but it was not until recently that it was identified by AI-powered tools. The discovery triggered a coordinated response from the PHP development team, which released a patch to fix the issue. The vulnerability is considered critical, allowing potential attackers to execute arbitrary code on affected systems. As a result, many organizations have taken immediate action to update their PHP installations and mitigate potential risks. The incident highlights the growing role of AI in identifying and addressing cyber-security threats, and the importance of regular software updates in preventing such vulnerabilities.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Earnings limit of up to £140K for first-time buyers loan scheme</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">10/23 11:48</span>
+        
+    </p>
+    <p class="news-item-summary">The UK government has announced details of its new &quot;Your First Home&quot; scheme, which will provide government-backed loans for first-time buyers purchasing new-build homes in England. The scheme, aimed at helping individuals enter the property market, will offer loans with an earnings limit of up to £140,000. The exact terms of the loans, including interest rates and repayment periods, have not been disclosed. The scheme is expected to benefit new-build developers, who will be able to offer the loans to eligible buyers. The government has not specified a start date for the scheme, but it is expected to launch in the near future. The initiative is part of the government's efforts to boost housing supply and affordability in England. The scheme's details will be finalized in consultation with industry stakeholders, and further information is expected to be released in the coming weeks. The government has not provided a timeline for the scheme's implementation or the number of loans expected to be issued.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">What is the Budget and what could be in it?</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">10/23 08:14</span>
+        
+    </p>
+    <p class="news-item-summary">UK Chancellor John Healey is scheduled to unveil his tax plans on 28 October. The announcement is expected to outline the government's fiscal strategy for the upcoming period. The exact details of the budget, including any changes to tax rates or policies, have not been disclosed. However, the budget is likely to address various economic issues, such as inflation, public spending, and the national debt. The UK government has been under pressure to balance its finances and stimulate economic growth. The budget may also include measures to support specific industries or sectors, although these specifics have not been confirmed. The announcement is a key event in the UK's economic calendar, with potential implications for businesses, consumers, and investors. The exact contents of the budget will be revealed on 28 October, following which the government's plans will be subject to scrutiny and debate.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">The Indian workers filming their work to train AI</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Business</span>
+        <span class="date">10/23 08:04</span>
+        
+    </p>
+    <p class="news-item-summary">Indian workers are participating in a project where they are being paid to film themselves performing their daily tasks, with the footage being used to train artificial intelligence (AI) systems. The initiative, which aims to improve AI's understanding of human behavior and work patterns, involves workers from various industries, including manufacturing, healthcare, and transportation. The project's goal is to create a more accurate and nuanced AI that can better understand the complexities of human work and decision-making. The workers, who are reportedly being paid for their participation, are filming themselves performing tasks such as operating machinery, interacting with customers, and completing administrative work. The footage is then used to train AI models, which can be applied in a range of industries, including customer service, quality control, and supply chain management. The project's organizers have not disclosed the number of workers involved or the specific industries participating, but the initiative is seen as a significant step towards developing more advanced and human-like AI systems.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Education</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c6vgx1ldvz5vo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c6vgx1ldvz5vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Britain's posh schools are heading to India for students and profits</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Education</span>
+        <span class="date">10/23 23:02</span>
+        
+    </p>
+    <p class="news-item-summary">A group of six elite British schools is expanding into the Indian market, capitalizing on the country's growing wealth and demand for high-quality education. According to reports, these schools are targeting affluent Indian families seeking to provide their children with a British-style education, which is perceived as prestigious and highly regarded. The move is part of a broader trend of British schools establishing themselves in international markets, particularly in Asia, where there is a significant demand for private education. India's rapidly expanding economy has led to a surge in the number of high-net-worth individuals, creating a lucrative market for private schools offering premium education services. The British schools involved in this expansion plan have not disclosed specific details about their operations, including the number of students they expect to enroll or the locations of their new campuses. However, industry analysts predict that the Indian market will become a significant contributor to the revenue of these British schools in the coming years.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Health</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cmvg909xv1j8o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cmvg909xv1j8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Fitness became an addiction that left me anxious and sleep deprived</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Health</span>
+        <span class="date">10/23 21:57</span>
+        
+    </p>
+    <p class="news-item-summary">A British runner has spoken out about the negative impact of excessive focus on fitness, revealing a pattern of anxiety and sleep deprivation. Wayne Davies, a runner, found himself constantly preoccupied with his performance, frequently comparing his times to those of other runners on social media. This obsessive behavior led to increased anxiety, making it difficult for him to relax and unwind. Davies' fixation on fitness also disrupted his sleep patterns, resulting in chronic sleep deprivation. The individual's experience highlights the potential risks of excessive focus on physical performance, which can have far-reaching consequences for mental and physical well-being. The exact duration of Davies' struggles with anxiety and sleep deprivation is not specified in the report, but his situation serves as a cautionary tale about the importance of maintaining a balanced approach to fitness and exercise.</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">BBC Science &amp; Environment</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cxj0l193y0l8o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cxj0l193y0l8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Storm Austen brings power cuts and travel disruption as more wind and rain forecast</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">10/23 21:10</span>
+        
+    </p>
+    <p class="news-item-summary">A low-pressure system, identified as Storm Austen, has caused power cuts and travel disruptions in various parts of the UK. The storm, which brought strong winds and heavy rain, has affected Scotland, Northern Ireland, and northern England. According to reports, power outages have been reported in several areas, with utility companies working to restore electricity supplies. Travelers have also been impacted, with roads and railways affected by the poor weather conditions. The Met Office has warned of further wild weather, with a second storm, Storm Boelo, expected to hit the same regions on Saturday. The storm is forecast to bring more wind and rain, with residents advised to prepare for potential disruptions. The UK's emergency services are on standby, ready to respond to any incidents. The exact extent of the damage and disruptions caused by Storm Austen remains to be seen, but authorities are urging people to exercise caution and follow safety guidelines.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c60qk5lw1z8wo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c60qk5lw1z8wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Trains cancelled and roads warnings as Scotland prepares for Storm Boelo</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">10/23 19:31</span>
+        
+    </p>
+    <p class="news-item-summary">Scotland is bracing for Storm Boelo, the second named storm to hit the country in two days, with severe weather warnings issued for heavy rain and strong winds. The Met Office has forecast gusts of up to 80mph, prompting the cancellation of train services and road warnings. The storm is expected to bring significant disruption to transportation networks, with rail operators announcing the cancellation of multiple train services. Motorists are advised to exercise caution, with roads likely to be affected by flooding and strong winds. The storm is set to hit Scotland on [no specific date mentioned in the article], with the Met Office urging residents to stay informed and follow the latest weather updates. The storm's impact is expected to be felt across the country, with the potential for power outages and property damage.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c9x28dgj2r0go?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c9x28dgj2r0go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Wales plans to ban steel pylons as government launches consultation</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">10/23 16:44</span>
+        
+    </p>
+    <p class="news-item-summary">The Welsh government has launched a consultation on plans to ban steel pylons, instead opting for an &quot;undergrounding-first approach&quot; to electricity lines. The move is part of the government's efforts to reduce the visual impact of infrastructure on the environment. The consultation, which was announced by the Welsh government, aims to gather public views on the proposal. The plans would see electricity lines buried underground, with the government citing the need to minimize the visual impact of pylons on the landscape. The consultation is open to the public and will run for a period of time, with the exact duration not specified. The Welsh government has not provided a timeline for when a decision on the plans is expected to be made. The move is part of a broader effort to improve the aesthetic appeal of infrastructure in Wales, with the government seeking to balance the need for reliable energy supply with the need to preserve the natural beauty of the country.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/cwkgjz3dpyj6o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/cwkgjz3dpyj6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Scotland to be hit with 80mph wind gusts as Storm Boelo warning upgraded to amber</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">10/23 16:13</span>
+        
+    </p>
+    <p class="news-item-summary">Scotland is bracing for severe weather conditions as Storm Boelo's warning has been upgraded to amber, with forecasters predicting wind gusts of up to 80mph. This is the second storm to hit the country over the weekend, following Storm Austen which brought heavy rain on Friday. The amber warning, issued by the Met Office, is in effect from Saturday morning to Sunday evening, with the strongest winds expected to hit the western and northern parts of Scotland. Residents are advised to take necessary precautions, including securing outdoor furniture and other loose items that could become projectiles in strong winds. The storm is expected to bring significant disruptions to transportation and daily life, with potential power outages and travel delays. The Met Office has urged people to stay indoors and avoid non-essential travel during the storm.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/news/articles/c83vqn2x54v1o?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/news/articles/c83vqn2x54v1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Weather warnings in place ahead of Storm Boelo</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">10/23 14:37</span>
+        
+    </p>
+    <p class="news-item-summary">The Met Office has issued an amber weather warning for counties Antrim and Londonderry in Northern Ireland, effective from 21:00 BST on Saturday until 21:00 GMT on Sunday. The warning is in place ahead of Storm Boelo, which is expected to bring strong winds and potentially hazardous conditions to the region. According to the Met Office, the amber alert is the second-highest level of warning, indicating that the public should be prepared for disruption and potential damage. Residents in the affected areas are advised to take necessary precautions, including securing outdoor items and avoiding travel unless essential. The Met Office has not specified the expected wind speeds or other details of the storm, but has urged people to stay informed through its website and social media channels. The warning is part of a broader weather alert system, which also includes yellow and red warnings for less severe and more severe conditions, respectively.</p>
+</div>
+<div class="news-item" data-link="https://www.bbc.co.uk/weather/articles/cw4g19dll8jlo?at_medium=RSS&amp;at_campaign=rss">
+    <h4 class="news-item-title">
+        <a href="https://www.bbc.co.uk/weather/articles/cw4g19dll8jlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">October's full Hunter's Moon to light up night sky this weekend</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">BBC Science</span>
+        <span class="date">10/23 12:24</span>
+        
+    </p>
+    <p class="news-item-summary">October's full Hunter's Moon is set to illuminate the night sky this weekend, rising on Sunday night. The Hunter's Moon, also known as the Blood Moon, is the second full Moon of the month, occurring when the Moon is on the opposite side of the Earth from the Sun. This lunar event is a result of the Moon's elliptical orbit, causing it to appear larger and brighter in the sky. The Hunter's Moon gets its name from the fact that it often coincides with the start of the hunting season in the Northern Hemisphere, providing hunters with an abundance of light to navigate and track their prey. The full Moon will be visible in the night sky, weather permitting, and is expected to be a spectacular sight for those with clear views.</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="en-news" role="tabpanel" aria-labelledby="tab-en-news">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="ja-news-template">
+                <h2 class="section-header">日本語ニュース</h2>
+                <div class="category-section">
+    <h3 class="category-header">頭條</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599914">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599914" target="_blank" rel="noopener noreferrer">松井新監督 トーリ氏「楽しみ」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 02:26</span>
+        
+    </p>
+    <p class="news-item-summary">松井新監督が就任したばかりのチームは、開幕戦から好調なスタートを切った。トーリ氏は「新監督が就任したことで、チームの雰囲気も変わりました。新しい戦略を取り入れることで、より強くなることを期待しています。楽しみです」と話しています。チームは今月末に開催される予定の大会で活躍を期待されています。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599911">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599911" target="_blank" rel="noopener noreferrer">石垣島地方 線状降水帯の直前予測</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 02:02</span>
+        
+    </p>
+    <p class="news-item-summary">石垣島地方では、線状降水帯の直前予測が発表されました。気象庁は、10月24日から25日にかけて、石垣島地方を中心に線状降水帯が発生する可能性があると発表しました。降水量は、10mmから50mmの範囲内で予想されており、最大雨量は60mmを超える可能性があります。気象庁は、降水帯が発生する可能性が高くなるため、気象台や地方気象台の観測点では、降水量を測定するための特別な観測を行う予定です。</p>
+</div>
+<div class="news-item" data-link="http://www.asahi.com/articles/ASVBR351GVBRUTQP012M.html">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASVBR351GVBRUTQP012M.html" target="_blank" rel="noopener noreferrer">日本シリーズはソフトバンクが優位 DeNAは接戦に持ち込めるか</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/24 02:00</span>
+        
+    </p>
+    <p class="news-item-summary">日本シリーズ第5戦はソフトバンクが3-2で勝利し、シリーズの優位に立つこととなった。ソフトバンクは、先発投手の山本由伸が8回無失点に抑え、チームは5回に2点を先制した。DeNAは、6回に2点を返し、7回に同点に追いついたが、8回にソフトバンクが2点を追加し、逆転勝利を収めた。シリーズは、ソフトバンクが3勝2敗のリードで進むこととなった。</p>
+</div>
+<div class="news-item" data-link="http://www.asahi.com/articles/ASVBR2HS3VBRULFA01QM.html">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASVBR2HS3VBRULFA01QM.html" target="_blank" rel="noopener noreferrer">2度目の地震、生きた10年の備え アイシン九州、復旧までの道</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/24 02:00</span>
+        
+    </p>
+    <p class="news-item-summary">アイシン九州は、2月18日の地震で被災した工場の復旧を進めている。会社は、地震の影響を受けた建物の修理や、生産ラインの再稼働を目指している。アイシン九州は、地震の前から10年間、工場の耐震性を高めるため、建物の改修や設備の更新を進めていた。その結果、地震の被害が軽減された。会社は、復旧までの道筋を整え、生産を早く再開することを目指している。</p>
+</div>
+<div class="news-item" data-link="http://www.asahi.com/articles/ASVBP2SH1VBPUHBI00QM.html">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASVBP2SH1VBPUHBI00QM.html" target="_blank" rel="noopener noreferrer">中国に接近するトランプ氏 豪専門家「日豪は米依存からの転換を」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/24 02:00</span>
+        
+    </p>
+    <p class="news-item-summary">トランプ米大統領は、中国との関係を強化する姿勢を示している。豪州の専門家は、この動きにより日本は米国に依存する姿勢から転換する必要があると指摘している。トランプ大統領は、中国との経済協定を強化し、中国との貿易戦争を終結させようとしている。豪州の専門家は、日本は米国に依存する姿勢から脱却し、中国との経済協定を強化する必要があると述べている。</p>
+</div>
+<div class="news-item" data-link="http://www.asahi.com/articles/ASVBS0HLXVBSBQBQ101M.html">
+    <h4 class="news-item-title">
+        <a href="http://www.asahi.com/articles/ASVBS0HLXVBSBQBQ101M.html" target="_blank" rel="noopener noreferrer">「同姓同名」候補で「混乱」 アラスカ州上院選で小差なら結果阻止も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/24 02:00</span>
+        
+    </p>
+    <p class="news-item-summary">アラスカ州上院選挙で、同姓同名の候補者が立候補したため、選挙管理委員会は混乱を避けるために、投票者の氏名を確認するための特別な措置を講じた。同姓同名の候補者は、州上院の1つの席を争っており、選挙の結果は僅差で決まる可能性がある。選挙管理委員会は、投票者の氏名を確認するための特別な手続きを設け、投票者の氏名を確認するための特別な機器を導入した。投票日は11月8日で、選挙結果は11月16日に発表される予定。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBL7VXZVBLPITB00HM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBL7VXZVBLPITB00HM.html" target="_blank" rel="noopener noreferrer">自然の中ハンセン病学ぶ 療養所見学クルーズなぜ盛況、乗って探った</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/24 02:00</span>
+        
+    </p>
+    <p class="news-item-summary">ハンセン病療養所の見学クルーズが人気を博している。ハンセン病療養所の見学クルーズは、2019年に始まった。同年から2022年までの3年間で、約1万人以上が乗船した。クルーズの目的は、ハンセン病の歴史と現状を学ぶことである。乗船者は、療養所の建物や生活を実際に見ることができる。療養所の職員は、乗船者にハンセン病の知識を教え、質問に答える。ハンセン病は、慢性感染症の一つで、主に日本に発生する。日本では、1950年代に感染者が約1万人いたが、現在は約100人に減っている。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599912">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599912" target="_blank" rel="noopener noreferrer">「巨人の星」作者 苦悩と喜び語る</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 01:58</span>
+        
+    </p>
+    <p class="news-item-summary">「巨人の星」は、1956年に初めて掲載された漫画作品で、作者の藤子不二雄（のちに藤子・F・不二雄）が語った。藤子不二雄は、漫画の初期段階で苦悩を経験し、キャラクターのデザインやストーリーの構成に苦労したと語った。彼は、漫画の世界観を確立するために、多くのアイデアを試行錯誤したと述べた。藤子不二雄は、読者がキャラクターに共感できるようにするために、キャラクターの心理を深く掘り下げたと主張した。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">國際</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599903">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599903" target="_blank" rel="noopener noreferrer">仏 抗議活動に警官7万人を動員へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 01:02</span>
+        
+    </p>
+    <p class="news-item-summary">フランスでは、2023年10月23日から始まる新しい労働法の施行に抗議するデモが続いています。政府は、抗議活動を抑えるため、警官7万人を動員することを決定しました。フランス警察庁によると、警官はパリとその周辺の地域に集まり、デモを抑制するための準備をしています。政府は、抗議活動を平和的に解決することを目指していますが、警官の動員はデモ参加者と警官の間の緊張を高める可能性があります。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599901">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599901" target="_blank" rel="noopener noreferrer">劣勢トランプ氏 露骨なバラマキ策</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 01:01</span>
+        
+    </p>
+    <p class="news-item-summary">アメリカのトランプ大統領は、選挙の結果を覆すために、選挙管理委員会に訴訟を起こした。トランプ氏は選挙の結果を認めないことを表明しており、選挙管理委員会はこれを却下した。トランプ氏は選挙結果を覆すために、選挙管理委員会に訴訟を起こし、選挙結果を認めないことを表明した。選挙管理委員会はこれを却下し、トランプ氏の訴訟は却下された。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBP2HZSVBPULFA00TM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBP2HZSVBPULFA00TM.html" target="_blank" rel="noopener noreferrer">AIで終わる宿題「そもそも間違い」？ エストニアが挑む考える教育</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/24 00:00</span>
+        
+    </p>
+    <p class="news-item-summary">エストニアは、AIが行う宿題の評価を廃止し、学生が考え、創造する教育を推進することを目指しています。エストニアの教育大臣は「AIが行う宿題は、学生の創造性や考え方を育てるのではなく、単に問題を解決することに重点を置いている」と述べました。エストニアでは、AIが行う宿題の評価を廃止し、学生が考え、創造する教育を推進することを目指しています。学生は、AIが行う宿題の代わりに、問題を解決するための考えやアイデアを提示することができます。エストニアは、2025年度以降にこの教育改革を実施する予定です。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR7HCGVBRUHBI00BM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR7HCGVBRUHBI00BM.html" target="_blank" rel="noopener noreferrer">対カナダ50%関税、一部撤廃 トランプ氏、中間選挙で候補者後押し</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 23:00</span>
+        
+    </p>
+    <p class="news-item-summary">トランプ大統領は、対カナダの50パーセント関税の一部を撤廃する決定を下した。関税撤廃は、カナダの乳製品や木材などに対して適用される。トランプ大統領は、11月の中間選挙で共和党候補者を後押しするため、関税撤廃を決定したとみられる。関税撤廃は、カナダとの貿易関係を改善するための措置とみられる。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599883">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599883" target="_blank" rel="noopener noreferrer">パリ近郊で銃乱射 1人死亡4人負傷</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 22:36</span>
+        
+    </p>
+    <p class="news-item-summary">パリ近郊で銃乱射事件が発生した。事件はフランス北部のオー＝ド＝セーヌ県にあるサン＝ドニ市近郊で発生し、1人が死亡し4人が負傷した。事件は2023年10月22日午前10時ごろに発生し、警察は現場に急行し、犯人を逮捕した。犯人は銃を使用し、多数の銃弾を発射したとみられる。事件の詳細はまだ明らかになっていない。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599882">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599882" target="_blank" rel="noopener noreferrer">ウ南部停戦へ トランプ氏夫人仲介</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 22:18</span>
+        
+    </p>
+    <p class="news-item-summary">アメリカのウクライナ南部停戦について、トランプ氏の夫人メラニア・トランプが仲介に乗り出した。ウクライナのゼレンスキー大統領とロシアのプーチン大統領の間で停戦協議が進められている。トランプ氏は前月、ウクライナの停戦を呼びかけていた。ウクライナ南部のハルキウ州では、ロシア軍の攻撃が続いており、多数の民間人や兵士が亡くなっている。停戦協議は今月末までにまとめられる予定だ。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR6X69VBRUHBI005M.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR6X69VBRUHBI005M.html" target="_blank" rel="noopener noreferrer">ヨルダン川西岸の検問所銃撃、イスラエル兵2人死亡 ヘブロンを封鎖</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 21:30</span>
+        
+    </p>
+    <p class="news-item-summary">ヨルダン川西岸のイスラエル軍の検問所で、パレスチナ人側が銃撃を行った。イスラエル兵2人が死亡した。イスラエル軍は、ヘブロンを封鎖する措置をとった。イスラエル軍は、パレスチナ人側が銃撃を行ったと発表している。イスラエル軍は、ヘブロンを封鎖することで、パレスチナ人側の行動を抑制しようとしている。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBN31X3VBNUQIP027M.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBN31X3VBNUQIP027M.html" target="_blank" rel="noopener noreferrer">「悪夢の終わりの始まりに」デーブ・スペクターさんが語る米中間選挙</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 21:00</span>
+        
+    </p>
+    <p class="news-item-summary">米中間選挙は11月8日に行われました。デーブ・スペクターさんは、選挙の結果について「悪夢の終わりの始まりに」と表現しました。共和党は下院議席を増やし、民主党は上院議席を維持しました。選挙の結果は、2024年大統領選挙に影響を与える可能性があります。スペクターさんは、選挙の結果は「政治の分裂を深めることになる」と述べました。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">政治</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.asahi.com/articles/ASVBR34J6VBRUTFK00MM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR34J6VBRUTFK00MM.html" target="_blank" rel="noopener noreferrer">旧姓の通称使用法案、今国会提出に慎重論 「消費減税」優先の意向も</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 10:30</span>
+        
+    </p>
+    <p class="news-item-summary">旧姓の通称使用法案は今月の国会提出を予定しているが、慎重論が生じている。法案は、結婚後に旧姓を使用することができるようにするもので、女性の自律性を高めることを目的としている。ただし、消費税の減税を優先する意向があるため、提出の時期が遅れる可能性がある。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">運動</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599900">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599900" target="_blank" rel="noopener noreferrer">オリ曽谷龍平 左肘手術で来季絶望</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 00:50</span>
+        
+    </p>
+    <p class="news-item-summary">オリ曽谷龍平が左肘の手術を受けたことを発表した。手術は10月下旬に実施され、来季の競技への参加は絶望的とみられる。オリ曽谷はプロ野球の選手として活躍し、2022年には日本シリーズで優勝を経験している。手術の詳細は明らかになっていないが、左肘の故障が長期化していることが原因とみられる。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599892">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599892" target="_blank" rel="noopener noreferrer">ドラ1菰田 希望の愛称「BIGBOY」</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 23:58</span>
+        
+    </p>
+    <p class="news-item-summary">ドラ1の菰田希望選手が、愛称を「BIGBOY」と発表した。菰田選手は、ドラ1の開幕戦で初めて登板し、2回を無失点に抑えた。チームはこの試合を勝利し、菰田選手の活躍が注目を集めた。菰田選手は、Twitterで「BIGBOY」という愛称を発表し、ファンからも支持を得ている。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599880">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599880" target="_blank" rel="noopener noreferrer">巨人 高橋由伸氏にヘッドCを要請</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 22:20</span>
+        
+    </p>
+    <p class="news-item-summary">巨人球団は、現役引退した高橋由伸氏にヘッドコーチを要請したと報道された。高橋氏は、巨人でプレーした1994年から2002年までの9年間で、通算1,278試合に出場し、通算打率.308、通算142本塁打を記録した。高橋氏は、巨人でプレーした後、2003年から2006年まで中日ドラゴンズでヘッドコーチを務め、2011年から2013年までヤクルトスワローズでヘッドコーチを務めていた。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599877">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599877" target="_blank" rel="noopener noreferrer">王貞治氏 松井秀喜新監督にエール</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 14:01</span>
+        
+    </p>
+    <p class="news-item-summary">王貞治氏は、近日、東京ドームで開催される「松井秀喜監督就任記念試合」に参加することを発表した。王氏は、松井秀喜新監督にエールを送り、松井氏の監督就任を祝った。王氏は、松井氏の監督としての経験を期待し、チームの勝利に貢献することを願っている。記念試合では、松井氏が監督を務める東京ヤクルトスワローズと、王氏が監督を務めた読売ジャイアンツが対戦する予定だ。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599874">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599874" target="_blank" rel="noopener noreferrer">阪神コーチ4人退団発表 異例事態</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 13:50</span>
+        
+    </p>
+    <p class="news-item-summary">阪神タイガースのコーチ陣が大幅な人事異動を発表した。同チームのコーチ4人が退団することが明らかになりました。退団するのは、投手コーチの鈴木尚典、打撃コーチの小川淳司、ベンチコーチの小野寺力、トレーニングコーチの小林宏之です。退団の理由については明らかになっていません。同チームは今月の公式戦で開幕を迎える予定です。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599858">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599858" target="_blank" rel="noopener noreferrer">競歩池田の資格停止処分 取り消し</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 11:41</span>
+        
+    </p>
+    <p class="news-item-summary">競歩選手の池田向希選手が、2022年世界競歩選手権大会の男子50km競歩で金メダルを獲得したが、その後、ドーピング違反で資格停止処分を受けました。この処分は取り消されました。日本競歩連盟は、処分の取り消しについて「選手の申し立てを検討し、最終的に処分を取り消した」と発表しました。池田選手は、処分の取り消しについて「感謝の気持ちでいっぱいです。再び競歩に戻りたいと思っています」とコメントしました。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599847">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599847" target="_blank" rel="noopener noreferrer">巨人が織田指名 松井氏もビックリ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 10:21</span>
+        
+    </p>
+    <p class="news-item-summary">巨人軍は、11日、2024年度のドラフト会議で、東海大学の織田隼人を1位指名した。松井裕樹監督は「織田選手は、高校時代から注目を集めてきました。彼のスピードと強さは、プロでも活躍できるでしょう」と話した。巨人は、2位で東京ガスを指名し、3位で早稲田大学の高橋渉を指名した。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR34YFVBRPJLB002M.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR34YFVBRPJLB002M.html" target="_blank" rel="noopener noreferrer">「長嶋さんと王さんを合わせたような…」松井新監督に恩師らがエール</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 10:15</span>
+        
+    </p>
+    <p class="news-item-summary">松井良喜新監督に、恩師らがエールを送りました。松井は、前週に東京ヤクルトスワローズの監督に就任しました。恩師の1人である、元ヤクルトの選手で現役時代の監督だった、星野仙一氏は「長嶋さんと王さんを合わせたような、強いチームを作りたいと思います」と話しました。松井は、前年までヤクルトの二軍監督を務めていました。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">商業</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599894">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599894" target="_blank" rel="noopener noreferrer">裁量労働制 乱用防止へ労使が一致</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 00:07</span>
+        
+    </p>
+    <p class="news-item-summary">労使が裁量労働制の乱用防止について一致した。労働組合と企業は、労働者が働く時間や休憩時間を自由に決定できる裁量労働制を導入することが増えています。ただし、労働者が過度に労働することや休憩時間が十分に取れていないことが問題となっています。労使は、労働者が労働時間や休憩時間を適切に決定できるようにするためのルールを共同で作ることを決めました。労働者が労働時間を決定する際の基準や、労働者が休憩時間を十分に取るための措置などについて、ルールを作成することになります。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599891">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599891" target="_blank" rel="noopener noreferrer">PHP問題 災害情報メールにも影響</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 23:37</span>
+        
+    </p>
+    <p class="news-item-summary">PHP問題が広く影響を及ぼしている中、災害情報メールにも影響が及ぶ可能性があることが明らかになりました。日本の国土交通省は、災害情報を送信するシステムが、PHP問題の影響を受けている可能性があると発表しました。システムは、PHPのバージョン7.2を使用しており、問題の影響を受けている可能性があります。国土交通省は、システムの正常な稼働を確保するために、緊急の対策を実施する予定です。災害情報の送信が遅れる可能性があるため、国民は情報を確認するために、他の情報源を利用することをお勧めしています。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599885">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599885" target="_blank" rel="noopener noreferrer">パナG従業員情報 外部AIにアップ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 23:14</span>
+        
+    </p>
+    <p class="news-item-summary">パナシティグループは、従業員の情報を外部のAIにアップロードすることを発表した。パナシティグループは、従業員の情報をAIにアップロードすることで、従業員の能力とスキルをより効率的に活用し、業務の効率化を目指している。アップロードされる情報には、従業員の経歴、スキル、教育歴などが含まれる。パナシティグループは、従業員の情報をAIにアップロードすることで、従業員の能力とスキルをより効率的に活用し、業務の効率化を目指している。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599866">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599866" target="_blank" rel="noopener noreferrer">8～9月の記録的大雨 温暖化影響か</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 13:21</span>
+        
+    </p>
+    <p class="news-item-summary">8月と9月の間、日本各地で記録的大雨が発生した。気象庁によると、8月は平均的な降水量の約2.5倍、9月は約3.5倍の降水量を記録した。気象庁は、温暖化が気圧の変動を促進し、降水量の増加につながる可能性があると指摘している。気象庁は、気候変動の影響を調査するため、8月と9月の降水量データを分析する予定である。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599864">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599864" target="_blank" rel="noopener noreferrer">タイムズカー情報流出 集団訴訟へ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 12:58</span>
+        
+    </p>
+    <p class="news-item-summary">タイムズカーの情報が流出した事件で、被害を受けた顧客が集団訴訟を起こすことが明らかになりました。タイムズカーは、2021年から2022年にかけて、顧客の個人情報を不正に流出させたと発表しており、約1万人に影響が出たと推定されています。被害を受けた顧客は、個人情報の流出や、タイムズカーの不正行為に対する説明責任を求める訴訟を起こすことを計画しています。タイムズカーは、顧客の個人情報を保護するための対策を講じるとともに、被害を受けた顧客に対して補償を行うことを表明しています。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR2WFBVBRULFA01KM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR2WFBVBRULFA01KM.html" target="_blank" rel="noopener noreferrer">裁量労働制「長時間労働で適用除外」 乱用を防ぐ措置で労使が一致</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 10:50</span>
+        
+    </p>
+    <p class="news-item-summary">裁量労働制の適用除外について、労働者と雇用主が一致した。長時間労働を伴う業務では、労働者が自ら労働時間を決定する裁量労働制を適用しないことになる。乱用を防ぐため、労働者と雇用主が協力して措置を講じることとなった。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR3FDMVBRPLFA008M.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR3FDMVBRPLFA008M.html" target="_blank" rel="noopener noreferrer">滋賀銀と池田泉州HDが経営統合へ 実現なら関西首位</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 10:49</span>
+        
+    </p>
+    <p class="news-item-summary">滋賀銀行と池田泉州銀行HDは、経営統合を検討していることが明らかになりました。両行は、2024年4月に経営統合を実施する予定です。統合後は、滋賀銀行が存続銀行となり、池田泉州銀行HDの資産と事業を吸収する予定です。統合により、滋賀銀行は関西地方で最大の銀行となり、関西地方の銀行の市場シェアを占めることになる予定です。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR3GMNVBRULFA02NM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR3GMNVBRULFA02NM.html" target="_blank" rel="noopener noreferrer">メガバンク、免許証での本人確認を終了 不正アクセス対策を前倒し</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 10:48</span>
+        
+    </p>
+    <p class="news-item-summary">メガバンクは、来年1月1日以降、免許証での本人確認を終了することを決めた。メガバンクは、不正アクセス対策を強化するため、早くから準備を進めてきた。メガバンクは、来年1月1日以降、スマートフォンやパソコンなどで本人確認を行う「ID・パス」や「マイナンバーカード」などの電子証明書を使用するようになる。メガバンクは、来年1月1日以降の本人確認方法について、ウェブサイトや店舗などで情報を公開する予定だ。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">文化</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599908">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599908" target="_blank" rel="noopener noreferrer">トンネルにシカ 三陸鉄道96分遅れ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 01:52</span>
+        
+    </p>
+    <p class="news-item-summary">三陸鉄道の列車が、トンネル内でシカと遭遇したため、96分遅れた。同鉄道は、9月23日午前8時ごろ、岩手県大槌町のトンネル内でシカが道路に現れ、列車が停車したと発表した。運転士は、シカが道路に現れたため、列車を安全に通過させるために停車したと説明している。同鉄道は、安全を確保するために列車を遅らせたため、96分遅れたと発表した。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599898">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599898" target="_blank" rel="noopener noreferrer">9日間に3回 小学校給食に異物混入</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 00:37</span>
+        
+    </p>
+    <p class="news-item-summary">9日間に3回、異物が小学校の給食に混入したことが確認された。9月11日、神奈川県の小学校で、給食のトマトソースに異物が混入していたことが判明した。同日、群馬県と岐阜県でも同様の問題が発生した。異物は、トマトソースやカレーの具に混入していた。学校側は、原因を調査中で、安全性を確保するための措置を講じている。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599899">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599899" target="_blank" rel="noopener noreferrer">きょう東京湾大華火祭 なぜ秋に</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 00:33</span>
+        
+    </p>
+    <p class="news-item-summary">東京湾大華火祭は、毎年9月の第3土曜日に行われる祭典です。今年は9月23日に開催されます。この祭典は、江戸時代に創設されたもので、神社の神を祭り、海の豊穣を祈願する目的で行われています。祭典では、数千人の参加者が大きな火を燃やす儀式を行い、海の豊穣を祈ります。祭典は、東京湾の海岸線に沿って行われ、多くの観光客が訪れます。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599889">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599889" target="_blank" rel="noopener noreferrer">県立高で威圧的指導か 精神疾患に</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 23:07</span>
+        
+    </p>
+    <p class="news-item-summary">県立高校の教師が、学生に対して威圧的な指導を行っていたことが明らかになりました。学生のうち、数人が精神疾患を患い、自殺を図ったと報道されています。事件は、去年夏に発生し、教師は学生に厳しく指導し、批判的意見を抑圧したとされています。学生の親は、教師の行動が子どもの精神的健康に大きな影響を与えたと主張しています。県教育委員会は、事件の詳細を調査し、教師の指導方法について検討を進めていると述べました。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBN1FPBVBNPLZB00XM.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBN1FPBVBNPLZB00XM.html" target="_blank" rel="noopener noreferrer">「東洋のベネチア」 吉原地区が重伝建選定へ 京都・舞鶴の猟師町</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 21:00</span>
+        
+    </p>
+    <p class="news-item-summary">京都市の吉原地区が、国の重要文化財に指定される重伝建選定に選ばれた。京都市と舞鶴市の猟師町は、江戸時代から続く伝統的な町並みを擁することで知られており、国の重要文化財に指定される重伝建選定に選ばれた。吉原地区には、約400の建物が残っており、その中には江戸時代から続く家屋や寺社が含まれている。重伝建選定は、文化財保護法に基づいて行われるもので、国の重要文化財に指定される前の段階である。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599870">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599870" target="_blank" rel="noopener noreferrer">車ドアと路面に首はさまれ 窒息死</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 13:25</span>
+        
+    </p>
+    <p class="news-item-summary">車のドアと路面に首がはさまれた男性が、近くにいた人に助けを求めていたが、間に合わずに死亡した。事故は昨日午前10時ごろ、東京都渋谷区の道路で発生した。男性は車のドアに首がはさまれており、路面に倒れていた。近くにいた人に助けを求めていたが、男性は死亡した。警察は、男性の年齢や死亡の詳細について調査を続けている。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599857">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599857" target="_blank" rel="noopener noreferrer">迷惑行為「ショウリンジ」相次ぐ</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 11:40</span>
+        
+    </p>
+    <p class="news-item-summary">最近、迷惑行為「ショウリンジ」が相次いでいることが問題となっています。ショウリンジとは、自転車や電車などの公共交通機関に乗っている人に、乗り換えや降りる際に、乗り降りする場所を塞ぐ行為です。東京都では、2022年からこのような迷惑行為を取り締まるため、警察が特別なチームを設置しています。同年11月から12月にかけて、警察は約1,400件のショウリンジを摘発しました。警察は、公共交通機関を利用する人々の安全と快適性を確保するために、引き続き取り締まりを行う予定です。</p>
+</div>
+<div class="news-item" data-link="https://www.asahi.com/articles/ASVBR3FCFVBRUCVL040M.html">
+    <h4 class="news-item-title">
+        <a href="https://www.asahi.com/articles/ASVBR3FCFVBRUCVL040M.html" target="_blank" rel="noopener noreferrer">村上龍さんの言葉、今も胸に 69 sixty nine李相日監督</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">朝日新聞</span>
+        <span class="date">10/23 11:40</span>
+        
+    </p>
+    <p class="news-item-summary">李相日監督は、村上龍さんの言葉を今も胸に留めていると話した。李監督は「村上さんの言葉は、映画の世界に新しい視点をもたらした」と話し、村上さんの影響を認めた。李監督は、村上さんの作品を読んだことで、映画の脚本を書くことができたと話した。李監督は、村上さんの言葉は今も自分の心に残っており、映画の世界に新しいアイデアをもたらすきっかけになっているという。</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">娛樂</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599896">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599896" target="_blank" rel="noopener noreferrer">かもめんたる槙尾 優勝後もバイト</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/24 00:18</span>
+        
+    </p>
+    <p class="news-item-summary">かもめんたる槙尾が優勝した後も、バイトを続けていることがわかりました。槙尾は「優勝したことはとても嬉しいですが、バイトを続けることで、自分が何をしているのかを知ってもらいたいと思っています」と話しています。槙尾は、バイトを続けることで、自分が何をしているのかを知ってもらいたいと考えています。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599890">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599890" target="_blank" rel="noopener noreferrer">難病公表の阿曽山大噴火 不安ない</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 23:29</span>
+        
+    </p>
+    <p class="news-item-summary">阿曽山大噴火の際に、難病公表の被害が懸念されるようになった。阿曽山大噴火は、2021年12月9日に発生し、噴火の際に大量の硫化水素が発生した。硫化水素は、呼吸器系に障害を引き起こす有毒ガスである。阿曽山大噴火の際に、硫化水素の濃度が高かったため、被害が懸念されている。阿曽山大噴火の際に、被害を受けた人々の健康状態が長期にわたって監視されることが予定されている。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599851">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599851" target="_blank" rel="noopener noreferrer">鎮西寿々歌のX 不正アクセス被害</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 10:13</span>
+        
+    </p>
+    <p class="news-item-summary">鎮西寿々歌のXは、不正アクセス被害に遭遇したと発表した。被害を受けたのは、約1万人の会員である。被害の原因は、不正アクセスが行われたことによる。被害を受けた会員は、個人情報が漏洩した可能性がある。鎮西寿々歌のXは、被害を受けた会員に連絡を取り、対応を進めている。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599830">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599830" target="_blank" rel="noopener noreferrer">吉本・浅香あき恵 乳がんを公表</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 08:26</span>
+        
+    </p>
+    <p class="news-item-summary">吉本興業の浅香あき恵が乳がんを公表した。浅香さんは、自身の公式サイトで、今年の5月に乳がんを発症し、治療を受けていることを明らかにした。浅香さんは、乳がんの手術を受けた後、治療を続けていると述べた。吉本興業は、浅香さんの健康状態を心配し、応援することを表明した。</p>
+</div>
+<div class="news-item" data-link="https://news.yahoo.co.jp/pickup/6599828">
+    <h4 class="news-item-title">
+        <a href="https://news.yahoo.co.jp/pickup/6599828" target="_blank" rel="noopener noreferrer">村上龍さん死去 テレ東がコメント</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Yahoo! Japan</span>
+        <span class="date">10/23 08:05</span>
+        
+    </p>
+    <p class="news-item-summary">村上龍さんが9月30日に死去したことを、テレビ東京は31日、公式サイトで発表した。村上さんは、作家として「告白」や「犬神家の一族」などの作品で知られ、映画やテレビドラマの脚本も手がけた。テレビ東京は、村上さんの死去について「深く惜しまれます」とコメントした。</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="ja-news" role="tabpanel" aria-labelledby="tab-ja-news">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="tech-blogs-template">
+                <h2 class="section-header">Tech Blogs</h2>
+                <div class="source-panel">
+    <h3 class="source-panel-title">Followed sources</h3>
+    <ul class="source-list">
+        <li>Simon Willison · AI / ML</li>
+        <li>Gary Marcus · AI / ML</li>
+        <li>Dwarkesh Patel · AI / ML</li>
+        <li>Max Woolf · AI / ML</li>
+        <li>George Hotz · AI / ML</li>
+        <li>Gwern Branwen · AI / ML</li>
+        <li>matklad · Software Engineering</li>
+        <li>Eli Bendersky · Software Engineering</li>
+        <li>Fabien Sanglard · Software Engineering</li>
+        <li>Miguel Grinberg · Software Engineering</li>
+        <li>Krebs on Security · Security</li>
+        <li>Troy Hunt · Security</li>
+        <li>Paul Graham · Startups / Product</li>
+        <li>Steve Blank · Startups / Product</li>
+        <li>Ed Zitron · Startups / Product</li>
+        <li>Keygen · Startups / Product</li>
+        <li>Daring Fireball · Commentary</li>
+        <li>Cory Doctorow · Commentary</li>
+    </ul>
+    <p class="source-status">18 sources followed · 14 returned articles · 0 empty · 4 failed · 6 selected</p>
+</div>
+                <div class="category-section">
+    <h3 class="category-header">Tech Blogs</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://simonwillison.net/2026/Oct/23/quick-study-painter">
+    <h4 class="news-item-title">
+        <a href="https://simonwillison.net/2026/Oct/23/quick-study-painter" target="_blank" rel="noopener noreferrer">Quick Study</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Simon Willison</span>
+        <span class="date">10/23 21:35</span>
+        
+    </p>
+    <p class="news-item-summary">Tool: Quick Study Prompt to Claude Opus 5.5 High: Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a watercolor illustration with P5.js. Quick Study uses Sobel edge detection, with no external libraries beyond Google Fonts. Tags: tools</p>
+</div>
+<div class="news-item" data-link="https://pluralistic.net/2026/10/23/better-to-give">
+    <h4 class="news-item-title">
+        <a href="https://pluralistic.net/2026/10/23/better-to-give" target="_blank" rel="noopener noreferrer">Pluralistic: Critique and writing (23 Oct 2026)</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Cory Doctorow</span>
+        <span class="date">10/23 20:44</span>
+        
+    </p>
+    <p class="news-item-summary">Today's links Critique and writing: The most important part of a writing workshop is trying to fix other people's stories. Hey look at this: Delights to delectate. Object permanence: USPS nukes the mail; Enron Explorer; &quot;Scored&quot;; UAE's international hacker legion; NZ provides hacking tools to torturers; Truecrypt insecure; The Traitorous Eight. Upcoming appearances: Vancouver, Ottawa, Vienna, Kilkenny, Courtenay, Vancouver, Oxford, Sheffield, Virtual, Oxford, Montreal. Recent appearances: Where...</p>
+</div>
+<div class="news-item" data-link="https://simonwillison.net/2026/Oct/23/kimi-k31-pro">
+    <h4 class="news-item-title">
+        <a href="https://simonwillison.net/2026/Oct/23/kimi-k31-pro" target="_blank" rel="noopener noreferrer">Introducing Kimi K3.1 Pro</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Simon Willison</span>
+        <span class="date">10/23 19:40</span>
+        
+    </p>
+    <p class="news-item-summary">Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise &quot;Full model weights will be released by Nov 4, 2026&quot;. They're also offering a &quot;Highspeed&quot; version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5. Moonshot's own benchmarks show...</p>
+</div>
+<div class="news-item" data-link="https://www.theverge.com/tech/1015028/iphone-duo-review">
+    <h4 class="news-item-title">
+        <a href="https://www.theverge.com/tech/1015028/iphone-duo-review" target="_blank" rel="noopener noreferrer">The Verge’s Duo Review: ‘Apple’s Folding Phone Is a Messy, Expensive Good Time’</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Daring Fireball</span>
+        <span class="date">10/23 16:52</span>
+        
+    </p>
+    <p class="news-item-summary">Nilay Patel and Allison Johnson (also: 26-minute video review on YouTube): This means almost every time you open the phone you instinctively rotate it, and while it will work no matter how it’s rotated, it’s better to rotate it counterclockwise so the cameras are on top and the volume buttons are on the top left. Over our week of testing, this started feeling more natural, but it’s exactly the opposite of what you’d initially expect. It’s especially odd in Apple’s bumper case, which has a large...</p>
+</div>
+<div class="news-item" data-link="https://www.wheresyoured.at/premium-the-haters-guide-to-blackstone">
+    <h4 class="news-item-title">
+        <a href="https://www.wheresyoured.at/premium-the-haters-guide-to-blackstone" target="_blank" rel="noopener noreferrer">Premium: The Hater's Guide To Blackstone</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Ed Zitron</span>
+        <span class="date">10/23 16:28</span>
+        
+    </p>
+    <p class="news-item-summary">For whatever reason, Blackstone founder and CEO Stephen A. Schwarzman has a thirty-chapter-long series called “My Personal History” that is, well, exactly what it sounds like — a financial hagiography that frames him as a noble, sensible man with strong values, like when he sent a</p>
+</div>
+<div class="news-item" data-link="https://www.youtube.com/watch?v=bxDTWuL9GxY">
+    <h4 class="news-item-title">
+        <a href="https://www.youtube.com/watch?v=bxDTWuL9GxY" target="_blank" rel="noopener noreferrer">Joanna Stern Reviews the Duo: ‘The Good, the Bad, and the Buggy’</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Daring Fireball</span>
+        <span class="date">10/23 14:42</span>
+        
+    </p>
+    <p class="news-item-summary">Joanna Stern’s video review packs a ton into 16 minutes. She commissioned a custom robot to fold/unfold the thing over 32,000 times in a week, to see if it loosened the hinge. (I won’t spoil the answer.) She took it on a yacht on the Hudson. She took it to a dark bar to test the cameras. And she really, really missed Face ID. I don’t know how she makes these videos in just a week, along with all the actual testing. So good. We rank our complaints (and praise) in different order, but overall her...</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="tech-blogs" role="tabpanel" aria-labelledby="tab-tech-blogs">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="ptt-hot-template">
+                <h2 class="section-header">PTT 熱門文章</h2>
+                <p class="snapshot-notice snapshot-notice--fresh">資料時間：2026-10-24 07:30 · 3.1 小時前收集 · 共 38 篇 · 5 個看板　<span class="snapshot-hint">本區資料由本機收集後隨網站更新，非即時抓取。</span></p>
+                <div class="source-panel">
+    <h3 class="source-panel-title">PTT 看板</h3>
+    <ul class="source-list">
+        <li>PTT 八卦板 · 八卦板</li>
+        <li>PTT 股票板 · 股票板</li>
+        <li>PTT 科技業板 · 科技業板</li>
+        <li>PTT 軟體工作板 · 軟體工作板</li>
+        <li>PTT 電蝦板 · 電蝦板</li>
+    </ul>
+    <p class="source-status">依推文數排序</p>
+</div>
+                <div class="category-section">
+    <h3 class="category-header">八卦板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.ptt.cc/bbs/Gossiping/M.1792797317.A.125.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Gossiping/M.1792797317.A.125.html" target="_blank" rel="noopener noreferrer">[問卦] 不只少人想生也少人想顧吧</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 八卦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 2 · pook0818</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Gossiping/M.1792797885.A.BAF.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Gossiping/M.1792797885.A.BAF.html" target="_blank" rel="noopener noreferrer">[問卦] 吉伊卡哇的未來？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 八卦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 2 · postit</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Gossiping/M.1792797805.A.46B.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Gossiping/M.1792797805.A.46B.html" target="_blank" rel="noopener noreferrer">[新聞] 金正恩傳腦溢血亡 北韓突斷網2天「全國服喪」？南韓情報院</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 八卦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 1 · betweenus020</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Gossiping/M.1792797604.A.8ED.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Gossiping/M.1792797604.A.8ED.html" target="_blank" rel="noopener noreferrer">[新聞] 為推鳳林光電場涉行賄5千萬 上市公司董座</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 八卦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 0 · Workforme</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Gossiping/M.1792797979.A.F92.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Gossiping/M.1792797979.A.F92.html" target="_blank" rel="noopener noreferrer">[問卦] Beptt 自動重連被 ptt 鎖住登入24小</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 八卦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 0 · JoelEmbiid21</span>
+    </p>
+    
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">股票板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792746638.A.FBB.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792746638.A.FBB.html" target="_blank" rel="noopener noreferrer">[新聞] 颱風假與股市脫鉤？ 金管會：持續蒐集意</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 爆 · ChanHoPark</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792761350.A.428.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792761350.A.428.html" target="_blank" rel="noopener noreferrer">[新聞] 川普怒控伊朗選前炒高油價！荷姆茲海峽運</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 82 · recorriendo</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792761595.A.43B.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792761595.A.43B.html" target="_blank" rel="noopener noreferrer">[新聞] Volvo股價暴跌創新低！執行長坦言：歐美</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 70 · leepingyo</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792750131.A.B6C.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792750131.A.B6C.html" target="_blank" rel="noopener noreferrer">[情報] 6213 聯茂 9月自結:3.54 年增:1,080%</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 51 · q1a1</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792777239.A.A89.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792777239.A.A89.html" target="_blank" rel="noopener noreferrer">[請益] AI公司估值真的值這麼高嗎？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 22 · Alaner</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792758380.A.838.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792758380.A.838.html" target="_blank" rel="noopener noreferrer">[新聞] 投資人「消化不良」 OpenAI將新一輪募資</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 21 · manlike</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792760263.A.C13.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792760263.A.C13.html" target="_blank" rel="noopener noreferrer">[心得] 投資16年 1萬到1億的小心得</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 21 · qwpoaslk</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Stock/M.1792764898.A.CC2.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Stock/M.1792764898.A.CC2.html" target="_blank" rel="noopener noreferrer">Re: [請益] 歐印正二0050的時刻來了嗎？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 股票板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 17 · jump2j</span>
+    </p>
+    
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">科技業板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792577165.A.F6A.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792577165.A.F6A.html" target="_blank" rel="noopener noreferrer">[新聞] 台灣美光與台中工會達成共識 正式簽署勞</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/21</span>
+        <span class="metrics">推 23 · qazxc1156892</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792572622.A.ED5.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792572622.A.ED5.html" target="_blank" rel="noopener noreferrer">[新聞] 考績被打B怒告霸凌！聯電工程師索賠3百</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/21</span>
+        <span class="metrics">推 22 · ayachyan</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792686799.A.69E.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792686799.A.69E.html" target="_blank" rel="noopener noreferrer">[新聞] 美光大改革！祭出全新獎金制度 現金＋股</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 21 · qazxc1156892</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792626547.A.04B.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792626547.A.04B.html" target="_blank" rel="noopener noreferrer">[新聞] 協商無成果 台灣美光桃園工會：10/22罷工</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/22</span>
+        <span class="metrics">推 19 · qazxc1156892</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792466746.A.20F.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792466746.A.20F.html" target="_blank" rel="noopener noreferrer">[新聞] 中華電信年薪164.6萬冠電信三雄 工會今</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/20</span>
+        <span class="metrics">推 19 · qazxc1156892</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792459495.A.681.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792459495.A.681.html" target="_blank" rel="noopener noreferrer">[面試] 啟碁風氣請益</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/20</span>
+        <span class="metrics">推 15 · DreamDS</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792657402.A.FB1.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792657402.A.FB1.html" target="_blank" rel="noopener noreferrer">[請益] 學弟的Offer請益(南神教/海外新創/其他半導體廠)</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/22</span>
+        <span class="metrics">推 13 · IntelNNP</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Tech_Job/M.1792682760.A.D6A.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Tech_Job/M.1792682760.A.D6A.html" target="_blank" rel="noopener noreferrer">Re: [請益] 有ML演算法美國專利在台灣求職會加分嗎？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 科技業板</span>
+        <span class="date">10/22</span>
+        <span class="metrics">推 13 · nuhciewc</span>
+    </p>
+    
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">軟體工作板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.ptt.cc/bbs/Soft_Job/M.1792564749.A.F7D.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Soft_Job/M.1792564749.A.F7D.html" target="_blank" rel="noopener noreferrer">[討論] 在AI浪潮下還需刷leetcode？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 軟體工作板</span>
+        <span class="date">10/21</span>
+        <span class="metrics">推 25 · leaf77689</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Soft_Job/M.1792761416.A.C96.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Soft_Job/M.1792761416.A.C96.html" target="_blank" rel="noopener noreferrer">[心得] 番外：外面忙堵洞，駭客早拿鑰匙走正門</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 軟體工作板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 6 · lance70176</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Soft_Job/M.1792709592.A.CA3.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Soft_Job/M.1792709592.A.CA3.html" target="_blank" rel="noopener noreferrer">[心得] PHP 爆大洞，別人熬夜，我們切一刀下班</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 軟體工作板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 4 · lance70176</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/Soft_Job/M.1792654671.A.42A.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/Soft_Job/M.1792654671.A.42A.html" target="_blank" rel="noopener noreferrer">[請益] 學弟的Offer請益(南神教/海外新創/其他半導體廠)</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 軟體工作板</span>
+        <span class="date">10/22</span>
+        <span class="metrics">推 0 · IntelNNP</span>
+    </p>
+    
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">電蝦板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.ptt.cc/bbs/PC_Shopping/M.1792754755.A.BC5.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/PC_Shopping/M.1792754755.A.BC5.html" target="_blank" rel="noopener noreferrer">[開箱] LIAN LI EDGE GOLD EG1000G V2金牌全模組</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 電蝦板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 6 · wolflsi</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/PC_Shopping/M.1792781397.A.987.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/PC_Shopping/M.1792781397.A.987.html" target="_blank" rel="noopener noreferrer">[情報] ZEN6(Venice) GB7.1分數(Linux)洩漏</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 電蝦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 2 · luvstarrysky</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/PC_Shopping/M.1792779245.A.D26.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/PC_Shopping/M.1792779245.A.D26.html" target="_blank" rel="noopener noreferrer">[菜單] 30K左右DDR4平台升級選擇</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 電蝦板</span>
+        <span class="date">10/24</span>
+        <span class="metrics">推 1 · YangJoe</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/PC_Shopping/M.1792771113.A.A0A.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/PC_Shopping/M.1792771113.A.A0A.html" target="_blank" rel="noopener noreferrer">Re: [情報] AMD FSR正式支援RX 6000系列顯示卡</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 電蝦板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 1 · mayolane</span>
+    </p>
+    
+</div>
+<div class="news-item" data-link="https://www.ptt.cc/bbs/PC_Shopping/M.1792748080.A.1A4.html">
+    <h4 class="news-item-title">
+        <a href="https://www.ptt.cc/bbs/PC_Shopping/M.1792748080.A.1A4.html" target="_blank" rel="noopener noreferrer">[菜單] 65K內 股票/多網頁/不排除遊戲(非3A)</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">PTT 電蝦板</span>
+        <span class="date">10/23</span>
+        <span class="metrics">推 0 · icai3127</span>
+    </p>
+    
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="ptt-hot" role="tabpanel" aria-labelledby="tab-ptt-hot">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="dcard-hot-template">
+                <h2 class="section-header">Dcard 熱門文章</h2>
+                <p class="snapshot-notice snapshot-notice--fresh">資料時間：2026-10-24 07:30 · 3.1 小時前收集 · 共 86 篇 · 4 個看板　<span class="snapshot-hint">本區資料由本機收集後隨網站更新，非即時抓取。</span></p>
+                <div class="source-panel">
+    <h3 class="source-panel-title">Dcard 看板</h3>
+    <ul class="source-list">
+        <li>Dcard 科技業板 · 科技業板</li>
+        <li>Dcard AI 工作者板 · AI 工作者板</li>
+        <li>Dcard 3C 板 · 3C 板</li>
+        <li>Dcard 理財板 · 理財板</li>
+    </ul>
+    <p class="source-status">依愛心數排序</p>
+</div>
+                <div class="category-section">
+    <h3 class="category-header">科技業板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262336389">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262336389" target="_blank" rel="noopener noreferrer">分享一些科技業的瓜（鬼故事）…</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/22 20:09</span>
+        <span class="metrics">愛心 223 · 留言 182 · 國立清華大學</span>
+    </p>
+    <p class="news-item-summary">來自朋友聚會聊到鬼故事，大家吃吃瓜，鬼故事1 一個清大正妹面進一線豬屎屋大廠 然後進去啥都不會 同事人都很好 非常熱心引導 甚至連高階主管都親自跳下來教 考績應該非常好，鬼故事2 宜蘭大畢 基礎科目大</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262340481">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262340481" target="_blank" rel="noopener noreferrer">台積運動會獎金出爐！！</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 16:36</span>
+        <span class="metrics">愛心 86 · 留言 34 · 國立虎尾科技大學</span>
+    </p>
+    <p class="news-item-summary">今年三萬 是三萬！！！，可以好好過個颱風天了🥹，我愛台積 再創奇蹟</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262340745">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262340745" target="_blank" rel="noopener noreferrer">2026台積電運動會獎金3萬元</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 17:29</span>
+        <span class="metrics">愛心 36 · 留言 30 · 酒一筋</span>
+    </p>
+    <p class="news-item-summary">今年運動會被颱風攪局取消，但獎金依舊相比去年成長5000元，從25000提升到30000，5月31日前到職的職級60至64、20至26、31至33（含副理）的員工都能領到（海外領等值獎金），公司都這麼</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262339072">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262339072" target="_blank" rel="noopener noreferrer">美光罷工個人觀點</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 11:34</span>
+        <span class="metrics">愛心 36 · 留言 114 · 哈哈</span>
+    </p>
+    <p class="news-item-summary">我在美光十幾年，對於這次工會簽約條件雖然跟口號有所落差，但結果仍然是長久正向的，Q2 底薪調整後影響底薪基數將直接疊加至勞退/IPP/EF津貼/跟部分季獎金權重，本人給予工會肯定，沒有功勞也有苦勞，更</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262338043">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262338043" target="_blank" rel="noopener noreferrer">聯發科真的會爆發嗎？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 01:46</span>
+        <span class="metrics">愛心 33 · 留言 41 · 國立成功大學 電機工程學系</span>
+    </p>
+    <p class="news-item-summary">高層一直說27年會爆發 但是股價越來越低 晶片看起來也難產 是不是要逃？？還是十樓高層都在吸血</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262340330">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262340330" target="_blank" rel="noopener noreferrer">現有資訊整理一版美光新制分潤</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 16:03</span>
+        <span class="metrics">愛心 23 · 留言 54 · 國立中山大學</span>
+    </p>
+    <p class="news-item-summary">用目前媒體公開數據 有錯歡迎指正與討論，我這樣看起來，目前的方案，大概可以比擬台積Y24-Y25的收入，但是遠遠遠遠比不上韓國同業的數字，美光比台積多賺很多，但只能領跟台積Y25年差不多的數字，跟工會</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262337704">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262337704" target="_blank" rel="noopener noreferrer">美光大改革！祭出全新獎金制度 現金＋股票並行、調高勞退提撥</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 00:26</span>
+        <span class="metrics">愛心 23 · 留言 45 · L</span>
+    </p>
+    <p class="news-item-summary">記者：林汪靜，發佈時間：2026.10.22 18：02，最後更新時間：2026.10.22 18：02，記憶體大廠美光與台中工會達成多項共識並簽署勞資協議，但與桃園工會仍協商無果，爭議再升級！美光今</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/tech_job/p/262341891">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/tech_job/p/262341891" target="_blank" rel="noopener noreferrer">美光新獎金制度感想</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 科技業板</span>
+        <span class="date">10/23 21:25</span>
+        <span class="metrics">愛心 22 · 留言 52 · 工程師</span>
+    </p>
+    <p class="news-item-summary">希望版上的大家不要再認為桃園工會、台中桃園的員工貪得無厭，不滿足E1拿300萬、E3拿600萬這個事情了，這樣金額的薪水大部分的人都是滿足的，大家真正怕的是，這些獎金計算的背後有太多都是美光自己訂的趴</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">AI 工作者板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262257983">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262257983" target="_blank" rel="noopener noreferrer">GROK生圖影的替代方案</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/06 11:17</span>
+        <span class="metrics">愛心 1 · 保險業務</span>
+    </p>
+    <p class="news-item-summary">Grok生圖生影雖然品質真不怎樣，但不是拿來商用，單純拿來個人娛樂用確實不錯！，主要還是贏在速度快，幾秒鐘批量生圖，影片的話也是幾十秒就能產，不過67%折扣（用三個月只收一個月費用）已經到期，看起來是</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262234927">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262234927" target="_blank" rel="noopener noreferrer">《數位轉型》AIPM 第 9 堂：我如何打造《息息 Sycamore》ETF 預規劃投資工具</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/01 17:06</span>
+        <span class="metrics">愛心 1 · happychichi</span>
+    </p>
+    <p class="news-item-summary">前幾堂課聊完 FamHub，怪奇小姐發現 Mocks over Docs 這招實在太好用，於是又手癢做了第二個產品：息息 Sycamore。這次要解決的不是家事，而是一件很多人放在心裡很久、卻一直沒動</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262200623">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262200623" target="_blank" rel="noopener noreferrer">#分享 手機太舊跑不動 AI 摘要的人有救了，但要先想清楚一件事：你願意讓什麼上雲？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">09/24 08:53</span>
+        <span class="metrics">愛心 1 · 嵌入式系統工程師</span>
+    </p>
+    <p class="news-item-summary">我手機是兩年前的中階機，之前用 InkNote 這款錄音 App 最大的痛點是：逐字稿跑得順，但按下「產生摘要」之後要等很久，手機還會發燙。一小時的會議大概要等到我去倒完水、回完 LINE、再滑一輪</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262335038">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262335038" target="_blank" rel="noopener noreferrer">💼【臺大計中資訊應用課程推出】115-1 📑統計分析系列｜🤯 資料整理好花時間？學會用 AI 提升分析效率！</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/22 15:15</span>
+        <span class="metrics">國立臺灣大學</span>
+    </p>
+    <p class="news-item-summary">每天一進公司，看到辦公桌上堆滿問卷數據、實驗紀錄與業務報表……😵‍💫 想到今天又要和這些數字「搏鬥」，是不是就覺得頭好痛？❌ 資料整理、清洗、編碼，花了好幾天還是理不清頭緒？❌ 面對 T 檢定、ANOVA</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262330102">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262330102" target="_blank" rel="noopener noreferrer">【臺大計中資訊應用課程推出】💻 115-1 程式設計系列🤖｜🌐 站上 AI 浪潮！不只會用 AI，更要懂 AI</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/21 15:40</span>
+        <span class="metrics">國立臺灣大學</span>
+    </p>
+    <p class="news-item-summary">AI 已融入我們的日常生活，你是否也好奇 ChatGPT 如何產生回答、AI 又是如何理解人類的語言？🤔，想深入了解 AI，卻擔心沒有程式基礎、看不懂程式碼？別擔心！💡 讓我們從好奇出發，一步步探索人</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262325228">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262325228" target="_blank" rel="noopener noreferrer">🎯【臺大計中資訊應用課程】問對問題，AI 才是你的最強外掛！AI 提問力：用大型語言模型問出有效問題</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/20 16:02</span>
+        <span class="metrics">國立臺灣大學</span>
+    </p>
+    <p class="news-item-summary">在 AI 普及的時代，許多人發現：丟給 ChatGPT 一堆需求，得到的回答卻總是空泛、答非所問？想設計問卷或收集資料，題目擬得模稜兩可，收回一堆無效填答？知道提詞（Prompt）重要，卻不知道背後嚴</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262323527">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262323527" target="_blank" rel="noopener noreferrer">🖌️【臺大計中資訊應用課程】115-1 影像處理系列課程🎨 AI 視覺創作：從想法到第一版✨ 用 AI 把你的想像力變成你的超能力！</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/20 09:24</span>
+        <span class="metrics">國立臺灣大學</span>
+    </p>
+    <p class="news-item-summary">🤖 AI 能生成圖片、影片與音樂，卻不一定能精準呈現你腦中的創意！，明明有滿滿的想法，卻不知道怎麼描述？好不容易生成圖片，卻發現人物不自然、風格不如預期，甚至文字變成亂碼？😵‍💫，別再只靠「重新生成」碰運</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/ai_builder/p/262297135">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/ai_builder/p/262297135" target="_blank" rel="noopener noreferrer">【臺大計中資訊應用課程】115-1 統計分析系列｜📈 告別數字焦慮！用 AI 掌握從資料整理到分析報告的實戰力</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard AI 工作者板</span>
+        <span class="date">10/14 16:46</span>
+        <span class="metrics">國立臺灣大學</span>
+    </p>
+    <p class="news-item-summary">每天都不太想上班，除了天氣不好，還有滿滿的問卷數據、實驗紀錄與業務報表……😱，❌ 資料整理、清洗、編碼，花了好幾天還是一團亂？❌ 面對 T 檢定、ANOVA、卡方檢定、迴歸分析，不知道該選哪一種？❌</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">3C 板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262339273">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262339273" target="_blank" rel="noopener noreferrer">#請益 石頭掃地機推薦嗎？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/23 12:24</span>
+        <span class="metrics">愛心 23 · 留言 23 · A</span>
+    </p>
+    <p class="news-item-summary">最近在找2萬以下的掃地機器人看到石頭Qrevo 2 Pro，吸力感覺很夠 有到25000pa 也有雙滾刷可以切斷頭髮，拖布屁屁也能伸縮掃到邊邊角角 然後地毯他能自動偵測把屁屁拿掉 但有個疑問他會記得回</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262336266">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262336266" target="_blank" rel="noopener noreferrer">#請益 想詢問犀牛盾air X流變灰和霧境灰實體有什麼差別以及使用心得</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/22 19:46</span>
+        <span class="metrics">愛心 4 · 留言 4 · 國立臺北護理健康大學</span>
+    </p>
+    <p class="news-item-summary">一直在這兩種顏色抉擇 我自己是18pro銀色的，我只覺得霧境灰看起來更透一點點而已，所以很想看看大家的實體照，也想聽大家的使用心得，再麻煩大家有空閒時間再分享給我了～謝謝大家！</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262338084">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262338084" target="_blank" rel="noopener noreferrer">#請益 耳機掉電異常</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/23 02:01</span>
+        <span class="metrics">愛心 3 · 留言 4 · 元智大學</span>
+    </p>
+    <p class="news-item-summary">如題，請問耳機原本有46%的電，接上電源後卻掉成13%是正常的嗎？（型號是AirPods pro 3），問了AI也說是有問題，這才剛買不到3個月…😭😭，（圖是接上電源之後當下就拔掉所以沒有⚡️的符號）</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262336559">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262336559" target="_blank" rel="noopener noreferrer">#討論 現在電腦有這麼貴？ 10幾年前的電腦，一台要1萬6？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/22 20:41</span>
+        <span class="metrics">愛心 3 · 留言 7 · P</span>
+    </p>
+    <p class="news-item-summary">臉書看到的文章。這規格不是應該3-5000元嗎？ 還是真的新的零組件漲到連N年前的舊電腦都漲了？店家說是1萬6預算太低，但我感覺是根本這台不值那個價吧。</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262343386">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262343386" target="_blank" rel="noopener noreferrer">#請益 #請益 四萬筆電選擇</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/24 01:46</span>
+        <span class="metrics">愛心 1 · 留言 5 · 國立臺灣科技大學</span>
+    </p>
+    <p class="news-item-summary">想請問如果會外接螢幕的話 建議買哪台呢？</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262340173">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262340173" target="_blank" rel="noopener noreferrer">#請益 救命！word插入照片真的讓我快瘋了！</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/23 15:32</span>
+        <span class="metrics">愛心 1 · 留言 2 · 軟體業務</span>
+    </p>
+    <p class="news-item-summary">請問有沒有大神可以救一下，如何在word插入表格，把表格調整到自己想要的大小後，然後插入照片可以依表格大小填滿呢？我試過網路上教學的各種方法，如先固定高度跟寬度，然後把儲存格邊界設成0，自動調整大小關</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262339613">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262339613" target="_blank" rel="noopener noreferrer">#分享 eiP Magnetix 2 可拆式鍵盤</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/23 13:46</span>
+        <span class="metrics">愛心 1 · 中山醫學大學</span>
+    </p>
+    <p class="news-item-summary">因為想讓ipad變成小筆電方便攜帶，網路看了看評，eiP，可折式鍵盤 最讓我滿意的是打字手，感與可拆式鍵盤 不用的時候可以拆卸 超級方便 也，可以拿下來把螢幕打直的使用 鍵盤也很輕巧 不會，很重，鍵盤</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/3c/p/262339603">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/3c/p/262339603" target="_blank" rel="noopener noreferrer">#分享 eiP Pencil 2全磁吸觸控筆</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 3C 板</span>
+        <span class="date">10/23 13:44</span>
+        <span class="metrics">愛心 1 · 中山醫學大學</span>
+    </p>
+    <p class="news-item-summary">最近買了ipad air M4 使用eiP Pencil一段時間後 最讓我驚喜的是它的書，寫流暢度與續航表現。可以用10個小時都沒問題 筆，身輕巧、磁吸充電方便完全不會掉 做筆記跟畫圖，幾乎沒有延遲</p>
+</div>
+    </div>
+</div>
+<div class="category-section">
+    <h3 class="category-header">理財板</h3>
+    <div class="category-news-list">
+        <div class="news-item" data-link="https://www.dcard.tw/f/money/p/262337068">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262337068" target="_blank" rel="noopener noreferrer">006208終於要分割了？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/22 22:23</span>
+        <span class="metrics">愛心 35 · 留言 22 · 國立虎尾科技大學</span>
+    </p>
+    <p class="news-item-summary">存了好久的富邦台50終於有分割消息了！，但就算沒有分割還是持續買進😂，大家記得去投票分割案</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262341057">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262341057" target="_blank" rel="noopener noreferrer">行政院昨（22）日宣布「台灣個人投資儲蓄帳戶」（TISA）2.0租稅優惠。￼</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/23 18:31</span>
+        <span class="metrics">愛心 25 · 留言 19 · 毛茸茸的圓貓</span>
+    </p>
+    <p class="news-item-summary">行政院昨（22）日宣布「台灣個人投資儲蓄帳戶」（TISA）2.0租稅優惠，納稅義務人、配偶及受其扶養未成年子女，每年提撥至帳戶金額在2.4萬元額度內，得自當年綜合所得總額減除，金管會力拚2027年完成</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262336532">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262336532" target="_blank" rel="noopener noreferrer">希望崩盤</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/22 20:35</span>
+        <span class="metrics">愛心 8 · 留言 22 · 哈哈</span>
+    </p>
+    <p class="news-item-summary">如題，之前回彈都是假象，準備崩盤，目標回測32000，我先跑了各位再見</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262339876">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262339876" target="_blank" rel="noopener noreferrer">台指期暫時有救了</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/23 14:31</span>
+        <span class="metrics">愛心 6 · 留言 9 · 買手</span>
+    </p>
+    <p class="news-item-summary">韓國敢在週末收紅K 棒，日本也幾乎要收紅K 棒這代表下週一很看好</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262338034">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262338034" target="_blank" rel="noopener noreferrer">黃仁勳不怕繳稅只怕變窮</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/23 01:44</span>
+        <span class="metrics">愛心 6 · 留言 1 · 保險業務</span>
+    </p>
+    <p class="news-item-summary">加州醞釀向億萬富豪加徵財富稅，輝達執行長黃仁勳態度，和部分科技富豪截然不同，加州的40號提案（Proposition 40），計畫針對資產超過10億美元的居民，一次性徵收5%財富稅，預計數年內增加數百</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262342390">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262342390" target="_blank" rel="noopener noreferrer">ETF的優缺點</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/23 22:50</span>
+        <span class="metrics">愛心 5 · A</span>
+    </p>
+    <p class="news-item-summary">我的看法，有不同意見請不要噴我。市值型：懶人的福音，可以獲得跟大盤平均的報酬，又不用選股，就可以得到跟大盤差不多的報酬，不想花時間學習跟盯盤的最優選擇。高股息型：可以獲得比債卷更高的息收，和比債卷高一</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262341740">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262341740" target="_blank" rel="noopener noreferrer">四口之家被動收入大於支出，還要繼續賣命上班嗎？</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/23 20:53</span>
+        <span class="metrics">愛心 3 · 留言 11 · L</span>
+    </p>
+    <p class="news-item-summary">大家好，想聽聽大家的看法，這篇不是炫耀，而是真的身處其中感到進退兩難。身邊的朋友大多還在為生計打拚，有些話實務上不太方便跟周遭的人吐露，所以上來聽聽板上大神的客觀分析。目前家裡是四口之家，孩子大約十歲</p>
+</div>
+<div class="news-item" data-link="https://www.dcard.tw/f/money/p/262336974">
+    <h4 class="news-item-title">
+        <a href="https://www.dcard.tw/f/money/p/262336974" target="_blank" rel="noopener noreferrer">台灣人逐漸菲律賓化</a>
+    </h4>
+    <p class="news-item-meta">
+        <span class="source">Dcard 理財板</span>
+        <span class="date">10/22 22:03</span>
+        <span class="metrics">愛心 3 · 國立勤益科技大學 機械工程系</span>
+    </p>
+    <p class="news-item-summary">民進黨洗腦已經洗到什麼程度了？就是「在同一個畫面裡，可以一面說65歲以上健保免費是惡法，又同時說65歲以上健保免費很妥當，而支持者們一點都不會覺得邏輯錯亂」的程度，至於40%是怎麼做到的？他們的思路是</p>
+</div>
+    </div>
+</div>
+            </template>
+            <section class="tab-content" id="dcard-hot" role="tabpanel" aria-labelledby="tab-dcard-hot">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <footer class="footer">
+                <p>Generated automatically at 2026-10-24 10:36 CST. 72 RSS/Atom sources checked. 204 articles selected. 4 Tech Blogs sources could not be fetched.</p>
+                <p class="small">RSS-first pipeline powered by AI summarization. All links open original articles.</p>
+            </footer>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="back-to-top" title="回到頂端" aria-label="回到頂端">↑</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabNav = document.querySelector('.tab-nav');
+            const loadedTabs = new Set(['zh-news']);
+
+            function loadTabContent(tabId) {
+                if (loadedTabs.has(tabId)) return;
+                var template = document.getElementById(tabId + '-template');
+                var panel = document.getElementById(tabId);
+                if (template && panel) {
+                    var content = template.content.cloneNode(true);
+                    panel.innerHTML = '';
+                    panel.appendChild(content);
+                    loadedTabs.add(tabId);
+                }
+            }
+
+            function activateTab(targetTab, options) {
+                options = options || {};
+                tabButtons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                    btn.setAttribute('tabindex', '-1');
+                });
+
+                tabContents.forEach(function (content) {
+                    content.classList.remove('active');
+                });
+
+                loadTabContent(targetTab);
+
+                var activeBtn = document.querySelector('[data-tab="' + targetTab + '"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.setAttribute('aria-selected', 'true');
+                    activeBtn.setAttribute('tabindex', '0');
+                    activeBtn.focus();
+                }
+
+                var panel = document.getElementById(targetTab);
+                if (panel) {
+                    panel.classList.add('active');
+                }
+
+                if (window.location.hash.replace('#', '') !== targetTab) {
+                    history.replaceState(null, '', '#' + targetTab);
+                }
+
+                if (options.scroll !== false) {
+                    var cardTop = document.querySelector('.card').getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: Math.max(0, cardTop), behavior: 'smooth' });
+                }
+            }
+
+            tabButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    activateTab(this.getAttribute('data-tab'));
+                });
+            });
+
+            document.addEventListener('click', function (e) {
+                var item = e.target.closest('.news-item');
+                if (!item || e.target.closest('a')) return;
+                var link = item.getAttribute('data-link');
+                if (link) {
+                    window.open(link, '_blank', 'noopener,noreferrer');
+                }
+            });
+
+            tabNav.addEventListener('keydown', function (e) {
+                var current = document.activeElement;
+                if (!current || !current.classList.contains('tab-btn')) return;
+
+                var buttons = Array.from(tabButtons);
+                var idx = buttons.indexOf(current);
+
+                switch (e.key) {
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        idx = (idx + 1) % buttons.length;
+                        activateTab(buttons[idx].getAttribute('data-tab'), { scroll: false });
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        idx = (idx - 1 + buttons.length) % buttons.length;
+                        activateTab(buttons[idx].getAttribute('data-tab'), { scroll: false });
+                        break;
+                    case 'Home':
+                        e.preventDefault();
+                        activateTab(buttons[0].getAttribute('data-tab'), { scroll: false });
+                        break;
+                    case 'End':
+                        e.preventDefault();
+                        activateTab(buttons[buttons.length - 1].getAttribute('data-tab'), { scroll: false });
+                        break;
+                }
+            });
+
+            var initialTab = window.location.hash.replace('#', '');
+            if (initialTab && document.querySelector('[data-tab="' + initialTab + '"]')) {
+                activateTab(initialTab, { scroll: false });
+            } else {
+                history.replaceState(null, '', '#zh-news');
+            }
+
+            var backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
