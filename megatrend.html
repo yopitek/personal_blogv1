@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時勢：看懂全球經濟大趨勢 | 互動書摘</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #1e3a5f;
+            --color-accent: #d4af37;
+            --color-bg: #fafbfc;
+            --color-card: #ffffff;
+            --color-text: #1a202c;
+            --color-text-secondary: #4a5568;
+            --color-border: #e2e8f0;
+            --font-display: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+            --font-body: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+        }
+
+        .dark {
+            --color-primary: #3b82f6;
+            --color-accent: #fbbf24;
+            --color-bg: #0f172a;
+            --color-card: #1e293b;
+            --color-text: #f1f5f9;
+            --color-text-secondary: #94a3b8;
+            --color-border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .bento-card {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-accent);
+        }
+
+        .dark .bento-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .col-span-6 {
+            grid-column: span 6;
+        }
+
+        .col-span-4 {
+            grid-column: span 4;
+        }
+
+        .col-span-3 {
+            grid-column: span 3;
+        }
+
+        .col-span-2 {
+            grid-column: span 2;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #2d5a8a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-author {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 800px;
+        }
+
+        .stat-card {
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-card) 0%, var(--color-bg) 100%);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            font-family: var(--font-display);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .quote-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--color-accent);
+            position: relative;
+        }
+
+        .dark .quote-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .quote-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 6rem;
+            color: var(--color-accent);
+            opacity: 0.2;
+            font-family: var(--font-display);
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-family: var(--font-display);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .insight-card h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dark .insight-card h3 {
+            color: var(--color-accent);
+        }
+
+        .insight-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--color-accent);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .country-card {
+            border-top: 3px solid var(--color-accent);
+        }
+
+        .country-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .dark .country-card h3 {
+            color: var(--color-accent);
+        }
+
+        .country-subtitle {
+            color: var(--color-text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .data-viz {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #2d5a8a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .data-viz-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .data-item {
+            text-align: center;
+        }
+
+        .data-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            font-family: var(--font-display);
+        }
+
+        .data-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        .action-card {
+            background: linear-gradient(135deg, var(--color-accent) 0%, #c49b2e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .action-card h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .action-card p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3rem;
+            height: 3rem;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .col-span-6,
+            .col-span-4,
+            .col-span-3,
+            .col-span-2 {
+                grid-column: span 1;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-author {
+                font-size: 1.25rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .theme-toggle {
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .data-viz-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="theme-icon"></i>
+        <span id="theme-text">深色模式</span>
+    </div>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="container">
+        <!-- Bento Grid -->
+        <div class="bento-grid">
+            <!-- Hero Card -->
+            <div class="bento-card hero-card col-span-6" style="animation-delay: 0s;">
+                <div class="hero-content">
+                    <div class="hero-author">
+                        <i class="fas fa-user-circle"></i> 小Lin 著
+                    </div>
+                    <h1 class="hero-title">時勢：看懂全球經濟大趨勢</h1>
+                    <p class="hero-description">
+                        前華爾街分析師用通俗語言解讀全球經濟脈動，將冰冷數據轉化為有溫度的故事，
+                        帶你掌握日本、韓國、印度、希臘、歐盟、英國、中東、俄羅斯、土耳其等國的經濟邏輯。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="bento-card stat-card col-span-2" style="animation-delay: 0.1s;">
+                <div class="stat-number">9</div>
+                <div class="stat-label">國家與地區</div>
+            </div>
+
+            <div class="bento-card stat-card col-span-2" style="animation-delay: 0.2s;">
+                <div class="stat-number">6</div>
+                <div class="stat-label">核心洞察</div>
+            </div>
+
+            <div class="bento-card stat-card col-span-2" style="animation-delay: 0.3s;">
+                <div class="stat-number">30</div>
+                <div class="stat-label">失落的年代</div>
+            </div>
+
+            <!-- Japan Story -->
+            <div class="bento-card country-card col-span-4" style="animation-delay: 0.4s;">
+                <h3><i class="fas fa-torii-gate"></i> 日本：從奇蹟到失落</h3>
+                <div class="country-subtitle">經濟奇蹟與泡沫破裂的教訓</div>
+                <p>
+                    日本二戰後迅速恢復，1954-1972年平均GDP成長率超過10%，創造「日本經濟奇蹟」。
+                    財團體系以銀行為核心整合產業鏈，在發展期提升效率，但也埋下禍根。
+                </p>
+                <p style="margin-top: 1rem;">
+                    1985年《廣場協議》成為轉折點。日圓大幅升值，日銀降息刺激經濟，卻引發史上最大資產泡沫。
+                    1989年日銀刺破泡沫後，日本陷入「失落的三十年」，通貨緊縮惡性循環至今。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">廣場協議</span>
+                    <span class="tag">資產泡沫</span>
+                    <span class="tag">失落30年</span>
+                    <span class="tag">量化寬鬆</span>
+                </div>
+            </div>
+
+            <!-- Data Visualization -->
+            <div class="bento-card data-viz col-span-2" style="animation-delay: 0.5s;">
+                <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem;">
+                    <i class="fas fa-chart-line"></i> 日本經濟數據
+                </h3>
+                <div class="data-item">
+                    <div class="data-value">3x</div>
+                    <div class="data-label">房價漲幅<br>(1985-1991)</div>
+                </div>
+                <div class="data-item" style="margin-top: 1.5rem;">
+                    <div class="data-value">4x</div>
+                    <div class="data-label">股市漲幅<br>(1985-1991)</div>
+                </div>
+                <div class="data-item" style="margin-top: 1.5rem;">
+                    <div class="data-value">-40%</div>
+                    <div class="data-label">泡沫破裂後跌幅</div>
+                </div>
+            </div>
+
+            <!-- Quote Card -->
+            <div class="bento-card quote-card col-span-3" style="animation-delay: 0.6s;">
+                <p class="quote-text">
+                    失落的三十年中，日本陷入通貨緊縮惡性循環。政府使盡解數但效果有限。
+                    人口高齡化導致內需不足，價格預期錨定，財團體系僵化。
+                </p>
+            </div>
+
+            <!-- Korea -->
+            <div class="bento-card country-card col-span-3" style="animation-delay: 0.7s;">
+                <h3><i class="fas fa-building"></i> 韓國：漢江奇蹟的代價</h3>
+                <div class="country-subtitle">財閥經濟與階層固化</div>
+                <p>
+                    1950年代韓國赤貧，軍閥時期朴正熙推動政府主導、財閥執行的發展模式，創造「漢江奇蹟」。
+                    但財閥「大到不能倒」，特殊「全租房」模式泡沫化風險高。
+                </p>
+                <p style="margin-top: 1rem;">
+                    快速發展的代價：階層僵化，財閥壟斷上升通道，「勺子階級論」盛行；
+                    生育率低迷，2023年僅0.72，全球最低。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">漢江奇蹟</span>
+                    <span class="tag">財閥體系</span>
+                    <span class="tag">生育率0.72</span>
+                </div>
+            </div>
+
+            <!-- India -->
+            <div class="bento-card country-card col-span-2" style="animation-delay: 0.8s;">
+                <h3><i class="fas fa-laptop-code"></i> 印度</h3>
+                <div class="country-subtitle">潛力與問題並存</div>
+                <p>
+                    1991年改革開放後騰飛，抓住低廉勞動力、IT教育、英語優勢成為全球外包中心。
+                    2023年超越中國成為世界第一人口大國。
+                </p>
+                <p style="margin-top: 1rem;">
+                    但底層問題嚴重：製造業薄弱、腐敗嚴重、種姓制度、貧富差距極大。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">外包之王</span>
+                    <span class="tag">人口紅利</span>
+                </div>
+            </div>
+
+            <!-- Greece -->
+            <div class="bento-card country-card col-span-2" style="animation-delay: 0.9s;">
+                <h3><i class="fas fa-landmark"></i> 希臘</h3>
+                <div class="country-subtitle">造假入歐的苦果</div>
+                <p>
+                    1999年找高盛做財務「化妝」隱藏債務，成功混入歐元區。
+                    加入後瘋狂借低息貸款，債務飆升。
+                </p>
+                <p style="margin-top: 1rem;">
+                    2008年真相揭露，失業率一度超過27%，成為史上第一個債務違約的已開發國家。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">債務危機</span>
+                    <span class="tag">財務造假</span>
+                </div>
+            </div>
+
+            <!-- EU -->
+            <div class="bento-card country-card col-span-2" style="animation-delay: 1s;">
+                <h3><i class="fas fa-flag"></i> 歐盟</h3>
+                <div class="country-subtitle">結構性矛盾</div>
+                <p>
+                    1999年推出統一貨幣歐元，但設計存在致命缺陷：統一貨幣政策，各國財政政策獨立。
+                </p>
+                <p style="margin-top: 1rem;">
+                    2010年希臘危機引爆歐債危機，蔓延至多國。歐洲央行印鈔救市，但效果有限。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">歐債危機</span>
+                    <span class="tag">歐元區</span>
+                </div>
+            </div>
+
+            <!-- UK Brexit -->
+            <div class="bento-card country-card col-span-3" style="animation-delay: 1.1s;">
+                <h3><i class="fas fa-crown"></i> 英國脫歐：政治賭博</h3>
+                <div class="country-subtitle">從日不落帝國到脫歐困境</div>
+                <p>
+                    英國曾是日不落帝國，二戰後淪為「歐洲病夫」，1973年加入歐洲共同體。
+                    2015年難民潮引發民怨，2016年公投52%贊成脫歐。
+                </p>
+                <p style="margin-top: 1rem;">
+                    脫歐談判異常複雜，2016-2022年換了5任首相。脫歐後經濟受創，與歐盟關係剪不斷理還亂。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">脫歐公投</span>
+                    <span class="tag">5任首相</span>
+                </div>
+            </div>
+
+            <!-- Middle East -->
+            <div class="bento-card country-card col-span-3" style="animation-delay: 1.2s;">
+                <h3><i class="fas fa-oil-can"></i> 中東：石油的祝福與詛咒</h3>
+                <div class="country-subtitle">資源依賴的困境</div>
+                <p>
+                    1960年OPEC成立。1973年石油危機，OPEC禁運西方，油價飆升4倍，中東「翻身」。
+                </p>
+                <p style="margin-top: 1rem;">
+                    但1990年後進入混亂期：頁岩油革命、可再生能源興起。
+                    中東面臨「資源詛咒」：過度依賴石油，經濟結構單一，轉型困難。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">OPEC</span>
+                    <span class="tag">石油危機</span>
+                    <span class="tag">資源詛咒</span>
+                </div>
+            </div>
+
+            <!-- Russia -->
+            <div class="bento-card country-card col-span-2" style="animation-delay: 1.3s;">
+                <h3><i class="fas fa-chess-rook"></i> 俄羅斯</h3>
+                <div class="country-subtitle">寡頭經濟困境</div>
+                <p>
+                    蘇聯解體後實施激進「休克療法」，導致經濟崩潰(GDP暴跌40%)、
+                    惡性通膨(1992年2,600%)、寡頭壟斷。
+                </p>
+                <p style="margin-top: 1rem;">
+                    2022年烏俄衝突後西方制裁重創經濟，過度依賴能源出口。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">休克療法</span>
+                    <span class="tag">寡頭壟斷</span>
+                </div>
+            </div>
+
+            <!-- Turkey -->
+            <div class="bento-card country-card col-span-2" style="animation-delay: 1.4s;">
+                <h3><i class="fas fa-mosque"></i> 土耳其</h3>
+                <div class="country-subtitle">反常規實驗</div>
+                <p>
+                    總統埃爾多安堅持「利率是惡魔的父母」，面對通膨降息而非升息，違背經濟學常識。
+                </p>
+                <p style="margin-top: 1rem;">
+                    結果2022年通膨率破100%，里拉暴貶，民生艱難。成為反面教材。
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="tag">通膨100%</span>
+                    <span class="tag">違背常識</span>
+                </div>
+            </div>
+
+            <!-- Core Insights Title -->
+            <div class="bento-card col-span-6"
+                style="animation-delay: 1.5s; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); text-align: center; padding: 3rem;">
+                <h2 style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">
+                    <i class="fas fa-lightbulb"></i> 核心洞察
+                </h2>
+                <p style="color: var(--color-text-secondary); font-size: 1.125rem;">
+                    全球經濟興衰背後的底層邏輯
+                </p>
+            </div>
+
+            <!-- Insight 1 -->
+            <div class="bento-card insight-card col-span-3" style="animation-delay: 1.6s;">
+                <h3>
+                    <div class="insight-icon"><i class="fas fa-chart-line"></i></div>
+                    資產泡沫的共性
+                </h3>
+                <p>
+                    過度寬鬆貨幣政策、信用過度擴張、資產價格脫離基本面。
+                    關鍵是泡沫背後的信用危機。如果銀行體系崩潰、信貸緊縮，則會陷入長期蕭條。
+                </p>
+            </div>
+
+            <!-- Insight 2 -->
+            <div class="bento-card insight-card col-span-3" style="animation-delay: 1.7s;">
+                <h3>
+                    <div class="insight-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    貨幣政策的局限
+                </h3>
+                <p>
+                    日本和歐洲證明印鈔票不是萬能的。流動性陷阱、結構性問題、通縮預期，印錢解決不了。
+                    貨幣政策只能治標，結構性改革才能治本。
+                </p>
+            </div>
+
+            <!-- Insight 3 -->
+            <div class="bento-card insight-card col-span-2" style="animation-delay: 1.8s;">
+                <h3>
+                    <div class="insight-icon"><i class="fas fa-users"></i></div>
+                    結構性問題的頑固
+                </h3>
+                <p>
+                    人口結構(日韓老齡化)、產業結構(中東俄羅斯依賴資源)、
+                    制度結構(印度種姓、俄羅斯寡頭、韓國財閥)需要長期艱難改革。
+                </p>
+            </div>
+
+            <!-- Insight 4 -->
+            <div class="bento-card insight-card col-span-2" style="animation-delay: 1.9s;">
+                <h3>
+                    <div class="insight-icon"><i class="fas fa-globe"></i></div>
+                    全球化的雙刃劍
+                </h3>
+                <p>
+                    帶來機遇也帶來風險，資本自由流動加劇波動，小國更易受衝擊。
+                    1997亞洲金融危機、2008次貸危機擴散都是例證。
+                </p>
+            </div>
+
+            <!-- Insight 5 -->
+            <div class="bento-card insight-card col-span-2" style="animation-delay: 2s;">
+                <h3>
+                    <div class="insight-icon"><i class="fas fa-balance-scale"></i></div>
+                    政治與經濟博弈
+                </h3>
+                <p>
+                    經濟政策往往受政治掣肘。希臘造假、英國脫歐賭博、土耳其降息意識形態。
+                    理想的經濟政策往往在政治現實中變形。
+                </p>
+            </div>
+
+            <!-- Insight 6 -->
+            <div class="bento-card insight-card col-span-6" style="animation-delay: 2.1s;">
+                <h3>
+                    <div class="insight-icon"><i class="fas fa-history"></i></div>
+                    歷史的韻律
+                </h3>
+                <p style="font-size: 1.125rem;">
+                    二戰後各國發展軌跡驚人相似：裙帶資本主義時期快速發展 → 1980年代金融自由化泡沫風險上升 →
+                    1990年代危機與調整 → 長期停滯或轉型陣痛。以史為鏡，可以知興替。
+                </p>
+            </div>
+
+            <!-- Quote Card 2 -->
+            <div class="bento-card quote-card col-span-6" style="animation-delay: 2.2s;">
+                <p class="quote-text">
+                    了解時勢，不是為了預測未來，而是為了在變局中做出更明智的選擇。
+                </p>
+            </div>
+
+            <!-- Action Card -->
+            <div class="bento-card action-card col-span-6" style="animation-delay: 2.3s;">
+                <h3><i class="fas fa-compass"></i> 關鍵啟示</h3>
+                <p>
+                    經濟學不是冰冷的數字，而是活生生的歷史、真實的博弈、民眾的命運。
+                    從日本失落的30年到韓國階層固化，從希臘造假入歐到土耳其反常規實驗——每個國家的興衰都值得深思。
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 1rem;">
+                        <i class="fas fa-exclamation-triangle"></i> 警惕資產泡沫
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 1rem;">
+                        <i class="fas fa-tools"></i> 重視結構性改革
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 1rem;">
+                        <i class="fas fa-book"></i> 尊重經濟規律
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 1rem 1.5rem; border-radius: 1rem;">
+                        <i class="fas fa-university"></i> 保持央行獨立
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="bento-card col-span-6"
+                style="animation-delay: 2.4s; text-align: center; background: var(--color-bg); border: 2px dashed var(--color-border);">
+                <p style="color: var(--color-text-secondary); font-size: 0.875rem;">
+                    <i class="fas fa-book-open"></i> 書摘由 Zenote 自動生成 |
+                    <i class="fas fa-user"></i> 作者：小Lin |
+                    <i class="fas fa-calendar"></i> 2025
+                </p>
+                <p style="color: var(--color-text-secondary); font-size: 0.75rem; margin-top: 0.5rem;">
+                    互動式 Bento Grid 網頁 - 財經科普風格
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = '深色模式';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = '淺色模式';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = '淺色模式';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Number counter animation
+        function animateNumber(element, target) {
+            const duration = 2000;
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Trigger number animations when visible
+        const numberObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target.querySelector('.stat-number');
+                    if (number && !number.classList.contains('animated')) {
+                        number.classList.add('animated');
+                        const targetValue = parseInt(number.textContent);
+                        number.textContent = '0';
+                        animateNumber(number, targetValue);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            numberObserver.observe(card);
+        });
+
+        // Add parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero-card');
+            if (hero) {
+                const scrolled = window.pageYOffset;
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add hover sound effect (optional)
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px) scale(1.01)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        console.log('%c時勢：看懂全球經濟大趨勢', 'font-size: 20px; font-weight: bold; color: #d4af37;');
+        console.log('%c互動式書摘網頁 by Zenote', 'font-size: 12px; color: #666;');
+    </script>
+</body>
+
+</html>
