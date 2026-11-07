@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不敗學習力大補帖</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #bbb;
+  color: #000;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ─── PAGE ─────────────────────────────── */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  margin: 10mm auto;
+  padding: 12mm 14mm 18mm;
+  box-shadow: 0 4px 24px rgba(0,0,0,.3);
+  position: relative;
+  page-break-after: always;
+}
+.page:last-child { page-break-after: auto; }
+
+/* corner marks */
+.page::before, .page::after {
+  content: '';
+  position: absolute;
+  width: 16mm; height: 16mm;
+  border: 2px solid #000;
+}
+.page::before { top: 6mm; left: 6mm; border-right: none; border-bottom: none; }
+.page::after  { bottom: 6mm; right: 6mm; border-left: none; border-top: none; }
+
+/* ─── MASTHEAD ──────────────────────────── */
+.masthead {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 2.5px solid #000;
+  margin-bottom: 10px;
+}
+.masthead-badge {
+  background: #000;
+  color: #fff;
+  font-size: 8.5pt;
+  font-weight: 900;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  letter-spacing: .15em;
+  min-width: 22px;
+}
+.masthead-main {
+  flex: 1;
+  padding: 8px 12px;
+  border-left: 2.5px solid #000;
+}
+.masthead-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 22pt;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+.masthead-sub {
+  font-size: 8pt;
+  color: #555;
+  letter-spacing: .1em;
+  margin-top: 3px;
+}
+.masthead-right {
+  padding: 8px 12px;
+  border-left: 2.5px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  min-width: 36mm;
+}
+.masthead-right .page-label {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 28pt;
+  font-weight: 900;
+  line-height: 1;
+  color: #e0e0e0;
+}
+.masthead-right .page-of {
+  font-size: 7pt;
+  color: #999;
+  letter-spacing: .1em;
+}
+
+/* ─── SECTION HEADER ───────────────────── */
+.sec-head {
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #000;
+  border-bottom: 1.5px solid #000;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sec-head:first-of-type { margin-top: 0; }
+.sec-num {
+  background: #000;
+  color: #fff;
+  font-size: 7pt;
+  font-weight: 900;
+  padding: 1px 5px;
+  letter-spacing: .05em;
+}
+
+/* ══════════ PAGE 1 ══════════════════════ */
+
+/* ─── QUEST GRID ──────────────────────── */
+.quest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.quest-card {
+  border: 1.5px solid #000;
+  padding: 7px 8px 8px;
+}
+.quest-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+.quest-n {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 20pt;
+  font-weight: 900;
+  color: #ddd;
+  line-height: 1;
+  min-width: 26px;
+}
+.quest-info { flex: 1; }
+.quest-title {
+  font-size: 10.5pt;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #000;
+}
+.quest-subtitle {
+  font-size: 7pt;
+  color: #777;
+  margin-top: 1px;
+}
+.quest-emoji {
+  font-size: 15pt;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.key-point {
+  font-size: 8pt;
+  font-weight: 500;
+  color: #000;
+  padding: 2px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  line-height: 1.4;
+}
+.key-point::before {
+  content: '◆';
+  font-size: 5pt;
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: #000;
+}
+
+.steps-wrap {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dashed #bbb;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.step {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  font-size: 7.5pt;
+  color: #333;
+  line-height: 1.4;
+}
+.sn {
+  border: 1.5px solid #000;
+  min-width: 15px; height: 15px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7pt; font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── PAGE FOOTER ──────────────────────── */
+.pg-foot {
+  position: absolute;
+  bottom: 8mm;
+  left: 14mm; right: 14mm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 4px;
+}
+.pg-foot-text { font-size: 6.5pt; color: #aaa; letter-spacing: .05em; }
+.pg-num {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 9pt; font-weight: 900;
+  border: 1.5px solid #000;
+  width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ══════════ PAGE 2 ══════════════════════ */
+
+/* ─── DAILY SCHEDULE TABLE ─────────────── */
+.daily-table { border: 1.5px solid #000; margin-bottom: 8px; }
+
+.dt-row {
+  display: grid;
+  grid-template-columns: 26mm 1fr;
+  border-bottom: 1.5px solid #000;
+}
+.dt-row:last-child { border-bottom: none; }
+
+.dt-time {
+  border-right: 1.5px solid #000;
+  padding: 8px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;     /* ← 白底 */
+  gap: 3px;
+}
+.dt-icon { font-size: 16pt; line-height: 1; }
+.dt-label { font-size: 8pt; font-weight: 900; color: #000; line-height: 1.2; }
+
+.dt-items {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+}
+.dt-item {
+  font-size: 8.5pt;
+  color: #000;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.45;
+}
+.checkbox {
+  width: 12px; height: 12px;
+  border: 1.5px solid #000;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.dt-item strong { font-weight: 700; }
+
+/* ─── TWO-COL LOWER SECTION ───────────── */
+.lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.lower-box { border: 1.5px solid #000; }
+.lower-box-head {
+  background: #000;
+  color: #fff;
+  font-size: 9pt;
+  font-weight: 900;
+  padding: 5px 9px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lower-box-head .ico { font-size: 11pt; }
+.lower-box-body { padding: 7px 9px; display: flex; flex-direction: column; gap: 4px; }
+.lower-item {
+  font-size: 8pt;
+  color: #000;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.45;
+}
+.lower-item .checkbox { width: 11px; height: 11px; }
+.lower-item strong { font-weight: 700; }
+
+/* ─── HABIT ROW ─────────────────────────── */
+.habit-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1.5px solid #000;
+  margin-bottom: 8px;
+}
+.habit-cell {
+  padding: 7px 8px;
+  border-right: 1.5px solid #000;
+}
+.habit-cell:last-child { border-right: none; }
+.habit-ico { font-size: 15pt; margin-bottom: 3px; }
+.habit-t { font-size: 8.5pt; font-weight: 900; margin-bottom: 2px; }
+.habit-d { font-size: 7pt; color: #444; line-height: 1.5; }
+
+/* ─── MOTTO ─────────────────────────────── */
+.motto {
+  border: 2px solid #000;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f8f8;
+}
+.motto-ico { font-size: 20pt; flex-shrink: 0; }
+.motto-t {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 9pt;
+  font-weight: 700;
+  line-height: 1.75;
+}
+.motto-t em {
+  font-style: normal;
+  font-size: 7.5pt;
+  color: #666;
+  display: block;
+  margin-top: 2px;
+}
+
+/* ══════════ PAGE 3 ═ 康乃爾筆記 ════════ */
+
+/* ─── INTRO STRIP ───────────────────────── */
+.intro-strip {
+  border: 1.5px solid #000;
+  padding: 8px 11px;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.intro-col-title {
+  font-size: 8.5pt;
+  font-weight: 900;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+.intro-list { display: flex; flex-direction: column; gap: 3px; }
+.intro-item {
+  font-size: 8pt;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  line-height: 1.45;
+}
+.intro-item::before {
+  content: '▶';
+  font-size: 5.5pt;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ─── ZONE LEGEND ───────────────────────── */
+.zone-legend {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1.5px solid #000;
+  margin-bottom: 10px;
+}
+.zone-cell {
+  padding: 7px 8px;
+  border-right: 1.5px solid #000;
+}
+.zone-cell:last-child { border-right: none; }
+.zone-label {
+  font-size: 7pt;
+  font-weight: 900;
+  letter-spacing: .08em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.zone-badge {
+  background: #000;
+  color: #fff;
+  font-size: 6pt;
+  padding: 1px 4px;
+}
+.zone-desc { font-size: 7pt; color: #333; line-height: 1.5; }
+
+/* ─── CORNELL DEMO ──────────────────────── */
+.demo-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: #555;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.demo-label::after { content: ''; flex: 1; height: 1px; background: #ccc; }
+
+.cornell-demo {
+  border: 2px solid #000;
+  font-size: 8pt;
+}
+
+/* top strip: subject */
+.cn-subject {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 2px solid #000;
+}
+.cn-s-cell {
+  padding: 5px 8px;
+  border-right: 1px solid #ccc;
+  font-size: 7.5pt;
+}
+.cn-s-cell:last-child { border-right: none; }
+.cn-s-label { font-size: 6.5pt; color: #999; margin-bottom: 1px; }
+.cn-s-val { font-weight: 700; color: #000; }
+
+/* main body */
+.cn-body {
+  display: grid;
+  grid-template-columns: 48mm 1fr;
+  border-bottom: 2px solid #000;
+}
+.cn-cue {
+  border-right: 2px solid #000;
+  padding: 8px;
+  min-height: 80mm;
+  background: #fafafa;
+}
+.cn-cue-head {
+  font-size: 6.5pt;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #999;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+}
+.cn-q {
+  font-size: 8pt;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #000;
+  display: flex;
+  gap: 4px;
+}
+.cn-q::before { content: 'Q.'; font-size: 7pt; color: #aaa; flex-shrink: 0; margin-top: 1px; }
+
+.cn-notes {
+  padding: 8px 10px;
+}
+.cn-notes-head {
+  font-size: 6.5pt;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #999;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+}
+.cn-bullet {
+  font-size: 8pt;
+  line-height: 1.55;
+  padding: 2px 0;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  color: #000;
+}
+.cn-bullet::before {
+  content: '•';
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.cn-sub {
+  font-size: 7.5pt;
+  color: #444;
+  padding-left: 14px;
+  line-height: 1.5;
+  display: flex;
+  gap: 5px;
+}
+.cn-sub::before { content: '→'; flex-shrink: 0; color: #999; }
+.cn-blank-line {
+  border-bottom: 1px dashed #ddd;
+  margin: 6px 0;
+}
+
+/* summary */
+.cn-summary {
+  padding: 7px 10px;
+  background: #f5f5f5;
+  border-left: none;
+}
+.cn-sum-head {
+  font-size: 6.5pt;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+}
+.cn-sum-text {
+  font-size: 8pt;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* ─── STEPS STRIP ────────────────────────── */
+.steps-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border: 1.5px solid #000;
+  margin-top: 8px;
+}
+.ss-cell {
+  border-right: 1.5px solid #000;
+  padding: 7px 8px;
+  text-align: center;
+}
+.ss-cell:last-child { border-right: none; }
+.ss-n {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16pt;
+  font-weight: 900;
+  color: #ddd;
+  line-height: 1;
+}
+.ss-t { font-size: 8.5pt; font-weight: 900; margin: 2px 0; }
+.ss-d { font-size: 6.5pt; color: #555; line-height: 1.5; }
+
+/* ─── TIP BOXES ─────────────────────────── */
+.tip-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+.tip-box { border: 1.5px solid #000; padding: 7px 9px; }
+.tip-title {
+  font-size: 8.5pt;
+  font-weight: 900;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tip-item {
+  font-size: 7.5pt;
+  color: #222;
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  margin-bottom: 3px;
+  line-height: 1.45;
+}
+.tip-item::before { content: '✓'; font-weight: 900; flex-shrink: 0; }
+
+/* ─── PRINT ──────────────────────────────── */
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; width: 100%; padding: 12mm 14mm 18mm; }
+  @page { size: A4; margin: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ PAGE 1 ═══════════════ -->
+<div class="page">
+
+  <div class="masthead">
+    <div class="masthead-badge">五年級專屬</div>
+    <div class="masthead-main">
+      <div class="masthead-title">不敗學習力大補帖</div>
+      <div class="masthead-sub">哈佛學霸的 10 大聰明讀書法 ── 打怪升級指南</div>
+    </div>
+    <div class="masthead-right">
+      <div class="page-label">P1</div>
+      <div class="page-of">第一頁，共三頁</div>
+    </div>
+  </div>
+
+  <div class="sec-head"><span class="sec-num">PART 1</span>各關卡學習重點與破解步驟</div>
+
+  <div class="quest-grid">
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">01</div>
+        <div class="quest-info">
+          <div class="quest-title">重新認識學習</div>
+          <div class="quest-subtitle">為何而戰？</div>
+        </div>
+        <div class="quest-emoji">🎯</div>
+      </div>
+      <div class="key-point">讀書是為了讓自己變強，不只是為考試</div>
+      <div class="key-point">找出「非做不可」的事，建立內在動力</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>寫下一個你「最想學會的技能」或「最想解決的問題」</div>
+        <div class="step"><span class="sn">2</span>告訴自己：「只要找對方法，我也能變學霸！」</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">02</div>
+        <div class="quest-info">
+          <div class="quest-title">超級記憶力</div>
+          <div class="quest-subtitle">大腦的魔法</div>
+        </div>
+        <div class="quest-emoji">🧠</div>
+      </div>
+      <div class="key-point">大腦喜歡「有畫面的故事」，死背容易忘</div>
+      <div class="key-point">用聯想和故事記東西，效果超強</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>背單字時，把它想成一部好笑的卡通故事</div>
+        <div class="step"><span class="sn">2</span>把學到的東西，講給爸媽或同學聽（費曼學習法！）</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">03</div>
+        <div class="quest-info">
+          <div class="quest-title">神奇筆記力</div>
+          <div class="quest-subtitle">寫下來才算你的</div>
+        </div>
+        <div class="quest-emoji">📝</div>
+      </div>
+      <div class="key-point">不是老師說什麼就抄什麼，要寫自己的重點</div>
+      <div class="key-point">用康乃爾筆記法分出「重點區」與「問題區」</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>上課用自己的話記重點（不用每個字都抄）</div>
+        <div class="step"><span class="sn">2</span>下課後在筆記旁補上關鍵字和小問題</div>
+        <div class="step"><span class="sn">3</span>複習時遮住重點，只看關鍵字來回想</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">04</div>
+        <div class="quest-info">
+          <div class="quest-title">無敵閱讀力</div>
+          <div class="quest-subtitle">看懂比看快重要</div>
+        </div>
+        <div class="quest-emoji">🔍</div>
+      </div>
+      <div class="key-point">讀書要像偵探，帶著問題去找答案</div>
+      <div class="key-point">先看標題和圖片，猜猜看內容是什麼</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>先花 3 分鐘快速瀏覽標題、圖片和重點</div>
+        <div class="step"><span class="sn">2</span>把標題變成一個問題（如：植物如何呼吸？）</div>
+        <div class="step"><span class="sn">3</span>帶著問題讀課文，找出答案</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">05</div>
+        <div class="quest-info">
+          <div class="quest-title">抗遺忘複習力</div>
+          <div class="quest-subtitle">打敗遺忘大魔王</div>
+        </div>
+        <div class="quest-emoji">⚔️</div>
+      </div>
+      <div class="key-point">大腦學完後很快就忘！要在快忘記時複習</div>
+      <div class="key-point">間隔複習：1天→7天→16天→35天</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>下課後花 2 分鐘回想上課的大重點</div>
+        <div class="step"><span class="sn">2</span>今天學的，明天複習一次、下週再考自己</div>
+        <div class="step"><span class="sn">3</span>自己做小卡片測試，不要只反覆看課本</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">06</div>
+        <div class="quest-info">
+          <div class="quest-title">打敗拖延症</div>
+          <div class="quest-subtitle">兩分鐘超人</div>
+        </div>
+        <div class="quest-emoji">🐸</div>
+      </div>
+      <div class="key-point">拖延是因為覺得事情麻煩，把任務切小就不怕</div>
+      <div class="key-point">降低開始的難度，立刻行動！完成比完美更好</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span><strong>兩分鐘法則</strong>：2 分鐘能做完的事現在立刻做！</div>
+        <div class="step"><span class="sn">2</span>先把書本打開、鉛筆拿好，告訴自己「先拚 5 分鐘」</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">07</div>
+        <div class="quest-info">
+          <div class="quest-title">雷射專注力</div>
+          <div class="quest-subtitle">不分心的秘密</div>
+        </div>
+        <div class="quest-emoji">🍅</div>
+      </div>
+      <div class="key-point">大腦一次只能做好一件事，專心效率最高</div>
+      <div class="key-point">創造不被打擾的環境，是專注的第一步</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>寫作業時把手機和玩具收到別的地方</div>
+        <div class="step"><span class="sn">2</span><strong>番茄鐘</strong>：專心 25 分鐘 → 開心休息 5 分鐘</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">08</div>
+        <div class="quest-info">
+          <div class="quest-title">時間管理大師</div>
+          <div class="quest-subtitle">先吃大青蛙</div>
+        </div>
+        <div class="quest-emoji">⏰</div>
+      </div>
+      <div class="key-point">把最重要最難的事先做完，後面就輕鬆了！</div>
+      <div class="key-point">每天選出 3 件最重要的事，集中精力完成</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>每天選出 3 件一定要做完的重要事情</div>
+        <div class="step"><span class="sn">2</span>放學回家精神最好時，先解決最難的功課</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">09</div>
+        <div class="quest-info">
+          <div class="quest-title">情緒魔法師</div>
+          <div class="quest-subtitle">不氣餒的力量</div>
+        </div>
+        <div class="quest-emoji">💪</div>
+      </div>
+      <div class="key-point">考試緊張或考差難過都很正常，學會放鬆</div>
+      <div class="key-point">錯誤是讓自己變聰明的好機會，不是失敗</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>考試前緊張時，閉眼做 3 次慢慢的深呼吸</div>
+        <div class="step"><span class="sn">2</span>考不好時問自己：「下次可以怎麼改進？」</div>
+      </div>
+    </div>
+
+    <div class="quest-card">
+      <div class="quest-header">
+        <div class="quest-n">10</div>
+        <div class="quest-info">
+          <div class="quest-title">無敵成長思維</div>
+          <div class="quest-subtitle">我「還」不會</div>
+        </div>
+        <div class="quest-emoji">🌱</div>
+      </div>
+      <div class="key-point">沒有人天生什麼都會，努力就能讓大腦變聰明</div>
+      <div class="key-point">遇到困難就在後面加一個「還」字！</div>
+      <div class="steps-wrap">
+        <div class="step"><span class="sn">1</span>把「這太難了，我不會」→「我『還』不會，可以練習！」</div>
+        <div class="step"><span class="sn">2</span>每天稱讚自己的認真努力，而不只是看分數</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pg-foot">
+    <span class="pg-foot-text">《不敗學習力》劉軒 著 ── 五年級專屬讀書筆記</span>
+    <div class="pg-num">1</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 2 ═══════════════ -->
+<div class="page">
+
+  <div class="masthead">
+    <div class="masthead-badge">五年級專屬</div>
+    <div class="masthead-main">
+      <div class="masthead-title">學霸日常計畫表</div>
+      <div class="masthead-sub">每天行動 × 每週計畫 × 長期好習慣 ── 印出來每天對照使用</div>
+    </div>
+    <div class="masthead-right">
+      <div class="page-label">P2</div>
+      <div class="page-of">第二頁，共三頁</div>
+    </div>
+  </div>
+
+  <div class="sec-head"><span class="sec-num">PART 2</span>每日行動時間表</div>
+
+  <div class="daily-table">
+
+    <div class="dt-row">
+      <div class="dt-time">
+        <div class="dt-icon">🌅</div>
+        <div class="dt-label">早晨<br>起跑</div>
+      </div>
+      <div class="dt-items">
+        <div class="dt-item"><span class="checkbox"></span><strong>設定目標：</strong>刷牙洗臉時，想今天最重要的 3 件事是什麼？</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>我想要⋯：</strong>寫下今天 3 個「我想要」完成的學習目標</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>回憶昨天：</strong>不看筆記，直接在腦中回想昨天學了什麼？</div>
+      </div>
+    </div>
+
+    <div class="dt-row">
+      <div class="dt-time">
+        <div class="dt-icon">🏫</div>
+        <div class="dt-label">在<br>學校</div>
+      </div>
+      <div class="dt-items">
+        <div class="dt-item"><span class="checkbox"></span><strong>下課回想：</strong>鐘聲一響，花 1–2 分鐘回想老師說了什麼大重點</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>自己的話：</strong>用自己的話記筆記，不清楚的地方立刻做記號</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>勇敢發問：</strong>舉手提問或表達想法，不懂問到懂！</div>
+      </div>
+    </div>
+
+    <div class="dt-row">
+      <div class="dt-time">
+        <div class="dt-icon">🏠</div>
+        <div class="dt-label">放學<br>回家</div>
+      </div>
+      <div class="dt-items">
+        <div class="dt-item"><span class="checkbox"></span><strong>兩分鐘法則：</strong>馬上拿出聯絡簿、把便當盒拿去洗（不拖！）</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>吃青蛙：</strong>精神最好時，先把最難、最不想寫的功課完成</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>番茄鐘：</strong>計時器 25 分鐘專心 → 站起來走動休息 5 分鐘</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>抽認卡：</strong>複習今天新學的單字或成語（每天 5–10 張）</div>
+      </div>
+    </div>
+
+    <div class="dt-row">
+      <div class="dt-time">
+        <div class="dt-icon">🌙</div>
+        <div class="dt-label">睡前<br>收尾</div>
+      </div>
+      <div class="dt-items">
+        <div class="dt-item"><span class="checkbox"></span><strong>費曼回想：</strong>今天學到什麼？能不能用自己的話說出來？</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>整理書包：</strong>明天要帶的書本文具全放好，不怕早上手忙腳亂</div>
+        <div class="dt-item"><span class="checkbox"></span><strong>明天目標：</strong>寫下明天早上第一件要做的事，安心入睡</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="lower-grid">
+    <div class="lower-box">
+      <div class="lower-box-head"><span class="ico">🗓️</span>每週行動</div>
+      <div class="lower-box-body">
+        <div class="lower-item"><span class="checkbox"></span><strong>週末回顧：</strong>快速翻一遍國語、數學、社會重點</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>魔法筆記：</strong>檢查筆記，補上「重點整理」和問題</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>未雨綢繆：</strong>查看下週考試，提早一點點準備</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>費曼練習：</strong>把這週最重要的知識「教」給家人聽</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>開心放電：</strong>戶外跑跳流汗，讓大腦充飽電！</div>
+      </div>
+    </div>
+    <div class="lower-box">
+      <div class="lower-box-head"><span class="ico">✅</span>學習重點單（每天打勾）</div>
+      <div class="lower-box-body">
+        <div class="lower-item"><span class="checkbox"></span><strong>主動出擊：</strong>上課帶著問題聽，不懂就舉手</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>教就是學：</strong>今天學到的，講給家人聽</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>打敗拖延：</strong>該做的事馬上動手，不拖拉</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>專心無敵：</strong>書桌保持乾淨，只放需要的東西</div>
+        <div class="lower-item"><span class="checkbox"></span><strong>不怕失敗：</strong>寫錯題目沒關係，是我變聰明的機會！</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head"><span class="sec-num">長期</span>每天培養的好習慣</div>
+
+  <div class="habit-row">
+    <div class="habit-cell">
+      <div class="habit-ico">🔍</div>
+      <div class="habit-t">保持好奇心</div>
+      <div class="habit-d">常問「為什麼會這樣？」這是最強的學習超能力！對世界充滿好奇。</div>
+    </div>
+    <div class="habit-cell">
+      <div class="habit-ico">📵</div>
+      <div class="habit-t">找回專注力</div>
+      <div class="habit-d">規定自己玩平板或看電視的時間，讓大腦習慣沒有聲光也能專心。</div>
+    </div>
+    <div class="habit-cell">
+      <div class="habit-ico">🌟</div>
+      <div class="habit-t">成長型思維</div>
+      <div class="habit-d">遇到困難就說：「太好了，這是我升級的關卡！」把困難變成動力。</div>
+    </div>
+    <div class="habit-cell">
+      <div class="habit-ico">🏀</div>
+      <div class="habit-t">運動與早睡</div>
+      <div class="habit-d">每天睡飽 9–10 小時，多運動，大腦發展更好，記憶力變超人！</div>
+    </div>
+  </div>
+
+  <div class="motto">
+    <div class="motto-ico">★</div>
+    <div class="motto-t">
+      學習就像打遊戲練功，用對方法每天進步一點點，你一定會成為超厲害的「不敗得主」！加油💪
+      <em>──《不敗學習力》哈佛心理學家劉軒 給五年級同學的話</em>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span class="pg-foot-text">《不敗學習力》劉軒 著 ── 五年級專屬讀書筆記</span>
+    <div class="pg-num">2</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 3 ═══════════════ -->
+<div class="page">
+
+  <div class="masthead">
+    <div class="masthead-badge">五年級專屬</div>
+    <div class="masthead-main">
+      <div class="masthead-title">康乃爾筆記法</div>
+      <div class="masthead-sub">哈佛學霸用的超強筆記系統 ── 學會它，複習效率提升兩倍！</div>
+    </div>
+    <div class="masthead-right">
+      <div class="page-label">P3</div>
+      <div class="page-of">第三頁，共三頁</div>
+    </div>
+  </div>
+
+  <div class="sec-head"><span class="sec-num">是什麼</span>康乃爾筆記法介紹</div>
+
+  <div class="intro-strip">
+    <div>
+      <div class="intro-col-title">📌 為什麼要用康乃爾筆記？</div>
+      <div class="intro-list">
+        <div class="intro-item">普通筆記只是「把內容抄下來」，沒有真正進入大腦</div>
+        <div class="intro-item">康乃爾筆記法讓你同步「記錄」＋「思考」＋「整理」</div>
+        <div class="intro-item">複習時不用把筆記全部重看，只要看「提問區」就夠了</div>
+        <div class="intro-item">康乃爾大學教授發明，全球頂尖學校學生都在使用</div>
+      </div>
+    </div>
+    <div>
+      <div class="intro-col-title">🗺️ 四個區域的功能</div>
+      <div class="intro-list">
+        <div class="intro-item"><strong>主題區（上）：</strong>科目、日期、上課主題</div>
+        <div class="intro-item"><strong>筆記區（右）：</strong>上課時寫重點，用自己的話，句子要短</div>
+        <div class="intro-item"><strong>提問區（左）：</strong>下課後，把筆記區內容整理成問題</div>
+        <div class="intro-item"><strong>總結區（下）：</strong>用 2–3 句話總結這頁學到什麼</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone-legend">
+    <div class="zone-cell">
+      <div class="zone-label"><span class="zone-badge">上方</span>主題區</div>
+      <div class="zone-desc">寫上科目、日期、今天的上課主題。讓你一眼知道這是哪堂課的筆記。</div>
+    </div>
+    <div class="zone-cell">
+      <div class="zone-label"><span class="zone-badge">右側</span>筆記區</div>
+      <div class="zone-desc">上課時在這裡記重點。用自己的話寫，句子要短，可以用條列式。</div>
+    </div>
+    <div class="zone-cell">
+      <div class="zone-label"><span class="zone-badge">左側</span>提問區</div>
+      <div class="zone-desc">下課後24小時內填寫。把右側筆記轉換成問題，像在考自己一樣。</div>
+    </div>
+    <div class="zone-cell">
+      <div class="zone-label"><span class="zone-badge">下方</span>總結區</div>
+      <div class="zone-desc">用 2–3 句話，告訴沒來上課的同學「今天學了什麼？」這頁的精華。</div>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:8px;"><span class="sec-num">範例</span>康乃爾筆記示範（自然課：植物的光合作用）</div>
+
+  <div class="demo-label">實際範本 ── 可以照這個格式練習</div>
+
+  <div class="cornell-demo">
+
+    <!-- subject row -->
+    <div class="cn-subject">
+      <div class="cn-s-cell">
+        <div class="cn-s-label">科目 Subject</div>
+        <div class="cn-s-val">自然科學</div>
+      </div>
+      <div class="cn-s-cell">
+        <div class="cn-s-label">日期 Date</div>
+        <div class="cn-s-val">　　年　　月　　日</div>
+      </div>
+      <div class="cn-s-cell">
+        <div class="cn-s-label">主題 Topic</div>
+        <div class="cn-s-val">植物的光合作用</div>
+      </div>
+    </div>
+
+    <!-- body: cue + notes -->
+    <div class="cn-body">
+
+      <div class="cn-cue">
+        <div class="cn-cue-head">← 提問區（課後填寫）</div>
+        <div class="cn-q">光合作用需要哪三樣東西？</div>
+        <div class="cn-q">光合作用產生了什麼？</div>
+        <div class="cn-q">葉綠素在哪裡？它的作用是什麼？</div>
+        <div class="cn-q">沒有光，植物還能進行光合作用嗎？</div>
+        <div class="cn-q">光合作用和動物呼吸有什麼關係？</div>
+      </div>
+
+      <div class="cn-notes">
+        <div class="cn-notes-head">筆記區（上課時填寫）→</div>
+        <div class="cn-bullet">光合作用 = 植物製造食物的過程</div>
+        <div class="cn-sub">需要：陽光 ＋ 水 ＋ 二氧化碳</div>
+        <div class="cn-sub">產生：葡萄糖（養分）＋ 氧氣</div>
+        <div class="cn-blank-line"></div>
+        <div class="cn-bullet">葉綠素：葉片裡的綠色物質</div>
+        <div class="cn-sub">功能：吸收陽光，啟動光合作用</div>
+        <div class="cn-sub">葉片綠色 = 葉綠素很多</div>
+        <div class="cn-blank-line"></div>
+        <div class="cn-bullet">光合作用只在有光的時候進行</div>
+        <div class="cn-sub">晚上沒有光 → 植物停止光合作用</div>
+        <div class="cn-blank-line"></div>
+        <div class="cn-bullet">植物釋出的氧氣，是動物呼吸用的</div>
+        <div class="cn-sub">人類呼吸吸入氧氣 → 呼出二氧化碳</div>
+        <div class="cn-sub">植物吸收二氧化碳 → 釋出氧氣，互補！</div>
+      </div>
+    </div>
+
+    <!-- summary -->
+    <div class="cn-summary">
+      <div class="cn-sum-head">總結區（下課後用 2–3 句話整理）</div>
+      <div class="cn-sum-text">
+        植物利用葉片中的葉綠素，吸收陽光、水和二氧化碳，進行光合作用製造葡萄糖，同時釋放出氧氣。這個過程只在有光的時候進行，產生的氧氣也是所有動物呼吸所需要的。
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sec-head" style="margin-top:8px;"><span class="sec-num">步驟</span>康乃爾筆記五步驟</div>
+
+  <div class="steps-strip">
+    <div class="ss-cell">
+      <div class="ss-n">1</div>
+      <div class="ss-t">上課記筆記</div>
+      <div class="ss-d">在右側「筆記區」寫重點，用自己的話，句子要短</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-n">2</div>
+      <div class="ss-t">24小時內整理</div>
+      <div class="ss-d">趁記憶新鮮，把潦草的地方補清楚，加上靈感</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-n">3</div>
+      <div class="ss-t">填寫提問區</div>
+      <div class="ss-d">把右側筆記轉換成問題，寫在左側提問區</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-n">4</div>
+      <div class="ss-t">寫下總結</div>
+      <div class="ss-d">在最下方用 2–3 句話，總結這頁學到什麼</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-n">5</div>
+      <div class="ss-t">遮住複習</div>
+      <div class="ss-d">遮住筆記區，只看提問區，考考自己能不能回答</div>
+    </div>
+  </div>
+
+  <div class="tip-row">
+    <div class="tip-box">
+      <div class="tip-title">✅ 好筆記應該這樣做</div>
+      <div class="tip-item">句子要短，用自己的話，不用每個字都抄</div>
+      <div class="tip-item">上課不懂的地方用「？」標記，課後補問</div>
+      <div class="tip-item">下課 24 小時內一定要整理，趁還記得！</div>
+      <div class="tip-item">提問區寫得好，複習就輕鬆</div>
+      <div class="tip-item">看提問考自己，比反覆看筆記有效 3 倍</div>
+    </div>
+    <div class="tip-box">
+      <div class="tip-title">❌ 這些筆記習慣要改掉</div>
+      <div class="tip-item">老師說什麼就抄什麼（沒有整理）</div>
+      <div class="tip-item">寫完筆記就收起來，考試前才翻出來看</div>
+      <div class="tip-item">複習時只是「看」筆記，沒有主動回想</div>
+      <div class="tip-item">筆記本寫了很多，但說不出今天學了什麼</div>
+      <div class="tip-item">只畫螢光筆，沒有真正理解內容</div>
+    </div>
+  </div>
+
+  <div class="pg-foot">
+    <span class="pg-foot-text">《不敗學習力》劉軒 著 ── 五年級專屬讀書筆記</span>
+    <div class="pg-num">3</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mac OS on ZenNote</title><link>https://zennote.app/categories/mac-os/</link><description>Recent content in Mac OS on ZenNote</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zennote.app/categories/mac-os/index.xml" rel="self" type="application/rss+xml"/><item><title>2026 Mac 新手裝機指南:學長姐私藏的 25 款必裝軟體</title><link>https://zennote.app/post/2026-mac-%E6%96%B0%E6%89%8B%E8%A3%9D%E6%A9%9F%E6%8C%87%E5%8D%97/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://zennote.app/post/2026-mac-%E6%96%B0%E6%89%8B%E8%A3%9D%E6%A9%9F%E6%8C%87%E5%8D%97/</guid><description>&lt;p&gt;還記得我第一次打開 MacBook 的時候,整個人是懵的。&lt;/p&gt;
+&lt;p&gt;滑鼠右鍵怎麼按？視窗怎麼放大？檔案總管在哪？用了十幾年 Windows,換到 Mac 就像突然搬到國外,什麼都要重新學。&lt;/p&gt;
+&lt;p&gt;最痛苦的是,我花了快一個月才摸索出「哦原來 Mac 可以裝這些軟體讓它更好用」。那種「早知道就好了」的感覺,真的很 frustrating。&lt;/p&gt;
+&lt;p&gt;所以這篇就是我的「早知道清單」。這 25 款軟體,是我用了三年 Mac 後真心覺得必裝的。裝完之後,你會發現 Mac 不只好看,是真的好用。&lt;/p&gt;
+&lt;h2 id="系統工具讓-mac-更順手-"&gt;系統工具:讓 Mac 更順手 🛠️
+&lt;/h2&gt;&lt;p&gt;從 Windows 轉過來,最不習慣的就是「找不到熟悉的功能」。這幾個工具能讓你快速找回熟悉感。&lt;/p&gt;
+&lt;h3 id="raycast---超強啟動器"&gt;Raycast - 超強啟動器
+&lt;/h3&gt;&lt;p&gt;Mac 內建的 Spotlight 很陽春對吧？Raycast 是加強版,而且強大到你會懷疑人生。&lt;/p&gt;
+&lt;p&gt;按一個快捷鍵,就能搜檔案、開 App、查單字、算數學、控制音樂播放、切換 Wi-Fi⋯⋯甚至可以直接叫 AI 幫你改文案。它還內建剪貼簿歷史、視窗管理、番茄鐘,根本把十幾個 App 塞進一個啟動器裡。&lt;/p&gt;
+&lt;p&gt;如果你只能裝一個效率工具,就裝 Raycast。它會改變你用 Mac 的方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 任何需要快速操作的時候 - 開檔案、搜尋、執行指令&lt;/p&gt;
+&lt;h3 id="rectangle---視窗管理神器"&gt;Rectangle - 視窗管理神器
+&lt;/h3&gt;&lt;p&gt;Windows 能用 Win + 方向鍵把視窗貼邊,Mac 原生做不到這點真的很痛。Rectangle 就是來解決這問題的。&lt;/p&gt;
+&lt;p&gt;按個快捷鍵,視窗自動分左半、右半、全螢幕、四分之一螢幕。寫程式碼配文件、看影片配做筆記,多工超方便。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 需要同時看多個視窗(寫程式、剪片、做簡報)&lt;/p&gt;
+&lt;h3 id="clipy---剪貼簿歷史記錄"&gt;Clipy - 剪貼簿歷史記錄
+&lt;/h3&gt;&lt;p&gt;你有沒有過「剛剛複製的東西被覆蓋掉」的崩潰經驗？Clipy 幫你記住所有複製過的內容,隨時叫出來用。&lt;/p&gt;
+&lt;p&gt;按 ⌘+Shift+V 就能看到完整的複製歷史。寫文章、整理資料的時候超實用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 需要頻繁複製貼上(寫文章、整理資料、填表格)&lt;/p&gt;
+&lt;h3 id="appcleaner---軟體移除工具"&gt;AppCleaner - 軟體移除工具
+&lt;/h3&gt;&lt;p&gt;Mac 移除軟體不能只丟到垃圾桶,很多設定檔和快取會殘留在系統裡。AppCleaner 幫你完全移除,連相關檔案都一起清。&lt;/p&gt;
+&lt;p&gt;用法超簡單,把 App 拖進去就搞定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 移除不要的軟體,保持系統乾淨&lt;/p&gt;
+&lt;h3 id="the-unarchiver---解壓縮工具"&gt;The Unarchiver - 解壓縮工具
+&lt;/h3&gt;&lt;p&gt;Mac 內建的解壓縮只能處理 .zip,碰到 .rar、.7z 就 GG 了。The Unarchiver 支援幾乎所有壓縮格式,而且完全免費。&lt;/p&gt;
+&lt;p&gt;裝了它,你就不用煩惱「這個檔案怎麼打不開」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 下載壓縮檔、處理各種格式&lt;/p&gt;
+&lt;h3 id="popclip---選取文字增強工具"&gt;PopClip - 選取文字增強工具
+&lt;/h3&gt;&lt;p&gt;選取文字後,PopClip 會跳出一排功能鈕:複製、翻譯、搜尋、改大小寫、發推特⋯⋯你想得到的操作它都有。&lt;/p&gt;
+&lt;p&gt;就像手機上長按會跳出選單,PopClip 讓 Mac 的文字操作變超直覺。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 大量處理文字(寫作、翻譯、整理資料)&lt;/p&gt;
+&lt;h3 id="snipaste---截圖標註神器"&gt;Snipaste - 截圖標註神器
+&lt;/h3&gt;&lt;p&gt;Mac 內建的截圖功能陽春到不行。Snipaste 不只截圖,還能直接在圖上畫箭頭、加文字、打馬賽克,截完的圖還可以釘在桌面上當便利貼。&lt;/p&gt;
+&lt;p&gt;寫教學文件、回報 bug、做簡報的時候超好用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 需要截圖並標註(教學、報告、溝通)&lt;/p&gt;
+&lt;h2 id="生產力工具筆記文書學習-"&gt;生產力工具:筆記、文書、學習 📝
+&lt;/h2&gt;&lt;p&gt;工作和學習離不開這些工具。裝好它們,你的生產力直接起飛。&lt;/p&gt;
+&lt;h3 id="notion---全能筆記工具"&gt;Notion - 全能筆記工具
+&lt;/h3&gt;&lt;p&gt;Notion 根本是數位工作者的瑞士刀。筆記、待辦清單、專案管理、資料庫、知識庫⋯⋯全包了。&lt;/p&gt;
+&lt;p&gt;我用 Notion 管理所有專案、寫文章大綱、追蹤學習進度。它的資料庫功能特別強,可以做出很彈性的資訊管理系統。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 專案管理、團隊協作、個人知識庫&lt;/p&gt;
+&lt;h3 id="obsidian---本地筆記利器"&gt;Obsidian - 本地筆記利器
+&lt;/h3&gt;&lt;p&gt;如果你喜歡把筆記存在自己電腦,Obsidian 是最佳選擇。它用 Markdown 格式,筆記之間可以互相連結,慢慢建立起自己的知識網絡。&lt;/p&gt;
+&lt;p&gt;很多人用它做第二大腦、寫論文、整理讀書筆記。資料都在本機,不怕雲端服務掛掉。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 長期知識累積、學術研究、注重隱私&lt;/p&gt;
+&lt;h3 id="anki---記憶卡片神器"&gt;Anki - 記憶卡片神器
+&lt;/h3&gt;&lt;p&gt;要背單字、準備考試、記專業術語,Anki 是最強工具。它用「間隔重複」演算法,在你快忘記的時候提醒你複習,記憶效率超高。&lt;/p&gt;
+&lt;p&gt;醫學生、考證照的、學語言的都在用。介面雖然有點醜,但效果真的好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 考試準備、背單字、記大量資訊&lt;/p&gt;
+&lt;h3 id="libreoffice---免費文書處理"&gt;LibreOffice - 免費文書處理
+&lt;/h3&gt;&lt;p&gt;不想付 Microsoft Office 的訂閱費？LibreOffice 是開源免費的替代方案,該有的功能都有。&lt;/p&gt;
+&lt;p&gt;Word、Excel、PowerPoint 的檔案都能開,基本文書處理完全夠用。偶爾要編輯 Office 文件,裝這個就對了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 文書處理、偶爾要編輯 Office 檔案&lt;/p&gt;
+&lt;h3 id="dropbox---雲端同步老牌"&gt;Dropbox - 雲端同步老牌
+&lt;/h3&gt;&lt;p&gt;雖然 iCloud 很方便,但 Dropbox 跨平台支援更好。Windows、Linux、手機都能無縫同步。&lt;/p&gt;
+&lt;p&gt;我習慣把重要專案和文件都放 Dropbox,換電腦也不用擔心資料不見。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 跨裝置同步、團隊共享資料&lt;/p&gt;
+&lt;h3 id="堅果雲---國產雲端同步"&gt;堅果雲 - 國產雲端同步
+&lt;/h3&gt;&lt;p&gt;如果你常跟中國的團隊協作,堅果雲會更順。它在中國的同步速度比 Dropbox 快很多。&lt;/p&gt;
+&lt;p&gt;而且支援 WebDAV,可以配合很多筆記 App 用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 兩岸協作、需要 WebDAV 同步&lt;/p&gt;
+&lt;h2 id="開發者工具寫-code-必裝-"&gt;開發者工具:寫 Code 必裝 💻
+&lt;/h2&gt;&lt;p&gt;如果你是工程師或想學寫程式,這些工具能讓開發環境專業起來。&lt;/p&gt;
+&lt;h3 id="iterm2---終端機強化版"&gt;iTerm2 - 終端機強化版
+&lt;/h3&gt;&lt;p&gt;Mac 內建的終端機很基本,iTerm2 是加強版。支援分割視窗、搜尋歷史指令、自動完成、快速複製貼上⋯⋯功能多到用不完。&lt;/p&gt;
+&lt;p&gt;寫程式的人幾乎都用 iTerm2。裝完再搭配 Oh My Zsh,你的終端機會帥到不行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 常用終端機的開發者、系統管理&lt;/p&gt;
+&lt;h3 id="visual-studio-code---程式碼編輯器之王"&gt;Visual Studio Code - 程式碼編輯器之王
+&lt;/h3&gt;&lt;p&gt;VS Code 根本是現在最多人用的程式碼編輯器。免費、開源、擴充套件超豐富,什麼語言都能寫。&lt;/p&gt;
+&lt;p&gt;內建 Git 整合、偵錯工具、智慧補全,而且啟動速度快。微軟難得做對一件事。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 寫程式、改設定檔、處理程式碼&lt;/p&gt;
+&lt;h3 id="sublime-text---輕量編輯器"&gt;Sublime Text - 輕量編輯器
+&lt;/h3&gt;&lt;p&gt;如果你覺得 VS Code 太肥,Sublime Text 更輕量。開啟速度超快,介面簡潔,適合快速編輯檔案。&lt;/p&gt;
+&lt;p&gt;我通常用它改設定檔、寫 Markdown、處理大型文字檔。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 快速編輯文字檔、處理大檔案&lt;/p&gt;
+&lt;h3 id="google-antigravity---ai-開發平台新星"&gt;Google Antigravity - AI 開發平台新星
+&lt;/h3&gt;&lt;p&gt;這是 Google 在 2025 年 11 月剛推出的 AI 開發工具,目前完全免費。&lt;/p&gt;
+&lt;p&gt;它基於 VS Code,但整個操作邏輯改成「AI Agent 協作」。你用自然語言描述需求,AI 幫你生成程式碼、除錯、重構。支援 Gemini 3、Claude Sonnet 4.5、GPT 等多種模型。&lt;/p&gt;
+&lt;p&gt;如果你對 AI 輔助開發有興趣,值得試試。這工具才剛出來,還在快速進化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; AI 輔助開發、想嘗試新工具&lt;/p&gt;
+&lt;h3 id="wget---下載工具"&gt;wget - 下載工具
+&lt;/h3&gt;&lt;p&gt;Command Line 下載檔案的經典工具。簡單、可靠、功能強。&lt;/p&gt;
+&lt;p&gt;下載大檔案、寫自動化腳本的時候會用到。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 指令列下載、自動化腳本&lt;/p&gt;
+&lt;h3 id="yt-dlp---影片下載神器"&gt;yt-dlp - 影片下載神器
+&lt;/h3&gt;&lt;p&gt;想下載 YouTube、Vimeo、Twitter 影片？yt-dlp 最強。&lt;/p&gt;
+&lt;p&gt;指令簡單、支援超多網站、還能選畫質和字幕。學習資源、會議錄影都能輕鬆存下來。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 下載線上影片、收藏教學資源&lt;/p&gt;
+&lt;h3 id="aria2---多線程下載加速"&gt;aria2 - 多線程下載加速
+&lt;/h3&gt;&lt;p&gt;下載大檔案的時候,aria2 可以同時開多個連線加速,比單線快很多。&lt;/p&gt;
+&lt;p&gt;支援 HTTP、FTP、BT、磁力連結。進階使用者必備。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 下載大檔案、需要續傳&lt;/p&gt;
+&lt;h3 id="ffmpeg---影音轉檔瑞士刀"&gt;ffmpeg - 影音轉檔瑞士刀
+&lt;/h3&gt;&lt;p&gt;處理影片、音訊的萬用工具。轉格式、剪輯、合併、提取音軌⋯⋯只要是影音處理,ffmpeg 都能搞定。&lt;/p&gt;
+&lt;p&gt;雖然是指令列工具,但功能強到很多圖形軟體底層都用它。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 批次轉檔、處理影音、自動化處理&lt;/p&gt;
+&lt;h2 id="創作--娛樂影音社群bbs-"&gt;創作 + 娛樂:影音、社群、BBS 🎬
+&lt;/h2&gt;&lt;p&gt;工作之餘也要放鬆一下,這些工具讓你的 Mac 更全能。&lt;/p&gt;
+&lt;h3 id="capcut---免費剪片神器"&gt;CapCut - 免費剪片神器
+&lt;/h3&gt;&lt;p&gt;抖音母公司 ByteDance 出品的剪片軟體,國際版叫 CapCut。&lt;/p&gt;
+&lt;p&gt;重點是完全免費！濾鏡、特效、音樂、貼紙全都能用,不用付錢買會員。介面簡單好上手,剪 YouTube 影片、Vlog、短影音都很適合。&lt;/p&gt;
+&lt;p&gt;Mac 版本建議裝 5.9 或更早版本,6.x 版本要 TikTok 帳號登入比較麻煩。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 剪影片、做社群短影音&lt;/p&gt;
+&lt;h3 id="firefox---注重隱私的瀏覽器"&gt;Firefox - 注重隱私的瀏覽器
+&lt;/h3&gt;&lt;p&gt;雖然 Mac 有內建 Safari,但 Firefox 對隱私保護更好,而且跨平台同步方便。&lt;/p&gt;
+&lt;p&gt;擴充套件豐富、開發者工具強,很多工程師都用 Firefox。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 注重隱私、要跨平台同步&lt;/p&gt;
+&lt;h3 id="kkbox---華語音樂首選"&gt;KKBOX - 華語音樂首選
+&lt;/h3&gt;&lt;p&gt;台灣本土的音樂串流服務,華語歌曲特別齊全。&lt;/p&gt;
+&lt;p&gt;如果你主要聽華語音樂,KKBOX 的曲庫比 Spotify 完整很多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 聽華語流行音樂&lt;/p&gt;
+&lt;h3 id="foobar2000---發燒友音樂播放器"&gt;foobar2000 - 發燒友音樂播放器
+&lt;/h3&gt;&lt;p&gt;如果你有收藏高品質音樂檔(FLAC、APE),foobar2000 是專業音樂播放器。&lt;/p&gt;
+&lt;p&gt;音質好、可自訂性高、支援各種音訊格式。發燒友愛用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 播放本地音樂、追求音質&lt;/p&gt;
+&lt;h3 id="wechat--telegram--whatsapp---通訊三寶"&gt;WeChat / Telegram / WhatsApp - 通訊三寶
+&lt;/h3&gt;&lt;p&gt;這三個通訊軟體各有用途:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WeChat&lt;/strong&gt;: 跟中國朋友聯絡、工作溝通必備&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt;: 注重隱私、群組功能強、很多技術社群都用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt;: 國際最多人用、跟國外客戶聯絡方便&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根據需求選,或是全裝也行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 即時通訊、工作溝通、國際聯繫&lt;/p&gt;
+&lt;h3 id="welly---bbs-瀏覽器"&gt;Welly - BBS 瀏覽器
+&lt;/h3&gt;&lt;p&gt;對,PTT 還活著,而且活得好好的。&lt;/p&gt;
+&lt;p&gt;Welly 是 Mac 上最好用的 BBS 瀏覽器,連線穩、功能齊。想上 PTT 逛八卦板、找資訊,裝 Welly 就對了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什麼時候用:&lt;/strong&gt; 上 PTT、其他 BBS 站&lt;/p&gt;
+&lt;h2 id="一鍵安裝魔法homebrew-批次腳本-"&gt;一鍵安裝魔法:Homebrew 批次腳本 🚀
+&lt;/h2&gt;&lt;p&gt;看到這你可能會想:「這麼多軟體,要一個一個裝到什麼時候？」&lt;/p&gt;
+&lt;p&gt;別擔心,Mac 有個神器叫 &lt;strong&gt;Homebrew&lt;/strong&gt;,用指令就能快速裝軟體。&lt;/p&gt;
+&lt;h3 id="homebrew-是什麼"&gt;Homebrew 是什麼？
+&lt;/h3&gt;&lt;p&gt;把它想成 Mac 的應用程式商店,只是用指令操作。一行指令就能裝好軟體,更新也超方便。&lt;/p&gt;
+&lt;h3 id="安裝-homebrew"&gt;安裝 Homebrew
+&lt;/h3&gt;&lt;p&gt;打開終端機(或 iTerm2),貼上這行指令:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/bin/bash -c &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;等個幾分鐘,Homebrew 就裝好了。&lt;/p&gt;
+&lt;h3 id="個別安裝指令"&gt;個別安裝指令
+&lt;/h3&gt;&lt;p&gt;裝好 Homebrew 後,用這些指令裝軟體:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令列工具&lt;/strong&gt;(用 &lt;code&gt;brew install&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install yt-dlp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install aria2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;圖形介面軟體&lt;/strong&gt;(用 &lt;code&gt;brew install --cask&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask iterm2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask visual-studio-code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask sublime-text
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask raycast
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask rectangle
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask clipy
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask appcleaner
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask the-unarchiver
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask snipaste
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask notion
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask obsidian
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask anki
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask libreoffice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask firefox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask telegram
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask wechat
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask whatsapp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask kkbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask foobar2000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask welly
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="一鍵批次安裝腳本"&gt;一鍵批次安裝腳本
+&lt;/h3&gt;&lt;p&gt;懶得一個一個打？複製這整段,貼到終端機執行就搞定:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;span class="lnt"&gt;49
+&lt;/span&gt;&lt;span class="lnt"&gt;50
+&lt;/span&gt;&lt;span class="lnt"&gt;51
+&lt;/span&gt;&lt;span class="lnt"&gt;52
+&lt;/span&gt;&lt;span class="lnt"&gt;53
+&lt;/span&gt;&lt;span class="lnt"&gt;54
+&lt;/span&gt;&lt;span class="lnt"&gt;55
+&lt;/span&gt;&lt;span class="lnt"&gt;56
+&lt;/span&gt;&lt;span class="lnt"&gt;57
+&lt;/span&gt;&lt;span class="lnt"&gt;58
+&lt;/span&gt;&lt;span class="lnt"&gt;59
+&lt;/span&gt;&lt;span class="lnt"&gt;60
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🚀 開始安裝 Mac 必備軟體...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 檢查是否已安裝 Homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; ! &lt;span class="nb"&gt;command&lt;/span&gt; -v brew &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&amp;gt; /dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;📦 安裝 Homebrew...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; /bin/bash -c &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 更新 Homebrew&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🔄 更新 Homebrew...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝指令列工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;⚙️ 安裝指令列工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install yt-dlp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install aria2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝系統輔助工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🛠️ 安裝系統輔助工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask iterm2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask raycast
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask rectangle
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask clipy
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask appcleaner
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask the-unarchiver
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask snipaste
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝生產力工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;📝 安裝生產力工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask notion
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask obsidian
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask anki
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask libreoffice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask dropbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝開發工具&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;💻 安裝開發工具...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask visual-studio-code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask sublime-text
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 安裝通訊 &amp;amp; 娛樂軟體&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;🎬 安裝通訊與娛樂軟體...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask firefox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask telegram
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask wechat
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask whatsapp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask kkbox
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask foobar2000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install --cask welly
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;✅ 安裝完成！&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;💡 部分軟體可能需要手動下載:&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - PopClip (Mac App Store 付費軟體)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - 堅果雲 (官網下載: https://www.jianguoyun.com/)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - CapCut (官網下載: https://www.capcut.cn/)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34; - Google Antigravity (官網下載: https://antigravity.google/)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;複製整段腳本&lt;/li&gt;
+&lt;li&gt;貼到終端機&lt;/li&gt;
+&lt;li&gt;按 Enter&lt;/li&gt;
+&lt;li&gt;去泡杯咖啡,等它跑完&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;跑完之後,大部分軟體就裝好了。少數幾個(PopClip、堅果雲、CapCut、Google Antigravity)要手動去官網下載,但也很快。&lt;/p&gt;
+&lt;h2 id="開始探索你的-mac-"&gt;開始探索你的 Mac 🎉
+&lt;/h2&gt;&lt;p&gt;裝完這些軟體,你的 Mac 基本上已經是一台戰鬥力滿點的生產力機器了。&lt;/p&gt;
+&lt;p&gt;但記住:&lt;strong&gt;工具是起點,習慣才是關鍵。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;裝了 Raycast 不代表你就會變高效,重點是養成「用快捷鍵啟動」的習慣。裝了 Notion 不代表你就能管好專案,重點是建立自己的工作流程。&lt;/p&gt;
+&lt;p&gt;我的建議:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;不要一次裝太多&lt;/strong&gt;,先挑幾個最需要的裝&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;花時間習慣新工具&lt;/strong&gt;,至少用一週再決定要不要留&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;慢慢探索&lt;/strong&gt;,很多工具都有隱藏功能等你發掘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Mac 是個很棒的平台,配上對的工具,它能幫你完成很多事。&lt;/p&gt;
+&lt;p&gt;開始探索吧,祝你用得開心！💪&lt;/p&gt;</description></item></channel></rss>
