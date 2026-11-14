@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME100 Comic Biographies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <!-- Logo removed as requested -->
+        </div>
+        <div class="language-selector">
+            <select id="lang-select">
+                <option value="en">English</option>
+                <option value="zh-TW">繁體中文</option>
+                <option value="zh-CN">简体中文</option>
+                <option value="ja">日本語</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" style="text-align: center; margin-bottom: 3rem; margin-top: -40px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">啟發人生的漫畫名人傳記</h1>
+            <p
+                style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.6;">
+                透過身歷其境的漫畫傳記，探索世界最具影響力的人的故事
+            </p>
+        </section>
+
+        <div class="books-grid"
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem 0; margin-top: -80px;">
+            <!-- Book Card: Stephen Hawking -->
+            <a href="reader.html?book=stephen_hawking" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/stephen_hawking/images/cover.png" alt="Stephen Hawking Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="hawking"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">英國物理學家</p>
+                    <h3 class="book-name" data-book="hawking" style="font-size: 1.6rem;">史蒂芬·霍金</h3>
+                    <p class="book-subtitle" data-book="hawking" class="book-desc">
+                        從牛津到星辰的璀璨人生
+                    </p>
+                </div>
+            </a>
+
+            <!-- Book Card: Kobe Bryant - NEW! -->
+            <a href="reader.html?book=kobe_bryant" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/kobe_bryant/images/cover.png" alt="Kobe Bryant Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="kobe"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">NBA 傳奇球星</p>
+                    <h3 class="book-name" data-book="kobe" style="font-size: 1.6rem;">柯比·布萊恩</h3>
+                    <p class="book-subtitle" data-book="kobe" class="book-desc">
+                        黑曼巴傳奇
+                    </p>
+                </div>
+            </a>
+
+            <!-- Book Card: Benjamin Franklin - NEW! -->
+            <a href="reader.html?book=benjamin_franklin" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/benjamin_franklin/images/cover.png" alt="Benjamin Franklin Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="franklin"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">American
+                        Founding Father</p>
+                    <h3 class="book-name" data-book="franklin" style="font-size: 1.6rem;">Benjamin Franklin</h3>
+                    <p class="book-subtitle" data-book="franklin" class="book-desc">
+                        The First American
+                    </p>
+                </div>
+            </a>
+
+            <!-- Book Card: Steve Jobs - NEW! -->
+            <a href="reader.html?book=steve_jobs" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/steve_jobs/images/cover.png" alt="Steve Jobs Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="jobs"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Apple Co-founder
+                    </p>
+                    <h3 class="book-name" data-book="jobs" style="font-size: 1.6rem;">Steve Jobs</h3>
+                    <p class="book-subtitle" data-book="jobs" class="book-desc">
+                        Stay Hungry, Stay Foolish
+                    </p>
+                </div>
+            </a>
+
+            <!-- Book Card: Albert Einstein - NEW! -->
+            <a href="reader.html?book=einstein" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/einstein/images/cover.png" alt="Albert Einstein Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="einstein"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Theoretical
+                        Physicist</p>
+                    <h3 class="book-name" data-book="einstein" style="font-size: 1.6rem;">Albert Einstein</h3>
+                    <p class="book-subtitle" data-book="einstein" class="book-desc">
+                        The Genius Who Changed Our Universe
+                    </p>
+                </div>
+            </a>
+
+            <!-- Book Card: Henry Kissinger - NEW! -->
+            <a href="reader.html?book=kissinger" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/kissinger/images/cover.png" alt="Henry Kissinger Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="kissinger"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Cold War
+                        Diplomat</p>
+                    <h3 class="book-name" data-book="kissinger" style="font-size: 1.6rem;">Henry Kissinger</h3>
+                    <p class="book-subtitle" data-book="kissinger" class="book-desc">
+                        The Architect of Power
+                    </p>
+                </div>
+            </a>
+
+            <!-- Book Card: Abraham Lincoln - NEW! -->
+            <a href="reader.html?book=abraham_lincoln" class="book-card" style="max-width: 360px; width: 100%;">
+                <div class="book-cover">
+                    <img src="books/abraham_lincoln/images/cover.png" alt="Abraham Lincoln Cover">
+                </div>
+                <div class="book-info">
+                    <p class="book-category" data-book="lincoln"
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">16th U.S.
+                        President</p>
+                    <h3 class="book-name" data-book="lincoln" style="font-size: 1.6rem;">Abraham Lincoln</h3>
+                    <p class="book-subtitle" data-book="lincoln" class="book-desc">
+                        The Great Emancipator
+                    </p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+        // Comprehensive language content for all UI elements
+        const content = {
+            'en': {
+                heroTitle: 'Inspiring Lives Through Comics',
+                heroDesc: 'Explore the stories of the world\'s most influential people through immersive comic biographies',
+                books: {
+                    hawking: { category: 'British Physicist', name: 'Stephen Hawking', subtitle: 'From Oxford to the Stars' },
+                    kobe: { category: 'NBA Legend', name: 'Kobe Bryant', subtitle: 'The Black Mamba Legend' },
+                    franklin: { category: 'American Founding Father', name: 'Benjamin Franklin', subtitle: 'The First American' },
+                    jobs: { category: 'Apple Co-founder', name: 'Steve Jobs', subtitle: 'Stay Hungry, Stay Foolish' },
+                    einstein: { category: 'Theoretical Physicist', name: 'Albert Einstein', subtitle: 'The Genius Who Changed Our Universe' },
+                    kissinger: { category: 'Cold War Diplomat', name: 'Henry Kissinger', subtitle: 'The Architect of Power' },
+                    lincoln: { category: '16th U.S. President', name: 'Abraham Lincoln', subtitle: 'The Great Emancipator' }
+                }
+            },
+            'zh-TW': {
+                heroTitle: '啟發人生的漫畫名人傳記',
+                heroDesc: '透過身歷其境的漫畫傳記，探索世界最具影響力的人的故事',
+                books: {
+                    hawking: { category: '英國物理學家', name: '史蒂芬·霍金', subtitle: '從牛津到星辰的璀璨人生' },
+                    kobe: { category: 'NBA 傳奇球星', name: '柯比·布萊恩', subtitle: '黑曼巴傳奇' },
+                    franklin: { category: '美國開國元勳', name: '班傑明·富蘭克林', subtitle: '美國第一人' },
+                    jobs: { category: '蘋果共同創辦人', name: '賈伯斯', subtitle: '求知若飢，虛心若愚' },
+                    einstein: { category: '理論物理學家', name: '阿爾伯特·愛因斯坦', subtitle: '改變宇宙的天才' },
+                    kissinger: { category: '冷戰時期外交家', name: '季辛吉', subtitle: '權力的建築師' },
+                    lincoln: { category: '美國第16任總統', name: '亞伯拉罕·林肯', subtitle: '偉大的解放者' }
+                }
+            },
+            'zh-CN': {
+                heroTitle: '启发人生的漫画名人传记',
+                heroDesc: '通过身临其境的漫画传记，探索世界最具影响力的人的故事',
+                books: {
+                    hawking: { category: '英国物理学家', name: '史蒂芬·霍金', subtitle: '从牛津到星辰的璀璨人生' },
+                    kobe: { category: 'NBA 传奇球星', name: '科比·布莱恩特', subtitle: '黑曼巴传奇' },
+                    franklin: { category: '美国开国元勋', name: '本杰明·富兰克林', subtitle: '美国第一人' },
+                    jobs: { category: '苹果联合创始人', name: '史蒂夫·乔布斯', subtitle: '求知若饥，虚心若愚' },
+                    einstein: { category: '理论物理学家', name: '阿尔伯特·爱因斯坦', subtitle: '改变宇宙的天才' },
+                    kissinger: { category: '冷战时期外交家', name: '亨利·基辛格', subtitle: '权力的建筑师' },
+                    lincoln: { category: '美国第16任总统', name: '亚伯拉罕·林肯', subtitle: '伟大的解放者' }
+                }
+            },
+            'ja': {
+                heroTitle: '人生を照らす、マンガの伝記',
+                heroDesc: '没入型のマンガ伝記を通じて、世界で最も影響力のある人々の物語を探求しましょう',
+                books: {
+                    hawking: { category: 'イギリスの物理学者', name: 'スティーヴン・ホーキング', subtitle: 'オックスフォードから星々へ' },
+                    kobe: { category: 'NBA レジェンド', name: 'コービー・ブライアント', subtitle: 'ブラックマンバの伝説' },
+                    franklin: { category: 'アメリカ建国の父', name: 'ベンジャミン・フランクリン', subtitle: 'アメリカ最初の偉人' },
+                    jobs: { category: 'Apple共同創業者', name: 'スティーブ・ジョブズ', subtitle: 'ハングリーであれ、愚かであれ' },
+                    einstein: { category: '理論物理学者', name: 'アルベルト・アインシュタイン', subtitle: '宇宙を変えた天才' },
+                    kissinger: { category: '冷戦外交官', name: 'ヘンリー・キッシンジャー', subtitle: '権力の建築家' },
+                    lincoln: { category: '第16代アメリカ大統領', name: 'エイブラハム・リンカーン', subtitle: '偉大なる解放者' }
+                }
+            },
+            'fr': {
+                heroTitle: 'Des vies inspirantes en BD',
+                heroDesc: 'Explorez les histoires des personnes les plus influentes du monde à travers des biographies en bande dessinée immersives',
+                books: {
+                    hawking: { category: 'Physicien britannique', name: 'Stephen Hawking', subtitle: 'D\'Oxford aux étoiles' },
+                    kobe: { category: 'Légende NBA', name: 'Kobe Bryant', subtitle: 'La Légende du Black Mamba' },
+                    franklin: { category: 'Père Fondateur Américain', name: 'Benjamin Franklin', subtitle: 'Le Premier Américain' },
+                    jobs: { category: 'Co-fondateur d\'Apple', name: 'Steve Jobs', subtitle: 'Soyez insatiables, soyez fous' },
+                    einstein: { category: 'Physicien théoricien', name: 'Albert Einstein', subtitle: 'Le génie qui a changé notre univers' },
+                    kissinger: { category: 'Diplomate de la Guerre Froide', name: 'Henry Kissinger', subtitle: 'L\'Architecte du Pouvoir' },
+                    lincoln: { category: '16e Président des États-Unis', name: 'Abraham Lincoln', subtitle: 'Le Grand Émancipateur' }
+                }
+            }
+        };
+
+        // Update all text content based on language
+        function updateContent(lang) {
+            const c = content[lang] || content['en'];
+
+            // Update hero section
+            document.querySelector('h1').textContent = c.heroTitle;
+            document.querySelector('.hero p').textContent = c.heroDesc;
+
+            // Update all book cards
+            ['hawking', 'kobe', 'franklin', 'jobs', 'einstein', 'kissinger', 'lincoln'].forEach(bookKey => {
+                const book = c.books[bookKey];
+                const category = document.querySelector(`.book-category[data-book="${bookKey}"]`);
+                const name = document.querySelector(`.book-name[data-book="${bookKey}"]`);
+                const subtitle = document.querySelector(`.book-subtitle[data-book="${bookKey}"]`);
+
+                if (category) category.textContent = book.category;
+                if (name) name.textContent = book.name;
+                if (subtitle) subtitle.textContent = book.subtitle;
+            });
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', (e) => {
+            updateContent(e.detail.language);
+        });
+
+        // Set initial language (default to zh-TW if not set)
+        const initialLang = localStorage.getItem('time100_lang') || 'zh-TW';
+        App.setLanguage(initialLang);
+        updateContent(initialLang);
+    </script>
+</body>
+
+</html>
