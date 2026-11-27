@@ -23,8 +23,15 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.170.1'
           extended: true
+
+      # Hugo v0.170.0 起不再內建 Sass 編譯器（extended 版已合併為單一 binary），
+      # css.Sass/toCSS 需要 PATH 上的 dart-sass，否則 Build 步驟必然失敗。
+      - name: Setup Dart Sass
+        run: |
+          curl -fsSL https://github.com/sass/dart-sass/releases/download/1.89.1/dart-sass-1.89.1-linux-x64.tar.gz | tar -xz -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/dart-sass" >> "$GITHUB_PATH"
 
       - name: Debug Info
         run: |

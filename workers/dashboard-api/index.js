@@ -425,8 +425,8 @@ async function fetchYoubike(env) {
     if (station) {
       result.push({
         station: name,
-        bikes: parseInt(station.sbi) || 0,
-        total: parseInt(station.tot) || 0
+        bikes: parseInt(station.available_rent_bikes ?? station.sbi) || 0,
+        total: parseInt(station.Quantity ?? station.tot) || 0
       });
     }
   }
@@ -437,8 +437,8 @@ async function fetchYoubike(env) {
       const s = xinyi.shift();
       result.push({
         station: s.sna.replace("YouBike2.0_", ""),
-        bikes: parseInt(s.sbi) || 0,
-        total: parseInt(s.tot) || 0
+        bikes: parseInt(s.available_rent_bikes ?? s.sbi) || 0,
+        total: parseInt(s.Quantity ?? s.tot) || 0
       });
     }
   }
@@ -780,8 +780,14 @@ function handleEducation() {
   const diffTime = targetDate.getTime() - tpe.getTime();
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
+  // 目標日期已過 → 不回傳過期假日（回傳 null）。要恢復「下一次連假」需另建
+  // 符合行政院人事行政總處辦公日曆表的跨年假日表，不在本次修正範圍。
+  const next_holiday = diffDays >= 0
+    ? { name: "中秋節", date: "09/25", days: diffDays }
+    : null;
+
   return {
-    next_holiday: { name: "中秋節", date: "09/25", days: Math.max(0, diffDays) },
+    next_holiday,
     makeup_day: "本月無補班",
     is_summer_break: tpe.getUTCMonth() === 6 || tpe.getUTCMonth() === 7,
     is_winter_break: tpe.getUTCMonth() === 0,

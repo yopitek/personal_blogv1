@@ -63,6 +63,11 @@ function renderHero(lunarData) {
 
 // ═══════════════════ WEATHER ═══════════════════
 
+// 依 API 回傳的 _source 判斷是否為模擬/展示資料（比照 api.js 既有的「(展示資料)」標示）
+function demoNote(source) {
+  return /mock|simulated/i.test(source || '') ? '<span style="font-size:var(--font-size-xs);color:var(--text-dim)">（展示資料）</span>' : '';
+}
+
 function renderWeather(data, aqiData, uvData) {
   const el = $('#weather-body');
   if (!data) { html(el, errorCard('天氣資料載入失敗', '重試', initWeather)); return; }
@@ -79,7 +84,7 @@ function renderWeather(data, aqiData, uvData) {
     <div class="weather-main">
       <div class="weather-temp-block">
         <div class="weather-temp">${t.current}<sup>°C</sup></div>
-        <div class="weather-condition">${data.condition}</div>
+        <div class="weather-condition">${data.condition} ${demoNote(data?._source)}</div>
         <div class="weather-feel">體感 ${t.feel}°C · 濕度 ${data.humidity}% · 風速 ${data.wind} km/h</div>
       </div>
       <div style="text-align:right;font-size:3.5rem;opacity:0.7">${weatherEmoji(data.condition)}</div>
@@ -157,7 +162,7 @@ function renderEarthquake(data) {
     <div class="quake-detail-list">
       <div class="quake-row"><span class="qr-label">時間</span><span class="qr-value">${date} ${time}</span></div>
       <div class="quake-row"><span class="qr-label">深度</span><span class="qr-value">${data.depth} km</span></div>
-      <div class="quake-row"><span class="qr-label">來源</span><span class="qr-value" style="font-size:var(--font-size-xs)">CWA 中央氣象署</span></div>
+      <div class="quake-row"><span class="qr-label">來源</span><span class="qr-value" style="font-size:var(--font-size-xs)">${/mock|simulated/i.test(data._source || '') ? '（展示資料）非即時地震訊號' : 'CWA 中央氣象署'}</span></div>
     </div>
     <div class="quake-intensity-badge">
       <span class="intensity-label">台北市體感震度</span>
@@ -191,7 +196,7 @@ function renderWeekly(data) {
       <div class="wd-temp">${d.temp_high}° ${d.temp_low}°</div>
       <div class="wd-rain">${d.rain > 0 ? `☂ ${d.rain}%` : ''}</div>
     </div>`;
-  }).join('')}</div>`);
+  }).join('')}</div>${demoNote(data._source) ? `<div style="text-align:right;margin-top:6px">${demoNote(data._source)}</div>` : ''}`);
 }
 
 // ═══════════════════ YOUBIKE ═══════════════════
@@ -217,6 +222,8 @@ function renderYoubike(data) {
 function renderHighway(data) {
   const el = $('#highway-body');
   if (!data?.length) { html(el, errorCard('路況資料載入失敗', '重試', initHighway)); return; }
+  // /api/highway 目前是常駐模擬 stub（見 workers/dashboard-api/index.js 標註
+  // "Simulated"），回傳純陣列、沒有 _source 可判，故靜態標示展示資料。
   html(el, `<div class="highway-list">${data.map(h => `
     <div class="highway-item">
       <span class="hw-name">${h.road}</span>
@@ -226,7 +233,8 @@ function renderHighway(data) {
       <span><span class="hw-legend-dot" style="background:var(--accent-green)"></span>80+</span>
       <span><span class="hw-legend-dot" style="background:var(--accent-gold)"></span>40-80</span>
       <span><span class="hw-legend-dot" style="background:var(--accent-coral)"></span>&lt;40</span>
-    </div></div>`);
+    </div></div>
+    <div style="text-align:right;margin-top:6px"><span style="font-size:var(--font-size-xs);color:var(--text-dim)">（展示資料）</span></div>`);
 }
 
 // ═══════════════════ PARKING ═══════════════════
@@ -251,7 +259,7 @@ function renderParking(data) {
 
 // ═══════════════════ STOCK ═══════════════════
 
-function renderStockTW(stocks) {
+function renderStockTW(stocks, source) {
   const el = $('#stock-tw-body');
   if (!stocks?.length) { html(el, errorCard('股市資料載入失敗', '重試', initStock)); return; }
   const twStocks = stocks.filter(s => s.type === 'tw');
@@ -266,7 +274,7 @@ function renderStockTW(stocks) {
       <span class="stock-value">${main.price.toLocaleString()}</span>
       <span class="stock-change ${chgCls}">${arrow} ${sign}${Math.abs(main.change_pct).toFixed(2)}%</span>
     </div>
-    <div class="stock-volume">${main.name} · 成交量 ${main.change ? Math.abs(Math.round(main.change)).toLocaleString() : '—'} 張</div>
+    <div class="stock-volume">${main.name} · 成交量 ${main.change ? Math.abs(Math.round(main.change)).toLocaleString() : '—'} 張 ${demoNote(source)}</div>
     <div class="stock-list">${twStocks.map((s, i) => {
       const cls = s.change_pct >= 0 ? 'up' : 'down';
       return `<div class="stock-item${i === 0 ? ' primary' : ''}">
@@ -278,12 +286,12 @@ function renderStockTW(stocks) {
     }).join('')}</div>`);
 }
 
-function renderStockUS(stocks) {
+function renderStockUS(stocks, source) {
   const el = $('#stock-us-body');
   if (!stocks?.length) { html(el, errorCard('美股資料載入失敗', '重試', initStock)); return; }
   const usStocks = stocks.filter(s => s.type === 'us');
   if (!usStocks.length) { html(el, '<div style="padding:16px;color:var(--text-dim);text-align:center">美股尚未開盤</div>'); return; }
-  html(el, `<div class="stock-list">${usStocks.map(s => {
+  html(el, `<div style="text-align:right">${demoNote(source)}</div><div class="stock-list">${usStocks.map(s => {
     const cls = s.change_pct >= 0 ? 'up' : 'down';
     return `<div class="stock-item">
       <span class="si-name">${s.name}</span>
@@ -356,7 +364,7 @@ function renderHolidays(data) {
     </div>
     <div class="holiday-next">
       <span class="hn-label">倒數</span>
-      <span class="hn-countdown">${data.next_holiday?.days || '—'} 天</span>
+      <span class="hn-countdown">${data.next_holiday?.days ?? '—'} 天</span>
     </div>
     <div class="holiday-next">
       <span class="hn-label">補班提醒</span>
@@ -445,8 +453,8 @@ async function initStock() {
   try {
     const s = await DashboardAPI.getStock();
     const stocks = s?.stocks || [];
-    renderStockTW(stocks);
-    renderStockUS(stocks);
+    renderStockTW(stocks, s?._source);
+    renderStockUS(stocks, s?._source);
   } catch {}
 }
 

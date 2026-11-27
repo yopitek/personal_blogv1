@@ -20,7 +20,8 @@ fi
 echo "✅ Account ID: $ACCOUNT_ID"
 
 # 3. Update wrangler.toml with account_id
-sed -i "s/^# account_id.*/account_id = \"$ACCOUNT_ID\"/" wrangler.toml
+#    同時相容「# account_id = ...」註解行與未註解行（舊 sed 只匹配註解行，實際無效）
+sed -i -E 's/^[[:space:]]*#?[[:space:]]*account_id[[:space:]]*=.*/account_id = "'"$ACCOUNT_ID"'"/' wrangler.toml
 echo "✅ wrangler.toml updated"
 
 # 4. Create KV namespace
@@ -34,6 +35,8 @@ if [ -z "$KV_ID" ]; then
   exit 1
 fi
 sed -i "s/id = \"PLACEHOLDER_KV_ID\"/id = \"$KV_ID\"/" wrangler.toml
+# 取消 kv_namespaces 區塊的註解（舊腳本只換 ID、從不取消註解 → KV 永遠未綁定）
+sed -i -E 's/^#[[:space:]]*\[\[kv_namespaces\]\]/[[kv_namespaces]]/; s/^#[[:space:]]*binding[[:space:]]*=[[:space:]]*"DASHBOARD_CACHE"/binding = "DASHBOARD_CACHE"/; s/^#[[:space:]]*id[[:space:]]*=.*/id = "'"$KV_ID"'"/' wrangler.toml
 echo "✅ KV namespace: $KV_ID"
 
 # 5. Set secrets
