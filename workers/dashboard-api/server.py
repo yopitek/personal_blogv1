@@ -17,10 +17,21 @@ class _NoOpCache:
     async def set_search(self, *a, **kw): pass
     async def close(self): pass
 
+def _legal_db_path():
+    """mcp-taiwan-legal-db 為外部相依專案，路徑改由環境變數提供；
+    未設定或目錄不存在時給明確錯誤，不再寫死個人機器路徑。"""
+    p = os.environ.get("MCP_TAIWAN_LEGAL_DB_PATH", "")
+    if not p:
+        raise RuntimeError(
+            "缺少環境變數 MCP_TAIWAN_LEGAL_DB_PATH（指向 mcp-taiwan-legal-db 專案目錄），司法查詢功能不可用")
+    if not os.path.isdir(p):
+        raise RuntimeError(f"MCP_TAIWAN_LEGAL_DB_PATH 指向的目錄不存在：{p}")
+    return p
+
 async def _warmup_waf():
     global _waf
     if _waf is None:
-        legal_path = "/home/yopitek/Project/mcp-taiwan-legal-db"
+        legal_path = _legal_db_path()
         sys.path.insert(0, legal_path)
         from mcp_server.tools.waf_bypass import JudicialWAFBypass
         _waf = JudicialWAFBypass()
@@ -31,7 +42,7 @@ async def _warmup_waf():
 def _get_jud_search():
     global _jud_search, _waf
     if _jud_search is None:
-        legal_path = "/home/yopitek/Project/mcp-taiwan-legal-db"
+        legal_path = _legal_db_path()
         sys.path.insert(0, legal_path)
         from mcp_server.tools.judicial_search import JudicialSearchClient
         if _waf is None:
